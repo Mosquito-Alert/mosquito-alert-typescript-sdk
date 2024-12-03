@@ -60,6 +60,12 @@ export interface AppUserTokenObtainPairRequest {
      * @memberof AppUserTokenObtainPairRequest
      */
     'password': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppUserTokenObtainPairRequest
+     */
+    'device_id'?: string;
 }
 /**
  * 
@@ -250,18 +256,6 @@ export interface BiteRequest {
      * @memberof BiteRequest
      */
     'tags'?: Array<string>;
-    /**
-     * 
-     * @type {PackageRequest}
-     * @memberof BiteRequest
-     */
-    'package'?: PackageRequest;
-    /**
-     * 
-     * @type {DeviceRequest}
-     * @memberof BiteRequest
-     */
-    'device'?: DeviceRequest;
     /**
      * The environment where the event took place.
      * @type {string}
@@ -560,18 +554,6 @@ export interface BreedingSiteRequest {
     'tags'?: Array<string>;
     /**
      * 
-     * @type {PackageRequest}
-     * @memberof BreedingSiteRequest
-     */
-    'package'?: PackageRequest;
-    /**
-     * 
-     * @type {DeviceRequest}
-     * @memberof BreedingSiteRequest
-     */
-    'device'?: DeviceRequest;
-    /**
-     * 
      * @type {Array<SimplePhotoRequest>}
      * @memberof BreedingSiteRequest
      */
@@ -721,6 +703,18 @@ export interface CreateUser {
      */
     'registration_time': string;
     /**
+     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+     * @type {string}
+     * @memberof CreateUser
+     */
+    'locale'?: CreateUserLocaleEnum;
+    /**
+     * ISO 639-1 code
+     * @type {string}
+     * @memberof CreateUser
+     */
+    'language_iso': string;
+    /**
      * Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
      * @type {number}
      * @memberof CreateUser
@@ -733,6 +727,36 @@ export interface CreateUser {
      */
     'last_score_update': string;
 }
+
+export const CreateUserLocaleEnum = {
+    Es: 'es',
+    Ca: 'ca',
+    Eu: 'eu',
+    Bn: 'bn',
+    Sv: 'sv',
+    En: 'en',
+    De: 'de',
+    Sq: 'sq',
+    El: 'el',
+    Gl: 'gl',
+    Hu: 'hu',
+    Pt: 'pt',
+    Sl: 'sl',
+    It: 'it',
+    Fr: 'fr',
+    Bg: 'bg',
+    Ro: 'ro',
+    Hr: 'hr',
+    Mk: 'mk',
+    Sr: 'sr',
+    Lb: 'lb',
+    Nl: 'nl',
+    Tr: 'tr',
+    ZhCn: 'zh-CN'
+} as const;
+
+export type CreateUserLocaleEnum = typeof CreateUserLocaleEnum[keyof typeof CreateUserLocaleEnum];
+
 /**
  * 
  * @export
@@ -740,11 +764,11 @@ export interface CreateUser {
  */
 export interface CreateUserRequest {
     /**
-     * Device token, used in messaging. Must be supplied by the client
+     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
      * @type {string}
      * @memberof CreateUserRequest
      */
-    'device_token'?: string | null;
+    'locale'?: CreateUserRequestLocaleEnum;
     /**
      * 
      * @type {string}
@@ -752,6 +776,36 @@ export interface CreateUserRequest {
      */
     'password': string;
 }
+
+export const CreateUserRequestLocaleEnum = {
+    Es: 'es',
+    Ca: 'ca',
+    Eu: 'eu',
+    Bn: 'bn',
+    Sv: 'sv',
+    En: 'en',
+    De: 'de',
+    Sq: 'sq',
+    El: 'el',
+    Gl: 'gl',
+    Hu: 'hu',
+    Pt: 'pt',
+    Sl: 'sl',
+    It: 'it',
+    Fr: 'fr',
+    Bg: 'bg',
+    Ro: 'ro',
+    Hr: 'hr',
+    Mk: 'mk',
+    Sr: 'sr',
+    Lb: 'lb',
+    Nl: 'nl',
+    Tr: 'tr',
+    ZhCn: 'zh-CN'
+} as const;
+
+export type CreateUserRequestLocaleEnum = typeof CreateUserRequestLocaleEnum[keyof typeof CreateUserRequestLocaleEnum];
+
 /**
  * 
  * @export
@@ -759,35 +813,130 @@ export interface CreateUserRequest {
  */
 export interface Device {
     /**
-     * Manufacturer of device from which this report was submitted.
+     * Unique device identifier
+     * @type {string}
+     * @memberof Device
+     */
+    'device_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'type': DeviceTypeEnum;
+    /**
+     * The manufacturer of the device.
      * @type {string}
      * @memberof Device
      */
     'manufacturer'?: string | null;
     /**
-     * Model of device from which this report was submitted.
+     * The end-user-visible name for the end product.
      * @type {string}
      * @memberof Device
      */
-    'model'?: string | null;
+    'model': string;
+    /**
+     * 
+     * @type {DeviceOs}
+     * @memberof Device
+     */
+    'os': DeviceOs;
+    /**
+     * 
+     * @type {MobileApp}
+     * @memberof Device
+     */
+    'mobile_app'?: MobileApp;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'user_uuid': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'last_login': string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'created_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Device
+     */
+    'updated_at': string;
+}
+
+export const DeviceTypeEnum = {
+    Ios: 'ios',
+    Android: 'android',
+    Web: 'web'
+} as const;
+
+export type DeviceTypeEnum = typeof DeviceTypeEnum[keyof typeof DeviceTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DeviceOs
+ */
+export interface DeviceOs {
     /**
      * Operating system of device from which this report was submitted.
      * @type {string}
-     * @memberof Device
+     * @memberof DeviceOs
      */
-    'os'?: string | null;
+    'name': string;
     /**
      * Operating system version of device from which this report was submitted.
      * @type {string}
-     * @memberof Device
+     * @memberof DeviceOs
      */
-    'os_version'?: string | null;
+    'version': string;
     /**
-     * Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
+     * The locale configured in the device following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
      * @type {string}
-     * @memberof Device
+     * @memberof DeviceOs
      */
-    'os_language'?: string | null;
+    'locale'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface DeviceOsRequest
+ */
+export interface DeviceOsRequest {
+    /**
+     * Operating system of device from which this report was submitted.
+     * @type {string}
+     * @memberof DeviceOsRequest
+     */
+    'name': string;
+    /**
+     * Operating system version of device from which this report was submitted.
+     * @type {string}
+     * @memberof DeviceOsRequest
+     */
+    'version': string;
+    /**
+     * The locale configured in the device following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+     * @type {string}
+     * @memberof DeviceOsRequest
+     */
+    'locale'?: string | null;
 }
 /**
  * 
@@ -796,35 +945,175 @@ export interface Device {
  */
 export interface DeviceRequest {
     /**
-     * Manufacturer of device from which this report was submitted.
+     * Unique device identifier
+     * @type {string}
+     * @memberof DeviceRequest
+     */
+    'device_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceRequest
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceRequest
+     */
+    'fcm_token': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceRequest
+     */
+    'type': DeviceRequestTypeEnum;
+    /**
+     * The manufacturer of the device.
      * @type {string}
      * @memberof DeviceRequest
      */
     'manufacturer'?: string | null;
     /**
-     * Model of device from which this report was submitted.
+     * The end-user-visible name for the end product.
      * @type {string}
      * @memberof DeviceRequest
      */
-    'model'?: string | null;
+    'model': string;
     /**
-     * Operating system of device from which this report was submitted.
-     * @type {string}
+     * 
+     * @type {DeviceOsRequest}
      * @memberof DeviceRequest
      */
-    'os'?: string | null;
+    'os': DeviceOsRequest;
     /**
-     * Operating system version of device from which this report was submitted.
-     * @type {string}
+     * 
+     * @type {MobileAppRequest}
      * @memberof DeviceRequest
      */
-    'os_version'?: string | null;
+    'mobile_app'?: MobileAppRequest;
+}
+
+export const DeviceRequestTypeEnum = {
+    Ios: 'ios',
+    Android: 'android',
+    Web: 'web'
+} as const;
+
+export type DeviceRequestTypeEnum = typeof DeviceRequestTypeEnum[keyof typeof DeviceRequestTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DeviceUpdate
+ */
+export interface DeviceUpdate {
     /**
-     * Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
+     * Unique device identifier
      * @type {string}
-     * @memberof DeviceRequest
+     * @memberof DeviceUpdate
      */
-    'os_language'?: string | null;
+    'device_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'type': DeviceUpdateTypeEnum;
+    /**
+     * The manufacturer of the device.
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'manufacturer': string;
+    /**
+     * The end-user-visible name for the end product.
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'model': string;
+    /**
+     * 
+     * @type {DeviceOs}
+     * @memberof DeviceUpdate
+     */
+    'os': DeviceOs;
+    /**
+     * 
+     * @type {MobileApp}
+     * @memberof DeviceUpdate
+     */
+    'mobile_app'?: MobileApp;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'user_uuid': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'last_login': string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'created_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdate
+     */
+    'updated_at': string;
+}
+
+export const DeviceUpdateTypeEnum = {
+    Ios: 'ios',
+    Android: 'android',
+    Web: 'web'
+} as const;
+
+export type DeviceUpdateTypeEnum = typeof DeviceUpdateTypeEnum[keyof typeof DeviceUpdateTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DeviceUpdateRequest
+ */
+export interface DeviceUpdateRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdateRequest
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceUpdateRequest
+     */
+    'fcm_token': string;
+    /**
+     * 
+     * @type {DeviceOsRequest}
+     * @memberof DeviceUpdateRequest
+     */
+    'os': DeviceOsRequest;
+    /**
+     * 
+     * @type {MobileAppRequest}
+     * @memberof DeviceUpdateRequest
+     */
+    'mobile_app'?: MobileAppRequest;
 }
 /**
  * 
@@ -967,7 +1256,7 @@ export interface Location {
      * @type {string}
      * @memberof Location
      */
-    'timezone': LocationTimezoneEnum;
+    'timezone': LocationTimezoneEnum | null;
     /**
      * 
      * @type {number}
@@ -1488,6 +1777,44 @@ export type MetaNotificationRequest = { receiver_type: 'topic' } & TopicNotifica
 /**
  * 
  * @export
+ * @interface MobileApp
+ */
+export interface MobileApp {
+    /**
+     * 
+     * @type {string}
+     * @memberof MobileApp
+     */
+    'package_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MobileApp
+     */
+    'package_version': string;
+}
+/**
+ * 
+ * @export
+ * @interface MobileAppRequest
+ */
+export interface MobileAppRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MobileAppRequest
+     */
+    'package_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MobileAppRequest
+     */
+    'package_version': string;
+}
+/**
+ * 
+ * @export
  * @interface Notification
  */
 export interface Notification {
@@ -1860,18 +2187,6 @@ export interface ObservationRequest {
     'tags'?: Array<string>;
     /**
      * 
-     * @type {PackageRequest}
-     * @memberof ObservationRequest
-     */
-    'package'?: PackageRequest;
-    /**
-     * 
-     * @type {DeviceRequest}
-     * @memberof ObservationRequest
-     */
-    'device'?: DeviceRequest;
-    /**
-     * 
      * @type {Array<SimplePhotoRequest>}
      * @memberof ObservationRequest
      */
@@ -1977,56 +2292,6 @@ export const ObservationRequestUserPerceivedMosquitoLegsEnum = {
 
 export type ObservationRequestUserPerceivedMosquitoLegsEnum = typeof ObservationRequestUserPerceivedMosquitoLegsEnum[keyof typeof ObservationRequestUserPerceivedMosquitoLegsEnum];
 
-/**
- * 
- * @export
- * @interface Package
- */
-export interface Package {
-    /**
-     * Name of tigatrapp package from which this report was submitted.
-     * @type {string}
-     * @memberof Package
-     */
-    'name'?: string | null;
-    /**
-     * Version number of tigatrapp package from which this report was submitted.
-     * @type {number}
-     * @memberof Package
-     */
-    'version'?: number | null;
-    /**
-     * Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
-     * @type {string}
-     * @memberof Package
-     */
-    'language'?: string | null;
-}
-/**
- * 
- * @export
- * @interface PackageRequest
- */
-export interface PackageRequest {
-    /**
-     * Name of tigatrapp package from which this report was submitted.
-     * @type {string}
-     * @memberof PackageRequest
-     */
-    'name'?: string | null;
-    /**
-     * Version number of tigatrapp package from which this report was submitted.
-     * @type {number}
-     * @memberof PackageRequest
-     */
-    'version'?: number | null;
-    /**
-     * Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
-     * @type {string}
-     * @memberof PackageRequest
-     */
-    'language'?: string | null;
-}
 /**
  * 
  * @export
@@ -2266,6 +2531,37 @@ export interface PartnerPoint {
 /**
  * 
  * @export
+ * @interface PatchedDeviceUpdateRequest
+ */
+export interface PatchedDeviceUpdateRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedDeviceUpdateRequest
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedDeviceUpdateRequest
+     */
+    'fcm_token'?: string;
+    /**
+     * 
+     * @type {DeviceOsRequest}
+     * @memberof PatchedDeviceUpdateRequest
+     */
+    'os'?: DeviceOsRequest;
+    /**
+     * 
+     * @type {MobileAppRequest}
+     * @memberof PatchedDeviceUpdateRequest
+     */
+    'mobile_app'?: MobileAppRequest;
+}
+/**
+ * 
+ * @export
  * @interface PatchedNotificationRequest
  */
 export interface PatchedNotificationRequest {
@@ -2283,12 +2579,42 @@ export interface PatchedNotificationRequest {
  */
 export interface PatchedUserRequest {
     /**
-     * Device token, used in messaging. Must be supplied by the client
+     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
      * @type {string}
      * @memberof PatchedUserRequest
      */
-    'device_token'?: string | null;
+    'locale'?: PatchedUserRequestLocaleEnum;
 }
+
+export const PatchedUserRequestLocaleEnum = {
+    Es: 'es',
+    Ca: 'ca',
+    Eu: 'eu',
+    Bn: 'bn',
+    Sv: 'sv',
+    En: 'en',
+    De: 'de',
+    Sq: 'sq',
+    El: 'el',
+    Gl: 'gl',
+    Hu: 'hu',
+    Pt: 'pt',
+    Sl: 'sl',
+    It: 'it',
+    Fr: 'fr',
+    Bg: 'bg',
+    Ro: 'ro',
+    Hr: 'hr',
+    Mk: 'mk',
+    Sr: 'sr',
+    Lb: 'lb',
+    Nl: 'nl',
+    Tr: 'tr',
+    ZhCn: 'zh-CN'
+} as const;
+
+export type PatchedUserRequestLocaleEnum = typeof PatchedUserRequestLocaleEnum[keyof typeof PatchedUserRequestLocaleEnum];
+
 /**
  * 
  * @export
@@ -2694,6 +3020,18 @@ export interface User {
      */
     'registration_time': string;
     /**
+     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+     * @type {string}
+     * @memberof User
+     */
+    'locale'?: UserLocaleEnum;
+    /**
+     * ISO 639-1 code
+     * @type {string}
+     * @memberof User
+     */
+    'language_iso': string;
+    /**
      * Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
      * @type {number}
      * @memberof User
@@ -2706,6 +3044,36 @@ export interface User {
      */
     'last_score_update': string;
 }
+
+export const UserLocaleEnum = {
+    Es: 'es',
+    Ca: 'ca',
+    Eu: 'eu',
+    Bn: 'bn',
+    Sv: 'sv',
+    En: 'en',
+    De: 'de',
+    Sq: 'sq',
+    El: 'el',
+    Gl: 'gl',
+    Hu: 'hu',
+    Pt: 'pt',
+    Sl: 'sl',
+    It: 'it',
+    Fr: 'fr',
+    Bg: 'bg',
+    Ro: 'ro',
+    Hr: 'hr',
+    Mk: 'mk',
+    Sr: 'sr',
+    Lb: 'lb',
+    Nl: 'nl',
+    Tr: 'tr',
+    ZhCn: 'zh-CN'
+} as const;
+
+export type UserLocaleEnum = typeof UserLocaleEnum[keyof typeof UserLocaleEnum];
+
 /**
  * 
  * @export
@@ -2752,12 +3120,42 @@ export type UserNotificationCreateRequestReceiverTypeEnum = typeof UserNotificat
  */
 export interface UserRequest {
     /**
-     * Device token, used in messaging. Must be supplied by the client
+     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
      * @type {string}
      * @memberof UserRequest
      */
-    'device_token'?: string | null;
+    'locale'?: UserRequestLocaleEnum;
 }
+
+export const UserRequestLocaleEnum = {
+    Es: 'es',
+    Ca: 'ca',
+    Eu: 'eu',
+    Bn: 'bn',
+    Sv: 'sv',
+    En: 'en',
+    De: 'de',
+    Sq: 'sq',
+    El: 'el',
+    Gl: 'gl',
+    Hu: 'hu',
+    Pt: 'pt',
+    Sl: 'sl',
+    It: 'it',
+    Fr: 'fr',
+    Bg: 'bg',
+    Ro: 'ro',
+    Hr: 'hr',
+    Mk: 'mk',
+    Sr: 'sr',
+    Lb: 'lb',
+    Nl: 'nl',
+    Tr: 'tr',
+    ZhCn: 'zh-CN'
+} as const;
+
+export type UserRequestLocaleEnum = typeof UserRequestLocaleEnum[keyof typeof UserRequestLocaleEnum];
+
 
 /**
  * BitesApi - axios parameter creator
@@ -2858,7 +3256,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3054,7 +3452,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3119,7 +3517,7 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3182,7 +3580,7 @@ export class BitesApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenamiento  
+     * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
@@ -3323,7 +3721,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3524,7 +3922,7 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3590,7 +3988,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -3654,7 +4052,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenamiento  
+     * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
@@ -3705,7 +4103,7 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
@@ -3820,7 +4218,7 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
@@ -3858,7 +4256,7 @@ export const CampaignsApiFactory = function (configuration?: Configuration, base
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
@@ -3890,7 +4288,7 @@ export class CampaignsApi extends BaseAPI {
      * 
      * @param {number} [countryId] Country in which the campaign is taking place
      * @param {boolean} [isActive] 
-     * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenamiento  
+     * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {*} [options] Override http request option.
@@ -4033,6 +4431,339 @@ export class CountriesApi extends BaseAPI {
      */
     public countriesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return CountriesApiFp(this.configuration).countriesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DevicesApi - axios parameter creator
+ * @export
+ */
+export const DevicesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {DeviceRequest} deviceRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesCreate: async (deviceRequest: DeviceRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'deviceRequest' is not null or undefined
+            assertParamExists('devicesCreate', 'deviceRequest', deviceRequest)
+            const localVarPath = `/devices/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(deviceRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {PatchedDeviceUpdateRequest} [patchedDeviceUpdateRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesPartialUpdate: async (deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'deviceId' is not null or undefined
+            assertParamExists('devicesPartialUpdate', 'deviceId', deviceId)
+            const localVarPath = `/devices/{device_id}/`
+                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(patchedDeviceUpdateRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesRetrieve: async (deviceId: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'deviceId' is not null or undefined
+            assertParamExists('devicesRetrieve', 'deviceId', deviceId)
+            const localVarPath = `/devices/{device_id}/`
+                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {DeviceUpdateRequest} deviceUpdateRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesUpdate: async (deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'deviceId' is not null or undefined
+            assertParamExists('devicesUpdate', 'deviceId', deviceId)
+            // verify required parameter 'deviceUpdateRequest' is not null or undefined
+            assertParamExists('devicesUpdate', 'deviceUpdateRequest', deviceUpdateRequest)
+            const localVarPath = `/devices/{device_id}/`
+                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(deviceUpdateRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DevicesApi - functional programming interface
+ * @export
+ */
+export const DevicesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DevicesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {DeviceRequest} deviceRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesCreate(deviceRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {PatchedDeviceUpdateRequest} [patchedDeviceUpdateRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesRetrieve(deviceId, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {DeviceUpdateRequest} deviceUpdateRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesUpdate(deviceId, deviceUpdateRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * DevicesApi - factory interface
+ * @export
+ */
+export const DevicesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DevicesApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {DeviceRequest} deviceRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
+            return localVarFp.devicesCreate(deviceRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {PatchedDeviceUpdateRequest} [patchedDeviceUpdateRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
+            return localVarFp.devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
+            return localVarFp.devicesRetrieve(deviceId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} deviceId 
+         * @param {DeviceUpdateRequest} deviceUpdateRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
+            return localVarFp.devicesUpdate(deviceId, deviceUpdateRequest, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DevicesApi - object-oriented interface
+ * @export
+ * @class DevicesApi
+ * @extends {BaseAPI}
+ */
+export class DevicesApi extends BaseAPI {
+    /**
+     * 
+     * @param {DeviceRequest} deviceRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DevicesApi
+     */
+    public devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).devicesCreate(deviceRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} deviceId 
+     * @param {PatchedDeviceUpdateRequest} [patchedDeviceUpdateRequest] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DevicesApi
+     */
+    public devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} deviceId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DevicesApi
+     */
+    public devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).devicesRetrieve(deviceId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} deviceId 
+     * @param {DeviceUpdateRequest} deviceUpdateRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DevicesApi
+     */
+    public devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).devicesUpdate(deviceId, deviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -4203,7 +4934,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {boolean} [seen] 
@@ -4419,7 +5150,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {boolean} [seen] 
@@ -4491,7 +5222,7 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
         },
         /**
          * 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {boolean} [seen] 
@@ -4553,7 +5284,7 @@ export class NotificationsApi extends BaseAPI {
 
     /**
      * 
-     * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenamiento  
+     * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {boolean} [seen] 
@@ -4713,7 +5444,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -5044,7 +5775,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -5149,7 +5880,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenamiento  
+         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -5243,7 +5974,7 @@ export class ObservationsApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenamiento  
+     * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
