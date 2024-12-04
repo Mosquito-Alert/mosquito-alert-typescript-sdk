@@ -687,6 +687,44 @@ export interface CreateNotification {
 /**
  * 
  * @export
+ * @interface CreateNotificationMessage
+ */
+export interface CreateNotificationMessage {
+    /**
+     * Provide the message\'s title in all supported languages
+     * @type {LocalizedField}
+     * @memberof CreateNotificationMessage
+     */
+    'title': LocalizedField;
+    /**
+     * Provide the message\'s body in all supported languages
+     * @type {LocalizedField}
+     * @memberof CreateNotificationMessage
+     */
+    'body': LocalizedField;
+}
+/**
+ * 
+ * @export
+ * @interface CreateNotificationMessageRequest
+ */
+export interface CreateNotificationMessageRequest {
+    /**
+     * Provide the message\'s title in all supported languages
+     * @type {LocalizedFieldRequest}
+     * @memberof CreateNotificationMessageRequest
+     */
+    'title': LocalizedFieldRequest;
+    /**
+     * Provide the message\'s body in all supported languages
+     * @type {LocalizedFieldRequest}
+     * @memberof CreateNotificationMessageRequest
+     */
+    'body': LocalizedFieldRequest;
+}
+/**
+ * 
+ * @export
  * @interface CreateUser
  */
 export interface CreateUser {
@@ -1232,6 +1270,308 @@ export interface FixRequest {
      * @memberof FixRequest
      */
     'power'?: number | null;
+}
+/**
+ * A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as \'title\', \'message\', max_length, help_text, etc.
+ * @export
+ * @interface LocalizedField
+ */
+export interface LocalizedField {
+    /**
+     * Български
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'bg'?: string;
+    /**
+     * বাংলা
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'bn'?: string;
+    /**
+     * Català
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'ca'?: string;
+    /**
+     * Deutsch
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'de'?: string;
+    /**
+     * Ελληνικά
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'el'?: string;
+    /**
+     * English
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'en': string;
+    /**
+     * Español
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'es'?: string;
+    /**
+     * Euskara
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'eu'?: string;
+    /**
+     * Français
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'fr'?: string;
+    /**
+     * Galego
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'gl'?: string;
+    /**
+     * Hrvatski
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'hr'?: string;
+    /**
+     * Magyar
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'hu'?: string;
+    /**
+     * Italiano
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'it'?: string;
+    /**
+     * Lëtzebuergesch
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'lb'?: string;
+    /**
+     * Македонски
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'mk'?: string;
+    /**
+     * Nederlands
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'nl'?: string;
+    /**
+     * Português
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'pt'?: string;
+    /**
+     * Română
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'ro'?: string;
+    /**
+     * Slovenščina
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'sl'?: string;
+    /**
+     * Shqip
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'sq'?: string;
+    /**
+     * Српски
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'sr'?: string;
+    /**
+     * Svenska
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'sv'?: string;
+    /**
+     * Türkçe
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'tr'?: string;
+    /**
+     * 中文（中国）
+     * @type {string}
+     * @memberof LocalizedField
+     */
+    'zh-CN'?: string;
+}
+/**
+ * A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as \'title\', \'message\', max_length, help_text, etc.
+ * @export
+ * @interface LocalizedFieldRequest
+ */
+export interface LocalizedFieldRequest {
+    /**
+     * Български
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'bg'?: string;
+    /**
+     * বাংলা
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'bn'?: string;
+    /**
+     * Català
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'ca'?: string;
+    /**
+     * Deutsch
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'de'?: string;
+    /**
+     * Ελληνικά
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'el'?: string;
+    /**
+     * English
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'en': string;
+    /**
+     * Español
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'es'?: string;
+    /**
+     * Euskara
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'eu'?: string;
+    /**
+     * Français
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'fr'?: string;
+    /**
+     * Galego
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'gl'?: string;
+    /**
+     * Hrvatski
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'hr'?: string;
+    /**
+     * Magyar
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'hu'?: string;
+    /**
+     * Italiano
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'it'?: string;
+    /**
+     * Lëtzebuergesch
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'lb'?: string;
+    /**
+     * Македонски
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'mk'?: string;
+    /**
+     * Nederlands
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'nl'?: string;
+    /**
+     * Português
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'pt'?: string;
+    /**
+     * Română
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'ro'?: string;
+    /**
+     * Slovenščina
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'sl'?: string;
+    /**
+     * Shqip
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'sq'?: string;
+    /**
+     * Српски
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'sr'?: string;
+    /**
+     * Svenska
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'sv'?: string;
+    /**
+     * Türkçe
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'tr'?: string;
+    /**
+     * 中文（中国）
+     * @type {string}
+     * @memberof LocalizedFieldRequest
+     */
+    'zh-CN'?: string;
 }
 /**
  * 
@@ -1825,35 +2165,42 @@ export interface Notification {
      */
     'id': number;
     /**
-     * Expert sending the notification
-     * @type {number}
+     * 
+     * @type {NotificationMessage}
      * @memberof Notification
      */
-    'expert_id': number | null;
+    'message': NotificationMessage;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof Notification
+     */
+    'is_read': boolean;
     /**
      * 
      * @type {string}
      * @memberof Notification
      */
     'created_at': string;
+}
+/**
+ * 
+ * @export
+ * @interface NotificationMessage
+ */
+export interface NotificationMessage {
     /**
      * 
      * @type {string}
-     * @memberof Notification
+     * @memberof NotificationMessage
      */
     'title': string;
     /**
      * 
      * @type {string}
-     * @memberof Notification
+     * @memberof NotificationMessage
      */
     'body': string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Notification
-     */
-    'seen': boolean;
 }
 /**
  * 
@@ -1866,7 +2213,7 @@ export interface NotificationRequest {
      * @type {boolean}
      * @memberof NotificationRequest
      */
-    'seen': boolean;
+    'is_read': boolean;
 }
 /**
  * 
@@ -2570,7 +2917,7 @@ export interface PatchedNotificationRequest {
      * @type {boolean}
      * @memberof PatchedNotificationRequest
      */
-    'seen'?: boolean;
+    'is_read'?: boolean;
 }
 /**
  * 
@@ -2975,23 +3322,17 @@ export interface TopicNotificationCreateRequest {
      */
     'receiver_type': TopicNotificationCreateRequestReceiverTypeEnum;
     /**
-     * 
-     * @type {string}
+     * The message of the notification
+     * @type {CreateNotificationMessageRequest}
      * @memberof TopicNotificationCreateRequest
      */
-    'title_en': string;
+    'message': CreateNotificationMessageRequest;
     /**
      * 
-     * @type {string}
+     * @type {Array<string>}
      * @memberof TopicNotificationCreateRequest
      */
-    'body_en': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TopicNotificationCreateRequest
-     */
-    'topic_code': string;
+    'topic_codes': Array<string>;
 }
 
 export const TopicNotificationCreateRequestReceiverTypeEnum = {
@@ -3087,23 +3428,17 @@ export interface UserNotificationCreateRequest {
      */
     'receiver_type': UserNotificationCreateRequestReceiverTypeEnum;
     /**
-     * 
-     * @type {string}
+     * The message of the notification
+     * @type {CreateNotificationMessageRequest}
      * @memberof UserNotificationCreateRequest
      */
-    'title_en': string;
+    'message': CreateNotificationMessageRequest;
     /**
      * 
-     * @type {string}
+     * @type {Array<string>}
      * @memberof UserNotificationCreateRequest
      */
-    'body_en': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UserNotificationCreateRequest
-     */
-    'user_uuid': string;
+    'user_uuids': Array<string>;
 }
 
 export const UserNotificationCreateRequestReceiverTypeEnum = {
@@ -4934,14 +5269,14 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
+         * @param {boolean} [isRead] 
          * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
-         * @param {boolean} [seen] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsList: async (orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, seen?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        notificationsList: async (isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/notifications/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4963,6 +5298,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (isRead !== undefined) {
+                localVarQueryParameter['is_read'] = isRead;
+            }
+
             if (orderBy) {
                 localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
             }
@@ -4973,10 +5312,6 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
-            }
-
-            if (seen !== undefined) {
-                localVarQueryParameter['seen'] = seen;
             }
 
 
@@ -5142,7 +5477,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateNotification>> {
+        async notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CreateNotification>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsCreate(metaNotificationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsCreate']?.[localVarOperationServerIndex]?.url;
@@ -5150,15 +5485,15 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {boolean} [isRead] 
          * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
-         * @param {boolean} [seen] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsList(orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, seen?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsList(orderBy, page, pageSize, seen, options);
+        async notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsList(isRead, orderBy, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -5217,20 +5552,20 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<CreateNotification> {
+        notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<CreateNotification>> {
             return localVarFp.notificationsCreate(metaNotificationRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
+         * @param {boolean} [isRead] 
          * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
-         * @param {boolean} [seen] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsList(orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, seen?: boolean, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList> {
-            return localVarFp.notificationsList(orderBy, page, pageSize, seen, options).then((request) => request(axios, basePath));
+        notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList> {
+            return localVarFp.notificationsList(isRead, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5284,16 +5619,16 @@ export class NotificationsApi extends BaseAPI {
 
     /**
      * 
+     * @param {boolean} [isRead] 
      * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
-     * @param {boolean} [seen] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsList(orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, seen?: boolean, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsList(orderBy, page, pageSize, seen, options).then((request) => request(this.axios, this.basePath));
+    public notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).notificationsList(isRead, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
