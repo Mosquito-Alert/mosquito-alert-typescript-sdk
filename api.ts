@@ -328,6 +328,1089 @@ export type BiteRequestEventMomentEnum = typeof BiteRequestEventMomentEnum[keyof
 /**
  * 
  * @export
+ * @interface BitesCreateChestBiteCountErrorComponent
+ */
+export interface BitesCreateChestBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateChestBiteCountErrorComponent
+     */
+    'attr': BitesCreateChestBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateChestBiteCountErrorComponent
+     */
+    'code': BitesCreateChestBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateChestBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateChestBiteCountErrorComponentAttrEnum = {
+    ChestBiteCount: 'chest_bite_count'
+} as const;
+
+export type BitesCreateChestBiteCountErrorComponentAttrEnum = typeof BitesCreateChestBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateChestBiteCountErrorComponentAttrEnum];
+export const BitesCreateChestBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateChestBiteCountErrorComponentCodeEnum = typeof BitesCreateChestBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateChestBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCreatedAtErrorComponent
+ */
+export interface BitesCreateCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCreatedAtErrorComponent
+     */
+    'attr': BitesCreateCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCreatedAtErrorComponent
+     */
+    'code': BitesCreateCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type BitesCreateCreatedAtErrorComponentAttrEnum = typeof BitesCreateCreatedAtErrorComponentAttrEnum[keyof typeof BitesCreateCreatedAtErrorComponentAttrEnum];
+export const BitesCreateCreatedAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type BitesCreateCreatedAtErrorComponentCodeEnum = typeof BitesCreateCreatedAtErrorComponentCodeEnum[keyof typeof BitesCreateCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BitesCreateError
+ * @export
+ */
+export type BitesCreateError = { attr: 'chest_bite_count' } & BitesCreateChestBiteCountErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'head_bite_count' } & BitesCreateHeadBiteCountErrorComponent | { attr: 'left_arm_bite_count' } & BitesCreateLeftArmBiteCountErrorComponent | { attr: 'left_leg_bite_count' } & BitesCreateLeftLegBiteCountErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'right_arm_bite_count' } & BitesCreateRightArmBiteCountErrorComponent | { attr: 'right_leg_bite_count' } & BitesCreateRightLegBiteCountErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
+
+/**
+ * @type BitesCreateErrorResponse400
+ * @export
+ */
+export type BitesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BitesCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateEventEnvironmentErrorComponent
+ */
+export interface BitesCreateEventEnvironmentErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventEnvironmentErrorComponent
+     */
+    'attr': BitesCreateEventEnvironmentErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventEnvironmentErrorComponent
+     */
+    'code': BitesCreateEventEnvironmentErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventEnvironmentErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateEventEnvironmentErrorComponentAttrEnum = {
+    EventEnvironment: 'event_environment'
+} as const;
+
+export type BitesCreateEventEnvironmentErrorComponentAttrEnum = typeof BitesCreateEventEnvironmentErrorComponentAttrEnum[keyof typeof BitesCreateEventEnvironmentErrorComponentAttrEnum];
+export const BitesCreateEventEnvironmentErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesCreateEventEnvironmentErrorComponentCodeEnum = typeof BitesCreateEventEnvironmentErrorComponentCodeEnum[keyof typeof BitesCreateEventEnvironmentErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateEventMomentErrorComponent
+ */
+export interface BitesCreateEventMomentErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventMomentErrorComponent
+     */
+    'attr': BitesCreateEventMomentErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventMomentErrorComponent
+     */
+    'code': BitesCreateEventMomentErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateEventMomentErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateEventMomentErrorComponentAttrEnum = {
+    EventMoment: 'event_moment'
+} as const;
+
+export type BitesCreateEventMomentErrorComponentAttrEnum = typeof BitesCreateEventMomentErrorComponentAttrEnum[keyof typeof BitesCreateEventMomentErrorComponentAttrEnum];
+export const BitesCreateEventMomentErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesCreateEventMomentErrorComponentCodeEnum = typeof BitesCreateEventMomentErrorComponentCodeEnum[keyof typeof BitesCreateEventMomentErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateHeadBiteCountErrorComponent
+ */
+export interface BitesCreateHeadBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateHeadBiteCountErrorComponent
+     */
+    'attr': BitesCreateHeadBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateHeadBiteCountErrorComponent
+     */
+    'code': BitesCreateHeadBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateHeadBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateHeadBiteCountErrorComponentAttrEnum = {
+    HeadBiteCount: 'head_bite_count'
+} as const;
+
+export type BitesCreateHeadBiteCountErrorComponentAttrEnum = typeof BitesCreateHeadBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentAttrEnum];
+export const BitesCreateHeadBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateHeadBiteCountErrorComponentCodeEnum = typeof BitesCreateHeadBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateLeftArmBiteCountErrorComponent
+ */
+export interface BitesCreateLeftArmBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftArmBiteCountErrorComponent
+     */
+    'attr': BitesCreateLeftArmBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftArmBiteCountErrorComponent
+     */
+    'code': BitesCreateLeftArmBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftArmBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateLeftArmBiteCountErrorComponentAttrEnum = {
+    LeftArmBiteCount: 'left_arm_bite_count'
+} as const;
+
+export type BitesCreateLeftArmBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum];
+export const BitesCreateLeftArmBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateLeftArmBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateLeftLegBiteCountErrorComponent
+ */
+export interface BitesCreateLeftLegBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftLegBiteCountErrorComponent
+     */
+    'attr': BitesCreateLeftLegBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftLegBiteCountErrorComponent
+     */
+    'code': BitesCreateLeftLegBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLeftLegBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateLeftLegBiteCountErrorComponentAttrEnum = {
+    LeftLegBiteCount: 'left_leg_bite_count'
+} as const;
+
+export type BitesCreateLeftLegBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum];
+export const BitesCreateLeftLegBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateLeftLegBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateLocationNonFieldErrorsErrorComponent
+ */
+export interface BitesCreateLocationNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'attr': BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'code': BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = {
+    LocationNonFieldErrors: 'location.non_field_errors'
+} as const;
+
+export type BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = typeof BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum[keyof typeof BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum];
+export const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = typeof BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum[keyof typeof BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateLocationPointErrorComponent
+ */
+export interface BitesCreateLocationPointErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationPointErrorComponent
+     */
+    'attr': BitesCreateLocationPointErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationPointErrorComponent
+     */
+    'code': BitesCreateLocationPointErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationPointErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateLocationPointErrorComponentAttrEnum = {
+    LocationPoint: 'location.point'
+} as const;
+
+export type BitesCreateLocationPointErrorComponentAttrEnum = typeof BitesCreateLocationPointErrorComponentAttrEnum[keyof typeof BitesCreateLocationPointErrorComponentAttrEnum];
+export const BitesCreateLocationPointErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Required: 'required'
+} as const;
+
+export type BitesCreateLocationPointErrorComponentCodeEnum = typeof BitesCreateLocationPointErrorComponentCodeEnum[keyof typeof BitesCreateLocationPointErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateLocationTypeErrorComponent
+ */
+export interface BitesCreateLocationTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationTypeErrorComponent
+     */
+    'attr': BitesCreateLocationTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationTypeErrorComponent
+     */
+    'code': BitesCreateLocationTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateLocationTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateLocationTypeErrorComponentAttrEnum = {
+    LocationType: 'location.type'
+} as const;
+
+export type BitesCreateLocationTypeErrorComponentAttrEnum = typeof BitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BitesCreateLocationTypeErrorComponentAttrEnum];
+export const BitesCreateLocationTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BitesCreateLocationTypeErrorComponentCodeEnum = typeof BitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BitesCreateLocationTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateNonFieldErrorsErrorComponent
+ */
+export interface BitesCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNonFieldErrorsErrorComponent
+     */
+    'attr': BitesCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNonFieldErrorsErrorComponent
+     */
+    'code': BitesCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type BitesCreateNonFieldErrorsErrorComponentAttrEnum = typeof BitesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof BitesCreateNonFieldErrorsErrorComponentAttrEnum];
+export const BitesCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type BitesCreateNonFieldErrorsErrorComponentCodeEnum = typeof BitesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof BitesCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateNoteErrorComponent
+ */
+export interface BitesCreateNoteErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNoteErrorComponent
+     */
+    'attr': BitesCreateNoteErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNoteErrorComponent
+     */
+    'code': BitesCreateNoteErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateNoteErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateNoteErrorComponentAttrEnum = {
+    Note: 'note'
+} as const;
+
+export type BitesCreateNoteErrorComponentAttrEnum = typeof BitesCreateNoteErrorComponentAttrEnum[keyof typeof BitesCreateNoteErrorComponentAttrEnum];
+export const BitesCreateNoteErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type BitesCreateNoteErrorComponentCodeEnum = typeof BitesCreateNoteErrorComponentCodeEnum[keyof typeof BitesCreateNoteErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateRightArmBiteCountErrorComponent
+ */
+export interface BitesCreateRightArmBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightArmBiteCountErrorComponent
+     */
+    'attr': BitesCreateRightArmBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightArmBiteCountErrorComponent
+     */
+    'code': BitesCreateRightArmBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightArmBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateRightArmBiteCountErrorComponentAttrEnum = {
+    RightArmBiteCount: 'right_arm_bite_count'
+} as const;
+
+export type BitesCreateRightArmBiteCountErrorComponentAttrEnum = typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum];
+export const BitesCreateRightArmBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateRightArmBiteCountErrorComponentCodeEnum = typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateRightLegBiteCountErrorComponent
+ */
+export interface BitesCreateRightLegBiteCountErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightLegBiteCountErrorComponent
+     */
+    'attr': BitesCreateRightLegBiteCountErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightLegBiteCountErrorComponent
+     */
+    'code': BitesCreateRightLegBiteCountErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateRightLegBiteCountErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateRightLegBiteCountErrorComponentAttrEnum = {
+    RightLegBiteCount: 'right_leg_bite_count'
+} as const;
+
+export type BitesCreateRightLegBiteCountErrorComponentAttrEnum = typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum];
+export const BitesCreateRightLegBiteCountErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type BitesCreateRightLegBiteCountErrorComponentCodeEnum = typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateSentAtErrorComponent
+ */
+export interface BitesCreateSentAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateSentAtErrorComponent
+     */
+    'attr': BitesCreateSentAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateSentAtErrorComponent
+     */
+    'code': BitesCreateSentAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateSentAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateSentAtErrorComponentAttrEnum = {
+    SentAt: 'sent_at'
+} as const;
+
+export type BitesCreateSentAtErrorComponentAttrEnum = typeof BitesCreateSentAtErrorComponentAttrEnum[keyof typeof BitesCreateSentAtErrorComponentAttrEnum];
+export const BitesCreateSentAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type BitesCreateSentAtErrorComponentCodeEnum = typeof BitesCreateSentAtErrorComponentCodeEnum[keyof typeof BitesCreateSentAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateTagsErrorComponent
+ */
+export interface BitesCreateTagsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsErrorComponent
+     */
+    'attr': BitesCreateTagsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsErrorComponent
+     */
+    'code': BitesCreateTagsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateTagsErrorComponentAttrEnum = {
+    Tags: 'tags'
+} as const;
+
+export type BitesCreateTagsErrorComponentAttrEnum = typeof BitesCreateTagsErrorComponentAttrEnum[keyof typeof BitesCreateTagsErrorComponentAttrEnum];
+export const BitesCreateTagsErrorComponentCodeEnum = {
+    InvalidJson: 'invalid_json',
+    NotAList: 'not_a_list',
+    NotAStr: 'not_a_str',
+    Null: 'null'
+} as const;
+
+export type BitesCreateTagsErrorComponentCodeEnum = typeof BitesCreateTagsErrorComponentCodeEnum[keyof typeof BitesCreateTagsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateTagsINDEXErrorComponent
+ */
+export interface BitesCreateTagsINDEXErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsINDEXErrorComponent
+     */
+    'attr': BitesCreateTagsINDEXErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsINDEXErrorComponent
+     */
+    'code': BitesCreateTagsINDEXErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateTagsINDEXErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateTagsINDEXErrorComponentAttrEnum = {
+    TagsIndex: 'tags.INDEX'
+} as const;
+
+export type BitesCreateTagsINDEXErrorComponentAttrEnum = typeof BitesCreateTagsINDEXErrorComponentAttrEnum[keyof typeof BitesCreateTagsINDEXErrorComponentAttrEnum];
+export const BitesCreateTagsINDEXErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type BitesCreateTagsINDEXErrorComponentCodeEnum = typeof BitesCreateTagsINDEXErrorComponentCodeEnum[keyof typeof BitesCreateTagsINDEXErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateValidationError
+ */
+export interface BitesCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateValidationError
+     */
+    'type': BitesCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BitesCreateError>}
+     * @memberof BitesCreateValidationError
+     */
+    'errors': Array<BitesCreateError>;
+}
+
+export const BitesCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BitesCreateValidationErrorTypeEnum = typeof BitesCreateValidationErrorTypeEnum[keyof typeof BitesCreateValidationErrorTypeEnum];
+
+/**
+ * @type BitesDestroyErrorResponse400
+ * @export
+ */
+export type BitesDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
+ * @interface BitesListCreatedAtErrorComponent
+ */
+export interface BitesListCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListCreatedAtErrorComponent
+     */
+    'attr': BitesListCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListCreatedAtErrorComponent
+     */
+    'code': BitesListCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type BitesListCreatedAtErrorComponentAttrEnum = typeof BitesListCreatedAtErrorComponentAttrEnum[keyof typeof BitesListCreatedAtErrorComponentAttrEnum];
+export const BitesListCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListCreatedAtErrorComponentCodeEnum = typeof BitesListCreatedAtErrorComponentCodeEnum[keyof typeof BitesListCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BitesListError
+ * @export
+ */
+export type BitesListError = { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent;
+
+/**
+ * @type BitesListErrorResponse400
+ * @export
+ */
+export type BitesListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BitesListValidationError;
+
+/**
+ * 
+ * @export
+ * @interface BitesListLocationCountryIdErrorComponent
+ */
+export interface BitesListLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationCountryIdErrorComponent
+     */
+    'attr': BitesListLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationCountryIdErrorComponent
+     */
+    'code': BitesListLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type BitesListLocationCountryIdErrorComponentAttrEnum = typeof BitesListLocationCountryIdErrorComponentAttrEnum[keyof typeof BitesListLocationCountryIdErrorComponentAttrEnum];
+export const BitesListLocationCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesListLocationCountryIdErrorComponentCodeEnum = typeof BitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BitesListLocationCountryIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListLocationNuts2ErrorComponent
+ */
+export interface BitesListLocationNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts2ErrorComponent
+     */
+    'attr': BitesListLocationNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts2ErrorComponent
+     */
+    'code': BitesListLocationNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
+} as const;
+
+export type BitesListLocationNuts2ErrorComponentAttrEnum = typeof BitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BitesListLocationNuts2ErrorComponentAttrEnum];
+export const BitesListLocationNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListLocationNuts2ErrorComponentCodeEnum = typeof BitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BitesListLocationNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListLocationNuts3ErrorComponent
+ */
+export interface BitesListLocationNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts3ErrorComponent
+     */
+    'attr': BitesListLocationNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts3ErrorComponent
+     */
+    'code': BitesListLocationNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
+} as const;
+
+export type BitesListLocationNuts3ErrorComponentAttrEnum = typeof BitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BitesListLocationNuts3ErrorComponentAttrEnum];
+export const BitesListLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListLocationNuts3ErrorComponentCodeEnum = typeof BitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BitesListLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListOrderByErrorComponent
+ */
+export interface BitesListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListOrderByErrorComponent
+     */
+    'attr': BitesListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListOrderByErrorComponent
+     */
+    'code': BitesListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type BitesListOrderByErrorComponentAttrEnum = typeof BitesListOrderByErrorComponentAttrEnum[keyof typeof BitesListOrderByErrorComponentAttrEnum];
+export const BitesListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesListOrderByErrorComponentCodeEnum = typeof BitesListOrderByErrorComponentCodeEnum[keyof typeof BitesListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListReceivedAtErrorComponent
+ */
+export interface BitesListReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListReceivedAtErrorComponent
+     */
+    'attr': BitesListReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListReceivedAtErrorComponent
+     */
+    'code': BitesListReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type BitesListReceivedAtErrorComponentAttrEnum = typeof BitesListReceivedAtErrorComponentAttrEnum[keyof typeof BitesListReceivedAtErrorComponentAttrEnum];
+export const BitesListReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListReceivedAtErrorComponentCodeEnum = typeof BitesListReceivedAtErrorComponentCodeEnum[keyof typeof BitesListReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListShortIdErrorComponent
+ */
+export interface BitesListShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListShortIdErrorComponent
+     */
+    'attr': BitesListShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListShortIdErrorComponent
+     */
+    'code': BitesListShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type BitesListShortIdErrorComponentAttrEnum = typeof BitesListShortIdErrorComponentAttrEnum[keyof typeof BitesListShortIdErrorComponentAttrEnum];
+export const BitesListShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListShortIdErrorComponentCodeEnum = typeof BitesListShortIdErrorComponentCodeEnum[keyof typeof BitesListShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListUpdatedAtErrorComponent
+ */
+export interface BitesListUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUpdatedAtErrorComponent
+     */
+    'attr': BitesListUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUpdatedAtErrorComponent
+     */
+    'code': BitesListUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type BitesListUpdatedAtErrorComponentAttrEnum = typeof BitesListUpdatedAtErrorComponentAttrEnum[keyof typeof BitesListUpdatedAtErrorComponentAttrEnum];
+export const BitesListUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListUpdatedAtErrorComponentCodeEnum = typeof BitesListUpdatedAtErrorComponentCodeEnum[keyof typeof BitesListUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListUserUuidErrorComponent
+ */
+export interface BitesListUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUserUuidErrorComponent
+     */
+    'attr': BitesListUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUserUuidErrorComponent
+     */
+    'code': BitesListUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type BitesListUserUuidErrorComponentAttrEnum = typeof BitesListUserUuidErrorComponentAttrEnum[keyof typeof BitesListUserUuidErrorComponentAttrEnum];
+export const BitesListUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListUserUuidErrorComponentCodeEnum = typeof BitesListUserUuidErrorComponentCodeEnum[keyof typeof BitesListUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListValidationError
+ */
+export interface BitesListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListValidationError
+     */
+    'type': BitesListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BitesListError>}
+     * @memberof BitesListValidationError
+     */
+    'errors': Array<BitesListError>;
+}
+
+export const BitesListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BitesListValidationErrorTypeEnum = typeof BitesListValidationErrorTypeEnum[keyof typeof BitesListValidationErrorTypeEnum];
+
+/**
+ * @type BitesRetrieveErrorResponse400
+ * @export
+ */
+export type BitesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
  * @interface BoundingBox
  */
 export interface BoundingBox {
@@ -606,6 +1689,1093 @@ export type BreedingSiteRequestSiteTypeEnum = typeof BreedingSiteRequestSiteType
 /**
  * 
  * @export
+ * @interface BreedingSitesCreateCreatedAtErrorComponent
+ */
+export interface BreedingSitesCreateCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     */
+    'attr': BreedingSitesCreateCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     */
+    'code': BreedingSitesCreateCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type BreedingSitesCreateCreatedAtErrorComponentAttrEnum = typeof BreedingSitesCreateCreatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesCreateCreatedAtErrorComponentAttrEnum];
+export const BreedingSitesCreateCreatedAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreateCreatedAtErrorComponentCodeEnum = typeof BreedingSitesCreateCreatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesCreateCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BreedingSitesCreateError
+ * @export
+ */
+export type BreedingSitesCreateError = { attr: 'created_at' } & BreedingSitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingSitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingSitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingSitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingSitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingSitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingSitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BreedingSitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BreedingSitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingSitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingSitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingSitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingSitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingSitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingSitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingSitesCreateTagsINDEXErrorComponent;
+
+/**
+ * @type BreedingSitesCreateErrorResponse400
+ * @export
+ */
+export type BreedingSitesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BreedingSitesCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateHasLarvaeErrorComponent
+ */
+export interface BreedingSitesCreateHasLarvaeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     */
+    'attr': BreedingSitesCreateHasLarvaeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     */
+    'code': BreedingSitesCreateHasLarvaeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateHasLarvaeErrorComponentAttrEnum = {
+    HasLarvae: 'has_larvae'
+} as const;
+
+export type BreedingSitesCreateHasLarvaeErrorComponentAttrEnum = typeof BreedingSitesCreateHasLarvaeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasLarvaeErrorComponentAttrEnum];
+export const BreedingSitesCreateHasLarvaeErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesCreateHasLarvaeErrorComponentCodeEnum = typeof BreedingSitesCreateHasLarvaeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasLarvaeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateHasNearMosquitoesErrorComponent
+ */
+export interface BreedingSitesCreateHasNearMosquitoesErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     */
+    'attr': BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     */
+    'code': BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum = {
+    HasNearMosquitoes: 'has_near_mosquitoes'
+} as const;
+
+export type BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum = typeof BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum];
+export const BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum = typeof BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateHasWaterErrorComponent
+ */
+export interface BreedingSitesCreateHasWaterErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     */
+    'attr': BreedingSitesCreateHasWaterErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     */
+    'code': BreedingSitesCreateHasWaterErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateHasWaterErrorComponentAttrEnum = {
+    HasWater: 'has_water'
+} as const;
+
+export type BreedingSitesCreateHasWaterErrorComponentAttrEnum = typeof BreedingSitesCreateHasWaterErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasWaterErrorComponentAttrEnum];
+export const BreedingSitesCreateHasWaterErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesCreateHasWaterErrorComponentCodeEnum = typeof BreedingSitesCreateHasWaterErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasWaterErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateInPublicAreaErrorComponent
+ */
+export interface BreedingSitesCreateInPublicAreaErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     */
+    'attr': BreedingSitesCreateInPublicAreaErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     */
+    'code': BreedingSitesCreateInPublicAreaErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateInPublicAreaErrorComponentAttrEnum = {
+    InPublicArea: 'in_public_area'
+} as const;
+
+export type BreedingSitesCreateInPublicAreaErrorComponentAttrEnum = typeof BreedingSitesCreateInPublicAreaErrorComponentAttrEnum[keyof typeof BreedingSitesCreateInPublicAreaErrorComponentAttrEnum];
+export const BreedingSitesCreateInPublicAreaErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesCreateInPublicAreaErrorComponentCodeEnum = typeof BreedingSitesCreateInPublicAreaErrorComponentCodeEnum[keyof typeof BreedingSitesCreateInPublicAreaErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+ */
+export interface BreedingSitesCreateLocationNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'attr': BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'code': BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = {
+    LocationNonFieldErrors: 'location.non_field_errors'
+} as const;
+
+export type BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateLocationPointErrorComponent
+ */
+export interface BreedingSitesCreateLocationPointErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     */
+    'attr': BreedingSitesCreateLocationPointErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     */
+    'code': BreedingSitesCreateLocationPointErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateLocationPointErrorComponentAttrEnum = {
+    LocationPoint: 'location.point'
+} as const;
+
+export type BreedingSitesCreateLocationPointErrorComponentAttrEnum = typeof BreedingSitesCreateLocationPointErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationPointErrorComponentAttrEnum];
+export const BreedingSitesCreateLocationPointErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreateLocationPointErrorComponentCodeEnum = typeof BreedingSitesCreateLocationPointErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationPointErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateLocationTypeErrorComponent
+ */
+export interface BreedingSitesCreateLocationTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     */
+    'attr': BreedingSitesCreateLocationTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     */
+    'code': BreedingSitesCreateLocationTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateLocationTypeErrorComponentAttrEnum = {
+    LocationType: 'location.type'
+} as const;
+
+export type BreedingSitesCreateLocationTypeErrorComponentAttrEnum = typeof BreedingSitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationTypeErrorComponentAttrEnum];
+export const BreedingSitesCreateLocationTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreateLocationTypeErrorComponentCodeEnum = typeof BreedingSitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateNonFieldErrorsErrorComponent
+ */
+export interface BreedingSitesCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     */
+    'attr': BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     */
+    'code': BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateNoteErrorComponent
+ */
+export interface BreedingSitesCreateNoteErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNoteErrorComponent
+     */
+    'attr': BreedingSitesCreateNoteErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNoteErrorComponent
+     */
+    'code': BreedingSitesCreateNoteErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateNoteErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateNoteErrorComponentAttrEnum = {
+    Note: 'note'
+} as const;
+
+export type BreedingSitesCreateNoteErrorComponentAttrEnum = typeof BreedingSitesCreateNoteErrorComponentAttrEnum[keyof typeof BreedingSitesCreateNoteErrorComponentAttrEnum];
+export const BreedingSitesCreateNoteErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type BreedingSitesCreateNoteErrorComponentCodeEnum = typeof BreedingSitesCreateNoteErrorComponentCodeEnum[keyof typeof BreedingSitesCreateNoteErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreatePhotosINDEXFileErrorComponent
+ */
+export interface BreedingSitesCreatePhotosINDEXFileErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     */
+    'attr': BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     */
+    'code': BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum = {
+    PhotosIndexFile: 'photos.INDEX.file'
+} as const;
+
+export type BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum];
+export const BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum = {
+    Empty: 'empty',
+    Invalid: 'invalid',
+    InvalidImage: 'invalid_image',
+    NoName: 'no_name',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+ */
+export interface BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'attr': BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'code': BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = {
+    PhotosIndexNonFieldErrors: 'photos.INDEX.non_field_errors'
+} as const;
+
+export type BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+ */
+export interface BreedingSitesCreatePhotosNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'attr': BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'code': BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = {
+    PhotosNonFieldErrors: 'photos.non_field_errors'
+} as const;
+
+export type BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = {
+    NotAList: 'not_a_list',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateSentAtErrorComponent
+ */
+export interface BreedingSitesCreateSentAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSentAtErrorComponent
+     */
+    'attr': BreedingSitesCreateSentAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSentAtErrorComponent
+     */
+    'code': BreedingSitesCreateSentAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSentAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateSentAtErrorComponentAttrEnum = {
+    SentAt: 'sent_at'
+} as const;
+
+export type BreedingSitesCreateSentAtErrorComponentAttrEnum = typeof BreedingSitesCreateSentAtErrorComponentAttrEnum[keyof typeof BreedingSitesCreateSentAtErrorComponentAttrEnum];
+export const BreedingSitesCreateSentAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type BreedingSitesCreateSentAtErrorComponentCodeEnum = typeof BreedingSitesCreateSentAtErrorComponentCodeEnum[keyof typeof BreedingSitesCreateSentAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateSiteTypeErrorComponent
+ */
+export interface BreedingSitesCreateSiteTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     */
+    'attr': BreedingSitesCreateSiteTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     */
+    'code': BreedingSitesCreateSiteTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateSiteTypeErrorComponentAttrEnum = {
+    SiteType: 'site_type'
+} as const;
+
+export type BreedingSitesCreateSiteTypeErrorComponentAttrEnum = typeof BreedingSitesCreateSiteTypeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateSiteTypeErrorComponentAttrEnum];
+export const BreedingSitesCreateSiteTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null'
+} as const;
+
+export type BreedingSitesCreateSiteTypeErrorComponentCodeEnum = typeof BreedingSitesCreateSiteTypeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateSiteTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateTagsErrorComponent
+ */
+export interface BreedingSitesCreateTagsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsErrorComponent
+     */
+    'attr': BreedingSitesCreateTagsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsErrorComponent
+     */
+    'code': BreedingSitesCreateTagsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateTagsErrorComponentAttrEnum = {
+    Tags: 'tags'
+} as const;
+
+export type BreedingSitesCreateTagsErrorComponentAttrEnum = typeof BreedingSitesCreateTagsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateTagsErrorComponentAttrEnum];
+export const BreedingSitesCreateTagsErrorComponentCodeEnum = {
+    InvalidJson: 'invalid_json',
+    NotAList: 'not_a_list',
+    NotAStr: 'not_a_str',
+    Null: 'null'
+} as const;
+
+export type BreedingSitesCreateTagsErrorComponentCodeEnum = typeof BreedingSitesCreateTagsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateTagsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateTagsINDEXErrorComponent
+ */
+export interface BreedingSitesCreateTagsINDEXErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     */
+    'attr': BreedingSitesCreateTagsINDEXErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     */
+    'code': BreedingSitesCreateTagsINDEXErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesCreateTagsINDEXErrorComponentAttrEnum = {
+    TagsIndex: 'tags.INDEX'
+} as const;
+
+export type BreedingSitesCreateTagsINDEXErrorComponentAttrEnum = typeof BreedingSitesCreateTagsINDEXErrorComponentAttrEnum[keyof typeof BreedingSitesCreateTagsINDEXErrorComponentAttrEnum];
+export const BreedingSitesCreateTagsINDEXErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type BreedingSitesCreateTagsINDEXErrorComponentCodeEnum = typeof BreedingSitesCreateTagsINDEXErrorComponentCodeEnum[keyof typeof BreedingSitesCreateTagsINDEXErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesCreateValidationError
+ */
+export interface BreedingSitesCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesCreateValidationError
+     */
+    'type': BreedingSitesCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BreedingSitesCreateError>}
+     * @memberof BreedingSitesCreateValidationError
+     */
+    'errors': Array<BreedingSitesCreateError>;
+}
+
+export const BreedingSitesCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BreedingSitesCreateValidationErrorTypeEnum = typeof BreedingSitesCreateValidationErrorTypeEnum[keyof typeof BreedingSitesCreateValidationErrorTypeEnum];
+
+/**
+ * @type BreedingSitesDestroyErrorResponse400
+ * @export
+ */
+export type BreedingSitesDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListCreatedAtErrorComponent
+ */
+export interface BreedingSitesListCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListCreatedAtErrorComponent
+     */
+    'attr': BreedingSitesListCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListCreatedAtErrorComponent
+     */
+    'code': BreedingSitesListCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type BreedingSitesListCreatedAtErrorComponentAttrEnum = typeof BreedingSitesListCreatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListCreatedAtErrorComponentAttrEnum];
+export const BreedingSitesListCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesListCreatedAtErrorComponentCodeEnum = typeof BreedingSitesListCreatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BreedingSitesListError
+ * @export
+ */
+export type BreedingSitesListError = { attr: 'created_at' } & BreedingSitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingSitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingSitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingSitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingSitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingSitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingSitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingSitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingSitesListUserUuidErrorComponent;
+
+/**
+ * @type BreedingSitesListErrorResponse400
+ * @export
+ */
+export type BreedingSitesListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BreedingSitesListValidationError;
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListLocationCountryIdErrorComponent
+ */
+export interface BreedingSitesListLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     */
+    'attr': BreedingSitesListLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     */
+    'code': BreedingSitesListLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type BreedingSitesListLocationCountryIdErrorComponentAttrEnum = typeof BreedingSitesListLocationCountryIdErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationCountryIdErrorComponentAttrEnum];
+export const BreedingSitesListLocationCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BreedingSitesListLocationCountryIdErrorComponentCodeEnum = typeof BreedingSitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationCountryIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListLocationNuts2ErrorComponent
+ */
+export interface BreedingSitesListLocationNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     */
+    'attr': BreedingSitesListLocationNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     */
+    'code': BreedingSitesListLocationNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
+} as const;
+
+export type BreedingSitesListLocationNuts2ErrorComponentAttrEnum = typeof BreedingSitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationNuts2ErrorComponentAttrEnum];
+export const BreedingSitesListLocationNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingSitesListLocationNuts2ErrorComponentCodeEnum = typeof BreedingSitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListLocationNuts3ErrorComponent
+ */
+export interface BreedingSitesListLocationNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     */
+    'attr': BreedingSitesListLocationNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     */
+    'code': BreedingSitesListLocationNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
+} as const;
+
+export type BreedingSitesListLocationNuts3ErrorComponentAttrEnum = typeof BreedingSitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationNuts3ErrorComponentAttrEnum];
+export const BreedingSitesListLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingSitesListLocationNuts3ErrorComponentCodeEnum = typeof BreedingSitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListOrderByErrorComponent
+ */
+export interface BreedingSitesListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListOrderByErrorComponent
+     */
+    'attr': BreedingSitesListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListOrderByErrorComponent
+     */
+    'code': BreedingSitesListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type BreedingSitesListOrderByErrorComponentAttrEnum = typeof BreedingSitesListOrderByErrorComponentAttrEnum[keyof typeof BreedingSitesListOrderByErrorComponentAttrEnum];
+export const BreedingSitesListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BreedingSitesListOrderByErrorComponentCodeEnum = typeof BreedingSitesListOrderByErrorComponentCodeEnum[keyof typeof BreedingSitesListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListReceivedAtErrorComponent
+ */
+export interface BreedingSitesListReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListReceivedAtErrorComponent
+     */
+    'attr': BreedingSitesListReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListReceivedAtErrorComponent
+     */
+    'code': BreedingSitesListReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type BreedingSitesListReceivedAtErrorComponentAttrEnum = typeof BreedingSitesListReceivedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListReceivedAtErrorComponentAttrEnum];
+export const BreedingSitesListReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesListReceivedAtErrorComponentCodeEnum = typeof BreedingSitesListReceivedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListShortIdErrorComponent
+ */
+export interface BreedingSitesListShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListShortIdErrorComponent
+     */
+    'attr': BreedingSitesListShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListShortIdErrorComponent
+     */
+    'code': BreedingSitesListShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type BreedingSitesListShortIdErrorComponentAttrEnum = typeof BreedingSitesListShortIdErrorComponentAttrEnum[keyof typeof BreedingSitesListShortIdErrorComponentAttrEnum];
+export const BreedingSitesListShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingSitesListShortIdErrorComponentCodeEnum = typeof BreedingSitesListShortIdErrorComponentCodeEnum[keyof typeof BreedingSitesListShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListUpdatedAtErrorComponent
+ */
+export interface BreedingSitesListUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     */
+    'attr': BreedingSitesListUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     */
+    'code': BreedingSitesListUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type BreedingSitesListUpdatedAtErrorComponentAttrEnum = typeof BreedingSitesListUpdatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListUpdatedAtErrorComponentAttrEnum];
+export const BreedingSitesListUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingSitesListUpdatedAtErrorComponentCodeEnum = typeof BreedingSitesListUpdatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListUserUuidErrorComponent
+ */
+export interface BreedingSitesListUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUserUuidErrorComponent
+     */
+    'attr': BreedingSitesListUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUserUuidErrorComponent
+     */
+    'code': BreedingSitesListUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingSitesListUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type BreedingSitesListUserUuidErrorComponentAttrEnum = typeof BreedingSitesListUserUuidErrorComponentAttrEnum[keyof typeof BreedingSitesListUserUuidErrorComponentAttrEnum];
+export const BreedingSitesListUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingSitesListUserUuidErrorComponentCodeEnum = typeof BreedingSitesListUserUuidErrorComponentCodeEnum[keyof typeof BreedingSitesListUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingSitesListValidationError
+ */
+export interface BreedingSitesListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingSitesListValidationError
+     */
+    'type': BreedingSitesListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BreedingSitesListError>}
+     * @memberof BreedingSitesListValidationError
+     */
+    'errors': Array<BreedingSitesListError>;
+}
+
+export const BreedingSitesListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BreedingSitesListValidationErrorTypeEnum = typeof BreedingSitesListValidationErrorTypeEnum[keyof typeof BreedingSitesListValidationErrorTypeEnum];
+
+/**
+ * @type BreedingSitesRetrieveErrorResponse400
+ * @export
+ */
+export type BreedingSitesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
  * @interface Campaign
  */
 export interface Campaign {
@@ -640,6 +2810,130 @@ export interface Campaign {
      */
     'end_date': string;
 }
+/**
+ * 
+ * @export
+ * @interface CampaignsListCountryIdErrorComponent
+ */
+export interface CampaignsListCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListCountryIdErrorComponent
+     */
+    'attr': CampaignsListCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListCountryIdErrorComponent
+     */
+    'code': CampaignsListCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const CampaignsListCountryIdErrorComponentAttrEnum = {
+    CountryId: 'country_id'
+} as const;
+
+export type CampaignsListCountryIdErrorComponentAttrEnum = typeof CampaignsListCountryIdErrorComponentAttrEnum[keyof typeof CampaignsListCountryIdErrorComponentAttrEnum];
+export const CampaignsListCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type CampaignsListCountryIdErrorComponentCodeEnum = typeof CampaignsListCountryIdErrorComponentCodeEnum[keyof typeof CampaignsListCountryIdErrorComponentCodeEnum];
+
+/**
+ * @type CampaignsListError
+ * @export
+ */
+export type CampaignsListError = { attr: 'country_id' } & CampaignsListCountryIdErrorComponent | { attr: 'order_by' } & CampaignsListOrderByErrorComponent;
+
+/**
+ * @type CampaignsListErrorResponse400
+ * @export
+ */
+export type CampaignsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & CampaignsListValidationError;
+
+/**
+ * 
+ * @export
+ * @interface CampaignsListOrderByErrorComponent
+ */
+export interface CampaignsListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListOrderByErrorComponent
+     */
+    'attr': CampaignsListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListOrderByErrorComponent
+     */
+    'code': CampaignsListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const CampaignsListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type CampaignsListOrderByErrorComponentAttrEnum = typeof CampaignsListOrderByErrorComponentAttrEnum[keyof typeof CampaignsListOrderByErrorComponentAttrEnum];
+export const CampaignsListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type CampaignsListOrderByErrorComponentCodeEnum = typeof CampaignsListOrderByErrorComponentCodeEnum[keyof typeof CampaignsListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface CampaignsListValidationError
+ */
+export interface CampaignsListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof CampaignsListValidationError
+     */
+    'type': CampaignsListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<CampaignsListError>}
+     * @memberof CampaignsListValidationError
+     */
+    'errors': Array<CampaignsListError>;
+}
+
+export const CampaignsListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type CampaignsListValidationErrorTypeEnum = typeof CampaignsListValidationErrorTypeEnum[keyof typeof CampaignsListValidationErrorTypeEnum];
+
+/**
+ * @type CampaignsRetrieveErrorResponse400
+ * @export
+ */
+export type CampaignsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type CountriesRetrieveErrorResponse400
+ * @export
+ */
+export type CountriesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
 /**
  * 
  * @export
@@ -1156,6 +3450,1917 @@ export interface DeviceUpdateRequest {
 /**
  * 
  * @export
+ * @interface DevicesCreateDeviceIdErrorComponent
+ */
+export interface DevicesCreateDeviceIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateDeviceIdErrorComponent
+     */
+    'attr': DevicesCreateDeviceIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateDeviceIdErrorComponent
+     */
+    'code': DevicesCreateDeviceIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateDeviceIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateDeviceIdErrorComponentAttrEnum = {
+    DeviceId: 'device_id'
+} as const;
+
+export type DevicesCreateDeviceIdErrorComponentAttrEnum = typeof DevicesCreateDeviceIdErrorComponentAttrEnum[keyof typeof DevicesCreateDeviceIdErrorComponentAttrEnum];
+export const DevicesCreateDeviceIdErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateDeviceIdErrorComponentCodeEnum = typeof DevicesCreateDeviceIdErrorComponentCodeEnum[keyof typeof DevicesCreateDeviceIdErrorComponentCodeEnum];
+
+/**
+ * @type DevicesCreateError
+ * @export
+ */
+export type DevicesCreateError = { attr: 'device_id' } & DevicesCreateDeviceIdErrorComponent | { attr: 'fcm_token' } & DevicesCreateFcmTokenErrorComponent | { attr: 'manufacturer' } & DevicesCreateManufacturerErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesCreateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesCreateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesCreateMobileAppPackageVersionErrorComponent | { attr: 'model' } & DevicesCreateModelErrorComponent | { attr: 'name' } & DevicesCreateNameErrorComponent | { attr: 'non_field_errors' } & DevicesCreateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesCreateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesCreateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesCreateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesCreateOsVersionErrorComponent | { attr: 'type' } & DevicesCreateTypeErrorComponent;
+
+/**
+ * @type DevicesCreateErrorResponse400
+ * @export
+ */
+export type DevicesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateFcmTokenErrorComponent
+ */
+export interface DevicesCreateFcmTokenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateFcmTokenErrorComponent
+     */
+    'attr': DevicesCreateFcmTokenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateFcmTokenErrorComponent
+     */
+    'code': DevicesCreateFcmTokenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateFcmTokenErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateFcmTokenErrorComponentAttrEnum = {
+    FcmToken: 'fcm_token'
+} as const;
+
+export type DevicesCreateFcmTokenErrorComponentAttrEnum = typeof DevicesCreateFcmTokenErrorComponentAttrEnum[keyof typeof DevicesCreateFcmTokenErrorComponentAttrEnum];
+export const DevicesCreateFcmTokenErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateFcmTokenErrorComponentCodeEnum = typeof DevicesCreateFcmTokenErrorComponentCodeEnum[keyof typeof DevicesCreateFcmTokenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateManufacturerErrorComponent
+ */
+export interface DevicesCreateManufacturerErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateManufacturerErrorComponent
+     */
+    'attr': DevicesCreateManufacturerErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateManufacturerErrorComponent
+     */
+    'code': DevicesCreateManufacturerErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateManufacturerErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateManufacturerErrorComponentAttrEnum = {
+    Manufacturer: 'manufacturer'
+} as const;
+
+export type DevicesCreateManufacturerErrorComponentAttrEnum = typeof DevicesCreateManufacturerErrorComponentAttrEnum[keyof typeof DevicesCreateManufacturerErrorComponentAttrEnum];
+export const DevicesCreateManufacturerErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateManufacturerErrorComponentCodeEnum = typeof DevicesCreateManufacturerErrorComponentCodeEnum[keyof typeof DevicesCreateManufacturerErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateMobileAppNonFieldErrorsErrorComponent
+ */
+export interface DevicesCreateMobileAppNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
+     */
+    'code': DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum = {
+    MobileAppNonFieldErrors: 'mobile_app.non_field_errors'
+} as const;
+
+export type DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum = typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum = typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateMobileAppPackageNameErrorComponent
+ */
+export interface DevicesCreateMobileAppPackageNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageNameErrorComponent
+     */
+    'attr': DevicesCreateMobileAppPackageNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageNameErrorComponent
+     */
+    'code': DevicesCreateMobileAppPackageNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum = {
+    MobileAppPackageName: 'mobile_app.package_name'
+} as const;
+
+export type DevicesCreateMobileAppPackageNameErrorComponentAttrEnum = typeof DevicesCreateMobileAppPackageNameErrorComponentAttrEnum[keyof typeof DevicesCreateMobileAppPackageNameErrorComponentAttrEnum];
+export const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateMobileAppPackageNameErrorComponentCodeEnum = typeof DevicesCreateMobileAppPackageNameErrorComponentCodeEnum[keyof typeof DevicesCreateMobileAppPackageNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateMobileAppPackageVersionErrorComponent
+ */
+export interface DevicesCreateMobileAppPackageVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
+     */
+    'attr': DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
+     */
+    'code': DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum = {
+    MobileAppPackageVersion: 'mobile_app.package_version'
+} as const;
+
+export type DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum = typeof DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum[keyof typeof DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum];
+export const DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum = typeof DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum[keyof typeof DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateModelErrorComponent
+ */
+export interface DevicesCreateModelErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateModelErrorComponent
+     */
+    'attr': DevicesCreateModelErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateModelErrorComponent
+     */
+    'code': DevicesCreateModelErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateModelErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateModelErrorComponentAttrEnum = {
+    Model: 'model'
+} as const;
+
+export type DevicesCreateModelErrorComponentAttrEnum = typeof DevicesCreateModelErrorComponentAttrEnum[keyof typeof DevicesCreateModelErrorComponentAttrEnum];
+export const DevicesCreateModelErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateModelErrorComponentCodeEnum = typeof DevicesCreateModelErrorComponentCodeEnum[keyof typeof DevicesCreateModelErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateNameErrorComponent
+ */
+export interface DevicesCreateNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNameErrorComponent
+     */
+    'attr': DevicesCreateNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNameErrorComponent
+     */
+    'code': DevicesCreateNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateNameErrorComponentAttrEnum = {
+    Name: 'name'
+} as const;
+
+export type DevicesCreateNameErrorComponentAttrEnum = typeof DevicesCreateNameErrorComponentAttrEnum[keyof typeof DevicesCreateNameErrorComponentAttrEnum];
+export const DevicesCreateNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateNameErrorComponentCodeEnum = typeof DevicesCreateNameErrorComponentCodeEnum[keyof typeof DevicesCreateNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateNonFieldErrorsErrorComponent
+ */
+export interface DevicesCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNonFieldErrorsErrorComponent
+     */
+    'code': DevicesCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type DevicesCreateNonFieldErrorsErrorComponentAttrEnum = typeof DevicesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesCreateNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesCreateNonFieldErrorsErrorComponentCodeEnum = typeof DevicesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateOsLocaleErrorComponent
+ */
+export interface DevicesCreateOsLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsLocaleErrorComponent
+     */
+    'attr': DevicesCreateOsLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsLocaleErrorComponent
+     */
+    'code': DevicesCreateOsLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateOsLocaleErrorComponentAttrEnum = {
+    OsLocale: 'os.locale'
+} as const;
+
+export type DevicesCreateOsLocaleErrorComponentAttrEnum = typeof DevicesCreateOsLocaleErrorComponentAttrEnum[keyof typeof DevicesCreateOsLocaleErrorComponentAttrEnum];
+export const DevicesCreateOsLocaleErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateOsLocaleErrorComponentCodeEnum = typeof DevicesCreateOsLocaleErrorComponentCodeEnum[keyof typeof DevicesCreateOsLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateOsNameErrorComponent
+ */
+export interface DevicesCreateOsNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNameErrorComponent
+     */
+    'attr': DevicesCreateOsNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNameErrorComponent
+     */
+    'code': DevicesCreateOsNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateOsNameErrorComponentAttrEnum = {
+    OsName: 'os.name'
+} as const;
+
+export type DevicesCreateOsNameErrorComponentAttrEnum = typeof DevicesCreateOsNameErrorComponentAttrEnum[keyof typeof DevicesCreateOsNameErrorComponentAttrEnum];
+export const DevicesCreateOsNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateOsNameErrorComponentCodeEnum = typeof DevicesCreateOsNameErrorComponentCodeEnum[keyof typeof DevicesCreateOsNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateOsNonFieldErrorsErrorComponent
+ */
+export interface DevicesCreateOsNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
+     */
+    'code': DevicesCreateOsNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum = {
+    OsNonFieldErrors: 'os.non_field_errors'
+} as const;
+
+export type DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum = typeof DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesCreateOsNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type DevicesCreateOsNonFieldErrorsErrorComponentCodeEnum = typeof DevicesCreateOsNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesCreateOsNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateOsVersionErrorComponent
+ */
+export interface DevicesCreateOsVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsVersionErrorComponent
+     */
+    'attr': DevicesCreateOsVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsVersionErrorComponent
+     */
+    'code': DevicesCreateOsVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateOsVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateOsVersionErrorComponentAttrEnum = {
+    OsVersion: 'os.version'
+} as const;
+
+export type DevicesCreateOsVersionErrorComponentAttrEnum = typeof DevicesCreateOsVersionErrorComponentAttrEnum[keyof typeof DevicesCreateOsVersionErrorComponentAttrEnum];
+export const DevicesCreateOsVersionErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesCreateOsVersionErrorComponentCodeEnum = typeof DevicesCreateOsVersionErrorComponentCodeEnum[keyof typeof DevicesCreateOsVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateTypeErrorComponent
+ */
+export interface DevicesCreateTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateTypeErrorComponent
+     */
+    'attr': DevicesCreateTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateTypeErrorComponent
+     */
+    'code': DevicesCreateTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesCreateTypeErrorComponentAttrEnum = {
+    Type: 'type'
+} as const;
+
+export type DevicesCreateTypeErrorComponentAttrEnum = typeof DevicesCreateTypeErrorComponentAttrEnum[keyof typeof DevicesCreateTypeErrorComponentAttrEnum];
+export const DevicesCreateTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type DevicesCreateTypeErrorComponentCodeEnum = typeof DevicesCreateTypeErrorComponentCodeEnum[keyof typeof DevicesCreateTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesCreateValidationError
+ */
+export interface DevicesCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesCreateValidationError
+     */
+    'type': DevicesCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<DevicesCreateError>}
+     * @memberof DevicesCreateValidationError
+     */
+    'errors': Array<DevicesCreateError>;
+}
+
+export const DevicesCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type DevicesCreateValidationErrorTypeEnum = typeof DevicesCreateValidationErrorTypeEnum[keyof typeof DevicesCreateValidationErrorTypeEnum];
+
+/**
+ * @type DevicesPartialUpdateError
+ * @export
+ */
+export type DevicesPartialUpdateError = { attr: 'fcm_token' } & DevicesPartialUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesPartialUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesPartialUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesPartialUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesPartialUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesPartialUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesPartialUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesPartialUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesPartialUpdateOsVersionErrorComponent;
+
+/**
+ * @type DevicesPartialUpdateErrorResponse400
+ * @export
+ */
+export type DevicesPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesPartialUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateFcmTokenErrorComponent
+ */
+export interface DevicesPartialUpdateFcmTokenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateFcmTokenErrorComponent
+     */
+    'attr': DevicesPartialUpdateFcmTokenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateFcmTokenErrorComponent
+     */
+    'code': DevicesPartialUpdateFcmTokenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateFcmTokenErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum = {
+    FcmToken: 'fcm_token'
+} as const;
+
+export type DevicesPartialUpdateFcmTokenErrorComponentAttrEnum = typeof DevicesPartialUpdateFcmTokenErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateFcmTokenErrorComponentAttrEnum];
+export const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateFcmTokenErrorComponentCodeEnum = typeof DevicesPartialUpdateFcmTokenErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateFcmTokenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent
+ */
+export interface DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'code': DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum = {
+    MobileAppNonFieldErrors: 'mobile_app.non_field_errors'
+} as const;
+
+export type DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum = typeof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum = typeof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateMobileAppPackageNameErrorComponent
+ */
+export interface DevicesPartialUpdateMobileAppPackageNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
+     */
+    'attr': DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
+     */
+    'code': DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum = {
+    MobileAppPackageName: 'mobile_app.package_name'
+} as const;
+
+export type DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum = typeof DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum];
+export const DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum = typeof DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateMobileAppPackageVersionErrorComponent
+ */
+export interface DevicesPartialUpdateMobileAppPackageVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageVersionErrorComponent
+     */
+    'attr': DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageVersionErrorComponent
+     */
+    'code': DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateMobileAppPackageVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum = {
+    MobileAppPackageVersion: 'mobile_app.package_version'
+} as const;
+
+export type DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum = typeof DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum];
+export const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum = typeof DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateNameErrorComponent
+ */
+export interface DevicesPartialUpdateNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNameErrorComponent
+     */
+    'attr': DevicesPartialUpdateNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNameErrorComponent
+     */
+    'code': DevicesPartialUpdateNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateNameErrorComponentAttrEnum = {
+    Name: 'name'
+} as const;
+
+export type DevicesPartialUpdateNameErrorComponentAttrEnum = typeof DevicesPartialUpdateNameErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateNameErrorComponentAttrEnum];
+export const DevicesPartialUpdateNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateNameErrorComponentCodeEnum = typeof DevicesPartialUpdateNameErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateNonFieldErrorsErrorComponent
+ */
+export interface DevicesPartialUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'code': DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum = typeof DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum = typeof DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateOsLocaleErrorComponent
+ */
+export interface DevicesPartialUpdateOsLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsLocaleErrorComponent
+     */
+    'attr': DevicesPartialUpdateOsLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsLocaleErrorComponent
+     */
+    'code': DevicesPartialUpdateOsLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateOsLocaleErrorComponentAttrEnum = {
+    OsLocale: 'os.locale'
+} as const;
+
+export type DevicesPartialUpdateOsLocaleErrorComponentAttrEnum = typeof DevicesPartialUpdateOsLocaleErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateOsLocaleErrorComponentAttrEnum];
+export const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateOsLocaleErrorComponentCodeEnum = typeof DevicesPartialUpdateOsLocaleErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateOsLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateOsNameErrorComponent
+ */
+export interface DevicesPartialUpdateOsNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNameErrorComponent
+     */
+    'attr': DevicesPartialUpdateOsNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNameErrorComponent
+     */
+    'code': DevicesPartialUpdateOsNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateOsNameErrorComponentAttrEnum = {
+    OsName: 'os.name'
+} as const;
+
+export type DevicesPartialUpdateOsNameErrorComponentAttrEnum = typeof DevicesPartialUpdateOsNameErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateOsNameErrorComponentAttrEnum];
+export const DevicesPartialUpdateOsNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateOsNameErrorComponentCodeEnum = typeof DevicesPartialUpdateOsNameErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateOsNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateOsNonFieldErrorsErrorComponent
+ */
+export interface DevicesPartialUpdateOsNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNonFieldErrorsErrorComponent
+     */
+    'code': DevicesPartialUpdateOsNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum = {
+    OsNonFieldErrors: 'os.non_field_errors'
+} as const;
+
+export type DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum = typeof DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesPartialUpdateOsNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type DevicesPartialUpdateOsNonFieldErrorsErrorComponentCodeEnum = typeof DevicesPartialUpdateOsNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateOsNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateOsVersionErrorComponent
+ */
+export interface DevicesPartialUpdateOsVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsVersionErrorComponent
+     */
+    'attr': DevicesPartialUpdateOsVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsVersionErrorComponent
+     */
+    'code': DevicesPartialUpdateOsVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateOsVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesPartialUpdateOsVersionErrorComponentAttrEnum = {
+    OsVersion: 'os.version'
+} as const;
+
+export type DevicesPartialUpdateOsVersionErrorComponentAttrEnum = typeof DevicesPartialUpdateOsVersionErrorComponentAttrEnum[keyof typeof DevicesPartialUpdateOsVersionErrorComponentAttrEnum];
+export const DevicesPartialUpdateOsVersionErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesPartialUpdateOsVersionErrorComponentCodeEnum = typeof DevicesPartialUpdateOsVersionErrorComponentCodeEnum[keyof typeof DevicesPartialUpdateOsVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesPartialUpdateValidationError
+ */
+export interface DevicesPartialUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesPartialUpdateValidationError
+     */
+    'type': DevicesPartialUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<DevicesPartialUpdateError>}
+     * @memberof DevicesPartialUpdateValidationError
+     */
+    'errors': Array<DevicesPartialUpdateError>;
+}
+
+export const DevicesPartialUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type DevicesPartialUpdateValidationErrorTypeEnum = typeof DevicesPartialUpdateValidationErrorTypeEnum[keyof typeof DevicesPartialUpdateValidationErrorTypeEnum];
+
+/**
+ * @type DevicesRetrieveErrorResponse400
+ * @export
+ */
+export type DevicesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type DevicesUpdateError
+ * @export
+ */
+export type DevicesUpdateError = { attr: 'fcm_token' } & DevicesUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesUpdateOsVersionErrorComponent;
+
+/**
+ * @type DevicesUpdateErrorResponse400
+ * @export
+ */
+export type DevicesUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateFcmTokenErrorComponent
+ */
+export interface DevicesUpdateFcmTokenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateFcmTokenErrorComponent
+     */
+    'attr': DevicesUpdateFcmTokenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateFcmTokenErrorComponent
+     */
+    'code': DevicesUpdateFcmTokenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateFcmTokenErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateFcmTokenErrorComponentAttrEnum = {
+    FcmToken: 'fcm_token'
+} as const;
+
+export type DevicesUpdateFcmTokenErrorComponentAttrEnum = typeof DevicesUpdateFcmTokenErrorComponentAttrEnum[keyof typeof DevicesUpdateFcmTokenErrorComponentAttrEnum];
+export const DevicesUpdateFcmTokenErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateFcmTokenErrorComponentCodeEnum = typeof DevicesUpdateFcmTokenErrorComponentCodeEnum[keyof typeof DevicesUpdateFcmTokenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateMobileAppNonFieldErrorsErrorComponent
+ */
+export interface DevicesUpdateMobileAppNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'code': DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum = {
+    MobileAppNonFieldErrors: 'mobile_app.non_field_errors'
+} as const;
+
+export type DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum = typeof DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum = typeof DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateMobileAppPackageNameErrorComponent
+ */
+export interface DevicesUpdateMobileAppPackageNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageNameErrorComponent
+     */
+    'attr': DevicesUpdateMobileAppPackageNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageNameErrorComponent
+     */
+    'code': DevicesUpdateMobileAppPackageNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateMobileAppPackageNameErrorComponentAttrEnum = {
+    MobileAppPackageName: 'mobile_app.package_name'
+} as const;
+
+export type DevicesUpdateMobileAppPackageNameErrorComponentAttrEnum = typeof DevicesUpdateMobileAppPackageNameErrorComponentAttrEnum[keyof typeof DevicesUpdateMobileAppPackageNameErrorComponentAttrEnum];
+export const DevicesUpdateMobileAppPackageNameErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateMobileAppPackageNameErrorComponentCodeEnum = typeof DevicesUpdateMobileAppPackageNameErrorComponentCodeEnum[keyof typeof DevicesUpdateMobileAppPackageNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateMobileAppPackageVersionErrorComponent
+ */
+export interface DevicesUpdateMobileAppPackageVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageVersionErrorComponent
+     */
+    'attr': DevicesUpdateMobileAppPackageVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageVersionErrorComponent
+     */
+    'code': DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateMobileAppPackageVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateMobileAppPackageVersionErrorComponentAttrEnum = {
+    MobileAppPackageVersion: 'mobile_app.package_version'
+} as const;
+
+export type DevicesUpdateMobileAppPackageVersionErrorComponentAttrEnum = typeof DevicesUpdateMobileAppPackageVersionErrorComponentAttrEnum[keyof typeof DevicesUpdateMobileAppPackageVersionErrorComponentAttrEnum];
+export const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum = typeof DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum[keyof typeof DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateNameErrorComponent
+ */
+export interface DevicesUpdateNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNameErrorComponent
+     */
+    'attr': DevicesUpdateNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNameErrorComponent
+     */
+    'code': DevicesUpdateNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateNameErrorComponentAttrEnum = {
+    Name: 'name'
+} as const;
+
+export type DevicesUpdateNameErrorComponentAttrEnum = typeof DevicesUpdateNameErrorComponentAttrEnum[keyof typeof DevicesUpdateNameErrorComponentAttrEnum];
+export const DevicesUpdateNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateNameErrorComponentCodeEnum = typeof DevicesUpdateNameErrorComponentCodeEnum[keyof typeof DevicesUpdateNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateNonFieldErrorsErrorComponent
+ */
+export interface DevicesUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNonFieldErrorsErrorComponent
+     */
+    'code': DevicesUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type DevicesUpdateNonFieldErrorsErrorComponentAttrEnum = typeof DevicesUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type DevicesUpdateNonFieldErrorsErrorComponentCodeEnum = typeof DevicesUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateOsLocaleErrorComponent
+ */
+export interface DevicesUpdateOsLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsLocaleErrorComponent
+     */
+    'attr': DevicesUpdateOsLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsLocaleErrorComponent
+     */
+    'code': DevicesUpdateOsLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateOsLocaleErrorComponentAttrEnum = {
+    OsLocale: 'os.locale'
+} as const;
+
+export type DevicesUpdateOsLocaleErrorComponentAttrEnum = typeof DevicesUpdateOsLocaleErrorComponentAttrEnum[keyof typeof DevicesUpdateOsLocaleErrorComponentAttrEnum];
+export const DevicesUpdateOsLocaleErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateOsLocaleErrorComponentCodeEnum = typeof DevicesUpdateOsLocaleErrorComponentCodeEnum[keyof typeof DevicesUpdateOsLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateOsNameErrorComponent
+ */
+export interface DevicesUpdateOsNameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNameErrorComponent
+     */
+    'attr': DevicesUpdateOsNameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNameErrorComponent
+     */
+    'code': DevicesUpdateOsNameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNameErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateOsNameErrorComponentAttrEnum = {
+    OsName: 'os.name'
+} as const;
+
+export type DevicesUpdateOsNameErrorComponentAttrEnum = typeof DevicesUpdateOsNameErrorComponentAttrEnum[keyof typeof DevicesUpdateOsNameErrorComponentAttrEnum];
+export const DevicesUpdateOsNameErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateOsNameErrorComponentCodeEnum = typeof DevicesUpdateOsNameErrorComponentCodeEnum[keyof typeof DevicesUpdateOsNameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateOsNonFieldErrorsErrorComponent
+ */
+export interface DevicesUpdateOsNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNonFieldErrorsErrorComponent
+     */
+    'attr': DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNonFieldErrorsErrorComponent
+     */
+    'code': DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum = {
+    OsNonFieldErrors: 'os.non_field_errors'
+} as const;
+
+export type DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum = typeof DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum[keyof typeof DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum];
+export const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum = typeof DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum[keyof typeof DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateOsVersionErrorComponent
+ */
+export interface DevicesUpdateOsVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsVersionErrorComponent
+     */
+    'attr': DevicesUpdateOsVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsVersionErrorComponent
+     */
+    'code': DevicesUpdateOsVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateOsVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const DevicesUpdateOsVersionErrorComponentAttrEnum = {
+    OsVersion: 'os.version'
+} as const;
+
+export type DevicesUpdateOsVersionErrorComponentAttrEnum = typeof DevicesUpdateOsVersionErrorComponentAttrEnum[keyof typeof DevicesUpdateOsVersionErrorComponentAttrEnum];
+export const DevicesUpdateOsVersionErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type DevicesUpdateOsVersionErrorComponentCodeEnum = typeof DevicesUpdateOsVersionErrorComponentCodeEnum[keyof typeof DevicesUpdateOsVersionErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface DevicesUpdateValidationError
+ */
+export interface DevicesUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof DevicesUpdateValidationError
+     */
+    'type': DevicesUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<DevicesUpdateError>}
+     * @memberof DevicesUpdateValidationError
+     */
+    'errors': Array<DevicesUpdateError>;
+}
+
+export const DevicesUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type DevicesUpdateValidationErrorTypeEnum = typeof DevicesUpdateValidationErrorTypeEnum[keyof typeof DevicesUpdateValidationErrorTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error401
+ */
+export interface Error401 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error401
+     */
+    'code': Error401CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error401
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error401
+     */
+    'attr': string | null;
+}
+
+export const Error401CodeEnum = {
+    AuthenticationFailed: 'authentication_failed',
+    NotAuthenticated: 'not_authenticated'
+} as const;
+
+export type Error401CodeEnum = typeof Error401CodeEnum[keyof typeof Error401CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error403
+ */
+export interface Error403 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error403
+     */
+    'code': Error403CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error403
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error403
+     */
+    'attr': string | null;
+}
+
+export const Error403CodeEnum = {
+    PermissionDenied: 'permission_denied'
+} as const;
+
+export type Error403CodeEnum = typeof Error403CodeEnum[keyof typeof Error403CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error404
+ */
+export interface Error404 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error404
+     */
+    'code': Error404CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error404
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error404
+     */
+    'attr': string | null;
+}
+
+export const Error404CodeEnum = {
+    NotFound: 'not_found'
+} as const;
+
+export type Error404CodeEnum = typeof Error404CodeEnum[keyof typeof Error404CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error405
+ */
+export interface Error405 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error405
+     */
+    'code': Error405CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error405
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error405
+     */
+    'attr': string | null;
+}
+
+export const Error405CodeEnum = {
+    MethodNotAllowed: 'method_not_allowed'
+} as const;
+
+export type Error405CodeEnum = typeof Error405CodeEnum[keyof typeof Error405CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error406
+ */
+export interface Error406 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error406
+     */
+    'code': Error406CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error406
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error406
+     */
+    'attr': string | null;
+}
+
+export const Error406CodeEnum = {
+    NotAcceptable: 'not_acceptable'
+} as const;
+
+export type Error406CodeEnum = typeof Error406CodeEnum[keyof typeof Error406CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error415
+ */
+export interface Error415 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error415
+     */
+    'code': Error415CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error415
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error415
+     */
+    'attr': string | null;
+}
+
+export const Error415CodeEnum = {
+    UnsupportedMediaType: 'unsupported_media_type'
+} as const;
+
+export type Error415CodeEnum = typeof Error415CodeEnum[keyof typeof Error415CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Error500
+ */
+export interface Error500 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Error500
+     */
+    'code': Error500CodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error500
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Error500
+     */
+    'attr': string | null;
+}
+
+export const Error500CodeEnum = {
+    Error: 'error'
+} as const;
+
+export type Error500CodeEnum = typeof Error500CodeEnum[keyof typeof Error500CodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse401
+ */
+export interface ErrorResponse401 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse401
+     */
+    'type': ErrorResponse401TypeEnum;
+    /**
+     * 
+     * @type {Array<Error401>}
+     * @memberof ErrorResponse401
+     */
+    'errors': Array<Error401>;
+}
+
+export const ErrorResponse401TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse401TypeEnum = typeof ErrorResponse401TypeEnum[keyof typeof ErrorResponse401TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse403
+ */
+export interface ErrorResponse403 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse403
+     */
+    'type': ErrorResponse403TypeEnum;
+    /**
+     * 
+     * @type {Array<Error403>}
+     * @memberof ErrorResponse403
+     */
+    'errors': Array<Error403>;
+}
+
+export const ErrorResponse403TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse403TypeEnum = typeof ErrorResponse403TypeEnum[keyof typeof ErrorResponse403TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse404
+ */
+export interface ErrorResponse404 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse404
+     */
+    'type': ErrorResponse404TypeEnum;
+    /**
+     * 
+     * @type {Array<Error404>}
+     * @memberof ErrorResponse404
+     */
+    'errors': Array<Error404>;
+}
+
+export const ErrorResponse404TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse404TypeEnum = typeof ErrorResponse404TypeEnum[keyof typeof ErrorResponse404TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse405
+ */
+export interface ErrorResponse405 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse405
+     */
+    'type': ErrorResponse405TypeEnum;
+    /**
+     * 
+     * @type {Array<Error405>}
+     * @memberof ErrorResponse405
+     */
+    'errors': Array<Error405>;
+}
+
+export const ErrorResponse405TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse405TypeEnum = typeof ErrorResponse405TypeEnum[keyof typeof ErrorResponse405TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse406
+ */
+export interface ErrorResponse406 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse406
+     */
+    'type': ErrorResponse406TypeEnum;
+    /**
+     * 
+     * @type {Array<Error406>}
+     * @memberof ErrorResponse406
+     */
+    'errors': Array<Error406>;
+}
+
+export const ErrorResponse406TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse406TypeEnum = typeof ErrorResponse406TypeEnum[keyof typeof ErrorResponse406TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse415
+ */
+export interface ErrorResponse415 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse415
+     */
+    'type': ErrorResponse415TypeEnum;
+    /**
+     * 
+     * @type {Array<Error415>}
+     * @memberof ErrorResponse415
+     */
+    'errors': Array<Error415>;
+}
+
+export const ErrorResponse415TypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ErrorResponse415TypeEnum = typeof ErrorResponse415TypeEnum[keyof typeof ErrorResponse415TypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ErrorResponse500
+ */
+export interface ErrorResponse500 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ErrorResponse500
+     */
+    'type': ErrorResponse500TypeEnum;
+    /**
+     * 
+     * @type {Array<Error500>}
+     * @memberof ErrorResponse500
+     */
+    'errors': Array<Error500>;
+}
+
+export const ErrorResponse500TypeEnum = {
+    ServerError: 'server_error'
+} as const;
+
+export type ErrorResponse500TypeEnum = typeof ErrorResponse500TypeEnum[keyof typeof ErrorResponse500TypeEnum];
+
+/**
+ * 
+ * @export
  * @interface Fix
  */
 export interface Fix {
@@ -1271,6 +5476,362 @@ export interface FixRequest {
      */
     'power'?: number | null;
 }
+/**
+ * 
+ * @export
+ * @interface FixesCreateCoverageUuidErrorComponent
+ */
+export interface FixesCreateCoverageUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCoverageUuidErrorComponent
+     */
+    'attr': FixesCreateCoverageUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCoverageUuidErrorComponent
+     */
+    'code': FixesCreateCoverageUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCoverageUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreateCoverageUuidErrorComponentAttrEnum = {
+    CoverageUuid: 'coverage_uuid'
+} as const;
+
+export type FixesCreateCoverageUuidErrorComponentAttrEnum = typeof FixesCreateCoverageUuidErrorComponentAttrEnum[keyof typeof FixesCreateCoverageUuidErrorComponentAttrEnum];
+export const FixesCreateCoverageUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type FixesCreateCoverageUuidErrorComponentCodeEnum = typeof FixesCreateCoverageUuidErrorComponentCodeEnum[keyof typeof FixesCreateCoverageUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreateCreatedAtErrorComponent
+ */
+export interface FixesCreateCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCreatedAtErrorComponent
+     */
+    'attr': FixesCreateCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCreatedAtErrorComponent
+     */
+    'code': FixesCreateCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreateCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type FixesCreateCreatedAtErrorComponentAttrEnum = typeof FixesCreateCreatedAtErrorComponentAttrEnum[keyof typeof FixesCreateCreatedAtErrorComponentAttrEnum];
+export const FixesCreateCreatedAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type FixesCreateCreatedAtErrorComponentCodeEnum = typeof FixesCreateCreatedAtErrorComponentCodeEnum[keyof typeof FixesCreateCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type FixesCreateError
+ * @export
+ */
+export type FixesCreateError = { attr: 'coverage_uuid' } & FixesCreateCoverageUuidErrorComponent | { attr: 'created_at' } & FixesCreateCreatedAtErrorComponent | { attr: 'non_field_errors' } & FixesCreateNonFieldErrorsErrorComponent | { attr: 'point.latitude' } & FixesCreatePointLatitudeErrorComponent | { attr: 'point.longitude' } & FixesCreatePointLongitudeErrorComponent | { attr: 'point.non_field_errors' } & FixesCreatePointNonFieldErrorsErrorComponent | { attr: 'power' } & FixesCreatePowerErrorComponent | { attr: 'sent_at' } & FixesCreateSentAtErrorComponent;
+
+/**
+ * @type FixesCreateErrorResponse400
+ * @export
+ */
+export type FixesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & FixesCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface FixesCreateNonFieldErrorsErrorComponent
+ */
+export interface FixesCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateNonFieldErrorsErrorComponent
+     */
+    'attr': FixesCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateNonFieldErrorsErrorComponent
+     */
+    'code': FixesCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type FixesCreateNonFieldErrorsErrorComponentAttrEnum = typeof FixesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof FixesCreateNonFieldErrorsErrorComponentAttrEnum];
+export const FixesCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type FixesCreateNonFieldErrorsErrorComponentCodeEnum = typeof FixesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof FixesCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreatePointLatitudeErrorComponent
+ */
+export interface FixesCreatePointLatitudeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLatitudeErrorComponent
+     */
+    'attr': FixesCreatePointLatitudeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLatitudeErrorComponent
+     */
+    'code': FixesCreatePointLatitudeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLatitudeErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreatePointLatitudeErrorComponentAttrEnum = {
+    PointLatitude: 'point.latitude'
+} as const;
+
+export type FixesCreatePointLatitudeErrorComponentAttrEnum = typeof FixesCreatePointLatitudeErrorComponentAttrEnum[keyof typeof FixesCreatePointLatitudeErrorComponentAttrEnum];
+export const FixesCreatePointLatitudeErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type FixesCreatePointLatitudeErrorComponentCodeEnum = typeof FixesCreatePointLatitudeErrorComponentCodeEnum[keyof typeof FixesCreatePointLatitudeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreatePointLongitudeErrorComponent
+ */
+export interface FixesCreatePointLongitudeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLongitudeErrorComponent
+     */
+    'attr': FixesCreatePointLongitudeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLongitudeErrorComponent
+     */
+    'code': FixesCreatePointLongitudeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointLongitudeErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreatePointLongitudeErrorComponentAttrEnum = {
+    PointLongitude: 'point.longitude'
+} as const;
+
+export type FixesCreatePointLongitudeErrorComponentAttrEnum = typeof FixesCreatePointLongitudeErrorComponentAttrEnum[keyof typeof FixesCreatePointLongitudeErrorComponentAttrEnum];
+export const FixesCreatePointLongitudeErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type FixesCreatePointLongitudeErrorComponentCodeEnum = typeof FixesCreatePointLongitudeErrorComponentCodeEnum[keyof typeof FixesCreatePointLongitudeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreatePointNonFieldErrorsErrorComponent
+ */
+export interface FixesCreatePointNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
+     */
+    'attr': FixesCreatePointNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
+     */
+    'code': FixesCreatePointNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum = {
+    PointNonFieldErrors: 'point.non_field_errors'
+} as const;
+
+export type FixesCreatePointNonFieldErrorsErrorComponentAttrEnum = typeof FixesCreatePointNonFieldErrorsErrorComponentAttrEnum[keyof typeof FixesCreatePointNonFieldErrorsErrorComponentAttrEnum];
+export const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type FixesCreatePointNonFieldErrorsErrorComponentCodeEnum = typeof FixesCreatePointNonFieldErrorsErrorComponentCodeEnum[keyof typeof FixesCreatePointNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreatePowerErrorComponent
+ */
+export interface FixesCreatePowerErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePowerErrorComponent
+     */
+    'attr': FixesCreatePowerErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePowerErrorComponent
+     */
+    'code': FixesCreatePowerErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreatePowerErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreatePowerErrorComponentAttrEnum = {
+    Power: 'power'
+} as const;
+
+export type FixesCreatePowerErrorComponentAttrEnum = typeof FixesCreatePowerErrorComponentAttrEnum[keyof typeof FixesCreatePowerErrorComponentAttrEnum];
+export const FixesCreatePowerErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length'
+} as const;
+
+export type FixesCreatePowerErrorComponentCodeEnum = typeof FixesCreatePowerErrorComponentCodeEnum[keyof typeof FixesCreatePowerErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreateSentAtErrorComponent
+ */
+export interface FixesCreateSentAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateSentAtErrorComponent
+     */
+    'attr': FixesCreateSentAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateSentAtErrorComponent
+     */
+    'code': FixesCreateSentAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateSentAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const FixesCreateSentAtErrorComponentAttrEnum = {
+    SentAt: 'sent_at'
+} as const;
+
+export type FixesCreateSentAtErrorComponentAttrEnum = typeof FixesCreateSentAtErrorComponentAttrEnum[keyof typeof FixesCreateSentAtErrorComponentAttrEnum];
+export const FixesCreateSentAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type FixesCreateSentAtErrorComponentCodeEnum = typeof FixesCreateSentAtErrorComponentCodeEnum[keyof typeof FixesCreateSentAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface FixesCreateValidationError
+ */
+export interface FixesCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof FixesCreateValidationError
+     */
+    'type': FixesCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<FixesCreateError>}
+     * @memberof FixesCreateValidationError
+     */
+    'errors': Array<FixesCreateError>;
+}
+
+export const FixesCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type FixesCreateValidationErrorTypeEnum = typeof FixesCreateValidationErrorTypeEnum[keyof typeof FixesCreateValidationErrorTypeEnum];
+
 /**
  * A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as \'title\', \'message\', max_length, help_text, etc.
  * @export
@@ -2216,6 +6777,2702 @@ export interface NotificationRequest {
     'is_read': boolean;
 }
 /**
+ * @type NotificationsCreateError
+ * @export
+ */
+export type NotificationsCreateError = { attr: 'message.body.bg' } & NotificationsCreateMessageBodyBgErrorComponent | { attr: 'message.body.bn' } & NotificationsCreateMessageBodyBnErrorComponent | { attr: 'message.body.ca' } & NotificationsCreateMessageBodyCaErrorComponent | { attr: 'message.body.de' } & NotificationsCreateMessageBodyDeErrorComponent | { attr: 'message.body.el' } & NotificationsCreateMessageBodyElErrorComponent | { attr: 'message.body.en' } & NotificationsCreateMessageBodyEnErrorComponent | { attr: 'message.body.es' } & NotificationsCreateMessageBodyEsErrorComponent | { attr: 'message.body.eu' } & NotificationsCreateMessageBodyEuErrorComponent | { attr: 'message.body.fr' } & NotificationsCreateMessageBodyFrErrorComponent | { attr: 'message.body.gl' } & NotificationsCreateMessageBodyGlErrorComponent | { attr: 'message.body.hr' } & NotificationsCreateMessageBodyHrErrorComponent | { attr: 'message.body.hu' } & NotificationsCreateMessageBodyHuErrorComponent | { attr: 'message.body.it' } & NotificationsCreateMessageBodyItErrorComponent | { attr: 'message.body.lb' } & NotificationsCreateMessageBodyLbErrorComponent | { attr: 'message.body.mk' } & NotificationsCreateMessageBodyMkErrorComponent | { attr: 'message.body.nl' } & NotificationsCreateMessageBodyNlErrorComponent | { attr: 'message.body.non_field_errors' } & NotificationsCreateMessageBodyNonFieldErrorsErrorComponent | { attr: 'message.body.pt' } & NotificationsCreateMessageBodyPtErrorComponent | { attr: 'message.body.ro' } & NotificationsCreateMessageBodyRoErrorComponent | { attr: 'message.body.sl' } & NotificationsCreateMessageBodySlErrorComponent | { attr: 'message.body.sq' } & NotificationsCreateMessageBodySqErrorComponent | { attr: 'message.body.sr' } & NotificationsCreateMessageBodySrErrorComponent | { attr: 'message.body.sv' } & NotificationsCreateMessageBodySvErrorComponent | { attr: 'message.body.tr' } & NotificationsCreateMessageBodyTrErrorComponent | { attr: 'message.body.zh-CN' } & NotificationsCreateMessageBodyZhCNErrorComponent | { attr: 'message.non_field_errors' } & NotificationsCreateMessageNonFieldErrorsErrorComponent | { attr: 'message.title.bg' } & NotificationsCreateMessageTitleBgErrorComponent | { attr: 'message.title.bn' } & NotificationsCreateMessageTitleBnErrorComponent | { attr: 'message.title.ca' } & NotificationsCreateMessageTitleCaErrorComponent | { attr: 'message.title.de' } & NotificationsCreateMessageTitleDeErrorComponent | { attr: 'message.title.el' } & NotificationsCreateMessageTitleElErrorComponent | { attr: 'message.title.en' } & NotificationsCreateMessageTitleEnErrorComponent | { attr: 'message.title.es' } & NotificationsCreateMessageTitleEsErrorComponent | { attr: 'message.title.eu' } & NotificationsCreateMessageTitleEuErrorComponent | { attr: 'message.title.fr' } & NotificationsCreateMessageTitleFrErrorComponent | { attr: 'message.title.gl' } & NotificationsCreateMessageTitleGlErrorComponent | { attr: 'message.title.hr' } & NotificationsCreateMessageTitleHrErrorComponent | { attr: 'message.title.hu' } & NotificationsCreateMessageTitleHuErrorComponent | { attr: 'message.title.it' } & NotificationsCreateMessageTitleItErrorComponent | { attr: 'message.title.lb' } & NotificationsCreateMessageTitleLbErrorComponent | { attr: 'message.title.mk' } & NotificationsCreateMessageTitleMkErrorComponent | { attr: 'message.title.nl' } & NotificationsCreateMessageTitleNlErrorComponent | { attr: 'message.title.non_field_errors' } & NotificationsCreateMessageTitleNonFieldErrorsErrorComponent | { attr: 'message.title.pt' } & NotificationsCreateMessageTitlePtErrorComponent | { attr: 'message.title.ro' } & NotificationsCreateMessageTitleRoErrorComponent | { attr: 'message.title.sl' } & NotificationsCreateMessageTitleSlErrorComponent | { attr: 'message.title.sq' } & NotificationsCreateMessageTitleSqErrorComponent | { attr: 'message.title.sr' } & NotificationsCreateMessageTitleSrErrorComponent | { attr: 'message.title.sv' } & NotificationsCreateMessageTitleSvErrorComponent | { attr: 'message.title.tr' } & NotificationsCreateMessageTitleTrErrorComponent | { attr: 'message.title.zh-CN' } & NotificationsCreateMessageTitleZhCNErrorComponent | { attr: 'non_field_errors' } & NotificationsCreateNonFieldErrorsErrorComponent | { attr: 'receiver_type' } & NotificationsCreateReceiverTypeErrorComponent | { attr: 'topic_codes' } & NotificationsCreateTopicCodesErrorComponent | { attr: 'topic_codes.INDEX' } & NotificationsCreateTopicCodesINDEXErrorComponent | { attr: 'user_uuids' } & NotificationsCreateUserUuidsErrorComponent | { attr: 'user_uuids.INDEX' } & NotificationsCreateUserUuidsINDEXErrorComponent;
+
+/**
+ * @type NotificationsCreateErrorResponse400
+ * @export
+ */
+export type NotificationsCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyBgErrorComponent
+ */
+export interface NotificationsCreateMessageBodyBgErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBgErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyBgErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBgErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyBgErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBgErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyBgErrorComponentAttrEnum = {
+    MessageBodyBg: 'message.body.bg'
+} as const;
+
+export type NotificationsCreateMessageBodyBgErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyBgErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyBgErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyBgErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyBgErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyBgErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyBgErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyBnErrorComponent
+ */
+export interface NotificationsCreateMessageBodyBnErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBnErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyBnErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBnErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyBnErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyBnErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyBnErrorComponentAttrEnum = {
+    MessageBodyBn: 'message.body.bn'
+} as const;
+
+export type NotificationsCreateMessageBodyBnErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyBnErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyBnErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyBnErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyBnErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyBnErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyBnErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyCaErrorComponent
+ */
+export interface NotificationsCreateMessageBodyCaErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyCaErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyCaErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyCaErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyCaErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyCaErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyCaErrorComponentAttrEnum = {
+    MessageBodyCa: 'message.body.ca'
+} as const;
+
+export type NotificationsCreateMessageBodyCaErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyCaErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyCaErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyCaErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyCaErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyCaErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyCaErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyDeErrorComponent
+ */
+export interface NotificationsCreateMessageBodyDeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyDeErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyDeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyDeErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyDeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyDeErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyDeErrorComponentAttrEnum = {
+    MessageBodyDe: 'message.body.de'
+} as const;
+
+export type NotificationsCreateMessageBodyDeErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyDeErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyDeErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyDeErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyDeErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyDeErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyDeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyElErrorComponent
+ */
+export interface NotificationsCreateMessageBodyElErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyElErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyElErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyElErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyElErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyElErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyElErrorComponentAttrEnum = {
+    MessageBodyEl: 'message.body.el'
+} as const;
+
+export type NotificationsCreateMessageBodyElErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyElErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyElErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyElErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyElErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyElErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyElErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyEnErrorComponent
+ */
+export interface NotificationsCreateMessageBodyEnErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEnErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyEnErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEnErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyEnErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEnErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyEnErrorComponentAttrEnum = {
+    MessageBodyEn: 'message.body.en'
+} as const;
+
+export type NotificationsCreateMessageBodyEnErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyEnErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyEnErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyEnErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyEnErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyEnErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyEnErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyEsErrorComponent
+ */
+export interface NotificationsCreateMessageBodyEsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEsErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyEsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEsErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyEsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyEsErrorComponentAttrEnum = {
+    MessageBodyEs: 'message.body.es'
+} as const;
+
+export type NotificationsCreateMessageBodyEsErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyEsErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyEsErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyEsErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyEsErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyEsErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyEsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyEuErrorComponent
+ */
+export interface NotificationsCreateMessageBodyEuErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEuErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyEuErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEuErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyEuErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyEuErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyEuErrorComponentAttrEnum = {
+    MessageBodyEu: 'message.body.eu'
+} as const;
+
+export type NotificationsCreateMessageBodyEuErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyEuErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyEuErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyEuErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyEuErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyEuErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyEuErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyFrErrorComponent
+ */
+export interface NotificationsCreateMessageBodyFrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyFrErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyFrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyFrErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyFrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyFrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyFrErrorComponentAttrEnum = {
+    MessageBodyFr: 'message.body.fr'
+} as const;
+
+export type NotificationsCreateMessageBodyFrErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyFrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyFrErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyFrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyFrErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyFrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyFrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyGlErrorComponent
+ */
+export interface NotificationsCreateMessageBodyGlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyGlErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyGlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyGlErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyGlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyGlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyGlErrorComponentAttrEnum = {
+    MessageBodyGl: 'message.body.gl'
+} as const;
+
+export type NotificationsCreateMessageBodyGlErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyGlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyGlErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyGlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyGlErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyGlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyGlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyHrErrorComponent
+ */
+export interface NotificationsCreateMessageBodyHrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHrErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyHrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHrErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyHrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyHrErrorComponentAttrEnum = {
+    MessageBodyHr: 'message.body.hr'
+} as const;
+
+export type NotificationsCreateMessageBodyHrErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyHrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyHrErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyHrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyHrErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyHrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyHrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyHuErrorComponent
+ */
+export interface NotificationsCreateMessageBodyHuErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHuErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyHuErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHuErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyHuErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyHuErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyHuErrorComponentAttrEnum = {
+    MessageBodyHu: 'message.body.hu'
+} as const;
+
+export type NotificationsCreateMessageBodyHuErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyHuErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyHuErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyHuErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyHuErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyHuErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyHuErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyItErrorComponent
+ */
+export interface NotificationsCreateMessageBodyItErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyItErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyItErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyItErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyItErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyItErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyItErrorComponentAttrEnum = {
+    MessageBodyIt: 'message.body.it'
+} as const;
+
+export type NotificationsCreateMessageBodyItErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyItErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyItErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyItErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyItErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyItErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyItErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyLbErrorComponent
+ */
+export interface NotificationsCreateMessageBodyLbErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyLbErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyLbErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyLbErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyLbErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyLbErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyLbErrorComponentAttrEnum = {
+    MessageBodyLb: 'message.body.lb'
+} as const;
+
+export type NotificationsCreateMessageBodyLbErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyLbErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyLbErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyLbErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyLbErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyLbErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyLbErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyMkErrorComponent
+ */
+export interface NotificationsCreateMessageBodyMkErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyMkErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyMkErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyMkErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyMkErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyMkErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyMkErrorComponentAttrEnum = {
+    MessageBodyMk: 'message.body.mk'
+} as const;
+
+export type NotificationsCreateMessageBodyMkErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyMkErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyMkErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyMkErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyMkErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyMkErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyMkErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyNlErrorComponent
+ */
+export interface NotificationsCreateMessageBodyNlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNlErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyNlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNlErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyNlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyNlErrorComponentAttrEnum = {
+    MessageBodyNl: 'message.body.nl'
+} as const;
+
+export type NotificationsCreateMessageBodyNlErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyNlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyNlErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyNlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyNlErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyNlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyNlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyNonFieldErrorsErrorComponent
+ */
+export interface NotificationsCreateMessageBodyNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum = {
+    MessageBodyNonFieldErrors: 'message.body.non_field_errors'
+} as const;
+
+export type NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyPtErrorComponent
+ */
+export interface NotificationsCreateMessageBodyPtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyPtErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyPtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyPtErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyPtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyPtErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyPtErrorComponentAttrEnum = {
+    MessageBodyPt: 'message.body.pt'
+} as const;
+
+export type NotificationsCreateMessageBodyPtErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyPtErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyPtErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyPtErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyPtErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyPtErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyPtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyRoErrorComponent
+ */
+export interface NotificationsCreateMessageBodyRoErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyRoErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyRoErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyRoErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyRoErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyRoErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyRoErrorComponentAttrEnum = {
+    MessageBodyRo: 'message.body.ro'
+} as const;
+
+export type NotificationsCreateMessageBodyRoErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyRoErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyRoErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyRoErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyRoErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyRoErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyRoErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodySlErrorComponent
+ */
+export interface NotificationsCreateMessageBodySlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySlErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodySlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySlErrorComponent
+     */
+    'code': NotificationsCreateMessageBodySlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodySlErrorComponentAttrEnum = {
+    MessageBodySl: 'message.body.sl'
+} as const;
+
+export type NotificationsCreateMessageBodySlErrorComponentAttrEnum = typeof NotificationsCreateMessageBodySlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodySlErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodySlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodySlErrorComponentCodeEnum = typeof NotificationsCreateMessageBodySlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodySlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodySqErrorComponent
+ */
+export interface NotificationsCreateMessageBodySqErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySqErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodySqErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySqErrorComponent
+     */
+    'code': NotificationsCreateMessageBodySqErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySqErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodySqErrorComponentAttrEnum = {
+    MessageBodySq: 'message.body.sq'
+} as const;
+
+export type NotificationsCreateMessageBodySqErrorComponentAttrEnum = typeof NotificationsCreateMessageBodySqErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodySqErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodySqErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodySqErrorComponentCodeEnum = typeof NotificationsCreateMessageBodySqErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodySqErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodySrErrorComponent
+ */
+export interface NotificationsCreateMessageBodySrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySrErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodySrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySrErrorComponent
+     */
+    'code': NotificationsCreateMessageBodySrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodySrErrorComponentAttrEnum = {
+    MessageBodySr: 'message.body.sr'
+} as const;
+
+export type NotificationsCreateMessageBodySrErrorComponentAttrEnum = typeof NotificationsCreateMessageBodySrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodySrErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodySrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodySrErrorComponentCodeEnum = typeof NotificationsCreateMessageBodySrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodySrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodySvErrorComponent
+ */
+export interface NotificationsCreateMessageBodySvErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySvErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodySvErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySvErrorComponent
+     */
+    'code': NotificationsCreateMessageBodySvErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodySvErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodySvErrorComponentAttrEnum = {
+    MessageBodySv: 'message.body.sv'
+} as const;
+
+export type NotificationsCreateMessageBodySvErrorComponentAttrEnum = typeof NotificationsCreateMessageBodySvErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodySvErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodySvErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodySvErrorComponentCodeEnum = typeof NotificationsCreateMessageBodySvErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodySvErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyTrErrorComponent
+ */
+export interface NotificationsCreateMessageBodyTrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyTrErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyTrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyTrErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyTrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyTrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyTrErrorComponentAttrEnum = {
+    MessageBodyTr: 'message.body.tr'
+} as const;
+
+export type NotificationsCreateMessageBodyTrErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyTrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyTrErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyTrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyTrErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyTrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyTrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageBodyZhCNErrorComponent
+ */
+export interface NotificationsCreateMessageBodyZhCNErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyZhCNErrorComponent
+     */
+    'attr': NotificationsCreateMessageBodyZhCNErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyZhCNErrorComponent
+     */
+    'code': NotificationsCreateMessageBodyZhCNErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageBodyZhCNErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageBodyZhCNErrorComponentAttrEnum = {
+    MessageBodyZhCn: 'message.body.zh-CN'
+} as const;
+
+export type NotificationsCreateMessageBodyZhCNErrorComponentAttrEnum = typeof NotificationsCreateMessageBodyZhCNErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageBodyZhCNErrorComponentAttrEnum];
+export const NotificationsCreateMessageBodyZhCNErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageBodyZhCNErrorComponentCodeEnum = typeof NotificationsCreateMessageBodyZhCNErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageBodyZhCNErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageNonFieldErrorsErrorComponent
+ */
+export interface NotificationsCreateMessageNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsCreateMessageNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsCreateMessageNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageNonFieldErrorsErrorComponentAttrEnum = {
+    MessageNonFieldErrors: 'message.non_field_errors'
+} as const;
+
+export type NotificationsCreateMessageNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsCreateMessageNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsCreateMessageNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateMessageNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsCreateMessageNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleBgErrorComponent
+ */
+export interface NotificationsCreateMessageTitleBgErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBgErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleBgErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBgErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleBgErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBgErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleBgErrorComponentAttrEnum = {
+    MessageTitleBg: 'message.title.bg'
+} as const;
+
+export type NotificationsCreateMessageTitleBgErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleBgErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleBgErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleBgErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleBgErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleBgErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleBgErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleBnErrorComponent
+ */
+export interface NotificationsCreateMessageTitleBnErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBnErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleBnErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBnErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleBnErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleBnErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleBnErrorComponentAttrEnum = {
+    MessageTitleBn: 'message.title.bn'
+} as const;
+
+export type NotificationsCreateMessageTitleBnErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleBnErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleBnErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleBnErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleBnErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleBnErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleBnErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleCaErrorComponent
+ */
+export interface NotificationsCreateMessageTitleCaErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleCaErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleCaErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleCaErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleCaErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleCaErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleCaErrorComponentAttrEnum = {
+    MessageTitleCa: 'message.title.ca'
+} as const;
+
+export type NotificationsCreateMessageTitleCaErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleCaErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleCaErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleCaErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleCaErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleCaErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleCaErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleDeErrorComponent
+ */
+export interface NotificationsCreateMessageTitleDeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleDeErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleDeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleDeErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleDeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleDeErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleDeErrorComponentAttrEnum = {
+    MessageTitleDe: 'message.title.de'
+} as const;
+
+export type NotificationsCreateMessageTitleDeErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleDeErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleDeErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleDeErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleDeErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleDeErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleDeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleElErrorComponent
+ */
+export interface NotificationsCreateMessageTitleElErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleElErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleElErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleElErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleElErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleElErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleElErrorComponentAttrEnum = {
+    MessageTitleEl: 'message.title.el'
+} as const;
+
+export type NotificationsCreateMessageTitleElErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleElErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleElErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleElErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleElErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleElErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleElErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleEnErrorComponent
+ */
+export interface NotificationsCreateMessageTitleEnErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEnErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleEnErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEnErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleEnErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEnErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleEnErrorComponentAttrEnum = {
+    MessageTitleEn: 'message.title.en'
+} as const;
+
+export type NotificationsCreateMessageTitleEnErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleEnErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleEnErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleEnErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleEnErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleEnErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleEnErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleEsErrorComponent
+ */
+export interface NotificationsCreateMessageTitleEsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEsErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleEsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEsErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleEsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleEsErrorComponentAttrEnum = {
+    MessageTitleEs: 'message.title.es'
+} as const;
+
+export type NotificationsCreateMessageTitleEsErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleEsErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleEsErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleEsErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleEsErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleEsErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleEsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleEuErrorComponent
+ */
+export interface NotificationsCreateMessageTitleEuErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEuErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleEuErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEuErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleEuErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleEuErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleEuErrorComponentAttrEnum = {
+    MessageTitleEu: 'message.title.eu'
+} as const;
+
+export type NotificationsCreateMessageTitleEuErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleEuErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleEuErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleEuErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleEuErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleEuErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleEuErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleFrErrorComponent
+ */
+export interface NotificationsCreateMessageTitleFrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleFrErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleFrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleFrErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleFrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleFrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleFrErrorComponentAttrEnum = {
+    MessageTitleFr: 'message.title.fr'
+} as const;
+
+export type NotificationsCreateMessageTitleFrErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleFrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleFrErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleFrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleFrErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleFrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleFrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleGlErrorComponent
+ */
+export interface NotificationsCreateMessageTitleGlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleGlErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleGlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleGlErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleGlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleGlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleGlErrorComponentAttrEnum = {
+    MessageTitleGl: 'message.title.gl'
+} as const;
+
+export type NotificationsCreateMessageTitleGlErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleGlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleGlErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleGlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleGlErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleGlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleGlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleHrErrorComponent
+ */
+export interface NotificationsCreateMessageTitleHrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHrErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleHrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHrErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleHrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleHrErrorComponentAttrEnum = {
+    MessageTitleHr: 'message.title.hr'
+} as const;
+
+export type NotificationsCreateMessageTitleHrErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleHrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleHrErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleHrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleHrErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleHrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleHrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleHuErrorComponent
+ */
+export interface NotificationsCreateMessageTitleHuErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHuErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleHuErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHuErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleHuErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleHuErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleHuErrorComponentAttrEnum = {
+    MessageTitleHu: 'message.title.hu'
+} as const;
+
+export type NotificationsCreateMessageTitleHuErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleHuErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleHuErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleHuErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleHuErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleHuErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleHuErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleItErrorComponent
+ */
+export interface NotificationsCreateMessageTitleItErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleItErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleItErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleItErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleItErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleItErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleItErrorComponentAttrEnum = {
+    MessageTitleIt: 'message.title.it'
+} as const;
+
+export type NotificationsCreateMessageTitleItErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleItErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleItErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleItErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleItErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleItErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleItErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleLbErrorComponent
+ */
+export interface NotificationsCreateMessageTitleLbErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleLbErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleLbErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleLbErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleLbErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleLbErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleLbErrorComponentAttrEnum = {
+    MessageTitleLb: 'message.title.lb'
+} as const;
+
+export type NotificationsCreateMessageTitleLbErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleLbErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleLbErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleLbErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleLbErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleLbErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleLbErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleMkErrorComponent
+ */
+export interface NotificationsCreateMessageTitleMkErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleMkErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleMkErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleMkErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleMkErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleMkErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleMkErrorComponentAttrEnum = {
+    MessageTitleMk: 'message.title.mk'
+} as const;
+
+export type NotificationsCreateMessageTitleMkErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleMkErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleMkErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleMkErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleMkErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleMkErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleMkErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleNlErrorComponent
+ */
+export interface NotificationsCreateMessageTitleNlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNlErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleNlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNlErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleNlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleNlErrorComponentAttrEnum = {
+    MessageTitleNl: 'message.title.nl'
+} as const;
+
+export type NotificationsCreateMessageTitleNlErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleNlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleNlErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleNlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleNlErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleNlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleNlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
+ */
+export interface NotificationsCreateMessageTitleNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttrEnum = {
+    MessageTitleNonFieldErrors: 'message.title.non_field_errors'
+} as const;
+
+export type NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateMessageTitleNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitlePtErrorComponent
+ */
+export interface NotificationsCreateMessageTitlePtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitlePtErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitlePtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitlePtErrorComponent
+     */
+    'code': NotificationsCreateMessageTitlePtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitlePtErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitlePtErrorComponentAttrEnum = {
+    MessageTitlePt: 'message.title.pt'
+} as const;
+
+export type NotificationsCreateMessageTitlePtErrorComponentAttrEnum = typeof NotificationsCreateMessageTitlePtErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitlePtErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitlePtErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitlePtErrorComponentCodeEnum = typeof NotificationsCreateMessageTitlePtErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitlePtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleRoErrorComponent
+ */
+export interface NotificationsCreateMessageTitleRoErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleRoErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleRoErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleRoErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleRoErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleRoErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleRoErrorComponentAttrEnum = {
+    MessageTitleRo: 'message.title.ro'
+} as const;
+
+export type NotificationsCreateMessageTitleRoErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleRoErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleRoErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleRoErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleRoErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleRoErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleRoErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleSlErrorComponent
+ */
+export interface NotificationsCreateMessageTitleSlErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSlErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleSlErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSlErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleSlErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSlErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleSlErrorComponentAttrEnum = {
+    MessageTitleSl: 'message.title.sl'
+} as const;
+
+export type NotificationsCreateMessageTitleSlErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleSlErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleSlErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleSlErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleSlErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleSlErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleSlErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleSqErrorComponent
+ */
+export interface NotificationsCreateMessageTitleSqErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSqErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleSqErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSqErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleSqErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSqErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleSqErrorComponentAttrEnum = {
+    MessageTitleSq: 'message.title.sq'
+} as const;
+
+export type NotificationsCreateMessageTitleSqErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleSqErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleSqErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleSqErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleSqErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleSqErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleSqErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleSrErrorComponent
+ */
+export interface NotificationsCreateMessageTitleSrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSrErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleSrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSrErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleSrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleSrErrorComponentAttrEnum = {
+    MessageTitleSr: 'message.title.sr'
+} as const;
+
+export type NotificationsCreateMessageTitleSrErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleSrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleSrErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleSrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleSrErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleSrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleSrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleSvErrorComponent
+ */
+export interface NotificationsCreateMessageTitleSvErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSvErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleSvErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSvErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleSvErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleSvErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleSvErrorComponentAttrEnum = {
+    MessageTitleSv: 'message.title.sv'
+} as const;
+
+export type NotificationsCreateMessageTitleSvErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleSvErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleSvErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleSvErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleSvErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleSvErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleSvErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleTrErrorComponent
+ */
+export interface NotificationsCreateMessageTitleTrErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleTrErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleTrErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleTrErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleTrErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleTrErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleTrErrorComponentAttrEnum = {
+    MessageTitleTr: 'message.title.tr'
+} as const;
+
+export type NotificationsCreateMessageTitleTrErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleTrErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleTrErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleTrErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleTrErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleTrErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleTrErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateMessageTitleZhCNErrorComponent
+ */
+export interface NotificationsCreateMessageTitleZhCNErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleZhCNErrorComponent
+     */
+    'attr': NotificationsCreateMessageTitleZhCNErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleZhCNErrorComponent
+     */
+    'code': NotificationsCreateMessageTitleZhCNErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateMessageTitleZhCNErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateMessageTitleZhCNErrorComponentAttrEnum = {
+    MessageTitleZhCn: 'message.title.zh-CN'
+} as const;
+
+export type NotificationsCreateMessageTitleZhCNErrorComponentAttrEnum = typeof NotificationsCreateMessageTitleZhCNErrorComponentAttrEnum[keyof typeof NotificationsCreateMessageTitleZhCNErrorComponentAttrEnum];
+export const NotificationsCreateMessageTitleZhCNErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MaxLength: 'max_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateMessageTitleZhCNErrorComponentCodeEnum = typeof NotificationsCreateMessageTitleZhCNErrorComponentCodeEnum[keyof typeof NotificationsCreateMessageTitleZhCNErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateNonFieldErrorsErrorComponent
+ */
+export interface NotificationsCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type NotificationsCreateNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsCreateNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type NotificationsCreateNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateReceiverTypeErrorComponent
+ */
+export interface NotificationsCreateReceiverTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateReceiverTypeErrorComponent
+     */
+    'attr': NotificationsCreateReceiverTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateReceiverTypeErrorComponent
+     */
+    'code': NotificationsCreateReceiverTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateReceiverTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateReceiverTypeErrorComponentAttrEnum = {
+    ReceiverType: 'receiver_type'
+} as const;
+
+export type NotificationsCreateReceiverTypeErrorComponentAttrEnum = typeof NotificationsCreateReceiverTypeErrorComponentAttrEnum[keyof typeof NotificationsCreateReceiverTypeErrorComponentAttrEnum];
+export const NotificationsCreateReceiverTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateReceiverTypeErrorComponentCodeEnum = typeof NotificationsCreateReceiverTypeErrorComponentCodeEnum[keyof typeof NotificationsCreateReceiverTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateTopicCodesErrorComponent
+ */
+export interface NotificationsCreateTopicCodesErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesErrorComponent
+     */
+    'attr': NotificationsCreateTopicCodesErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesErrorComponent
+     */
+    'code': NotificationsCreateTopicCodesErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateTopicCodesErrorComponentAttrEnum = {
+    TopicCodes: 'topic_codes'
+} as const;
+
+export type NotificationsCreateTopicCodesErrorComponentAttrEnum = typeof NotificationsCreateTopicCodesErrorComponentAttrEnum[keyof typeof NotificationsCreateTopicCodesErrorComponentAttrEnum];
+export const NotificationsCreateTopicCodesErrorComponentCodeEnum = {
+    MinLength: 'min_length',
+    NotAList: 'not_a_list',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateTopicCodesErrorComponentCodeEnum = typeof NotificationsCreateTopicCodesErrorComponentCodeEnum[keyof typeof NotificationsCreateTopicCodesErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateTopicCodesINDEXErrorComponent
+ */
+export interface NotificationsCreateTopicCodesINDEXErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
+     */
+    'attr': NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
+     */
+    'code': NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum = {
+    TopicCodesIndex: 'topic_codes.INDEX'
+} as const;
+
+export type NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum = typeof NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum[keyof typeof NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum];
+export const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum = typeof NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum[keyof typeof NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateUserUuidsErrorComponent
+ */
+export interface NotificationsCreateUserUuidsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsErrorComponent
+     */
+    'attr': NotificationsCreateUserUuidsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsErrorComponent
+     */
+    'code': NotificationsCreateUserUuidsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateUserUuidsErrorComponentAttrEnum = {
+    UserUuids: 'user_uuids'
+} as const;
+
+export type NotificationsCreateUserUuidsErrorComponentAttrEnum = typeof NotificationsCreateUserUuidsErrorComponentAttrEnum[keyof typeof NotificationsCreateUserUuidsErrorComponentAttrEnum];
+export const NotificationsCreateUserUuidsErrorComponentCodeEnum = {
+    MinLength: 'min_length',
+    NotAList: 'not_a_list',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateUserUuidsErrorComponentCodeEnum = typeof NotificationsCreateUserUuidsErrorComponentCodeEnum[keyof typeof NotificationsCreateUserUuidsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateUserUuidsINDEXErrorComponent
+ */
+export interface NotificationsCreateUserUuidsINDEXErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
+     */
+    'attr': NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
+     */
+    'code': NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum = {
+    UserUuidsIndex: 'user_uuids.INDEX'
+} as const;
+
+export type NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum = typeof NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum[keyof typeof NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum];
+export const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum = typeof NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum[keyof typeof NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsCreateValidationError
+ */
+export interface NotificationsCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsCreateValidationError
+     */
+    'type': NotificationsCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<NotificationsCreateError>}
+     * @memberof NotificationsCreateValidationError
+     */
+    'errors': Array<NotificationsCreateError>;
+}
+
+export const NotificationsCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type NotificationsCreateValidationErrorTypeEnum = typeof NotificationsCreateValidationErrorTypeEnum[keyof typeof NotificationsCreateValidationErrorTypeEnum];
+
+/**
+ * @type NotificationsListError
+ * @export
+ */
+export type NotificationsListError = { attr: 'order_by' } & NotificationsListOrderByErrorComponent;
+
+/**
+ * @type NotificationsListErrorResponse400
+ * @export
+ */
+export type NotificationsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsListValidationError;
+
+/**
+ * 
+ * @export
+ * @interface NotificationsListOrderByErrorComponent
+ */
+export interface NotificationsListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListOrderByErrorComponent
+     */
+    'attr': NotificationsListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListOrderByErrorComponent
+     */
+    'code': NotificationsListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type NotificationsListOrderByErrorComponentAttrEnum = typeof NotificationsListOrderByErrorComponentAttrEnum[keyof typeof NotificationsListOrderByErrorComponentAttrEnum];
+export const NotificationsListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type NotificationsListOrderByErrorComponentCodeEnum = typeof NotificationsListOrderByErrorComponentCodeEnum[keyof typeof NotificationsListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsListValidationError
+ */
+export interface NotificationsListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListValidationError
+     */
+    'type': NotificationsListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<NotificationsListError>}
+     * @memberof NotificationsListValidationError
+     */
+    'errors': Array<NotificationsListError>;
+}
+
+export const NotificationsListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type NotificationsListValidationErrorTypeEnum = typeof NotificationsListValidationErrorTypeEnum[keyof typeof NotificationsListValidationErrorTypeEnum];
+
+/**
+ * @type NotificationsPartialUpdateError
+ * @export
+ */
+export type NotificationsPartialUpdateError = { attr: 'is_read' } & NotificationsPartialUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsPartialUpdateNonFieldErrorsErrorComponent;
+
+/**
+ * @type NotificationsPartialUpdateErrorResponse400
+ * @export
+ */
+export type NotificationsPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsPartialUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface NotificationsPartialUpdateIsReadErrorComponent
+ */
+export interface NotificationsPartialUpdateIsReadErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateIsReadErrorComponent
+     */
+    'attr': NotificationsPartialUpdateIsReadErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateIsReadErrorComponent
+     */
+    'code': NotificationsPartialUpdateIsReadErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateIsReadErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsPartialUpdateIsReadErrorComponentAttrEnum = {
+    IsRead: 'is_read'
+} as const;
+
+export type NotificationsPartialUpdateIsReadErrorComponentAttrEnum = typeof NotificationsPartialUpdateIsReadErrorComponentAttrEnum[keyof typeof NotificationsPartialUpdateIsReadErrorComponentAttrEnum];
+export const NotificationsPartialUpdateIsReadErrorComponentCodeEnum = {
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsPartialUpdateIsReadErrorComponentCodeEnum = typeof NotificationsPartialUpdateIsReadErrorComponentCodeEnum[keyof typeof NotificationsPartialUpdateIsReadErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsPartialUpdateNonFieldErrorsErrorComponent
+ */
+export interface NotificationsPartialUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsPartialUpdateValidationError
+ */
+export interface NotificationsPartialUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsPartialUpdateValidationError
+     */
+    'type': NotificationsPartialUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<NotificationsPartialUpdateError>}
+     * @memberof NotificationsPartialUpdateValidationError
+     */
+    'errors': Array<NotificationsPartialUpdateError>;
+}
+
+export const NotificationsPartialUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type NotificationsPartialUpdateValidationErrorTypeEnum = typeof NotificationsPartialUpdateValidationErrorTypeEnum[keyof typeof NotificationsPartialUpdateValidationErrorTypeEnum];
+
+/**
+ * @type NotificationsRetrieveErrorResponse400
+ * @export
+ */
+export type NotificationsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type NotificationsUpdateError
+ * @export
+ */
+export type NotificationsUpdateError = { attr: 'is_read' } & NotificationsUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsUpdateNonFieldErrorsErrorComponent;
+
+/**
+ * @type NotificationsUpdateErrorResponse400
+ * @export
+ */
+export type NotificationsUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface NotificationsUpdateIsReadErrorComponent
+ */
+export interface NotificationsUpdateIsReadErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateIsReadErrorComponent
+     */
+    'attr': NotificationsUpdateIsReadErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateIsReadErrorComponent
+     */
+    'code': NotificationsUpdateIsReadErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateIsReadErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsUpdateIsReadErrorComponentAttrEnum = {
+    IsRead: 'is_read'
+} as const;
+
+export type NotificationsUpdateIsReadErrorComponentAttrEnum = typeof NotificationsUpdateIsReadErrorComponentAttrEnum[keyof typeof NotificationsUpdateIsReadErrorComponentAttrEnum];
+export const NotificationsUpdateIsReadErrorComponentCodeEnum = {
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type NotificationsUpdateIsReadErrorComponentCodeEnum = typeof NotificationsUpdateIsReadErrorComponentCodeEnum[keyof typeof NotificationsUpdateIsReadErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsUpdateNonFieldErrorsErrorComponent
+ */
+export interface NotificationsUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateNonFieldErrorsErrorComponent
+     */
+    'code': NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum = typeof NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum = typeof NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsUpdateValidationError
+ */
+export interface NotificationsUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsUpdateValidationError
+     */
+    'type': NotificationsUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<NotificationsUpdateError>}
+     * @memberof NotificationsUpdateValidationError
+     */
+    'errors': Array<NotificationsUpdateError>;
+}
+
+export const NotificationsUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type NotificationsUpdateValidationErrorTypeEnum = typeof NotificationsUpdateValidationErrorTypeEnum[keyof typeof NotificationsUpdateValidationErrorTypeEnum];
+
+/**
  * 
  * @export
  * @interface Observation
@@ -2642,6 +9899,1293 @@ export type ObservationRequestUserPerceivedMosquitoLegsEnum = typeof Observation
 /**
  * 
  * @export
+ * @interface ObservationsCreateCreatedAtErrorComponent
+ */
+export interface ObservationsCreateCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateCreatedAtErrorComponent
+     */
+    'attr': ObservationsCreateCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateCreatedAtErrorComponent
+     */
+    'code': ObservationsCreateCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type ObservationsCreateCreatedAtErrorComponentAttrEnum = typeof ObservationsCreateCreatedAtErrorComponentAttrEnum[keyof typeof ObservationsCreateCreatedAtErrorComponentAttrEnum];
+export const ObservationsCreateCreatedAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreateCreatedAtErrorComponentCodeEnum = typeof ObservationsCreateCreatedAtErrorComponentCodeEnum[keyof typeof ObservationsCreateCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type ObservationsCreateError
+ * @export
+ */
+export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.type' } & ObservationsCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent | { attr: 'user_perceived_mosquito_abdomen' } & ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent | { attr: 'user_perceived_mosquito_legs' } & ObservationsCreateUserPerceivedMosquitoLegsErrorComponent | { attr: 'user_perceived_mosquito_specie' } & ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent | { attr: 'user_perceived_mosquito_thorax' } & ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
+
+/**
+ * @type ObservationsCreateErrorResponse400
+ * @export
+ */
+export type ObservationsCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateEventEnvironmentErrorComponent
+ */
+export interface ObservationsCreateEventEnvironmentErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventEnvironmentErrorComponent
+     */
+    'attr': ObservationsCreateEventEnvironmentErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventEnvironmentErrorComponent
+     */
+    'code': ObservationsCreateEventEnvironmentErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventEnvironmentErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateEventEnvironmentErrorComponentAttrEnum = {
+    EventEnvironment: 'event_environment'
+} as const;
+
+export type ObservationsCreateEventEnvironmentErrorComponentAttrEnum = typeof ObservationsCreateEventEnvironmentErrorComponentAttrEnum[keyof typeof ObservationsCreateEventEnvironmentErrorComponentAttrEnum];
+export const ObservationsCreateEventEnvironmentErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateEventEnvironmentErrorComponentCodeEnum = typeof ObservationsCreateEventEnvironmentErrorComponentCodeEnum[keyof typeof ObservationsCreateEventEnvironmentErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateEventMomentErrorComponent
+ */
+export interface ObservationsCreateEventMomentErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventMomentErrorComponent
+     */
+    'attr': ObservationsCreateEventMomentErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventMomentErrorComponent
+     */
+    'code': ObservationsCreateEventMomentErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateEventMomentErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateEventMomentErrorComponentAttrEnum = {
+    EventMoment: 'event_moment'
+} as const;
+
+export type ObservationsCreateEventMomentErrorComponentAttrEnum = typeof ObservationsCreateEventMomentErrorComponentAttrEnum[keyof typeof ObservationsCreateEventMomentErrorComponentAttrEnum];
+export const ObservationsCreateEventMomentErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateEventMomentErrorComponentCodeEnum = typeof ObservationsCreateEventMomentErrorComponentCodeEnum[keyof typeof ObservationsCreateEventMomentErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateLocationNonFieldErrorsErrorComponent
+ */
+export interface ObservationsCreateLocationNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum = {
+    LocationNonFieldErrors: 'location.non_field_errors'
+} as const;
+
+export type ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateLocationPointErrorComponent
+ */
+export interface ObservationsCreateLocationPointErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationPointErrorComponent
+     */
+    'attr': ObservationsCreateLocationPointErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationPointErrorComponent
+     */
+    'code': ObservationsCreateLocationPointErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationPointErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateLocationPointErrorComponentAttrEnum = {
+    LocationPoint: 'location.point'
+} as const;
+
+export type ObservationsCreateLocationPointErrorComponentAttrEnum = typeof ObservationsCreateLocationPointErrorComponentAttrEnum[keyof typeof ObservationsCreateLocationPointErrorComponentAttrEnum];
+export const ObservationsCreateLocationPointErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreateLocationPointErrorComponentCodeEnum = typeof ObservationsCreateLocationPointErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationPointErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateLocationTypeErrorComponent
+ */
+export interface ObservationsCreateLocationTypeErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationTypeErrorComponent
+     */
+    'attr': ObservationsCreateLocationTypeErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationTypeErrorComponent
+     */
+    'code': ObservationsCreateLocationTypeErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateLocationTypeErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateLocationTypeErrorComponentAttrEnum = {
+    LocationType: 'location.type'
+} as const;
+
+export type ObservationsCreateLocationTypeErrorComponentAttrEnum = typeof ObservationsCreateLocationTypeErrorComponentAttrEnum[keyof typeof ObservationsCreateLocationTypeErrorComponentAttrEnum];
+export const ObservationsCreateLocationTypeErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreateLocationTypeErrorComponentCodeEnum = typeof ObservationsCreateLocationTypeErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationTypeErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateNonFieldErrorsErrorComponent
+ */
+export interface ObservationsCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type ObservationsCreateNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsCreateNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type ObservationsCreateNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateNoteErrorComponent
+ */
+export interface ObservationsCreateNoteErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNoteErrorComponent
+     */
+    'attr': ObservationsCreateNoteErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNoteErrorComponent
+     */
+    'code': ObservationsCreateNoteErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateNoteErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateNoteErrorComponentAttrEnum = {
+    Note: 'note'
+} as const;
+
+export type ObservationsCreateNoteErrorComponentAttrEnum = typeof ObservationsCreateNoteErrorComponentAttrEnum[keyof typeof ObservationsCreateNoteErrorComponentAttrEnum];
+export const ObservationsCreateNoteErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type ObservationsCreateNoteErrorComponentCodeEnum = typeof ObservationsCreateNoteErrorComponentCodeEnum[keyof typeof ObservationsCreateNoteErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreatePhotosINDEXFileErrorComponent
+ */
+export interface ObservationsCreatePhotosINDEXFileErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
+     */
+    'attr': ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
+     */
+    'code': ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum = {
+    PhotosIndexFile: 'photos.INDEX.file'
+} as const;
+
+export type ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum = typeof ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum[keyof typeof ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum];
+export const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum = {
+    Empty: 'empty',
+    Invalid: 'invalid',
+    InvalidImage: 'invalid_image',
+    NoName: 'no_name',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum = typeof ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum[keyof typeof ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent
+ */
+export interface ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = {
+    PhotosIndexNonFieldErrors: 'photos.INDEX.non_field_errors'
+} as const;
+
+export type ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreatePhotosNonFieldErrorsErrorComponent
+ */
+export interface ObservationsCreatePhotosNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum = {
+    PhotosNonFieldErrors: 'photos.non_field_errors'
+} as const;
+
+export type ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum = {
+    NotAList: 'not_a_list',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateSentAtErrorComponent
+ */
+export interface ObservationsCreateSentAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateSentAtErrorComponent
+     */
+    'attr': ObservationsCreateSentAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateSentAtErrorComponent
+     */
+    'code': ObservationsCreateSentAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateSentAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateSentAtErrorComponentAttrEnum = {
+    SentAt: 'sent_at'
+} as const;
+
+export type ObservationsCreateSentAtErrorComponentAttrEnum = typeof ObservationsCreateSentAtErrorComponentAttrEnum[keyof typeof ObservationsCreateSentAtErrorComponentAttrEnum];
+export const ObservationsCreateSentAtErrorComponentCodeEnum = {
+    Date: 'date',
+    Invalid: 'invalid',
+    MakeAware: 'make_aware',
+    Null: 'null',
+    Overflow: 'overflow',
+    Required: 'required'
+} as const;
+
+export type ObservationsCreateSentAtErrorComponentCodeEnum = typeof ObservationsCreateSentAtErrorComponentCodeEnum[keyof typeof ObservationsCreateSentAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateTagsErrorComponent
+ */
+export interface ObservationsCreateTagsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsErrorComponent
+     */
+    'attr': ObservationsCreateTagsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsErrorComponent
+     */
+    'code': ObservationsCreateTagsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateTagsErrorComponentAttrEnum = {
+    Tags: 'tags'
+} as const;
+
+export type ObservationsCreateTagsErrorComponentAttrEnum = typeof ObservationsCreateTagsErrorComponentAttrEnum[keyof typeof ObservationsCreateTagsErrorComponentAttrEnum];
+export const ObservationsCreateTagsErrorComponentCodeEnum = {
+    InvalidJson: 'invalid_json',
+    NotAList: 'not_a_list',
+    NotAStr: 'not_a_str',
+    Null: 'null'
+} as const;
+
+export type ObservationsCreateTagsErrorComponentCodeEnum = typeof ObservationsCreateTagsErrorComponentCodeEnum[keyof typeof ObservationsCreateTagsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateTagsINDEXErrorComponent
+ */
+export interface ObservationsCreateTagsINDEXErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsINDEXErrorComponent
+     */
+    'attr': ObservationsCreateTagsINDEXErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsINDEXErrorComponent
+     */
+    'code': ObservationsCreateTagsINDEXErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateTagsINDEXErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateTagsINDEXErrorComponentAttrEnum = {
+    TagsIndex: 'tags.INDEX'
+} as const;
+
+export type ObservationsCreateTagsINDEXErrorComponentAttrEnum = typeof ObservationsCreateTagsINDEXErrorComponentAttrEnum[keyof typeof ObservationsCreateTagsINDEXErrorComponentAttrEnum];
+export const ObservationsCreateTagsINDEXErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type ObservationsCreateTagsINDEXErrorComponentCodeEnum = typeof ObservationsCreateTagsINDEXErrorComponentCodeEnum[keyof typeof ObservationsCreateTagsINDEXErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
+ */
+export interface ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
+     */
+    'attr': ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
+     */
+    'code': ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum = {
+    UserPerceivedMosquitoAbdomen: 'user_perceived_mosquito_abdomen'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum];
+export const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
+ */
+export interface ObservationsCreateUserPerceivedMosquitoLegsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
+     */
+    'attr': ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
+     */
+    'code': ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum = {
+    UserPerceivedMosquitoLegs: 'user_perceived_mosquito_legs'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum];
+export const ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
+ */
+export interface ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
+     */
+    'attr': ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
+     */
+    'code': ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum = {
+    UserPerceivedMosquitoSpecie: 'user_perceived_mosquito_specie'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum];
+export const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
+ */
+export interface ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
+     */
+    'attr': ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
+     */
+    'code': ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum = {
+    UserPerceivedMosquitoThorax: 'user_perceived_mosquito_thorax'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum];
+export const ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateValidationError
+ */
+export interface ObservationsCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateValidationError
+     */
+    'type': ObservationsCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<ObservationsCreateError>}
+     * @memberof ObservationsCreateValidationError
+     */
+    'errors': Array<ObservationsCreateError>;
+}
+
+export const ObservationsCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type ObservationsCreateValidationErrorTypeEnum = typeof ObservationsCreateValidationErrorTypeEnum[keyof typeof ObservationsCreateValidationErrorTypeEnum];
+
+/**
+ * @type ObservationsDestroyErrorResponse400
+ * @export
+ */
+export type ObservationsDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListCreatedAtErrorComponent
+ */
+export interface ObservationsListCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListCreatedAtErrorComponent
+     */
+    'attr': ObservationsListCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListCreatedAtErrorComponent
+     */
+    'code': ObservationsListCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type ObservationsListCreatedAtErrorComponentAttrEnum = typeof ObservationsListCreatedAtErrorComponentAttrEnum[keyof typeof ObservationsListCreatedAtErrorComponentAttrEnum];
+export const ObservationsListCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListCreatedAtErrorComponentCodeEnum = typeof ObservationsListCreatedAtErrorComponentCodeEnum[keyof typeof ObservationsListCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type ObservationsListError
+ * @export
+ */
+export type ObservationsListError = { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'location_country_id' } & ObservationsListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & ObservationsListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & ObservationsListLocationNuts3ErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
+
+/**
+ * @type ObservationsListErrorResponse400
+ * @export
+ */
+export type ObservationsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsListValidationError;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListLocationCountryIdErrorComponent
+ */
+export interface ObservationsListLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationCountryIdErrorComponent
+     */
+    'attr': ObservationsListLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationCountryIdErrorComponent
+     */
+    'code': ObservationsListLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type ObservationsListLocationCountryIdErrorComponentAttrEnum = typeof ObservationsListLocationCountryIdErrorComponentAttrEnum[keyof typeof ObservationsListLocationCountryIdErrorComponentAttrEnum];
+export const ObservationsListLocationCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsListLocationCountryIdErrorComponentCodeEnum = typeof ObservationsListLocationCountryIdErrorComponentCodeEnum[keyof typeof ObservationsListLocationCountryIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListLocationNuts2ErrorComponent
+ */
+export interface ObservationsListLocationNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts2ErrorComponent
+     */
+    'attr': ObservationsListLocationNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts2ErrorComponent
+     */
+    'code': ObservationsListLocationNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
+} as const;
+
+export type ObservationsListLocationNuts2ErrorComponentAttrEnum = typeof ObservationsListLocationNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListLocationNuts2ErrorComponentAttrEnum];
+export const ObservationsListLocationNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListLocationNuts2ErrorComponentCodeEnum = typeof ObservationsListLocationNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListLocationNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListLocationNuts3ErrorComponent
+ */
+export interface ObservationsListLocationNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts3ErrorComponent
+     */
+    'attr': ObservationsListLocationNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts3ErrorComponent
+     */
+    'code': ObservationsListLocationNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
+} as const;
+
+export type ObservationsListLocationNuts3ErrorComponentAttrEnum = typeof ObservationsListLocationNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListLocationNuts3ErrorComponentAttrEnum];
+export const ObservationsListLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListLocationNuts3ErrorComponentCodeEnum = typeof ObservationsListLocationNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListOrderByErrorComponent
+ */
+export interface ObservationsListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListOrderByErrorComponent
+     */
+    'attr': ObservationsListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListOrderByErrorComponent
+     */
+    'code': ObservationsListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type ObservationsListOrderByErrorComponentAttrEnum = typeof ObservationsListOrderByErrorComponentAttrEnum[keyof typeof ObservationsListOrderByErrorComponentAttrEnum];
+export const ObservationsListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsListOrderByErrorComponentCodeEnum = typeof ObservationsListOrderByErrorComponentCodeEnum[keyof typeof ObservationsListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListReceivedAtErrorComponent
+ */
+export interface ObservationsListReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListReceivedAtErrorComponent
+     */
+    'attr': ObservationsListReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListReceivedAtErrorComponent
+     */
+    'code': ObservationsListReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type ObservationsListReceivedAtErrorComponentAttrEnum = typeof ObservationsListReceivedAtErrorComponentAttrEnum[keyof typeof ObservationsListReceivedAtErrorComponentAttrEnum];
+export const ObservationsListReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListReceivedAtErrorComponentCodeEnum = typeof ObservationsListReceivedAtErrorComponentCodeEnum[keyof typeof ObservationsListReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListShortIdErrorComponent
+ */
+export interface ObservationsListShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListShortIdErrorComponent
+     */
+    'attr': ObservationsListShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListShortIdErrorComponent
+     */
+    'code': ObservationsListShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type ObservationsListShortIdErrorComponentAttrEnum = typeof ObservationsListShortIdErrorComponentAttrEnum[keyof typeof ObservationsListShortIdErrorComponentAttrEnum];
+export const ObservationsListShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListShortIdErrorComponentCodeEnum = typeof ObservationsListShortIdErrorComponentCodeEnum[keyof typeof ObservationsListShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListUpdatedAtErrorComponent
+ */
+export interface ObservationsListUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUpdatedAtErrorComponent
+     */
+    'attr': ObservationsListUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUpdatedAtErrorComponent
+     */
+    'code': ObservationsListUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type ObservationsListUpdatedAtErrorComponentAttrEnum = typeof ObservationsListUpdatedAtErrorComponentAttrEnum[keyof typeof ObservationsListUpdatedAtErrorComponentAttrEnum];
+export const ObservationsListUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListUpdatedAtErrorComponentCodeEnum = typeof ObservationsListUpdatedAtErrorComponentCodeEnum[keyof typeof ObservationsListUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListUserUuidErrorComponent
+ */
+export interface ObservationsListUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUserUuidErrorComponent
+     */
+    'attr': ObservationsListUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUserUuidErrorComponent
+     */
+    'code': ObservationsListUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type ObservationsListUserUuidErrorComponentAttrEnum = typeof ObservationsListUserUuidErrorComponentAttrEnum[keyof typeof ObservationsListUserUuidErrorComponentAttrEnum];
+export const ObservationsListUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListUserUuidErrorComponentCodeEnum = typeof ObservationsListUserUuidErrorComponentCodeEnum[keyof typeof ObservationsListUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListValidationError
+ */
+export interface ObservationsListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListValidationError
+     */
+    'type': ObservationsListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<ObservationsListError>}
+     * @memberof ObservationsListValidationError
+     */
+    'errors': Array<ObservationsListError>;
+}
+
+export const ObservationsListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type ObservationsListValidationErrorTypeEnum = typeof ObservationsListValidationErrorTypeEnum[keyof typeof ObservationsListValidationErrorTypeEnum];
+
+/**
+ * @type ObservationsPredictionCreateError
+ * @export
+ */
+export type ObservationsPredictionCreateError = { attr: 'is_executive_validation' } & ObservationsPredictionCreateIsExecutiveValidationErrorComponent | { attr: 'non_field_errors' } & ObservationsPredictionCreateNonFieldErrorsErrorComponent | { attr: 'ref_photo_uuid' } & ObservationsPredictionCreateRefPhotoUuidErrorComponent;
+
+/**
+ * @type ObservationsPredictionCreateErrorResponse400
+ * @export
+ */
+export type ObservationsPredictionCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsPredictionCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsPredictionCreateIsExecutiveValidationErrorComponent
+ */
+export interface ObservationsPredictionCreateIsExecutiveValidationErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
+     */
+    'attr': ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
+     */
+    'code': ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum = {
+    IsExecutiveValidation: 'is_executive_validation'
+} as const;
+
+export type ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum = typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum];
+export const ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum = {
+    Null: 'null'
+} as const;
+
+export type ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum = typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsPredictionCreateNonFieldErrorsErrorComponent
+ */
+export interface ObservationsPredictionCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsPredictionCreateRefPhotoUuidErrorComponent
+ */
+export interface ObservationsPredictionCreateRefPhotoUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
+     */
+    'attr': ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
+     */
+    'code': ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum = {
+    RefPhotoUuid: 'ref_photo_uuid'
+} as const;
+
+export type ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum = typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum];
+export const ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum = typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsPredictionCreateValidationError
+ */
+export interface ObservationsPredictionCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsPredictionCreateValidationError
+     */
+    'type': ObservationsPredictionCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<ObservationsPredictionCreateError>}
+     * @memberof ObservationsPredictionCreateValidationError
+     */
+    'errors': Array<ObservationsPredictionCreateError>;
+}
+
+export const ObservationsPredictionCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type ObservationsPredictionCreateValidationErrorTypeEnum = typeof ObservationsPredictionCreateValidationErrorTypeEnum[keyof typeof ObservationsPredictionCreateValidationErrorTypeEnum];
+
+/**
+ * @type ObservationsPredictionDestroyErrorResponse400
+ * @export
+ */
+export type ObservationsPredictionDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type ObservationsPredictionRetrieveErrorResponse400
+ * @export
+ */
+export type ObservationsPredictionRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type ObservationsRetrieveErrorResponse400
+ * @export
+ */
+export type ObservationsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * 
+ * @export
  * @interface PaginatedBiteList
  */
 export interface PaginatedBiteList {
@@ -2828,6 +11372,64 @@ export interface PaginatedPartnerList {
 /**
  * 
  * @export
+ * @interface ParseError
+ */
+export interface ParseError {
+    /**
+     * 
+     * @type {string}
+     * @memberof ParseError
+     */
+    'code': ParseErrorCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ParseError
+     */
+    'detail': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ParseError
+     */
+    'attr': string | null;
+}
+
+export const ParseErrorCodeEnum = {
+    ParseError: 'parse_error'
+} as const;
+
+export type ParseErrorCodeEnum = typeof ParseErrorCodeEnum[keyof typeof ParseErrorCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ParseErrorResponse
+ */
+export interface ParseErrorResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof ParseErrorResponse
+     */
+    'type': ParseErrorResponseTypeEnum;
+    /**
+     * 
+     * @type {Array<ParseError>}
+     * @memberof ParseErrorResponse
+     */
+    'errors': Array<ParseError>;
+}
+
+export const ParseErrorResponseTypeEnum = {
+    ClientError: 'client_error'
+} as const;
+
+export type ParseErrorResponseTypeEnum = typeof ParseErrorResponseTypeEnum[keyof typeof ParseErrorResponseTypeEnum];
+
+/**
+ * 
+ * @export
  * @interface Partner
  */
 export interface Partner {
@@ -2875,6 +11477,18 @@ export interface PartnerPoint {
      */
     'longitude': number;
 }
+/**
+ * @type PartnersListErrorResponse400
+ * @export
+ */
+export type PartnersListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type PartnersRetrieveErrorResponse400
+ * @export
+ */
+export type PartnersRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
 /**
  * 
  * @export
@@ -3128,6 +11742,885 @@ export const PhotoPredictionRequestClassifierVersionEnum = {
 } as const;
 
 export type PhotoPredictionRequestClassifierVersionEnum = typeof PhotoPredictionRequestClassifierVersionEnum[keyof typeof PhotoPredictionRequestClassifierVersionEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
+ */
+export interface PhotosPredictionCreateBboxNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
+     */
+    'attr': PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
+     */
+    'code': PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum = {
+    BboxNonFieldErrors: 'bbox.non_field_errors'
+} as const;
+
+export type PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum];
+export const PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateBboxXMaxErrorComponent
+ */
+export interface PhotosPredictionCreateBboxXMaxErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
+     */
+    'attr': PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
+     */
+    'code': PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum = {
+    BboxXMax: 'bbox.x_max'
+} as const;
+
+export type PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum];
+export const PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateBboxXMinErrorComponent
+ */
+export interface PhotosPredictionCreateBboxXMinErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
+     */
+    'attr': PhotosPredictionCreateBboxXMinErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
+     */
+    'code': PhotosPredictionCreateBboxXMinErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateBboxXMinErrorComponentAttrEnum = {
+    BboxXMin: 'bbox.x_min'
+} as const;
+
+export type PhotosPredictionCreateBboxXMinErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxXMinErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxXMinErrorComponentAttrEnum];
+export const PhotosPredictionCreateBboxXMinErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateBboxXMinErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxXMinErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxXMinErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateBboxYMaxErrorComponent
+ */
+export interface PhotosPredictionCreateBboxYMaxErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
+     */
+    'attr': PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
+     */
+    'code': PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum = {
+    BboxYMax: 'bbox.y_max'
+} as const;
+
+export type PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum];
+export const PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateBboxYMinErrorComponent
+ */
+export interface PhotosPredictionCreateBboxYMinErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
+     */
+    'attr': PhotosPredictionCreateBboxYMinErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
+     */
+    'code': PhotosPredictionCreateBboxYMinErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateBboxYMinErrorComponentAttrEnum = {
+    BboxYMin: 'bbox.y_min'
+} as const;
+
+export type PhotosPredictionCreateBboxYMinErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxYMinErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxYMinErrorComponentAttrEnum];
+export const PhotosPredictionCreateBboxYMinErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateBboxYMinErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxYMinErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxYMinErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateClassifierVersionErrorComponent
+ */
+export interface PhotosPredictionCreateClassifierVersionErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
+     */
+    'attr': PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
+     */
+    'code': PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum = {
+    ClassifierVersion: 'classifier_version'
+} as const;
+
+export type PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum = typeof PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum];
+export const PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum = typeof PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum];
+
+/**
+ * @type PhotosPredictionCreateError
+ * @export
+ */
+export type PhotosPredictionCreateError = { attr: 'bbox.non_field_errors' } & PhotosPredictionCreateBboxNonFieldErrorsErrorComponent | { attr: 'bbox.x_max' } & PhotosPredictionCreateBboxXMaxErrorComponent | { attr: 'bbox.x_min' } & PhotosPredictionCreateBboxXMinErrorComponent | { attr: 'bbox.y_max' } & PhotosPredictionCreateBboxYMaxErrorComponent | { attr: 'bbox.y_min' } & PhotosPredictionCreateBboxYMinErrorComponent | { attr: 'classifier_version' } & PhotosPredictionCreateClassifierVersionErrorComponent | { attr: 'insect_confidence' } & PhotosPredictionCreateInsectConfidenceErrorComponent | { attr: 'non_field_errors' } & PhotosPredictionCreateNonFieldErrorsErrorComponent | { attr: 'predicted_class' } & PhotosPredictionCreatePredictedClassErrorComponent | { attr: 'scores.ae_aegypti' } & PhotosPredictionCreateScoresAeAegyptiErrorComponent | { attr: 'scores.ae_albopictus' } & PhotosPredictionCreateScoresAeAlbopictusErrorComponent | { attr: 'scores.ae_japonicus' } & PhotosPredictionCreateScoresAeJaponicusErrorComponent | { attr: 'scores.ae_koreicus' } & PhotosPredictionCreateScoresAeKoreicusErrorComponent | { attr: 'scores.anopheles' } & PhotosPredictionCreateScoresAnophelesErrorComponent | { attr: 'scores.culex' } & PhotosPredictionCreateScoresCulexErrorComponent | { attr: 'scores.culiseta' } & PhotosPredictionCreateScoresCulisetaErrorComponent | { attr: 'scores.non_field_errors' } & PhotosPredictionCreateScoresNonFieldErrorsErrorComponent | { attr: 'scores.not_sure' } & PhotosPredictionCreateScoresNotSureErrorComponent | { attr: 'scores.other_species' } & PhotosPredictionCreateScoresOtherSpeciesErrorComponent | { attr: 'threshold_deviation' } & PhotosPredictionCreateThresholdDeviationErrorComponent;
+
+/**
+ * @type PhotosPredictionCreateErrorResponse400
+ * @export
+ */
+export type PhotosPredictionCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & PhotosPredictionCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateInsectConfidenceErrorComponent
+ */
+export interface PhotosPredictionCreateInsectConfidenceErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
+     */
+    'attr': PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
+     */
+    'code': PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum = {
+    InsectConfidence: 'insect_confidence'
+} as const;
+
+export type PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum = typeof PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum];
+export const PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum = typeof PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateNonFieldErrorsErrorComponent
+ */
+export interface PhotosPredictionCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'attr': PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'code': PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum];
+export const PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreatePredictedClassErrorComponent
+ */
+export interface PhotosPredictionCreatePredictedClassErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
+     */
+    'attr': PhotosPredictionCreatePredictedClassErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
+     */
+    'code': PhotosPredictionCreatePredictedClassErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreatePredictedClassErrorComponentAttrEnum = {
+    PredictedClass: 'predicted_class'
+} as const;
+
+export type PhotosPredictionCreatePredictedClassErrorComponentAttrEnum = typeof PhotosPredictionCreatePredictedClassErrorComponentAttrEnum[keyof typeof PhotosPredictionCreatePredictedClassErrorComponentAttrEnum];
+export const PhotosPredictionCreatePredictedClassErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null'
+} as const;
+
+export type PhotosPredictionCreatePredictedClassErrorComponentCodeEnum = typeof PhotosPredictionCreatePredictedClassErrorComponentCodeEnum[keyof typeof PhotosPredictionCreatePredictedClassErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresAeAegyptiErrorComponent
+ */
+export interface PhotosPredictionCreateScoresAeAegyptiErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum = {
+    ScoresAeAegypti: 'scores.ae_aegypti'
+} as const;
+
+export type PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresAeAlbopictusErrorComponent
+ */
+export interface PhotosPredictionCreateScoresAeAlbopictusErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum = {
+    ScoresAeAlbopictus: 'scores.ae_albopictus'
+} as const;
+
+export type PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresAeJaponicusErrorComponent
+ */
+export interface PhotosPredictionCreateScoresAeJaponicusErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum = {
+    ScoresAeJaponicus: 'scores.ae_japonicus'
+} as const;
+
+export type PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresAeKoreicusErrorComponent
+ */
+export interface PhotosPredictionCreateScoresAeKoreicusErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum = {
+    ScoresAeKoreicus: 'scores.ae_koreicus'
+} as const;
+
+export type PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresAnophelesErrorComponent
+ */
+export interface PhotosPredictionCreateScoresAnophelesErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum = {
+    ScoresAnopheles: 'scores.anopheles'
+} as const;
+
+export type PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresCulexErrorComponent
+ */
+export interface PhotosPredictionCreateScoresCulexErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresCulexErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresCulexErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresCulexErrorComponentAttrEnum = {
+    ScoresCulex: 'scores.culex'
+} as const;
+
+export type PhotosPredictionCreateScoresCulexErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresCulexErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresCulexErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresCulexErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresCulexErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresCulexErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresCulexErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresCulisetaErrorComponent
+ */
+export interface PhotosPredictionCreateScoresCulisetaErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum = {
+    ScoresCuliseta: 'scores.culiseta'
+} as const;
+
+export type PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
+ */
+export interface PhotosPredictionCreateScoresNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum = {
+    ScoresNonFieldErrors: 'scores.non_field_errors'
+} as const;
+
+export type PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresNotSureErrorComponent
+ */
+export interface PhotosPredictionCreateScoresNotSureErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum = {
+    ScoresNotSure: 'scores.not_sure'
+} as const;
+
+export type PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateScoresOtherSpeciesErrorComponent
+ */
+export interface PhotosPredictionCreateScoresOtherSpeciesErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
+     */
+    'attr': PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
+     */
+    'code': PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum = {
+    ScoresOtherSpecies: 'scores.other_species'
+} as const;
+
+export type PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum];
+export const PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateThresholdDeviationErrorComponent
+ */
+export interface PhotosPredictionCreateThresholdDeviationErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
+     */
+    'attr': PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
+     */
+    'code': PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
+     */
+    'detail': string;
+}
+
+export const PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum = {
+    ThresholdDeviation: 'threshold_deviation'
+} as const;
+
+export type PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum = typeof PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum];
+export const PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    MaxValue: 'max_value',
+    MinValue: 'min_value',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum = typeof PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface PhotosPredictionCreateValidationError
+ */
+export interface PhotosPredictionCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof PhotosPredictionCreateValidationError
+     */
+    'type': PhotosPredictionCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<PhotosPredictionCreateError>}
+     * @memberof PhotosPredictionCreateValidationError
+     */
+    'errors': Array<PhotosPredictionCreateError>;
+}
+
+export const PhotosPredictionCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type PhotosPredictionCreateValidationErrorTypeEnum = typeof PhotosPredictionCreateValidationErrorTypeEnum[keyof typeof PhotosPredictionCreateValidationErrorTypeEnum];
+
+/**
+ * @type PhotosPredictionDestroyErrorResponse400
+ * @export
+ */
+export type PhotosPredictionDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type PhotosPredictionRetrieveErrorResponse400
+ * @export
+ */
+export type PhotosPredictionRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type PhotosRetrieveErrorResponse400
+ * @export
+ */
+export type PhotosRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
 
 /**
  * 
@@ -3490,6 +12983,396 @@ export const UserRequestLocaleEnum = {
 } as const;
 
 export type UserRequestLocaleEnum = typeof UserRequestLocaleEnum[keyof typeof UserRequestLocaleEnum];
+
+/**
+ * @type UsersCreateError
+ * @export
+ */
+export type UsersCreateError = { attr: 'locale' } & UsersCreateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersCreateNonFieldErrorsErrorComponent | { attr: 'password' } & UsersCreatePasswordErrorComponent;
+
+/**
+ * @type UsersCreateErrorResponse400
+ * @export
+ */
+export type UsersCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersCreateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface UsersCreateLocaleErrorComponent
+ */
+export interface UsersCreateLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateLocaleErrorComponent
+     */
+    'attr': UsersCreateLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateLocaleErrorComponent
+     */
+    'code': UsersCreateLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersCreateLocaleErrorComponentAttrEnum = {
+    Locale: 'locale'
+} as const;
+
+export type UsersCreateLocaleErrorComponentAttrEnum = typeof UsersCreateLocaleErrorComponentAttrEnum[keyof typeof UsersCreateLocaleErrorComponentAttrEnum];
+export const UsersCreateLocaleErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null'
+} as const;
+
+export type UsersCreateLocaleErrorComponentCodeEnum = typeof UsersCreateLocaleErrorComponentCodeEnum[keyof typeof UsersCreateLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersCreateNonFieldErrorsErrorComponent
+ */
+export interface UsersCreateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateNonFieldErrorsErrorComponent
+     */
+    'attr': UsersCreateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateNonFieldErrorsErrorComponent
+     */
+    'code': UsersCreateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersCreateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type UsersCreateNonFieldErrorsErrorComponentAttrEnum = typeof UsersCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof UsersCreateNonFieldErrorsErrorComponentAttrEnum];
+export const UsersCreateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type UsersCreateNonFieldErrorsErrorComponentCodeEnum = typeof UsersCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof UsersCreateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersCreatePasswordErrorComponent
+ */
+export interface UsersCreatePasswordErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreatePasswordErrorComponent
+     */
+    'attr': UsersCreatePasswordErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreatePasswordErrorComponent
+     */
+    'code': UsersCreatePasswordErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreatePasswordErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersCreatePasswordErrorComponentAttrEnum = {
+    Password: 'password'
+} as const;
+
+export type UsersCreatePasswordErrorComponentAttrEnum = typeof UsersCreatePasswordErrorComponentAttrEnum[keyof typeof UsersCreatePasswordErrorComponentAttrEnum];
+export const UsersCreatePasswordErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type UsersCreatePasswordErrorComponentCodeEnum = typeof UsersCreatePasswordErrorComponentCodeEnum[keyof typeof UsersCreatePasswordErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersCreateValidationError
+ */
+export interface UsersCreateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersCreateValidationError
+     */
+    'type': UsersCreateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<UsersCreateError>}
+     * @memberof UsersCreateValidationError
+     */
+    'errors': Array<UsersCreateError>;
+}
+
+export const UsersCreateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type UsersCreateValidationErrorTypeEnum = typeof UsersCreateValidationErrorTypeEnum[keyof typeof UsersCreateValidationErrorTypeEnum];
+
+/**
+ * @type UsersPartialUpdateError
+ * @export
+ */
+export type UsersPartialUpdateError = { attr: 'locale' } & UsersPartialUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersPartialUpdateNonFieldErrorsErrorComponent;
+
+/**
+ * @type UsersPartialUpdateErrorResponse400
+ * @export
+ */
+export type UsersPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersPartialUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface UsersPartialUpdateLocaleErrorComponent
+ */
+export interface UsersPartialUpdateLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateLocaleErrorComponent
+     */
+    'attr': UsersPartialUpdateLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateLocaleErrorComponent
+     */
+    'code': UsersPartialUpdateLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersPartialUpdateLocaleErrorComponentAttrEnum = {
+    Locale: 'locale'
+} as const;
+
+export type UsersPartialUpdateLocaleErrorComponentAttrEnum = typeof UsersPartialUpdateLocaleErrorComponentAttrEnum[keyof typeof UsersPartialUpdateLocaleErrorComponentAttrEnum];
+export const UsersPartialUpdateLocaleErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null'
+} as const;
+
+export type UsersPartialUpdateLocaleErrorComponentCodeEnum = typeof UsersPartialUpdateLocaleErrorComponentCodeEnum[keyof typeof UsersPartialUpdateLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersPartialUpdateNonFieldErrorsErrorComponent
+ */
+export interface UsersPartialUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'code': UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum = typeof UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum = typeof UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersPartialUpdateValidationError
+ */
+export interface UsersPartialUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersPartialUpdateValidationError
+     */
+    'type': UsersPartialUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<UsersPartialUpdateError>}
+     * @memberof UsersPartialUpdateValidationError
+     */
+    'errors': Array<UsersPartialUpdateError>;
+}
+
+export const UsersPartialUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type UsersPartialUpdateValidationErrorTypeEnum = typeof UsersPartialUpdateValidationErrorTypeEnum[keyof typeof UsersPartialUpdateValidationErrorTypeEnum];
+
+/**
+ * @type UsersRetrieveErrorResponse400
+ * @export
+ */
+export type UsersRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+
+/**
+ * @type UsersUpdateError
+ * @export
+ */
+export type UsersUpdateError = { attr: 'locale' } & UsersUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersUpdateNonFieldErrorsErrorComponent;
+
+/**
+ * @type UsersUpdateErrorResponse400
+ * @export
+ */
+export type UsersUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersUpdateValidationError;
+
+/**
+ * 
+ * @export
+ * @interface UsersUpdateLocaleErrorComponent
+ */
+export interface UsersUpdateLocaleErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateLocaleErrorComponent
+     */
+    'attr': UsersUpdateLocaleErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateLocaleErrorComponent
+     */
+    'code': UsersUpdateLocaleErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateLocaleErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersUpdateLocaleErrorComponentAttrEnum = {
+    Locale: 'locale'
+} as const;
+
+export type UsersUpdateLocaleErrorComponentAttrEnum = typeof UsersUpdateLocaleErrorComponentAttrEnum[keyof typeof UsersUpdateLocaleErrorComponentAttrEnum];
+export const UsersUpdateLocaleErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice',
+    Null: 'null'
+} as const;
+
+export type UsersUpdateLocaleErrorComponentCodeEnum = typeof UsersUpdateLocaleErrorComponentCodeEnum[keyof typeof UsersUpdateLocaleErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersUpdateNonFieldErrorsErrorComponent
+ */
+export interface UsersUpdateNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateNonFieldErrorsErrorComponent
+     */
+    'attr': UsersUpdateNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateNonFieldErrorsErrorComponent
+     */
+    'code': UsersUpdateNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const UsersUpdateNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type UsersUpdateNonFieldErrorsErrorComponentAttrEnum = typeof UsersUpdateNonFieldErrorsErrorComponentAttrEnum[keyof typeof UsersUpdateNonFieldErrorsErrorComponentAttrEnum];
+export const UsersUpdateNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type UsersUpdateNonFieldErrorsErrorComponentCodeEnum = typeof UsersUpdateNonFieldErrorsErrorComponentCodeEnum[keyof typeof UsersUpdateNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UsersUpdateValidationError
+ */
+export interface UsersUpdateValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof UsersUpdateValidationError
+     */
+    'type': UsersUpdateValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<UsersUpdateError>}
+     * @memberof UsersUpdateValidationError
+     */
+    'errors': Array<UsersUpdateError>;
+}
+
+export const UsersUpdateValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type UsersUpdateValidationErrorTypeEnum = typeof UsersUpdateValidationErrorTypeEnum[keyof typeof UsersUpdateValidationErrorTypeEnum];
 
 
 /**
