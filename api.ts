@@ -53,7 +53,7 @@ export interface AppUserTokenObtainPairRequest {
      * @type {string}
      * @memberof AppUserTokenObtainPairRequest
      */
-    'uuid': string;
+    'username': string;
     /**
      * 
      * @type {string}
@@ -67,6 +67,652 @@ export interface AppUserTokenObtainPairRequest {
      */
     'device_id'?: string;
 }
+/**
+ * @type AuthChangePasswordError
+ * @export
+ */
+export type AuthChangePasswordError = { attr: 'non_field_errors' } & AuthChangePasswordNonFieldErrorsErrorComponent | { attr: 'password' } & AuthChangePasswordPasswordErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface AuthChangePasswordNonFieldErrorsErrorComponent
+ */
+export interface AuthChangePasswordNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordNonFieldErrorsErrorComponent
+     */
+    'attr': AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordNonFieldErrorsErrorComponent
+     */
+    'code': AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum = typeof AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum[keyof typeof AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum];
+export const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum = typeof AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum[keyof typeof AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthChangePasswordPasswordErrorComponent
+ */
+export interface AuthChangePasswordPasswordErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordPasswordErrorComponent
+     */
+    'attr': AuthChangePasswordPasswordErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordPasswordErrorComponent
+     */
+    'code': AuthChangePasswordPasswordErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordPasswordErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthChangePasswordPasswordErrorComponentAttrEnum = {
+    Password: 'password'
+} as const;
+
+export type AuthChangePasswordPasswordErrorComponentAttrEnum = typeof AuthChangePasswordPasswordErrorComponentAttrEnum[keyof typeof AuthChangePasswordPasswordErrorComponentAttrEnum];
+export const AuthChangePasswordPasswordErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MinLength: 'min_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthChangePasswordPasswordErrorComponentCodeEnum = typeof AuthChangePasswordPasswordErrorComponentCodeEnum[keyof typeof AuthChangePasswordPasswordErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthChangePasswordValidationError
+ */
+export interface AuthChangePasswordValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthChangePasswordValidationError
+     */
+    'type': AuthChangePasswordValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<AuthChangePasswordError>}
+     * @memberof AuthChangePasswordValidationError
+     */
+    'errors': Array<AuthChangePasswordError>;
+}
+
+export const AuthChangePasswordValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type AuthChangePasswordValidationErrorTypeEnum = typeof AuthChangePasswordValidationErrorTypeEnum[keyof typeof AuthChangePasswordValidationErrorTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthObtainTokenDeviceIdErrorComponent
+ */
+export interface AuthObtainTokenDeviceIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenDeviceIdErrorComponent
+     */
+    'attr': AuthObtainTokenDeviceIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenDeviceIdErrorComponent
+     */
+    'code': AuthObtainTokenDeviceIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenDeviceIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthObtainTokenDeviceIdErrorComponentAttrEnum = {
+    DeviceId: 'device_id'
+} as const;
+
+export type AuthObtainTokenDeviceIdErrorComponentAttrEnum = typeof AuthObtainTokenDeviceIdErrorComponentAttrEnum[keyof typeof AuthObtainTokenDeviceIdErrorComponentAttrEnum];
+export const AuthObtainTokenDeviceIdErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthObtainTokenDeviceIdErrorComponentCodeEnum = typeof AuthObtainTokenDeviceIdErrorComponentCodeEnum[keyof typeof AuthObtainTokenDeviceIdErrorComponentCodeEnum];
+
+/**
+ * @type AuthObtainTokenError
+ * @export
+ */
+export type AuthObtainTokenError = { attr: 'device_id' } & AuthObtainTokenDeviceIdErrorComponent | { attr: 'non_field_errors' } & AuthObtainTokenNonFieldErrorsErrorComponent | { attr: 'password' } & AuthObtainTokenPasswordErrorComponent | { attr: 'username' } & AuthObtainTokenUsernameErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface AuthObtainTokenNonFieldErrorsErrorComponent
+ */
+export interface AuthObtainTokenNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
+     */
+    'attr': AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
+     */
+    'code': AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum = typeof AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum[keyof typeof AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum];
+export const AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NoActiveAccount: 'no_active_account',
+    Null: 'null'
+} as const;
+
+export type AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum = typeof AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum[keyof typeof AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthObtainTokenPasswordErrorComponent
+ */
+export interface AuthObtainTokenPasswordErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenPasswordErrorComponent
+     */
+    'attr': AuthObtainTokenPasswordErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenPasswordErrorComponent
+     */
+    'code': AuthObtainTokenPasswordErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenPasswordErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthObtainTokenPasswordErrorComponentAttrEnum = {
+    Password: 'password'
+} as const;
+
+export type AuthObtainTokenPasswordErrorComponentAttrEnum = typeof AuthObtainTokenPasswordErrorComponentAttrEnum[keyof typeof AuthObtainTokenPasswordErrorComponentAttrEnum];
+export const AuthObtainTokenPasswordErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthObtainTokenPasswordErrorComponentCodeEnum = typeof AuthObtainTokenPasswordErrorComponentCodeEnum[keyof typeof AuthObtainTokenPasswordErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthObtainTokenUsernameErrorComponent
+ */
+export interface AuthObtainTokenUsernameErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenUsernameErrorComponent
+     */
+    'attr': AuthObtainTokenUsernameErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenUsernameErrorComponent
+     */
+    'code': AuthObtainTokenUsernameErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenUsernameErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthObtainTokenUsernameErrorComponentAttrEnum = {
+    Username: 'username'
+} as const;
+
+export type AuthObtainTokenUsernameErrorComponentAttrEnum = typeof AuthObtainTokenUsernameErrorComponentAttrEnum[keyof typeof AuthObtainTokenUsernameErrorComponentAttrEnum];
+export const AuthObtainTokenUsernameErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthObtainTokenUsernameErrorComponentCodeEnum = typeof AuthObtainTokenUsernameErrorComponentCodeEnum[keyof typeof AuthObtainTokenUsernameErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthObtainTokenValidationError
+ */
+export interface AuthObtainTokenValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthObtainTokenValidationError
+     */
+    'type': AuthObtainTokenValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<AuthObtainTokenError>}
+     * @memberof AuthObtainTokenValidationError
+     */
+    'errors': Array<AuthObtainTokenError>;
+}
+
+export const AuthObtainTokenValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type AuthObtainTokenValidationErrorTypeEnum = typeof AuthObtainTokenValidationErrorTypeEnum[keyof typeof AuthObtainTokenValidationErrorTypeEnum];
+
+/**
+ * @type AuthRefreshTokenError
+ * @export
+ */
+export type AuthRefreshTokenError = { attr: 'non_field_errors' } & AuthRefreshTokenNonFieldErrorsErrorComponent | { attr: 'refresh' } & AuthRefreshTokenRefreshErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface AuthRefreshTokenNonFieldErrorsErrorComponent
+ */
+export interface AuthRefreshTokenNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenNonFieldErrorsErrorComponent
+     */
+    'attr': AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenNonFieldErrorsErrorComponent
+     */
+    'code': AuthRefreshTokenNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum = typeof AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum[keyof typeof AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum];
+export const AuthRefreshTokenNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type AuthRefreshTokenNonFieldErrorsErrorComponentCodeEnum = typeof AuthRefreshTokenNonFieldErrorsErrorComponentCodeEnum[keyof typeof AuthRefreshTokenNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthRefreshTokenRefreshErrorComponent
+ */
+export interface AuthRefreshTokenRefreshErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenRefreshErrorComponent
+     */
+    'attr': AuthRefreshTokenRefreshErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenRefreshErrorComponent
+     */
+    'code': AuthRefreshTokenRefreshErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenRefreshErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthRefreshTokenRefreshErrorComponentAttrEnum = {
+    Refresh: 'refresh'
+} as const;
+
+export type AuthRefreshTokenRefreshErrorComponentAttrEnum = typeof AuthRefreshTokenRefreshErrorComponentAttrEnum[keyof typeof AuthRefreshTokenRefreshErrorComponentAttrEnum];
+export const AuthRefreshTokenRefreshErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthRefreshTokenRefreshErrorComponentCodeEnum = typeof AuthRefreshTokenRefreshErrorComponentCodeEnum[keyof typeof AuthRefreshTokenRefreshErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthRefreshTokenValidationError
+ */
+export interface AuthRefreshTokenValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthRefreshTokenValidationError
+     */
+    'type': AuthRefreshTokenValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<AuthRefreshTokenError>}
+     * @memberof AuthRefreshTokenValidationError
+     */
+    'errors': Array<AuthRefreshTokenError>;
+}
+
+export const AuthRefreshTokenValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type AuthRefreshTokenValidationErrorTypeEnum = typeof AuthRefreshTokenValidationErrorTypeEnum[keyof typeof AuthRefreshTokenValidationErrorTypeEnum];
+
+/**
+ * @type AuthSignupGuestError
+ * @export
+ */
+export type AuthSignupGuestError = { attr: 'non_field_errors' } & AuthSignupGuestNonFieldErrorsErrorComponent | { attr: 'password' } & AuthSignupGuestPasswordErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface AuthSignupGuestNonFieldErrorsErrorComponent
+ */
+export interface AuthSignupGuestNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestNonFieldErrorsErrorComponent
+     */
+    'attr': AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestNonFieldErrorsErrorComponent
+     */
+    'code': AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum = typeof AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum[keyof typeof AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum];
+export const AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum = typeof AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum[keyof typeof AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthSignupGuestPasswordErrorComponent
+ */
+export interface AuthSignupGuestPasswordErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestPasswordErrorComponent
+     */
+    'attr': AuthSignupGuestPasswordErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestPasswordErrorComponent
+     */
+    'code': AuthSignupGuestPasswordErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestPasswordErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthSignupGuestPasswordErrorComponentAttrEnum = {
+    Password: 'password'
+} as const;
+
+export type AuthSignupGuestPasswordErrorComponentAttrEnum = typeof AuthSignupGuestPasswordErrorComponentAttrEnum[keyof typeof AuthSignupGuestPasswordErrorComponentAttrEnum];
+export const AuthSignupGuestPasswordErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    MinLength: 'min_length',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthSignupGuestPasswordErrorComponentCodeEnum = typeof AuthSignupGuestPasswordErrorComponentCodeEnum[keyof typeof AuthSignupGuestPasswordErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthSignupGuestValidationError
+ */
+export interface AuthSignupGuestValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthSignupGuestValidationError
+     */
+    'type': AuthSignupGuestValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<AuthSignupGuestError>}
+     * @memberof AuthSignupGuestValidationError
+     */
+    'errors': Array<AuthSignupGuestError>;
+}
+
+export const AuthSignupGuestValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type AuthSignupGuestValidationErrorTypeEnum = typeof AuthSignupGuestValidationErrorTypeEnum[keyof typeof AuthSignupGuestValidationErrorTypeEnum];
+
+/**
+ * @type AuthVerifyTokenError
+ * @export
+ */
+export type AuthVerifyTokenError = { attr: 'non_field_errors' } & AuthVerifyTokenNonFieldErrorsErrorComponent | { attr: 'token' } & AuthVerifyTokenTokenErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface AuthVerifyTokenNonFieldErrorsErrorComponent
+ */
+export interface AuthVerifyTokenNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenNonFieldErrorsErrorComponent
+     */
+    'attr': AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenNonFieldErrorsErrorComponent
+     */
+    'code': AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum = {
+    NonFieldErrors: 'non_field_errors'
+} as const;
+
+export type AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum = typeof AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum[keyof typeof AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum];
+export const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null'
+} as const;
+
+export type AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum = typeof AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum[keyof typeof AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthVerifyTokenTokenErrorComponent
+ */
+export interface AuthVerifyTokenTokenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenTokenErrorComponent
+     */
+    'attr': AuthVerifyTokenTokenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenTokenErrorComponent
+     */
+    'code': AuthVerifyTokenTokenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenTokenErrorComponent
+     */
+    'detail': string;
+}
+
+export const AuthVerifyTokenTokenErrorComponentAttrEnum = {
+    Token: 'token'
+} as const;
+
+export type AuthVerifyTokenTokenErrorComponentAttrEnum = typeof AuthVerifyTokenTokenErrorComponentAttrEnum[keyof typeof AuthVerifyTokenTokenErrorComponentAttrEnum];
+export const AuthVerifyTokenTokenErrorComponentCodeEnum = {
+    Blank: 'blank',
+    Invalid: 'invalid',
+    Null: 'null',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    Required: 'required',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
+} as const;
+
+export type AuthVerifyTokenTokenErrorComponentCodeEnum = typeof AuthVerifyTokenTokenErrorComponentCodeEnum[keyof typeof AuthVerifyTokenTokenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface AuthVerifyTokenValidationError
+ */
+export interface AuthVerifyTokenValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthVerifyTokenValidationError
+     */
+    'type': AuthVerifyTokenValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<AuthVerifyTokenError>}
+     * @memberof AuthVerifyTokenValidationError
+     */
+    'errors': Array<AuthVerifyTokenError>;
+}
+
+export const AuthVerifyTokenValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type AuthVerifyTokenValidationErrorTypeEnum = typeof AuthVerifyTokenValidationErrorTypeEnum[keyof typeof AuthVerifyTokenValidationErrorTypeEnum];
+
 /**
  * 
  * @export
@@ -410,12 +1056,6 @@ export type BitesCreateCreatedAtErrorComponentCodeEnum = typeof BitesCreateCreat
  * @export
  */
 export type BitesCreateError = { attr: 'chest_bite_count' } & BitesCreateChestBiteCountErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'head_bite_count' } & BitesCreateHeadBiteCountErrorComponent | { attr: 'left_arm_bite_count' } & BitesCreateLeftArmBiteCountErrorComponent | { attr: 'left_leg_bite_count' } & BitesCreateLeftLegBiteCountErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'right_arm_bite_count' } & BitesCreateRightArmBiteCountErrorComponent | { attr: 'right_leg_bite_count' } & BitesCreateRightLegBiteCountErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
-
-/**
- * @type BitesCreateErrorResponse400
- * @export
- */
-export type BitesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BitesCreateValidationError;
 
 /**
  * 
@@ -1025,12 +1665,6 @@ export const BitesCreateValidationErrorTypeEnum = {
 export type BitesCreateValidationErrorTypeEnum = typeof BitesCreateValidationErrorTypeEnum[keyof typeof BitesCreateValidationErrorTypeEnum];
 
 /**
- * @type BitesDestroyErrorResponse400
- * @export
- */
-export type BitesDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * 
  * @export
  * @interface BitesListCreatedAtErrorComponent
@@ -1072,12 +1706,6 @@ export type BitesListCreatedAtErrorComponentCodeEnum = typeof BitesListCreatedAt
  * @export
  */
 export type BitesListError = { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent;
-
-/**
- * @type BitesListErrorResponse400
- * @export
- */
-export type BitesListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BitesListValidationError;
 
 /**
  * 
@@ -1189,6 +1817,372 @@ export const BitesListLocationNuts3ErrorComponentCodeEnum = {
 } as const;
 
 export type BitesListLocationNuts3ErrorComponentCodeEnum = typeof BitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BitesListLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineCreatedAtErrorComponent
+ */
+export interface BitesListMineCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineCreatedAtErrorComponent
+     */
+    'attr': BitesListMineCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineCreatedAtErrorComponent
+     */
+    'code': BitesListMineCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type BitesListMineCreatedAtErrorComponentAttrEnum = typeof BitesListMineCreatedAtErrorComponentAttrEnum[keyof typeof BitesListMineCreatedAtErrorComponentAttrEnum];
+export const BitesListMineCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListMineCreatedAtErrorComponentCodeEnum = typeof BitesListMineCreatedAtErrorComponentCodeEnum[keyof typeof BitesListMineCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BitesListMineError
+ * @export
+ */
+export type BitesListMineError = { attr: 'created_at' } & BitesListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & BitesListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BitesListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BitesListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & BitesListMineOrderByErrorComponent | { attr: 'received_at' } & BitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineLocationCountryIdErrorComponent
+ */
+export interface BitesListMineLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationCountryIdErrorComponent
+     */
+    'attr': BitesListMineLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationCountryIdErrorComponent
+     */
+    'code': BitesListMineLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type BitesListMineLocationCountryIdErrorComponentAttrEnum = typeof BitesListMineLocationCountryIdErrorComponentAttrEnum[keyof typeof BitesListMineLocationCountryIdErrorComponentAttrEnum];
+export const BitesListMineLocationCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesListMineLocationCountryIdErrorComponentCodeEnum = typeof BitesListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof BitesListMineLocationCountryIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineLocationNuts2ErrorComponent
+ */
+export interface BitesListMineLocationNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts2ErrorComponent
+     */
+    'attr': BitesListMineLocationNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts2ErrorComponent
+     */
+    'code': BitesListMineLocationNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
+} as const;
+
+export type BitesListMineLocationNuts2ErrorComponentAttrEnum = typeof BitesListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof BitesListMineLocationNuts2ErrorComponentAttrEnum];
+export const BitesListMineLocationNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineLocationNuts2ErrorComponentCodeEnum = typeof BitesListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof BitesListMineLocationNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineLocationNuts3ErrorComponent
+ */
+export interface BitesListMineLocationNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts3ErrorComponent
+     */
+    'attr': BitesListMineLocationNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts3ErrorComponent
+     */
+    'code': BitesListMineLocationNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
+} as const;
+
+export type BitesListMineLocationNuts3ErrorComponentAttrEnum = typeof BitesListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof BitesListMineLocationNuts3ErrorComponentAttrEnum];
+export const BitesListMineLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineLocationNuts3ErrorComponentCodeEnum = typeof BitesListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof BitesListMineLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineOrderByErrorComponent
+ */
+export interface BitesListMineOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineOrderByErrorComponent
+     */
+    'attr': BitesListMineOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineOrderByErrorComponent
+     */
+    'code': BitesListMineOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type BitesListMineOrderByErrorComponentAttrEnum = typeof BitesListMineOrderByErrorComponentAttrEnum[keyof typeof BitesListMineOrderByErrorComponentAttrEnum];
+export const BitesListMineOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BitesListMineOrderByErrorComponentCodeEnum = typeof BitesListMineOrderByErrorComponentCodeEnum[keyof typeof BitesListMineOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineReceivedAtErrorComponent
+ */
+export interface BitesListMineReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineReceivedAtErrorComponent
+     */
+    'attr': BitesListMineReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineReceivedAtErrorComponent
+     */
+    'code': BitesListMineReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type BitesListMineReceivedAtErrorComponentAttrEnum = typeof BitesListMineReceivedAtErrorComponentAttrEnum[keyof typeof BitesListMineReceivedAtErrorComponentAttrEnum];
+export const BitesListMineReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListMineReceivedAtErrorComponentCodeEnum = typeof BitesListMineReceivedAtErrorComponentCodeEnum[keyof typeof BitesListMineReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineShortIdErrorComponent
+ */
+export interface BitesListMineShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineShortIdErrorComponent
+     */
+    'attr': BitesListMineShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineShortIdErrorComponent
+     */
+    'code': BitesListMineShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type BitesListMineShortIdErrorComponentAttrEnum = typeof BitesListMineShortIdErrorComponentAttrEnum[keyof typeof BitesListMineShortIdErrorComponentAttrEnum];
+export const BitesListMineShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineShortIdErrorComponentCodeEnum = typeof BitesListMineShortIdErrorComponentCodeEnum[keyof typeof BitesListMineShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineUpdatedAtErrorComponent
+ */
+export interface BitesListMineUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUpdatedAtErrorComponent
+     */
+    'attr': BitesListMineUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUpdatedAtErrorComponent
+     */
+    'code': BitesListMineUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type BitesListMineUpdatedAtErrorComponentAttrEnum = typeof BitesListMineUpdatedAtErrorComponentAttrEnum[keyof typeof BitesListMineUpdatedAtErrorComponentAttrEnum];
+export const BitesListMineUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BitesListMineUpdatedAtErrorComponentCodeEnum = typeof BitesListMineUpdatedAtErrorComponentCodeEnum[keyof typeof BitesListMineUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineUserUuidErrorComponent
+ */
+export interface BitesListMineUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUserUuidErrorComponent
+     */
+    'attr': BitesListMineUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUserUuidErrorComponent
+     */
+    'code': BitesListMineUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type BitesListMineUserUuidErrorComponentAttrEnum = typeof BitesListMineUserUuidErrorComponentAttrEnum[keyof typeof BitesListMineUserUuidErrorComponentAttrEnum];
+export const BitesListMineUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineUserUuidErrorComponentCodeEnum = typeof BitesListMineUserUuidErrorComponentCodeEnum[keyof typeof BitesListMineUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineValidationError
+ */
+export interface BitesListMineValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineValidationError
+     */
+    'type': BitesListMineValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BitesListMineError>}
+     * @memberof BitesListMineValidationError
+     */
+    'errors': Array<BitesListMineError>;
+}
+
+export const BitesListMineValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BitesListMineValidationErrorTypeEnum = typeof BitesListMineValidationErrorTypeEnum[keyof typeof BitesListMineValidationErrorTypeEnum];
 
 /**
  * 
@@ -1401,12 +2395,6 @@ export const BitesListValidationErrorTypeEnum = {
 } as const;
 
 export type BitesListValidationErrorTypeEnum = typeof BitesListValidationErrorTypeEnum[keyof typeof BitesListValidationErrorTypeEnum];
-
-/**
- * @type BitesRetrieveErrorResponse400
- * @export
- */
-export type BitesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
 
 /**
  * 
@@ -1689,35 +2677,35 @@ export type BreedingSiteRequestSiteTypeEnum = typeof BreedingSiteRequestSiteType
 /**
  * 
  * @export
- * @interface BreedingSitesCreateCreatedAtErrorComponent
+ * @interface BreedingsitesCreateCreatedAtErrorComponent
  */
-export interface BreedingSitesCreateCreatedAtErrorComponent {
+export interface BreedingsitesCreateCreatedAtErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     * @memberof BreedingsitesCreateCreatedAtErrorComponent
      */
-    'attr': BreedingSitesCreateCreatedAtErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateCreatedAtErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     * @memberof BreedingsitesCreateCreatedAtErrorComponent
      */
-    'code': BreedingSitesCreateCreatedAtErrorComponentCodeEnum;
+    'code': BreedingsitesCreateCreatedAtErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateCreatedAtErrorComponent
+     * @memberof BreedingsitesCreateCreatedAtErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateCreatedAtErrorComponentAttrEnum = {
+export const BreedingsitesCreateCreatedAtErrorComponentAttrEnum = {
     CreatedAt: 'created_at'
 } as const;
 
-export type BreedingSitesCreateCreatedAtErrorComponentAttrEnum = typeof BreedingSitesCreateCreatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesCreateCreatedAtErrorComponentAttrEnum];
-export const BreedingSitesCreateCreatedAtErrorComponentCodeEnum = {
+export type BreedingsitesCreateCreatedAtErrorComponentAttrEnum = typeof BreedingsitesCreateCreatedAtErrorComponentAttrEnum[keyof typeof BreedingsitesCreateCreatedAtErrorComponentAttrEnum];
+export const BreedingsitesCreateCreatedAtErrorComponentCodeEnum = {
     Date: 'date',
     Invalid: 'invalid',
     MakeAware: 'make_aware',
@@ -1726,393 +2714,387 @@ export const BreedingSitesCreateCreatedAtErrorComponentCodeEnum = {
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreateCreatedAtErrorComponentCodeEnum = typeof BreedingSitesCreateCreatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesCreateCreatedAtErrorComponentCodeEnum];
+export type BreedingsitesCreateCreatedAtErrorComponentCodeEnum = typeof BreedingsitesCreateCreatedAtErrorComponentCodeEnum[keyof typeof BreedingsitesCreateCreatedAtErrorComponentCodeEnum];
 
 /**
- * @type BreedingSitesCreateError
+ * @type BreedingsitesCreateError
  * @export
  */
-export type BreedingSitesCreateError = { attr: 'created_at' } & BreedingSitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingSitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingSitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingSitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingSitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingSitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingSitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BreedingSitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BreedingSitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingSitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingSitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingSitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingSitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingSitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingSitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingSitesCreateTagsINDEXErrorComponent;
-
-/**
- * @type BreedingSitesCreateErrorResponse400
- * @export
- */
-export type BreedingSitesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BreedingSitesCreateValidationError;
+export type BreedingsitesCreateError = { attr: 'created_at' } & BreedingsitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingsitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingsitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingsitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingsitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingsitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingsitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BreedingsitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BreedingsitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingsitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingsitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingsitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingsitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingsitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingsitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingsitesCreateTagsINDEXErrorComponent;
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateHasLarvaeErrorComponent
+ * @interface BreedingsitesCreateHasLarvaeErrorComponent
  */
-export interface BreedingSitesCreateHasLarvaeErrorComponent {
+export interface BreedingsitesCreateHasLarvaeErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     * @memberof BreedingsitesCreateHasLarvaeErrorComponent
      */
-    'attr': BreedingSitesCreateHasLarvaeErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateHasLarvaeErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     * @memberof BreedingsitesCreateHasLarvaeErrorComponent
      */
-    'code': BreedingSitesCreateHasLarvaeErrorComponentCodeEnum;
+    'code': BreedingsitesCreateHasLarvaeErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasLarvaeErrorComponent
+     * @memberof BreedingsitesCreateHasLarvaeErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateHasLarvaeErrorComponentAttrEnum = {
+export const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum = {
     HasLarvae: 'has_larvae'
 } as const;
 
-export type BreedingSitesCreateHasLarvaeErrorComponentAttrEnum = typeof BreedingSitesCreateHasLarvaeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasLarvaeErrorComponentAttrEnum];
-export const BreedingSitesCreateHasLarvaeErrorComponentCodeEnum = {
+export type BreedingsitesCreateHasLarvaeErrorComponentAttrEnum = typeof BreedingsitesCreateHasLarvaeErrorComponentAttrEnum[keyof typeof BreedingsitesCreateHasLarvaeErrorComponentAttrEnum];
+export const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesCreateHasLarvaeErrorComponentCodeEnum = typeof BreedingSitesCreateHasLarvaeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasLarvaeErrorComponentCodeEnum];
+export type BreedingsitesCreateHasLarvaeErrorComponentCodeEnum = typeof BreedingsitesCreateHasLarvaeErrorComponentCodeEnum[keyof typeof BreedingsitesCreateHasLarvaeErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateHasNearMosquitoesErrorComponent
+ * @interface BreedingsitesCreateHasNearMosquitoesErrorComponent
  */
-export interface BreedingSitesCreateHasNearMosquitoesErrorComponent {
+export interface BreedingsitesCreateHasNearMosquitoesErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
      */
-    'attr': BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
      */
-    'code': BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum;
+    'code': BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasNearMosquitoesErrorComponent
+     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum = {
+export const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum = {
     HasNearMosquitoes: 'has_near_mosquitoes'
 } as const;
 
-export type BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum = typeof BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasNearMosquitoesErrorComponentAttrEnum];
-export const BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum = {
+export type BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum = typeof BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum[keyof typeof BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum];
+export const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum = typeof BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasNearMosquitoesErrorComponentCodeEnum];
+export type BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum = typeof BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum[keyof typeof BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateHasWaterErrorComponent
+ * @interface BreedingsitesCreateHasWaterErrorComponent
  */
-export interface BreedingSitesCreateHasWaterErrorComponent {
+export interface BreedingsitesCreateHasWaterErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     * @memberof BreedingsitesCreateHasWaterErrorComponent
      */
-    'attr': BreedingSitesCreateHasWaterErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateHasWaterErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     * @memberof BreedingsitesCreateHasWaterErrorComponent
      */
-    'code': BreedingSitesCreateHasWaterErrorComponentCodeEnum;
+    'code': BreedingsitesCreateHasWaterErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateHasWaterErrorComponent
+     * @memberof BreedingsitesCreateHasWaterErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateHasWaterErrorComponentAttrEnum = {
+export const BreedingsitesCreateHasWaterErrorComponentAttrEnum = {
     HasWater: 'has_water'
 } as const;
 
-export type BreedingSitesCreateHasWaterErrorComponentAttrEnum = typeof BreedingSitesCreateHasWaterErrorComponentAttrEnum[keyof typeof BreedingSitesCreateHasWaterErrorComponentAttrEnum];
-export const BreedingSitesCreateHasWaterErrorComponentCodeEnum = {
+export type BreedingsitesCreateHasWaterErrorComponentAttrEnum = typeof BreedingsitesCreateHasWaterErrorComponentAttrEnum[keyof typeof BreedingsitesCreateHasWaterErrorComponentAttrEnum];
+export const BreedingsitesCreateHasWaterErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesCreateHasWaterErrorComponentCodeEnum = typeof BreedingSitesCreateHasWaterErrorComponentCodeEnum[keyof typeof BreedingSitesCreateHasWaterErrorComponentCodeEnum];
+export type BreedingsitesCreateHasWaterErrorComponentCodeEnum = typeof BreedingsitesCreateHasWaterErrorComponentCodeEnum[keyof typeof BreedingsitesCreateHasWaterErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateInPublicAreaErrorComponent
+ * @interface BreedingsitesCreateInPublicAreaErrorComponent
  */
-export interface BreedingSitesCreateInPublicAreaErrorComponent {
+export interface BreedingsitesCreateInPublicAreaErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     * @memberof BreedingsitesCreateInPublicAreaErrorComponent
      */
-    'attr': BreedingSitesCreateInPublicAreaErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateInPublicAreaErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     * @memberof BreedingsitesCreateInPublicAreaErrorComponent
      */
-    'code': BreedingSitesCreateInPublicAreaErrorComponentCodeEnum;
+    'code': BreedingsitesCreateInPublicAreaErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateInPublicAreaErrorComponent
+     * @memberof BreedingsitesCreateInPublicAreaErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateInPublicAreaErrorComponentAttrEnum = {
+export const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum = {
     InPublicArea: 'in_public_area'
 } as const;
 
-export type BreedingSitesCreateInPublicAreaErrorComponentAttrEnum = typeof BreedingSitesCreateInPublicAreaErrorComponentAttrEnum[keyof typeof BreedingSitesCreateInPublicAreaErrorComponentAttrEnum];
-export const BreedingSitesCreateInPublicAreaErrorComponentCodeEnum = {
+export type BreedingsitesCreateInPublicAreaErrorComponentAttrEnum = typeof BreedingsitesCreateInPublicAreaErrorComponentAttrEnum[keyof typeof BreedingsitesCreateInPublicAreaErrorComponentAttrEnum];
+export const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesCreateInPublicAreaErrorComponentCodeEnum = typeof BreedingSitesCreateInPublicAreaErrorComponentCodeEnum[keyof typeof BreedingSitesCreateInPublicAreaErrorComponentCodeEnum];
+export type BreedingsitesCreateInPublicAreaErrorComponentCodeEnum = typeof BreedingsitesCreateInPublicAreaErrorComponentCodeEnum[keyof typeof BreedingsitesCreateInPublicAreaErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+ * @interface BreedingsitesCreateLocationNonFieldErrorsErrorComponent
  */
-export interface BreedingSitesCreateLocationNonFieldErrorsErrorComponent {
+export interface BreedingsitesCreateLocationNonFieldErrorsErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
      */
-    'attr': BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
      */
-    'code': BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum;
+    'code': BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = {
+export const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = {
     LocationNonFieldErrors: 'location.non_field_errors'
 } as const;
 
-export type BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentAttrEnum];
-export const BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = {
+export type BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum = typeof BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = {
     Invalid: 'invalid',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationNonFieldErrorsErrorComponentCodeEnum];
+export type BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum = typeof BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateLocationPointErrorComponent
+ * @interface BreedingsitesCreateLocationPointErrorComponent
  */
-export interface BreedingSitesCreateLocationPointErrorComponent {
+export interface BreedingsitesCreateLocationPointErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     * @memberof BreedingsitesCreateLocationPointErrorComponent
      */
-    'attr': BreedingSitesCreateLocationPointErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateLocationPointErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     * @memberof BreedingsitesCreateLocationPointErrorComponent
      */
-    'code': BreedingSitesCreateLocationPointErrorComponentCodeEnum;
+    'code': BreedingsitesCreateLocationPointErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationPointErrorComponent
+     * @memberof BreedingsitesCreateLocationPointErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateLocationPointErrorComponentAttrEnum = {
+export const BreedingsitesCreateLocationPointErrorComponentAttrEnum = {
     LocationPoint: 'location.point'
 } as const;
 
-export type BreedingSitesCreateLocationPointErrorComponentAttrEnum = typeof BreedingSitesCreateLocationPointErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationPointErrorComponentAttrEnum];
-export const BreedingSitesCreateLocationPointErrorComponentCodeEnum = {
+export type BreedingsitesCreateLocationPointErrorComponentAttrEnum = typeof BreedingsitesCreateLocationPointErrorComponentAttrEnum[keyof typeof BreedingsitesCreateLocationPointErrorComponentAttrEnum];
+export const BreedingsitesCreateLocationPointErrorComponentCodeEnum = {
     Invalid: 'invalid',
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreateLocationPointErrorComponentCodeEnum = typeof BreedingSitesCreateLocationPointErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationPointErrorComponentCodeEnum];
+export type BreedingsitesCreateLocationPointErrorComponentCodeEnum = typeof BreedingsitesCreateLocationPointErrorComponentCodeEnum[keyof typeof BreedingsitesCreateLocationPointErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateLocationTypeErrorComponent
+ * @interface BreedingsitesCreateLocationTypeErrorComponent
  */
-export interface BreedingSitesCreateLocationTypeErrorComponent {
+export interface BreedingsitesCreateLocationTypeErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationTypeErrorComponent
      */
-    'attr': BreedingSitesCreateLocationTypeErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateLocationTypeErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationTypeErrorComponent
      */
-    'code': BreedingSitesCreateLocationTypeErrorComponentCodeEnum;
+    'code': BreedingsitesCreateLocationTypeErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationTypeErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateLocationTypeErrorComponentAttrEnum = {
+export const BreedingsitesCreateLocationTypeErrorComponentAttrEnum = {
     LocationType: 'location.type'
 } as const;
 
-export type BreedingSitesCreateLocationTypeErrorComponentAttrEnum = typeof BreedingSitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateLocationTypeErrorComponentAttrEnum];
-export const BreedingSitesCreateLocationTypeErrorComponentCodeEnum = {
+export type BreedingsitesCreateLocationTypeErrorComponentAttrEnum = typeof BreedingsitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BreedingsitesCreateLocationTypeErrorComponentAttrEnum];
+export const BreedingsitesCreateLocationTypeErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreateLocationTypeErrorComponentCodeEnum = typeof BreedingSitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateLocationTypeErrorComponentCodeEnum];
+export type BreedingsitesCreateLocationTypeErrorComponentCodeEnum = typeof BreedingsitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BreedingsitesCreateLocationTypeErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateNonFieldErrorsErrorComponent
+ * @interface BreedingsitesCreateNonFieldErrorsErrorComponent
  */
-export interface BreedingSitesCreateNonFieldErrorsErrorComponent {
+export interface BreedingsitesCreateNonFieldErrorsErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateNonFieldErrorsErrorComponent
      */
-    'attr': BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateNonFieldErrorsErrorComponent
      */
-    'code': BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum;
+    'code': BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreateNonFieldErrorsErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum = {
+export const BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum = {
     NonFieldErrors: 'non_field_errors'
 } as const;
 
-export type BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateNonFieldErrorsErrorComponentAttrEnum];
-export const BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum = {
+export type BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum = typeof BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum = {
     Invalid: 'invalid',
     Null: 'null'
 } as const;
 
-export type BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateNonFieldErrorsErrorComponentCodeEnum];
+export type BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum = typeof BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateNoteErrorComponent
+ * @interface BreedingsitesCreateNoteErrorComponent
  */
-export interface BreedingSitesCreateNoteErrorComponent {
+export interface BreedingsitesCreateNoteErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNoteErrorComponent
+     * @memberof BreedingsitesCreateNoteErrorComponent
      */
-    'attr': BreedingSitesCreateNoteErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateNoteErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNoteErrorComponent
+     * @memberof BreedingsitesCreateNoteErrorComponent
      */
-    'code': BreedingSitesCreateNoteErrorComponentCodeEnum;
+    'code': BreedingsitesCreateNoteErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateNoteErrorComponent
+     * @memberof BreedingsitesCreateNoteErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateNoteErrorComponentAttrEnum = {
+export const BreedingsitesCreateNoteErrorComponentAttrEnum = {
     Note: 'note'
 } as const;
 
-export type BreedingSitesCreateNoteErrorComponentAttrEnum = typeof BreedingSitesCreateNoteErrorComponentAttrEnum[keyof typeof BreedingSitesCreateNoteErrorComponentAttrEnum];
-export const BreedingSitesCreateNoteErrorComponentCodeEnum = {
+export type BreedingsitesCreateNoteErrorComponentAttrEnum = typeof BreedingsitesCreateNoteErrorComponentAttrEnum[keyof typeof BreedingsitesCreateNoteErrorComponentAttrEnum];
+export const BreedingsitesCreateNoteErrorComponentCodeEnum = {
     Invalid: 'invalid',
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
 } as const;
 
-export type BreedingSitesCreateNoteErrorComponentCodeEnum = typeof BreedingSitesCreateNoteErrorComponentCodeEnum[keyof typeof BreedingSitesCreateNoteErrorComponentCodeEnum];
+export type BreedingsitesCreateNoteErrorComponentCodeEnum = typeof BreedingsitesCreateNoteErrorComponentCodeEnum[keyof typeof BreedingsitesCreateNoteErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreatePhotosINDEXFileErrorComponent
+ * @interface BreedingsitesCreatePhotosINDEXFileErrorComponent
  */
-export interface BreedingSitesCreatePhotosINDEXFileErrorComponent {
+export interface BreedingsitesCreatePhotosINDEXFileErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXFileErrorComponent
      */
-    'attr': BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum;
+    'attr': BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXFileErrorComponent
      */
-    'code': BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum;
+    'code': BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXFileErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXFileErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum = {
+export const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum = {
     PhotosIndexFile: 'photos.INDEX.file'
 } as const;
 
-export type BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosINDEXFileErrorComponentAttrEnum];
-export const BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum = {
+export type BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum = typeof BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum[keyof typeof BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum];
+export const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum = {
     Empty: 'empty',
     Invalid: 'invalid',
     InvalidImage: 'invalid_image',
@@ -2121,118 +3103,118 @@ export const BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum = {
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosINDEXFileErrorComponentCodeEnum];
+export type BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum = typeof BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum[keyof typeof BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+ * @interface BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
  */
-export interface BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent {
+export interface BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
      */
-    'attr': BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum;
+    'attr': BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
      */
-    'code': BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum;
+    'code': BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = {
+export const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = {
     PhotosIndexNonFieldErrors: 'photos.INDEX.non_field_errors'
 } as const;
 
-export type BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum];
-export const BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = {
+export type BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum = typeof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = {
     Invalid: 'invalid',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum];
+export type BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum = typeof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+ * @interface BreedingsitesCreatePhotosNonFieldErrorsErrorComponent
  */
-export interface BreedingSitesCreatePhotosNonFieldErrorsErrorComponent {
+export interface BreedingsitesCreatePhotosNonFieldErrorsErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosNonFieldErrorsErrorComponent
      */
-    'attr': BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum;
+    'attr': BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosNonFieldErrorsErrorComponent
      */
-    'code': BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum;
+    'code': BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreatePhotosNonFieldErrorsErrorComponent
+     * @memberof BreedingsitesCreatePhotosNonFieldErrorsErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = {
+export const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = {
     PhotosNonFieldErrors: 'photos.non_field_errors'
 } as const;
 
-export type BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum];
-export const BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = {
+export type BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum = typeof BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum[keyof typeof BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum];
+export const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = {
     NotAList: 'not_a_list',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingSitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum];
+export type BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum = typeof BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum[keyof typeof BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateSentAtErrorComponent
+ * @interface BreedingsitesCreateSentAtErrorComponent
  */
-export interface BreedingSitesCreateSentAtErrorComponent {
+export interface BreedingsitesCreateSentAtErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSentAtErrorComponent
+     * @memberof BreedingsitesCreateSentAtErrorComponent
      */
-    'attr': BreedingSitesCreateSentAtErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateSentAtErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSentAtErrorComponent
+     * @memberof BreedingsitesCreateSentAtErrorComponent
      */
-    'code': BreedingSitesCreateSentAtErrorComponentCodeEnum;
+    'code': BreedingsitesCreateSentAtErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSentAtErrorComponent
+     * @memberof BreedingsitesCreateSentAtErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateSentAtErrorComponentAttrEnum = {
+export const BreedingsitesCreateSentAtErrorComponentAttrEnum = {
     SentAt: 'sent_at'
 } as const;
 
-export type BreedingSitesCreateSentAtErrorComponentAttrEnum = typeof BreedingSitesCreateSentAtErrorComponentAttrEnum[keyof typeof BreedingSitesCreateSentAtErrorComponentAttrEnum];
-export const BreedingSitesCreateSentAtErrorComponentCodeEnum = {
+export type BreedingsitesCreateSentAtErrorComponentAttrEnum = typeof BreedingsitesCreateSentAtErrorComponentAttrEnum[keyof typeof BreedingsitesCreateSentAtErrorComponentAttrEnum];
+export const BreedingsitesCreateSentAtErrorComponentCodeEnum = {
     Date: 'date',
     Invalid: 'invalid',
     MakeAware: 'make_aware',
@@ -2241,118 +3223,118 @@ export const BreedingSitesCreateSentAtErrorComponentCodeEnum = {
     Required: 'required'
 } as const;
 
-export type BreedingSitesCreateSentAtErrorComponentCodeEnum = typeof BreedingSitesCreateSentAtErrorComponentCodeEnum[keyof typeof BreedingSitesCreateSentAtErrorComponentCodeEnum];
+export type BreedingsitesCreateSentAtErrorComponentCodeEnum = typeof BreedingsitesCreateSentAtErrorComponentCodeEnum[keyof typeof BreedingsitesCreateSentAtErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateSiteTypeErrorComponent
+ * @interface BreedingsitesCreateSiteTypeErrorComponent
  */
-export interface BreedingSitesCreateSiteTypeErrorComponent {
+export interface BreedingsitesCreateSiteTypeErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     * @memberof BreedingsitesCreateSiteTypeErrorComponent
      */
-    'attr': BreedingSitesCreateSiteTypeErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateSiteTypeErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     * @memberof BreedingsitesCreateSiteTypeErrorComponent
      */
-    'code': BreedingSitesCreateSiteTypeErrorComponentCodeEnum;
+    'code': BreedingsitesCreateSiteTypeErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateSiteTypeErrorComponent
+     * @memberof BreedingsitesCreateSiteTypeErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateSiteTypeErrorComponentAttrEnum = {
+export const BreedingsitesCreateSiteTypeErrorComponentAttrEnum = {
     SiteType: 'site_type'
 } as const;
 
-export type BreedingSitesCreateSiteTypeErrorComponentAttrEnum = typeof BreedingSitesCreateSiteTypeErrorComponentAttrEnum[keyof typeof BreedingSitesCreateSiteTypeErrorComponentAttrEnum];
-export const BreedingSitesCreateSiteTypeErrorComponentCodeEnum = {
+export type BreedingsitesCreateSiteTypeErrorComponentAttrEnum = typeof BreedingsitesCreateSiteTypeErrorComponentAttrEnum[keyof typeof BreedingsitesCreateSiteTypeErrorComponentAttrEnum];
+export const BreedingsitesCreateSiteTypeErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
     Null: 'null'
 } as const;
 
-export type BreedingSitesCreateSiteTypeErrorComponentCodeEnum = typeof BreedingSitesCreateSiteTypeErrorComponentCodeEnum[keyof typeof BreedingSitesCreateSiteTypeErrorComponentCodeEnum];
+export type BreedingsitesCreateSiteTypeErrorComponentCodeEnum = typeof BreedingsitesCreateSiteTypeErrorComponentCodeEnum[keyof typeof BreedingsitesCreateSiteTypeErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateTagsErrorComponent
+ * @interface BreedingsitesCreateTagsErrorComponent
  */
-export interface BreedingSitesCreateTagsErrorComponent {
+export interface BreedingsitesCreateTagsErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsErrorComponent
+     * @memberof BreedingsitesCreateTagsErrorComponent
      */
-    'attr': BreedingSitesCreateTagsErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateTagsErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsErrorComponent
+     * @memberof BreedingsitesCreateTagsErrorComponent
      */
-    'code': BreedingSitesCreateTagsErrorComponentCodeEnum;
+    'code': BreedingsitesCreateTagsErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsErrorComponent
+     * @memberof BreedingsitesCreateTagsErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateTagsErrorComponentAttrEnum = {
+export const BreedingsitesCreateTagsErrorComponentAttrEnum = {
     Tags: 'tags'
 } as const;
 
-export type BreedingSitesCreateTagsErrorComponentAttrEnum = typeof BreedingSitesCreateTagsErrorComponentAttrEnum[keyof typeof BreedingSitesCreateTagsErrorComponentAttrEnum];
-export const BreedingSitesCreateTagsErrorComponentCodeEnum = {
+export type BreedingsitesCreateTagsErrorComponentAttrEnum = typeof BreedingsitesCreateTagsErrorComponentAttrEnum[keyof typeof BreedingsitesCreateTagsErrorComponentAttrEnum];
+export const BreedingsitesCreateTagsErrorComponentCodeEnum = {
     InvalidJson: 'invalid_json',
     NotAList: 'not_a_list',
     NotAStr: 'not_a_str',
     Null: 'null'
 } as const;
 
-export type BreedingSitesCreateTagsErrorComponentCodeEnum = typeof BreedingSitesCreateTagsErrorComponentCodeEnum[keyof typeof BreedingSitesCreateTagsErrorComponentCodeEnum];
+export type BreedingsitesCreateTagsErrorComponentCodeEnum = typeof BreedingsitesCreateTagsErrorComponentCodeEnum[keyof typeof BreedingsitesCreateTagsErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateTagsINDEXErrorComponent
+ * @interface BreedingsitesCreateTagsINDEXErrorComponent
  */
-export interface BreedingSitesCreateTagsINDEXErrorComponent {
+export interface BreedingsitesCreateTagsINDEXErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
      */
-    'attr': BreedingSitesCreateTagsINDEXErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateTagsINDEXErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
      */
-    'code': BreedingSitesCreateTagsINDEXErrorComponentCodeEnum;
+    'code': BreedingsitesCreateTagsINDEXErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateTagsINDEXErrorComponent
+     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesCreateTagsINDEXErrorComponentAttrEnum = {
+export const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum = {
     TagsIndex: 'tags.INDEX'
 } as const;
 
-export type BreedingSitesCreateTagsINDEXErrorComponentAttrEnum = typeof BreedingSitesCreateTagsINDEXErrorComponentAttrEnum[keyof typeof BreedingSitesCreateTagsINDEXErrorComponentAttrEnum];
-export const BreedingSitesCreateTagsINDEXErrorComponentCodeEnum = {
+export type BreedingsitesCreateTagsINDEXErrorComponentAttrEnum = typeof BreedingsitesCreateTagsINDEXErrorComponentAttrEnum[keyof typeof BreedingsitesCreateTagsINDEXErrorComponentAttrEnum];
+export const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum = {
     Blank: 'blank',
     Invalid: 'invalid',
     Null: 'null',
@@ -2361,417 +3343,765 @@ export const BreedingSitesCreateTagsINDEXErrorComponentCodeEnum = {
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
 } as const;
 
-export type BreedingSitesCreateTagsINDEXErrorComponentCodeEnum = typeof BreedingSitesCreateTagsINDEXErrorComponentCodeEnum[keyof typeof BreedingSitesCreateTagsINDEXErrorComponentCodeEnum];
+export type BreedingsitesCreateTagsINDEXErrorComponentCodeEnum = typeof BreedingsitesCreateTagsINDEXErrorComponentCodeEnum[keyof typeof BreedingsitesCreateTagsINDEXErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesCreateValidationError
+ * @interface BreedingsitesCreateValidationError
  */
-export interface BreedingSitesCreateValidationError {
+export interface BreedingsitesCreateValidationError {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesCreateValidationError
+     * @memberof BreedingsitesCreateValidationError
      */
-    'type': BreedingSitesCreateValidationErrorTypeEnum;
+    'type': BreedingsitesCreateValidationErrorTypeEnum;
     /**
      * 
-     * @type {Array<BreedingSitesCreateError>}
-     * @memberof BreedingSitesCreateValidationError
+     * @type {Array<BreedingsitesCreateError>}
+     * @memberof BreedingsitesCreateValidationError
      */
-    'errors': Array<BreedingSitesCreateError>;
+    'errors': Array<BreedingsitesCreateError>;
 }
 
-export const BreedingSitesCreateValidationErrorTypeEnum = {
+export const BreedingsitesCreateValidationErrorTypeEnum = {
     ValidationError: 'validation_error'
 } as const;
 
-export type BreedingSitesCreateValidationErrorTypeEnum = typeof BreedingSitesCreateValidationErrorTypeEnum[keyof typeof BreedingSitesCreateValidationErrorTypeEnum];
-
-/**
- * @type BreedingSitesDestroyErrorResponse400
- * @export
- */
-export type BreedingSitesDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+export type BreedingsitesCreateValidationErrorTypeEnum = typeof BreedingsitesCreateValidationErrorTypeEnum[keyof typeof BreedingsitesCreateValidationErrorTypeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListCreatedAtErrorComponent
+ * @interface BreedingsitesListCreatedAtErrorComponent
  */
-export interface BreedingSitesListCreatedAtErrorComponent {
+export interface BreedingsitesListCreatedAtErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListCreatedAtErrorComponent
+     * @memberof BreedingsitesListCreatedAtErrorComponent
      */
-    'attr': BreedingSitesListCreatedAtErrorComponentAttrEnum;
+    'attr': BreedingsitesListCreatedAtErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListCreatedAtErrorComponent
+     * @memberof BreedingsitesListCreatedAtErrorComponent
      */
-    'code': BreedingSitesListCreatedAtErrorComponentCodeEnum;
+    'code': BreedingsitesListCreatedAtErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListCreatedAtErrorComponent
+     * @memberof BreedingsitesListCreatedAtErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListCreatedAtErrorComponentAttrEnum = {
+export const BreedingsitesListCreatedAtErrorComponentAttrEnum = {
     CreatedAt: 'created_at'
 } as const;
 
-export type BreedingSitesListCreatedAtErrorComponentAttrEnum = typeof BreedingSitesListCreatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListCreatedAtErrorComponentAttrEnum];
-export const BreedingSitesListCreatedAtErrorComponentCodeEnum = {
+export type BreedingsitesListCreatedAtErrorComponentAttrEnum = typeof BreedingsitesListCreatedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListCreatedAtErrorComponentAttrEnum];
+export const BreedingsitesListCreatedAtErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesListCreatedAtErrorComponentCodeEnum = typeof BreedingSitesListCreatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListCreatedAtErrorComponentCodeEnum];
+export type BreedingsitesListCreatedAtErrorComponentCodeEnum = typeof BreedingsitesListCreatedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListCreatedAtErrorComponentCodeEnum];
 
 /**
- * @type BreedingSitesListError
+ * @type BreedingsitesListError
  * @export
  */
-export type BreedingSitesListError = { attr: 'created_at' } & BreedingSitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingSitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingSitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingSitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingSitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingSitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingSitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingSitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingSitesListUserUuidErrorComponent;
-
-/**
- * @type BreedingSitesListErrorResponse400
- * @export
- */
-export type BreedingSitesListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & BreedingSitesListValidationError;
+export type BreedingsitesListError = { attr: 'created_at' } & BreedingsitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingsitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingsitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingsitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingsitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListUserUuidErrorComponent;
 
 /**
  * 
  * @export
- * @interface BreedingSitesListLocationCountryIdErrorComponent
+ * @interface BreedingsitesListLocationCountryIdErrorComponent
  */
-export interface BreedingSitesListLocationCountryIdErrorComponent {
+export interface BreedingsitesListLocationCountryIdErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     * @memberof BreedingsitesListLocationCountryIdErrorComponent
      */
-    'attr': BreedingSitesListLocationCountryIdErrorComponentAttrEnum;
+    'attr': BreedingsitesListLocationCountryIdErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     * @memberof BreedingsitesListLocationCountryIdErrorComponent
      */
-    'code': BreedingSitesListLocationCountryIdErrorComponentCodeEnum;
+    'code': BreedingsitesListLocationCountryIdErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationCountryIdErrorComponent
+     * @memberof BreedingsitesListLocationCountryIdErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListLocationCountryIdErrorComponentAttrEnum = {
+export const BreedingsitesListLocationCountryIdErrorComponentAttrEnum = {
     LocationCountryId: 'location_country_id'
 } as const;
 
-export type BreedingSitesListLocationCountryIdErrorComponentAttrEnum = typeof BreedingSitesListLocationCountryIdErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationCountryIdErrorComponentAttrEnum];
-export const BreedingSitesListLocationCountryIdErrorComponentCodeEnum = {
+export type BreedingsitesListLocationCountryIdErrorComponentAttrEnum = typeof BreedingsitesListLocationCountryIdErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationCountryIdErrorComponentAttrEnum];
+export const BreedingsitesListLocationCountryIdErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice'
 } as const;
 
-export type BreedingSitesListLocationCountryIdErrorComponentCodeEnum = typeof BreedingSitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationCountryIdErrorComponentCodeEnum];
+export type BreedingsitesListLocationCountryIdErrorComponentCodeEnum = typeof BreedingsitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationCountryIdErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListLocationNuts2ErrorComponent
+ * @interface BreedingsitesListLocationNuts2ErrorComponent
  */
-export interface BreedingSitesListLocationNuts2ErrorComponent {
+export interface BreedingsitesListLocationNuts2ErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     * @memberof BreedingsitesListLocationNuts2ErrorComponent
      */
-    'attr': BreedingSitesListLocationNuts2ErrorComponentAttrEnum;
+    'attr': BreedingsitesListLocationNuts2ErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     * @memberof BreedingsitesListLocationNuts2ErrorComponent
      */
-    'code': BreedingSitesListLocationNuts2ErrorComponentCodeEnum;
+    'code': BreedingsitesListLocationNuts2ErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts2ErrorComponent
+     * @memberof BreedingsitesListLocationNuts2ErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListLocationNuts2ErrorComponentAttrEnum = {
+export const BreedingsitesListLocationNuts2ErrorComponentAttrEnum = {
     LocationNuts2: 'location_nuts_2'
 } as const;
 
-export type BreedingSitesListLocationNuts2ErrorComponentAttrEnum = typeof BreedingSitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationNuts2ErrorComponentAttrEnum];
-export const BreedingSitesListLocationNuts2ErrorComponentCodeEnum = {
+export type BreedingsitesListLocationNuts2ErrorComponentAttrEnum = typeof BreedingsitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationNuts2ErrorComponentAttrEnum];
+export const BreedingsitesListLocationNuts2ErrorComponentCodeEnum = {
     NullCharactersNotAllowed: 'null_characters_not_allowed'
 } as const;
 
-export type BreedingSitesListLocationNuts2ErrorComponentCodeEnum = typeof BreedingSitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationNuts2ErrorComponentCodeEnum];
+export type BreedingsitesListLocationNuts2ErrorComponentCodeEnum = typeof BreedingsitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationNuts2ErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListLocationNuts3ErrorComponent
+ * @interface BreedingsitesListLocationNuts3ErrorComponent
  */
-export interface BreedingSitesListLocationNuts3ErrorComponent {
+export interface BreedingsitesListLocationNuts3ErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     * @memberof BreedingsitesListLocationNuts3ErrorComponent
      */
-    'attr': BreedingSitesListLocationNuts3ErrorComponentAttrEnum;
+    'attr': BreedingsitesListLocationNuts3ErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     * @memberof BreedingsitesListLocationNuts3ErrorComponent
      */
-    'code': BreedingSitesListLocationNuts3ErrorComponentCodeEnum;
+    'code': BreedingsitesListLocationNuts3ErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListLocationNuts3ErrorComponent
+     * @memberof BreedingsitesListLocationNuts3ErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListLocationNuts3ErrorComponentAttrEnum = {
+export const BreedingsitesListLocationNuts3ErrorComponentAttrEnum = {
     LocationNuts3: 'location_nuts_3'
 } as const;
 
-export type BreedingSitesListLocationNuts3ErrorComponentAttrEnum = typeof BreedingSitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingSitesListLocationNuts3ErrorComponentAttrEnum];
-export const BreedingSitesListLocationNuts3ErrorComponentCodeEnum = {
+export type BreedingsitesListLocationNuts3ErrorComponentAttrEnum = typeof BreedingsitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationNuts3ErrorComponentAttrEnum];
+export const BreedingsitesListLocationNuts3ErrorComponentCodeEnum = {
     NullCharactersNotAllowed: 'null_characters_not_allowed'
 } as const;
 
-export type BreedingSitesListLocationNuts3ErrorComponentCodeEnum = typeof BreedingSitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingSitesListLocationNuts3ErrorComponentCodeEnum];
+export type BreedingsitesListLocationNuts3ErrorComponentCodeEnum = typeof BreedingsitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListOrderByErrorComponent
+ * @interface BreedingsitesListMineCreatedAtErrorComponent
  */
-export interface BreedingSitesListOrderByErrorComponent {
+export interface BreedingsitesListMineCreatedAtErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListOrderByErrorComponent
+     * @memberof BreedingsitesListMineCreatedAtErrorComponent
      */
-    'attr': BreedingSitesListOrderByErrorComponentAttrEnum;
+    'attr': BreedingsitesListMineCreatedAtErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListOrderByErrorComponent
+     * @memberof BreedingsitesListMineCreatedAtErrorComponent
      */
-    'code': BreedingSitesListOrderByErrorComponentCodeEnum;
+    'code': BreedingsitesListMineCreatedAtErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListOrderByErrorComponent
+     * @memberof BreedingsitesListMineCreatedAtErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListOrderByErrorComponentAttrEnum = {
-    OrderBy: 'order_by'
+export const BreedingsitesListMineCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
 } as const;
 
-export type BreedingSitesListOrderByErrorComponentAttrEnum = typeof BreedingSitesListOrderByErrorComponentAttrEnum[keyof typeof BreedingSitesListOrderByErrorComponentAttrEnum];
-export const BreedingSitesListOrderByErrorComponentCodeEnum = {
+export type BreedingsitesListMineCreatedAtErrorComponentAttrEnum = typeof BreedingsitesListMineCreatedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListMineCreatedAtErrorComponentAttrEnum];
+export const BreedingsitesListMineCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingsitesListMineCreatedAtErrorComponentCodeEnum = typeof BreedingsitesListMineCreatedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListMineCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type BreedingsitesListMineError
+ * @export
+ */
+export type BreedingsitesListMineError = { attr: 'created_at' } & BreedingsitesListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingsitesListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingsitesListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingsitesListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingsitesListMineOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineLocationCountryIdErrorComponent
+ */
+export interface BreedingsitesListMineLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationCountryIdErrorComponent
+     */
+    'attr': BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationCountryIdErrorComponent
+     */
+    'code': BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum = typeof BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum];
+export const BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice'
 } as const;
 
-export type BreedingSitesListOrderByErrorComponentCodeEnum = typeof BreedingSitesListOrderByErrorComponentCodeEnum[keyof typeof BreedingSitesListOrderByErrorComponentCodeEnum];
+export type BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum = typeof BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListReceivedAtErrorComponent
+ * @interface BreedingsitesListMineLocationNuts2ErrorComponent
  */
-export interface BreedingSitesListReceivedAtErrorComponent {
+export interface BreedingsitesListMineLocationNuts2ErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListReceivedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
      */
-    'attr': BreedingSitesListReceivedAtErrorComponentAttrEnum;
+    'attr': BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListReceivedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
      */
-    'code': BreedingSitesListReceivedAtErrorComponentCodeEnum;
+    'code': BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListReceivedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListReceivedAtErrorComponentAttrEnum = {
-    ReceivedAt: 'received_at'
+export const BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
 } as const;
 
-export type BreedingSitesListReceivedAtErrorComponentAttrEnum = typeof BreedingSitesListReceivedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListReceivedAtErrorComponentAttrEnum];
-export const BreedingSitesListReceivedAtErrorComponentCodeEnum = {
-    Invalid: 'invalid'
-} as const;
-
-export type BreedingSitesListReceivedAtErrorComponentCodeEnum = typeof BreedingSitesListReceivedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListReceivedAtErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingSitesListShortIdErrorComponent
- */
-export interface BreedingSitesListShortIdErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesListShortIdErrorComponent
-     */
-    'attr': BreedingSitesListShortIdErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesListShortIdErrorComponent
-     */
-    'code': BreedingSitesListShortIdErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesListShortIdErrorComponent
-     */
-    'detail': string;
-}
-
-export const BreedingSitesListShortIdErrorComponentAttrEnum = {
-    ShortId: 'short_id'
-} as const;
-
-export type BreedingSitesListShortIdErrorComponentAttrEnum = typeof BreedingSitesListShortIdErrorComponentAttrEnum[keyof typeof BreedingSitesListShortIdErrorComponentAttrEnum];
-export const BreedingSitesListShortIdErrorComponentCodeEnum = {
+export type BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum];
+export const BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum = {
     NullCharactersNotAllowed: 'null_characters_not_allowed'
 } as const;
 
-export type BreedingSitesListShortIdErrorComponentCodeEnum = typeof BreedingSitesListShortIdErrorComponentCodeEnum[keyof typeof BreedingSitesListShortIdErrorComponentCodeEnum];
+export type BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListUpdatedAtErrorComponent
+ * @interface BreedingsitesListMineLocationNuts3ErrorComponent
  */
-export interface BreedingSitesListUpdatedAtErrorComponent {
+export interface BreedingsitesListMineLocationNuts3ErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
      */
-    'attr': BreedingSitesListUpdatedAtErrorComponentAttrEnum;
+    'attr': BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
      */
-    'code': BreedingSitesListUpdatedAtErrorComponentCodeEnum;
+    'code': BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUpdatedAtErrorComponent
+     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListUpdatedAtErrorComponentAttrEnum = {
-    UpdatedAt: 'updated_at'
+export const BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
 } as const;
 
-export type BreedingSitesListUpdatedAtErrorComponentAttrEnum = typeof BreedingSitesListUpdatedAtErrorComponentAttrEnum[keyof typeof BreedingSitesListUpdatedAtErrorComponentAttrEnum];
-export const BreedingSitesListUpdatedAtErrorComponentCodeEnum = {
+export type BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum];
+export const BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineOrderByErrorComponent
+ */
+export interface BreedingsitesListMineOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineOrderByErrorComponent
+     */
+    'attr': BreedingsitesListMineOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineOrderByErrorComponent
+     */
+    'code': BreedingsitesListMineOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type BreedingsitesListMineOrderByErrorComponentAttrEnum = typeof BreedingsitesListMineOrderByErrorComponentAttrEnum[keyof typeof BreedingsitesListMineOrderByErrorComponentAttrEnum];
+export const BreedingsitesListMineOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BreedingsitesListMineOrderByErrorComponentCodeEnum = typeof BreedingsitesListMineOrderByErrorComponentCodeEnum[keyof typeof BreedingsitesListMineOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineReceivedAtErrorComponent
+ */
+export interface BreedingsitesListMineReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineReceivedAtErrorComponent
+     */
+    'attr': BreedingsitesListMineReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineReceivedAtErrorComponent
+     */
+    'code': BreedingsitesListMineReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type BreedingsitesListMineReceivedAtErrorComponentAttrEnum = typeof BreedingsitesListMineReceivedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListMineReceivedAtErrorComponentAttrEnum];
+export const BreedingsitesListMineReceivedAtErrorComponentCodeEnum = {
     Invalid: 'invalid'
 } as const;
 
-export type BreedingSitesListUpdatedAtErrorComponentCodeEnum = typeof BreedingSitesListUpdatedAtErrorComponentCodeEnum[keyof typeof BreedingSitesListUpdatedAtErrorComponentCodeEnum];
+export type BreedingsitesListMineReceivedAtErrorComponentCodeEnum = typeof BreedingsitesListMineReceivedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListMineReceivedAtErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListUserUuidErrorComponent
+ * @interface BreedingsitesListMineShortIdErrorComponent
  */
-export interface BreedingSitesListUserUuidErrorComponent {
+export interface BreedingsitesListMineShortIdErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUserUuidErrorComponent
+     * @memberof BreedingsitesListMineShortIdErrorComponent
      */
-    'attr': BreedingSitesListUserUuidErrorComponentAttrEnum;
+    'attr': BreedingsitesListMineShortIdErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUserUuidErrorComponent
+     * @memberof BreedingsitesListMineShortIdErrorComponent
      */
-    'code': BreedingSitesListUserUuidErrorComponentCodeEnum;
+    'code': BreedingsitesListMineShortIdErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListUserUuidErrorComponent
+     * @memberof BreedingsitesListMineShortIdErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingSitesListUserUuidErrorComponentAttrEnum = {
+export const BreedingsitesListMineShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type BreedingsitesListMineShortIdErrorComponentAttrEnum = typeof BreedingsitesListMineShortIdErrorComponentAttrEnum[keyof typeof BreedingsitesListMineShortIdErrorComponentAttrEnum];
+export const BreedingsitesListMineShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListMineShortIdErrorComponentCodeEnum = typeof BreedingsitesListMineShortIdErrorComponentCodeEnum[keyof typeof BreedingsitesListMineShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineUpdatedAtErrorComponent
+ */
+export interface BreedingsitesListMineUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUpdatedAtErrorComponent
+     */
+    'attr': BreedingsitesListMineUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUpdatedAtErrorComponent
+     */
+    'code': BreedingsitesListMineUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type BreedingsitesListMineUpdatedAtErrorComponentAttrEnum = typeof BreedingsitesListMineUpdatedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListMineUpdatedAtErrorComponentAttrEnum];
+export const BreedingsitesListMineUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingsitesListMineUpdatedAtErrorComponentCodeEnum = typeof BreedingsitesListMineUpdatedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListMineUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineUserUuidErrorComponent
+ */
+export interface BreedingsitesListMineUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUserUuidErrorComponent
+     */
+    'attr': BreedingsitesListMineUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUserUuidErrorComponent
+     */
+    'code': BreedingsitesListMineUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineUserUuidErrorComponentAttrEnum = {
     UserUuid: 'user_uuid'
 } as const;
 
-export type BreedingSitesListUserUuidErrorComponentAttrEnum = typeof BreedingSitesListUserUuidErrorComponentAttrEnum[keyof typeof BreedingSitesListUserUuidErrorComponentAttrEnum];
-export const BreedingSitesListUserUuidErrorComponentCodeEnum = {
+export type BreedingsitesListMineUserUuidErrorComponentAttrEnum = typeof BreedingsitesListMineUserUuidErrorComponentAttrEnum[keyof typeof BreedingsitesListMineUserUuidErrorComponentAttrEnum];
+export const BreedingsitesListMineUserUuidErrorComponentCodeEnum = {
     Invalid: 'invalid',
     NullCharactersNotAllowed: 'null_characters_not_allowed'
 } as const;
 
-export type BreedingSitesListUserUuidErrorComponentCodeEnum = typeof BreedingSitesListUserUuidErrorComponentCodeEnum[keyof typeof BreedingSitesListUserUuidErrorComponentCodeEnum];
+export type BreedingsitesListMineUserUuidErrorComponentCodeEnum = typeof BreedingsitesListMineUserUuidErrorComponentCodeEnum[keyof typeof BreedingsitesListMineUserUuidErrorComponentCodeEnum];
 
 /**
  * 
  * @export
- * @interface BreedingSitesListValidationError
+ * @interface BreedingsitesListMineValidationError
  */
-export interface BreedingSitesListValidationError {
+export interface BreedingsitesListMineValidationError {
     /**
      * 
      * @type {string}
-     * @memberof BreedingSitesListValidationError
+     * @memberof BreedingsitesListMineValidationError
      */
-    'type': BreedingSitesListValidationErrorTypeEnum;
+    'type': BreedingsitesListMineValidationErrorTypeEnum;
     /**
      * 
-     * @type {Array<BreedingSitesListError>}
-     * @memberof BreedingSitesListValidationError
+     * @type {Array<BreedingsitesListMineError>}
+     * @memberof BreedingsitesListMineValidationError
      */
-    'errors': Array<BreedingSitesListError>;
+    'errors': Array<BreedingsitesListMineError>;
 }
 
-export const BreedingSitesListValidationErrorTypeEnum = {
+export const BreedingsitesListMineValidationErrorTypeEnum = {
     ValidationError: 'validation_error'
 } as const;
 
-export type BreedingSitesListValidationErrorTypeEnum = typeof BreedingSitesListValidationErrorTypeEnum[keyof typeof BreedingSitesListValidationErrorTypeEnum];
+export type BreedingsitesListMineValidationErrorTypeEnum = typeof BreedingsitesListMineValidationErrorTypeEnum[keyof typeof BreedingsitesListMineValidationErrorTypeEnum];
 
 /**
- * @type BreedingSitesRetrieveErrorResponse400
+ * 
  * @export
+ * @interface BreedingsitesListOrderByErrorComponent
  */
-export type BreedingSitesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
+export interface BreedingsitesListOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListOrderByErrorComponent
+     */
+    'attr': BreedingsitesListOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListOrderByErrorComponent
+     */
+    'code': BreedingsitesListOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type BreedingsitesListOrderByErrorComponentAttrEnum = typeof BreedingsitesListOrderByErrorComponentAttrEnum[keyof typeof BreedingsitesListOrderByErrorComponentAttrEnum];
+export const BreedingsitesListOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type BreedingsitesListOrderByErrorComponentCodeEnum = typeof BreedingsitesListOrderByErrorComponentCodeEnum[keyof typeof BreedingsitesListOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListReceivedAtErrorComponent
+ */
+export interface BreedingsitesListReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListReceivedAtErrorComponent
+     */
+    'attr': BreedingsitesListReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListReceivedAtErrorComponent
+     */
+    'code': BreedingsitesListReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type BreedingsitesListReceivedAtErrorComponentAttrEnum = typeof BreedingsitesListReceivedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListReceivedAtErrorComponentAttrEnum];
+export const BreedingsitesListReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingsitesListReceivedAtErrorComponentCodeEnum = typeof BreedingsitesListReceivedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListShortIdErrorComponent
+ */
+export interface BreedingsitesListShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListShortIdErrorComponent
+     */
+    'attr': BreedingsitesListShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListShortIdErrorComponent
+     */
+    'code': BreedingsitesListShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type BreedingsitesListShortIdErrorComponentAttrEnum = typeof BreedingsitesListShortIdErrorComponentAttrEnum[keyof typeof BreedingsitesListShortIdErrorComponentAttrEnum];
+export const BreedingsitesListShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListShortIdErrorComponentCodeEnum = typeof BreedingsitesListShortIdErrorComponentCodeEnum[keyof typeof BreedingsitesListShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListUpdatedAtErrorComponent
+ */
+export interface BreedingsitesListUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUpdatedAtErrorComponent
+     */
+    'attr': BreedingsitesListUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUpdatedAtErrorComponent
+     */
+    'code': BreedingsitesListUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type BreedingsitesListUpdatedAtErrorComponentAttrEnum = typeof BreedingsitesListUpdatedAtErrorComponentAttrEnum[keyof typeof BreedingsitesListUpdatedAtErrorComponentAttrEnum];
+export const BreedingsitesListUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type BreedingsitesListUpdatedAtErrorComponentCodeEnum = typeof BreedingsitesListUpdatedAtErrorComponentCodeEnum[keyof typeof BreedingsitesListUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListUserUuidErrorComponent
+ */
+export interface BreedingsitesListUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUserUuidErrorComponent
+     */
+    'attr': BreedingsitesListUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUserUuidErrorComponent
+     */
+    'code': BreedingsitesListUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type BreedingsitesListUserUuidErrorComponentAttrEnum = typeof BreedingsitesListUserUuidErrorComponentAttrEnum[keyof typeof BreedingsitesListUserUuidErrorComponentAttrEnum];
+export const BreedingsitesListUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListUserUuidErrorComponentCodeEnum = typeof BreedingsitesListUserUuidErrorComponentCodeEnum[keyof typeof BreedingsitesListUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListValidationError
+ */
+export interface BreedingsitesListValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListValidationError
+     */
+    'type': BreedingsitesListValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<BreedingsitesListError>}
+     * @memberof BreedingsitesListValidationError
+     */
+    'errors': Array<BreedingsitesListError>;
+}
+
+export const BreedingsitesListValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type BreedingsitesListValidationErrorTypeEnum = typeof BreedingsitesListValidationErrorTypeEnum[keyof typeof BreedingsitesListValidationErrorTypeEnum];
 
 /**
  * 
@@ -2854,12 +4184,6 @@ export type CampaignsListCountryIdErrorComponentCodeEnum = typeof CampaignsListC
 export type CampaignsListError = { attr: 'country_id' } & CampaignsListCountryIdErrorComponent | { attr: 'order_by' } & CampaignsListOrderByErrorComponent;
 
 /**
- * @type CampaignsListErrorResponse400
- * @export
- */
-export type CampaignsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & CampaignsListValidationError;
-
-/**
  * 
  * @export
  * @interface CampaignsListOrderByErrorComponent
@@ -2921,18 +4245,6 @@ export const CampaignsListValidationErrorTypeEnum = {
 } as const;
 
 export type CampaignsListValidationErrorTypeEnum = typeof CampaignsListValidationErrorTypeEnum[keyof typeof CampaignsListValidationErrorTypeEnum];
-
-/**
- * @type CampaignsRetrieveErrorResponse400
- * @export
- */
-export type CampaignsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type CountriesRetrieveErrorResponse400
- * @export
- */
-export type CountriesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
 
 /**
  * 
@@ -3016,128 +4328,6 @@ export interface CreateNotificationMessageRequest {
      */
     'body': LocalizedFieldRequest;
 }
-/**
- * 
- * @export
- * @interface CreateUser
- */
-export interface CreateUser {
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateUser
-     */
-    'uuid': string;
-    /**
-     * The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
-     * @type {string}
-     * @memberof CreateUser
-     */
-    'registration_time': string;
-    /**
-     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
-     * @type {string}
-     * @memberof CreateUser
-     */
-    'locale'?: CreateUserLocaleEnum;
-    /**
-     * ISO 639-1 code
-     * @type {string}
-     * @memberof CreateUser
-     */
-    'language_iso': string;
-    /**
-     * Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
-     * @type {number}
-     * @memberof CreateUser
-     */
-    'score': number;
-    /**
-     * Last time score was updated
-     * @type {string}
-     * @memberof CreateUser
-     */
-    'last_score_update': string;
-}
-
-export const CreateUserLocaleEnum = {
-    Es: 'es',
-    Ca: 'ca',
-    Eu: 'eu',
-    Bn: 'bn',
-    Sv: 'sv',
-    En: 'en',
-    De: 'de',
-    Sq: 'sq',
-    El: 'el',
-    Gl: 'gl',
-    Hu: 'hu',
-    Pt: 'pt',
-    Sl: 'sl',
-    It: 'it',
-    Fr: 'fr',
-    Bg: 'bg',
-    Ro: 'ro',
-    Hr: 'hr',
-    Mk: 'mk',
-    Sr: 'sr',
-    Lb: 'lb',
-    Nl: 'nl',
-    Tr: 'tr',
-    ZhCn: 'zh-CN'
-} as const;
-
-export type CreateUserLocaleEnum = typeof CreateUserLocaleEnum[keyof typeof CreateUserLocaleEnum];
-
-/**
- * 
- * @export
- * @interface CreateUserRequest
- */
-export interface CreateUserRequest {
-    /**
-     * The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
-     * @type {string}
-     * @memberof CreateUserRequest
-     */
-    'locale'?: CreateUserRequestLocaleEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateUserRequest
-     */
-    'password': string;
-}
-
-export const CreateUserRequestLocaleEnum = {
-    Es: 'es',
-    Ca: 'ca',
-    Eu: 'eu',
-    Bn: 'bn',
-    Sv: 'sv',
-    En: 'en',
-    De: 'de',
-    Sq: 'sq',
-    El: 'el',
-    Gl: 'gl',
-    Hu: 'hu',
-    Pt: 'pt',
-    Sl: 'sl',
-    It: 'it',
-    Fr: 'fr',
-    Bg: 'bg',
-    Ro: 'ro',
-    Hr: 'hr',
-    Mk: 'mk',
-    Sr: 'sr',
-    Lb: 'lb',
-    Nl: 'nl',
-    Tr: 'tr',
-    ZhCn: 'zh-CN'
-} as const;
-
-export type CreateUserRequestLocaleEnum = typeof CreateUserRequestLocaleEnum[keyof typeof CreateUserRequestLocaleEnum];
-
 /**
  * 
  * @export
@@ -3494,12 +4684,6 @@ export type DevicesCreateDeviceIdErrorComponentCodeEnum = typeof DevicesCreateDe
  * @export
  */
 export type DevicesCreateError = { attr: 'device_id' } & DevicesCreateDeviceIdErrorComponent | { attr: 'fcm_token' } & DevicesCreateFcmTokenErrorComponent | { attr: 'manufacturer' } & DevicesCreateManufacturerErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesCreateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesCreateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesCreateMobileAppPackageVersionErrorComponent | { attr: 'model' } & DevicesCreateModelErrorComponent | { attr: 'name' } & DevicesCreateNameErrorComponent | { attr: 'non_field_errors' } & DevicesCreateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesCreateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesCreateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesCreateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesCreateOsVersionErrorComponent | { attr: 'type' } & DevicesCreateTypeErrorComponent;
-
-/**
- * @type DevicesCreateErrorResponse400
- * @export
- */
-export type DevicesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesCreateValidationError;
 
 /**
  * 
@@ -4062,12 +5246,6 @@ export type DevicesCreateValidationErrorTypeEnum = typeof DevicesCreateValidatio
 export type DevicesPartialUpdateError = { attr: 'fcm_token' } & DevicesPartialUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesPartialUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesPartialUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesPartialUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesPartialUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesPartialUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesPartialUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesPartialUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesPartialUpdateOsVersionErrorComponent;
 
 /**
- * @type DevicesPartialUpdateErrorResponse400
- * @export
- */
-export type DevicesPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesPartialUpdateValidationError;
-
-/**
  * 
  * @export
  * @interface DevicesPartialUpdateFcmTokenErrorComponent
@@ -4501,22 +5679,10 @@ export const DevicesPartialUpdateValidationErrorTypeEnum = {
 export type DevicesPartialUpdateValidationErrorTypeEnum = typeof DevicesPartialUpdateValidationErrorTypeEnum[keyof typeof DevicesPartialUpdateValidationErrorTypeEnum];
 
 /**
- * @type DevicesRetrieveErrorResponse400
- * @export
- */
-export type DevicesRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * @type DevicesUpdateError
  * @export
  */
 export type DevicesUpdateError = { attr: 'fcm_token' } & DevicesUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesUpdateOsVersionErrorComponent;
-
-/**
- * @type DevicesUpdateErrorResponse400
- * @export
- */
-export type DevicesUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & DevicesUpdateValidationError;
 
 /**
  * 
@@ -4978,6 +6144,7 @@ export interface Error401 {
 }
 
 export const Error401CodeEnum = {
+    TokenNotValid: 'token_not_valid',
     AuthenticationFailed: 'authentication_failed',
     NotAuthenticated: 'not_authenticated'
 } as const;
@@ -5047,134 +6214,6 @@ export const Error404CodeEnum = {
 } as const;
 
 export type Error404CodeEnum = typeof Error404CodeEnum[keyof typeof Error404CodeEnum];
-
-/**
- * 
- * @export
- * @interface Error405
- */
-export interface Error405 {
-    /**
-     * 
-     * @type {string}
-     * @memberof Error405
-     */
-    'code': Error405CodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error405
-     */
-    'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error405
-     */
-    'attr': string | null;
-}
-
-export const Error405CodeEnum = {
-    MethodNotAllowed: 'method_not_allowed'
-} as const;
-
-export type Error405CodeEnum = typeof Error405CodeEnum[keyof typeof Error405CodeEnum];
-
-/**
- * 
- * @export
- * @interface Error406
- */
-export interface Error406 {
-    /**
-     * 
-     * @type {string}
-     * @memberof Error406
-     */
-    'code': Error406CodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error406
-     */
-    'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error406
-     */
-    'attr': string | null;
-}
-
-export const Error406CodeEnum = {
-    NotAcceptable: 'not_acceptable'
-} as const;
-
-export type Error406CodeEnum = typeof Error406CodeEnum[keyof typeof Error406CodeEnum];
-
-/**
- * 
- * @export
- * @interface Error415
- */
-export interface Error415 {
-    /**
-     * 
-     * @type {string}
-     * @memberof Error415
-     */
-    'code': Error415CodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error415
-     */
-    'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error415
-     */
-    'attr': string | null;
-}
-
-export const Error415CodeEnum = {
-    UnsupportedMediaType: 'unsupported_media_type'
-} as const;
-
-export type Error415CodeEnum = typeof Error415CodeEnum[keyof typeof Error415CodeEnum];
-
-/**
- * 
- * @export
- * @interface Error500
- */
-export interface Error500 {
-    /**
-     * 
-     * @type {string}
-     * @memberof Error500
-     */
-    'code': Error500CodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error500
-     */
-    'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error500
-     */
-    'attr': string | null;
-}
-
-export const Error500CodeEnum = {
-    Error: 'error'
-} as const;
-
-export type Error500CodeEnum = typeof Error500CodeEnum[keyof typeof Error500CodeEnum];
 
 /**
  * 
@@ -5253,110 +6292,6 @@ export const ErrorResponse404TypeEnum = {
 } as const;
 
 export type ErrorResponse404TypeEnum = typeof ErrorResponse404TypeEnum[keyof typeof ErrorResponse404TypeEnum];
-
-/**
- * 
- * @export
- * @interface ErrorResponse405
- */
-export interface ErrorResponse405 {
-    /**
-     * 
-     * @type {string}
-     * @memberof ErrorResponse405
-     */
-    'type': ErrorResponse405TypeEnum;
-    /**
-     * 
-     * @type {Array<Error405>}
-     * @memberof ErrorResponse405
-     */
-    'errors': Array<Error405>;
-}
-
-export const ErrorResponse405TypeEnum = {
-    ClientError: 'client_error'
-} as const;
-
-export type ErrorResponse405TypeEnum = typeof ErrorResponse405TypeEnum[keyof typeof ErrorResponse405TypeEnum];
-
-/**
- * 
- * @export
- * @interface ErrorResponse406
- */
-export interface ErrorResponse406 {
-    /**
-     * 
-     * @type {string}
-     * @memberof ErrorResponse406
-     */
-    'type': ErrorResponse406TypeEnum;
-    /**
-     * 
-     * @type {Array<Error406>}
-     * @memberof ErrorResponse406
-     */
-    'errors': Array<Error406>;
-}
-
-export const ErrorResponse406TypeEnum = {
-    ClientError: 'client_error'
-} as const;
-
-export type ErrorResponse406TypeEnum = typeof ErrorResponse406TypeEnum[keyof typeof ErrorResponse406TypeEnum];
-
-/**
- * 
- * @export
- * @interface ErrorResponse415
- */
-export interface ErrorResponse415 {
-    /**
-     * 
-     * @type {string}
-     * @memberof ErrorResponse415
-     */
-    'type': ErrorResponse415TypeEnum;
-    /**
-     * 
-     * @type {Array<Error415>}
-     * @memberof ErrorResponse415
-     */
-    'errors': Array<Error415>;
-}
-
-export const ErrorResponse415TypeEnum = {
-    ClientError: 'client_error'
-} as const;
-
-export type ErrorResponse415TypeEnum = typeof ErrorResponse415TypeEnum[keyof typeof ErrorResponse415TypeEnum];
-
-/**
- * 
- * @export
- * @interface ErrorResponse500
- */
-export interface ErrorResponse500 {
-    /**
-     * 
-     * @type {string}
-     * @memberof ErrorResponse500
-     */
-    'type': ErrorResponse500TypeEnum;
-    /**
-     * 
-     * @type {Array<Error500>}
-     * @memberof ErrorResponse500
-     */
-    'errors': Array<Error500>;
-}
-
-export const ErrorResponse500TypeEnum = {
-    ServerError: 'server_error'
-} as const;
-
-export type ErrorResponse500TypeEnum = typeof ErrorResponse500TypeEnum[keyof typeof ErrorResponse500TypeEnum];
 
 /**
  * 
@@ -5562,12 +6497,6 @@ export type FixesCreateCreatedAtErrorComponentCodeEnum = typeof FixesCreateCreat
  * @export
  */
 export type FixesCreateError = { attr: 'coverage_uuid' } & FixesCreateCoverageUuidErrorComponent | { attr: 'created_at' } & FixesCreateCreatedAtErrorComponent | { attr: 'non_field_errors' } & FixesCreateNonFieldErrorsErrorComponent | { attr: 'point.latitude' } & FixesCreatePointLatitudeErrorComponent | { attr: 'point.longitude' } & FixesCreatePointLongitudeErrorComponent | { attr: 'point.non_field_errors' } & FixesCreatePointNonFieldErrorsErrorComponent | { attr: 'power' } & FixesCreatePowerErrorComponent | { attr: 'sent_at' } & FixesCreateSentAtErrorComponent;
-
-/**
- * @type FixesCreateErrorResponse400
- * @export
- */
-export type FixesCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & FixesCreateValidationError;
 
 /**
  * 
@@ -5832,6 +6761,32 @@ export const FixesCreateValidationErrorTypeEnum = {
 
 export type FixesCreateValidationErrorTypeEnum = typeof FixesCreateValidationErrorTypeEnum[keyof typeof FixesCreateValidationErrorTypeEnum];
 
+/**
+ * 
+ * @export
+ * @interface GuestRegistration
+ */
+export interface GuestRegistration {
+    /**
+     * UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+     * @type {string}
+     * @memberof GuestRegistration
+     */
+    'username': string;
+}
+/**
+ * 
+ * @export
+ * @interface GuestRegistrationRequest
+ */
+export interface GuestRegistrationRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof GuestRegistrationRequest
+     */
+    'password': string;
+}
 /**
  * A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as \'title\', \'message\', max_length, help_text, etc.
  * @export
@@ -6781,12 +7736,6 @@ export interface NotificationRequest {
  * @export
  */
 export type NotificationsCreateError = { attr: 'message.body.bg' } & NotificationsCreateMessageBodyBgErrorComponent | { attr: 'message.body.bn' } & NotificationsCreateMessageBodyBnErrorComponent | { attr: 'message.body.ca' } & NotificationsCreateMessageBodyCaErrorComponent | { attr: 'message.body.de' } & NotificationsCreateMessageBodyDeErrorComponent | { attr: 'message.body.el' } & NotificationsCreateMessageBodyElErrorComponent | { attr: 'message.body.en' } & NotificationsCreateMessageBodyEnErrorComponent | { attr: 'message.body.es' } & NotificationsCreateMessageBodyEsErrorComponent | { attr: 'message.body.eu' } & NotificationsCreateMessageBodyEuErrorComponent | { attr: 'message.body.fr' } & NotificationsCreateMessageBodyFrErrorComponent | { attr: 'message.body.gl' } & NotificationsCreateMessageBodyGlErrorComponent | { attr: 'message.body.hr' } & NotificationsCreateMessageBodyHrErrorComponent | { attr: 'message.body.hu' } & NotificationsCreateMessageBodyHuErrorComponent | { attr: 'message.body.it' } & NotificationsCreateMessageBodyItErrorComponent | { attr: 'message.body.lb' } & NotificationsCreateMessageBodyLbErrorComponent | { attr: 'message.body.mk' } & NotificationsCreateMessageBodyMkErrorComponent | { attr: 'message.body.nl' } & NotificationsCreateMessageBodyNlErrorComponent | { attr: 'message.body.non_field_errors' } & NotificationsCreateMessageBodyNonFieldErrorsErrorComponent | { attr: 'message.body.pt' } & NotificationsCreateMessageBodyPtErrorComponent | { attr: 'message.body.ro' } & NotificationsCreateMessageBodyRoErrorComponent | { attr: 'message.body.sl' } & NotificationsCreateMessageBodySlErrorComponent | { attr: 'message.body.sq' } & NotificationsCreateMessageBodySqErrorComponent | { attr: 'message.body.sr' } & NotificationsCreateMessageBodySrErrorComponent | { attr: 'message.body.sv' } & NotificationsCreateMessageBodySvErrorComponent | { attr: 'message.body.tr' } & NotificationsCreateMessageBodyTrErrorComponent | { attr: 'message.body.zh-CN' } & NotificationsCreateMessageBodyZhCNErrorComponent | { attr: 'message.non_field_errors' } & NotificationsCreateMessageNonFieldErrorsErrorComponent | { attr: 'message.title.bg' } & NotificationsCreateMessageTitleBgErrorComponent | { attr: 'message.title.bn' } & NotificationsCreateMessageTitleBnErrorComponent | { attr: 'message.title.ca' } & NotificationsCreateMessageTitleCaErrorComponent | { attr: 'message.title.de' } & NotificationsCreateMessageTitleDeErrorComponent | { attr: 'message.title.el' } & NotificationsCreateMessageTitleElErrorComponent | { attr: 'message.title.en' } & NotificationsCreateMessageTitleEnErrorComponent | { attr: 'message.title.es' } & NotificationsCreateMessageTitleEsErrorComponent | { attr: 'message.title.eu' } & NotificationsCreateMessageTitleEuErrorComponent | { attr: 'message.title.fr' } & NotificationsCreateMessageTitleFrErrorComponent | { attr: 'message.title.gl' } & NotificationsCreateMessageTitleGlErrorComponent | { attr: 'message.title.hr' } & NotificationsCreateMessageTitleHrErrorComponent | { attr: 'message.title.hu' } & NotificationsCreateMessageTitleHuErrorComponent | { attr: 'message.title.it' } & NotificationsCreateMessageTitleItErrorComponent | { attr: 'message.title.lb' } & NotificationsCreateMessageTitleLbErrorComponent | { attr: 'message.title.mk' } & NotificationsCreateMessageTitleMkErrorComponent | { attr: 'message.title.nl' } & NotificationsCreateMessageTitleNlErrorComponent | { attr: 'message.title.non_field_errors' } & NotificationsCreateMessageTitleNonFieldErrorsErrorComponent | { attr: 'message.title.pt' } & NotificationsCreateMessageTitlePtErrorComponent | { attr: 'message.title.ro' } & NotificationsCreateMessageTitleRoErrorComponent | { attr: 'message.title.sl' } & NotificationsCreateMessageTitleSlErrorComponent | { attr: 'message.title.sq' } & NotificationsCreateMessageTitleSqErrorComponent | { attr: 'message.title.sr' } & NotificationsCreateMessageTitleSrErrorComponent | { attr: 'message.title.sv' } & NotificationsCreateMessageTitleSvErrorComponent | { attr: 'message.title.tr' } & NotificationsCreateMessageTitleTrErrorComponent | { attr: 'message.title.zh-CN' } & NotificationsCreateMessageTitleZhCNErrorComponent | { attr: 'non_field_errors' } & NotificationsCreateNonFieldErrorsErrorComponent | { attr: 'receiver_type' } & NotificationsCreateReceiverTypeErrorComponent | { attr: 'topic_codes' } & NotificationsCreateTopicCodesErrorComponent | { attr: 'topic_codes.INDEX' } & NotificationsCreateTopicCodesINDEXErrorComponent | { attr: 'user_uuids' } & NotificationsCreateUserUuidsErrorComponent | { attr: 'user_uuids.INDEX' } & NotificationsCreateUserUuidsINDEXErrorComponent;
-
-/**
- * @type NotificationsCreateErrorResponse400
- * @export
- */
-export type NotificationsCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsCreateValidationError;
 
 /**
  * 
@@ -9170,10 +10119,73 @@ export type NotificationsCreateValidationErrorTypeEnum = typeof NotificationsCre
 export type NotificationsListError = { attr: 'order_by' } & NotificationsListOrderByErrorComponent;
 
 /**
- * @type NotificationsListErrorResponse400
+ * @type NotificationsListMineError
  * @export
  */
-export type NotificationsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsListValidationError;
+export type NotificationsListMineError = { attr: 'order_by' } & NotificationsListMineOrderByErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface NotificationsListMineOrderByErrorComponent
+ */
+export interface NotificationsListMineOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListMineOrderByErrorComponent
+     */
+    'attr': NotificationsListMineOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListMineOrderByErrorComponent
+     */
+    'code': NotificationsListMineOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListMineOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const NotificationsListMineOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type NotificationsListMineOrderByErrorComponentAttrEnum = typeof NotificationsListMineOrderByErrorComponentAttrEnum[keyof typeof NotificationsListMineOrderByErrorComponentAttrEnum];
+export const NotificationsListMineOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type NotificationsListMineOrderByErrorComponentCodeEnum = typeof NotificationsListMineOrderByErrorComponentCodeEnum[keyof typeof NotificationsListMineOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface NotificationsListMineValidationError
+ */
+export interface NotificationsListMineValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationsListMineValidationError
+     */
+    'type': NotificationsListMineValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<NotificationsListMineError>}
+     * @memberof NotificationsListMineValidationError
+     */
+    'errors': Array<NotificationsListMineError>;
+}
+
+export const NotificationsListMineValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type NotificationsListMineValidationErrorTypeEnum = typeof NotificationsListMineValidationErrorTypeEnum[keyof typeof NotificationsListMineValidationErrorTypeEnum];
 
 /**
  * 
@@ -9243,12 +10255,6 @@ export type NotificationsListValidationErrorTypeEnum = typeof NotificationsListV
  * @export
  */
 export type NotificationsPartialUpdateError = { attr: 'is_read' } & NotificationsPartialUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsPartialUpdateNonFieldErrorsErrorComponent;
-
-/**
- * @type NotificationsPartialUpdateErrorResponse400
- * @export
- */
-export type NotificationsPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsPartialUpdateValidationError;
 
 /**
  * 
@@ -9353,22 +10359,10 @@ export const NotificationsPartialUpdateValidationErrorTypeEnum = {
 export type NotificationsPartialUpdateValidationErrorTypeEnum = typeof NotificationsPartialUpdateValidationErrorTypeEnum[keyof typeof NotificationsPartialUpdateValidationErrorTypeEnum];
 
 /**
- * @type NotificationsRetrieveErrorResponse400
- * @export
- */
-export type NotificationsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * @type NotificationsUpdateError
  * @export
  */
 export type NotificationsUpdateError = { attr: 'is_read' } & NotificationsUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsUpdateNonFieldErrorsErrorComponent;
-
-/**
- * @type NotificationsUpdateErrorResponse400
- * @export
- */
-export type NotificationsUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & NotificationsUpdateValidationError;
 
 /**
  * 
@@ -9943,12 +10937,6 @@ export type ObservationsCreateCreatedAtErrorComponentCodeEnum = typeof Observati
  * @export
  */
 export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.type' } & ObservationsCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent | { attr: 'user_perceived_mosquito_abdomen' } & ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent | { attr: 'user_perceived_mosquito_legs' } & ObservationsCreateUserPerceivedMosquitoLegsErrorComponent | { attr: 'user_perceived_mosquito_specie' } & ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent | { attr: 'user_perceived_mosquito_thorax' } & ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
-
-/**
- * @type ObservationsCreateErrorResponse400
- * @export
- */
-export type ObservationsCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsCreateValidationError;
 
 /**
  * 
@@ -10636,12 +11624,6 @@ export const ObservationsCreateValidationErrorTypeEnum = {
 export type ObservationsCreateValidationErrorTypeEnum = typeof ObservationsCreateValidationErrorTypeEnum[keyof typeof ObservationsCreateValidationErrorTypeEnum];
 
 /**
- * @type ObservationsDestroyErrorResponse400
- * @export
- */
-export type ObservationsDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * 
  * @export
  * @interface ObservationsListCreatedAtErrorComponent
@@ -10683,12 +11665,6 @@ export type ObservationsListCreatedAtErrorComponentCodeEnum = typeof Observation
  * @export
  */
 export type ObservationsListError = { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'location_country_id' } & ObservationsListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & ObservationsListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & ObservationsListLocationNuts3ErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
-
-/**
- * @type ObservationsListErrorResponse400
- * @export
- */
-export type ObservationsListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsListValidationError;
 
 /**
  * 
@@ -10800,6 +11776,372 @@ export const ObservationsListLocationNuts3ErrorComponentCodeEnum = {
 } as const;
 
 export type ObservationsListLocationNuts3ErrorComponentCodeEnum = typeof ObservationsListLocationNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineCreatedAtErrorComponent
+ */
+export interface ObservationsListMineCreatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineCreatedAtErrorComponent
+     */
+    'attr': ObservationsListMineCreatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineCreatedAtErrorComponent
+     */
+    'code': ObservationsListMineCreatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineCreatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineCreatedAtErrorComponentAttrEnum = {
+    CreatedAt: 'created_at'
+} as const;
+
+export type ObservationsListMineCreatedAtErrorComponentAttrEnum = typeof ObservationsListMineCreatedAtErrorComponentAttrEnum[keyof typeof ObservationsListMineCreatedAtErrorComponentAttrEnum];
+export const ObservationsListMineCreatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListMineCreatedAtErrorComponentCodeEnum = typeof ObservationsListMineCreatedAtErrorComponentCodeEnum[keyof typeof ObservationsListMineCreatedAtErrorComponentCodeEnum];
+
+/**
+ * @type ObservationsListMineError
+ * @export
+ */
+export type ObservationsListMineError = { attr: 'created_at' } & ObservationsListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & ObservationsListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & ObservationsListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & ObservationsListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & ObservationsListMineOrderByErrorComponent | { attr: 'received_at' } & ObservationsListMineReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListMineShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineLocationCountryIdErrorComponent
+ */
+export interface ObservationsListMineLocationCountryIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationCountryIdErrorComponent
+     */
+    'attr': ObservationsListMineLocationCountryIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationCountryIdErrorComponent
+     */
+    'code': ObservationsListMineLocationCountryIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationCountryIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineLocationCountryIdErrorComponentAttrEnum = {
+    LocationCountryId: 'location_country_id'
+} as const;
+
+export type ObservationsListMineLocationCountryIdErrorComponentAttrEnum = typeof ObservationsListMineLocationCountryIdErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationCountryIdErrorComponentAttrEnum];
+export const ObservationsListMineLocationCountryIdErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsListMineLocationCountryIdErrorComponentCodeEnum = typeof ObservationsListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationCountryIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineLocationNuts2ErrorComponent
+ */
+export interface ObservationsListMineLocationNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts2ErrorComponent
+     */
+    'attr': ObservationsListMineLocationNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts2ErrorComponent
+     */
+    'code': ObservationsListMineLocationNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineLocationNuts2ErrorComponentAttrEnum = {
+    LocationNuts2: 'location_nuts_2'
+} as const;
+
+export type ObservationsListMineLocationNuts2ErrorComponentAttrEnum = typeof ObservationsListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationNuts2ErrorComponentAttrEnum];
+export const ObservationsListMineLocationNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineLocationNuts2ErrorComponentCodeEnum = typeof ObservationsListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineLocationNuts3ErrorComponent
+ */
+export interface ObservationsListMineLocationNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts3ErrorComponent
+     */
+    'attr': ObservationsListMineLocationNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts3ErrorComponent
+     */
+    'code': ObservationsListMineLocationNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineLocationNuts3ErrorComponentAttrEnum = {
+    LocationNuts3: 'location_nuts_3'
+} as const;
+
+export type ObservationsListMineLocationNuts3ErrorComponentAttrEnum = typeof ObservationsListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationNuts3ErrorComponentAttrEnum];
+export const ObservationsListMineLocationNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineLocationNuts3ErrorComponentCodeEnum = typeof ObservationsListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationNuts3ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineOrderByErrorComponent
+ */
+export interface ObservationsListMineOrderByErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineOrderByErrorComponent
+     */
+    'attr': ObservationsListMineOrderByErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineOrderByErrorComponent
+     */
+    'code': ObservationsListMineOrderByErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineOrderByErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineOrderByErrorComponentAttrEnum = {
+    OrderBy: 'order_by'
+} as const;
+
+export type ObservationsListMineOrderByErrorComponentAttrEnum = typeof ObservationsListMineOrderByErrorComponentAttrEnum[keyof typeof ObservationsListMineOrderByErrorComponentAttrEnum];
+export const ObservationsListMineOrderByErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsListMineOrderByErrorComponentCodeEnum = typeof ObservationsListMineOrderByErrorComponentCodeEnum[keyof typeof ObservationsListMineOrderByErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineReceivedAtErrorComponent
+ */
+export interface ObservationsListMineReceivedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineReceivedAtErrorComponent
+     */
+    'attr': ObservationsListMineReceivedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineReceivedAtErrorComponent
+     */
+    'code': ObservationsListMineReceivedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineReceivedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineReceivedAtErrorComponentAttrEnum = {
+    ReceivedAt: 'received_at'
+} as const;
+
+export type ObservationsListMineReceivedAtErrorComponentAttrEnum = typeof ObservationsListMineReceivedAtErrorComponentAttrEnum[keyof typeof ObservationsListMineReceivedAtErrorComponentAttrEnum];
+export const ObservationsListMineReceivedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListMineReceivedAtErrorComponentCodeEnum = typeof ObservationsListMineReceivedAtErrorComponentCodeEnum[keyof typeof ObservationsListMineReceivedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineShortIdErrorComponent
+ */
+export interface ObservationsListMineShortIdErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineShortIdErrorComponent
+     */
+    'attr': ObservationsListMineShortIdErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineShortIdErrorComponent
+     */
+    'code': ObservationsListMineShortIdErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineShortIdErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineShortIdErrorComponentAttrEnum = {
+    ShortId: 'short_id'
+} as const;
+
+export type ObservationsListMineShortIdErrorComponentAttrEnum = typeof ObservationsListMineShortIdErrorComponentAttrEnum[keyof typeof ObservationsListMineShortIdErrorComponentAttrEnum];
+export const ObservationsListMineShortIdErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineShortIdErrorComponentCodeEnum = typeof ObservationsListMineShortIdErrorComponentCodeEnum[keyof typeof ObservationsListMineShortIdErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineUpdatedAtErrorComponent
+ */
+export interface ObservationsListMineUpdatedAtErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUpdatedAtErrorComponent
+     */
+    'attr': ObservationsListMineUpdatedAtErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUpdatedAtErrorComponent
+     */
+    'code': ObservationsListMineUpdatedAtErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUpdatedAtErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineUpdatedAtErrorComponentAttrEnum = {
+    UpdatedAt: 'updated_at'
+} as const;
+
+export type ObservationsListMineUpdatedAtErrorComponentAttrEnum = typeof ObservationsListMineUpdatedAtErrorComponentAttrEnum[keyof typeof ObservationsListMineUpdatedAtErrorComponentAttrEnum];
+export const ObservationsListMineUpdatedAtErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsListMineUpdatedAtErrorComponentCodeEnum = typeof ObservationsListMineUpdatedAtErrorComponentCodeEnum[keyof typeof ObservationsListMineUpdatedAtErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineUserUuidErrorComponent
+ */
+export interface ObservationsListMineUserUuidErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUserUuidErrorComponent
+     */
+    'attr': ObservationsListMineUserUuidErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUserUuidErrorComponent
+     */
+    'code': ObservationsListMineUserUuidErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineUserUuidErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineUserUuidErrorComponentAttrEnum = {
+    UserUuid: 'user_uuid'
+} as const;
+
+export type ObservationsListMineUserUuidErrorComponentAttrEnum = typeof ObservationsListMineUserUuidErrorComponentAttrEnum[keyof typeof ObservationsListMineUserUuidErrorComponentAttrEnum];
+export const ObservationsListMineUserUuidErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineUserUuidErrorComponentCodeEnum = typeof ObservationsListMineUserUuidErrorComponentCodeEnum[keyof typeof ObservationsListMineUserUuidErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineValidationError
+ */
+export interface ObservationsListMineValidationError {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineValidationError
+     */
+    'type': ObservationsListMineValidationErrorTypeEnum;
+    /**
+     * 
+     * @type {Array<ObservationsListMineError>}
+     * @memberof ObservationsListMineValidationError
+     */
+    'errors': Array<ObservationsListMineError>;
+}
+
+export const ObservationsListMineValidationErrorTypeEnum = {
+    ValidationError: 'validation_error'
+} as const;
+
+export type ObservationsListMineValidationErrorTypeEnum = typeof ObservationsListMineValidationErrorTypeEnum[keyof typeof ObservationsListMineValidationErrorTypeEnum];
 
 /**
  * 
@@ -11020,12 +12362,6 @@ export type ObservationsListValidationErrorTypeEnum = typeof ObservationsListVal
 export type ObservationsPredictionCreateError = { attr: 'is_executive_validation' } & ObservationsPredictionCreateIsExecutiveValidationErrorComponent | { attr: 'non_field_errors' } & ObservationsPredictionCreateNonFieldErrorsErrorComponent | { attr: 'ref_photo_uuid' } & ObservationsPredictionCreateRefPhotoUuidErrorComponent;
 
 /**
- * @type ObservationsPredictionCreateErrorResponse400
- * @export
- */
-export type ObservationsPredictionCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & ObservationsPredictionCreateValidationError;
-
-/**
  * 
  * @export
  * @interface ObservationsPredictionCreateIsExecutiveValidationErrorComponent
@@ -11164,24 +12500,6 @@ export const ObservationsPredictionCreateValidationErrorTypeEnum = {
 } as const;
 
 export type ObservationsPredictionCreateValidationErrorTypeEnum = typeof ObservationsPredictionCreateValidationErrorTypeEnum[keyof typeof ObservationsPredictionCreateValidationErrorTypeEnum];
-
-/**
- * @type ObservationsPredictionDestroyErrorResponse400
- * @export
- */
-export type ObservationsPredictionDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type ObservationsPredictionRetrieveErrorResponse400
- * @export
- */
-export type ObservationsPredictionRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type ObservationsRetrieveErrorResponse400
- * @export
- */
-export type ObservationsRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
 
 /**
  * 
@@ -11372,64 +12690,6 @@ export interface PaginatedPartnerList {
 /**
  * 
  * @export
- * @interface ParseError
- */
-export interface ParseError {
-    /**
-     * 
-     * @type {string}
-     * @memberof ParseError
-     */
-    'code': ParseErrorCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ParseError
-     */
-    'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ParseError
-     */
-    'attr': string | null;
-}
-
-export const ParseErrorCodeEnum = {
-    ParseError: 'parse_error'
-} as const;
-
-export type ParseErrorCodeEnum = typeof ParseErrorCodeEnum[keyof typeof ParseErrorCodeEnum];
-
-/**
- * 
- * @export
- * @interface ParseErrorResponse
- */
-export interface ParseErrorResponse {
-    /**
-     * 
-     * @type {string}
-     * @memberof ParseErrorResponse
-     */
-    'type': ParseErrorResponseTypeEnum;
-    /**
-     * 
-     * @type {Array<ParseError>}
-     * @memberof ParseErrorResponse
-     */
-    'errors': Array<ParseError>;
-}
-
-export const ParseErrorResponseTypeEnum = {
-    ClientError: 'client_error'
-} as const;
-
-export type ParseErrorResponseTypeEnum = typeof ParseErrorResponseTypeEnum[keyof typeof ParseErrorResponseTypeEnum];
-
-/**
- * 
- * @export
  * @interface Partner
  */
 export interface Partner {
@@ -11478,17 +12738,18 @@ export interface PartnerPoint {
     'longitude': number;
 }
 /**
- * @type PartnersListErrorResponse400
+ * 
  * @export
+ * @interface PasswordChangeRequest
  */
-export type PartnersListErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type PartnersRetrieveErrorResponse400
- * @export
- */
-export type PartnersRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
+export interface PasswordChangeRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof PasswordChangeRequest
+     */
+    'password': string;
+}
 /**
  * 
  * @export
@@ -11994,12 +13255,6 @@ export type PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum = type
  * @export
  */
 export type PhotosPredictionCreateError = { attr: 'bbox.non_field_errors' } & PhotosPredictionCreateBboxNonFieldErrorsErrorComponent | { attr: 'bbox.x_max' } & PhotosPredictionCreateBboxXMaxErrorComponent | { attr: 'bbox.x_min' } & PhotosPredictionCreateBboxXMinErrorComponent | { attr: 'bbox.y_max' } & PhotosPredictionCreateBboxYMaxErrorComponent | { attr: 'bbox.y_min' } & PhotosPredictionCreateBboxYMinErrorComponent | { attr: 'classifier_version' } & PhotosPredictionCreateClassifierVersionErrorComponent | { attr: 'insect_confidence' } & PhotosPredictionCreateInsectConfidenceErrorComponent | { attr: 'non_field_errors' } & PhotosPredictionCreateNonFieldErrorsErrorComponent | { attr: 'predicted_class' } & PhotosPredictionCreatePredictedClassErrorComponent | { attr: 'scores.ae_aegypti' } & PhotosPredictionCreateScoresAeAegyptiErrorComponent | { attr: 'scores.ae_albopictus' } & PhotosPredictionCreateScoresAeAlbopictusErrorComponent | { attr: 'scores.ae_japonicus' } & PhotosPredictionCreateScoresAeJaponicusErrorComponent | { attr: 'scores.ae_koreicus' } & PhotosPredictionCreateScoresAeKoreicusErrorComponent | { attr: 'scores.anopheles' } & PhotosPredictionCreateScoresAnophelesErrorComponent | { attr: 'scores.culex' } & PhotosPredictionCreateScoresCulexErrorComponent | { attr: 'scores.culiseta' } & PhotosPredictionCreateScoresCulisetaErrorComponent | { attr: 'scores.non_field_errors' } & PhotosPredictionCreateScoresNonFieldErrorsErrorComponent | { attr: 'scores.not_sure' } & PhotosPredictionCreateScoresNotSureErrorComponent | { attr: 'scores.other_species' } & PhotosPredictionCreateScoresOtherSpeciesErrorComponent | { attr: 'threshold_deviation' } & PhotosPredictionCreateThresholdDeviationErrorComponent;
-
-/**
- * @type PhotosPredictionCreateErrorResponse400
- * @export
- */
-export type PhotosPredictionCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & PhotosPredictionCreateValidationError;
 
 /**
  * 
@@ -12605,24 +13860,6 @@ export const PhotosPredictionCreateValidationErrorTypeEnum = {
 export type PhotosPredictionCreateValidationErrorTypeEnum = typeof PhotosPredictionCreateValidationErrorTypeEnum[keyof typeof PhotosPredictionCreateValidationErrorTypeEnum];
 
 /**
- * @type PhotosPredictionDestroyErrorResponse400
- * @export
- */
-export type PhotosPredictionDestroyErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type PhotosPredictionRetrieveErrorResponse400
- * @export
- */
-export type PhotosPredictionRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
- * @type PhotosRetrieveErrorResponse400
- * @export
- */
-export type PhotosRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * 
  * @export
  * @interface PredictionScore
@@ -12805,6 +14042,19 @@ export interface TokenRefreshRequest {
 /**
  * 
  * @export
+ * @interface TokenVerifyRequest
+ */
+export interface TokenVerifyRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenVerifyRequest
+     */
+    'token': string;
+}
+/**
+ * 
+ * @export
  * @interface TopicNotificationCreateRequest
  */
 export interface TopicNotificationCreateRequest {
@@ -12848,6 +14098,12 @@ export interface User {
      */
     'uuid': string;
     /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'username': string;
+    /**
      * The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
      * @type {string}
      * @memberof User
@@ -12865,6 +14121,12 @@ export interface User {
      * @memberof User
      */
     'language_iso': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof User
+     */
+    'is_guest': boolean;
     /**
      * Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
      * @type {number}
@@ -12985,172 +14247,10 @@ export const UserRequestLocaleEnum = {
 export type UserRequestLocaleEnum = typeof UserRequestLocaleEnum[keyof typeof UserRequestLocaleEnum];
 
 /**
- * @type UsersCreateError
- * @export
- */
-export type UsersCreateError = { attr: 'locale' } & UsersCreateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersCreateNonFieldErrorsErrorComponent | { attr: 'password' } & UsersCreatePasswordErrorComponent;
-
-/**
- * @type UsersCreateErrorResponse400
- * @export
- */
-export type UsersCreateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersCreateValidationError;
-
-/**
- * 
- * @export
- * @interface UsersCreateLocaleErrorComponent
- */
-export interface UsersCreateLocaleErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateLocaleErrorComponent
-     */
-    'attr': UsersCreateLocaleErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateLocaleErrorComponent
-     */
-    'code': UsersCreateLocaleErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateLocaleErrorComponent
-     */
-    'detail': string;
-}
-
-export const UsersCreateLocaleErrorComponentAttrEnum = {
-    Locale: 'locale'
-} as const;
-
-export type UsersCreateLocaleErrorComponentAttrEnum = typeof UsersCreateLocaleErrorComponentAttrEnum[keyof typeof UsersCreateLocaleErrorComponentAttrEnum];
-export const UsersCreateLocaleErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice',
-    Null: 'null'
-} as const;
-
-export type UsersCreateLocaleErrorComponentCodeEnum = typeof UsersCreateLocaleErrorComponentCodeEnum[keyof typeof UsersCreateLocaleErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface UsersCreateNonFieldErrorsErrorComponent
- */
-export interface UsersCreateNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateNonFieldErrorsErrorComponent
-     */
-    'attr': UsersCreateNonFieldErrorsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateNonFieldErrorsErrorComponent
-     */
-    'code': UsersCreateNonFieldErrorsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateNonFieldErrorsErrorComponent
-     */
-    'detail': string;
-}
-
-export const UsersCreateNonFieldErrorsErrorComponentAttrEnum = {
-    NonFieldErrors: 'non_field_errors'
-} as const;
-
-export type UsersCreateNonFieldErrorsErrorComponentAttrEnum = typeof UsersCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof UsersCreateNonFieldErrorsErrorComponentAttrEnum];
-export const UsersCreateNonFieldErrorsErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null'
-} as const;
-
-export type UsersCreateNonFieldErrorsErrorComponentCodeEnum = typeof UsersCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof UsersCreateNonFieldErrorsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface UsersCreatePasswordErrorComponent
- */
-export interface UsersCreatePasswordErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreatePasswordErrorComponent
-     */
-    'attr': UsersCreatePasswordErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreatePasswordErrorComponent
-     */
-    'code': UsersCreatePasswordErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreatePasswordErrorComponent
-     */
-    'detail': string;
-}
-
-export const UsersCreatePasswordErrorComponentAttrEnum = {
-    Password: 'password'
-} as const;
-
-export type UsersCreatePasswordErrorComponentAttrEnum = typeof UsersCreatePasswordErrorComponentAttrEnum[keyof typeof UsersCreatePasswordErrorComponentAttrEnum];
-export const UsersCreatePasswordErrorComponentCodeEnum = {
-    Blank: 'blank',
-    Invalid: 'invalid',
-    Null: 'null',
-    NullCharactersNotAllowed: 'null_characters_not_allowed',
-    Required: 'required',
-    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed'
-} as const;
-
-export type UsersCreatePasswordErrorComponentCodeEnum = typeof UsersCreatePasswordErrorComponentCodeEnum[keyof typeof UsersCreatePasswordErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface UsersCreateValidationError
- */
-export interface UsersCreateValidationError {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersCreateValidationError
-     */
-    'type': UsersCreateValidationErrorTypeEnum;
-    /**
-     * 
-     * @type {Array<UsersCreateError>}
-     * @memberof UsersCreateValidationError
-     */
-    'errors': Array<UsersCreateError>;
-}
-
-export const UsersCreateValidationErrorTypeEnum = {
-    ValidationError: 'validation_error'
-} as const;
-
-export type UsersCreateValidationErrorTypeEnum = typeof UsersCreateValidationErrorTypeEnum[keyof typeof UsersCreateValidationErrorTypeEnum];
-
-/**
  * @type UsersPartialUpdateError
  * @export
  */
 export type UsersPartialUpdateError = { attr: 'locale' } & UsersPartialUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersPartialUpdateNonFieldErrorsErrorComponent;
-
-/**
- * @type UsersPartialUpdateErrorResponse400
- * @export
- */
-export type UsersPartialUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersPartialUpdateValidationError;
 
 /**
  * 
@@ -13255,22 +14355,10 @@ export const UsersPartialUpdateValidationErrorTypeEnum = {
 export type UsersPartialUpdateValidationErrorTypeEnum = typeof UsersPartialUpdateValidationErrorTypeEnum[keyof typeof UsersPartialUpdateValidationErrorTypeEnum];
 
 /**
- * @type UsersRetrieveErrorResponse400
- * @export
- */
-export type UsersRetrieveErrorResponse400 = { type: 'client_error' } & ParseErrorResponse;
-
-/**
  * @type UsersUpdateError
  * @export
  */
 export type UsersUpdateError = { attr: 'locale' } & UsersUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersUpdateNonFieldErrorsErrorComponent;
-
-/**
- * @type UsersUpdateErrorResponse400
- * @export
- */
-export type UsersUpdateErrorResponse400 = { type: 'client_error' } & ParseErrorResponse | { type: 'validation_error' } & UsersUpdateValidationError;
 
 /**
  * 
@@ -13376,6 +14464,384 @@ export type UsersUpdateValidationErrorTypeEnum = typeof UsersUpdateValidationErr
 
 
 /**
+ * AuthApi - axios parameter creator
+ * @export
+ */
+export const AuthApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {PasswordChangeRequest} passwordChangeRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        changePassword: async (passwordChangeRequest: PasswordChangeRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'passwordChangeRequest' is not null or undefined
+            assertParamExists('changePassword', 'passwordChangeRequest', passwordChangeRequest)
+            const localVarPath = `/auth/password/change/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(passwordChangeRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        obtainToken: async (appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'appUserTokenObtainPairRequest' is not null or undefined
+            assertParamExists('obtainToken', 'appUserTokenObtainPairRequest', appUserTokenObtainPairRequest)
+            const localVarPath = `/auth/token/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(appUserTokenObtainPairRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {TokenRefreshRequest} tokenRefreshRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        refreshToken: async (tokenRefreshRequest: TokenRefreshRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'tokenRefreshRequest' is not null or undefined
+            assertParamExists('refreshToken', 'tokenRefreshRequest', tokenRefreshRequest)
+            const localVarPath = `/auth/token/refresh/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(tokenRefreshRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {GuestRegistrationRequest} guestRegistrationRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        signupGuest: async (guestRegistrationRequest: GuestRegistrationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'guestRegistrationRequest' is not null or undefined
+            assertParamExists('signupGuest', 'guestRegistrationRequest', guestRegistrationRequest)
+            const localVarPath = `/auth/signup/guest/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(guestRegistrationRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {TokenVerifyRequest} tokenVerifyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        verifyToken: async (tokenVerifyRequest: TokenVerifyRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'tokenVerifyRequest' is not null or undefined
+            assertParamExists('verifyToken', 'tokenVerifyRequest', tokenVerifyRequest)
+            const localVarPath = `/auth/token/verify/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(tokenVerifyRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AuthApi - functional programming interface
+ * @export
+ */
+export const AuthApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AuthApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {PasswordChangeRequest} passwordChangeRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async changePassword(passwordChangeRequest: PasswordChangeRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.changePassword(passwordChangeRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.changePassword']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async obtainToken(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppUserTokenObtainPair>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.obtainToken(appUserTokenObtainPairRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.obtainToken']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {TokenRefreshRequest} tokenRefreshRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async refreshToken(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TokenRefresh>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.refreshToken(tokenRefreshRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.refreshToken']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {GuestRegistrationRequest} guestRegistrationRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async signupGuest(guestRegistrationRequest: GuestRegistrationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GuestRegistration>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.signupGuest(guestRegistrationRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.signupGuest']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {TokenVerifyRequest} tokenVerifyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async verifyToken(tokenVerifyRequest: TokenVerifyRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.verifyToken(tokenVerifyRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.verifyToken']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * AuthApi - factory interface
+ * @export
+ */
+export const AuthApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AuthApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {PasswordChangeRequest} passwordChangeRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        changePassword(passwordChangeRequest: PasswordChangeRequest, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.changePassword(passwordChangeRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        obtainToken(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig): AxiosPromise<AppUserTokenObtainPair> {
+            return localVarFp.obtainToken(appUserTokenObtainPairRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {TokenRefreshRequest} tokenRefreshRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        refreshToken(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig): AxiosPromise<TokenRefresh> {
+            return localVarFp.refreshToken(tokenRefreshRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {GuestRegistrationRequest} guestRegistrationRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        signupGuest(guestRegistrationRequest: GuestRegistrationRequest, options?: RawAxiosRequestConfig): AxiosPromise<GuestRegistration> {
+            return localVarFp.signupGuest(guestRegistrationRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {TokenVerifyRequest} tokenVerifyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        verifyToken(tokenVerifyRequest: TokenVerifyRequest, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.verifyToken(tokenVerifyRequest, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AuthApi - object-oriented interface
+ * @export
+ * @class AuthApi
+ * @extends {BaseAPI}
+ */
+export class AuthApi extends BaseAPI {
+    /**
+     * 
+     * @param {PasswordChangeRequest} passwordChangeRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public changePassword(passwordChangeRequest: PasswordChangeRequest, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).changePassword(passwordChangeRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+     * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public obtainToken(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).obtainToken(appUserTokenObtainPairRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+     * @param {TokenRefreshRequest} tokenRefreshRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public refreshToken(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).refreshToken(tokenRefreshRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {GuestRegistrationRequest} guestRegistrationRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public signupGuest(guestRegistrationRequest: GuestRegistrationRequest, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).signupGuest(guestRegistrationRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+     * @param {TokenVerifyRequest} tokenVerifyRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public verifyToken(tokenVerifyRequest: TokenVerifyRequest, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).verifyToken(tokenVerifyRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
  * BitesApi - axios parameter creator
  * @export
  */
@@ -13387,9 +14853,9 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesCreate: async (biteRequest: BiteRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (biteRequest: BiteRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'biteRequest' is not null or undefined
-            assertParamExists('bitesCreate', 'biteRequest', biteRequest)
+            assertParamExists('create', 'biteRequest', biteRequest)
             const localVarPath = `/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13431,9 +14897,9 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        destroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('bitesDestroy', 'uuid', uuid)
+            assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/bites/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -13474,7 +14940,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -13486,7 +14952,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesList: async (createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13588,14 +15054,129 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Get Current User\'s Bites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/bites/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (locationCountryId !== undefined) {
+                localVarQueryParameter['location_country_id'] = locationCountryId;
+            }
+
+            if (locationNuts2 !== undefined) {
+                localVarQueryParameter['location_nuts_2'] = locationNuts2;
+            }
+
+            if (locationNuts3 !== undefined) {
+                localVarQueryParameter['location_nuts_3'] = locationNuts3;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (receivedAtAfter !== undefined) {
+                localVarQueryParameter['received_at_after'] = (receivedAtAfter as any instanceof Date) ?
+                    (receivedAtAfter as any).toISOString() :
+                    receivedAtAfter;
+            }
+
+            if (receivedAtBefore !== undefined) {
+                localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
+                    (receivedAtBefore as any).toISOString() :
+                    receivedAtBefore;
+            }
+
+            if (shortId !== undefined) {
+                localVarQueryParameter['short_id'] = shortId;
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+            if (userUuid !== undefined) {
+                localVarQueryParameter['user_uuid'] = userUuid;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('bitesRetrieve', 'uuid', uuid)
+            assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/bites/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -13645,10 +15226,10 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bitesCreate(biteRequest: BiteRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Bite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bitesCreate(biteRequest, options);
+        async create(biteRequest: BiteRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Bite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(biteRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BitesApi.bitesCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BitesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -13657,10 +15238,10 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bitesDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bitesDestroy(uuid, options);
+        async destroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroy(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BitesApi.bitesDestroy']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BitesApi.destroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -13670,7 +15251,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -13682,10 +15263,35 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bitesList(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bitesList(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BitesApi.bitesList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BitesApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get Current User\'s Bites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['BitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -13694,10 +15300,10 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bitesRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Bite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bitesRetrieve(uuid, options);
+        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Bite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BitesApi.bitesRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BitesApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -13716,8 +15322,8 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesCreate(biteRequest: BiteRequest, options?: RawAxiosRequestConfig): AxiosPromise<Bite> {
-            return localVarFp.bitesCreate(biteRequest, options).then((request) => request(axios, basePath));
+        create(biteRequest: BiteRequest, options?: RawAxiosRequestConfig): AxiosPromise<Bite> {
+            return localVarFp.create(biteRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13725,8 +15331,8 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.bitesDestroy(uuid, options).then((request) => request(axios, basePath));
+        destroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.destroy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13735,7 +15341,7 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -13747,8 +15353,30 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesList(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
-            return localVarFp.bitesList(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get Current User\'s Bites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13756,8 +15384,8 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bitesRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Bite> {
-            return localVarFp.bitesRetrieve(uuid, options).then((request) => request(axios, basePath));
+        retrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Bite> {
+            return localVarFp.retrieve(uuid, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -13776,8 +15404,8 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public bitesCreate(biteRequest: BiteRequest, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).bitesCreate(biteRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(biteRequest: BiteRequest, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).create(biteRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13787,8 +15415,8 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public bitesDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).bitesDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
+    public destroy(uuid: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).destroy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13798,7 +15426,7 @@ export class BitesApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<BitesListOrderByEnum>} [orderBy] Ordenado  
+     * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
@@ -13811,8 +15439,32 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public bitesList(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).bitesList(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get Current User\'s Bites
+     * @param {string} [createdAtAfter] Created at
+     * @param {string} [createdAtBefore] Created at
+     * @param {number | null} [locationCountryId] 
+     * @param {string} [locationNuts2] 
+     * @param {string} [locationNuts3] 
+     * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+     * @param {number} [page] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [receivedAtAfter] Received at
+     * @param {string} [receivedAtBefore] Received at
+     * @param {string} [shortId] Short ID
+     * @param {string} [updatedAtAfter] Update at
+     * @param {string} [updatedAtBefore] Update at
+     * @param {string} [userUuid] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BitesApi
+     */
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13822,21 +15474,31 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public bitesRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).bitesRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).retrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 /**
  * @export
  */
-export const BitesListOrderByEnum = {
+export const ListOrderByEnum = {
     CreatedAt: '-created_at',
     ReceivedAt: '-received_at',
     CreatedAt2: 'created_at',
     ReceivedAt2: 'received_at'
 } as const;
-export type BitesListOrderByEnum = typeof BitesListOrderByEnum[keyof typeof BitesListOrderByEnum];
+export type ListOrderByEnum = typeof ListOrderByEnum[keyof typeof ListOrderByEnum];
+/**
+ * @export
+ */
+export const ListMineOrderByEnum = {
+    CreatedAt: '-created_at',
+    ReceivedAt: '-received_at',
+    CreatedAt2: 'created_at',
+    ReceivedAt2: 'received_at'
+} as const;
+export type ListMineOrderByEnum = typeof ListMineOrderByEnum[keyof typeof ListMineOrderByEnum];
 
 
 /**
@@ -13851,9 +15513,9 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesCreate: async (breedingSiteRequest: BreedingSiteRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (breedingSiteRequest: BreedingSiteRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'breedingSiteRequest' is not null or undefined
-            assertParamExists('breedingSitesCreate', 'breedingSiteRequest', breedingSiteRequest)
+            assertParamExists('create', 'breedingSiteRequest', breedingSiteRequest)
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13895,9 +15557,9 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        destroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('breedingSitesDestroy', 'uuid', uuid)
+            assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/breeding-sites/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -13939,7 +15601,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -13951,7 +15613,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesList: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BreedingSitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14057,14 +15719,134 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * Get Current User\'s Breeding Sites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/breeding-sites/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (hasPhotos !== undefined) {
+                localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (locationCountryId !== undefined) {
+                localVarQueryParameter['location_country_id'] = locationCountryId;
+            }
+
+            if (locationNuts2 !== undefined) {
+                localVarQueryParameter['location_nuts_2'] = locationNuts2;
+            }
+
+            if (locationNuts3 !== undefined) {
+                localVarQueryParameter['location_nuts_3'] = locationNuts3;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (receivedAtAfter !== undefined) {
+                localVarQueryParameter['received_at_after'] = (receivedAtAfter as any instanceof Date) ?
+                    (receivedAtAfter as any).toISOString() :
+                    receivedAtAfter;
+            }
+
+            if (receivedAtBefore !== undefined) {
+                localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
+                    (receivedAtBefore as any).toISOString() :
+                    receivedAtBefore;
+            }
+
+            if (shortId !== undefined) {
+                localVarQueryParameter['short_id'] = shortId;
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+            if (userUuid !== undefined) {
+                localVarQueryParameter['user_uuid'] = userUuid;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('breedingSitesRetrieve', 'uuid', uuid)
+            assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/breeding-sites/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14114,10 +15896,10 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async breedingSitesCreate(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.breedingSitesCreate(breedingSiteRequest, options);
+        async create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(breedingSiteRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.breedingSitesCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14126,10 +15908,10 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async breedingSitesDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.breedingSitesDestroy(uuid, options);
+        async destroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroy(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.breedingSitesDestroy']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.destroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14140,7 +15922,7 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -14152,10 +15934,36 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async breedingSitesList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BreedingSitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.breedingSitesList(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.breedingSitesList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get Current User\'s Breeding Sites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14164,10 +15972,10 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async breedingSitesRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.breedingSitesRetrieve(uuid, options);
+        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.breedingSitesRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -14186,8 +15994,8 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesCreate(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
-            return localVarFp.breedingSitesCreate(breedingSiteRequest, options).then((request) => request(axios, basePath));
+        create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
+            return localVarFp.create(breedingSiteRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14195,8 +16003,8 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.breedingSitesDestroy(uuid, options).then((request) => request(axios, basePath));
+        destroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.destroy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14206,7 +16014,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -14218,8 +16026,31 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BreedingSitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.breedingSitesList(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get Current User\'s Breeding Sites
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14227,8 +16058,8 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        breedingSitesRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
-            return localVarFp.breedingSitesRetrieve(uuid, options).then((request) => request(axios, basePath));
+        retrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
+            return localVarFp.retrieve(uuid, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -14247,8 +16078,8 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public breedingSitesCreate(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).breedingSitesCreate(breedingSiteRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).create(breedingSiteRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14258,8 +16089,8 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public breedingSitesDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).breedingSitesDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
+    public destroy(uuid: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).destroy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14270,7 +16101,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<BreedingSitesListOrderByEnum>} [orderBy] Ordenado  
+     * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
@@ -14283,8 +16114,33 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public breedingSitesList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<BreedingSitesListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).breedingSitesList(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get Current User\'s Breeding Sites
+     * @param {string} [createdAtAfter] Created at
+     * @param {string} [createdAtBefore] Created at
+     * @param {boolean} [hasPhotos] Has any photo
+     * @param {number | null} [locationCountryId] 
+     * @param {string} [locationNuts2] 
+     * @param {string} [locationNuts3] 
+     * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+     * @param {number} [page] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [receivedAtAfter] Received at
+     * @param {string} [receivedAtBefore] Received at
+     * @param {string} [shortId] Short ID
+     * @param {string} [updatedAtAfter] Update at
+     * @param {string} [updatedAtBefore] Update at
+     * @param {string} [userUuid] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BreedingSitesApi
+     */
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14294,21 +16150,31 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public breedingSitesRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).breedingSitesRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).retrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 /**
  * @export
  */
-export const BreedingSitesListOrderByEnum = {
+export const ListOrderByEnum = {
     CreatedAt: '-created_at',
     ReceivedAt: '-received_at',
     CreatedAt2: 'created_at',
     ReceivedAt2: 'received_at'
 } as const;
-export type BreedingSitesListOrderByEnum = typeof BreedingSitesListOrderByEnum[keyof typeof BreedingSitesListOrderByEnum];
+export type ListOrderByEnum = typeof ListOrderByEnum[keyof typeof ListOrderByEnum];
+/**
+ * @export
+ */
+export const ListMineOrderByEnum = {
+    CreatedAt: '-created_at',
+    ReceivedAt: '-received_at',
+    CreatedAt2: 'created_at',
+    ReceivedAt2: 'received_at'
+} as const;
+export type ListMineOrderByEnum = typeof ListMineOrderByEnum[keyof typeof ListMineOrderByEnum];
 
 
 /**
@@ -14321,13 +16187,13 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        campaignsList: async (countryId?: number, isActive?: boolean, orderBy?: Array<CampaignsListOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (countryId?: number, isActive?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/campaigns/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14386,9 +16252,9 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        campaignsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('campaignsRetrieve', 'id', id)
+            assertParamExists('retrieve', 'id', id)
             const localVarPath = `/campaigns/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14436,16 +16302,16 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async campaignsList(countryId?: number, isActive?: boolean, orderBy?: Array<CampaignsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedCampaignList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.campaignsList(countryId, isActive, orderBy, page, pageSize, options);
+        async list(countryId?: number, isActive?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedCampaignList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, isActive, orderBy, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['CampaignsApi.campaignsList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['CampaignsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14454,10 +16320,10 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async campaignsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Campaign>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.campaignsRetrieve(id, options);
+        async retrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Campaign>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['CampaignsApi.campaignsRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['CampaignsApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -14474,14 +16340,14 @@ export const CampaignsApiFactory = function (configuration?: Configuration, base
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        campaignsList(countryId?: number, isActive?: boolean, orderBy?: Array<CampaignsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedCampaignList> {
-            return localVarFp.campaignsList(countryId, isActive, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
+        list(countryId?: number, isActive?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedCampaignList> {
+            return localVarFp.list(countryId, isActive, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14489,8 +16355,8 @@ export const CampaignsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        campaignsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Campaign> {
-            return localVarFp.campaignsRetrieve(id, options).then((request) => request(axios, basePath));
+        retrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Campaign> {
+            return localVarFp.retrieve(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -14506,15 +16372,15 @@ export class CampaignsApi extends BaseAPI {
      * 
      * @param {number} [countryId] Country in which the campaign is taking place
      * @param {boolean} [isActive] 
-     * @param {Array<CampaignsListOrderByEnum>} [orderBy] Ordenado  
+     * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CampaignsApi
      */
-    public campaignsList(countryId?: number, isActive?: boolean, orderBy?: Array<CampaignsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
-        return CampaignsApiFp(this.configuration).campaignsList(countryId, isActive, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
+    public list(countryId?: number, isActive?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
+        return CampaignsApiFp(this.configuration).list(countryId, isActive, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14524,21 +16390,21 @@ export class CampaignsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CampaignsApi
      */
-    public campaignsRetrieve(id: number, options?: RawAxiosRequestConfig) {
-        return CampaignsApiFp(this.configuration).campaignsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(id: number, options?: RawAxiosRequestConfig) {
+        return CampaignsApiFp(this.configuration).retrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 /**
  * @export
  */
-export const CampaignsListOrderByEnum = {
+export const ListOrderByEnum = {
     EndDate: '-end_date',
     StartDate: '-start_date',
     EndDate2: 'end_date',
     StartDate2: 'start_date'
 } as const;
-export type CampaignsListOrderByEnum = typeof CampaignsListOrderByEnum[keyof typeof CampaignsListOrderByEnum];
+export type ListOrderByEnum = typeof ListOrderByEnum[keyof typeof ListOrderByEnum];
 
 
 /**
@@ -14553,9 +16419,9 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('countriesRetrieve', 'id', id)
+            assertParamExists('retrieve', 'id', id)
             const localVarPath = `/countries/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14605,10 +16471,10 @@ export const CountriesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async countriesRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesRetrieve(id, options);
+        async retrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['CountriesApi.countriesRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['CountriesApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -14627,8 +16493,8 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Country> {
-            return localVarFp.countriesRetrieve(id, options).then((request) => request(axios, basePath));
+        retrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Country> {
+            return localVarFp.retrieve(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -14647,8 +16513,8 @@ export class CountriesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public countriesRetrieve(id: number, options?: RawAxiosRequestConfig) {
-        return CountriesApiFp(this.configuration).countriesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(id: number, options?: RawAxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).retrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14666,9 +16532,9 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesCreate: async (deviceRequest: DeviceRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (deviceRequest: DeviceRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'deviceRequest' is not null or undefined
-            assertParamExists('devicesCreate', 'deviceRequest', deviceRequest)
+            assertParamExists('create', 'deviceRequest', deviceRequest)
             const localVarPath = `/devices/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14706,9 +16572,9 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesPartialUpdate: async (deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        partialUpdate: async (deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'deviceId' is not null or undefined
-            assertParamExists('devicesPartialUpdate', 'deviceId', deviceId)
+            assertParamExists('partialUpdate', 'deviceId', deviceId)
             const localVarPath = `/devices/{device_id}/`
                 .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14746,9 +16612,9 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesRetrieve: async (deviceId: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (deviceId: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'deviceId' is not null or undefined
-            assertParamExists('devicesRetrieve', 'deviceId', deviceId)
+            assertParamExists('retrieve', 'deviceId', deviceId)
             const localVarPath = `/devices/{device_id}/`
                 .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14784,11 +16650,11 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesUpdate: async (deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        update: async (deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'deviceId' is not null or undefined
-            assertParamExists('devicesUpdate', 'deviceId', deviceId)
+            assertParamExists('update', 'deviceId', deviceId)
             // verify required parameter 'deviceUpdateRequest' is not null or undefined
-            assertParamExists('devicesUpdate', 'deviceUpdateRequest', deviceUpdateRequest)
+            assertParamExists('update', 'deviceUpdateRequest', deviceUpdateRequest)
             const localVarPath = `/devices/{device_id}/`
                 .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -14836,10 +16702,10 @@ export const DevicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesCreate(deviceRequest, options);
+        async create(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(deviceRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14849,10 +16715,10 @@ export const DevicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options);
+        async partialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdate(deviceId, patchedDeviceUpdateRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.partialUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14861,10 +16727,10 @@ export const DevicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesRetrieve(deviceId, options);
+        async retrieve(deviceId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Device>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(deviceId, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -14874,10 +16740,10 @@ export const DevicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.devicesUpdate(deviceId, deviceUpdateRequest, options);
+        async update(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.update(deviceId, deviceUpdateRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DevicesApi.devicesUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['DevicesApi.update']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -14896,8 +16762,8 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
-            return localVarFp.devicesCreate(deviceRequest, options).then((request) => request(axios, basePath));
+        create(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
+            return localVarFp.create(deviceRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14906,8 +16772,8 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
-            return localVarFp.devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(axios, basePath));
+        partialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
+            return localVarFp.partialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14915,8 +16781,8 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
-            return localVarFp.devicesRetrieve(deviceId, options).then((request) => request(axios, basePath));
+        retrieve(deviceId: string, options?: RawAxiosRequestConfig): AxiosPromise<Device> {
+            return localVarFp.retrieve(deviceId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14925,8 +16791,8 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
-            return localVarFp.devicesUpdate(deviceId, deviceUpdateRequest, options).then((request) => request(axios, basePath));
+        update(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
+            return localVarFp.update(deviceId, deviceUpdateRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -14945,8 +16811,8 @@ export class DevicesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DevicesApi
      */
-    public devicesCreate(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig) {
-        return DevicesApiFp(this.configuration).devicesCreate(deviceRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(deviceRequest: DeviceRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).create(deviceRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14957,8 +16823,8 @@ export class DevicesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DevicesApi
      */
-    public devicesPartialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig) {
-        return DevicesApiFp(this.configuration).devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdate(deviceId: string, patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).partialUpdate(deviceId, patchedDeviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14968,8 +16834,8 @@ export class DevicesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DevicesApi
      */
-    public devicesRetrieve(deviceId: string, options?: RawAxiosRequestConfig) {
-        return DevicesApiFp(this.configuration).devicesRetrieve(deviceId, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(deviceId: string, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).retrieve(deviceId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14980,8 +16846,8 @@ export class DevicesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DevicesApi
      */
-    public devicesUpdate(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig) {
-        return DevicesApiFp(this.configuration).devicesUpdate(deviceId, deviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
+    public update(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig) {
+        return DevicesApiFp(this.configuration).update(deviceId, deviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14999,9 +16865,9 @@ export const FixesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixesCreate: async (fixRequest: FixRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (fixRequest: FixRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixRequest' is not null or undefined
-            assertParamExists('fixesCreate', 'fixRequest', fixRequest)
+            assertParamExists('create', 'fixRequest', fixRequest)
             const localVarPath = `/fixes/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15053,10 +16919,10 @@ export const FixesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async fixesCreate(fixRequest: FixRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fix>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixesCreate(fixRequest, options);
+        async create(fixRequest: FixRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fix>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(fixRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['FixesApi.fixesCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['FixesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -15075,8 +16941,8 @@ export const FixesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixesCreate(fixRequest: FixRequest, options?: RawAxiosRequestConfig): AxiosPromise<Fix> {
-            return localVarFp.fixesCreate(fixRequest, options).then((request) => request(axios, basePath));
+        create(fixRequest: FixRequest, options?: RawAxiosRequestConfig): AxiosPromise<Fix> {
+            return localVarFp.create(fixRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -15095,8 +16961,8 @@ export class FixesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FixesApi
      */
-    public fixesCreate(fixRequest: FixRequest, options?: RawAxiosRequestConfig) {
-        return FixesApiFp(this.configuration).fixesCreate(fixRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(fixRequest: FixRequest, options?: RawAxiosRequestConfig) {
+        return FixesApiFp(this.configuration).create(fixRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15114,7 +16980,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsCreate: async (metaNotificationRequest?: MetaNotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (metaNotificationRequest?: MetaNotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/notifications/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15153,13 +17019,13 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         /**
          * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsList: async (isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (isRead?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/notifications/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15209,15 +17075,68 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
+         * Get Current User\'s Notifications
+         * @param {boolean} [isRead] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine: async (isRead?: boolean, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/notifications/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (isRead !== undefined) {
+                localVarQueryParameter['is_read'] = isRead;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {number} id A unique integer value identifying this notification.
          * @param {PatchedNotificationRequest} [patchedNotificationRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsPartialUpdate: async (id: number, patchedNotificationRequest?: PatchedNotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        partialUpdate: async (id: number, patchedNotificationRequest?: PatchedNotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('notificationsPartialUpdate', 'id', id)
+            assertParamExists('partialUpdate', 'id', id)
             const localVarPath = `/notifications/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15260,9 +17179,9 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('notificationsRetrieve', 'id', id)
+            assertParamExists('retrieve', 'id', id)
             const localVarPath = `/notifications/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15303,11 +17222,11 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsUpdate: async (id: number, notificationRequest: NotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        update: async (id: number, notificationRequest: NotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('notificationsUpdate', 'id', id)
+            assertParamExists('update', 'id', id)
             // verify required parameter 'notificationRequest' is not null or undefined
-            assertParamExists('notificationsUpdate', 'notificationRequest', notificationRequest)
+            assertParamExists('update', 'notificationRequest', notificationRequest)
             const localVarPath = `/notifications/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15360,25 +17279,40 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CreateNotification>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsCreate(metaNotificationRequest, options);
+        async create(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CreateNotification>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(metaNotificationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsList(isRead, orderBy, page, pageSize, options);
+        async list(isRead?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(isRead, orderBy, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get Current User\'s Notifications
+         * @param {boolean} [isRead] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listMine(isRead?: boolean, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(isRead, orderBy, page, pageSize, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -15388,10 +17322,10 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsPartialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsPartialUpdate(id, patchedNotificationRequest, options);
+        async partialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdate(id, patchedNotificationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.partialUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -15400,10 +17334,10 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsRetrieve(id, options);
+        async retrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -15413,10 +17347,10 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationsUpdate(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationsUpdate(id, notificationRequest, options);
+        async update(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.update(id, notificationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.notificationsUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.update']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -15435,20 +17369,32 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<CreateNotification>> {
-            return localVarFp.notificationsCreate(metaNotificationRequest, options).then((request) => request(axios, basePath));
+        create(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<CreateNotification>> {
+            return localVarFp.create(metaNotificationRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList> {
-            return localVarFp.notificationsList(isRead, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
+        list(isRead?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList> {
+            return localVarFp.list(isRead, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get Current User\'s Notifications
+         * @param {boolean} [isRead] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine(isRead?: boolean, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList> {
+            return localVarFp.listMine(isRead, orderBy, page, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15457,8 +17403,8 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsPartialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
-            return localVarFp.notificationsPartialUpdate(id, patchedNotificationRequest, options).then((request) => request(axios, basePath));
+        partialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
+            return localVarFp.partialUpdate(id, patchedNotificationRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15466,8 +17412,8 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
-            return localVarFp.notificationsRetrieve(id, options).then((request) => request(axios, basePath));
+        retrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
+            return localVarFp.retrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15476,8 +17422,8 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationsUpdate(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
-            return localVarFp.notificationsUpdate(id, notificationRequest, options).then((request) => request(axios, basePath));
+        update(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
+            return localVarFp.update(id, notificationRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -15496,22 +17442,36 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsCreate(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsCreate(metaNotificationRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).create(metaNotificationRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @param {boolean} [isRead] 
-     * @param {Array<NotificationsListOrderByEnum>} [orderBy] Ordenado  
+     * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsList(isRead?: boolean, orderBy?: Array<NotificationsListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsList(isRead, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
+    public list(isRead?: boolean, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).list(isRead, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get Current User\'s Notifications
+     * @param {boolean} [isRead] 
+     * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+     * @param {number} [page] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotificationsApi
+     */
+    public listMine(isRead?: boolean, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).listMine(isRead, orderBy, page, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15522,8 +17482,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsPartialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsPartialUpdate(id, patchedNotificationRequest, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdate(id: number, patchedNotificationRequest?: PatchedNotificationRequest, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).partialUpdate(id, patchedNotificationRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15533,8 +17493,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsRetrieve(id: number, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(id: number, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).retrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15545,19 +17505,27 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public notificationsUpdate(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).notificationsUpdate(id, notificationRequest, options).then((request) => request(this.axios, this.basePath));
+    public update(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig) {
+        return NotificationsApiFp(this.configuration).update(id, notificationRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 /**
  * @export
  */
-export const NotificationsListOrderByEnum = {
+export const ListOrderByEnum = {
     CreatedAt: '-created_at',
     CreatedAt2: 'created_at'
 } as const;
-export type NotificationsListOrderByEnum = typeof NotificationsListOrderByEnum[keyof typeof NotificationsListOrderByEnum];
+export type ListOrderByEnum = typeof ListOrderByEnum[keyof typeof ListOrderByEnum];
+/**
+ * @export
+ */
+export const ListMineOrderByEnum = {
+    CreatedAt: '-created_at',
+    CreatedAt2: 'created_at'
+} as const;
+export type ListMineOrderByEnum = typeof ListMineOrderByEnum[keyof typeof ListMineOrderByEnum];
 
 
 /**
@@ -15572,9 +17540,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsCreate: async (observationRequest: ObservationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (observationRequest: ObservationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'observationRequest' is not null or undefined
-            assertParamExists('observationsCreate', 'observationRequest', observationRequest)
+            assertParamExists('create', 'observationRequest', observationRequest)
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15616,9 +17584,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        destroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('observationsDestroy', 'uuid', uuid)
+            assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15662,7 +17630,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -15674,7 +17642,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsList: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ObservationsListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15788,17 +17756,147 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
+         * Get Current User\'s Observations
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
+         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/observations/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (hasPhotos !== undefined) {
+                localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (hasPrediction !== undefined) {
+                localVarQueryParameter['has_prediction'] = hasPrediction;
+            }
+
+            if (hasPredictionsAllPhotos !== undefined) {
+                localVarQueryParameter['has_predictions_all_photos'] = hasPredictionsAllPhotos;
+            }
+
+            if (locationCountryId !== undefined) {
+                localVarQueryParameter['location_country_id'] = locationCountryId;
+            }
+
+            if (locationNuts2 !== undefined) {
+                localVarQueryParameter['location_nuts_2'] = locationNuts2;
+            }
+
+            if (locationNuts3 !== undefined) {
+                localVarQueryParameter['location_nuts_3'] = locationNuts3;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (receivedAtAfter !== undefined) {
+                localVarQueryParameter['received_at_after'] = (receivedAtAfter as any instanceof Date) ?
+                    (receivedAtAfter as any).toISOString() :
+                    receivedAtAfter;
+            }
+
+            if (receivedAtBefore !== undefined) {
+                localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
+                    (receivedAtBefore as any).toISOString() :
+                    receivedAtBefore;
+            }
+
+            if (shortId !== undefined) {
+                localVarQueryParameter['short_id'] = shortId;
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+            if (userUuid !== undefined) {
+                localVarQueryParameter['user_uuid'] = userUuid;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {string} uuid 
          * @param {ObservationPredictionRequest} observationPredictionRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionCreate: async (uuid: string, observationPredictionRequest: ObservationPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionCreate: async (uuid: string, observationPredictionRequest: ObservationPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('observationsPredictionCreate', 'uuid', uuid)
+            assertParamExists('predictionCreate', 'uuid', uuid)
             // verify required parameter 'observationPredictionRequest' is not null or undefined
-            assertParamExists('observationsPredictionCreate', 'observationPredictionRequest', observationPredictionRequest)
+            assertParamExists('predictionCreate', 'observationPredictionRequest', observationPredictionRequest)
             const localVarPath = `/observations/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15837,9 +17935,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('observationsPredictionDestroy', 'uuid', uuid)
+            assertParamExists('predictionDestroy', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15875,9 +17973,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('observationsPredictionRetrieve', 'uuid', uuid)
+            assertParamExists('predictionRetrieve', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15913,9 +18011,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('observationsRetrieve', 'uuid', uuid)
+            assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -15965,10 +18063,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsCreate(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsCreate(observationRequest, options);
+        async create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(observationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -15977,10 +18075,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsDestroy(uuid, options);
+        async destroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroy(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsDestroy']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.destroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -15993,7 +18091,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -16005,10 +18103,38 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ObservationsListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsList(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get Current User\'s Observations
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
+         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16018,10 +18144,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsPredictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsPredictionCreate(uuid, observationPredictionRequest, options);
+        async predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionCreate(uuid, observationPredictionRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsPredictionCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionCreate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16030,10 +18156,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsPredictionDestroy(uuid, options);
+        async predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionDestroy(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsPredictionDestroy']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionDestroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16042,10 +18168,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsPredictionRetrieve(uuid, options);
+        async predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionRetrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsPredictionRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16054,10 +18180,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async observationsRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.observationsRetrieve(uuid, options);
+        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.observationsRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -16076,8 +18202,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsCreate(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
-            return localVarFp.observationsCreate(observationRequest, options).then((request) => request(axios, basePath));
+        create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
+            return localVarFp.create(observationRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16085,8 +18211,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.observationsDestroy(uuid, options).then((request) => request(axios, basePath));
+        destroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.destroy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16098,7 +18224,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
-         * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
+         * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
@@ -16110,8 +18236,33 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ObservationsListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.observationsList(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get Current User\'s Observations
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
+         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
+         * @param {number | null} [locationCountryId] 
+         * @param {string} [locationNuts2] 
+         * @param {string} [locationNuts3] 
+         * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [shortId] Short ID
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16120,8 +18271,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
-            return localVarFp.observationsPredictionCreate(uuid, observationPredictionRequest, options).then((request) => request(axios, basePath));
+        predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
+            return localVarFp.predictionCreate(uuid, observationPredictionRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16129,8 +18280,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.observationsPredictionDestroy(uuid, options).then((request) => request(axios, basePath));
+        predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.predictionDestroy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16138,8 +18289,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
-            return localVarFp.observationsPredictionRetrieve(uuid, options).then((request) => request(axios, basePath));
+        predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
+            return localVarFp.predictionRetrieve(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16147,8 +18298,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        observationsRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
-            return localVarFp.observationsRetrieve(uuid, options).then((request) => request(axios, basePath));
+        retrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
+            return localVarFp.retrieve(uuid, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16167,8 +18318,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsCreate(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsCreate(observationRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).create(observationRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16178,8 +18329,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
+    public destroy(uuid: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).destroy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16192,7 +18343,7 @@ export class ObservationsApi extends BaseAPI {
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
-     * @param {Array<ObservationsListOrderByEnum>} [orderBy] Ordenado  
+     * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [receivedAtAfter] Received at
@@ -16205,8 +18356,35 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsList(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ObservationsListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsList(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get Current User\'s Observations
+     * @param {string} [createdAtAfter] Created at
+     * @param {string} [createdAtBefore] Created at
+     * @param {boolean} [hasPhotos] Has any photo
+     * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
+     * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
+     * @param {number | null} [locationCountryId] 
+     * @param {string} [locationNuts2] 
+     * @param {string} [locationNuts3] 
+     * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
+     * @param {number} [page] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [receivedAtAfter] Received at
+     * @param {string} [receivedAtBefore] Received at
+     * @param {string} [shortId] Short ID
+     * @param {string} [updatedAtAfter] Update at
+     * @param {string} [updatedAtBefore] Update at
+     * @param {string} [userUuid] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ObservationsApi
+     */
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16217,8 +18395,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsPredictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsPredictionCreate(uuid, observationPredictionRequest, options).then((request) => request(this.axios, this.basePath));
+    public predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).predictionCreate(uuid, observationPredictionRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16228,8 +18406,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsPredictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
+    public predictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).predictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16239,8 +18417,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsPredictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).predictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16250,21 +18428,31 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public observationsRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).observationsRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).retrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 /**
  * @export
  */
-export const ObservationsListOrderByEnum = {
+export const ListOrderByEnum = {
     CreatedAt: '-created_at',
     ReceivedAt: '-received_at',
     CreatedAt2: 'created_at',
     ReceivedAt2: 'received_at'
 } as const;
-export type ObservationsListOrderByEnum = typeof ObservationsListOrderByEnum[keyof typeof ObservationsListOrderByEnum];
+export type ListOrderByEnum = typeof ListOrderByEnum[keyof typeof ListOrderByEnum];
+/**
+ * @export
+ */
+export const ListMineOrderByEnum = {
+    CreatedAt: '-created_at',
+    ReceivedAt: '-received_at',
+    CreatedAt2: 'created_at',
+    ReceivedAt2: 'received_at'
+} as const;
+export type ListMineOrderByEnum = typeof ListMineOrderByEnum[keyof typeof ListMineOrderByEnum];
 
 
 /**
@@ -16280,7 +18468,7 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partnersList: async (page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/partners/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16327,9 +18515,9 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partnersRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('partnersRetrieve', 'id', id)
+            assertParamExists('retrieve', 'id', id)
             const localVarPath = `/partners/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -16380,10 +18568,10 @@ export const PartnersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partnersList(page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPartnerList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partnersList(page, pageSize, options);
+        async list(page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPartnerList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PartnersApi.partnersList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PartnersApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16392,10 +18580,10 @@ export const PartnersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partnersRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Partner>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partnersRetrieve(id, options);
+        async retrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Partner>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PartnersApi.partnersRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PartnersApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -16415,8 +18603,8 @@ export const PartnersApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partnersList(page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedPartnerList> {
-            return localVarFp.partnersList(page, pageSize, options).then((request) => request(axios, basePath));
+        list(page?: number, pageSize?: number, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedPartnerList> {
+            return localVarFp.list(page, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16424,8 +18612,8 @@ export const PartnersApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partnersRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Partner> {
-            return localVarFp.partnersRetrieve(id, options).then((request) => request(axios, basePath));
+        retrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Partner> {
+            return localVarFp.retrieve(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16445,8 +18633,8 @@ export class PartnersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PartnersApi
      */
-    public partnersList(page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
-        return PartnersApiFp(this.configuration).partnersList(page, pageSize, options).then((request) => request(this.axios, this.basePath));
+    public list(page?: number, pageSize?: number, options?: RawAxiosRequestConfig) {
+        return PartnersApiFp(this.configuration).list(page, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16456,8 +18644,8 @@ export class PartnersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PartnersApi
      */
-    public partnersRetrieve(id: number, options?: RawAxiosRequestConfig) {
-        return PartnersApiFp(this.configuration).partnersRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(id: number, options?: RawAxiosRequestConfig) {
+        return PartnersApiFp(this.configuration).retrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16476,11 +18664,11 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionCreate: async (uuid: string, photoPredictionRequest: PhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionCreate: async (uuid: string, photoPredictionRequest: PhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('photosPredictionCreate', 'uuid', uuid)
+            assertParamExists('predictionCreate', 'uuid', uuid)
             // verify required parameter 'photoPredictionRequest' is not null or undefined
-            assertParamExists('photosPredictionCreate', 'photoPredictionRequest', photoPredictionRequest)
+            assertParamExists('predictionCreate', 'photoPredictionRequest', photoPredictionRequest)
             const localVarPath = `/photos/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -16519,9 +18707,9 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('photosPredictionDestroy', 'uuid', uuid)
+            assertParamExists('predictionDestroy', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -16557,9 +18745,9 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        predictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('photosPredictionRetrieve', 'uuid', uuid)
+            assertParamExists('predictionRetrieve', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/prediction/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -16595,9 +18783,9 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('photosRetrieve', 'uuid', uuid)
+            assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -16644,10 +18832,10 @@ export const PhotosApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosPredictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosPredictionCreate(uuid, photoPredictionRequest, options);
+        async predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionCreate(uuid, photoPredictionRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.photosPredictionCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionCreate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16656,10 +18844,10 @@ export const PhotosApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosPredictionDestroy(uuid, options);
+        async predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionDestroy(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.photosPredictionDestroy']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionDestroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16668,10 +18856,10 @@ export const PhotosApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosPredictionRetrieve(uuid, options);
+        async predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionRetrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.photosPredictionRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -16680,10 +18868,10 @@ export const PhotosApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Photo>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosRetrieve(uuid, options);
+        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Photo>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.photosRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PhotosApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -16703,8 +18891,8 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.photosPredictionCreate(uuid, photoPredictionRequest, options).then((request) => request(axios, basePath));
+        predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
+            return localVarFp.predictionCreate(uuid, photoPredictionRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16712,8 +18900,8 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.photosPredictionDestroy(uuid, options).then((request) => request(axios, basePath));
+        predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.predictionDestroy(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16721,8 +18909,8 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.photosPredictionRetrieve(uuid, options).then((request) => request(axios, basePath));
+        predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
+            return localVarFp.predictionRetrieve(uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16730,8 +18918,8 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Photo> {
-            return localVarFp.photosRetrieve(uuid, options).then((request) => request(axios, basePath));
+        retrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<Photo> {
+            return localVarFp.retrieve(uuid, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16751,8 +18939,8 @@ export class PhotosApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhotosApi
      */
-    public photosPredictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).photosPredictionCreate(uuid, photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
+    public predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig) {
+        return PhotosApiFp(this.configuration).predictionCreate(uuid, photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16762,8 +18950,8 @@ export class PhotosApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhotosApi
      */
-    public photosPredictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).photosPredictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
+    public predictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
+        return PhotosApiFp(this.configuration).predictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16773,8 +18961,8 @@ export class PhotosApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhotosApi
      */
-    public photosPredictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).photosPredictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return PhotosApiFp(this.configuration).predictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16784,181 +18972,8 @@ export class PhotosApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhotosApi
      */
-    public photosRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).photosRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
- * TokenApi - axios parameter creator
- * @export
- */
-export const TokenApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tokenCreate: async (appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'appUserTokenObtainPairRequest' is not null or undefined
-            assertParamExists('tokenCreate', 'appUserTokenObtainPairRequest', appUserTokenObtainPairRequest)
-            const localVarPath = `/token/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(appUserTokenObtainPairRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {TokenRefreshRequest} tokenRefreshRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tokenRefreshCreate: async (tokenRefreshRequest: TokenRefreshRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'tokenRefreshRequest' is not null or undefined
-            assertParamExists('tokenRefreshCreate', 'tokenRefreshRequest', tokenRefreshRequest)
-            const localVarPath = `/token/refresh/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(tokenRefreshRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TokenApi - functional programming interface
- * @export
- */
-export const TokenApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = TokenApiAxiosParamCreator(configuration)
-    return {
-        /**
-         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tokenCreate(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppUserTokenObtainPair>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tokenCreate(appUserTokenObtainPairRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['TokenApi.tokenCreate']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {TokenRefreshRequest} tokenRefreshRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tokenRefreshCreate(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TokenRefresh>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tokenRefreshCreate(tokenRefreshRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['TokenApi.tokenRefreshCreate']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-    }
-};
-
-/**
- * TokenApi - factory interface
- * @export
- */
-export const TokenApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = TokenApiFp(configuration)
-    return {
-        /**
-         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tokenCreate(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig): AxiosPromise<AppUserTokenObtainPair> {
-            return localVarFp.tokenCreate(appUserTokenObtainPairRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {TokenRefreshRequest} tokenRefreshRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tokenRefreshCreate(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig): AxiosPromise<TokenRefresh> {
-            return localVarFp.tokenRefreshCreate(tokenRefreshRequest, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * TokenApi - object-oriented interface
- * @export
- * @class TokenApi
- * @extends {BaseAPI}
- */
-export class TokenApi extends BaseAPI {
-    /**
-     * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-     * @param {AppUserTokenObtainPairRequest} appUserTokenObtainPairRequest 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TokenApi
-     */
-    public tokenCreate(appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest, options?: RawAxiosRequestConfig) {
-        return TokenApiFp(this.configuration).tokenCreate(appUserTokenObtainPairRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-     * @param {TokenRefreshRequest} tokenRefreshRequest 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TokenApi
-     */
-    public tokenRefreshCreate(tokenRefreshRequest: TokenRefreshRequest, options?: RawAxiosRequestConfig) {
-        return TokenApiFp(this.configuration).tokenRefreshCreate(tokenRefreshRequest, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return PhotosApiFp(this.configuration).retrieve(uuid, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16972,58 +18987,14 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
     return {
         /**
          * 
-         * @param {CreateUserRequest} createUserRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        usersCreate: async (createUserRequest: CreateUserRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'createUserRequest' is not null or undefined
-            assertParamExists('usersCreate', 'createUserRequest', createUserRequest)
-            const localVarPath = `/users/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-            // authentication jwtAuth required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(createUserRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} uuid 
          * @param {PatchedUserRequest} [patchedUserRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPartialUpdate: async (uuid: string, patchedUserRequest?: PatchedUserRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        partialUpdate: async (uuid: string, patchedUserRequest?: PatchedUserRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('usersPartialUpdate', 'uuid', uuid)
+            assertParamExists('partialUpdate', 'uuid', uuid)
             const localVarPath = `/users/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -17066,9 +19037,9 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('usersRetrieve', 'uuid', uuid)
+            assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/users/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -17103,15 +19074,48 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
+         * Get Current User\'s Profile
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveMine: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {string} uuid 
          * @param {UserRequest} [userRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersUpdate: async (uuid: string, userRequest?: UserRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        update: async (uuid: string, userRequest?: UserRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('usersUpdate', 'uuid', uuid)
+            assertParamExists('update', 'uuid', uuid)
             const localVarPath = `/users/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -17160,27 +19164,15 @@ export const UsersApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {CreateUserRequest} createUserRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async usersCreate(createUserRequest: CreateUserRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateUser>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.usersCreate(createUserRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['UsersApi.usersCreate']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
          * @param {string} uuid 
          * @param {PatchedUserRequest} [patchedUserRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async usersPartialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.usersPartialUpdate(uuid, patchedUserRequest, options);
+        async partialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdate(uuid, patchedUserRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['UsersApi.usersPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.partialUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -17189,10 +19181,21 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async usersRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.usersRetrieve(uuid, options);
+        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['UsersApi.usersRetrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.retrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get Current User\'s Profile
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveMine(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveMine(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.retrieveMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -17202,10 +19205,10 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async usersUpdate(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.usersUpdate(uuid, userRequest, options);
+        async update(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.update(uuid, userRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['UsersApi.usersUpdate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.update']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -17220,22 +19223,13 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * 
-         * @param {CreateUserRequest} createUserRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        usersCreate(createUserRequest: CreateUserRequest, options?: RawAxiosRequestConfig): AxiosPromise<CreateUser> {
-            return localVarFp.usersCreate(createUserRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} uuid 
          * @param {PatchedUserRequest} [patchedUserRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPartialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig): AxiosPromise<User> {
-            return localVarFp.usersPartialUpdate(uuid, patchedUserRequest, options).then((request) => request(axios, basePath));
+        partialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig): AxiosPromise<User> {
+            return localVarFp.partialUpdate(uuid, patchedUserRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -17243,8 +19237,16 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<User> {
-            return localVarFp.usersRetrieve(uuid, options).then((request) => request(axios, basePath));
+        retrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<User> {
+            return localVarFp.retrieve(uuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get Current User\'s Profile
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveMine(options?: RawAxiosRequestConfig): AxiosPromise<User> {
+            return localVarFp.retrieveMine(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -17253,8 +19255,8 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersUpdate(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig): AxiosPromise<User> {
-            return localVarFp.usersUpdate(uuid, userRequest, options).then((request) => request(axios, basePath));
+        update(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig): AxiosPromise<User> {
+            return localVarFp.update(uuid, userRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -17268,25 +19270,14 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
 export class UsersApi extends BaseAPI {
     /**
      * 
-     * @param {CreateUserRequest} createUserRequest 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UsersApi
-     */
-    public usersCreate(createUserRequest: CreateUserRequest, options?: RawAxiosRequestConfig) {
-        return UsersApiFp(this.configuration).usersCreate(createUserRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} uuid 
      * @param {PatchedUserRequest} [patchedUserRequest] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersPartialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig) {
-        return UsersApiFp(this.configuration).usersPartialUpdate(uuid, patchedUserRequest, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdate(uuid: string, patchedUserRequest?: PatchedUserRequest, options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).partialUpdate(uuid, patchedUserRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -17296,8 +19287,18 @@ export class UsersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return UsersApiFp(this.configuration).usersRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public retrieve(uuid: string, options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).retrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get Current User\'s Profile
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UsersApi
+     */
+    public retrieveMine(options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).retrieveMine(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -17308,8 +19309,8 @@ export class UsersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersUpdate(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig) {
-        return UsersApiFp(this.configuration).usersUpdate(uuid, userRequest, options).then((request) => request(this.axios, this.basePath));
+    public update(uuid: string, userRequest?: UserRequest, options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).update(uuid, userRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
