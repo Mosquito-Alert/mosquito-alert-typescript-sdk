@@ -2399,68 +2399,6 @@ export type BitesListValidationErrorTypeEnum = typeof BitesListValidationErrorTy
 /**
  * 
  * @export
- * @interface BoundingBox
- */
-export interface BoundingBox {
-    /**
-     * photo bounding box coordinates top left x
-     * @type {number}
-     * @memberof BoundingBox
-     */
-    'x_min': number;
-    /**
-     * photo bounding box coordinates top left y
-     * @type {number}
-     * @memberof BoundingBox
-     */
-    'y_min': number;
-    /**
-     * photo bounding box coordinates bottom right x
-     * @type {number}
-     * @memberof BoundingBox
-     */
-    'x_max': number;
-    /**
-     * photo bounding box coordinates bottom right y
-     * @type {number}
-     * @memberof BoundingBox
-     */
-    'y_max': number;
-}
-/**
- * 
- * @export
- * @interface BoundingBoxRequest
- */
-export interface BoundingBoxRequest {
-    /**
-     * photo bounding box coordinates top left x
-     * @type {number}
-     * @memberof BoundingBoxRequest
-     */
-    'x_min': number;
-    /**
-     * photo bounding box coordinates top left y
-     * @type {number}
-     * @memberof BoundingBoxRequest
-     */
-    'y_min': number;
-    /**
-     * photo bounding box coordinates bottom right x
-     * @type {number}
-     * @memberof BoundingBoxRequest
-     */
-    'x_max': number;
-    /**
-     * photo bounding box coordinates bottom right y
-     * @type {number}
-     * @memberof BoundingBoxRequest
-     */
-    'y_max': number;
-}
-/**
- * 
- * @export
  * @interface BreedingSite
  */
 export interface BreedingSite {
@@ -2586,93 +2524,6 @@ export const BreedingSiteSiteTypeEnum = {
 } as const;
 
 export type BreedingSiteSiteTypeEnum = typeof BreedingSiteSiteTypeEnum[keyof typeof BreedingSiteSiteTypeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingSiteRequest
- */
-export interface BreedingSiteRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSiteRequest
-     */
-    'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSiteRequest
-     */
-    'sent_at': string;
-    /**
-     * 
-     * @type {LocationRequest}
-     * @memberof BreedingSiteRequest
-     */
-    'location': LocationRequest;
-    /**
-     * Note user attached to report.
-     * @type {string}
-     * @memberof BreedingSiteRequest
-     */
-    'note'?: string | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof BreedingSiteRequest
-     */
-    'tags'?: Array<string>;
-    /**
-     * 
-     * @type {Array<SimplePhotoRequest>}
-     * @memberof BreedingSiteRequest
-     */
-    'photos': Array<SimplePhotoRequest>;
-    /**
-     * Breeding site type.
-     * @type {string}
-     * @memberof BreedingSiteRequest
-     */
-    'site_type'?: BreedingSiteRequestSiteTypeEnum;
-    /**
-     * Either if the user perceived water in the breeding site.
-     * @type {boolean}
-     * @memberof BreedingSiteRequest
-     */
-    'has_water'?: boolean | null;
-    /**
-     * Either if the breeding site is found in a public area.
-     * @type {boolean}
-     * @memberof BreedingSiteRequest
-     */
-    'in_public_area'?: boolean | null;
-    /**
-     * Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
-     * @type {boolean}
-     * @memberof BreedingSiteRequest
-     */
-    'has_near_mosquitoes'?: boolean | null;
-    /**
-     * Either if the user perceived larvaes the breeding site.
-     * @type {boolean}
-     * @memberof BreedingSiteRequest
-     */
-    'has_larvae'?: boolean | null;
-}
-
-export const BreedingSiteRequestSiteTypeEnum = {
-    Basin: 'basin',
-    Bucket: 'bucket',
-    Fountain: 'fountain',
-    SmallContainer: 'small_container',
-    StormDrain: 'storm_drain',
-    Well: 'well',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type BreedingSiteRequestSiteTypeEnum = typeof BreedingSiteRequestSiteTypeEnum[keyof typeof BreedingSiteRequestSiteTypeEnum];
 
 /**
  * 
@@ -10818,245 +10669,6 @@ export type ObservationUserPerceivedMosquitoLegsEnum = typeof ObservationUserPer
 /**
  * 
  * @export
- * @interface ObservationPrediction
- */
-export interface ObservationPrediction {
-    /**
-     * The selected photo whose prediction represents the observation as the best classification result.
-     * @type {string}
-     * @memberof ObservationPrediction
-     */
-    'ref_photo_uuid': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ObservationPrediction
-     */
-    'insect_confidence': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationPrediction
-     */
-    'predicted_class': ObservationPredictionPredictedClassEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationPrediction
-     */
-    'predicted_class_display': ObservationPredictionPredictedClassDisplayEnum;
-    /**
-     * Whether if the photo prediction will be used as an executive validation for the report.
-     * @type {boolean}
-     * @memberof ObservationPrediction
-     */
-    'is_executive_validation': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationPrediction
-     */
-    'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationPrediction
-     */
-    'updated_at': string;
-}
-
-export const ObservationPredictionPredictedClassEnum = {
-    AeAlbopictus: 'ae_albopictus',
-    AeAegypti: 'ae_aegypti',
-    AeJaponicus: 'ae_japonicus',
-    AeKoreicus: 'ae_koreicus',
-    Culex: 'culex',
-    Anopheles: 'anopheles',
-    Culiseta: 'culiseta',
-    OtherSpecies: 'other_species',
-    NotSure: 'not_sure'
-} as const;
-
-export type ObservationPredictionPredictedClassEnum = typeof ObservationPredictionPredictedClassEnum[keyof typeof ObservationPredictionPredictedClassEnum];
-export const ObservationPredictionPredictedClassDisplayEnum = {
-    AedesAlbopictus: 'Aedes albopictus',
-    AedesAegypti: 'Aedes aegypti',
-    AedesJaponicus: 'Aedes japonicus',
-    AedesKoreicus: 'Aedes koreicus',
-    CulexSP: 'Culex (s.p)',
-    AnophelesSP: 'Anopheles (s.p.)',
-    CulisetaSP: 'Culiseta (s.p.)',
-    OhterSpecies: 'Ohter species',
-    Unidentifiable: 'Unidentifiable'
-} as const;
-
-export type ObservationPredictionPredictedClassDisplayEnum = typeof ObservationPredictionPredictedClassDisplayEnum[keyof typeof ObservationPredictionPredictedClassDisplayEnum];
-
-/**
- * 
- * @export
- * @interface ObservationPredictionRequest
- */
-export interface ObservationPredictionRequest {
-    /**
-     * The selected photo whose prediction represents the observation as the best classification result.
-     * @type {string}
-     * @memberof ObservationPredictionRequest
-     */
-    'ref_photo_uuid': string;
-    /**
-     * Whether if the photo prediction will be used as an executive validation for the report.
-     * @type {boolean}
-     * @memberof ObservationPredictionRequest
-     */
-    'is_executive_validation'?: boolean;
-}
-/**
- * 
- * @export
- * @interface ObservationRequest
- */
-export interface ObservationRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'sent_at': string;
-    /**
-     * 
-     * @type {LocationRequest}
-     * @memberof ObservationRequest
-     */
-    'location': LocationRequest;
-    /**
-     * Note user attached to report.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'note'?: string | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ObservationRequest
-     */
-    'tags'?: Array<string>;
-    /**
-     * 
-     * @type {Array<SimplePhotoRequest>}
-     * @memberof ObservationRequest
-     */
-    'photos': Array<SimplePhotoRequest>;
-    /**
-     * The environment where the event took place.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'event_environment'?: ObservationRequestEventEnvironmentEnum | null;
-    /**
-     * The moment of the day when the event took place.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'event_moment'?: ObservationRequestEventMomentEnum | null;
-    /**
-     * The mosquito specie perceived by the user.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'user_perceived_mosquito_specie'?: ObservationRequestUserPerceivedMosquitoSpecieEnum | null;
-    /**
-     * The species of mosquito that the thorax resembles, according to the user.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'user_perceived_mosquito_thorax'?: ObservationRequestUserPerceivedMosquitoThoraxEnum | null;
-    /**
-     * The species of mosquito that the abdomen resembles, according to the user.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'user_perceived_mosquito_abdomen'?: ObservationRequestUserPerceivedMosquitoAbdomenEnum | null;
-    /**
-     * The species of mosquito that the leg resembles, according to the user.
-     * @type {string}
-     * @memberof ObservationRequest
-     */
-    'user_perceived_mosquito_legs'?: ObservationRequestUserPerceivedMosquitoLegsEnum | null;
-}
-
-export const ObservationRequestEventEnvironmentEnum = {
-    Indoors: 'indoors',
-    Outdoors: 'outdoors',
-    Vehicle: 'vehicle',
-    Empty: ''
-} as const;
-
-export type ObservationRequestEventEnvironmentEnum = typeof ObservationRequestEventEnvironmentEnum[keyof typeof ObservationRequestEventEnvironmentEnum];
-export const ObservationRequestEventMomentEnum = {
-    Now: 'now',
-    LastMorning: 'last_morning',
-    LastMidday: 'last_midday',
-    LastAfternoon: 'last_afternoon',
-    LastNight: 'last_night',
-    Empty: ''
-} as const;
-
-export type ObservationRequestEventMomentEnum = typeof ObservationRequestEventMomentEnum[keyof typeof ObservationRequestEventMomentEnum];
-export const ObservationRequestUserPerceivedMosquitoSpecieEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationRequestUserPerceivedMosquitoSpecieEnum = typeof ObservationRequestUserPerceivedMosquitoSpecieEnum[keyof typeof ObservationRequestUserPerceivedMosquitoSpecieEnum];
-export const ObservationRequestUserPerceivedMosquitoThoraxEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationRequestUserPerceivedMosquitoThoraxEnum = typeof ObservationRequestUserPerceivedMosquitoThoraxEnum[keyof typeof ObservationRequestUserPerceivedMosquitoThoraxEnum];
-export const ObservationRequestUserPerceivedMosquitoAbdomenEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationRequestUserPerceivedMosquitoAbdomenEnum = typeof ObservationRequestUserPerceivedMosquitoAbdomenEnum[keyof typeof ObservationRequestUserPerceivedMosquitoAbdomenEnum];
-export const ObservationRequestUserPerceivedMosquitoLegsEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationRequestUserPerceivedMosquitoLegsEnum = typeof ObservationRequestUserPerceivedMosquitoLegsEnum[keyof typeof ObservationRequestUserPerceivedMosquitoLegsEnum];
-
-/**
- * 
- * @export
  * @interface ObservationsCreateCreatedAtErrorComponent
  */
 export interface ObservationsCreateCreatedAtErrorComponent {
@@ -12520,152 +12132,6 @@ export const ObservationsListValidationErrorTypeEnum = {
 export type ObservationsListValidationErrorTypeEnum = typeof ObservationsListValidationErrorTypeEnum[keyof typeof ObservationsListValidationErrorTypeEnum];
 
 /**
- * @type ObservationsPredictionCreateError
- * @export
- */
-export type ObservationsPredictionCreateError = { attr: 'is_executive_validation' } & ObservationsPredictionCreateIsExecutiveValidationErrorComponent | { attr: 'non_field_errors' } & ObservationsPredictionCreateNonFieldErrorsErrorComponent | { attr: 'ref_photo_uuid' } & ObservationsPredictionCreateRefPhotoUuidErrorComponent;
-
-/**
- * 
- * @export
- * @interface ObservationsPredictionCreateIsExecutiveValidationErrorComponent
- */
-export interface ObservationsPredictionCreateIsExecutiveValidationErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
-     */
-    'attr': ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
-     */
-    'code': ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateIsExecutiveValidationErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum = {
-    IsExecutiveValidation: 'is_executive_validation'
-} as const;
-
-export type ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum = typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentAttrEnum];
-export const ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum = {
-    Null: 'null'
-} as const;
-
-export type ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum = typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateIsExecutiveValidationErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsPredictionCreateNonFieldErrorsErrorComponent
- */
-export interface ObservationsPredictionCreateNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'attr': ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'code': ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum = {
-    NonFieldErrors: 'non_field_errors'
-} as const;
-
-export type ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentAttrEnum];
-export const ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null'
-} as const;
-
-export type ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateNonFieldErrorsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsPredictionCreateRefPhotoUuidErrorComponent
- */
-export interface ObservationsPredictionCreateRefPhotoUuidErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
-     */
-    'attr': ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
-     */
-    'code': ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateRefPhotoUuidErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum = {
-    RefPhotoUuid: 'ref_photo_uuid'
-} as const;
-
-export type ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum = typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum[keyof typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentAttrEnum];
-export const ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum = typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum[keyof typeof ObservationsPredictionCreateRefPhotoUuidErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsPredictionCreateValidationError
- */
-export interface ObservationsPredictionCreateValidationError {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsPredictionCreateValidationError
-     */
-    'type': ObservationsPredictionCreateValidationErrorTypeEnum;
-    /**
-     * 
-     * @type {Array<ObservationsPredictionCreateError>}
-     * @memberof ObservationsPredictionCreateValidationError
-     */
-    'errors': Array<ObservationsPredictionCreateError>;
-}
-
-export const ObservationsPredictionCreateValidationErrorTypeEnum = {
-    ValidationError: 'validation_error'
-} as const;
-
-export type ObservationsPredictionCreateValidationErrorTypeEnum = typeof ObservationsPredictionCreateValidationErrorTypeEnum[keyof typeof ObservationsPredictionCreateValidationErrorTypeEnum];
-
-/**
  * 
  * @export
  * @interface PaginatedBiteList
@@ -13025,1125 +12491,6 @@ export interface Photo {
      * @memberof Photo
      */
     'image_path': string;
-}
-/**
- * 
- * @export
- * @interface PhotoPrediction
- */
-export interface PhotoPrediction {
-    /**
-     * 
-     * @type {BoundingBox}
-     * @memberof PhotoPrediction
-     */
-    'bbox': BoundingBox;
-    /**
-     * Insect confidence
-     * @type {number}
-     * @memberof PhotoPrediction
-     */
-    'insect_confidence': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPrediction
-     */
-    'predicted_class'?: PhotoPredictionPredictedClassEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoPrediction
-     */
-    'threshold_deviation': number;
-    /**
-     * 
-     * @type {PredictionScore}
-     * @memberof PhotoPrediction
-     */
-    'scores': PredictionScore;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPrediction
-     */
-    'classifier_version': PhotoPredictionClassifierVersionEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPrediction
-     */
-    'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPrediction
-     */
-    'updated_at': string;
-}
-
-export const PhotoPredictionPredictedClassEnum = {
-    AeAlbopictus: 'ae_albopictus',
-    AeAegypti: 'ae_aegypti',
-    AeJaponicus: 'ae_japonicus',
-    AeKoreicus: 'ae_koreicus',
-    Culex: 'culex',
-    Anopheles: 'anopheles',
-    Culiseta: 'culiseta',
-    OtherSpecies: 'other_species',
-    NotSure: 'not_sure'
-} as const;
-
-export type PhotoPredictionPredictedClassEnum = typeof PhotoPredictionPredictedClassEnum[keyof typeof PhotoPredictionPredictedClassEnum];
-export const PhotoPredictionClassifierVersionEnum = {
-    V20231: 'v2023.1',
-    V20241: 'v2024.1',
-    V20251: 'v2025.1'
-} as const;
-
-export type PhotoPredictionClassifierVersionEnum = typeof PhotoPredictionClassifierVersionEnum[keyof typeof PhotoPredictionClassifierVersionEnum];
-
-/**
- * 
- * @export
- * @interface PhotoPredictionRequest
- */
-export interface PhotoPredictionRequest {
-    /**
-     * 
-     * @type {BoundingBoxRequest}
-     * @memberof PhotoPredictionRequest
-     */
-    'bbox': BoundingBoxRequest;
-    /**
-     * Insect confidence
-     * @type {number}
-     * @memberof PhotoPredictionRequest
-     */
-    'insect_confidence': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPredictionRequest
-     */
-    'predicted_class'?: PhotoPredictionRequestPredictedClassEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoPredictionRequest
-     */
-    'threshold_deviation': number;
-    /**
-     * 
-     * @type {PredictionScoreRequest}
-     * @memberof PhotoPredictionRequest
-     */
-    'scores': PredictionScoreRequest;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotoPredictionRequest
-     */
-    'classifier_version': PhotoPredictionRequestClassifierVersionEnum;
-}
-
-export const PhotoPredictionRequestPredictedClassEnum = {
-    AeAlbopictus: 'ae_albopictus',
-    AeAegypti: 'ae_aegypti',
-    AeJaponicus: 'ae_japonicus',
-    AeKoreicus: 'ae_koreicus',
-    Culex: 'culex',
-    Anopheles: 'anopheles',
-    Culiseta: 'culiseta',
-    OtherSpecies: 'other_species',
-    NotSure: 'not_sure'
-} as const;
-
-export type PhotoPredictionRequestPredictedClassEnum = typeof PhotoPredictionRequestPredictedClassEnum[keyof typeof PhotoPredictionRequestPredictedClassEnum];
-export const PhotoPredictionRequestClassifierVersionEnum = {
-    V20231: 'v2023.1',
-    V20241: 'v2024.1',
-    V20251: 'v2025.1'
-} as const;
-
-export type PhotoPredictionRequestClassifierVersionEnum = typeof PhotoPredictionRequestClassifierVersionEnum[keyof typeof PhotoPredictionRequestClassifierVersionEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
- */
-export interface PhotosPredictionCreateBboxNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
-     */
-    'attr': PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
-     */
-    'code': PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxNonFieldErrorsErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum = {
-    BboxNonFieldErrors: 'bbox.non_field_errors'
-} as const;
-
-export type PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentAttrEnum];
-export const PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxNonFieldErrorsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateBboxXMaxErrorComponent
- */
-export interface PhotosPredictionCreateBboxXMaxErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
-     */
-    'attr': PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
-     */
-    'code': PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMaxErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum = {
-    BboxXMax: 'bbox.x_max'
-} as const;
-
-export type PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxXMaxErrorComponentAttrEnum];
-export const PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxXMaxErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateBboxXMinErrorComponent
- */
-export interface PhotosPredictionCreateBboxXMinErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
-     */
-    'attr': PhotosPredictionCreateBboxXMinErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
-     */
-    'code': PhotosPredictionCreateBboxXMinErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxXMinErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateBboxXMinErrorComponentAttrEnum = {
-    BboxXMin: 'bbox.x_min'
-} as const;
-
-export type PhotosPredictionCreateBboxXMinErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxXMinErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxXMinErrorComponentAttrEnum];
-export const PhotosPredictionCreateBboxXMinErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateBboxXMinErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxXMinErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxXMinErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateBboxYMaxErrorComponent
- */
-export interface PhotosPredictionCreateBboxYMaxErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
-     */
-    'attr': PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
-     */
-    'code': PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMaxErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum = {
-    BboxYMax: 'bbox.y_max'
-} as const;
-
-export type PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxYMaxErrorComponentAttrEnum];
-export const PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxYMaxErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateBboxYMinErrorComponent
- */
-export interface PhotosPredictionCreateBboxYMinErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
-     */
-    'attr': PhotosPredictionCreateBboxYMinErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
-     */
-    'code': PhotosPredictionCreateBboxYMinErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateBboxYMinErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateBboxYMinErrorComponentAttrEnum = {
-    BboxYMin: 'bbox.y_min'
-} as const;
-
-export type PhotosPredictionCreateBboxYMinErrorComponentAttrEnum = typeof PhotosPredictionCreateBboxYMinErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateBboxYMinErrorComponentAttrEnum];
-export const PhotosPredictionCreateBboxYMinErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateBboxYMinErrorComponentCodeEnum = typeof PhotosPredictionCreateBboxYMinErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateBboxYMinErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateClassifierVersionErrorComponent
- */
-export interface PhotosPredictionCreateClassifierVersionErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
-     */
-    'attr': PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
-     */
-    'code': PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateClassifierVersionErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum = {
-    ClassifierVersion: 'classifier_version'
-} as const;
-
-export type PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum = typeof PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateClassifierVersionErrorComponentAttrEnum];
-export const PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum = typeof PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateClassifierVersionErrorComponentCodeEnum];
-
-/**
- * @type PhotosPredictionCreateError
- * @export
- */
-export type PhotosPredictionCreateError = { attr: 'bbox.non_field_errors' } & PhotosPredictionCreateBboxNonFieldErrorsErrorComponent | { attr: 'bbox.x_max' } & PhotosPredictionCreateBboxXMaxErrorComponent | { attr: 'bbox.x_min' } & PhotosPredictionCreateBboxXMinErrorComponent | { attr: 'bbox.y_max' } & PhotosPredictionCreateBboxYMaxErrorComponent | { attr: 'bbox.y_min' } & PhotosPredictionCreateBboxYMinErrorComponent | { attr: 'classifier_version' } & PhotosPredictionCreateClassifierVersionErrorComponent | { attr: 'insect_confidence' } & PhotosPredictionCreateInsectConfidenceErrorComponent | { attr: 'non_field_errors' } & PhotosPredictionCreateNonFieldErrorsErrorComponent | { attr: 'predicted_class' } & PhotosPredictionCreatePredictedClassErrorComponent | { attr: 'scores.ae_aegypti' } & PhotosPredictionCreateScoresAeAegyptiErrorComponent | { attr: 'scores.ae_albopictus' } & PhotosPredictionCreateScoresAeAlbopictusErrorComponent | { attr: 'scores.ae_japonicus' } & PhotosPredictionCreateScoresAeJaponicusErrorComponent | { attr: 'scores.ae_koreicus' } & PhotosPredictionCreateScoresAeKoreicusErrorComponent | { attr: 'scores.anopheles' } & PhotosPredictionCreateScoresAnophelesErrorComponent | { attr: 'scores.culex' } & PhotosPredictionCreateScoresCulexErrorComponent | { attr: 'scores.culiseta' } & PhotosPredictionCreateScoresCulisetaErrorComponent | { attr: 'scores.non_field_errors' } & PhotosPredictionCreateScoresNonFieldErrorsErrorComponent | { attr: 'scores.not_sure' } & PhotosPredictionCreateScoresNotSureErrorComponent | { attr: 'scores.other_species' } & PhotosPredictionCreateScoresOtherSpeciesErrorComponent | { attr: 'threshold_deviation' } & PhotosPredictionCreateThresholdDeviationErrorComponent;
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateInsectConfidenceErrorComponent
- */
-export interface PhotosPredictionCreateInsectConfidenceErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
-     */
-    'attr': PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
-     */
-    'code': PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateInsectConfidenceErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum = {
-    InsectConfidence: 'insect_confidence'
-} as const;
-
-export type PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum = typeof PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateInsectConfidenceErrorComponentAttrEnum];
-export const PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum = typeof PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateInsectConfidenceErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateNonFieldErrorsErrorComponent
- */
-export interface PhotosPredictionCreateNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'attr': PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'code': PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateNonFieldErrorsErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum = {
-    NonFieldErrors: 'non_field_errors'
-} as const;
-
-export type PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateNonFieldErrorsErrorComponentAttrEnum];
-export const PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null'
-} as const;
-
-export type PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateNonFieldErrorsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreatePredictedClassErrorComponent
- */
-export interface PhotosPredictionCreatePredictedClassErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
-     */
-    'attr': PhotosPredictionCreatePredictedClassErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
-     */
-    'code': PhotosPredictionCreatePredictedClassErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreatePredictedClassErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreatePredictedClassErrorComponentAttrEnum = {
-    PredictedClass: 'predicted_class'
-} as const;
-
-export type PhotosPredictionCreatePredictedClassErrorComponentAttrEnum = typeof PhotosPredictionCreatePredictedClassErrorComponentAttrEnum[keyof typeof PhotosPredictionCreatePredictedClassErrorComponentAttrEnum];
-export const PhotosPredictionCreatePredictedClassErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice',
-    Null: 'null'
-} as const;
-
-export type PhotosPredictionCreatePredictedClassErrorComponentCodeEnum = typeof PhotosPredictionCreatePredictedClassErrorComponentCodeEnum[keyof typeof PhotosPredictionCreatePredictedClassErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresAeAegyptiErrorComponent
- */
-export interface PhotosPredictionCreateScoresAeAegyptiErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAegyptiErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum = {
-    ScoresAeAegypti: 'scores.ae_aegypti'
-} as const;
-
-export type PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeAegyptiErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresAeAlbopictusErrorComponent
- */
-export interface PhotosPredictionCreateScoresAeAlbopictusErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeAlbopictusErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum = {
-    ScoresAeAlbopictus: 'scores.ae_albopictus'
-} as const;
-
-export type PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeAlbopictusErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresAeJaponicusErrorComponent
- */
-export interface PhotosPredictionCreateScoresAeJaponicusErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeJaponicusErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum = {
-    ScoresAeJaponicus: 'scores.ae_japonicus'
-} as const;
-
-export type PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeJaponicusErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresAeKoreicusErrorComponent
- */
-export interface PhotosPredictionCreateScoresAeKoreicusErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAeKoreicusErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum = {
-    ScoresAeKoreicus: 'scores.ae_koreicus'
-} as const;
-
-export type PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAeKoreicusErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresAnophelesErrorComponent
- */
-export interface PhotosPredictionCreateScoresAnophelesErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresAnophelesErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum = {
-    ScoresAnopheles: 'scores.anopheles'
-} as const;
-
-export type PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresAnophelesErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresAnophelesErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresCulexErrorComponent
- */
-export interface PhotosPredictionCreateScoresCulexErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresCulexErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresCulexErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulexErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresCulexErrorComponentAttrEnum = {
-    ScoresCulex: 'scores.culex'
-} as const;
-
-export type PhotosPredictionCreateScoresCulexErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresCulexErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresCulexErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresCulexErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresCulexErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresCulexErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresCulexErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresCulisetaErrorComponent
- */
-export interface PhotosPredictionCreateScoresCulisetaErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresCulisetaErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum = {
-    ScoresCuliseta: 'scores.culiseta'
-} as const;
-
-export type PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresCulisetaErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresCulisetaErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
- */
-export interface PhotosPredictionCreateScoresNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNonFieldErrorsErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum = {
-    ScoresNonFieldErrors: 'scores.non_field_errors'
-} as const;
-
-export type PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresNonFieldErrorsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresNotSureErrorComponent
- */
-export interface PhotosPredictionCreateScoresNotSureErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresNotSureErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum = {
-    ScoresNotSure: 'scores.not_sure'
-} as const;
-
-export type PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresNotSureErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresNotSureErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateScoresOtherSpeciesErrorComponent
- */
-export interface PhotosPredictionCreateScoresOtherSpeciesErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
-     */
-    'attr': PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
-     */
-    'code': PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateScoresOtherSpeciesErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum = {
-    ScoresOtherSpecies: 'scores.other_species'
-} as const;
-
-export type PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum = typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentAttrEnum];
-export const PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum = typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateScoresOtherSpeciesErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateThresholdDeviationErrorComponent
- */
-export interface PhotosPredictionCreateThresholdDeviationErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
-     */
-    'attr': PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
-     */
-    'code': PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateThresholdDeviationErrorComponent
-     */
-    'detail': string;
-}
-
-export const PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum = {
-    ThresholdDeviation: 'threshold_deviation'
-} as const;
-
-export type PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum = typeof PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum[keyof typeof PhotosPredictionCreateThresholdDeviationErrorComponentAttrEnum];
-export const PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    MaxValue: 'max_value',
-    MinValue: 'min_value',
-    Null: 'null',
-    Required: 'required'
-} as const;
-
-export type PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum = typeof PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum[keyof typeof PhotosPredictionCreateThresholdDeviationErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface PhotosPredictionCreateValidationError
- */
-export interface PhotosPredictionCreateValidationError {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionCreateValidationError
-     */
-    'type': PhotosPredictionCreateValidationErrorTypeEnum;
-    /**
-     * 
-     * @type {Array<PhotosPredictionCreateError>}
-     * @memberof PhotosPredictionCreateValidationError
-     */
-    'errors': Array<PhotosPredictionCreateError>;
-}
-
-export const PhotosPredictionCreateValidationErrorTypeEnum = {
-    ValidationError: 'validation_error'
-} as const;
-
-export type PhotosPredictionCreateValidationErrorTypeEnum = typeof PhotosPredictionCreateValidationErrorTypeEnum[keyof typeof PhotosPredictionCreateValidationErrorTypeEnum];
-
-/**
- * 
- * @export
- * @interface PredictionScore
- */
-export interface PredictionScore {
-    /**
-     * Score value for the class Aedes albopictus
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'ae_albopictus': number;
-    /**
-     * Score value for the class Aedes aegypti
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'ae_aegypti': number;
-    /**
-     * Score value for the class Aedes japonicus
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'ae_japonicus': number;
-    /**
-     * Score value for the class Aedes koreicus
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'ae_koreicus': number;
-    /**
-     * Score value for the class Culex (s.p)
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'culex': number;
-    /**
-     * Score value for the class Anopheles (s.p.)
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'anopheles': number;
-    /**
-     * Score value for the class Culiseta (s.p.)
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'culiseta': number;
-    /**
-     * Score value for the class Ohter species
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'other_species': number;
-    /**
-     * Score value for the class Unidentifiable
-     * @type {number}
-     * @memberof PredictionScore
-     */
-    'not_sure': number;
-}
-/**
- * 
- * @export
- * @interface PredictionScoreRequest
- */
-export interface PredictionScoreRequest {
-    /**
-     * Score value for the class Aedes albopictus
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'ae_albopictus': number;
-    /**
-     * Score value for the class Aedes aegypti
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'ae_aegypti': number;
-    /**
-     * Score value for the class Aedes japonicus
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'ae_japonicus': number;
-    /**
-     * Score value for the class Aedes koreicus
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'ae_koreicus': number;
-    /**
-     * Score value for the class Culex (s.p)
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'culex': number;
-    /**
-     * Score value for the class Anopheles (s.p.)
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'anopheles': number;
-    /**
-     * Score value for the class Culiseta (s.p.)
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'culiseta': number;
-    /**
-     * Score value for the class Ohter species
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'other_species': number;
-    /**
-     * Score value for the class Unidentifiable
-     * @type {number}
-     * @memberof PredictionScoreRequest
-     */
-    'not_sure': number;
 }
 /**
  * 
@@ -15673,13 +14020,29 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
     return {
         /**
          * 
-         * @param {BreedingSiteRequest} breedingSiteRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateSiteTypeEnum} [siteType] Breeding site type.
+         * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
+         * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
+         * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+         * @param {boolean | null} [hasLarvae] Either if the user perceived larvaes the breeding site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (breedingSiteRequest: BreedingSiteRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'breedingSiteRequest' is not null or undefined
-            assertParamExists('create', 'breedingSiteRequest', breedingSiteRequest)
+        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, siteType?: CreateSiteTypeEnum, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'createdAt' is not null or undefined
+            assertParamExists('create', 'createdAt', createdAt)
+            // verify required parameter 'sentAt' is not null or undefined
+            assertParamExists('create', 'sentAt', sentAt)
+            // verify required parameter 'location' is not null or undefined
+            assertParamExists('create', 'location', location)
+            // verify required parameter 'photos' is not null or undefined
+            assertParamExists('create', 'photos', photos)
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15691,6 +14054,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
 
             // authentication cookieAuth required
 
@@ -15702,13 +14066,57 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
+            if (createdAt !== undefined) { 
+                localVarFormParams.append('created_at', createdAt as any);
+            }
     
-            localVarHeaderParameter['Content-Type'] = 'application/json';
+            if (sentAt !== undefined) { 
+                localVarFormParams.append('sent_at', sentAt as any);
+            }
+    
+            if (location !== undefined) { 
+                localVarFormParams.append('location', new Blob([JSON.stringify(location)], { type: "application/json", }));
+            }
+    
+            if (note !== undefined) { 
+                localVarFormParams.append('note', note as any);
+            }
+                if (tags) {
+                localVarFormParams.append('tags', tags.join(COLLECTION_FORMATS.csv));
+            }
 
+                if (photos) {
+                localVarFormParams.append('photos', photos.join(COLLECTION_FORMATS.csv));
+            }
+
+    
+            if (siteType !== undefined) { 
+                localVarFormParams.append('site_type', siteType as any);
+            }
+    
+            if (hasWater !== undefined) { 
+                localVarFormParams.append('has_water', String(hasWater) as any);
+            }
+    
+            if (inPublicArea !== undefined) { 
+                localVarFormParams.append('in_public_area', String(inPublicArea) as any);
+            }
+    
+            if (hasNearMosquitoes !== undefined) { 
+                localVarFormParams.append('has_near_mosquitoes', String(hasNearMosquitoes) as any);
+            }
+    
+            if (hasLarvae !== undefined) { 
+                localVarFormParams.append('has_larvae', String(hasLarvae) as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(breedingSiteRequest, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = localVarFormParams;
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -16056,12 +14464,22 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {BreedingSiteRequest} breedingSiteRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateSiteTypeEnum} [siteType] Breeding site type.
+         * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
+         * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
+         * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+         * @param {boolean | null} [hasLarvae] Either if the user perceived larvaes the breeding site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(breedingSiteRequest, options);
+        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, siteType?: CreateSiteTypeEnum, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -16154,12 +14572,22 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
     return {
         /**
          * 
-         * @param {BreedingSiteRequest} breedingSiteRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateSiteTypeEnum} [siteType] Breeding site type.
+         * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
+         * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
+         * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+         * @param {boolean | null} [hasLarvae] Either if the user perceived larvaes the breeding site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
-            return localVarFp.create(breedingSiteRequest, options).then((request) => request(axios, basePath));
+        create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, siteType?: CreateSiteTypeEnum, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
+            return localVarFp.create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16237,13 +14665,23 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
 export class BreedingSitesApi extends BaseAPI {
     /**
      * 
-     * @param {BreedingSiteRequest} breedingSiteRequest 
+     * @param {string} createdAt 
+     * @param {string} sentAt 
+     * @param {LocationRequest} location 
+     * @param {Array<SimplePhotoRequest>} photos 
+     * @param {string | null} [note] Note user attached to report.
+     * @param {Array<string>} [tags] 
+     * @param {CreateSiteTypeEnum} [siteType] Breeding site type.
+     * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
+     * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
+     * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+     * @param {boolean | null} [hasLarvae] Either if the user perceived larvaes the breeding site.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public create(breedingSiteRequest: BreedingSiteRequest, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).create(breedingSiteRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, siteType?: CreateSiteTypeEnum, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16319,6 +14757,20 @@ export class BreedingSitesApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const CreateSiteTypeEnum = {
+    Basin: 'basin',
+    Bucket: 'bucket',
+    Fountain: 'fountain',
+    SmallContainer: 'small_container',
+    StormDrain: 'storm_drain',
+    Well: 'well',
+    Other: 'other',
+    Empty: ''
+} as const;
+export type CreateSiteTypeEnum = typeof CreateSiteTypeEnum[keyof typeof CreateSiteTypeEnum];
 /**
  * @export
  */
@@ -17700,13 +16152,30 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {ObservationRequest} observationRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
+         * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
+         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
+         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (observationRequest: ObservationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'observationRequest' is not null or undefined
-            assertParamExists('create', 'observationRequest', observationRequest)
+        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'createdAt' is not null or undefined
+            assertParamExists('create', 'createdAt', createdAt)
+            // verify required parameter 'sentAt' is not null or undefined
+            assertParamExists('create', 'sentAt', sentAt)
+            // verify required parameter 'location' is not null or undefined
+            assertParamExists('create', 'location', location)
+            // verify required parameter 'photos' is not null or undefined
+            assertParamExists('create', 'photos', photos)
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17718,6 +16187,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
 
             // authentication cookieAuth required
 
@@ -17729,13 +16199,61 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
+            if (createdAt !== undefined) { 
+                localVarFormParams.append('created_at', createdAt as any);
+            }
     
-            localVarHeaderParameter['Content-Type'] = 'application/json';
+            if (sentAt !== undefined) { 
+                localVarFormParams.append('sent_at', sentAt as any);
+            }
+    
+            if (location !== undefined) { 
+                localVarFormParams.append('location', new Blob([JSON.stringify(location)], { type: "application/json", }));
+            }
+    
+            if (note !== undefined) { 
+                localVarFormParams.append('note', note as any);
+            }
+                if (tags) {
+                localVarFormParams.append('tags', tags.join(COLLECTION_FORMATS.csv));
+            }
 
+                if (photos) {
+                localVarFormParams.append('photos', photos.join(COLLECTION_FORMATS.csv));
+            }
+
+    
+            if (eventEnvironment !== undefined) { 
+                localVarFormParams.append('event_environment', eventEnvironment as any);
+            }
+    
+            if (eventMoment !== undefined) { 
+                localVarFormParams.append('event_moment', eventMoment as any);
+            }
+    
+            if (userPerceivedMosquitoSpecie !== undefined) { 
+                localVarFormParams.append('user_perceived_mosquito_specie', userPerceivedMosquitoSpecie as any);
+            }
+    
+            if (userPerceivedMosquitoThorax !== undefined) { 
+                localVarFormParams.append('user_perceived_mosquito_thorax', userPerceivedMosquitoThorax as any);
+            }
+    
+            if (userPerceivedMosquitoAbdomen !== undefined) { 
+                localVarFormParams.append('user_perceived_mosquito_abdomen', userPerceivedMosquitoAbdomen as any);
+            }
+    
+            if (userPerceivedMosquitoLegs !== undefined) { 
+                localVarFormParams.append('user_perceived_mosquito_legs', userPerceivedMosquitoLegs as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(observationRequest, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = localVarFormParams;
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17789,8 +16307,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -17806,7 +16322,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17842,14 +16358,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
-            }
-
-            if (hasPrediction !== undefined) {
-                localVarQueryParameter['has_prediction'] = hasPrediction;
-            }
-
-            if (hasPredictionsAllPhotos !== undefined) {
-                localVarQueryParameter['has_predictions_all_photos'] = hasPredictionsAllPhotos;
             }
 
             if (locationCountryId !== undefined) {
@@ -17924,8 +16432,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -17941,7 +16447,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17972,14 +16478,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
-            }
-
-            if (hasPrediction !== undefined) {
-                localVarQueryParameter['has_prediction'] = hasPrediction;
-            }
-
-            if (hasPredictionsAllPhotos !== undefined) {
-                localVarQueryParameter['has_predictions_all_photos'] = hasPredictionsAllPhotos;
             }
 
             if (locationCountryId !== undefined) {
@@ -18037,126 +16535,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             if (userUuid !== undefined) {
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {ObservationPredictionRequest} observationPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionCreate: async (uuid: string, observationPredictionRequest: ObservationPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionCreate', 'uuid', uuid)
-            // verify required parameter 'observationPredictionRequest' is not null or undefined
-            assertParamExists('predictionCreate', 'observationPredictionRequest', observationPredictionRequest)
-            const localVarPath = `/observations/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(observationPredictionRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionDestroy', 'uuid', uuid)
-            const localVarPath = `/observations/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionRetrieve', 'uuid', uuid)
-            const localVarPath = `/observations/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -18223,12 +16601,23 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {ObservationRequest} observationRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
+         * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
+         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
+         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(observationRequest, options);
+        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -18250,8 +16639,6 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -18267,8 +16654,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -18278,8 +16665,6 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -18295,47 +16680,10 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.listMine']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {ObservationPredictionRequest} observationPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionCreate(uuid, observationPredictionRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionCreate']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionDestroy(uuid, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionDestroy']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ObservationPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionRetrieve(uuid, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.predictionRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -18362,12 +16710,23 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {ObservationRequest} observationRequest 
+         * @param {string} createdAt 
+         * @param {string} sentAt 
+         * @param {LocationRequest} location 
+         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {string | null} [note] Note user attached to report.
+         * @param {Array<string>} [tags] 
+         * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
+         * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
+         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
+         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
+         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
-            return localVarFp.create(observationRequest, options).then((request) => request(axios, basePath));
+        create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
+            return localVarFp.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -18383,8 +16742,6 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -18400,16 +16757,14 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Observations
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-         * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
          * @param {number | null} [locationCountryId] 
          * @param {string} [locationNuts2] 
          * @param {string} [locationNuts3] 
@@ -18425,36 +16780,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {ObservationPredictionRequest} observationPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
-            return localVarFp.predictionCreate(uuid, observationPredictionRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.predictionDestroy(uuid, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<ObservationPrediction> {
-            return localVarFp.predictionRetrieve(uuid, options).then((request) => request(axios, basePath));
+        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -18477,13 +16804,24 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
 export class ObservationsApi extends BaseAPI {
     /**
      * 
-     * @param {ObservationRequest} observationRequest 
+     * @param {string} createdAt 
+     * @param {string} sentAt 
+     * @param {LocationRequest} location 
+     * @param {Array<SimplePhotoRequest>} photos 
+     * @param {string | null} [note] Note user attached to report.
+     * @param {Array<string>} [tags] 
+     * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
+     * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
+     * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
+     * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
+     * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
+     * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public create(observationRequest: ObservationRequest, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).create(observationRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -18502,8 +16840,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
-     * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-     * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
@@ -18520,8 +16856,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -18529,8 +16865,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
-     * @param {boolean} [hasPrediction] Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-     * @param {boolean} [hasPredictionsAllPhotos] Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
      * @param {number | null} [locationCountryId] 
      * @param {string} [locationNuts2] 
      * @param {string} [locationNuts3] 
@@ -18547,42 +16881,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, hasPrediction?: boolean, hasPredictionsAllPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {ObservationPredictionRequest} observationPredictionRequest 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApi
-     */
-    public predictionCreate(uuid: string, observationPredictionRequest: ObservationPredictionRequest, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).predictionCreate(uuid, observationPredictionRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApi
-     */
-    public predictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).predictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApi
-     */
-    public predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).predictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -18597,6 +16897,80 @@ export class ObservationsApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const CreateEventEnvironmentEnum = {
+    Indoors: 'indoors',
+    Outdoors: 'outdoors',
+    Vehicle: 'vehicle',
+    Empty: ''
+} as const;
+export type CreateEventEnvironmentEnum = typeof CreateEventEnvironmentEnum[keyof typeof CreateEventEnvironmentEnum];
+/**
+ * @export
+ */
+export const CreateEventMomentEnum = {
+    Now: 'now',
+    LastMorning: 'last_morning',
+    LastMidday: 'last_midday',
+    LastAfternoon: 'last_afternoon',
+    LastNight: 'last_night',
+    Empty: ''
+} as const;
+export type CreateEventMomentEnum = typeof CreateEventMomentEnum[keyof typeof CreateEventMomentEnum];
+/**
+ * @export
+ */
+export const CreateUserPerceivedMosquitoSpecieEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+export type CreateUserPerceivedMosquitoSpecieEnum = typeof CreateUserPerceivedMosquitoSpecieEnum[keyof typeof CreateUserPerceivedMosquitoSpecieEnum];
+/**
+ * @export
+ */
+export const CreateUserPerceivedMosquitoThoraxEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+export type CreateUserPerceivedMosquitoThoraxEnum = typeof CreateUserPerceivedMosquitoThoraxEnum[keyof typeof CreateUserPerceivedMosquitoThoraxEnum];
+/**
+ * @export
+ */
+export const CreateUserPerceivedMosquitoAbdomenEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+export type CreateUserPerceivedMosquitoAbdomenEnum = typeof CreateUserPerceivedMosquitoAbdomenEnum[keyof typeof CreateUserPerceivedMosquitoAbdomenEnum];
+/**
+ * @export
+ */
+export const CreateUserPerceivedMosquitoLegsEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+export type CreateUserPerceivedMosquitoLegsEnum = typeof CreateUserPerceivedMosquitoLegsEnum[keyof typeof CreateUserPerceivedMosquitoLegsEnum];
 /**
  * @export
  */
@@ -18824,126 +17198,6 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * 
          * @param {string} uuid 
-         * @param {PhotoPredictionRequest} photoPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionCreate: async (uuid: string, photoPredictionRequest: PhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionCreate', 'uuid', uuid)
-            // verify required parameter 'photoPredictionRequest' is not null or undefined
-            assertParamExists('predictionCreate', 'photoPredictionRequest', photoPredictionRequest)
-            const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(photoPredictionRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionDestroy: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionDestroy', 'uuid', uuid)
-            const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionRetrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('predictionRetrieve', 'uuid', uuid)
-            const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication cookieAuth required
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -18992,43 +17246,6 @@ export const PhotosApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} uuid 
-         * @param {PhotoPredictionRequest} photoPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionCreate(uuid, photoPredictionRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionCreate']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionDestroy(uuid, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionDestroy']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionRetrieve(uuid, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['PhotosApi.predictionRetrieve']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19051,34 +17268,6 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
         /**
          * 
          * @param {string} uuid 
-         * @param {PhotoPredictionRequest} photoPredictionRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.predictionCreate(uuid, photoPredictionRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionDestroy(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.predictionDestroy(uuid, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.predictionRetrieve(uuid, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19095,40 +17284,6 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
  * @extends {BaseAPI}
  */
 export class PhotosApi extends BaseAPI {
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {PhotoPredictionRequest} photoPredictionRequest 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PhotosApi
-     */
-    public predictionCreate(uuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).predictionCreate(uuid, photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PhotosApi
-     */
-    public predictionDestroy(uuid: string, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).predictionDestroy(uuid, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} uuid 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PhotosApi
-     */
-    public predictionRetrieve(uuid: string, options?: RawAxiosRequestConfig) {
-        return PhotosApiFp(this.configuration).predictionRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
-    }
-
     /**
      * 
      * @param {string} uuid 
