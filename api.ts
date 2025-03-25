@@ -26,6 +26,32 @@ import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerM
 /**
  * 
  * @export
+ * @interface AdmBoundaries
+ */
+export interface AdmBoundaries {
+    /**
+     * NUTS (Nomenclature of Territorial Units for Statistics). A hierarchical system used by the European Union to divide its territory into comparable regions for statistical purposes.
+     * @type {NutsAdmBoundaries}
+     * @memberof AdmBoundaries
+     */
+    'nuts'?: NutsAdmBoundaries;
+}
+/**
+ * 
+ * @export
+ * @interface AdmBoundariesRequest
+ */
+export interface AdmBoundariesRequest {
+    /**
+     * NUTS (Nomenclature of Territorial Units for Statistics). A hierarchical system used by the European Union to divide its territory into comparable regions for statistical purposes.
+     * @type {NutsAdmBoundariesRequest}
+     * @memberof AdmBoundariesRequest
+     */
+    'nuts'?: NutsAdmBoundariesRequest;
+}
+/**
+ * 
+ * @export
  * @interface AppUserTokenObtainPair
  */
 export interface AppUserTokenObtainPair {
@@ -814,37 +840,37 @@ export interface Bite {
      * @type {number}
      * @memberof Bite
      */
-    'head_bite_count'?: number | null;
+    'head_bite_count'?: number;
     /**
      * Number of bites reported in the left arm.
      * @type {number}
      * @memberof Bite
      */
-    'left_arm_bite_count'?: number | null;
+    'left_arm_bite_count'?: number;
     /**
      * Number of bites reported in the right arm.
      * @type {number}
      * @memberof Bite
      */
-    'right_arm_bite_count'?: number | null;
+    'right_arm_bite_count'?: number;
     /**
      * Number of bites reported in the chest.
      * @type {number}
      * @memberof Bite
      */
-    'chest_bite_count'?: number | null;
+    'chest_bite_count'?: number;
     /**
      * Number of bites reported in the left leg.
      * @type {number}
      * @memberof Bite
      */
-    'left_leg_bite_count'?: number | null;
+    'left_leg_bite_count'?: number;
     /**
      * Number of bites reported in the right leg.
      * @type {number}
      * @memberof Bite
      */
-    'right_leg_bite_count'?: number | null;
+    'right_leg_bite_count'?: number;
 }
 
 export const BiteEventEnvironmentEnum = {
@@ -919,37 +945,37 @@ export interface BiteRequest {
      * @type {number}
      * @memberof BiteRequest
      */
-    'head_bite_count'?: number | null;
+    'head_bite_count'?: number;
     /**
      * Number of bites reported in the left arm.
      * @type {number}
      * @memberof BiteRequest
      */
-    'left_arm_bite_count'?: number | null;
+    'left_arm_bite_count'?: number;
     /**
      * Number of bites reported in the right arm.
      * @type {number}
      * @memberof BiteRequest
      */
-    'right_arm_bite_count'?: number | null;
+    'right_arm_bite_count'?: number;
     /**
      * Number of bites reported in the chest.
      * @type {number}
      * @memberof BiteRequest
      */
-    'chest_bite_count'?: number | null;
+    'chest_bite_count'?: number;
     /**
      * Number of bites reported in the left leg.
      * @type {number}
      * @memberof BiteRequest
      */
-    'left_leg_bite_count'?: number | null;
+    'left_leg_bite_count'?: number;
     /**
      * Number of bites reported in the right leg.
      * @type {number}
      * @memberof BiteRequest
      */
-    'right_leg_bite_count'?: number | null;
+    'right_leg_bite_count'?: number;
 }
 
 export const BiteRequestEventEnvironmentEnum = {
@@ -1004,7 +1030,8 @@ export const BitesCreateChestBiteCountErrorComponentAttrEnum = {
 export type BitesCreateChestBiteCountErrorComponentAttrEnum = typeof BitesCreateChestBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateChestBiteCountErrorComponentAttrEnum];
 export const BitesCreateChestBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateChestBiteCountErrorComponentCodeEnum = typeof BitesCreateChestBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateChestBiteCountErrorComponentCodeEnum];
@@ -1055,7 +1082,7 @@ export type BitesCreateCreatedAtErrorComponentCodeEnum = typeof BitesCreateCreat
  * @type BitesCreateError
  * @export
  */
-export type BitesCreateError = { attr: 'chest_bite_count' } & BitesCreateChestBiteCountErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'head_bite_count' } & BitesCreateHeadBiteCountErrorComponent | { attr: 'left_arm_bite_count' } & BitesCreateLeftArmBiteCountErrorComponent | { attr: 'left_leg_bite_count' } & BitesCreateLeftLegBiteCountErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'right_arm_bite_count' } & BitesCreateRightArmBiteCountErrorComponent | { attr: 'right_leg_bite_count' } & BitesCreateRightLegBiteCountErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
+export type BitesCreateError = { attr: 'chest_bite_count' } & BitesCreateChestBiteCountErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'head_bite_count' } & BitesCreateHeadBiteCountErrorComponent | { attr: 'left_arm_bite_count' } & BitesCreateLeftArmBiteCountErrorComponent | { attr: 'left_leg_bite_count' } & BitesCreateLeftLegBiteCountErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'right_arm_bite_count' } & BitesCreateRightArmBiteCountErrorComponent | { attr: 'right_leg_bite_count' } & BitesCreateRightLegBiteCountErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
 
 /**
  * 
@@ -1164,7 +1191,8 @@ export const BitesCreateHeadBiteCountErrorComponentAttrEnum = {
 export type BitesCreateHeadBiteCountErrorComponentAttrEnum = typeof BitesCreateHeadBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentAttrEnum];
 export const BitesCreateHeadBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateHeadBiteCountErrorComponentCodeEnum = typeof BitesCreateHeadBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentCodeEnum];
@@ -1202,7 +1230,8 @@ export const BitesCreateLeftArmBiteCountErrorComponentAttrEnum = {
 export type BitesCreateLeftArmBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum];
 export const BitesCreateLeftArmBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateLeftArmBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum];
@@ -1240,7 +1269,8 @@ export const BitesCreateLeftLegBiteCountErrorComponentAttrEnum = {
 export type BitesCreateLeftLegBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum];
 export const BitesCreateLeftLegBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateLeftLegBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum];
@@ -1325,41 +1355,41 @@ export type BitesCreateLocationPointErrorComponentCodeEnum = typeof BitesCreateL
 /**
  * 
  * @export
- * @interface BitesCreateLocationTypeErrorComponent
+ * @interface BitesCreateLocationSourceErrorComponent
  */
-export interface BitesCreateLocationTypeErrorComponent {
+export interface BitesCreateLocationSourceErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateLocationTypeErrorComponent
+     * @memberof BitesCreateLocationSourceErrorComponent
      */
-    'attr': BitesCreateLocationTypeErrorComponentAttrEnum;
+    'attr': BitesCreateLocationSourceErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateLocationTypeErrorComponent
+     * @memberof BitesCreateLocationSourceErrorComponent
      */
-    'code': BitesCreateLocationTypeErrorComponentCodeEnum;
+    'code': BitesCreateLocationSourceErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateLocationTypeErrorComponent
+     * @memberof BitesCreateLocationSourceErrorComponent
      */
     'detail': string;
 }
 
-export const BitesCreateLocationTypeErrorComponentAttrEnum = {
-    LocationType: 'location.type'
+export const BitesCreateLocationSourceErrorComponentAttrEnum = {
+    LocationSource: 'location.source'
 } as const;
 
-export type BitesCreateLocationTypeErrorComponentAttrEnum = typeof BitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BitesCreateLocationTypeErrorComponentAttrEnum];
-export const BitesCreateLocationTypeErrorComponentCodeEnum = {
+export type BitesCreateLocationSourceErrorComponentAttrEnum = typeof BitesCreateLocationSourceErrorComponentAttrEnum[keyof typeof BitesCreateLocationSourceErrorComponentAttrEnum];
+export const BitesCreateLocationSourceErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BitesCreateLocationTypeErrorComponentCodeEnum = typeof BitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BitesCreateLocationTypeErrorComponentCodeEnum];
+export type BitesCreateLocationSourceErrorComponentCodeEnum = typeof BitesCreateLocationSourceErrorComponentCodeEnum[keyof typeof BitesCreateLocationSourceErrorComponentCodeEnum];
 
 /**
  * 
@@ -1471,7 +1501,8 @@ export const BitesCreateRightArmBiteCountErrorComponentAttrEnum = {
 export type BitesCreateRightArmBiteCountErrorComponentAttrEnum = typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum];
 export const BitesCreateRightArmBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateRightArmBiteCountErrorComponentCodeEnum = typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum];
@@ -1509,7 +1540,8 @@ export const BitesCreateRightLegBiteCountErrorComponentAttrEnum = {
 export type BitesCreateRightLegBiteCountErrorComponentAttrEnum = typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum];
 export const BitesCreateRightLegBiteCountErrorComponentCodeEnum = {
     Invalid: 'invalid',
-    MaxStringLength: 'max_string_length'
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
 } as const;
 
 export type BitesCreateRightLegBiteCountErrorComponentCodeEnum = typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum];
@@ -1705,7 +1737,81 @@ export type BitesListCreatedAtErrorComponentCodeEnum = typeof BitesListCreatedAt
  * @type BitesListError
  * @export
  */
-export type BitesListError = { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent;
+export type BitesListError = { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & BitesListLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & BitesListLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & BitesListLocationCountryIdErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BitesListLocationAdmNuts2ErrorComponent
+ */
+export interface BitesListLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts2ErrorComponent
+     */
+    'attr': BitesListLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts2ErrorComponent
+     */
+    'code': BitesListLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type BitesListLocationAdmNuts2ErrorComponentAttrEnum = typeof BitesListLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof BitesListLocationAdmNuts2ErrorComponentAttrEnum];
+export const BitesListLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListLocationAdmNuts2ErrorComponentCodeEnum = typeof BitesListLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof BitesListLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListLocationAdmNuts3ErrorComponent
+ */
+export interface BitesListLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts3ErrorComponent
+     */
+    'attr': BitesListLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts3ErrorComponent
+     */
+    'code': BitesListLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type BitesListLocationAdmNuts3ErrorComponentAttrEnum = typeof BitesListLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof BitesListLocationAdmNuts3ErrorComponentAttrEnum];
+export const BitesListLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListLocationAdmNuts3ErrorComponentCodeEnum = typeof BitesListLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof BitesListLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -1743,80 +1849,6 @@ export const BitesListLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type BitesListLocationCountryIdErrorComponentCodeEnum = typeof BitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BitesListLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesListLocationNuts2ErrorComponent
- */
-export interface BitesListLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts2ErrorComponent
-     */
-    'attr': BitesListLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts2ErrorComponent
-     */
-    'code': BitesListLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesListLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type BitesListLocationNuts2ErrorComponentAttrEnum = typeof BitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BitesListLocationNuts2ErrorComponentAttrEnum];
-export const BitesListLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BitesListLocationNuts2ErrorComponentCodeEnum = typeof BitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BitesListLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesListLocationNuts3ErrorComponent
- */
-export interface BitesListLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts3ErrorComponent
-     */
-    'attr': BitesListLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts3ErrorComponent
-     */
-    'code': BitesListLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesListLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type BitesListLocationNuts3ErrorComponentAttrEnum = typeof BitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BitesListLocationNuts3ErrorComponentAttrEnum];
-export const BitesListLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BitesListLocationNuts3ErrorComponentCodeEnum = typeof BitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BitesListLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -1859,7 +1891,81 @@ export type BitesListMineCreatedAtErrorComponentCodeEnum = typeof BitesListMineC
  * @type BitesListMineError
  * @export
  */
-export type BitesListMineError = { attr: 'created_at' } & BitesListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & BitesListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BitesListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BitesListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & BitesListMineOrderByErrorComponent | { attr: 'received_at' } & BitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListMineUserUuidErrorComponent;
+export type BitesListMineError = { attr: 'created_at' } & BitesListMineCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & BitesListMineLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & BitesListMineLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & BitesListMineLocationCountryIdErrorComponent | { attr: 'order_by' } & BitesListMineOrderByErrorComponent | { attr: 'received_at' } & BitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineLocationAdmNuts2ErrorComponent
+ */
+export interface BitesListMineLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'attr': BitesListMineLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'code': BitesListMineLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type BitesListMineLocationAdmNuts2ErrorComponentAttrEnum = typeof BitesListMineLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof BitesListMineLocationAdmNuts2ErrorComponentAttrEnum];
+export const BitesListMineLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineLocationAdmNuts2ErrorComponentCodeEnum = typeof BitesListMineLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof BitesListMineLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesListMineLocationAdmNuts3ErrorComponent
+ */
+export interface BitesListMineLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'attr': BitesListMineLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'code': BitesListMineLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesListMineLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type BitesListMineLocationAdmNuts3ErrorComponentAttrEnum = typeof BitesListMineLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof BitesListMineLocationAdmNuts3ErrorComponentAttrEnum];
+export const BitesListMineLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BitesListMineLocationAdmNuts3ErrorComponentCodeEnum = typeof BitesListMineLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof BitesListMineLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -1897,80 +2003,6 @@ export const BitesListMineLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type BitesListMineLocationCountryIdErrorComponentCodeEnum = typeof BitesListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof BitesListMineLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesListMineLocationNuts2ErrorComponent
- */
-export interface BitesListMineLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts2ErrorComponent
-     */
-    'attr': BitesListMineLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts2ErrorComponent
-     */
-    'code': BitesListMineLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesListMineLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type BitesListMineLocationNuts2ErrorComponentAttrEnum = typeof BitesListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof BitesListMineLocationNuts2ErrorComponentAttrEnum];
-export const BitesListMineLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BitesListMineLocationNuts2ErrorComponentCodeEnum = typeof BitesListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof BitesListMineLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesListMineLocationNuts3ErrorComponent
- */
-export interface BitesListMineLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts3ErrorComponent
-     */
-    'attr': BitesListMineLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts3ErrorComponent
-     */
-    'code': BitesListMineLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesListMineLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesListMineLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type BitesListMineLocationNuts3ErrorComponentAttrEnum = typeof BitesListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof BitesListMineLocationNuts3ErrorComponentAttrEnum];
-export const BitesListMineLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BitesListMineLocationNuts3ErrorComponentCodeEnum = typeof BitesListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof BitesListMineLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -2571,7 +2603,7 @@ export type BreedingsitesCreateCreatedAtErrorComponentCodeEnum = typeof Breeding
  * @type BreedingsitesCreateError
  * @export
  */
-export type BreedingsitesCreateError = { attr: 'created_at' } & BreedingsitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingsitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingsitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingsitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingsitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingsitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingsitesCreateLocationPointErrorComponent | { attr: 'location.type' } & BreedingsitesCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & BreedingsitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingsitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingsitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingsitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingsitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingsitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingsitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingsitesCreateTagsINDEXErrorComponent;
+export type BreedingsitesCreateError = { attr: 'created_at' } & BreedingsitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingsitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingsitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingsitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingsitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingsitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingsitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BreedingsitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BreedingsitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingsitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingsitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingsitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingsitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingsitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingsitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingsitesCreateTagsINDEXErrorComponent;
 
 /**
  * 
@@ -2801,41 +2833,41 @@ export type BreedingsitesCreateLocationPointErrorComponentCodeEnum = typeof Bree
 /**
  * 
  * @export
- * @interface BreedingsitesCreateLocationTypeErrorComponent
+ * @interface BreedingsitesCreateLocationSourceErrorComponent
  */
-export interface BreedingsitesCreateLocationTypeErrorComponent {
+export interface BreedingsitesCreateLocationSourceErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BreedingsitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationSourceErrorComponent
      */
-    'attr': BreedingsitesCreateLocationTypeErrorComponentAttrEnum;
+    'attr': BreedingsitesCreateLocationSourceErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingsitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationSourceErrorComponent
      */
-    'code': BreedingsitesCreateLocationTypeErrorComponentCodeEnum;
+    'code': BreedingsitesCreateLocationSourceErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BreedingsitesCreateLocationTypeErrorComponent
+     * @memberof BreedingsitesCreateLocationSourceErrorComponent
      */
     'detail': string;
 }
 
-export const BreedingsitesCreateLocationTypeErrorComponentAttrEnum = {
-    LocationType: 'location.type'
+export const BreedingsitesCreateLocationSourceErrorComponentAttrEnum = {
+    LocationSource: 'location.source'
 } as const;
 
-export type BreedingsitesCreateLocationTypeErrorComponentAttrEnum = typeof BreedingsitesCreateLocationTypeErrorComponentAttrEnum[keyof typeof BreedingsitesCreateLocationTypeErrorComponentAttrEnum];
-export const BreedingsitesCreateLocationTypeErrorComponentCodeEnum = {
+export type BreedingsitesCreateLocationSourceErrorComponentAttrEnum = typeof BreedingsitesCreateLocationSourceErrorComponentAttrEnum[keyof typeof BreedingsitesCreateLocationSourceErrorComponentAttrEnum];
+export const BreedingsitesCreateLocationSourceErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type BreedingsitesCreateLocationTypeErrorComponentCodeEnum = typeof BreedingsitesCreateLocationTypeErrorComponentCodeEnum[keyof typeof BreedingsitesCreateLocationTypeErrorComponentCodeEnum];
+export type BreedingsitesCreateLocationSourceErrorComponentCodeEnum = typeof BreedingsitesCreateLocationSourceErrorComponentCodeEnum[keyof typeof BreedingsitesCreateLocationSourceErrorComponentCodeEnum];
 
 /**
  * 
@@ -3263,7 +3295,81 @@ export type BreedingsitesListCreatedAtErrorComponentCodeEnum = typeof Breedingsi
  * @type BreedingsitesListError
  * @export
  */
-export type BreedingsitesListError = { attr: 'created_at' } & BreedingsitesListCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingsitesListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingsitesListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingsitesListLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingsitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListUserUuidErrorComponent;
+export type BreedingsitesListError = { attr: 'created_at' } & BreedingsitesListCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & BreedingsitesListLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & BreedingsitesListLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & BreedingsitesListLocationCountryIdErrorComponent | { attr: 'order_by' } & BreedingsitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListLocationAdmNuts2ErrorComponent
+ */
+export interface BreedingsitesListLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts2ErrorComponent
+     */
+    'attr': BreedingsitesListLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts2ErrorComponent
+     */
+    'code': BreedingsitesListLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type BreedingsitesListLocationAdmNuts2ErrorComponentAttrEnum = typeof BreedingsitesListLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationAdmNuts2ErrorComponentAttrEnum];
+export const BreedingsitesListLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListLocationAdmNuts2ErrorComponentCodeEnum = typeof BreedingsitesListLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListLocationAdmNuts3ErrorComponent
+ */
+export interface BreedingsitesListLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts3ErrorComponent
+     */
+    'attr': BreedingsitesListLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts3ErrorComponent
+     */
+    'code': BreedingsitesListLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type BreedingsitesListLocationAdmNuts3ErrorComponentAttrEnum = typeof BreedingsitesListLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationAdmNuts3ErrorComponentAttrEnum];
+export const BreedingsitesListLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListLocationAdmNuts3ErrorComponentCodeEnum = typeof BreedingsitesListLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -3301,80 +3407,6 @@ export const BreedingsitesListLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type BreedingsitesListLocationCountryIdErrorComponentCodeEnum = typeof BreedingsitesListLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingsitesListLocationNuts2ErrorComponent
- */
-export interface BreedingsitesListLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts2ErrorComponent
-     */
-    'attr': BreedingsitesListLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts2ErrorComponent
-     */
-    'code': BreedingsitesListLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BreedingsitesListLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type BreedingsitesListLocationNuts2ErrorComponentAttrEnum = typeof BreedingsitesListLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationNuts2ErrorComponentAttrEnum];
-export const BreedingsitesListLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BreedingsitesListLocationNuts2ErrorComponentCodeEnum = typeof BreedingsitesListLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingsitesListLocationNuts3ErrorComponent
- */
-export interface BreedingsitesListLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts3ErrorComponent
-     */
-    'attr': BreedingsitesListLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts3ErrorComponent
-     */
-    'code': BreedingsitesListLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BreedingsitesListLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type BreedingsitesListLocationNuts3ErrorComponentAttrEnum = typeof BreedingsitesListLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListLocationNuts3ErrorComponentAttrEnum];
-export const BreedingsitesListLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BreedingsitesListLocationNuts3ErrorComponentCodeEnum = typeof BreedingsitesListLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -3417,7 +3449,81 @@ export type BreedingsitesListMineCreatedAtErrorComponentCodeEnum = typeof Breedi
  * @type BreedingsitesListMineError
  * @export
  */
-export type BreedingsitesListMineError = { attr: 'created_at' } & BreedingsitesListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & BreedingsitesListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & BreedingsitesListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & BreedingsitesListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & BreedingsitesListMineOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListMineUserUuidErrorComponent;
+export type BreedingsitesListMineError = { attr: 'created_at' } & BreedingsitesListMineCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & BreedingsitesListMineLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & BreedingsitesListMineLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & BreedingsitesListMineLocationCountryIdErrorComponent | { attr: 'order_by' } & BreedingsitesListMineOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineLocationAdmNuts2ErrorComponent
+ */
+export interface BreedingsitesListMineLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'attr': BreedingsitesListMineLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'code': BreedingsitesListMineLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type BreedingsitesListMineLocationAdmNuts2ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationAdmNuts2ErrorComponentAttrEnum];
+export const BreedingsitesListMineLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListMineLocationAdmNuts2ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BreedingsitesListMineLocationAdmNuts3ErrorComponent
+ */
+export interface BreedingsitesListMineLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'attr': BreedingsitesListMineLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'code': BreedingsitesListMineLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BreedingsitesListMineLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const BreedingsitesListMineLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type BreedingsitesListMineLocationAdmNuts3ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationAdmNuts3ErrorComponentAttrEnum];
+export const BreedingsitesListMineLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type BreedingsitesListMineLocationAdmNuts3ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -3455,80 +3561,6 @@ export const BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum = typeof BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingsitesListMineLocationNuts2ErrorComponent
- */
-export interface BreedingsitesListMineLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
-     */
-    'attr': BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
-     */
-    'code': BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationNuts2ErrorComponentAttrEnum];
-export const BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BreedingsitesListMineLocationNuts3ErrorComponent
- */
-export interface BreedingsitesListMineLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
-     */
-    'attr': BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
-     */
-    'code': BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum = typeof BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof BreedingsitesListMineLocationNuts3ErrorComponentAttrEnum];
-export const BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum = typeof BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof BreedingsitesListMineLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -6947,11 +6979,11 @@ export interface LocalizedFieldRequest {
  */
 export interface Location {
     /**
-     * Did user indicate that report relates to current location of phone (\'current\') or to a location selected manually on the map (\'selected\')? Or is the choice missing (\'missing\')
+     * Indicates how the location was obtained. Use \'Auto (GPS)\' if the location was automatically retrieved from the device\'s GPS, or \'Manual (User-selected)\' if the location was selected by the user on a map.
      * @type {string}
      * @memberof Location
      */
-    'type': LocationTypeEnum;
+    'source': LocationSourceEnum;
     /**
      * 
      * @type {LocationPoint}
@@ -6972,25 +7004,18 @@ export interface Location {
     'country_id': number | null;
     /**
      * 
-     * @type {string}
+     * @type {AdmBoundaries}
      * @memberof Location
      */
-    'nuts_2': string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Location
-     */
-    'nuts_3': string | null;
+    'adm_boundaries': AdmBoundaries;
 }
 
-export const LocationTypeEnum = {
-    Current: 'current',
-    Selected: 'selected',
-    Missing: 'missing'
+export const LocationSourceEnum = {
+    Auto: 'auto',
+    Manual: 'manual'
 } as const;
 
-export type LocationTypeEnum = typeof LocationTypeEnum[keyof typeof LocationTypeEnum];
+export type LocationSourceEnum = typeof LocationSourceEnum[keyof typeof LocationSourceEnum];
 export const LocationTimezoneEnum = {
     AfricaAbidjan: 'Africa/Abidjan',
     AfricaAccra: 'Africa/Accra',
@@ -7618,11 +7643,11 @@ export interface LocationPoint {
  */
 export interface LocationRequest {
     /**
-     * Did user indicate that report relates to current location of phone (\'current\') or to a location selected manually on the map (\'selected\')? Or is the choice missing (\'missing\')
+     * Indicates how the location was obtained. Use \'Auto (GPS)\' if the location was automatically retrieved from the device\'s GPS, or \'Manual (User-selected)\' if the location was selected by the user on a map.
      * @type {string}
      * @memberof LocationRequest
      */
-    'type': LocationRequestTypeEnum;
+    'source': LocationRequestSourceEnum;
     /**
      * 
      * @type {LocationPoint}
@@ -7631,13 +7656,12 @@ export interface LocationRequest {
     'point': LocationPoint | null;
 }
 
-export const LocationRequestTypeEnum = {
-    Current: 'current',
-    Selected: 'selected',
-    Missing: 'missing'
+export const LocationRequestSourceEnum = {
+    Auto: 'auto',
+    Manual: 'manual'
 } as const;
 
-export type LocationRequestTypeEnum = typeof LocationRequestTypeEnum[keyof typeof LocationRequestTypeEnum];
+export type LocationRequestSourceEnum = typeof LocationRequestSourceEnum[keyof typeof LocationRequestSourceEnum];
 
 /**
  * @type MetaNotificationRequest
@@ -10484,6 +10508,44 @@ export type NotificationsUpdateValidationErrorTypeEnum = typeof NotificationsUpd
 /**
  * 
  * @export
+ * @interface NutsAdmBoundaries
+ */
+export interface NutsAdmBoundaries {
+    /**
+     * Basic regions for economic applications (e.g., Spanish autonomous communities).
+     * @type {string}
+     * @memberof NutsAdmBoundaries
+     */
+    'nuts2': string;
+    /**
+     * Small regions for specific analyses (e.g., French départements).
+     * @type {string}
+     * @memberof NutsAdmBoundaries
+     */
+    'nuts3': string;
+}
+/**
+ * 
+ * @export
+ * @interface NutsAdmBoundariesRequest
+ */
+export interface NutsAdmBoundariesRequest {
+    /**
+     * Basic regions for economic applications (e.g., Spanish autonomous communities).
+     * @type {string}
+     * @memberof NutsAdmBoundariesRequest
+     */
+    'nuts2': string;
+    /**
+     * Small regions for specific analyses (e.g., French départements).
+     * @type {string}
+     * @memberof NutsAdmBoundariesRequest
+     */
+    'nuts3': string;
+}
+/**
+ * 
+ * @export
  * @interface Observation
  */
 export interface Observation {
@@ -10712,7 +10774,7 @@ export type ObservationsCreateCreatedAtErrorComponentCodeEnum = typeof Observati
  * @type ObservationsCreateError
  * @export
  */
-export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.type' } & ObservationsCreateLocationTypeErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent | { attr: 'user_perceived_mosquito_abdomen' } & ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent | { attr: 'user_perceived_mosquito_legs' } & ObservationsCreateUserPerceivedMosquitoLegsErrorComponent | { attr: 'user_perceived_mosquito_specie' } & ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent | { attr: 'user_perceived_mosquito_thorax' } & ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
+export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.source' } & ObservationsCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent | { attr: 'user_perceived_mosquito_abdomen' } & ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent | { attr: 'user_perceived_mosquito_legs' } & ObservationsCreateUserPerceivedMosquitoLegsErrorComponent | { attr: 'user_perceived_mosquito_specie' } & ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent | { attr: 'user_perceived_mosquito_thorax' } & ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
 
 /**
  * 
@@ -10868,41 +10930,41 @@ export type ObservationsCreateLocationPointErrorComponentCodeEnum = typeof Obser
 /**
  * 
  * @export
- * @interface ObservationsCreateLocationTypeErrorComponent
+ * @interface ObservationsCreateLocationSourceErrorComponent
  */
-export interface ObservationsCreateLocationTypeErrorComponent {
+export interface ObservationsCreateLocationSourceErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof ObservationsCreateLocationTypeErrorComponent
+     * @memberof ObservationsCreateLocationSourceErrorComponent
      */
-    'attr': ObservationsCreateLocationTypeErrorComponentAttrEnum;
+    'attr': ObservationsCreateLocationSourceErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof ObservationsCreateLocationTypeErrorComponent
+     * @memberof ObservationsCreateLocationSourceErrorComponent
      */
-    'code': ObservationsCreateLocationTypeErrorComponentCodeEnum;
+    'code': ObservationsCreateLocationSourceErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof ObservationsCreateLocationTypeErrorComponent
+     * @memberof ObservationsCreateLocationSourceErrorComponent
      */
     'detail': string;
 }
 
-export const ObservationsCreateLocationTypeErrorComponentAttrEnum = {
-    LocationType: 'location.type'
+export const ObservationsCreateLocationSourceErrorComponentAttrEnum = {
+    LocationSource: 'location.source'
 } as const;
 
-export type ObservationsCreateLocationTypeErrorComponentAttrEnum = typeof ObservationsCreateLocationTypeErrorComponentAttrEnum[keyof typeof ObservationsCreateLocationTypeErrorComponentAttrEnum];
-export const ObservationsCreateLocationTypeErrorComponentCodeEnum = {
+export type ObservationsCreateLocationSourceErrorComponentAttrEnum = typeof ObservationsCreateLocationSourceErrorComponentAttrEnum[keyof typeof ObservationsCreateLocationSourceErrorComponentAttrEnum];
+export const ObservationsCreateLocationSourceErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     Required: 'required'
 } as const;
 
-export type ObservationsCreateLocationTypeErrorComponentCodeEnum = typeof ObservationsCreateLocationTypeErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationTypeErrorComponentCodeEnum];
+export type ObservationsCreateLocationSourceErrorComponentCodeEnum = typeof ObservationsCreateLocationSourceErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationSourceErrorComponentCodeEnum];
 
 /**
  * 
@@ -11440,7 +11502,81 @@ export type ObservationsListCreatedAtErrorComponentCodeEnum = typeof Observation
  * @type ObservationsListError
  * @export
  */
-export type ObservationsListError = { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'location_country_id' } & ObservationsListLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & ObservationsListLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & ObservationsListLocationNuts3ErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
+export type ObservationsListError = { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & ObservationsListLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & ObservationsListLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & ObservationsListLocationCountryIdErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListLocationAdmNuts2ErrorComponent
+ */
+export interface ObservationsListLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts2ErrorComponent
+     */
+    'attr': ObservationsListLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts2ErrorComponent
+     */
+    'code': ObservationsListLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type ObservationsListLocationAdmNuts2ErrorComponentAttrEnum = typeof ObservationsListLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListLocationAdmNuts2ErrorComponentAttrEnum];
+export const ObservationsListLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListLocationAdmNuts2ErrorComponentCodeEnum = typeof ObservationsListLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListLocationAdmNuts3ErrorComponent
+ */
+export interface ObservationsListLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts3ErrorComponent
+     */
+    'attr': ObservationsListLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts3ErrorComponent
+     */
+    'code': ObservationsListLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type ObservationsListLocationAdmNuts3ErrorComponentAttrEnum = typeof ObservationsListLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListLocationAdmNuts3ErrorComponentAttrEnum];
+export const ObservationsListLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListLocationAdmNuts3ErrorComponentCodeEnum = typeof ObservationsListLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -11478,80 +11614,6 @@ export const ObservationsListLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type ObservationsListLocationCountryIdErrorComponentCodeEnum = typeof ObservationsListLocationCountryIdErrorComponentCodeEnum[keyof typeof ObservationsListLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsListLocationNuts2ErrorComponent
- */
-export interface ObservationsListLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts2ErrorComponent
-     */
-    'attr': ObservationsListLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts2ErrorComponent
-     */
-    'code': ObservationsListLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsListLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type ObservationsListLocationNuts2ErrorComponentAttrEnum = typeof ObservationsListLocationNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListLocationNuts2ErrorComponentAttrEnum];
-export const ObservationsListLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type ObservationsListLocationNuts2ErrorComponentCodeEnum = typeof ObservationsListLocationNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsListLocationNuts3ErrorComponent
- */
-export interface ObservationsListLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts3ErrorComponent
-     */
-    'attr': ObservationsListLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts3ErrorComponent
-     */
-    'code': ObservationsListLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsListLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type ObservationsListLocationNuts3ErrorComponentAttrEnum = typeof ObservationsListLocationNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListLocationNuts3ErrorComponentAttrEnum];
-export const ObservationsListLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type ObservationsListLocationNuts3ErrorComponentCodeEnum = typeof ObservationsListLocationNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -11594,7 +11656,81 @@ export type ObservationsListMineCreatedAtErrorComponentCodeEnum = typeof Observa
  * @type ObservationsListMineError
  * @export
  */
-export type ObservationsListMineError = { attr: 'created_at' } & ObservationsListMineCreatedAtErrorComponent | { attr: 'location_country_id' } & ObservationsListMineLocationCountryIdErrorComponent | { attr: 'location_nuts_2' } & ObservationsListMineLocationNuts2ErrorComponent | { attr: 'location_nuts_3' } & ObservationsListMineLocationNuts3ErrorComponent | { attr: 'order_by' } & ObservationsListMineOrderByErrorComponent | { attr: 'received_at' } & ObservationsListMineReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListMineShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListMineUserUuidErrorComponent;
+export type ObservationsListMineError = { attr: 'created_at' } & ObservationsListMineCreatedAtErrorComponent | { attr: 'location_adm_nuts2' } & ObservationsListMineLocationAdmNuts2ErrorComponent | { attr: 'location_adm_nuts3' } & ObservationsListMineLocationAdmNuts3ErrorComponent | { attr: 'location_country_id' } & ObservationsListMineLocationCountryIdErrorComponent | { attr: 'order_by' } & ObservationsListMineOrderByErrorComponent | { attr: 'received_at' } & ObservationsListMineReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListMineShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListMineUserUuidErrorComponent;
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineLocationAdmNuts2ErrorComponent
+ */
+export interface ObservationsListMineLocationAdmNuts2ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts2ErrorComponent
+     */
+    'attr': ObservationsListMineLocationAdmNuts2ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts2ErrorComponent
+     */
+    'code': ObservationsListMineLocationAdmNuts2ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts2ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineLocationAdmNuts2ErrorComponentAttrEnum = {
+    LocationAdmNuts2: 'location_adm_nuts2'
+} as const;
+
+export type ObservationsListMineLocationAdmNuts2ErrorComponentAttrEnum = typeof ObservationsListMineLocationAdmNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationAdmNuts2ErrorComponentAttrEnum];
+export const ObservationsListMineLocationAdmNuts2ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineLocationAdmNuts2ErrorComponentCodeEnum = typeof ObservationsListMineLocationAdmNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationAdmNuts2ErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsListMineLocationAdmNuts3ErrorComponent
+ */
+export interface ObservationsListMineLocationAdmNuts3ErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts3ErrorComponent
+     */
+    'attr': ObservationsListMineLocationAdmNuts3ErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts3ErrorComponent
+     */
+    'code': ObservationsListMineLocationAdmNuts3ErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsListMineLocationAdmNuts3ErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsListMineLocationAdmNuts3ErrorComponentAttrEnum = {
+    LocationAdmNuts3: 'location_adm_nuts3'
+} as const;
+
+export type ObservationsListMineLocationAdmNuts3ErrorComponentAttrEnum = typeof ObservationsListMineLocationAdmNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationAdmNuts3ErrorComponentAttrEnum];
+export const ObservationsListMineLocationAdmNuts3ErrorComponentCodeEnum = {
+    NullCharactersNotAllowed: 'null_characters_not_allowed'
+} as const;
+
+export type ObservationsListMineLocationAdmNuts3ErrorComponentCodeEnum = typeof ObservationsListMineLocationAdmNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationAdmNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -11632,80 +11768,6 @@ export const ObservationsListMineLocationCountryIdErrorComponentCodeEnum = {
 } as const;
 
 export type ObservationsListMineLocationCountryIdErrorComponentCodeEnum = typeof ObservationsListMineLocationCountryIdErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationCountryIdErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsListMineLocationNuts2ErrorComponent
- */
-export interface ObservationsListMineLocationNuts2ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts2ErrorComponent
-     */
-    'attr': ObservationsListMineLocationNuts2ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts2ErrorComponent
-     */
-    'code': ObservationsListMineLocationNuts2ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts2ErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsListMineLocationNuts2ErrorComponentAttrEnum = {
-    LocationNuts2: 'location_nuts_2'
-} as const;
-
-export type ObservationsListMineLocationNuts2ErrorComponentAttrEnum = typeof ObservationsListMineLocationNuts2ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationNuts2ErrorComponentAttrEnum];
-export const ObservationsListMineLocationNuts2ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type ObservationsListMineLocationNuts2ErrorComponentCodeEnum = typeof ObservationsListMineLocationNuts2ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationNuts2ErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsListMineLocationNuts3ErrorComponent
- */
-export interface ObservationsListMineLocationNuts3ErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts3ErrorComponent
-     */
-    'attr': ObservationsListMineLocationNuts3ErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts3ErrorComponent
-     */
-    'code': ObservationsListMineLocationNuts3ErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineLocationNuts3ErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsListMineLocationNuts3ErrorComponentAttrEnum = {
-    LocationNuts3: 'location_nuts_3'
-} as const;
-
-export type ObservationsListMineLocationNuts3ErrorComponentAttrEnum = typeof ObservationsListMineLocationNuts3ErrorComponentAttrEnum[keyof typeof ObservationsListMineLocationNuts3ErrorComponentAttrEnum];
-export const ObservationsListMineLocationNuts3ErrorComponentCodeEnum = {
-    NullCharactersNotAllowed: 'null_characters_not_allowed'
-} as const;
-
-export type ObservationsListMineLocationNuts3ErrorComponentCodeEnum = typeof ObservationsListMineLocationNuts3ErrorComponentCodeEnum[keyof typeof ObservationsListMineLocationNuts3ErrorComponentCodeEnum];
 
 /**
  * 
@@ -12478,7 +12540,7 @@ export interface Photo {
      * @type {string}
      * @memberof Photo
      */
-    'uuid'?: string;
+    'uuid': string;
     /**
      * Photo uploaded by user.
      * @type {string}
@@ -12639,17 +12701,11 @@ export interface User {
      */
     'is_guest': boolean;
     /**
-     * Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
-     * @type {number}
+     * 
+     * @type {UserScore}
      * @memberof User
      */
-    'score': number;
-    /**
-     * Last time score was updated
-     * @type {string}
-     * @memberof User
-     */
-    'last_score_update': string;
+    'score': UserScore;
 }
 
 export const UserLocaleEnum = {
@@ -12757,6 +12813,25 @@ export const UserRequestLocaleEnum = {
 
 export type UserRequestLocaleEnum = typeof UserRequestLocaleEnum[keyof typeof UserRequestLocaleEnum];
 
+/**
+ * 
+ * @export
+ * @interface UserScore
+ */
+export interface UserScore {
+    /**
+     * 
+     * @type {number}
+     * @memberof UserScore
+     */
+    'value': number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UserScore
+     */
+    'updated_at': string | null;
+}
 /**
  * @type UsersPartialUpdateError
  * @export
@@ -13448,9 +13523,9 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13463,7 +13538,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13497,16 +13572,16 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
                     createdAtBefore;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -13568,9 +13643,9 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * Get Current User\'s Bites
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13583,7 +13658,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13612,16 +13687,16 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
                     createdAtBefore;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -13759,9 +13834,9 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13774,8 +13849,8 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -13784,9 +13859,9 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * Get Current User\'s Bites
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13799,8 +13874,8 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -13849,9 +13924,9 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13864,16 +13939,16 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
-            return localVarFp.list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Bites
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -13886,8 +13961,8 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
-            return localVarFp.listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        listMine(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13934,9 +14009,9 @@ export class BitesApi extends BaseAPI {
      * 
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -13950,17 +14025,17 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public list(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Get Current User\'s Bites
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -13974,8 +14049,8 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BitesApi
      */
-    public listMine(createdAtAfter?: string, createdAtBefore?: string, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14170,9 +14245,9 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14185,7 +14260,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14223,16 +14298,16 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -14295,9 +14370,9 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14310,7 +14385,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14343,16 +14418,16 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -14501,9 +14576,9 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14516,8 +14591,8 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -14527,9 +14602,9 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14542,8 +14617,8 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -14603,9 +14678,9 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14618,17 +14693,17 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Breeding Sites
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -14641,8 +14716,8 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14700,9 +14775,9 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -14716,8 +14791,8 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14725,9 +14800,9 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -14741,8 +14816,8 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BreedingSitesApi
      */
-    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16307,9 +16382,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16322,7 +16397,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16360,16 +16435,16 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -16432,9 +16507,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16447,7 +16522,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16480,16 +16555,16 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
+            if (locationAdmNuts2 !== undefined) {
+                localVarQueryParameter['location_adm_nuts2'] = locationAdmNuts2;
+            }
+
+            if (locationAdmNuts3 !== undefined) {
+                localVarQueryParameter['location_adm_nuts3'] = locationAdmNuts3;
+            }
+
             if (locationCountryId !== undefined) {
                 localVarQueryParameter['location_country_id'] = locationCountryId;
-            }
-
-            if (locationNuts2 !== undefined) {
-                localVarQueryParameter['location_nuts_2'] = locationNuts2;
-            }
-
-            if (locationNuts3 !== undefined) {
-                localVarQueryParameter['location_nuts_3'] = locationNuts3;
             }
 
             if (orderBy) {
@@ -16639,9 +16714,9 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16654,8 +16729,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -16665,9 +16740,9 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16680,8 +16755,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -16742,9 +16817,9 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16757,17 +16832,17 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Observations
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {string} [locationAdmNuts2] 
+         * @param {string} [locationAdmNuts3] 
          * @param {number | null} [locationCountryId] 
-         * @param {string} [locationNuts2] 
-         * @param {string} [locationNuts3] 
          * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -16780,8 +16855,8 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
+        listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
+            return localVarFp.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16840,9 +16915,9 @@ export class ObservationsApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -16856,8 +16931,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public list(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16865,9 +16940,9 @@ export class ObservationsApi extends BaseAPI {
      * @param {string} [createdAtAfter] Created at
      * @param {string} [createdAtBefore] Created at
      * @param {boolean} [hasPhotos] Has any photo
+     * @param {string} [locationAdmNuts2] 
+     * @param {string} [locationAdmNuts3] 
      * @param {number | null} [locationCountryId] 
-     * @param {string} [locationNuts2] 
-     * @param {string} [locationNuts3] 
      * @param {Array<ListMineOrderByEnum>} [orderBy] Ordenado  
      * @param {number} [page] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
@@ -16881,8 +16956,8 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationCountryId?: number | null, locationNuts2?: string, locationNuts3?: string, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
+    public listMine(createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, locationAdmNuts2?: string, locationAdmNuts3?: string, locationCountryId?: number | null, orderBy?: Array<ListMineOrderByEnum>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
