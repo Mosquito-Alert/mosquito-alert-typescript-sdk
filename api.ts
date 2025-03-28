@@ -12999,10 +12999,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13044,10 +13044,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13094,10 +13094,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13301,10 +13301,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13644,10 +13644,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13733,10 +13733,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -13784,10 +13784,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -14000,10 +14000,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -14377,10 +14377,10 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -14439,10 +14439,10 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -14606,10 +14606,10 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15051,10 +15051,10 @@ export const FixesApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15164,10 +15164,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15209,10 +15209,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15321,10 +15321,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15366,10 +15366,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15411,10 +15411,10 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15744,10 +15744,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15837,10 +15837,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -15888,10 +15888,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16104,10 +16104,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16542,10 +16542,10 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16592,10 +16592,10 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16850,10 +16850,10 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16895,10 +16895,10 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
@@ -16971,10 +16971,10 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
 
             // authentication jwtAuth required
             // http bearer authentication required
