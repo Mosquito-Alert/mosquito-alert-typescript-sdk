@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -631,59 +628,6 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
 };
 
 /**
- * BreedingSitesApi - interface
- * @export
- * @interface BreedingSitesApi
- */
-export interface BreedingSitesApiInterface {
-    /**
-     * 
-     * @param {BreedingSitesApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BreedingSitesApiInterface
-     */
-    create(requestParameters: BreedingSitesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite>;
-
-    /**
-     * 
-     * @param {BreedingSitesApiDestroyRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BreedingSitesApiInterface
-     */
-    destroy(requestParameters: BreedingSitesApiDestroyRequest, options?: RawAxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {BreedingSitesApiListRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BreedingSitesApiInterface
-     */
-    list(requestParameters?: BreedingSitesApiListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList>;
-
-    /**
-     * Get Current User\'s Breeding Sites
-     * @param {BreedingSitesApiListMineRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BreedingSitesApiInterface
-     */
-    listMine(requestParameters?: BreedingSitesApiListMineRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList>;
-
-    /**
-     * 
-     * @param {BreedingSitesApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BreedingSitesApiInterface
-     */
-    retrieve(requestParameters: BreedingSitesApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite>;
-
-}
-
-/**
  * Request parameters for create operation in BreedingSitesApi.
  * @export
  * @interface BreedingSitesApiCreateRequest
@@ -997,7 +941,7 @@ export interface BreedingSitesApiRetrieveRequest {
  * @class BreedingSitesApi
  * @extends {BaseAPI}
  */
-export class BreedingSitesApi extends BaseAPI implements BreedingSitesApiInterface {
+export class BreedingSitesApi extends BaseAPI {
     /**
      * 
      * @param {BreedingSitesApiCreateRequest} requestParameters Request parameters.

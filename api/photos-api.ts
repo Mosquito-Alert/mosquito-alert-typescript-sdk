@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -121,23 +118,6 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
 };
 
 /**
- * PhotosApi - interface
- * @export
- * @interface PhotosApi
- */
-export interface PhotosApiInterface {
-    /**
-     * 
-     * @param {PhotosApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PhotosApiInterface
-     */
-    retrieve(requestParameters: PhotosApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Photo>;
-
-}
-
-/**
  * Request parameters for retrieve operation in PhotosApi.
  * @export
  * @interface PhotosApiRetrieveRequest
@@ -157,7 +137,7 @@ export interface PhotosApiRetrieveRequest {
  * @class PhotosApi
  * @extends {BaseAPI}
  */
-export class PhotosApi extends BaseAPI implements PhotosApiInterface {
+export class PhotosApi extends BaseAPI {
     /**
      * 
      * @param {PhotosApiRetrieveRequest} requestParameters Request parameters.

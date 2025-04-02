@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -171,16 +168,16 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {DeviceUpdateRequest} deviceUpdateRequest 
          * @param {string} deviceId 
+         * @param {DeviceUpdateRequest} deviceUpdateRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        update: async (deviceUpdateRequest: DeviceUpdateRequest, deviceId: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'deviceUpdateRequest' is not null or undefined
-            assertParamExists('update', 'deviceUpdateRequest', deviceUpdateRequest)
+        update: async (deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'deviceId' is not null or undefined
             assertParamExists('update', 'deviceId', deviceId)
+            // verify required parameter 'deviceUpdateRequest' is not null or undefined
+            assertParamExists('update', 'deviceUpdateRequest', deviceUpdateRequest)
             const localVarPath = `/devices/{device_id}/`
                 .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -261,13 +258,13 @@ export const DevicesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {DeviceUpdateRequest} deviceUpdateRequest 
          * @param {string} deviceId 
+         * @param {DeviceUpdateRequest} deviceUpdateRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async update(deviceUpdateRequest: DeviceUpdateRequest, deviceId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.update(deviceUpdateRequest, deviceId, options);
+        async update(deviceId: string, deviceUpdateRequest: DeviceUpdateRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeviceUpdate>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.update(deviceId, deviceUpdateRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['DevicesApi.update']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -316,54 +313,10 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         update(requestParameters: DevicesApiUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate> {
-            return localVarFp.update(requestParameters.deviceUpdateRequest, requestParameters.deviceId, options).then((request) => request(axios, basePath));
+            return localVarFp.update(requestParameters.deviceId, requestParameters.deviceUpdateRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
-
-/**
- * DevicesApi - interface
- * @export
- * @interface DevicesApi
- */
-export interface DevicesApiInterface {
-    /**
-     * 
-     * @param {DevicesApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DevicesApiInterface
-     */
-    create(requestParameters: DevicesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Device>;
-
-    /**
-     * 
-     * @param {DevicesApiPartialUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DevicesApiInterface
-     */
-    partialUpdate(requestParameters: DevicesApiPartialUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate>;
-
-    /**
-     * 
-     * @param {DevicesApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DevicesApiInterface
-     */
-    retrieve(requestParameters: DevicesApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Device>;
-
-    /**
-     * 
-     * @param {DevicesApiUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DevicesApiInterface
-     */
-    update(requestParameters: DevicesApiUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<DeviceUpdate>;
-
-}
 
 /**
  * Request parameters for create operation in DevicesApi.
@@ -422,17 +375,17 @@ export interface DevicesApiRetrieveRequest {
 export interface DevicesApiUpdateRequest {
     /**
      * 
-     * @type {DeviceUpdateRequest}
-     * @memberof DevicesApiUpdate
-     */
-    readonly deviceUpdateRequest: DeviceUpdateRequest
-
-    /**
-     * 
      * @type {string}
      * @memberof DevicesApiUpdate
      */
     readonly deviceId: string
+
+    /**
+     * 
+     * @type {DeviceUpdateRequest}
+     * @memberof DevicesApiUpdate
+     */
+    readonly deviceUpdateRequest: DeviceUpdateRequest
 }
 
 /**
@@ -441,7 +394,7 @@ export interface DevicesApiUpdateRequest {
  * @class DevicesApi
  * @extends {BaseAPI}
  */
-export class DevicesApi extends BaseAPI implements DevicesApiInterface {
+export class DevicesApi extends BaseAPI {
     /**
      * 
      * @param {DevicesApiCreateRequest} requestParameters Request parameters.
@@ -483,7 +436,7 @@ export class DevicesApi extends BaseAPI implements DevicesApiInterface {
      * @memberof DevicesApi
      */
     public update(requestParameters: DevicesApiUpdateRequest, options?: RawAxiosRequestConfig) {
-        return DevicesApiFp(this.configuration).update(requestParameters.deviceUpdateRequest, requestParameters.deviceId, options).then((request) => request(this.axios, this.basePath));
+        return DevicesApiFp(this.configuration).update(requestParameters.deviceId, requestParameters.deviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

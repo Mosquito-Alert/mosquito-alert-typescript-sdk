@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -370,59 +367,6 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
 };
 
 /**
- * AuthApi - interface
- * @export
- * @interface AuthApi
- */
-export interface AuthApiInterface {
-    /**
-     * 
-     * @param {AuthApiChangePasswordRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApiInterface
-     */
-    changePassword(requestParameters: AuthApiChangePasswordRequest, options?: RawAxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-     * @param {AuthApiObtainTokenRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApiInterface
-     */
-    obtainToken(requestParameters: AuthApiObtainTokenRequest, options?: RawAxiosRequestConfig): AxiosPromise<AppUserTokenObtainPair>;
-
-    /**
-     * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-     * @param {AuthApiRefreshTokenRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApiInterface
-     */
-    refreshToken(requestParameters: AuthApiRefreshTokenRequest, options?: RawAxiosRequestConfig): AxiosPromise<TokenRefresh>;
-
-    /**
-     * 
-     * @param {AuthApiSignupGuestRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApiInterface
-     */
-    signupGuest(requestParameters: AuthApiSignupGuestRequest, options?: RawAxiosRequestConfig): AxiosPromise<GuestRegistration>;
-
-    /**
-     * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
-     * @param {AuthApiVerifyTokenRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApiInterface
-     */
-    verifyToken(requestParameters: AuthApiVerifyTokenRequest, options?: RawAxiosRequestConfig): AxiosPromise<void>;
-
-}
-
-/**
  * Request parameters for changePassword operation in AuthApi.
  * @export
  * @interface AuthApiChangePasswordRequest
@@ -498,7 +442,7 @@ export interface AuthApiVerifyTokenRequest {
  * @class AuthApi
  * @extends {BaseAPI}
  */
-export class AuthApi extends BaseAPI implements AuthApiInterface {
+export class AuthApi extends BaseAPI {
     /**
      * 
      * @param {AuthApiChangePasswordRequest} requestParameters Request parameters.

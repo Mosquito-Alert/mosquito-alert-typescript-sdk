@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -131,23 +128,6 @@ export const FixesApiFactory = function (configuration?: Configuration, basePath
 };
 
 /**
- * FixesApi - interface
- * @export
- * @interface FixesApi
- */
-export interface FixesApiInterface {
-    /**
-     * 
-     * @param {FixesApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof FixesApiInterface
-     */
-    create(requestParameters: FixesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Fix>;
-
-}
-
-/**
  * Request parameters for create operation in FixesApi.
  * @export
  * @interface FixesApiCreateRequest
@@ -167,7 +147,7 @@ export interface FixesApiCreateRequest {
  * @class FixesApi
  * @extends {BaseAPI}
  */
-export class FixesApi extends BaseAPI implements FixesApiInterface {
+export class FixesApi extends BaseAPI {
     /**
      * 
      * @param {FixesApiCreateRequest} requestParameters Request parameters.

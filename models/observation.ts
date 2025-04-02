@@ -21,6 +21,9 @@ import type { BiteEventEnvironment } from './bite-event-environment';
 import type { BiteEventMoment } from './bite-event-moment';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Identification } from './identification';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { Location } from './location';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -113,6 +116,12 @@ export interface Observation {
      * @memberof Observation
      */
     'photos': Array<SimplePhoto>;
+    /**
+     * 
+     * @type {Identification}
+     * @memberof Observation
+     */
+    'identification': Identification | null;
     /**
      * 
      * @type {BiteEventEnvironment}

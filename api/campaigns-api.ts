@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -219,32 +216,6 @@ export const CampaignsApiFactory = function (configuration?: Configuration, base
 };
 
 /**
- * CampaignsApi - interface
- * @export
- * @interface CampaignsApi
- */
-export interface CampaignsApiInterface {
-    /**
-     * 
-     * @param {CampaignsApiListRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CampaignsApiInterface
-     */
-    list(requestParameters?: CampaignsApiListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedCampaignList>;
-
-    /**
-     * 
-     * @param {CampaignsApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CampaignsApiInterface
-     */
-    retrieve(requestParameters: CampaignsApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Campaign>;
-
-}
-
-/**
  * Request parameters for list operation in CampaignsApi.
  * @export
  * @interface CampaignsApiListRequest
@@ -306,7 +277,7 @@ export interface CampaignsApiRetrieveRequest {
  * @class CampaignsApi
  * @extends {BaseAPI}
  */
-export class CampaignsApi extends BaseAPI implements CampaignsApiInterface {
+export class CampaignsApi extends BaseAPI {
     /**
      * 
      * @param {CampaignsApiListRequest} requestParameters Request parameters.

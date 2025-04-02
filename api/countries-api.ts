@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -125,23 +122,6 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
 };
 
 /**
- * CountriesApi - interface
- * @export
- * @interface CountriesApi
- */
-export interface CountriesApiInterface {
-    /**
-     * 
-     * @param {CountriesApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CountriesApiInterface
-     */
-    retrieve(requestParameters: CountriesApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Country>;
-
-}
-
-/**
  * Request parameters for retrieve operation in CountriesApi.
  * @export
  * @interface CountriesApiRetrieveRequest
@@ -161,7 +141,7 @@ export interface CountriesApiRetrieveRequest {
  * @class CountriesApi
  * @extends {BaseAPI}
  */
-export class CountriesApi extends BaseAPI implements CountriesApiInterface {
+export class CountriesApi extends BaseAPI {
     /**
      * 
      * @param {CountriesApiRetrieveRequest} requestParameters Request parameters.

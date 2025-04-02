@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -321,49 +318,6 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
 };
 
 /**
- * UsersApi - interface
- * @export
- * @interface UsersApi
- */
-export interface UsersApiInterface {
-    /**
-     * 
-     * @param {UsersApiPartialUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UsersApiInterface
-     */
-    partialUpdate(requestParameters: UsersApiPartialUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<User>;
-
-    /**
-     * 
-     * @param {UsersApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UsersApiInterface
-     */
-    retrieve(requestParameters: UsersApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<User>;
-
-    /**
-     * Get Current User\'s Profile
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UsersApiInterface
-     */
-    retrieveMine(options?: RawAxiosRequestConfig): AxiosPromise<User>;
-
-    /**
-     * 
-     * @param {UsersApiUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UsersApiInterface
-     */
-    update(requestParameters: UsersApiUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<User>;
-
-}
-
-/**
  * Request parameters for partialUpdate operation in UsersApi.
  * @export
  * @interface UsersApiPartialUpdateRequest
@@ -425,7 +379,7 @@ export interface UsersApiUpdateRequest {
  * @class UsersApi
  * @extends {BaseAPI}
  */
-export class UsersApi extends BaseAPI implements UsersApiInterface {
+export class UsersApi extends BaseAPI {
     /**
      * 
      * @param {UsersApiPartialUpdateRequest} requestParameters Request parameters.

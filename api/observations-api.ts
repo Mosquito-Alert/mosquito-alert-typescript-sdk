@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -623,59 +620,6 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
 };
 
 /**
- * ObservationsApi - interface
- * @export
- * @interface ObservationsApi
- */
-export interface ObservationsApiInterface {
-    /**
-     * 
-     * @param {ObservationsApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApiInterface
-     */
-    create(requestParameters: ObservationsApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Observation>;
-
-    /**
-     * 
-     * @param {ObservationsApiDestroyRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApiInterface
-     */
-    destroy(requestParameters: ObservationsApiDestroyRequest, options?: RawAxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {ObservationsApiListRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApiInterface
-     */
-    list(requestParameters?: ObservationsApiListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList>;
-
-    /**
-     * Get Current User\'s Observations
-     * @param {ObservationsApiListMineRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApiInterface
-     */
-    listMine(requestParameters?: ObservationsApiListMineRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList>;
-
-    /**
-     * 
-     * @param {ObservationsApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ObservationsApiInterface
-     */
-    retrieve(requestParameters: ObservationsApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Observation>;
-
-}
-
-/**
  * Request parameters for create operation in ObservationsApi.
  * @export
  * @interface ObservationsApiCreateRequest
@@ -975,7 +919,7 @@ export interface ObservationsApiRetrieveRequest {
  * @class ObservationsApi
  * @extends {BaseAPI}
  */
-export class ObservationsApi extends BaseAPI implements ObservationsApiInterface {
+export class ObservationsApi extends BaseAPI {
     /**
      * 
      * @param {ObservationsApiCreateRequest} requestParameters Request parameters.

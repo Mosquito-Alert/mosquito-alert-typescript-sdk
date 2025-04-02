@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -303,16 +300,16 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {NotificationRequest} notificationRequest 
          * @param {number} id A unique integer value identifying this notification.
+         * @param {NotificationRequest} notificationRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        update: async (notificationRequest: NotificationRequest, id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'notificationRequest' is not null or undefined
-            assertParamExists('update', 'notificationRequest', notificationRequest)
+        update: async (id: number, notificationRequest: NotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('update', 'id', id)
+            // verify required parameter 'notificationRequest' is not null or undefined
+            assertParamExists('update', 'notificationRequest', notificationRequest)
             const localVarPath = `/notifications/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -428,13 +425,13 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {NotificationRequest} notificationRequest 
          * @param {number} id A unique integer value identifying this notification.
+         * @param {NotificationRequest} notificationRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async update(notificationRequest: NotificationRequest, id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.update(notificationRequest, id, options);
+        async update(id: number, notificationRequest: NotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Notification>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.update(id, notificationRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['NotificationsApi.update']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -501,72 +498,10 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         update(requestParameters: NotificationsApiUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification> {
-            return localVarFp.update(requestParameters.notificationRequest, requestParameters.id, options).then((request) => request(axios, basePath));
+            return localVarFp.update(requestParameters.id, requestParameters.notificationRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
-
-/**
- * NotificationsApi - interface
- * @export
- * @interface NotificationsApi
- */
-export interface NotificationsApiInterface {
-    /**
-     * 
-     * @param {NotificationsApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    create(requestParameters?: NotificationsApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<CreateNotification>>;
-
-    /**
-     * 
-     * @param {NotificationsApiListRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    list(requestParameters?: NotificationsApiListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList>;
-
-    /**
-     * Get Current User\'s Notifications
-     * @param {NotificationsApiListMineRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    listMine(requestParameters?: NotificationsApiListMineRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedNotificationList>;
-
-    /**
-     * 
-     * @param {NotificationsApiPartialUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    partialUpdate(requestParameters: NotificationsApiPartialUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification>;
-
-    /**
-     * 
-     * @param {NotificationsApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    retrieve(requestParameters: NotificationsApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification>;
-
-    /**
-     * 
-     * @param {NotificationsApiUpdateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationsApiInterface
-     */
-    update(requestParameters: NotificationsApiUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Notification>;
-
-}
 
 /**
  * Request parameters for create operation in NotificationsApi.
@@ -694,18 +629,18 @@ export interface NotificationsApiRetrieveRequest {
  */
 export interface NotificationsApiUpdateRequest {
     /**
-     * 
-     * @type {NotificationRequest}
-     * @memberof NotificationsApiUpdate
-     */
-    readonly notificationRequest: NotificationRequest
-
-    /**
      * A unique integer value identifying this notification.
      * @type {number}
      * @memberof NotificationsApiUpdate
      */
     readonly id: number
+
+    /**
+     * 
+     * @type {NotificationRequest}
+     * @memberof NotificationsApiUpdate
+     */
+    readonly notificationRequest: NotificationRequest
 }
 
 /**
@@ -714,7 +649,7 @@ export interface NotificationsApiUpdateRequest {
  * @class NotificationsApi
  * @extends {BaseAPI}
  */
-export class NotificationsApi extends BaseAPI implements NotificationsApiInterface {
+export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @param {NotificationsApiCreateRequest} requestParameters Request parameters.
@@ -778,7 +713,7 @@ export class NotificationsApi extends BaseAPI implements NotificationsApiInterfa
      * @memberof NotificationsApi
      */
     public update(requestParameters: NotificationsApiUpdateRequest, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).update(requestParameters.notificationRequest, requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+        return NotificationsApiFp(this.configuration).update(requestParameters.id, requestParameters.notificationRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

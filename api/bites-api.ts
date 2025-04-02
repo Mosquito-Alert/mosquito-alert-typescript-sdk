@@ -16,9 +16,6 @@
 import type { Configuration } from '../configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
-// URLSearchParams not necessarily used
-// @ts-ignore
-import { URL, URLSearchParams } from 'url';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
@@ -544,59 +541,6 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
 };
 
 /**
- * BitesApi - interface
- * @export
- * @interface BitesApi
- */
-export interface BitesApiInterface {
-    /**
-     * 
-     * @param {BitesApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BitesApiInterface
-     */
-    create(requestParameters: BitesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Bite>;
-
-    /**
-     * 
-     * @param {BitesApiDestroyRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BitesApiInterface
-     */
-    destroy(requestParameters: BitesApiDestroyRequest, options?: RawAxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {BitesApiListRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BitesApiInterface
-     */
-    list(requestParameters?: BitesApiListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList>;
-
-    /**
-     * Get Current User\'s Bites
-     * @param {BitesApiListMineRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BitesApiInterface
-     */
-    listMine(requestParameters?: BitesApiListMineRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList>;
-
-    /**
-     * 
-     * @param {BitesApiRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BitesApiInterface
-     */
-    retrieve(requestParameters: BitesApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Bite>;
-
-}
-
-/**
  * Request parameters for create operation in BitesApi.
  * @export
  * @interface BitesApiCreateRequest
@@ -826,7 +770,7 @@ export interface BitesApiRetrieveRequest {
  * @class BitesApi
  * @extends {BaseAPI}
  */
-export class BitesApi extends BaseAPI implements BitesApiInterface {
+export class BitesApi extends BaseAPI {
     /**
      * 
      * @param {BitesApiCreateRequest} requestParameters Request parameters.
