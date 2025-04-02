@@ -866,47 +866,11 @@ export interface Bite {
      */
     'event_moment'?: BiteEventMomentEnum | null;
     /**
-     * Total number of bites reported.
-     * @type {number}
+     * 
+     * @type {BiteCounts}
      * @memberof Bite
      */
-    'bite_count': number;
-    /**
-     * Number of bites reported in the head.
-     * @type {number}
-     * @memberof Bite
-     */
-    'head_bite_count'?: number;
-    /**
-     * Number of bites reported in the left arm.
-     * @type {number}
-     * @memberof Bite
-     */
-    'left_arm_bite_count'?: number;
-    /**
-     * Number of bites reported in the right arm.
-     * @type {number}
-     * @memberof Bite
-     */
-    'right_arm_bite_count'?: number;
-    /**
-     * Number of bites reported in the chest.
-     * @type {number}
-     * @memberof Bite
-     */
-    'chest_bite_count'?: number;
-    /**
-     * Number of bites reported in the left leg.
-     * @type {number}
-     * @memberof Bite
-     */
-    'left_leg_bite_count'?: number;
-    /**
-     * Number of bites reported in the right leg.
-     * @type {number}
-     * @memberof Bite
-     */
-    'right_leg_bite_count'?: number;
+    'counts': BiteCounts;
 }
 
 export const BiteEventEnvironmentEnum = {
@@ -928,6 +892,98 @@ export const BiteEventMomentEnum = {
 
 export type BiteEventMomentEnum = typeof BiteEventMomentEnum[keyof typeof BiteEventMomentEnum];
 
+/**
+ * 
+ * @export
+ * @interface BiteCounts
+ */
+export interface BiteCounts {
+    /**
+     * Total number of bites reported.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'total': number;
+    /**
+     * Number of bites reported in the head.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'head'?: number;
+    /**
+     * Number of bites reported in the left arm.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'left_arm'?: number;
+    /**
+     * Number of bites reported in the right arm.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'right_arm'?: number;
+    /**
+     * Number of bites reported in the chest.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'chest'?: number;
+    /**
+     * Number of bites reported in the left leg.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'left_leg'?: number;
+    /**
+     * Number of bites reported in the right leg.
+     * @type {number}
+     * @memberof BiteCounts
+     */
+    'right_leg'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface BiteCountsRequest
+ */
+export interface BiteCountsRequest {
+    /**
+     * Number of bites reported in the head.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'head'?: number;
+    /**
+     * Number of bites reported in the left arm.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'left_arm'?: number;
+    /**
+     * Number of bites reported in the right arm.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'right_arm'?: number;
+    /**
+     * Number of bites reported in the chest.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'chest'?: number;
+    /**
+     * Number of bites reported in the left leg.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'left_leg'?: number;
+    /**
+     * Number of bites reported in the right leg.
+     * @type {number}
+     * @memberof BiteCountsRequest
+     */
+    'right_leg'?: number;
+}
 /**
  * 
  * @export
@@ -977,41 +1033,11 @@ export interface BiteRequest {
      */
     'event_moment'?: BiteRequestEventMomentEnum | null;
     /**
-     * Number of bites reported in the head.
-     * @type {number}
+     * 
+     * @type {BiteCountsRequest}
      * @memberof BiteRequest
      */
-    'head_bite_count'?: number;
-    /**
-     * Number of bites reported in the left arm.
-     * @type {number}
-     * @memberof BiteRequest
-     */
-    'left_arm_bite_count'?: number;
-    /**
-     * Number of bites reported in the right arm.
-     * @type {number}
-     * @memberof BiteRequest
-     */
-    'right_arm_bite_count'?: number;
-    /**
-     * Number of bites reported in the chest.
-     * @type {number}
-     * @memberof BiteRequest
-     */
-    'chest_bite_count'?: number;
-    /**
-     * Number of bites reported in the left leg.
-     * @type {number}
-     * @memberof BiteRequest
-     */
-    'left_leg_bite_count'?: number;
-    /**
-     * Number of bites reported in the right leg.
-     * @type {number}
-     * @memberof BiteRequest
-     */
-    'right_leg_bite_count'?: number;
+    'counts': BiteCountsRequest;
 }
 
 export const BiteRequestEventEnvironmentEnum = {
@@ -1036,41 +1062,275 @@ export type BiteRequestEventMomentEnum = typeof BiteRequestEventMomentEnum[keyof
 /**
  * 
  * @export
- * @interface BitesCreateChestBiteCountErrorComponent
+ * @interface BitesCreateCountsChestErrorComponent
  */
-export interface BitesCreateChestBiteCountErrorComponent {
+export interface BitesCreateCountsChestErrorComponent {
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateChestBiteCountErrorComponent
+     * @memberof BitesCreateCountsChestErrorComponent
      */
-    'attr': BitesCreateChestBiteCountErrorComponentAttrEnum;
+    'attr': BitesCreateCountsChestErrorComponentAttrEnum;
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateChestBiteCountErrorComponent
+     * @memberof BitesCreateCountsChestErrorComponent
      */
-    'code': BitesCreateChestBiteCountErrorComponentCodeEnum;
+    'code': BitesCreateCountsChestErrorComponentCodeEnum;
     /**
      * 
      * @type {string}
-     * @memberof BitesCreateChestBiteCountErrorComponent
+     * @memberof BitesCreateCountsChestErrorComponent
      */
     'detail': string;
 }
 
-export const BitesCreateChestBiteCountErrorComponentAttrEnum = {
-    ChestBiteCount: 'chest_bite_count'
+export const BitesCreateCountsChestErrorComponentAttrEnum = {
+    CountsChest: 'counts.chest'
 } as const;
 
-export type BitesCreateChestBiteCountErrorComponentAttrEnum = typeof BitesCreateChestBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateChestBiteCountErrorComponentAttrEnum];
-export const BitesCreateChestBiteCountErrorComponentCodeEnum = {
+export type BitesCreateCountsChestErrorComponentAttrEnum = typeof BitesCreateCountsChestErrorComponentAttrEnum[keyof typeof BitesCreateCountsChestErrorComponentAttrEnum];
+export const BitesCreateCountsChestErrorComponentCodeEnum = {
     Invalid: 'invalid',
     MaxStringLength: 'max_string_length',
     Null: 'null'
 } as const;
 
-export type BitesCreateChestBiteCountErrorComponentCodeEnum = typeof BitesCreateChestBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateChestBiteCountErrorComponentCodeEnum];
+export type BitesCreateCountsChestErrorComponentCodeEnum = typeof BitesCreateCountsChestErrorComponentCodeEnum[keyof typeof BitesCreateCountsChestErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsHeadErrorComponent
+ */
+export interface BitesCreateCountsHeadErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsHeadErrorComponent
+     */
+    'attr': BitesCreateCountsHeadErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsHeadErrorComponent
+     */
+    'code': BitesCreateCountsHeadErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsHeadErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsHeadErrorComponentAttrEnum = {
+    CountsHead: 'counts.head'
+} as const;
+
+export type BitesCreateCountsHeadErrorComponentAttrEnum = typeof BitesCreateCountsHeadErrorComponentAttrEnum[keyof typeof BitesCreateCountsHeadErrorComponentAttrEnum];
+export const BitesCreateCountsHeadErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
+} as const;
+
+export type BitesCreateCountsHeadErrorComponentCodeEnum = typeof BitesCreateCountsHeadErrorComponentCodeEnum[keyof typeof BitesCreateCountsHeadErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsLeftArmErrorComponent
+ */
+export interface BitesCreateCountsLeftArmErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftArmErrorComponent
+     */
+    'attr': BitesCreateCountsLeftArmErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftArmErrorComponent
+     */
+    'code': BitesCreateCountsLeftArmErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftArmErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsLeftArmErrorComponentAttrEnum = {
+    CountsLeftArm: 'counts.left_arm'
+} as const;
+
+export type BitesCreateCountsLeftArmErrorComponentAttrEnum = typeof BitesCreateCountsLeftArmErrorComponentAttrEnum[keyof typeof BitesCreateCountsLeftArmErrorComponentAttrEnum];
+export const BitesCreateCountsLeftArmErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
+} as const;
+
+export type BitesCreateCountsLeftArmErrorComponentCodeEnum = typeof BitesCreateCountsLeftArmErrorComponentCodeEnum[keyof typeof BitesCreateCountsLeftArmErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsLeftLegErrorComponent
+ */
+export interface BitesCreateCountsLeftLegErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftLegErrorComponent
+     */
+    'attr': BitesCreateCountsLeftLegErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftLegErrorComponent
+     */
+    'code': BitesCreateCountsLeftLegErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsLeftLegErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsLeftLegErrorComponentAttrEnum = {
+    CountsLeftLeg: 'counts.left_leg'
+} as const;
+
+export type BitesCreateCountsLeftLegErrorComponentAttrEnum = typeof BitesCreateCountsLeftLegErrorComponentAttrEnum[keyof typeof BitesCreateCountsLeftLegErrorComponentAttrEnum];
+export const BitesCreateCountsLeftLegErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
+} as const;
+
+export type BitesCreateCountsLeftLegErrorComponentCodeEnum = typeof BitesCreateCountsLeftLegErrorComponentCodeEnum[keyof typeof BitesCreateCountsLeftLegErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsNonFieldErrorsErrorComponent
+ */
+export interface BitesCreateCountsNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsNonFieldErrorsErrorComponent
+     */
+    'attr': BitesCreateCountsNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsNonFieldErrorsErrorComponent
+     */
+    'code': BitesCreateCountsNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsNonFieldErrorsErrorComponentAttrEnum = {
+    CountsNonFieldErrors: 'counts.non_field_errors'
+} as const;
+
+export type BitesCreateCountsNonFieldErrorsErrorComponentAttrEnum = typeof BitesCreateCountsNonFieldErrorsErrorComponentAttrEnum[keyof typeof BitesCreateCountsNonFieldErrorsErrorComponentAttrEnum];
+export const BitesCreateCountsNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Required: 'required'
+} as const;
+
+export type BitesCreateCountsNonFieldErrorsErrorComponentCodeEnum = typeof BitesCreateCountsNonFieldErrorsErrorComponentCodeEnum[keyof typeof BitesCreateCountsNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsRightArmErrorComponent
+ */
+export interface BitesCreateCountsRightArmErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightArmErrorComponent
+     */
+    'attr': BitesCreateCountsRightArmErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightArmErrorComponent
+     */
+    'code': BitesCreateCountsRightArmErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightArmErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsRightArmErrorComponentAttrEnum = {
+    CountsRightArm: 'counts.right_arm'
+} as const;
+
+export type BitesCreateCountsRightArmErrorComponentAttrEnum = typeof BitesCreateCountsRightArmErrorComponentAttrEnum[keyof typeof BitesCreateCountsRightArmErrorComponentAttrEnum];
+export const BitesCreateCountsRightArmErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
+} as const;
+
+export type BitesCreateCountsRightArmErrorComponentCodeEnum = typeof BitesCreateCountsRightArmErrorComponentCodeEnum[keyof typeof BitesCreateCountsRightArmErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface BitesCreateCountsRightLegErrorComponent
+ */
+export interface BitesCreateCountsRightLegErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightLegErrorComponent
+     */
+    'attr': BitesCreateCountsRightLegErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightLegErrorComponent
+     */
+    'code': BitesCreateCountsRightLegErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BitesCreateCountsRightLegErrorComponent
+     */
+    'detail': string;
+}
+
+export const BitesCreateCountsRightLegErrorComponentAttrEnum = {
+    CountsRightLeg: 'counts.right_leg'
+} as const;
+
+export type BitesCreateCountsRightLegErrorComponentAttrEnum = typeof BitesCreateCountsRightLegErrorComponentAttrEnum[keyof typeof BitesCreateCountsRightLegErrorComponentAttrEnum];
+export const BitesCreateCountsRightLegErrorComponentCodeEnum = {
+    Invalid: 'invalid',
+    MaxStringLength: 'max_string_length',
+    Null: 'null'
+} as const;
+
+export type BitesCreateCountsRightLegErrorComponentCodeEnum = typeof BitesCreateCountsRightLegErrorComponentCodeEnum[keyof typeof BitesCreateCountsRightLegErrorComponentCodeEnum];
 
 /**
  * 
@@ -1118,7 +1378,7 @@ export type BitesCreateCreatedAtErrorComponentCodeEnum = typeof BitesCreateCreat
  * @type BitesCreateError
  * @export
  */
-export type BitesCreateError = { attr: 'chest_bite_count' } & BitesCreateChestBiteCountErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'head_bite_count' } & BitesCreateHeadBiteCountErrorComponent | { attr: 'left_arm_bite_count' } & BitesCreateLeftArmBiteCountErrorComponent | { attr: 'left_leg_bite_count' } & BitesCreateLeftLegBiteCountErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'right_arm_bite_count' } & BitesCreateRightArmBiteCountErrorComponent | { attr: 'right_leg_bite_count' } & BitesCreateRightLegBiteCountErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
+export type BitesCreateError = { attr: 'counts.chest' } & BitesCreateCountsChestErrorComponent | { attr: 'counts.head' } & BitesCreateCountsHeadErrorComponent | { attr: 'counts.left_arm' } & BitesCreateCountsLeftArmErrorComponent | { attr: 'counts.left_leg' } & BitesCreateCountsLeftLegErrorComponent | { attr: 'counts.non_field_errors' } & BitesCreateCountsNonFieldErrorsErrorComponent | { attr: 'counts.right_arm' } & BitesCreateCountsRightArmErrorComponent | { attr: 'counts.right_leg' } & BitesCreateCountsRightLegErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
 
 /**
  * 
@@ -1193,123 +1453,6 @@ export const BitesCreateEventMomentErrorComponentCodeEnum = {
 } as const;
 
 export type BitesCreateEventMomentErrorComponentCodeEnum = typeof BitesCreateEventMomentErrorComponentCodeEnum[keyof typeof BitesCreateEventMomentErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesCreateHeadBiteCountErrorComponent
- */
-export interface BitesCreateHeadBiteCountErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateHeadBiteCountErrorComponent
-     */
-    'attr': BitesCreateHeadBiteCountErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateHeadBiteCountErrorComponent
-     */
-    'code': BitesCreateHeadBiteCountErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateHeadBiteCountErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesCreateHeadBiteCountErrorComponentAttrEnum = {
-    HeadBiteCount: 'head_bite_count'
-} as const;
-
-export type BitesCreateHeadBiteCountErrorComponentAttrEnum = typeof BitesCreateHeadBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentAttrEnum];
-export const BitesCreateHeadBiteCountErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    Null: 'null'
-} as const;
-
-export type BitesCreateHeadBiteCountErrorComponentCodeEnum = typeof BitesCreateHeadBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateHeadBiteCountErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesCreateLeftArmBiteCountErrorComponent
- */
-export interface BitesCreateLeftArmBiteCountErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftArmBiteCountErrorComponent
-     */
-    'attr': BitesCreateLeftArmBiteCountErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftArmBiteCountErrorComponent
-     */
-    'code': BitesCreateLeftArmBiteCountErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftArmBiteCountErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesCreateLeftArmBiteCountErrorComponentAttrEnum = {
-    LeftArmBiteCount: 'left_arm_bite_count'
-} as const;
-
-export type BitesCreateLeftArmBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentAttrEnum];
-export const BitesCreateLeftArmBiteCountErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    Null: 'null'
-} as const;
-
-export type BitesCreateLeftArmBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftArmBiteCountErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesCreateLeftLegBiteCountErrorComponent
- */
-export interface BitesCreateLeftLegBiteCountErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftLegBiteCountErrorComponent
-     */
-    'attr': BitesCreateLeftLegBiteCountErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftLegBiteCountErrorComponent
-     */
-    'code': BitesCreateLeftLegBiteCountErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLeftLegBiteCountErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesCreateLeftLegBiteCountErrorComponentAttrEnum = {
-    LeftLegBiteCount: 'left_leg_bite_count'
-} as const;
-
-export type BitesCreateLeftLegBiteCountErrorComponentAttrEnum = typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentAttrEnum];
-export const BitesCreateLeftLegBiteCountErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    Null: 'null'
-} as const;
-
-export type BitesCreateLeftLegBiteCountErrorComponentCodeEnum = typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateLeftLegBiteCountErrorComponentCodeEnum];
 
 /**
  * 
@@ -1504,84 +1647,6 @@ export const BitesCreateNoteErrorComponentCodeEnum = {
 } as const;
 
 export type BitesCreateNoteErrorComponentCodeEnum = typeof BitesCreateNoteErrorComponentCodeEnum[keyof typeof BitesCreateNoteErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesCreateRightArmBiteCountErrorComponent
- */
-export interface BitesCreateRightArmBiteCountErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightArmBiteCountErrorComponent
-     */
-    'attr': BitesCreateRightArmBiteCountErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightArmBiteCountErrorComponent
-     */
-    'code': BitesCreateRightArmBiteCountErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightArmBiteCountErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesCreateRightArmBiteCountErrorComponentAttrEnum = {
-    RightArmBiteCount: 'right_arm_bite_count'
-} as const;
-
-export type BitesCreateRightArmBiteCountErrorComponentAttrEnum = typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentAttrEnum];
-export const BitesCreateRightArmBiteCountErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    Null: 'null'
-} as const;
-
-export type BitesCreateRightArmBiteCountErrorComponentCodeEnum = typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightArmBiteCountErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface BitesCreateRightLegBiteCountErrorComponent
- */
-export interface BitesCreateRightLegBiteCountErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightLegBiteCountErrorComponent
-     */
-    'attr': BitesCreateRightLegBiteCountErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightLegBiteCountErrorComponent
-     */
-    'code': BitesCreateRightLegBiteCountErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateRightLegBiteCountErrorComponent
-     */
-    'detail': string;
-}
-
-export const BitesCreateRightLegBiteCountErrorComponentAttrEnum = {
-    RightLegBiteCount: 'right_leg_bite_count'
-} as const;
-
-export type BitesCreateRightLegBiteCountErrorComponentAttrEnum = typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentAttrEnum];
-export const BitesCreateRightLegBiteCountErrorComponentCodeEnum = {
-    Invalid: 'invalid',
-    MaxStringLength: 'max_string_length',
-    Null: 'null'
-} as const;
-
-export type BitesCreateRightLegBiteCountErrorComponentCodeEnum = typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum[keyof typeof BitesCreateRightLegBiteCountErrorComponentCodeEnum];
 
 /**
  * 
@@ -7759,6 +7824,160 @@ export interface MobileAppRequest {
 /**
  * 
  * @export
+ * @interface MosquitoAppearance
+ */
+export interface MosquitoAppearance {
+    /**
+     * The mosquito specie perceived by the user.
+     * @type {string}
+     * @memberof MosquitoAppearance
+     */
+    'specie'?: MosquitoAppearanceSpecieEnum | null;
+    /**
+     * The species of mosquito that the thorax resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearance
+     */
+    'thorax'?: MosquitoAppearanceThoraxEnum | null;
+    /**
+     * The species of mosquito that the abdomen resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearance
+     */
+    'abdomen'?: MosquitoAppearanceAbdomenEnum | null;
+    /**
+     * The species of mosquito that the leg resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearance
+     */
+    'legs'?: MosquitoAppearanceLegsEnum | null;
+}
+
+export const MosquitoAppearanceSpecieEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceSpecieEnum = typeof MosquitoAppearanceSpecieEnum[keyof typeof MosquitoAppearanceSpecieEnum];
+export const MosquitoAppearanceThoraxEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceThoraxEnum = typeof MosquitoAppearanceThoraxEnum[keyof typeof MosquitoAppearanceThoraxEnum];
+export const MosquitoAppearanceAbdomenEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceAbdomenEnum = typeof MosquitoAppearanceAbdomenEnum[keyof typeof MosquitoAppearanceAbdomenEnum];
+export const MosquitoAppearanceLegsEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceLegsEnum = typeof MosquitoAppearanceLegsEnum[keyof typeof MosquitoAppearanceLegsEnum];
+
+/**
+ * 
+ * @export
+ * @interface MosquitoAppearanceRequest
+ */
+export interface MosquitoAppearanceRequest {
+    /**
+     * The mosquito specie perceived by the user.
+     * @type {string}
+     * @memberof MosquitoAppearanceRequest
+     */
+    'specie'?: MosquitoAppearanceRequestSpecieEnum | null;
+    /**
+     * The species of mosquito that the thorax resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearanceRequest
+     */
+    'thorax'?: MosquitoAppearanceRequestThoraxEnum | null;
+    /**
+     * The species of mosquito that the abdomen resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearanceRequest
+     */
+    'abdomen'?: MosquitoAppearanceRequestAbdomenEnum | null;
+    /**
+     * The species of mosquito that the leg resembles, according to the user.
+     * @type {string}
+     * @memberof MosquitoAppearanceRequest
+     */
+    'legs'?: MosquitoAppearanceRequestLegsEnum | null;
+}
+
+export const MosquitoAppearanceRequestSpecieEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceRequestSpecieEnum = typeof MosquitoAppearanceRequestSpecieEnum[keyof typeof MosquitoAppearanceRequestSpecieEnum];
+export const MosquitoAppearanceRequestThoraxEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceRequestThoraxEnum = typeof MosquitoAppearanceRequestThoraxEnum[keyof typeof MosquitoAppearanceRequestThoraxEnum];
+export const MosquitoAppearanceRequestAbdomenEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceRequestAbdomenEnum = typeof MosquitoAppearanceRequestAbdomenEnum[keyof typeof MosquitoAppearanceRequestAbdomenEnum];
+export const MosquitoAppearanceRequestLegsEnum = {
+    Albopictus: 'albopictus',
+    Aegypti: 'aegypti',
+    Japonicus: 'japonicus',
+    Koreicus: 'koreicus',
+    Culex: 'culex',
+    Other: 'other',
+    Empty: ''
+} as const;
+
+export type MosquitoAppearanceRequestLegsEnum = typeof MosquitoAppearanceRequestLegsEnum[keyof typeof MosquitoAppearanceRequestLegsEnum];
+
+/**
+ * 
+ * @export
  * @interface Notification
  */
 export interface Notification {
@@ -10007,8 +10226,7 @@ export const NotificationsCreateReceiverTypeErrorComponentAttrEnum = {
 export type NotificationsCreateReceiverTypeErrorComponentAttrEnum = typeof NotificationsCreateReceiverTypeErrorComponentAttrEnum[keyof typeof NotificationsCreateReceiverTypeErrorComponentAttrEnum];
 export const NotificationsCreateReceiverTypeErrorComponentCodeEnum = {
     InvalidChoice: 'invalid_choice',
-    Null: 'null',
-    Required: 'required'
+    Null: 'null'
 } as const;
 
 export type NotificationsCreateReceiverTypeErrorComponentCodeEnum = typeof NotificationsCreateReceiverTypeErrorComponentCodeEnum[keyof typeof NotificationsCreateReceiverTypeErrorComponentCodeEnum];
@@ -10653,29 +10871,11 @@ export interface Observation {
      */
     'event_moment'?: ObservationEventMomentEnum | null;
     /**
-     * The mosquito specie perceived by the user.
-     * @type {string}
+     * User-provided description of the mosquito\'s appearance
+     * @type {MosquitoAppearance}
      * @memberof Observation
      */
-    'user_perceived_mosquito_specie'?: ObservationUserPerceivedMosquitoSpecieEnum | null;
-    /**
-     * The species of mosquito that the thorax resembles, according to the user.
-     * @type {string}
-     * @memberof Observation
-     */
-    'user_perceived_mosquito_thorax'?: ObservationUserPerceivedMosquitoThoraxEnum | null;
-    /**
-     * The species of mosquito that the abdomen resembles, according to the user.
-     * @type {string}
-     * @memberof Observation
-     */
-    'user_perceived_mosquito_abdomen'?: ObservationUserPerceivedMosquitoAbdomenEnum | null;
-    /**
-     * The species of mosquito that the leg resembles, according to the user.
-     * @type {string}
-     * @memberof Observation
-     */
-    'user_perceived_mosquito_legs'?: ObservationUserPerceivedMosquitoLegsEnum | null;
+    'mosquito_appearance'?: MosquitoAppearance | null;
 }
 
 export const ObservationEventEnvironmentEnum = {
@@ -10696,50 +10896,6 @@ export const ObservationEventMomentEnum = {
 } as const;
 
 export type ObservationEventMomentEnum = typeof ObservationEventMomentEnum[keyof typeof ObservationEventMomentEnum];
-export const ObservationUserPerceivedMosquitoSpecieEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationUserPerceivedMosquitoSpecieEnum = typeof ObservationUserPerceivedMosquitoSpecieEnum[keyof typeof ObservationUserPerceivedMosquitoSpecieEnum];
-export const ObservationUserPerceivedMosquitoThoraxEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationUserPerceivedMosquitoThoraxEnum = typeof ObservationUserPerceivedMosquitoThoraxEnum[keyof typeof ObservationUserPerceivedMosquitoThoraxEnum];
-export const ObservationUserPerceivedMosquitoAbdomenEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationUserPerceivedMosquitoAbdomenEnum = typeof ObservationUserPerceivedMosquitoAbdomenEnum[keyof typeof ObservationUserPerceivedMosquitoAbdomenEnum];
-export const ObservationUserPerceivedMosquitoLegsEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-
-export type ObservationUserPerceivedMosquitoLegsEnum = typeof ObservationUserPerceivedMosquitoLegsEnum[keyof typeof ObservationUserPerceivedMosquitoLegsEnum];
 
 /**
  * 
@@ -10787,7 +10943,7 @@ export type ObservationsCreateCreatedAtErrorComponentCodeEnum = typeof Observati
  * @type ObservationsCreateError
  * @export
  */
-export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.source' } & ObservationsCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent | { attr: 'user_perceived_mosquito_abdomen' } & ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent | { attr: 'user_perceived_mosquito_legs' } & ObservationsCreateUserPerceivedMosquitoLegsErrorComponent | { attr: 'user_perceived_mosquito_specie' } & ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent | { attr: 'user_perceived_mosquito_thorax' } & ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
+export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.source' } & ObservationsCreateLocationSourceErrorComponent | { attr: 'mosquito_appearance.abdomen' } & ObservationsCreateMosquitoAppearanceAbdomenErrorComponent | { attr: 'mosquito_appearance.legs' } & ObservationsCreateMosquitoAppearanceLegsErrorComponent | { attr: 'mosquito_appearance.non_field_errors' } & ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent | { attr: 'mosquito_appearance.specie' } & ObservationsCreateMosquitoAppearanceSpecieErrorComponent | { attr: 'mosquito_appearance.thorax' } & ObservationsCreateMosquitoAppearanceThoraxErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent;
 
 /**
  * 
@@ -10979,6 +11135,191 @@ export const ObservationsCreateLocationSourceErrorComponentCodeEnum = {
 } as const;
 
 export type ObservationsCreateLocationSourceErrorComponentCodeEnum = typeof ObservationsCreateLocationSourceErrorComponentCodeEnum[keyof typeof ObservationsCreateLocationSourceErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateMosquitoAppearanceAbdomenErrorComponent
+ */
+export interface ObservationsCreateMosquitoAppearanceAbdomenErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceAbdomenErrorComponent
+     */
+    'attr': ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceAbdomenErrorComponent
+     */
+    'code': ObservationsCreateMosquitoAppearanceAbdomenErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceAbdomenErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum = {
+    MosquitoAppearanceAbdomen: 'mosquito_appearance.abdomen'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum = typeof ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum[keyof typeof ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum];
+export const ObservationsCreateMosquitoAppearanceAbdomenErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceAbdomenErrorComponentCodeEnum = typeof ObservationsCreateMosquitoAppearanceAbdomenErrorComponentCodeEnum[keyof typeof ObservationsCreateMosquitoAppearanceAbdomenErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateMosquitoAppearanceLegsErrorComponent
+ */
+export interface ObservationsCreateMosquitoAppearanceLegsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
+     */
+    'attr': ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
+     */
+    'code': ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum = {
+    MosquitoAppearanceLegs: 'mosquito_appearance.legs'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum = typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum[keyof typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum];
+export const ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum = typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum[keyof typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
+ */
+export interface ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
+     */
+    'attr': ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
+     */
+    'code': ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum = {
+    MosquitoAppearanceNonFieldErrors: 'mosquito_appearance.non_field_errors'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum = typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum[keyof typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum];
+export const ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum = {
+    Invalid: 'invalid'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum = typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum[keyof typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateMosquitoAppearanceSpecieErrorComponent
+ */
+export interface ObservationsCreateMosquitoAppearanceSpecieErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceSpecieErrorComponent
+     */
+    'attr': ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceSpecieErrorComponent
+     */
+    'code': ObservationsCreateMosquitoAppearanceSpecieErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceSpecieErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttrEnum = {
+    MosquitoAppearanceSpecie: 'mosquito_appearance.specie'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttrEnum = typeof ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttrEnum[keyof typeof ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttrEnum];
+export const ObservationsCreateMosquitoAppearanceSpecieErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceSpecieErrorComponentCodeEnum = typeof ObservationsCreateMosquitoAppearanceSpecieErrorComponentCodeEnum[keyof typeof ObservationsCreateMosquitoAppearanceSpecieErrorComponentCodeEnum];
+
+/**
+ * 
+ * @export
+ * @interface ObservationsCreateMosquitoAppearanceThoraxErrorComponent
+ */
+export interface ObservationsCreateMosquitoAppearanceThoraxErrorComponent {
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceThoraxErrorComponent
+     */
+    'attr': ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceThoraxErrorComponent
+     */
+    'code': ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ObservationsCreateMosquitoAppearanceThoraxErrorComponent
+     */
+    'detail': string;
+}
+
+export const ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum = {
+    MosquitoAppearanceThorax: 'mosquito_appearance.thorax'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum = typeof ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum[keyof typeof ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum];
+export const ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum = {
+    InvalidChoice: 'invalid_choice'
+} as const;
+
+export type ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum = typeof ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum[keyof typeof ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum];
 
 /**
  * 
@@ -11300,154 +11641,6 @@ export const ObservationsCreateTagsINDEXErrorComponentCodeEnum = {
 } as const;
 
 export type ObservationsCreateTagsINDEXErrorComponentCodeEnum = typeof ObservationsCreateTagsINDEXErrorComponentCodeEnum[keyof typeof ObservationsCreateTagsINDEXErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
- */
-export interface ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
-     */
-    'attr': ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
-     */
-    'code': ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum = {
-    UserPerceivedMosquitoAbdomen: 'user_perceived_mosquito_abdomen'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum];
-export const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
- */
-export interface ObservationsCreateUserPerceivedMosquitoLegsErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
-     */
-    'attr': ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
-     */
-    'code': ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoLegsErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum = {
-    UserPerceivedMosquitoLegs: 'user_perceived_mosquito_legs'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentAttrEnum];
-export const ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoLegsErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
- */
-export interface ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
-     */
-    'attr': ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
-     */
-    'code': ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum = {
-    UserPerceivedMosquitoSpecie: 'user_perceived_mosquito_specie'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum];
-export const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum];
-
-/**
- * 
- * @export
- * @interface ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
- */
-export interface ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
-     */
-    'attr': ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
-     */
-    'code': ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent
-     */
-    'detail': string;
-}
-
-export const ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum = {
-    UserPerceivedMosquitoThorax: 'user_perceived_mosquito_thorax'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum = typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentAttrEnum];
-export const ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum = {
-    InvalidChoice: 'invalid_choice'
-} as const;
-
-export type ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum = typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum[keyof typeof ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentCodeEnum];
 
 /**
  * 
@@ -12483,7 +12676,7 @@ export interface TopicNotificationCreateRequest {
      * @type {string}
      * @memberof TopicNotificationCreateRequest
      */
-    'receiver_type': TopicNotificationCreateRequestReceiverTypeEnum;
+    'receiver_type'?: TopicNotificationCreateRequestReceiverTypeEnum;
     /**
      * The message of the notification
      * @type {CreateNotificationMessageRequest}
@@ -12499,7 +12692,6 @@ export interface TopicNotificationCreateRequest {
 }
 
 export const TopicNotificationCreateRequestReceiverTypeEnum = {
-    User: 'user',
     Topic: 'topic'
 } as const;
 
@@ -12595,7 +12787,7 @@ export interface UserNotificationCreateRequest {
      * @type {string}
      * @memberof UserNotificationCreateRequest
      */
-    'receiver_type': UserNotificationCreateRequestReceiverTypeEnum;
+    'receiver_type'?: UserNotificationCreateRequestReceiverTypeEnum;
     /**
      * The message of the notification
      * @type {CreateNotificationMessageRequest}
@@ -12611,8 +12803,7 @@ export interface UserNotificationCreateRequest {
 }
 
 export const UserNotificationCreateRequestReceiverTypeEnum = {
-    User: 'user',
-    Topic: 'topic'
+    User: 'user'
 } as const;
 
 export type UserNotificationCreateRequestReceiverTypeEnum = typeof UserNotificationCreateRequestReceiverTypeEnum[keyof typeof UserNotificationCreateRequestReceiverTypeEnum];
@@ -16017,14 +16208,11 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {Array<string>} [tags] 
          * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
          * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
-         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
-         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
+         * @param {MosquitoAppearanceRequest | null} [mosquitoAppearance] User-provided description of the mosquito\\\&#39;s appearance
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, mosquitoAppearance?: MosquitoAppearanceRequest | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'createdAt' is not null or undefined
             assertParamExists('create', 'createdAt', createdAt)
             // verify required parameter 'sentAt' is not null or undefined
@@ -16088,20 +16276,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarFormParams.append('event_moment', eventMoment as any);
             }
     
-            if (userPerceivedMosquitoSpecie !== undefined) { 
-                localVarFormParams.append('user_perceived_mosquito_specie', userPerceivedMosquitoSpecie as any);
-            }
-    
-            if (userPerceivedMosquitoThorax !== undefined) { 
-                localVarFormParams.append('user_perceived_mosquito_thorax', userPerceivedMosquitoThorax as any);
-            }
-    
-            if (userPerceivedMosquitoAbdomen !== undefined) { 
-                localVarFormParams.append('user_perceived_mosquito_abdomen', userPerceivedMosquitoAbdomen as any);
-            }
-    
-            if (userPerceivedMosquitoLegs !== undefined) { 
-                localVarFormParams.append('user_perceived_mosquito_legs', userPerceivedMosquitoLegs as any);
+            if (mosquitoAppearance !== undefined) { 
+                localVarFormParams.append('mosquito_appearance', new Blob([JSON.stringify(mosquitoAppearance)], { type: "application/json", }));
             }
     
     
@@ -16446,15 +16622,12 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] 
          * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
          * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
-         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
-         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
+         * @param {MosquitoAppearanceRequest | null} [mosquitoAppearance] User-provided description of the mosquito\\\&#39;s appearance
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options);
+        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, mosquitoAppearance?: MosquitoAppearanceRequest | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -16551,15 +16724,12 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @param {Array<string>} [tags] 
          * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
          * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
-         * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
-         * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
-         * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
+         * @param {MosquitoAppearanceRequest | null} [mosquitoAppearance] User-provided description of the mosquito\\\&#39;s appearance
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
-            return localVarFp.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options).then((request) => request(axios, basePath));
+        create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, mosquitoAppearance?: MosquitoAppearanceRequest | null, options?: RawAxiosRequestConfig): AxiosPromise<Observation> {
+            return localVarFp.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16641,16 +16811,13 @@ export class ObservationsApi extends BaseAPI {
      * @param {Array<string>} [tags] 
      * @param {CreateEventEnvironmentEnum} [eventEnvironment] The environment where the event took place.
      * @param {CreateEventMomentEnum} [eventMoment] The moment of the day when the event took place.
-     * @param {CreateUserPerceivedMosquitoSpecieEnum} [userPerceivedMosquitoSpecie] The mosquito specie perceived by the user.
-     * @param {CreateUserPerceivedMosquitoThoraxEnum} [userPerceivedMosquitoThorax] The species of mosquito that the thorax resembles, according to the user.
-     * @param {CreateUserPerceivedMosquitoAbdomenEnum} [userPerceivedMosquitoAbdomen] The species of mosquito that the abdomen resembles, according to the user.
-     * @param {CreateUserPerceivedMosquitoLegsEnum} [userPerceivedMosquitoLegs] The species of mosquito that the leg resembles, according to the user.
+     * @param {MosquitoAppearanceRequest | null} [mosquitoAppearance] User-provided description of the mosquito\\\&#39;s appearance
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ObservationsApi
      */
-    public create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, userPerceivedMosquitoSpecie?: CreateUserPerceivedMosquitoSpecieEnum, userPerceivedMosquitoThorax?: CreateUserPerceivedMosquitoThoraxEnum, userPerceivedMosquitoAbdomen?: CreateUserPerceivedMosquitoAbdomenEnum, userPerceivedMosquitoLegs?: CreateUserPerceivedMosquitoLegsEnum, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs, options).then((request) => request(this.axios, this.basePath));
+    public create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: CreateEventEnvironmentEnum, eventMoment?: CreateEventMomentEnum, mosquitoAppearance?: MosquitoAppearanceRequest | null, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16744,58 +16911,6 @@ export const CreateEventMomentEnum = {
     Empty: ''
 } as const;
 export type CreateEventMomentEnum = typeof CreateEventMomentEnum[keyof typeof CreateEventMomentEnum];
-/**
- * @export
- */
-export const CreateUserPerceivedMosquitoSpecieEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-export type CreateUserPerceivedMosquitoSpecieEnum = typeof CreateUserPerceivedMosquitoSpecieEnum[keyof typeof CreateUserPerceivedMosquitoSpecieEnum];
-/**
- * @export
- */
-export const CreateUserPerceivedMosquitoThoraxEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-export type CreateUserPerceivedMosquitoThoraxEnum = typeof CreateUserPerceivedMosquitoThoraxEnum[keyof typeof CreateUserPerceivedMosquitoThoraxEnum];
-/**
- * @export
- */
-export const CreateUserPerceivedMosquitoAbdomenEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-export type CreateUserPerceivedMosquitoAbdomenEnum = typeof CreateUserPerceivedMosquitoAbdomenEnum[keyof typeof CreateUserPerceivedMosquitoAbdomenEnum];
-/**
- * @export
- */
-export const CreateUserPerceivedMosquitoLegsEnum = {
-    Albopictus: 'albopictus',
-    Aegypti: 'aegypti',
-    Japonicus: 'japonicus',
-    Koreicus: 'koreicus',
-    Culex: 'culex',
-    Other: 'other',
-    Empty: ''
-} as const;
-export type CreateUserPerceivedMosquitoLegsEnum = typeof CreateUserPerceivedMosquitoLegsEnum[keyof typeof CreateUserPerceivedMosquitoLegsEnum];
 /**
  * @export
  */
