@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+import type { IdentificationtasksListStatusErrorComponentAttr } from './identificationtasks-list-status-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListStatusErrorComponentAttr } from './identificationtasks-list-status-error-component-attr';
+import type { IdentificationtasksListStatusErrorComponentCode } from './identificationtasks-list-status-error-component-code';
 
 /**
  * 
@@ -34,10 +34,10 @@ export interface IdentificationtasksListStatusErrorComponent {
     'attr': IdentificationtasksListStatusErrorComponentAttr;
     /**
      * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
+     * @type {IdentificationtasksListStatusErrorComponentCode}
      * @memberof IdentificationtasksListStatusErrorComponent
      */
-    'code': BitesCreateEventEnvironmentErrorComponentCode;
+    'code': IdentificationtasksListStatusErrorComponentCode;
     /**
      * 
      * @type {string}

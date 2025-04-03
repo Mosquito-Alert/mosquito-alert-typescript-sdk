@@ -302,6 +302,7 @@ export * from './identificationtasks-list-revision-type-error-component-attr';
 export * from './identificationtasks-list-revision-type-parameter';
 export * from './identificationtasks-list-status-error-component';
 export * from './identificationtasks-list-status-error-component-attr';
+export * from './identificationtasks-list-status-error-component-code';
 export * from './identificationtasks-list-status-parameter';
 export * from './identificationtasks-list-updated-at-error-component';
 export * from './identificationtasks-list-validation-error';

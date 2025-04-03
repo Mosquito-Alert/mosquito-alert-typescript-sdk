@@ -83,13 +83,13 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {IdentificationtasksListRevisionTypeParameter} [revisionType] 
-         * @param {IdentificationtasksListStatusParameter} [status] 
+         * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: IdentificationtasksListStatusParameter, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/identification-tasks/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -167,7 +167,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['revision_type'] = revisionType;
             }
 
-            if (status !== undefined) {
+            if (status) {
                 localVarQueryParameter['status'] = status;
             }
 
@@ -618,13 +618,13 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {IdentificationtasksListRevisionTypeParameter} [revisionType] 
-         * @param {IdentificationtasksListStatusParameter} [status] 
+         * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: IdentificationtasksListStatusParameter, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
+        async list(assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.list(assignees, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, numAssignationsMax, numAssignationsMin, orderBy, page, pageSize, revisionType, status, updatedAtAfter, updatedAtBefore, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.list']?.[localVarOperationServerIndex]?.url;
@@ -959,10 +959,10 @@ export interface IdentificationTasksApiListRequest {
 
     /**
      * 
-     * @type {IdentificationtasksListStatusParameter}
+     * @type {Array<IdentificationtasksListStatusParameter>}
      * @memberof IdentificationTasksApiList
      */
-    readonly status?: IdentificationtasksListStatusParameter
+    readonly status?: Array<IdentificationtasksListStatusParameter>
 
     /**
      * Update at
