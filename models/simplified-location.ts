@@ -15,16 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AdmBoundary } from './adm-boundary';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { Country } from './country';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { LocationPoint } from './location-point';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { LocationSource } from './location-source';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { LocationTimezone } from './location-timezone';
@@ -32,45 +26,33 @@ import type { LocationTimezone } from './location-timezone';
 /**
  * 
  * @export
- * @interface Location
+ * @interface SimplifiedLocation
  */
-export interface Location {
-    /**
-     * 
-     * @type {LocationSource}
-     * @memberof Location
-     */
-    'source': LocationSource;
+export interface SimplifiedLocation {
     /**
      * 
      * @type {LocationPoint}
-     * @memberof Location
+     * @memberof SimplifiedLocation
      */
     'point': LocationPoint;
     /**
      * 
      * @type {LocationTimezone}
-     * @memberof Location
+     * @memberof SimplifiedLocation
      */
     'timezone': LocationTimezone | null;
     /**
      * 
      * @type {string}
-     * @memberof Location
+     * @memberof SimplifiedLocation
      */
     'display_name': string | null;
     /**
      * 
      * @type {Country}
-     * @memberof Location
+     * @memberof SimplifiedLocation
      */
     'country': Country | null;
-    /**
-     * 
-     * @type {Array<AdmBoundary>}
-     * @memberof Location
-     */
-    'adm_boundaries': Array<AdmBoundary>;
 }
 
 

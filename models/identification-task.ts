@@ -25,6 +25,9 @@ import type { IdentificationTaskStatus } from './identification-task-status';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimplifiedObservation } from './simplified-observation';
 
 /**
  * 
@@ -34,16 +37,10 @@ import type { SimplePhoto } from './simple-photo';
 export interface IdentificationTask {
     /**
      * 
-     * @type {string}
+     * @type {SimplifiedObservation}
      * @memberof IdentificationTask
      */
-    'uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTask
-     */
-    'observation_uuid': string;
+    'observation': SimplifiedObservation;
     /**
      * 
      * @type {SimplePhoto}

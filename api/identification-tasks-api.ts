@@ -196,17 +196,17 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosList: async (identificationTaskUuid: string, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('photosList', 'identificationTaskUuid', identificationTaskUuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/photos/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)));
+        photosList: async (observationUuid: string, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('photosList', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/photos/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -244,18 +244,18 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        photosRetrieve: async (identificationTaskUuid: string, uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('photosRetrieve', 'identificationTaskUuid', identificationTaskUuid)
+        photosRetrieve: async (observationUuid: string, uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('photosRetrieve', 'observationUuid', observationUuid)
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('photosRetrieve', 'uuid', uuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/photos/{uuid}/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)))
+            const localVarPath = `/identification-tasks/{observation_uuid}/photos/{uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -286,18 +286,18 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {CreatePhotoPredictionRequest} createPhotoPredictionRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsCreate: async (identificationTaskUuid: string, createPhotoPredictionRequest: CreatePhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsCreate', 'identificationTaskUuid', identificationTaskUuid)
+        predictionsCreate: async (observationUuid: string, createPhotoPredictionRequest: CreatePhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsCreate', 'observationUuid', observationUuid)
             // verify required parameter 'createPhotoPredictionRequest' is not null or undefined
             assertParamExists('predictionsCreate', 'createPhotoPredictionRequest', createPhotoPredictionRequest)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)));
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -330,18 +330,18 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsDestroy: async (identificationTaskUuid: string, photoUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsDestroy', 'identificationTaskUuid', identificationTaskUuid)
+        predictionsDestroy: async (observationUuid: string, photoUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsDestroy', 'observationUuid', observationUuid)
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsDestroy', 'photoUuid', photoUuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)))
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
                 .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -372,17 +372,17 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsList: async (identificationTaskUuid: string, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsList', 'identificationTaskUuid', identificationTaskUuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)));
+        predictionsList: async (observationUuid: string, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsList', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -420,19 +420,19 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {PatchedPhotoPredictionRequest} [patchedPhotoPredictionRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsPartialUpdate: async (identificationTaskUuid: string, photoUuid: string, patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsPartialUpdate', 'identificationTaskUuid', identificationTaskUuid)
+        predictionsPartialUpdate: async (observationUuid: string, photoUuid: string, patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsPartialUpdate', 'observationUuid', observationUuid)
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsPartialUpdate', 'photoUuid', photoUuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)))
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
                 .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -466,18 +466,18 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsRetrieve: async (identificationTaskUuid: string, photoUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsRetrieve', 'identificationTaskUuid', identificationTaskUuid)
+        predictionsRetrieve: async (observationUuid: string, photoUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsRetrieve', 'observationUuid', observationUuid)
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsRetrieve', 'photoUuid', photoUuid)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)))
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
                 .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -508,21 +508,21 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {PhotoPredictionRequest} photoPredictionRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsUpdate: async (identificationTaskUuid: string, photoUuid: string, photoPredictionRequest: PhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'identificationTaskUuid' is not null or undefined
-            assertParamExists('predictionsUpdate', 'identificationTaskUuid', identificationTaskUuid)
+        predictionsUpdate: async (observationUuid: string, photoUuid: string, photoPredictionRequest: PhotoPredictionRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('predictionsUpdate', 'observationUuid', observationUuid)
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsUpdate', 'photoUuid', photoUuid)
             // verify required parameter 'photoPredictionRequest' is not null or undefined
             assertParamExists('predictionsUpdate', 'photoPredictionRequest', photoPredictionRequest)
-            const localVarPath = `/identification-tasks/{identification_task_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"identification_task_uuid"}}`, encodeURIComponent(String(identificationTaskUuid)))
+            const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
                 .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -556,15 +556,15 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} uuid 
+         * @param {string} observationUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieve: async (uuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('retrieve', 'uuid', uuid)
-            const localVarPath = `/identification-tasks/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+        retrieve: async (observationUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('retrieve', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -632,120 +632,120 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosList(identificationTaskUuid: string, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSimplePhotoList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosList(identificationTaskUuid, page, pageSize, options);
+        async photosList(observationUuid: string, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSimplePhotoList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.photosList(observationUuid, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.photosList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} uuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async photosRetrieve(identificationTaskUuid: string, uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SimplePhoto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.photosRetrieve(identificationTaskUuid, uuid, options);
+        async photosRetrieve(observationUuid: string, uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SimplePhoto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.photosRetrieve(observationUuid, uuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.photosRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {CreatePhotoPredictionRequest} createPhotoPredictionRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsCreate(identificationTaskUuid: string, createPhotoPredictionRequest: CreatePhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsCreate(identificationTaskUuid, createPhotoPredictionRequest, options);
+        async predictionsCreate(observationUuid: string, createPhotoPredictionRequest: CreatePhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsCreate(observationUuid, createPhotoPredictionRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsCreate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsDestroy(identificationTaskUuid: string, photoUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsDestroy(identificationTaskUuid, photoUuid, options);
+        async predictionsDestroy(observationUuid: string, photoUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsDestroy(observationUuid, photoUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsDestroy']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsList(identificationTaskUuid: string, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPhotoPredictionList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsList(identificationTaskUuid, page, pageSize, options);
+        async predictionsList(observationUuid: string, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPhotoPredictionList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsList(observationUuid, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {PatchedPhotoPredictionRequest} [patchedPhotoPredictionRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsPartialUpdate(identificationTaskUuid: string, photoUuid: string, patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsPartialUpdate(identificationTaskUuid, photoUuid, patchedPhotoPredictionRequest, options);
+        async predictionsPartialUpdate(observationUuid: string, photoUuid: string, patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsPartialUpdate(observationUuid, photoUuid, patchedPhotoPredictionRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsPartialUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsRetrieve(identificationTaskUuid: string, photoUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsRetrieve(identificationTaskUuid, photoUuid, options);
+        async predictionsRetrieve(observationUuid: string, photoUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsRetrieve(observationUuid, photoUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} identificationTaskUuid UUID of the related Identification Task
+         * @param {string} observationUuid UUID of the Observation
          * @param {string} photoUuid 
          * @param {PhotoPredictionRequest} photoPredictionRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsUpdate(identificationTaskUuid: string, photoUuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsUpdate(identificationTaskUuid, photoUuid, photoPredictionRequest, options);
+        async predictionsUpdate(observationUuid: string, photoUuid: string, photoPredictionRequest: PhotoPredictionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PhotoPrediction>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsUpdate(observationUuid, photoUuid, photoPredictionRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.predictionsUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
-         * @param {string} uuid 
+         * @param {string} observationUuid 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieve(uuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentificationTask>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(uuid, options);
+        async retrieve(observationUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentificationTask>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(observationUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -776,7 +776,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         photosList(requestParameters: IdentificationTasksApiPhotosListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedSimplePhotoList> {
-            return localVarFp.photosList(requestParameters.identificationTaskUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
+            return localVarFp.photosList(requestParameters.observationUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -785,7 +785,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         photosRetrieve(requestParameters: IdentificationTasksApiPhotosRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<SimplePhoto> {
-            return localVarFp.photosRetrieve(requestParameters.identificationTaskUuid, requestParameters.uuid, options).then((request) => request(axios, basePath));
+            return localVarFp.photosRetrieve(requestParameters.observationUuid, requestParameters.uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -794,7 +794,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsCreate(requestParameters: IdentificationTasksApiPredictionsCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<CreatePhotoPrediction> {
-            return localVarFp.predictionsCreate(requestParameters.identificationTaskUuid, requestParameters.createPhotoPredictionRequest, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsCreate(requestParameters.observationUuid, requestParameters.createPhotoPredictionRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -803,7 +803,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsDestroy(requestParameters: IdentificationTasksApiPredictionsDestroyRequest, options?: RawAxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.predictionsDestroy(requestParameters.identificationTaskUuid, requestParameters.photoUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsDestroy(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -812,7 +812,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsList(requestParameters: IdentificationTasksApiPredictionsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedPhotoPredictionList> {
-            return localVarFp.predictionsList(requestParameters.identificationTaskUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsList(requestParameters.observationUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -821,7 +821,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsPartialUpdate(requestParameters: IdentificationTasksApiPredictionsPartialUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.predictionsPartialUpdate(requestParameters.identificationTaskUuid, requestParameters.photoUuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsPartialUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -830,7 +830,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsRetrieve(requestParameters: IdentificationTasksApiPredictionsRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.predictionsRetrieve(requestParameters.identificationTaskUuid, requestParameters.photoUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsRetrieve(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -839,7 +839,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         predictionsUpdate(requestParameters: IdentificationTasksApiPredictionsUpdateRequest, options?: RawAxiosRequestConfig): AxiosPromise<PhotoPrediction> {
-            return localVarFp.predictionsUpdate(requestParameters.identificationTaskUuid, requestParameters.photoUuid, requestParameters.photoPredictionRequest, options).then((request) => request(axios, basePath));
+            return localVarFp.predictionsUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.photoPredictionRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -848,7 +848,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         retrieve(requestParameters: IdentificationTasksApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<IdentificationTask> {
-            return localVarFp.retrieve(requestParameters.uuid, options).then((request) => request(axios, basePath));
+            return localVarFp.retrieve(requestParameters.observationUuid, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -986,11 +986,11 @@ export interface IdentificationTasksApiListRequest {
  */
 export interface IdentificationTasksApiPhotosListRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPhotosList
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * A page number within the paginated result set.
@@ -1014,11 +1014,11 @@ export interface IdentificationTasksApiPhotosListRequest {
  */
 export interface IdentificationTasksApiPhotosRetrieveRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPhotosRetrieve
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1035,11 +1035,11 @@ export interface IdentificationTasksApiPhotosRetrieveRequest {
  */
 export interface IdentificationTasksApiPredictionsCreateRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsCreate
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1056,11 +1056,11 @@ export interface IdentificationTasksApiPredictionsCreateRequest {
  */
 export interface IdentificationTasksApiPredictionsDestroyRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsDestroy
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1077,11 +1077,11 @@ export interface IdentificationTasksApiPredictionsDestroyRequest {
  */
 export interface IdentificationTasksApiPredictionsListRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsList
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * A page number within the paginated result set.
@@ -1105,11 +1105,11 @@ export interface IdentificationTasksApiPredictionsListRequest {
  */
 export interface IdentificationTasksApiPredictionsPartialUpdateRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsPartialUpdate
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1133,11 +1133,11 @@ export interface IdentificationTasksApiPredictionsPartialUpdateRequest {
  */
 export interface IdentificationTasksApiPredictionsRetrieveRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsRetrieve
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1154,11 +1154,11 @@ export interface IdentificationTasksApiPredictionsRetrieveRequest {
  */
 export interface IdentificationTasksApiPredictionsUpdateRequest {
     /**
-     * UUID of the related Identification Task
+     * UUID of the Observation
      * @type {string}
      * @memberof IdentificationTasksApiPredictionsUpdate
      */
-    readonly identificationTaskUuid: string
+    readonly observationUuid: string
 
     /**
      * 
@@ -1186,7 +1186,7 @@ export interface IdentificationTasksApiRetrieveRequest {
      * @type {string}
      * @memberof IdentificationTasksApiRetrieve
      */
-    readonly uuid: string
+    readonly observationUuid: string
 }
 
 /**
@@ -1215,7 +1215,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public photosList(requestParameters: IdentificationTasksApiPhotosListRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).photosList(requestParameters.identificationTaskUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).photosList(requestParameters.observationUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1226,7 +1226,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public photosRetrieve(requestParameters: IdentificationTasksApiPhotosRetrieveRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).photosRetrieve(requestParameters.identificationTaskUuid, requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).photosRetrieve(requestParameters.observationUuid, requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1237,7 +1237,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsCreate(requestParameters: IdentificationTasksApiPredictionsCreateRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsCreate(requestParameters.identificationTaskUuid, requestParameters.createPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsCreate(requestParameters.observationUuid, requestParameters.createPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1248,7 +1248,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsDestroy(requestParameters: IdentificationTasksApiPredictionsDestroyRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsDestroy(requestParameters.identificationTaskUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsDestroy(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1259,7 +1259,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsList(requestParameters: IdentificationTasksApiPredictionsListRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsList(requestParameters.identificationTaskUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsList(requestParameters.observationUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1270,7 +1270,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsPartialUpdate(requestParameters: IdentificationTasksApiPredictionsPartialUpdateRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsPartialUpdate(requestParameters.identificationTaskUuid, requestParameters.photoUuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsPartialUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1281,7 +1281,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsRetrieve(requestParameters: IdentificationTasksApiPredictionsRetrieveRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsRetrieve(requestParameters.identificationTaskUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsRetrieve(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1292,7 +1292,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public predictionsUpdate(requestParameters: IdentificationTasksApiPredictionsUpdateRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).predictionsUpdate(requestParameters.identificationTaskUuid, requestParameters.photoUuid, requestParameters.photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).predictionsUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1303,7 +1303,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public retrieve(requestParameters: IdentificationTasksApiRetrieveRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).retrieve(requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
