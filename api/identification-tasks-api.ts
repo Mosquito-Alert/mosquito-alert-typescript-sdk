@@ -22,6 +22,10 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
+import type { Annotation } from '../models';
+// @ts-ignore
+import type { AnnotationRequest } from '../models';
+// @ts-ignore
 import type { CreatePhotoPrediction } from '../models';
 // @ts-ignore
 import type { CreatePhotoPredictionRequest } from '../models';
@@ -34,9 +38,19 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { IdentificationTask } from '../models';
 // @ts-ignore
+import type { IdentificationtasksAnnotationsCreateValidationError } from '../models';
+// @ts-ignore
+import type { IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter } from '../models';
+// @ts-ignore
+import type { IdentificationtasksAnnotationsListMineValidationError } from '../models';
+// @ts-ignore
+import type { IdentificationtasksAnnotationsListValidationError } from '../models';
+// @ts-ignore
+import type { IdentificationtasksListMineValidationError } from '../models';
+// @ts-ignore
 import type { IdentificationtasksListOrderByParameter } from '../models';
 // @ts-ignore
-import type { IdentificationtasksListRevisionTypeParameter } from '../models';
+import type { IdentificationtasksListReviewTypeParameter } from '../models';
 // @ts-ignore
 import type { IdentificationtasksListStatusParameter } from '../models';
 // @ts-ignore
@@ -47,6 +61,8 @@ import type { IdentificationtasksPredictionsCreateValidationError } from '../mod
 import type { IdentificationtasksPredictionsPartialUpdateValidationError } from '../models';
 // @ts-ignore
 import type { IdentificationtasksPredictionsUpdateValidationError } from '../models';
+// @ts-ignore
+import type { PaginatedAnnotationList } from '../models';
 // @ts-ignore
 import type { PaginatedIdentificationTaskList } from '../models';
 // @ts-ignore
@@ -69,7 +85,299 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
     return {
         /**
          * 
-         * @param {Array<number>} [assignees] 
+         * @param {string} observationUuid UUID of the Observation
+         * @param {AnnotationRequest} annotationRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsCreate: async (observationUuid: string, annotationRequest: AnnotationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('annotationsCreate', 'observationUuid', observationUuid)
+            // verify required parameter 'annotationRequest' is not null or undefined
+            assertParamExists('annotationsCreate', 'annotationRequest', annotationRequest)
+            const localVarPath = `/identification-tasks/{observation_uuid}/annotations/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(annotationRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} observationUuid UUID of the Observation
+         * @param {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter} [classificationConfidenceLabel] 
+         * @param {number} [classificationConfidenceMax] 
+         * @param {number} [classificationConfidenceMin] 
+         * @param {Array<number>} [classificationTaxonIds] 
+         * @param {boolean} [isDecisive] 
+         * @param {boolean} [isFlagged] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<number>} [userIds] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsList: async (observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, isDecisive?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('annotationsList', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/annotations/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            if (classificationConfidenceLabel !== undefined) {
+                localVarQueryParameter['classification_confidence_label'] = classificationConfidenceLabel;
+            }
+
+            if (classificationConfidenceMax !== undefined) {
+                localVarQueryParameter['classification_confidence_max'] = classificationConfidenceMax;
+            }
+
+            if (classificationConfidenceMin !== undefined) {
+                localVarQueryParameter['classification_confidence_min'] = classificationConfidenceMin;
+            }
+
+            if (classificationTaxonIds) {
+                localVarQueryParameter['classification_taxon_ids'] = classificationTaxonIds;
+            }
+
+            if (isDecisive !== undefined) {
+                localVarQueryParameter['is_decisive'] = isDecisive;
+            }
+
+            if (isFlagged !== undefined) {
+                localVarQueryParameter['is_flagged'] = isFlagged;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (userIds) {
+                localVarQueryParameter['user_ids'] = userIds;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get my annotations
+         * @param {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter} [classificationConfidenceLabel] 
+         * @param {number} [classificationConfidenceMax] 
+         * @param {number} [classificationConfidenceMin] 
+         * @param {Array<number>} [classificationTaxonIds] 
+         * @param {boolean} [isDecisive] 
+         * @param {boolean} [isFlagged] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<number>} [userIds] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsListMine: async (classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, isDecisive?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/identification-tasks/annotations/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            if (classificationConfidenceLabel !== undefined) {
+                localVarQueryParameter['classification_confidence_label'] = classificationConfidenceLabel;
+            }
+
+            if (classificationConfidenceMax !== undefined) {
+                localVarQueryParameter['classification_confidence_max'] = classificationConfidenceMax;
+            }
+
+            if (classificationConfidenceMin !== undefined) {
+                localVarQueryParameter['classification_confidence_min'] = classificationConfidenceMin;
+            }
+
+            if (classificationTaxonIds) {
+                localVarQueryParameter['classification_taxon_ids'] = classificationTaxonIds;
+            }
+
+            if (isDecisive !== undefined) {
+                localVarQueryParameter['is_decisive'] = isDecisive;
+            }
+
+            if (isFlagged !== undefined) {
+                localVarQueryParameter['is_flagged'] = isFlagged;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (userIds) {
+                localVarQueryParameter['user_ids'] = userIds;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} id A unique integer value identifying this expert report annotation.
+         * @param {string} observationUuid UUID of the Observation
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsRetrieve: async (id: number, observationUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('annotationsRetrieve', 'id', id)
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('annotationsRetrieve', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/annotations/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve the next identification task from the backlog.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        backlogNextRetrieve: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/identification-tasks/backlog/next/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {Array<number>} [annotatorIds] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [fullyPredicted] Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
@@ -79,17 +387,25 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [numAnnotationsMin] 
          * @param {number} [numAssignationsMax] 
          * @param {number} [numAssignationsMin] 
+         * @param {Array<number>} [observationCountry] 
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
-         * @param {IdentificationtasksListRevisionTypeParameter} [revisionType] 
+         * @param {number} [resultAgreementMax] 
+         * @param {number} [resultAgreementMin] 
+         * @param {number} [resultConfidenceMax] 
+         * @param {number} [resultConfidenceMin] 
+         * @param {Array<number>} [resultTaxon] 
+         * @param {number} [resultUncertaintyMax] 
+         * @param {number} [resultUncertaintyMin] 
+         * @param {IdentificationtasksListReviewTypeParameter} [reviewType] 
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (annotatorIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, observationCountry?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: number, resultConfidenceMin?: number, resultTaxon?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/identification-tasks/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -107,8 +423,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
-            if (assignees) {
-                localVarQueryParameter['assignees'] = assignees;
+            if (annotatorIds) {
+                localVarQueryParameter['annotator_ids'] = annotatorIds;
             }
 
             if (createdAtAfter !== undefined) {
@@ -151,6 +467,10 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['num_assignations_min'] = numAssignationsMin;
             }
 
+            if (observationCountry) {
+                localVarQueryParameter['observation_country'] = observationCountry;
+            }
+
             if (orderBy) {
                 localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
             }
@@ -163,8 +483,203 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['page_size'] = pageSize;
             }
 
-            if (revisionType !== undefined) {
-                localVarQueryParameter['revision_type'] = revisionType;
+            if (resultAgreementMax !== undefined) {
+                localVarQueryParameter['result_agreement_max'] = resultAgreementMax;
+            }
+
+            if (resultAgreementMin !== undefined) {
+                localVarQueryParameter['result_agreement_min'] = resultAgreementMin;
+            }
+
+            if (resultConfidenceMax !== undefined) {
+                localVarQueryParameter['result_confidence_max'] = resultConfidenceMax;
+            }
+
+            if (resultConfidenceMin !== undefined) {
+                localVarQueryParameter['result_confidence_min'] = resultConfidenceMin;
+            }
+
+            if (resultTaxon) {
+                localVarQueryParameter['result_taxon'] = resultTaxon;
+            }
+
+            if (resultUncertaintyMax !== undefined) {
+                localVarQueryParameter['result_uncertainty_max'] = resultUncertaintyMax;
+            }
+
+            if (resultUncertaintyMin !== undefined) {
+                localVarQueryParameter['result_uncertainty_min'] = resultUncertaintyMin;
+            }
+
+            if (reviewType !== undefined) {
+                localVarQueryParameter['review_type'] = reviewType;
+            }
+
+            if (status) {
+                localVarQueryParameter['status'] = status;
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get identification tasks annotated by me
+         * @param {Array<number>} [annotatorIds] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [fullyPredicted] Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
+         * @param {boolean} [isFlagged] 
+         * @param {boolean} [isSafe] 
+         * @param {number} [numAnnotationsMax] 
+         * @param {number} [numAnnotationsMin] 
+         * @param {number} [numAssignationsMax] 
+         * @param {number} [numAssignationsMin] 
+         * @param {Array<number>} [observationCountry] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [resultAgreementMax] 
+         * @param {number} [resultAgreementMin] 
+         * @param {number} [resultConfidenceMax] 
+         * @param {number} [resultConfidenceMin] 
+         * @param {Array<number>} [resultTaxon] 
+         * @param {number} [resultUncertaintyMax] 
+         * @param {number} [resultUncertaintyMin] 
+         * @param {IdentificationtasksListReviewTypeParameter} [reviewType] 
+         * @param {Array<IdentificationtasksListStatusParameter>} [status] 
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine: async (annotatorIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, observationCountry?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: number, resultConfidenceMin?: number, resultTaxon?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/me/identification-tasks/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication cookieAuth required
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            if (annotatorIds) {
+                localVarQueryParameter['annotator_ids'] = annotatorIds;
+            }
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (fullyPredicted !== undefined) {
+                localVarQueryParameter['fully_predicted'] = fullyPredicted;
+            }
+
+            if (isFlagged !== undefined) {
+                localVarQueryParameter['is_flagged'] = isFlagged;
+            }
+
+            if (isSafe !== undefined) {
+                localVarQueryParameter['is_safe'] = isSafe;
+            }
+
+            if (numAnnotationsMax !== undefined) {
+                localVarQueryParameter['num_annotations_max'] = numAnnotationsMax;
+            }
+
+            if (numAnnotationsMin !== undefined) {
+                localVarQueryParameter['num_annotations_min'] = numAnnotationsMin;
+            }
+
+            if (numAssignationsMax !== undefined) {
+                localVarQueryParameter['num_assignations_max'] = numAssignationsMax;
+            }
+
+            if (numAssignationsMin !== undefined) {
+                localVarQueryParameter['num_assignations_min'] = numAssignationsMin;
+            }
+
+            if (observationCountry) {
+                localVarQueryParameter['observation_country'] = observationCountry;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (resultAgreementMax !== undefined) {
+                localVarQueryParameter['result_agreement_max'] = resultAgreementMax;
+            }
+
+            if (resultAgreementMin !== undefined) {
+                localVarQueryParameter['result_agreement_min'] = resultAgreementMin;
+            }
+
+            if (resultConfidenceMax !== undefined) {
+                localVarQueryParameter['result_confidence_max'] = resultConfidenceMax;
+            }
+
+            if (resultConfidenceMin !== undefined) {
+                localVarQueryParameter['result_confidence_min'] = resultConfidenceMin;
+            }
+
+            if (resultTaxon) {
+                localVarQueryParameter['result_taxon'] = resultTaxon;
+            }
+
+            if (resultUncertaintyMax !== undefined) {
+                localVarQueryParameter['result_uncertainty_max'] = resultUncertaintyMax;
+            }
+
+            if (resultUncertaintyMin !== undefined) {
+                localVarQueryParameter['result_uncertainty_min'] = resultUncertaintyMin;
+            }
+
+            if (reviewType !== undefined) {
+                localVarQueryParameter['review_type'] = reviewType;
             }
 
             if (status) {
@@ -604,7 +1119,87 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
     return {
         /**
          * 
-         * @param {Array<number>} [assignees] 
+         * @param {string} observationUuid UUID of the Observation
+         * @param {AnnotationRequest} annotationRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async annotationsCreate(observationUuid: string, annotationRequest: AnnotationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Annotation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsCreate(observationUuid, annotationRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {string} observationUuid UUID of the Observation
+         * @param {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter} [classificationConfidenceLabel] 
+         * @param {number} [classificationConfidenceMax] 
+         * @param {number} [classificationConfidenceMin] 
+         * @param {Array<number>} [classificationTaxonIds] 
+         * @param {boolean} [isDecisive] 
+         * @param {boolean} [isFlagged] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<number>} [userIds] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async annotationsList(observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, isDecisive?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get my annotations
+         * @param {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter} [classificationConfidenceLabel] 
+         * @param {number} [classificationConfidenceMax] 
+         * @param {number} [classificationConfidenceMin] 
+         * @param {Array<number>} [classificationTaxonIds] 
+         * @param {boolean} [isDecisive] 
+         * @param {boolean} [isFlagged] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<number>} [userIds] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async annotationsListMine(classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, isDecisive?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsListMine']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {number} id A unique integer value identifying this expert report annotation.
+         * @param {string} observationUuid UUID of the Observation
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async annotationsRetrieve(id: number, observationUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Annotation>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsRetrieve(id, observationUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Retrieve the next identification task from the backlog.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async backlogNextRetrieve(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentificationTask>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.backlogNextRetrieve(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.backlogNextRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {Array<number>} [annotatorIds] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [fullyPredicted] Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
@@ -614,20 +1209,64 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [numAnnotationsMin] 
          * @param {number} [numAssignationsMax] 
          * @param {number} [numAssignationsMin] 
+         * @param {Array<number>} [observationCountry] 
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
-         * @param {IdentificationtasksListRevisionTypeParameter} [revisionType] 
+         * @param {number} [resultAgreementMax] 
+         * @param {number} [resultAgreementMin] 
+         * @param {number} [resultConfidenceMax] 
+         * @param {number} [resultConfidenceMin] 
+         * @param {Array<number>} [resultTaxon] 
+         * @param {number} [resultUncertaintyMax] 
+         * @param {number} [resultUncertaintyMin] 
+         * @param {IdentificationtasksListReviewTypeParameter} [reviewType] 
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(assignees?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, revisionType?: IdentificationtasksListRevisionTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(assignees, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, numAssignationsMax, numAssignationsMin, orderBy, page, pageSize, revisionType, status, updatedAtAfter, updatedAtBefore, options);
+        async list(annotatorIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, observationCountry?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: number, resultConfidenceMin?: number, resultTaxon?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(annotatorIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, numAssignationsMax, numAssignationsMin, observationCountry, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultTaxon, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * Get identification tasks annotated by me
+         * @param {Array<number>} [annotatorIds] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {boolean} [fullyPredicted] Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
+         * @param {boolean} [isFlagged] 
+         * @param {boolean} [isSafe] 
+         * @param {number} [numAnnotationsMax] 
+         * @param {number} [numAnnotationsMin] 
+         * @param {number} [numAssignationsMax] 
+         * @param {number} [numAssignationsMin] 
+         * @param {Array<number>} [observationCountry] 
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [resultAgreementMax] 
+         * @param {number} [resultAgreementMin] 
+         * @param {number} [resultConfidenceMax] 
+         * @param {number} [resultConfidenceMin] 
+         * @param {Array<number>} [resultTaxon] 
+         * @param {number} [resultUncertaintyMax] 
+         * @param {number} [resultUncertaintyMin] 
+         * @param {IdentificationtasksListReviewTypeParameter} [reviewType] 
+         * @param {Array<IdentificationtasksListStatusParameter>} [status] 
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listMine(annotatorIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, numAssignationsMax?: number, numAssignationsMin?: number, observationCountry?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: number, resultConfidenceMin?: number, resultTaxon?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(annotatorIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, numAssignationsMax, numAssignationsMin, observationCountry, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultTaxon, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -762,12 +1401,65 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
     return {
         /**
          * 
+         * @param {IdentificationTasksApiAnnotationsCreateRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsCreate(requestParameters: IdentificationTasksApiAnnotationsCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<Annotation> {
+            return localVarFp.annotationsCreate(requestParameters.observationUuid, requestParameters.annotationRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {IdentificationTasksApiAnnotationsListRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsList(requestParameters: IdentificationTasksApiAnnotationsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedAnnotationList> {
+            return localVarFp.annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.isDecisive, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.userIds, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get my annotations
+         * @param {IdentificationTasksApiAnnotationsListMineRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsListMine(requestParameters: IdentificationTasksApiAnnotationsListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedAnnotationList> {
+            return localVarFp.annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.isDecisive, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.userIds, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {IdentificationTasksApiAnnotationsRetrieveRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        annotationsRetrieve(requestParameters: IdentificationTasksApiAnnotationsRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<Annotation> {
+            return localVarFp.annotationsRetrieve(requestParameters.id, requestParameters.observationUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve the next identification task from the backlog.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        backlogNextRetrieve(options?: RawAxiosRequestConfig): AxiosPromise<IdentificationTask> {
+            return localVarFp.backlogNextRetrieve(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {IdentificationTasksApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         list(requestParameters: IdentificationTasksApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedIdentificationTaskList> {
-            return localVarFp.list(requestParameters.assignees, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.revisionType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.annotatorIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.observationCountry, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultTaxon, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get identification tasks annotated by me
+         * @param {IdentificationTasksApiListMineRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listMine(requestParameters: IdentificationTasksApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedIdentificationTaskList> {
+            return localVarFp.listMine(requestParameters.annotatorIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.observationCountry, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultTaxon, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -854,6 +1546,209 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
 };
 
 /**
+ * Request parameters for annotationsCreate operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiAnnotationsCreateRequest
+ */
+export interface IdentificationTasksApiAnnotationsCreateRequest {
+    /**
+     * UUID of the Observation
+     * @type {string}
+     * @memberof IdentificationTasksApiAnnotationsCreate
+     */
+    readonly observationUuid: string
+
+    /**
+     * 
+     * @type {AnnotationRequest}
+     * @memberof IdentificationTasksApiAnnotationsCreate
+     */
+    readonly annotationRequest: AnnotationRequest
+}
+
+/**
+ * Request parameters for annotationsList operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiAnnotationsListRequest
+ */
+export interface IdentificationTasksApiAnnotationsListRequest {
+    /**
+     * UUID of the Observation
+     * @type {string}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly observationUuid: string
+
+    /**
+     * 
+     * @type {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly classificationConfidenceMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly classificationConfidenceMin?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly classificationTaxonIds?: Array<number>
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly isDecisive?: boolean
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly isFlagged?: boolean
+
+    /**
+     * Ordenado  
+     * @type {Array<IdentificationtasksListOrderByParameter>}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
+
+    /**
+     * A page number within the paginated result set.
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly pageSize?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly userIds?: Array<number>
+}
+
+/**
+ * Request parameters for annotationsListMine operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiAnnotationsListMineRequest
+ */
+export interface IdentificationTasksApiAnnotationsListMineRequest {
+    /**
+     * 
+     * @type {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly classificationConfidenceMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly classificationConfidenceMin?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly classificationTaxonIds?: Array<number>
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly isDecisive?: boolean
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly isFlagged?: boolean
+
+    /**
+     * Ordenado  
+     * @type {Array<IdentificationtasksListOrderByParameter>}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
+
+    /**
+     * A page number within the paginated result set.
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly pageSize?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly userIds?: Array<number>
+}
+
+/**
+ * Request parameters for annotationsRetrieve operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiAnnotationsRetrieveRequest
+ */
+export interface IdentificationTasksApiAnnotationsRetrieveRequest {
+    /**
+     * A unique integer value identifying this expert report annotation.
+     * @type {number}
+     * @memberof IdentificationTasksApiAnnotationsRetrieve
+     */
+    readonly id: number
+
+    /**
+     * UUID of the Observation
+     * @type {string}
+     * @memberof IdentificationTasksApiAnnotationsRetrieve
+     */
+    readonly observationUuid: string
+}
+
+/**
  * Request parameters for list operation in IdentificationTasksApi.
  * @export
  * @interface IdentificationTasksApiListRequest
@@ -864,7 +1759,7 @@ export interface IdentificationTasksApiListRequest {
      * @type {Array<number>}
      * @memberof IdentificationTasksApiList
      */
-    readonly assignees?: Array<number>
+    readonly annotatorIds?: Array<number>
 
     /**
      * Created at
@@ -930,6 +1825,13 @@ export interface IdentificationTasksApiListRequest {
     readonly numAssignationsMin?: number
 
     /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly observationCountry?: Array<number>
+
+    /**
      * Ordenado  
      * @type {Array<IdentificationtasksListOrderByParameter>}
      * @memberof IdentificationTasksApiList
@@ -952,10 +1854,59 @@ export interface IdentificationTasksApiListRequest {
 
     /**
      * 
-     * @type {IdentificationtasksListRevisionTypeParameter}
+     * @type {number}
      * @memberof IdentificationTasksApiList
      */
-    readonly revisionType?: IdentificationtasksListRevisionTypeParameter
+    readonly resultAgreementMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultAgreementMin?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultConfidenceMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultConfidenceMin?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultTaxon?: Array<number>
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultUncertaintyMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly resultUncertaintyMin?: number
+
+    /**
+     * 
+     * @type {IdentificationtasksListReviewTypeParameter}
+     * @memberof IdentificationTasksApiList
+     */
+    readonly reviewType?: IdentificationtasksListReviewTypeParameter
 
     /**
      * 
@@ -975,6 +1926,188 @@ export interface IdentificationTasksApiListRequest {
      * Update at
      * @type {string}
      * @memberof IdentificationTasksApiList
+     */
+    readonly updatedAtBefore?: string
+}
+
+/**
+ * Request parameters for listMine operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiListMineRequest
+ */
+export interface IdentificationTasksApiListMineRequest {
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly annotatorIds?: Array<number>
+
+    /**
+     * Created at
+     * @type {string}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly createdAtAfter?: string
+
+    /**
+     * Created at
+     * @type {string}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly createdAtBefore?: string
+
+    /**
+     * Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
+     * @type {boolean}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly fullyPredicted?: boolean
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly isFlagged?: boolean
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly isSafe?: boolean
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly numAnnotationsMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly numAnnotationsMin?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly numAssignationsMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly numAssignationsMin?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly observationCountry?: Array<number>
+
+    /**
+     * Ordenado  
+     * @type {Array<IdentificationtasksListOrderByParameter>}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
+
+    /**
+     * A page number within the paginated result set.
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly pageSize?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultAgreementMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultAgreementMin?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultConfidenceMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultConfidenceMin?: number
+
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultTaxon?: Array<number>
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultUncertaintyMax?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly resultUncertaintyMin?: number
+
+    /**
+     * 
+     * @type {IdentificationtasksListReviewTypeParameter}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly reviewType?: IdentificationtasksListReviewTypeParameter
+
+    /**
+     * 
+     * @type {Array<IdentificationtasksListStatusParameter>}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly status?: Array<IdentificationtasksListStatusParameter>
+
+    /**
+     * Update at
+     * @type {string}
+     * @memberof IdentificationTasksApiListMine
+     */
+    readonly updatedAtAfter?: string
+
+    /**
+     * Update at
+     * @type {string}
+     * @memberof IdentificationTasksApiListMine
      */
     readonly updatedAtBefore?: string
 }
@@ -1198,13 +2331,78 @@ export interface IdentificationTasksApiRetrieveRequest {
 export class IdentificationTasksApi extends BaseAPI {
     /**
      * 
+     * @param {IdentificationTasksApiAnnotationsCreateRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public annotationsCreate(requestParameters: IdentificationTasksApiAnnotationsCreateRequest, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).annotationsCreate(requestParameters.observationUuid, requestParameters.annotationRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {IdentificationTasksApiAnnotationsListRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public annotationsList(requestParameters: IdentificationTasksApiAnnotationsListRequest, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.isDecisive, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get my annotations
+     * @param {IdentificationTasksApiAnnotationsListMineRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public annotationsListMine(requestParameters: IdentificationTasksApiAnnotationsListMineRequest = {}, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.isDecisive, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {IdentificationTasksApiAnnotationsRetrieveRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public annotationsRetrieve(requestParameters: IdentificationTasksApiAnnotationsRetrieveRequest, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).annotationsRetrieve(requestParameters.id, requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve the next identification task from the backlog.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public backlogNextRetrieve(options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).backlogNextRetrieve(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {IdentificationTasksApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof IdentificationTasksApi
      */
     public list(requestParameters: IdentificationTasksApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).list(requestParameters.assignees, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.revisionType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).list(requestParameters.annotatorIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.observationCountry, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultTaxon, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get identification tasks annotated by me
+     * @param {IdentificationTasksApiListMineRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public listMine(requestParameters: IdentificationTasksApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).listMine(requestParameters.annotatorIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.numAssignationsMax, requestParameters.numAssignationsMin, requestParameters.observationCountry, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultTaxon, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewType, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

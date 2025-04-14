@@ -18,7 +18,7 @@
 import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr } from './identificationtasks-predictions-create-is-decisive-error-component-attr';
+import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr } from './identificationtasks-annotations-create-is-decisive-error-component-attr';
 
 /**
  * 
@@ -28,10 +28,10 @@ import type { IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr }
 export interface PhotosPredictionUpdateIsDecisiveErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr}
+     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr}
      * @memberof PhotosPredictionUpdateIsDecisiveErrorComponent
      */
-    'attr': IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr;
+    'attr': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr;
     /**
      * 
      * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}

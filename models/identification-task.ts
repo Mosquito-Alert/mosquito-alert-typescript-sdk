@@ -18,10 +18,13 @@
 import type { IdentificationTaskResult } from './identification-task-result';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationTaskRevision } from './identification-task-revision';
+import type { IdentificationTaskReview } from './identification-task-review';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationTaskStatus } from './identification-task-status';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
@@ -49,10 +52,10 @@ export interface IdentificationTask {
     'public_photo': SimplePhoto;
     /**
      * 
-     * @type {Array<number>}
+     * @type {Array<SimpleAnnotatorUser>}
      * @memberof IdentificationTask
      */
-    'assignees_ids': Array<number>;
+    'annotators': Array<SimpleAnnotatorUser>;
     /**
      * 
      * @type {IdentificationTaskStatus}
@@ -82,19 +85,13 @@ export interface IdentificationTask {
      * @type {number}
      * @memberof IdentificationTask
      */
-    'num_assignations': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTask
-     */
     'num_annotations': number;
     /**
      * 
-     * @type {IdentificationTaskRevision}
+     * @type {IdentificationTaskReview}
      * @memberof IdentificationTask
      */
-    'revision': IdentificationTaskRevision | null;
+    'review': IdentificationTaskReview | null;
     /**
      * 
      * @type {IdentificationTaskResult}

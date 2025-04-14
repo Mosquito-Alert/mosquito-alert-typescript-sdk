@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListStatusErrorComponentAttr } from './identificationtasks-list-status-error-component-attr';
+import type { IdentificationtasksListMineStatusErrorComponentAttr } from './identificationtasks-list-mine-status-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListStatusErrorComponentCode } from './identificationtasks-list-status-error-component-code';
+import type { IdentificationtasksListMineStatusErrorComponentCode } from './identificationtasks-list-mine-status-error-component-code';
 
 /**
  * 
@@ -28,16 +28,16 @@ import type { IdentificationtasksListStatusErrorComponentCode } from './identifi
 export interface IdentificationtasksListStatusErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksListStatusErrorComponentAttr}
+     * @type {IdentificationtasksListMineStatusErrorComponentAttr}
      * @memberof IdentificationtasksListStatusErrorComponent
      */
-    'attr': IdentificationtasksListStatusErrorComponentAttr;
+    'attr': IdentificationtasksListMineStatusErrorComponentAttr;
     /**
      * 
-     * @type {IdentificationtasksListStatusErrorComponentCode}
+     * @type {IdentificationtasksListMineStatusErrorComponentCode}
      * @memberof IdentificationtasksListStatusErrorComponent
      */
-    'code': IdentificationtasksListStatusErrorComponentCode;
+    'code': IdentificationtasksListMineStatusErrorComponentCode;
     /**
      * 
      * @type {string}

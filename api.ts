@@ -26,5 +26,6 @@ export * from './api/notifications-api';
 export * from './api/observations-api';
 export * from './api/partners-api';
 export * from './api/photos-api';
+export * from './api/taxa-api';
 export * from './api/users-api';
 

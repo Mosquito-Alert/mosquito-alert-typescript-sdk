@@ -18,7 +18,7 @@
 import type { IdentificationTaskResultSource } from './identification-task-result-source';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { Taxon } from './taxon';
+import type { SimpleTaxon } from './simple-taxon';
 
 /**
  * 
@@ -34,16 +34,16 @@ export interface IdentificationTaskResult {
     'source': IdentificationTaskResultSource | null;
     /**
      * 
-     * @type {Taxon}
+     * @type {SimpleTaxon}
      * @memberof IdentificationTaskResult
      */
-    'taxon': Taxon | null;
+    'taxon': SimpleTaxon | null;
     /**
      * 
      * @type {boolean}
      * @memberof IdentificationTaskResult
      */
-    'is_confirmed': boolean;
+    'is_high_confidence': boolean;
     /**
      * 
      * @type {number}

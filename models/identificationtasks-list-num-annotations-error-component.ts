@@ -18,7 +18,7 @@
 import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListNumAnnotationsErrorComponentAttr } from './identificationtasks-list-num-annotations-error-component-attr';
+import type { IdentificationtasksListMineNumAnnotationsErrorComponentAttr } from './identificationtasks-list-mine-num-annotations-error-component-attr';
 
 /**
  * 
@@ -28,10 +28,10 @@ import type { IdentificationtasksListNumAnnotationsErrorComponentAttr } from './
 export interface IdentificationtasksListNumAnnotationsErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksListNumAnnotationsErrorComponentAttr}
+     * @type {IdentificationtasksListMineNumAnnotationsErrorComponentAttr}
      * @memberof IdentificationtasksListNumAnnotationsErrorComponent
      */
-    'attr': IdentificationtasksListNumAnnotationsErrorComponentAttr;
+    'attr': IdentificationtasksListMineNumAnnotationsErrorComponentAttr;
     /**
      * 
      * @type {BitesListCreatedAtErrorComponentCode}

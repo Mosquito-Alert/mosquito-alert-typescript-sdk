@@ -15,10 +15,16 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListAssigneesErrorComponent } from './identificationtasks-list-assignees-error-component';
+import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListAnnotatorIdsErrorComponent } from './identificationtasks-list-annotator-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListCreatedAtErrorComponent } from './identificationtasks-list-created-at-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListMineResultAgreementErrorComponentAttr } from './identificationtasks-list-mine-result-agreement-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListNumAnnotationsErrorComponent } from './identificationtasks-list-num-annotations-error-component';
@@ -27,19 +33,28 @@ import type { IdentificationtasksListNumAnnotationsErrorComponent } from './iden
 import type { IdentificationtasksListNumAssignationsErrorComponent } from './identificationtasks-list-num-assignations-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksListObservationCountryErrorComponent } from './identificationtasks-list-observation-country-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksListOrderByErrorComponent } from './identificationtasks-list-order-by-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListRevisionTypeErrorComponent } from './identificationtasks-list-revision-type-error-component';
+import type { IdentificationtasksListResultAgreementErrorComponent } from './identificationtasks-list-result-agreement-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListResultConfidenceErrorComponent } from './identificationtasks-list-result-confidence-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListResultTaxonErrorComponent } from './identificationtasks-list-result-taxon-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListResultUncertaintyErrorComponent } from './identificationtasks-list-result-uncertainty-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListReviewTypeErrorComponent } from './identificationtasks-list-review-type-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListStatusErrorComponent } from './identificationtasks-list-status-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksListStatusErrorComponentAttr } from './identificationtasks-list-status-error-component-attr';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksListStatusErrorComponentCode } from './identificationtasks-list-status-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListUpdatedAtErrorComponent } from './identificationtasks-list-updated-at-error-component';
@@ -48,6 +63,6 @@ import type { IdentificationtasksListUpdatedAtErrorComponent } from './identific
  * @type IdentificationtasksListError
  * @export
  */
-export type IdentificationtasksListError = { attr: 'assignees' } & IdentificationtasksListAssigneesErrorComponent | { attr: 'created_at' } & IdentificationtasksListCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListNumAnnotationsErrorComponent | { attr: 'num_assignations' } & IdentificationtasksListNumAssignationsErrorComponent | { attr: 'order_by' } & IdentificationtasksListOrderByErrorComponent | { attr: 'revision_type' } & IdentificationtasksListRevisionTypeErrorComponent | { attr: 'status' } & IdentificationtasksListStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListUpdatedAtErrorComponent;
+export type IdentificationtasksListError = { attr: 'annotator_ids' } & IdentificationtasksListAnnotatorIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListNumAnnotationsErrorComponent | { attr: 'num_assignations' } & IdentificationtasksListNumAssignationsErrorComponent | { attr: 'observation_country' } & IdentificationtasksListObservationCountryErrorComponent | { attr: 'order_by' } & IdentificationtasksListOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListResultConfidenceErrorComponent | { attr: 'result_taxon' } & IdentificationtasksListResultTaxonErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListResultUncertaintyErrorComponent | { attr: 'review_type' } & IdentificationtasksListReviewTypeErrorComponent | { attr: 'status' } & IdentificationtasksListStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListUpdatedAtErrorComponent;
 
 
