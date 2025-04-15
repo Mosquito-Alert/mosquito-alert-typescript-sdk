@@ -44,6 +44,12 @@ export interface AnnotationClassification {
      * @memberof AnnotationClassification
      */
     'confidence_label': AnnotationClassificationConfidenceLabel;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AnnotationClassification
+     */
+    'is_high_confidence': boolean;
 }
 
 
