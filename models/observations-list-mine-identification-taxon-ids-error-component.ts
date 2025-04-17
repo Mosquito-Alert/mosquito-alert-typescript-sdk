@@ -18,30 +18,30 @@
 import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultTaxonErrorComponentAttr } from './identificationtasks-list-mine-result-taxon-error-component-attr';
+import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
 
 /**
  * 
  * @export
- * @interface IdentificationtasksListMineResultTaxonErrorComponent
+ * @interface ObservationsListMineIdentificationTaxonIdsErrorComponent
  */
-export interface IdentificationtasksListMineResultTaxonErrorComponent {
+export interface ObservationsListMineIdentificationTaxonIdsErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksListMineResultTaxonErrorComponentAttr}
-     * @memberof IdentificationtasksListMineResultTaxonErrorComponent
+     * @type {ObservationsListIdentificationTaxonIdsErrorComponentAttr}
+     * @memberof ObservationsListMineIdentificationTaxonIdsErrorComponent
      */
-    'attr': IdentificationtasksListMineResultTaxonErrorComponentAttr;
+    'attr': ObservationsListIdentificationTaxonIdsErrorComponentAttr;
     /**
      * 
      * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode}
-     * @memberof IdentificationtasksListMineResultTaxonErrorComponent
+     * @memberof ObservationsListMineIdentificationTaxonIdsErrorComponent
      */
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
     /**
      * 
      * @type {string}
-     * @memberof IdentificationtasksListMineResultTaxonErrorComponent
+     * @memberof ObservationsListMineIdentificationTaxonIdsErrorComponent
      */
     'detail': string;
 }

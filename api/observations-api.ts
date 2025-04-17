@@ -198,7 +198,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxon] 
+         * @param {Array<number>} [identificationTaxonIds] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -211,7 +211,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxon?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -253,8 +253,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
-            if (identificationTaxon) {
-                localVarQueryParameter['identification_taxon'] = identificationTaxon;
+            if (identificationTaxonIds) {
+                localVarQueryParameter['identification_taxon_ids'] = identificationTaxonIds;
             }
 
             if (orderBy) {
@@ -318,7 +318,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxon] 
+         * @param {Array<number>} [identificationTaxonIds] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -331,7 +331,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxon?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -368,8 +368,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
-            if (identificationTaxon) {
-                localVarQueryParameter['identification_taxon'] = identificationTaxon;
+            if (identificationTaxonIds) {
+                localVarQueryParameter['identification_taxon_ids'] = identificationTaxonIds;
             }
 
             if (orderBy) {
@@ -517,7 +517,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxon] 
+         * @param {Array<number>} [identificationTaxonIds] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -530,8 +530,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxon?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxon, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -542,7 +542,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxon] 
+         * @param {Array<number>} [identificationTaxonIds] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -555,8 +555,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxon?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxon, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -608,7 +608,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         list(requestParameters: ObservationsApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxon, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Observations
@@ -617,7 +617,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         listMine(requestParameters: ObservationsApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxon, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -754,7 +754,7 @@ export interface ObservationsApiListRequest {
      * @type {Array<number>}
      * @memberof ObservationsApiList
      */
-    readonly identificationTaxon?: Array<number>
+    readonly identificationTaxonIds?: Array<number>
 
     /**
      * Ordenado  
@@ -859,7 +859,7 @@ export interface ObservationsApiListMineRequest {
      * @type {Array<number>}
      * @memberof ObservationsApiListMine
      */
-    readonly identificationTaxon?: Array<number>
+    readonly identificationTaxonIds?: Array<number>
 
     /**
      * Ordenado  
@@ -976,7 +976,7 @@ export class ObservationsApi extends BaseAPI {
      * @memberof ObservationsApi
      */
     public list(requestParameters: ObservationsApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxon, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return ObservationsApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -987,7 +987,7 @@ export class ObservationsApi extends BaseAPI {
      * @memberof ObservationsApi
      */
     public listMine(requestParameters: ObservationsApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxon, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return ObservationsApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

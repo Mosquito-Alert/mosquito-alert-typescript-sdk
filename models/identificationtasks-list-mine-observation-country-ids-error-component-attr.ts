@@ -20,12 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListMineNumAssignationsErrorComponentAttr = {
-    NumAssignations: 'num_assignations',
+export const IdentificationtasksListMineObservationCountryIdsErrorComponentAttr = {
+    ObservationCountryIds: 'observation_country_ids',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListMineNumAssignationsErrorComponentAttr = typeof IdentificationtasksListMineNumAssignationsErrorComponentAttr[keyof typeof IdentificationtasksListMineNumAssignationsErrorComponentAttr];
+export type IdentificationtasksListMineObservationCountryIdsErrorComponentAttr = typeof IdentificationtasksListMineObservationCountryIdsErrorComponentAttr[keyof typeof IdentificationtasksListMineObservationCountryIdsErrorComponentAttr];
 
 
 

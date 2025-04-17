@@ -24,10 +24,10 @@ import type { ObservationsListCountryIdErrorComponent } from './observations-lis
 import type { ObservationsListCreatedAtErrorComponent } from './observations-list-created-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsListIdentificationTaxonErrorComponent } from './observations-list-identification-taxon-error-component';
+import type { ObservationsListIdentificationTaxonIdsErrorComponent } from './observations-list-identification-taxon-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsListIdentificationTaxonErrorComponentAttr } from './observations-list-identification-taxon-error-component-attr';
+import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationsListOrderByErrorComponent } from './observations-list-order-by-error-component';
@@ -48,6 +48,6 @@ import type { ObservationsListUserUuidErrorComponent } from './observations-list
  * @type ObservationsListError
  * @export
  */
-export type ObservationsListError = { attr: 'country_id' } & ObservationsListCountryIdErrorComponent | { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'identification_taxon' } & ObservationsListIdentificationTaxonErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
+export type ObservationsListError = { attr: 'country_id' } & ObservationsListCountryIdErrorComponent | { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'identification_taxon_ids' } & ObservationsListIdentificationTaxonIdsErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
 
 

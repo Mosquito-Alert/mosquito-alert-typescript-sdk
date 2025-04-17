@@ -20,12 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListMineObservationCountryErrorComponentAttr = {
-    ObservationCountry: 'observation_country',
+export const ObservationsListIdentificationTaxonIdsErrorComponentAttr = {
+    IdentificationTaxonIds: 'identification_taxon_ids',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListMineObservationCountryErrorComponentAttr = typeof IdentificationtasksListMineObservationCountryErrorComponentAttr[keyof typeof IdentificationtasksListMineObservationCountryErrorComponentAttr];
+export type ObservationsListIdentificationTaxonIdsErrorComponentAttr = typeof ObservationsListIdentificationTaxonIdsErrorComponentAttr[keyof typeof ObservationsListIdentificationTaxonIdsErrorComponentAttr];
 
 
 

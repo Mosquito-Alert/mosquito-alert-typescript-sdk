@@ -18,30 +18,30 @@
 import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsListIdentificationTaxonErrorComponentAttr } from './observations-list-identification-taxon-error-component-attr';
+import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
 
 /**
  * 
  * @export
- * @interface ObservationsListIdentificationTaxonErrorComponent
+ * @interface ObservationsListIdentificationTaxonIdsErrorComponent
  */
-export interface ObservationsListIdentificationTaxonErrorComponent {
+export interface ObservationsListIdentificationTaxonIdsErrorComponent {
     /**
      * 
-     * @type {ObservationsListIdentificationTaxonErrorComponentAttr}
-     * @memberof ObservationsListIdentificationTaxonErrorComponent
+     * @type {ObservationsListIdentificationTaxonIdsErrorComponentAttr}
+     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
      */
-    'attr': ObservationsListIdentificationTaxonErrorComponentAttr;
+    'attr': ObservationsListIdentificationTaxonIdsErrorComponentAttr;
     /**
      * 
      * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode}
-     * @memberof ObservationsListIdentificationTaxonErrorComponent
+     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
      */
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
     /**
      * 
      * @type {string}
-     * @memberof ObservationsListIdentificationTaxonErrorComponent
+     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
      */
     'detail': string;
 }

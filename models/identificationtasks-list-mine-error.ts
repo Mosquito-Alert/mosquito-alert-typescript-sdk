@@ -27,10 +27,7 @@ import type { IdentificationtasksListMineCreatedAtErrorComponent } from './ident
 import type { IdentificationtasksListMineNumAnnotationsErrorComponent } from './identificationtasks-list-mine-num-annotations-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineNumAssignationsErrorComponent } from './identificationtasks-list-mine-num-assignations-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksListMineObservationCountryErrorComponent } from './identificationtasks-list-mine-observation-country-error-component';
+import type { IdentificationtasksListMineObservationCountryIdsErrorComponent } from './identificationtasks-list-mine-observation-country-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineOrderByErrorComponent } from './identificationtasks-list-mine-order-by-error-component';
@@ -45,7 +42,7 @@ import type { IdentificationtasksListMineResultAgreementErrorComponentAttr } fro
 import type { IdentificationtasksListMineResultConfidenceErrorComponent } from './identificationtasks-list-mine-result-confidence-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultTaxonErrorComponent } from './identificationtasks-list-mine-result-taxon-error-component';
+import type { IdentificationtasksListMineResultTaxonIdsErrorComponent } from './identificationtasks-list-mine-result-taxon-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineResultUncertaintyErrorComponent } from './identificationtasks-list-mine-result-uncertainty-error-component';
@@ -63,6 +60,6 @@ import type { IdentificationtasksListMineUpdatedAtErrorComponent } from './ident
  * @type IdentificationtasksListMineError
  * @export
  */
-export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'num_assignations' } & IdentificationtasksListMineNumAssignationsErrorComponent | { attr: 'observation_country' } & IdentificationtasksListMineObservationCountryErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_taxon' } & IdentificationtasksListMineResultTaxonErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_type' } & IdentificationtasksListMineReviewTypeErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
+export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_type' } & IdentificationtasksListMineReviewTypeErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
 
 

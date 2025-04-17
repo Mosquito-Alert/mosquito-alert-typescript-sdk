@@ -20,12 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListMineResultTaxonErrorComponentAttr = {
-    ResultTaxon: 'result_taxon',
+export const IdentificationtasksListMineResultTaxonIdsErrorComponentAttr = {
+    ResultTaxonIds: 'result_taxon_ids',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListMineResultTaxonErrorComponentAttr = typeof IdentificationtasksListMineResultTaxonErrorComponentAttr[keyof typeof IdentificationtasksListMineResultTaxonErrorComponentAttr];
+export type IdentificationtasksListMineResultTaxonIdsErrorComponentAttr = typeof IdentificationtasksListMineResultTaxonIdsErrorComponentAttr[keyof typeof IdentificationtasksListMineResultTaxonIdsErrorComponentAttr];
 
 
 
