@@ -316,9 +316,8 @@ models/identification-task-review.ts
 models/identification-task-status.ts
 models/identification-task.ts
 models/identification.ts
-models/identificationtasks-annotations-create-best-photo-id-error-component-attr.ts
-models/identificationtasks-annotations-create-best-photo-id-error-component-code.ts
-models/identificationtasks-annotations-create-best-photo-id-error-component.ts
+models/identificationtasks-annotations-create-best-photo-uuid-error-component-attr.ts
+models/identificationtasks-annotations-create-best-photo-uuid-error-component.ts
 models/identificationtasks-annotations-create-classification-confidence-label-error-component-attr.ts
 models/identificationtasks-annotations-create-classification-confidence-label-error-component.ts
 models/identificationtasks-annotations-create-classification-non-field-errors-error-component-attr.ts

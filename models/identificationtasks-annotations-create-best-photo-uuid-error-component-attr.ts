@@ -20,12 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationtasksAnnotationsCreateBestPhotoIdErrorComponentAttr = {
-    BestPhotoId: 'best_photo_id',
+export const IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr = {
+    BestPhotoUuid: 'best_photo_uuid',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksAnnotationsCreateBestPhotoIdErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateBestPhotoIdErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateBestPhotoIdErrorComponentAttr];
+export type IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr];
 
 
 

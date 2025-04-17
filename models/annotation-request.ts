@@ -28,10 +28,10 @@ import type { AnnotationFeedbackRequest } from './annotation-feedback-request';
 export interface AnnotationRequest {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof AnnotationRequest
      */
-    'best_photo_id'?: number | null;
+    'best_photo_uuid'?: string;
     /**
      * 
      * @type {AnnotationClassificationRequest}
