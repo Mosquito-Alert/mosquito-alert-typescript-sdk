@@ -29,12 +29,62 @@ import type { ErrorResponse401 } from '../models';
 import type { ErrorResponse403 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
+// @ts-ignore
+import type { PaginatedCountryList } from '../models';
 /**
  * CountriesApi - axios parameter creator
  * @export
  */
 export const CountriesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * 
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list: async (page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/countries/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * 
          * @param {number} id A unique integer value identifying this europe country.
@@ -89,6 +139,19 @@ export const CountriesApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async list(page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedCountryList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(page, pageSize, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CountriesApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @param {number} id A unique integer value identifying this europe country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -111,6 +174,15 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
     return {
         /**
          * 
+         * @param {CountriesApiListRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list(requestParameters: CountriesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedCountryList> {
+            return localVarFp.list(requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {CountriesApiRetrieveRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -120,6 +192,27 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
         },
     };
 };
+
+/**
+ * Request parameters for list operation in CountriesApi.
+ * @export
+ * @interface CountriesApiListRequest
+ */
+export interface CountriesApiListRequest {
+    /**
+     * A page number within the paginated result set.
+     * @type {number}
+     * @memberof CountriesApiList
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     * @type {number}
+     * @memberof CountriesApiList
+     */
+    readonly pageSize?: number
+}
 
 /**
  * Request parameters for retrieve operation in CountriesApi.
@@ -142,6 +235,17 @@ export interface CountriesApiRetrieveRequest {
  * @extends {BaseAPI}
  */
 export class CountriesApi extends BaseAPI {
+    /**
+     * 
+     * @param {CountriesApiListRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CountriesApi
+     */
+    public list(requestParameters: CountriesApiListRequest = {}, options?: RawAxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).list(requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * 
      * @param {CountriesApiRetrieveRequest} requestParameters Request parameters.

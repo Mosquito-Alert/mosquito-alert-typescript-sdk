@@ -679,6 +679,7 @@ export * from './paginated-annotation-list';
 export * from './paginated-bite-list';
 export * from './paginated-breeding-site-list';
 export * from './paginated-campaign-list';
+export * from './paginated-country-list';
 export * from './paginated-identification-task-list';
 export * from './paginated-notification-list';
 export * from './paginated-observation-list';
