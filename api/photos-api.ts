@@ -67,10 +67,14 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -106,10 +110,14 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -147,10 +155,14 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -188,10 +200,14 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -229,10 +245,14 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     

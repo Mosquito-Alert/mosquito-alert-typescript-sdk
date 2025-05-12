@@ -344,6 +344,11 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
             // authentication jwtAuth required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)

@@ -108,10 +108,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -159,10 +163,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (classificationConfidenceLabel !== undefined) {
                 localVarQueryParameter['classification_confidence_label'] = classificationConfidenceLabel;
@@ -243,10 +251,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (classificationConfidenceLabel !== undefined) {
                 localVarQueryParameter['classification_confidence_label'] = classificationConfidenceLabel;
@@ -325,10 +337,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -359,10 +375,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -416,10 +436,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (annotatorIds) {
                 localVarQueryParameter['annotator_ids'] = annotatorIds;
@@ -573,10 +597,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (annotatorIds) {
                 localVarQueryParameter['annotator_ids'] = annotatorIds;
@@ -713,10 +741,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (page !== undefined) {
                 localVarQueryParameter['page'] = page;
@@ -763,10 +795,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -804,10 +840,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -849,10 +889,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -889,10 +933,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
             if (page !== undefined) {
                 localVarQueryParameter['page'] = page;
@@ -940,10 +988,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -985,10 +1037,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -1030,10 +1086,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     
@@ -1071,10 +1131,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication cookieAuth required
-
             // authentication tokenAuth required
             await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
 
     

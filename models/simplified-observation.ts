@@ -34,6 +34,12 @@ export interface SimplifiedObservation {
      * @type {string}
      * @memberof SimplifiedObservation
      */
+    'user_uuid': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SimplifiedObservation
+     */
     'created_at': string;
     /**
      * The date and time when the record was created, displayed in the local timezone specified for this entry.
