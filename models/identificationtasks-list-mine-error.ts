@@ -15,10 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
+import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineAnnotatorIdsErrorComponent } from './identificationtasks-list-mine-annotator-ids-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListMineAssigneeIdsErrorComponent } from './identificationtasks-list-mine-assignee-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineCreatedAtErrorComponent } from './identificationtasks-list-mine-created-at-error-component';
@@ -36,10 +39,13 @@ import type { IdentificationtasksListMineOrderByErrorComponent } from './identif
 import type { IdentificationtasksListMineResultAgreementErrorComponent } from './identificationtasks-list-mine-result-agreement-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultAgreementErrorComponentAttr } from './identificationtasks-list-mine-result-agreement-error-component-attr';
+import type { IdentificationtasksListMineResultConfidenceErrorComponent } from './identificationtasks-list-mine-result-confidence-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultConfidenceErrorComponent } from './identificationtasks-list-mine-result-confidence-error-component';
+import type { IdentificationtasksListMineResultSourceErrorComponent } from './identificationtasks-list-mine-result-source-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineResultTaxonIdsErrorComponent } from './identificationtasks-list-mine-result-taxon-ids-error-component';
@@ -60,6 +66,6 @@ import type { IdentificationtasksListMineUpdatedAtErrorComponent } from './ident
  * @type IdentificationtasksListMineError
  * @export
  */
-export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_type' } & IdentificationtasksListMineReviewTypeErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
+export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListMineAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListMineResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_type' } & IdentificationtasksListMineReviewTypeErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
 
 

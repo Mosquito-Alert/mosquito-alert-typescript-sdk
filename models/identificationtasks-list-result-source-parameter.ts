@@ -20,17 +20,13 @@
  * @enum {string}
  */
 
-export const CreatePhotoPredictionClassifierVersion = {
-    V20231: 'v2023.1',
-    V20241: 'v2024.1',
-    V20251: 'v2025.1',
-    V20252: 'v2025.2',
-    V20253: 'v2025.3',
-    V20254: 'v2025.4',
+export const IdentificationtasksListResultSourceParameter = {
+    Ai: 'ai',
+    Expert: 'expert',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type CreatePhotoPredictionClassifierVersion = typeof CreatePhotoPredictionClassifierVersion[keyof typeof CreatePhotoPredictionClassifierVersion];
+export type IdentificationtasksListResultSourceParameter = typeof IdentificationtasksListResultSourceParameter[keyof typeof IdentificationtasksListResultSourceParameter];
 
 
 

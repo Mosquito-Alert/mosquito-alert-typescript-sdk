@@ -13,24 +13,27 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleAnnotatorUser } from './simple-annotator-user';
 
 /**
  * 
  * @export
- * @enum {string}
+ * @interface Assignment
  */
-
-export const CreatePhotoPredictionClassifierVersion = {
-    V20231: 'v2023.1',
-    V20241: 'v2024.1',
-    V20251: 'v2025.1',
-    V20252: 'v2025.2',
-    V20253: 'v2025.3',
-    V20254: 'v2025.4',
-    UnknownDefaultOpenApi: '11184809'
-} as const;
-
-export type CreatePhotoPredictionClassifierVersion = typeof CreatePhotoPredictionClassifierVersion[keyof typeof CreatePhotoPredictionClassifierVersion];
-
-
+export interface Assignment {
+    /**
+     * 
+     * @type {SimpleAnnotatorUser}
+     * @memberof Assignment
+     */
+    'user': SimpleAnnotatorUser;
+    /**
+     * 
+     * @type {number}
+     * @memberof Assignment
+     */
+    'annotation_id': number | null;
+}
 

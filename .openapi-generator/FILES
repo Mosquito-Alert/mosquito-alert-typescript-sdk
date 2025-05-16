@@ -32,6 +32,7 @@ models/annotation-request.ts
 models/annotation.ts
 models/app-user-token-obtain-pair-request.ts
 models/app-user-token-obtain-pair.ts
+models/assignment.ts
 models/auth-change-password-error.ts
 models/auth-change-password-non-field-errors-error-component-attr.ts
 models/auth-change-password-non-field-errors-error-component-code.ts
@@ -364,9 +365,12 @@ models/identificationtasks-annotations-list-user-ids-error-component.ts
 models/identificationtasks-annotations-list-validation-error.ts
 models/identificationtasks-list-annotator-ids-error-component-attr.ts
 models/identificationtasks-list-annotator-ids-error-component.ts
+models/identificationtasks-list-assignee-ids-error-component-attr.ts
+models/identificationtasks-list-assignee-ids-error-component.ts
 models/identificationtasks-list-created-at-error-component.ts
 models/identificationtasks-list-error.ts
 models/identificationtasks-list-mine-annotator-ids-error-component.ts
+models/identificationtasks-list-mine-assignee-ids-error-component.ts
 models/identificationtasks-list-mine-created-at-error-component.ts
 models/identificationtasks-list-mine-error.ts
 models/identificationtasks-list-mine-num-annotations-error-component-attr.ts
@@ -378,6 +382,8 @@ models/identificationtasks-list-mine-result-agreement-error-component-attr.ts
 models/identificationtasks-list-mine-result-agreement-error-component.ts
 models/identificationtasks-list-mine-result-confidence-error-component-attr.ts
 models/identificationtasks-list-mine-result-confidence-error-component.ts
+models/identificationtasks-list-mine-result-source-error-component-attr.ts
+models/identificationtasks-list-mine-result-source-error-component.ts
 models/identificationtasks-list-mine-result-taxon-ids-error-component-attr.ts
 models/identificationtasks-list-mine-result-taxon-ids-error-component.ts
 models/identificationtasks-list-mine-result-uncertainty-error-component-attr.ts
@@ -395,6 +401,8 @@ models/identificationtasks-list-order-by-error-component.ts
 models/identificationtasks-list-order-by-parameter.ts
 models/identificationtasks-list-result-agreement-error-component.ts
 models/identificationtasks-list-result-confidence-error-component.ts
+models/identificationtasks-list-result-source-error-component.ts
+models/identificationtasks-list-result-source-parameter.ts
 models/identificationtasks-list-result-taxon-ids-error-component.ts
 models/identificationtasks-list-result-uncertainty-error-component.ts
 models/identificationtasks-list-review-type-error-component.ts

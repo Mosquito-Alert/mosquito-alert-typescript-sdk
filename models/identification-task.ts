@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Assignment } from './assignment';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationTaskResult } from './identification-task-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -22,9 +25,6 @@ import type { IdentificationTaskReview } from './identification-task-review';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationTaskStatus } from './identification-task-status';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
@@ -52,10 +52,10 @@ export interface IdentificationTask {
     'public_photo': SimplePhoto;
     /**
      * 
-     * @type {Array<SimpleAnnotatorUser>}
+     * @type {Array<Assignment>}
      * @memberof IdentificationTask
      */
-    'annotators': Array<SimpleAnnotatorUser>;
+    'assignments': Array<Assignment>;
     /**
      * 
      * @type {IdentificationTaskStatus}
