@@ -32,6 +32,7 @@ models/annotation-request.ts
 models/annotation.ts
 models/app-user-token-obtain-pair-request.ts
 models/app-user-token-obtain-pair.ts
+models/assignment-annotation-type.ts
 models/assignment.ts
 models/auth-change-password-error.ts
 models/auth-change-password-non-field-errors-error-component-attr.ts
@@ -721,7 +722,6 @@ models/paginated-notification-list.ts
 models/paginated-observation-list.ts
 models/paginated-partner-list.ts
 models/paginated-photo-prediction-list.ts
-models/paginated-simple-photo-list.ts
 models/paginated-taxon-list.ts
 models/partner.ts
 models/password-change-request.ts
@@ -789,7 +789,7 @@ models/simple-taxon-rank.ts
 models/simple-taxon-request.ts
 models/simple-taxon.ts
 models/simplified-location.ts
-models/simplified-observation.ts
+models/simplified-observation-serializer-with-photos.ts
 models/taxa-list-error.ts
 models/taxa-list-validation-error.ts
 models/taxon-tree-node.ts
@@ -799,6 +799,7 @@ models/token-refresh.ts
 models/token-verify-request.ts
 models/topic-notification-create-request-receiver-type.ts
 models/topic-notification-create-request.ts
+models/user-assignment.ts
 models/user-notification-create-request-receiver-type.ts
 models/user-notification-create-request.ts
 models/user-request.ts

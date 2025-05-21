@@ -15,37 +15,36 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimplePhoto } from './simple-photo';
+import type { AssignmentAnnotationType } from './assignment-annotation-type';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleAnnotatorUser } from './simple-annotator-user';
 
 /**
  * 
  * @export
- * @interface PaginatedSimplePhotoList
+ * @interface UserAssignment
  */
-export interface PaginatedSimplePhotoList {
+export interface UserAssignment {
+    /**
+     * 
+     * @type {SimpleAnnotatorUser}
+     * @memberof UserAssignment
+     */
+    'user': SimpleAnnotatorUser;
     /**
      * 
      * @type {number}
-     * @memberof PaginatedSimplePhotoList
+     * @memberof UserAssignment
      */
-    'count'?: number;
+    'annotation_id': number | null;
     /**
      * 
-     * @type {string}
-     * @memberof PaginatedSimplePhotoList
+     * @type {AssignmentAnnotationType}
+     * @memberof UserAssignment
      */
-    'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedSimplePhotoList
-     */
-    'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<SimplePhoto>}
-     * @memberof PaginatedSimplePhotoList
-     */
-    'results'?: Array<SimplePhoto>;
+    'annotation_type': AssignmentAnnotationType;
 }
+
+
 

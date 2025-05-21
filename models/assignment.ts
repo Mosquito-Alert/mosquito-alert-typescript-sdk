@@ -15,7 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimpleAnnotatorUser } from './simple-annotator-user';
+import type { AssignmentAnnotationType } from './assignment-annotation-type';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimplifiedObservationSerializerWithPhotos } from './simplified-observation-serializer-with-photos';
 
 /**
  * 
@@ -25,15 +28,17 @@ import type { SimpleAnnotatorUser } from './simple-annotator-user';
 export interface Assignment {
     /**
      * 
-     * @type {SimpleAnnotatorUser}
+     * @type {SimplifiedObservationSerializerWithPhotos}
      * @memberof Assignment
      */
-    'user': SimpleAnnotatorUser;
+    'observation': SimplifiedObservationSerializerWithPhotos;
     /**
      * 
-     * @type {number}
+     * @type {AssignmentAnnotationType}
      * @memberof Assignment
      */
-    'annotation_id': number | null;
+    'annotation_type': AssignmentAnnotationType;
 }
+
+
 

@@ -1,6 +1,6 @@
 {
   "name": "mosquito-alert",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "OpenAPI client for mosquito-alert",
   "author": "OpenAPI-Generator Contributors",
   "repository": {

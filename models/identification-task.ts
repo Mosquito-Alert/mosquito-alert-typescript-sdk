@@ -15,9 +15,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { Assignment } from './assignment';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { IdentificationTaskResult } from './identification-task-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -30,7 +27,10 @@ import type { IdentificationTaskStatus } from './identification-task-status';
 import type { SimplePhoto } from './simple-photo';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimplifiedObservation } from './simplified-observation';
+import type { SimplifiedObservationSerializerWithPhotos } from './simplified-observation-serializer-with-photos';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { UserAssignment } from './user-assignment';
 
 /**
  * 
@@ -40,10 +40,10 @@ import type { SimplifiedObservation } from './simplified-observation';
 export interface IdentificationTask {
     /**
      * 
-     * @type {SimplifiedObservation}
+     * @type {SimplifiedObservationSerializerWithPhotos}
      * @memberof IdentificationTask
      */
-    'observation': SimplifiedObservation;
+    'observation': SimplifiedObservationSerializerWithPhotos;
     /**
      * 
      * @type {SimplePhoto}
@@ -52,10 +52,10 @@ export interface IdentificationTask {
     'public_photo': SimplePhoto;
     /**
      * 
-     * @type {Array<Assignment>}
+     * @type {Array<UserAssignment>}
      * @memberof IdentificationTask
      */
-    'assignments': Array<Assignment>;
+    'assignments': Array<UserAssignment>;
     /**
      * 
      * @type {IdentificationTaskStatus}
