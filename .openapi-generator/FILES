@@ -789,7 +789,7 @@ models/simple-taxon-rank.ts
 models/simple-taxon-request.ts
 models/simple-taxon.ts
 models/simplified-location.ts
-models/simplified-observation-serializer-with-photos.ts
+models/simplified-observation-with-photos.ts
 models/taxa-list-error.ts
 models/taxa-list-validation-error.ts
 models/taxon-tree-node.ts

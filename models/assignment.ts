@@ -18,7 +18,7 @@
 import type { AssignmentAnnotationType } from './assignment-annotation-type';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimplifiedObservationSerializerWithPhotos } from './simplified-observation-serializer-with-photos';
+import type { SimplifiedObservationWithPhotos } from './simplified-observation-with-photos';
 
 /**
  * 
@@ -28,10 +28,10 @@ import type { SimplifiedObservationSerializerWithPhotos } from './simplified-obs
 export interface Assignment {
     /**
      * 
-     * @type {SimplifiedObservationSerializerWithPhotos}
+     * @type {SimplifiedObservationWithPhotos}
      * @memberof Assignment
      */
-    'observation': SimplifiedObservationSerializerWithPhotos;
+    'observation': SimplifiedObservationWithPhotos;
     /**
      * 
      * @type {AssignmentAnnotationType}

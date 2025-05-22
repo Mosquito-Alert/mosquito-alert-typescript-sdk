@@ -23,55 +23,55 @@ import type { SimplifiedLocation } from './simplified-location';
 /**
  * 
  * @export
- * @interface SimplifiedObservationSerializerWithPhotos
+ * @interface SimplifiedObservationWithPhotos
  */
-export interface SimplifiedObservationSerializerWithPhotos {
+export interface SimplifiedObservationWithPhotos {
     /**
      * 
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'uuid': string;
     /**
      * 
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'user_uuid': string;
     /**
      * 
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'created_at': string;
     /**
      * The date and time when the record was created, displayed in the local timezone specified for this entry.
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'created_at_local': string;
     /**
      * 
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'received_at': string;
     /**
      * 
      * @type {SimplifiedLocation}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'location': SimplifiedLocation;
     /**
      * Note user attached to report.
      * @type {string}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'note'?: string | null;
     /**
      * 
      * @type {Array<SimplePhoto>}
-     * @memberof SimplifiedObservationSerializerWithPhotos
+     * @memberof SimplifiedObservationWithPhotos
      */
     'photos': Array<SimplePhoto>;
 }

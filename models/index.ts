@@ -765,7 +765,7 @@ export * from './simple-taxon';
 export * from './simple-taxon-rank';
 export * from './simple-taxon-request';
 export * from './simplified-location';
-export * from './simplified-observation-serializer-with-photos';
+export * from './simplified-observation-with-photos';
 export * from './taxa-list-error';
 export * from './taxa-list-validation-error';
 export * from './taxon';
