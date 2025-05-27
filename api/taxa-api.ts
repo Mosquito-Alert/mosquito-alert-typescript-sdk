@@ -30,6 +30,8 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { PaginatedTaxonList } from '../models';
 // @ts-ignore
+import type { TaxaListRankParameter } from '../models';
+// @ts-ignore
 import type { TaxaListValidationError } from '../models';
 // @ts-ignore
 import type { Taxon } from '../models';
@@ -46,10 +48,11 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {boolean} [isRelevant] 
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<TaxaListRankParameter>} [rank] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (isRelevant?: boolean, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (isRelevant?: boolean, page?: number, pageSize?: number, rank?: Array<TaxaListRankParameter>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/taxa/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -81,6 +84,10 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (rank) {
+                localVarQueryParameter['rank'] = rank;
             }
 
 
@@ -231,11 +238,12 @@ export const TaxaApiFp = function(configuration?: Configuration) {
          * @param {boolean} [isRelevant] 
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<TaxaListRankParameter>} [rank] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(isRelevant?: boolean, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedTaxonList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(isRelevant, page, pageSize, options);
+        async list(isRelevant?: boolean, page?: number, pageSize?: number, rank?: Array<TaxaListRankParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedTaxonList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(isRelevant, page, pageSize, rank, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TaxaApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -292,7 +300,7 @@ export const TaxaApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         list(requestParameters: TaxaApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedTaxonList> {
-            return localVarFp.list(requestParameters.isRelevant, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.isRelevant, requestParameters.page, requestParameters.pageSize, requestParameters.rank, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -349,6 +357,13 @@ export interface TaxaApiListRequest {
      * @memberof TaxaApiList
      */
     readonly pageSize?: number
+
+    /**
+     * 
+     * @type {Array<TaxaListRankParameter>}
+     * @memberof TaxaApiList
+     */
+    readonly rank?: Array<TaxaListRankParameter>
 }
 
 /**
@@ -394,7 +409,7 @@ export class TaxaApi extends BaseAPI {
      * @memberof TaxaApi
      */
     public list(requestParameters: TaxaApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return TaxaApiFp(this.configuration).list(requestParameters.isRelevant, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
+        return TaxaApiFp(this.configuration).list(requestParameters.isRelevant, requestParameters.page, requestParameters.pageSize, requestParameters.rank, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

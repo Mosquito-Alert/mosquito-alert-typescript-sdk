@@ -7,8 +7,8 @@ export function attachAuthInterceptor(
   instance: AxiosInstance,
   options: {
     configuration: Configuration;
-    getRefreshToken: () => string | null;
-    updateAccessToken: (accessToken: string) => void;
+    refreshToken: () => string | Promise<string>;
+    updateAccessToken: (accessToken: string) => void | Promise<void>;
   }
 ) {
   const authApi = new AuthApi(options.configuration);
@@ -61,9 +61,9 @@ export function attachAuthInterceptor(
         isRefreshing = true;
 
         try {
-          const refreshToken = options.getRefreshToken();
+          const refreshToken = await options.refreshToken();
 
-          if (!refreshToken) {
+          if (refreshToken === '') {
             throw new Error("No refresh token available");
           }
 
@@ -74,7 +74,7 @@ export function attachAuthInterceptor(
           } as AuthApiRefreshTokenRequest);
 
           const newToken = refreshResponse.data.access;
-          options.updateAccessToken(newToken);
+          await options.updateAccessToken(newToken);
 
           processQueue(null, newToken);
 
