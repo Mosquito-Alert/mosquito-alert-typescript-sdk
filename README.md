@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.11
+## mosquito-alert@0.1.12
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.11 --save
+npm install mosquito-alert@0.1.12 --save
 ```
 
 _unPublished (not recommended):_
@@ -427,6 +427,8 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode](docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode.md)
  - [IdentificationtasksAnnotationsCreateError](docs/IdentificationtasksAnnotationsCreateError.md)
+ - [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent.md)

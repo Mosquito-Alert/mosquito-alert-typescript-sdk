@@ -17,26 +17,15 @@
 /**
  * 
  * @export
- * @interface AnnotationFeedbackRequest
+ * @enum {string}
  */
-export interface AnnotationFeedbackRequest {
-    /**
-     * Notes to display on public map
-     * @type {string}
-     * @memberof AnnotationFeedbackRequest
-     */
-    'public_note'?: string | null;
-    /**
-     * Internal notes for yourself or other experts
-     * @type {string}
-     * @memberof AnnotationFeedbackRequest
-     */
-    'internal_note'?: string | null;
-    /**
-     * Message that user will receive when viewing report on phone
-     * @type {string}
-     * @memberof AnnotationFeedbackRequest
-     */
-    'user_note'?: string | null;
-}
+
+export const IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr = {
+    FeedbackInternalNote: 'feedback.internal_note',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr];
+
+
 

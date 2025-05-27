@@ -306,6 +306,8 @@ export * from './identificationtasks-annotations-create-classification-taxon-id-
 export * from './identificationtasks-annotations-create-classification-taxon-id-error-component-attr';
 export * from './identificationtasks-annotations-create-classification-taxon-id-error-component-code';
 export * from './identificationtasks-annotations-create-error';
+export * from './identificationtasks-annotations-create-feedback-internal-note-error-component';
+export * from './identificationtasks-annotations-create-feedback-internal-note-error-component-attr';
 export * from './identificationtasks-annotations-create-feedback-non-field-errors-error-component';
 export * from './identificationtasks-annotations-create-feedback-non-field-errors-error-component-attr';
 export * from './identificationtasks-annotations-create-feedback-public-note-error-component';

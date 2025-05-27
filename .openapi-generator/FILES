@@ -335,6 +335,8 @@ docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode.md
 docs/IdentificationtasksAnnotationsCreateError.md
+docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent.md
+docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent.md
@@ -1135,6 +1137,8 @@ models/identificationtasks-annotations-create-classification-taxon-id-error-comp
 models/identificationtasks-annotations-create-classification-taxon-id-error-component-code.ts
 models/identificationtasks-annotations-create-classification-taxon-id-error-component.ts
 models/identificationtasks-annotations-create-error.ts
+models/identificationtasks-annotations-create-feedback-internal-note-error-component-attr.ts
+models/identificationtasks-annotations-create-feedback-internal-note-error-component.ts
 models/identificationtasks-annotations-create-feedback-non-field-errors-error-component-attr.ts
 models/identificationtasks-annotations-create-feedback-non-field-errors-error-component.ts
 models/identificationtasks-annotations-create-feedback-public-note-error-component-attr.ts
