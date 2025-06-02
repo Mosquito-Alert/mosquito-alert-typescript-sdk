@@ -30,6 +30,7 @@ docs/AnnotationFeedbackRequest.md
 docs/AnnotationRequest.md
 docs/AppUserTokenObtainPair.md
 docs/AppUserTokenObtainPairRequest.md
+docs/AssignedObservation.md
 docs/Assignment.md
 docs/AssignmentAnnotationType.md
 docs/AuthApi.md
@@ -797,6 +798,7 @@ docs/SimplePhotoRequest.md
 docs/SimpleTaxon.md
 docs/SimpleTaxonRank.md
 docs/SimpleTaxonRequest.md
+docs/SimpleUser.md
 docs/SimplifiedLocation.md
 docs/SimplifiedObservationWithPhotos.md
 docs/TaxaApi.md
@@ -840,6 +842,7 @@ models/annotation-request.ts
 models/annotation.ts
 models/app-user-token-obtain-pair-request.ts
 models/app-user-token-obtain-pair.ts
+models/assigned-observation.ts
 models/assignment-annotation-type.ts
 models/assignment.ts
 models/auth-change-password-error.ts
@@ -1596,6 +1599,7 @@ models/simple-photo.ts
 models/simple-taxon-rank.ts
 models/simple-taxon-request.ts
 models/simple-taxon.ts
+models/simple-user.ts
 models/simplified-location.ts
 models/simplified-observation-with-photos.ts
 models/taxa-list-rank-error-component-attr.ts

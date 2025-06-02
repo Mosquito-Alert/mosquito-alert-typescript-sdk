@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.12
+## mosquito-alert@0.1.13
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.12 --save
+npm install mosquito-alert@0.1.13 --save
 ```
 
 _unPublished (not recommended):_
@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
  - [AnnotationRequest](docs/AnnotationRequest.md)
  - [AppUserTokenObtainPair](docs/AppUserTokenObtainPair.md)
  - [AppUserTokenObtainPairRequest](docs/AppUserTokenObtainPairRequest.md)
+ - [AssignedObservation](docs/AssignedObservation.md)
  - [Assignment](docs/Assignment.md)
  - [AssignmentAnnotationType](docs/AssignmentAnnotationType.md)
  - [AuthChangePasswordError](docs/AuthChangePasswordError.md)
@@ -885,6 +886,7 @@ Class | Method | HTTP request | Description
  - [SimpleTaxon](docs/SimpleTaxon.md)
  - [SimpleTaxonRank](docs/SimpleTaxonRank.md)
  - [SimpleTaxonRequest](docs/SimpleTaxonRequest.md)
+ - [SimpleUser](docs/SimpleUser.md)
  - [SimplifiedLocation](docs/SimplifiedLocation.md)
  - [SimplifiedObservationWithPhotos](docs/SimplifiedObservationWithPhotos.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)

@@ -15,29 +15,26 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AssignedObservation } from './assigned-observation';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { AssignmentAnnotationType } from './assignment-annotation-type';
+import type { PatchedUserRequestLocale } from './patched-user-request-locale';
 
 /**
  * 
  * @export
- * @interface Assignment
+ * @interface SimpleUser
  */
-export interface Assignment {
+export interface SimpleUser {
     /**
      * 
-     * @type {AssignedObservation}
-     * @memberof Assignment
+     * @type {string}
+     * @memberof SimpleUser
      */
-    'observation': AssignedObservation;
+    'uuid': string;
     /**
      * 
-     * @type {AssignmentAnnotationType}
-     * @memberof Assignment
+     * @type {PatchedUserRequestLocale}
+     * @memberof SimpleUser
      */
-    'annotation_type': AssignmentAnnotationType;
+    'locale'?: PatchedUserRequestLocale;
 }
 
 
