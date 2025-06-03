@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] [default to undefined]
 **is_flagged** | **boolean** |  | [readonly] [default to false]
 **is_decisive** | **boolean** |  | [readonly] [default to false]
+**is_favourite** | **boolean** |  | [readonly] [default to false]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
 **updated_at** | **string** |  | [readonly] [default to undefined]
@@ -31,6 +32,7 @@ const instance: Annotation = {
     feedback,
     is_flagged,
     is_decisive,
+    is_favourite,
     tags,
     created_at,
     updated_at,

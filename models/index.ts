@@ -318,6 +318,8 @@ export * from './identificationtasks-annotations-create-feedback-user-note-error
 export * from './identificationtasks-annotations-create-is-decisive-error-component';
 export * from './identificationtasks-annotations-create-is-decisive-error-component-attr';
 export * from './identificationtasks-annotations-create-is-decisive-error-component-code';
+export * from './identificationtasks-annotations-create-is-favourite-error-component';
+export * from './identificationtasks-annotations-create-is-favourite-error-component-attr';
 export * from './identificationtasks-annotations-create-is-flagged-error-component';
 export * from './identificationtasks-annotations-create-is-flagged-error-component-attr';
 export * from './identificationtasks-annotations-create-non-field-errors-error-component';

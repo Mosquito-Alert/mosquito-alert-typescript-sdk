@@ -347,6 +347,8 @@ docs/IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md
+docs/IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent.md
+docs/IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent.md
@@ -1151,6 +1153,8 @@ models/identificationtasks-annotations-create-feedback-user-note-error-component
 models/identificationtasks-annotations-create-is-decisive-error-component-attr.ts
 models/identificationtasks-annotations-create-is-decisive-error-component-code.ts
 models/identificationtasks-annotations-create-is-decisive-error-component.ts
+models/identificationtasks-annotations-create-is-favourite-error-component-attr.ts
+models/identificationtasks-annotations-create-is-favourite-error-component.ts
 models/identificationtasks-annotations-create-is-flagged-error-component-attr.ts
 models/identificationtasks-annotations-create-is-flagged-error-component.ts
 models/identificationtasks-annotations-create-non-field-errors-error-component.ts

@@ -100,6 +100,7 @@ let classificationTaxonIds: Array<number>; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let isDecisive: boolean; // (optional) (default to undefined)
+let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenado   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
@@ -117,6 +118,7 @@ const { status, data } = await apiInstance.annotationsList(
     createdAtAfter,
     createdAtBefore,
     isDecisive,
+    isFavourite,
     isFlagged,
     orderBy,
     page,
@@ -139,6 +141,7 @@ const { status, data } = await apiInstance.annotationsList(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **isDecisive** | [**boolean**] |  | (optional) defaults to undefined|
+| **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
@@ -196,6 +199,7 @@ let classificationTaxonIds: Array<number>; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let isDecisive: boolean; // (optional) (default to undefined)
+let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenado   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
@@ -212,6 +216,7 @@ const { status, data } = await apiInstance.annotationsListMine(
     createdAtAfter,
     createdAtBefore,
     isDecisive,
+    isFavourite,
     isFlagged,
     orderBy,
     page,
@@ -233,6 +238,7 @@ const { status, data } = await apiInstance.annotationsListMine(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **isDecisive** | [**boolean**] |  | (optional) defaults to undefined|
+| **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|

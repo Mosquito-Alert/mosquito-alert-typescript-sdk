@@ -82,6 +82,12 @@ export interface Annotation {
     'is_decisive': boolean;
     /**
      * 
+     * @type {boolean}
+     * @memberof Annotation
+     */
+    'is_favourite': boolean;
+    /**
+     * 
      * @type {Array<string>}
      * @memberof Annotation
      */

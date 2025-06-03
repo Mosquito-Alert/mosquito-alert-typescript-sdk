@@ -58,6 +58,12 @@ export interface AnnotationRequest {
     'is_decisive'?: boolean;
     /**
      * 
+     * @type {boolean}
+     * @memberof AnnotationRequest
+     */
+    'is_favourite'?: boolean;
+    /**
+     * 
      * @type {Array<string>}
      * @memberof AnnotationRequest
      */
