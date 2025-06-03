@@ -1,5 +1,5 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
-import { AuthApi, AuthApiRefreshTokenRequest } from "./api";
+import type { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+import { AuthApi, type AuthApiRefreshTokenRequest } from "./api";
 import { Configuration } from "./configuration";
 import { setBearerAuthToObject } from "./common";
 
