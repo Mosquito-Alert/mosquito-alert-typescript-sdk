@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **best_photo_uuid** | **string** |  | [optional] [default to undefined]
 **classification** | [**AnnotationClassificationRequest**](AnnotationClassificationRequest.md) |  | [default to undefined]
+**characteristics** | [**AnnotationCharacteristicsRequest**](AnnotationCharacteristicsRequest.md) |  | [optional] [default to undefined]
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] [default to undefined]
 **is_flagged** | **boolean** |  | [optional] [default to false]
 **is_decisive** | **boolean** |  | [optional] [default to false]
@@ -21,6 +22,7 @@ import { AnnotationRequest } from 'mosquito-alert';
 const instance: AnnotationRequest = {
     best_photo_uuid,
     classification,
+    characteristics,
     feedback,
     is_flagged,
     is_decisive,

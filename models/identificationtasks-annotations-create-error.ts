@@ -24,6 +24,18 @@ import type { BitesCreateTagsINDEXErrorComponentAttr } from './bites-create-tags
 import type { IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent } from './identificationtasks-annotations-create-best-photo-uuid-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent } from './identificationtasks-annotations-create-characteristics-is-blood-fed-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent } from './identificationtasks-annotations-create-characteristics-is-gravid-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent } from './identificationtasks-annotations-create-characteristics-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent } from './identificationtasks-annotations-create-characteristics-sex-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent } from './identificationtasks-annotations-create-classification-confidence-label-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -66,6 +78,6 @@ import type { IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent } from
  * @type IdentificationtasksAnnotationsCreateError
  * @export
  */
-export type IdentificationtasksAnnotationsCreateError = { attr: 'best_photo_uuid' } & IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent | { attr: 'classification.confidence_label' } & IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent | { attr: 'classification.non_field_errors' } & IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent | { attr: 'classification.taxon_id' } & IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent | { attr: 'feedback.internal_note' } & IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent | { attr: 'feedback.non_field_errors' } & IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent | { attr: 'feedback.public_note' } & IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent | { attr: 'feedback.user_note' } & IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent | { attr: 'is_decisive' } & IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent | { attr: 'is_favourite' } & IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent | { attr: 'is_flagged' } & IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent | { attr: 'non_field_errors' } & IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent | { attr: 'tags' } & IdentificationtasksAnnotationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent;
+export type IdentificationtasksAnnotationsCreateError = { attr: 'best_photo_uuid' } & IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent | { attr: 'characteristics.is_blood_fed' } & IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent | { attr: 'characteristics.is_gravid' } & IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent | { attr: 'characteristics.non_field_errors' } & IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent | { attr: 'characteristics.sex' } & IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent | { attr: 'classification.confidence_label' } & IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent | { attr: 'classification.non_field_errors' } & IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent | { attr: 'classification.taxon_id' } & IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent | { attr: 'feedback.internal_note' } & IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent | { attr: 'feedback.non_field_errors' } & IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent | { attr: 'feedback.public_note' } & IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent | { attr: 'feedback.user_note' } & IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent | { attr: 'is_decisive' } & IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent | { attr: 'is_favourite' } & IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent | { attr: 'is_flagged' } & IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent | { attr: 'non_field_errors' } & IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent | { attr: 'tags' } & IdentificationtasksAnnotationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent;
 
 

@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AnnotationCharacteristicsRequest } from './annotation-characteristics-request';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { AnnotationClassificationRequest } from './annotation-classification-request';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -38,6 +41,12 @@ export interface AnnotationRequest {
      * @memberof AnnotationRequest
      */
     'classification': AnnotationClassificationRequest | null;
+    /**
+     * 
+     * @type {AnnotationCharacteristicsRequest}
+     * @memberof AnnotationRequest
+     */
+    'characteristics'?: AnnotationCharacteristicsRequest;
     /**
      * 
      * @type {AnnotationFeedbackRequest}

@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.15
+## mosquito-alert@0.1.16
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.15 --save
+npm install mosquito-alert@0.1.16 --save
 ```
 
 _unPublished (not recommended):_
@@ -122,6 +122,9 @@ Class | Method | HTTP request | Description
  - [AdmBoundary](docs/AdmBoundary.md)
  - [AdmBoundaryRequest](docs/AdmBoundaryRequest.md)
  - [Annotation](docs/Annotation.md)
+ - [AnnotationCharacteristics](docs/AnnotationCharacteristics.md)
+ - [AnnotationCharacteristicsRequest](docs/AnnotationCharacteristicsRequest.md)
+ - [AnnotationCharacteristicsSex](docs/AnnotationCharacteristicsSex.md)
  - [AnnotationClassification](docs/AnnotationClassification.md)
  - [AnnotationClassificationConfidenceLabel](docs/AnnotationClassificationConfidenceLabel.md)
  - [AnnotationClassificationRequest](docs/AnnotationClassificationRequest.md)
@@ -419,6 +422,14 @@ Class | Method | HTTP request | Description
  - [IdentificationTaskStatus](docs/IdentificationTaskStatus.md)
  - [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent](docs/IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent](docs/IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent](docs/IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent](docs/IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent](docs/IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent.md)
