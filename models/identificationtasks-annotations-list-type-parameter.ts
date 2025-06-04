@@ -13,32 +13,20 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { AnnotationType } from './annotation-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { AssignedObservation } from './assigned-observation';
 
 /**
  * 
  * @export
- * @interface Assignment
+ * @enum {string}
  */
-export interface Assignment {
-    /**
-     * 
-     * @type {AssignedObservation}
-     * @memberof Assignment
-     */
-    'observation': AssignedObservation;
-    /**
-     * 
-     * @type {AnnotationType}
-     * @memberof Assignment
-     */
-    'annotation_type': AnnotationType;
-}
+
+export const IdentificationtasksAnnotationsListTypeParameter = {
+    Long: 'long',
+    Short: 'short',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsListTypeParameter = typeof IdentificationtasksAnnotationsListTypeParameter[keyof typeof IdentificationtasksAnnotationsListTypeParameter];
 
 
 

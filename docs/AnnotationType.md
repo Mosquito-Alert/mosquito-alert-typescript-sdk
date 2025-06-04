@@ -1,4 +1,4 @@
-# AssignmentAnnotationType
+# AnnotationType
 
 
 ## Enum

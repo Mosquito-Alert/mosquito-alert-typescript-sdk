@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.14
+## mosquito-alert@0.1.15
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.14 --save
+npm install mosquito-alert@0.1.15 --save
 ```
 
 _unPublished (not recommended):_
@@ -128,11 +128,11 @@ Class | Method | HTTP request | Description
  - [AnnotationFeedback](docs/AnnotationFeedback.md)
  - [AnnotationFeedbackRequest](docs/AnnotationFeedbackRequest.md)
  - [AnnotationRequest](docs/AnnotationRequest.md)
+ - [AnnotationType](docs/AnnotationType.md)
  - [AppUserTokenObtainPair](docs/AppUserTokenObtainPair.md)
  - [AppUserTokenObtainPairRequest](docs/AppUserTokenObtainPairRequest.md)
  - [AssignedObservation](docs/AssignedObservation.md)
  - [Assignment](docs/Assignment.md)
- - [AssignmentAnnotationType](docs/AssignmentAnnotationType.md)
  - [AuthChangePasswordError](docs/AuthChangePasswordError.md)
  - [AuthChangePasswordNonFieldErrorsErrorComponent](docs/AuthChangePasswordNonFieldErrorsErrorComponent.md)
  - [AuthChangePasswordNonFieldErrorsErrorComponentAttr](docs/AuthChangePasswordNonFieldErrorsErrorComponentAttr.md)
@@ -463,11 +463,14 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent](docs/IdentificationtasksAnnotationsListMineCreatedAtErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineError](docs/IdentificationtasksAnnotationsListMineError.md)
  - [IdentificationtasksAnnotationsListMineOrderByErrorComponent](docs/IdentificationtasksAnnotationsListMineOrderByErrorComponent.md)
+ - [IdentificationtasksAnnotationsListMineTypeErrorComponent](docs/IdentificationtasksAnnotationsListMineTypeErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent](docs/IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineUserIdsErrorComponent](docs/IdentificationtasksAnnotationsListMineUserIdsErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr](docs/IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsListMineValidationError](docs/IdentificationtasksAnnotationsListMineValidationError.md)
  - [IdentificationtasksAnnotationsListOrderByErrorComponent](docs/IdentificationtasksAnnotationsListOrderByErrorComponent.md)
+ - [IdentificationtasksAnnotationsListTypeErrorComponent](docs/IdentificationtasksAnnotationsListTypeErrorComponent.md)
+ - [IdentificationtasksAnnotationsListTypeParameter](docs/IdentificationtasksAnnotationsListTypeParameter.md)
  - [IdentificationtasksAnnotationsListUpdatedAtErrorComponent](docs/IdentificationtasksAnnotationsListUpdatedAtErrorComponent.md)
  - [IdentificationtasksAnnotationsListUserIdsErrorComponent](docs/IdentificationtasksAnnotationsListUserIdsErrorComponent.md)
  - [IdentificationtasksAnnotationsListValidationError](docs/IdentificationtasksAnnotationsListValidationError.md)

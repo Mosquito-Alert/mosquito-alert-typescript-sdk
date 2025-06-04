@@ -36,6 +36,9 @@ import type { IdentificationtasksAnnotationsListCreatedAtErrorComponent } from '
 import type { IdentificationtasksAnnotationsListOrderByErrorComponent } from './identificationtasks-annotations-list-order-by-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksAnnotationsListTypeErrorComponent } from './identificationtasks-annotations-list-type-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksAnnotationsListUpdatedAtErrorComponent } from './identificationtasks-annotations-list-updated-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -45,6 +48,6 @@ import type { IdentificationtasksAnnotationsListUserIdsErrorComponent } from './
  * @type IdentificationtasksAnnotationsListError
  * @export
  */
-export type IdentificationtasksAnnotationsListError = { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListOrderByErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListUserIdsErrorComponent;
+export type IdentificationtasksAnnotationsListError = { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListOrderByErrorComponent | { attr: 'type' } & IdentificationtasksAnnotationsListTypeErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListUserIdsErrorComponent;
 
 

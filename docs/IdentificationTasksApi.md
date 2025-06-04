@@ -105,6 +105,7 @@ let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenado   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let type: IdentificationtasksAnnotationsListTypeParameter; // (optional) (default to undefined)
 let updatedAtAfter: string; //Updated at (optional) (default to undefined)
 let updatedAtBefore: string; //Updated at (optional) (default to undefined)
 let userIds: Array<number>; // (optional) (default to undefined)
@@ -123,6 +124,7 @@ const { status, data } = await apiInstance.annotationsList(
     orderBy,
     page,
     pageSize,
+    type,
     updatedAtAfter,
     updatedAtBefore,
     userIds
@@ -146,6 +148,7 @@ const { status, data } = await apiInstance.annotationsList(
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **type** | **IdentificationtasksAnnotationsListTypeParameter** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Updated at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Updated at | (optional) defaults to undefined|
 | **userIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
@@ -204,6 +207,7 @@ let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenado   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let type: IdentificationtasksAnnotationsListTypeParameter; // (optional) (default to undefined)
 let updatedAtAfter: string; //Updated at (optional) (default to undefined)
 let updatedAtBefore: string; //Updated at (optional) (default to undefined)
 let userIds: Array<number>; // (optional) (default to undefined)
@@ -221,6 +225,7 @@ const { status, data } = await apiInstance.annotationsListMine(
     orderBy,
     page,
     pageSize,
+    type,
     updatedAtAfter,
     updatedAtBefore,
     userIds
@@ -243,6 +248,7 @@ const { status, data } = await apiInstance.annotationsListMine(
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **type** | **IdentificationtasksAnnotationsListTypeParameter** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Updated at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Updated at | (optional) defaults to undefined|
 | **userIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|

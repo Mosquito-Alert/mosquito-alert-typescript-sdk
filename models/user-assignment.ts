@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AssignmentAnnotationType } from './assignment-annotation-type';
+import type { AnnotationType } from './annotation-type';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimpleAnnotatorUser } from './simple-annotator-user';
@@ -40,10 +40,10 @@ export interface UserAssignment {
     'annotation_id': number | null;
     /**
      * 
-     * @type {AssignmentAnnotationType}
+     * @type {AnnotationType}
      * @memberof UserAssignment
      */
-    'annotation_type': AssignmentAnnotationType;
+    'annotation_type': AnnotationType;
 }
 
 

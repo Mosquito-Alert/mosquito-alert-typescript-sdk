@@ -46,6 +46,8 @@ import type { IdentificationtasksAnnotationsListClassificationConfidenceLabelPar
 // @ts-ignore
 import type { IdentificationtasksAnnotationsListMineValidationError } from '../models';
 // @ts-ignore
+import type { IdentificationtasksAnnotationsListTypeParameter } from '../models';
+// @ts-ignore
 import type { IdentificationtasksAnnotationsListValidationError } from '../models';
 // @ts-ignore
 import type { IdentificationtasksListMineValidationError } from '../models';
@@ -146,13 +148,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
          * @param {Array<number>} [userIds] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        annotationsList: async (observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        annotationsList: async (observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, type?: IdentificationtasksAnnotationsListTypeParameter, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('annotationsList', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/annotations/`
@@ -229,6 +232,10 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['page_size'] = pageSize;
             }
 
+            if (type !== undefined) {
+                localVarQueryParameter['type'] = type;
+            }
+
             if (updatedAtAfter !== undefined) {
                 localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
                     (updatedAtAfter as any).toISOString() :
@@ -270,13 +277,14 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
          * @param {Array<number>} [userIds] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        annotationsListMine: async (classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        annotationsListMine: async (classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, type?: IdentificationtasksAnnotationsListTypeParameter, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/identification-tasks/annotations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -348,6 +356,10 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (type !== undefined) {
+                localVarQueryParameter['type'] = type;
             }
 
             if (updatedAtAfter !== undefined) {
@@ -1177,14 +1189,15 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
          * @param {Array<number>} [userIds] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async annotationsList(observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds, options);
+        async annotationsList(observationUuid: string, classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, type?: IdentificationtasksAnnotationsListTypeParameter, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -1203,14 +1216,15 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
+         * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
          * @param {Array<number>} [userIds] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async annotationsListMine(classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds, options);
+        async annotationsListMine(classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter, classificationConfidenceMax?: number, classificationConfidenceMin?: number, classificationTaxonIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, isDecisive?: boolean, isFavourite?: boolean, isFlagged?: boolean, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, type?: IdentificationtasksAnnotationsListTypeParameter, updatedAtAfter?: string, updatedAtBefore?: string, userIds?: Array<number>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAnnotationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.annotationsListMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -1430,7 +1444,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         annotationsList(requestParameters: IdentificationTasksApiAnnotationsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedAnnotationList> {
-            return localVarFp.annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(axios, basePath));
+            return localVarFp.annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(axios, basePath));
         },
         /**
          * Get my annotations
@@ -1439,7 +1453,7 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          * @throws {RequiredError}
          */
         annotationsListMine(requestParameters: IdentificationTasksApiAnnotationsListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedAnnotationList> {
-            return localVarFp.annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(axios, basePath));
+            return localVarFp.annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1661,6 +1675,13 @@ export interface IdentificationTasksApiAnnotationsListRequest {
     readonly pageSize?: number
 
     /**
+     * 
+     * @type {IdentificationtasksAnnotationsListTypeParameter}
+     * @memberof IdentificationTasksApiAnnotationsList
+     */
+    readonly type?: IdentificationtasksAnnotationsListTypeParameter
+
+    /**
      * Updated at
      * @type {string}
      * @memberof IdentificationTasksApiAnnotationsList
@@ -1771,6 +1792,13 @@ export interface IdentificationTasksApiAnnotationsListMineRequest {
      * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly pageSize?: number
+
+    /**
+     * 
+     * @type {IdentificationtasksAnnotationsListTypeParameter}
+     * @memberof IdentificationTasksApiAnnotationsListMine
+     */
+    readonly type?: IdentificationtasksAnnotationsListTypeParameter
 
     /**
      * Updated at
@@ -2366,7 +2394,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public annotationsList(requestParameters: IdentificationTasksApiAnnotationsListRequest, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2377,7 +2405,7 @@ export class IdentificationTasksApi extends BaseAPI {
      * @memberof IdentificationTasksApi
      */
     public annotationsListMine(requestParameters: IdentificationTasksApiAnnotationsListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return IdentificationTasksApiFp(this.configuration).annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
+        return IdentificationTasksApiFp(this.configuration).annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

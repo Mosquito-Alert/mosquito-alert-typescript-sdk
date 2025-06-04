@@ -20,13 +20,13 @@
  * @enum {string}
  */
 
-export const AssignmentAnnotationType = {
+export const AnnotationType = {
     Short: 'short',
     Long: 'long',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type AssignmentAnnotationType = typeof AssignmentAnnotationType[keyof typeof AssignmentAnnotationType];
+export type AnnotationType = typeof AnnotationType[keyof typeof AnnotationType];
 
 
 

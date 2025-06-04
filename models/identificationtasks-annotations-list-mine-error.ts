@@ -36,6 +36,9 @@ import type { IdentificationtasksAnnotationsListMineCreatedAtErrorComponent } fr
 import type { IdentificationtasksAnnotationsListMineOrderByErrorComponent } from './identificationtasks-annotations-list-mine-order-by-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksAnnotationsListMineTypeErrorComponent } from './identificationtasks-annotations-list-mine-type-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent } from './identificationtasks-annotations-list-mine-updated-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -45,6 +48,6 @@ import type { IdentificationtasksAnnotationsListMineUserIdsErrorComponent } from
  * @type IdentificationtasksAnnotationsListMineError
  * @export
  */
-export type IdentificationtasksAnnotationsListMineError = { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListMineCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListMineOrderByErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListMineUserIdsErrorComponent;
+export type IdentificationtasksAnnotationsListMineError = { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListMineCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListMineOrderByErrorComponent | { attr: 'type' } & IdentificationtasksAnnotationsListMineTypeErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListMineUserIdsErrorComponent;
 
 

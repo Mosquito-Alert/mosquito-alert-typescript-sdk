@@ -21,6 +21,9 @@ import type { AnnotationClassification } from './annotation-classification';
 import type { AnnotationFeedback } from './annotation-feedback';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AnnotationType } from './annotation-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -70,6 +73,12 @@ export interface Annotation {
     'feedback'?: AnnotationFeedback;
     /**
      * 
+     * @type {AnnotationType}
+     * @memberof Annotation
+     */
+    'type': AnnotationType;
+    /**
+     * 
      * @type {boolean}
      * @memberof Annotation
      */
@@ -105,4 +114,6 @@ export interface Annotation {
      */
     'updated_at': string;
 }
+
+
 

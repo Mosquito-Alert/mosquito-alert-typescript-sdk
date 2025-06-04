@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user** | [**SimpleAnnotatorUser**](SimpleAnnotatorUser.md) |  | [default to undefined]
 **annotation_id** | **number** |  | [readonly] [default to undefined]
-**annotation_type** | [**AssignmentAnnotationType**](AssignmentAnnotationType.md) |  | [default to undefined]
+**annotation_type** | [**AnnotationType**](AnnotationType.md) |  | [default to undefined]
 
 ## Example
 
