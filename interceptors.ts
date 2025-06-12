@@ -52,7 +52,11 @@ export function attachAuthInterceptor(
           return new Promise((resolve, reject) => {
             failedQueue.push({ resolve, reject });
           }).then(async (token) => {
-            await setBearerAuthToObject(originalRequest, options.configuration);
+            originalRequest.headers = originalRequest.headers || {};
+            await setBearerAuthToObject(
+              originalRequest.headers,
+              options.configuration
+            );
             return instance(originalRequest);
           });
         }
@@ -63,7 +67,7 @@ export function attachAuthInterceptor(
         try {
           const refreshToken = await options.refreshToken();
 
-          if (refreshToken === '') {
+          if (refreshToken === "") {
             throw new Error("No refresh token available");
           }
 
@@ -78,7 +82,11 @@ export function attachAuthInterceptor(
 
           processQueue(null, newToken);
 
-          await setBearerAuthToObject(originalRequest, options.configuration);
+          originalRequest.headers = originalRequest.headers || {};
+          await setBearerAuthToObject(
+            originalRequest.headers,
+            options.configuration
+          );
 
           return instance(originalRequest);
         } catch (refreshErr) {
