@@ -17,15 +17,20 @@
 /**
  * 
  * @export
- * @enum {string}
+ * @interface ObservationFlagsRequest
  */
-
-export const IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr = {
-    IsFavourite: 'is_favourite',
-    UnknownDefaultOpenApi: '11184809'
-} as const;
-
-export type IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr];
-
-
+export interface ObservationFlagsRequest {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ObservationFlagsRequest
+     */
+    'is_favourite'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ObservationFlagsRequest
+     */
+    'is_visible'?: boolean;
+}
 

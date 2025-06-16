@@ -24,6 +24,9 @@ import type { AnnotationFeedback } from './annotation-feedback';
 import type { AnnotationType } from './annotation-type';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ObservationFlags } from './observation-flags';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -91,10 +94,10 @@ export interface Annotation {
     'is_decisive': boolean;
     /**
      * 
-     * @type {boolean}
+     * @type {ObservationFlags}
      * @memberof Annotation
      */
-    'is_favourite': boolean;
+    'observation_flags'?: ObservationFlags;
     /**
      * 
      * @type {Array<string>}

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] [default to undefined]
 **is_flagged** | **boolean** |  | [optional] [default to false]
 **is_decisive** | **boolean** |  | [optional] [default to false]
-**is_favourite** | **boolean** |  | [optional] [default to false]
+**observation_flags** | [**ObservationFlagsRequest**](ObservationFlagsRequest.md) |  | [optional] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 
 ## Example
@@ -26,7 +26,7 @@ const instance: AnnotationRequest = {
     feedback,
     is_flagged,
     is_decisive,
-    is_favourite,
+    observation_flags,
     tags,
 };
 ```

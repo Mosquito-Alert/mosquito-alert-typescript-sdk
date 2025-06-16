@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.16
+## mosquito-alert@0.1.17
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.16 --save
+npm install mosquito-alert@0.1.17 --save
 ```
 
 _unPublished (not recommended):_
@@ -450,11 +450,15 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md)
- - [IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent](docs/IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent.md)
- - [IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent](docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateTagsErrorComponent](docs/IdentificationtasksAnnotationsCreateTagsErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent](docs/IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateValidationError](docs/IdentificationtasksAnnotationsCreateValidationError.md)
@@ -779,6 +783,8 @@ Class | Method | HTTP request | Description
  - [NotificationsUpdateNonFieldErrorsErrorComponent](docs/NotificationsUpdateNonFieldErrorsErrorComponent.md)
  - [NotificationsUpdateValidationError](docs/NotificationsUpdateValidationError.md)
  - [Observation](docs/Observation.md)
+ - [ObservationFlags](docs/ObservationFlags.md)
+ - [ObservationFlagsRequest](docs/ObservationFlagsRequest.md)
  - [ObservationsCreateCreatedAtErrorComponent](docs/ObservationsCreateCreatedAtErrorComponent.md)
  - [ObservationsCreateError](docs/ObservationsCreateError.md)
  - [ObservationsCreateEventEnvironmentErrorComponent](docs/ObservationsCreateEventEnvironmentErrorComponent.md)

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **type** | [**AnnotationType**](AnnotationType.md) |  | [default to undefined]
 **is_flagged** | **boolean** |  | [readonly] [default to false]
 **is_decisive** | **boolean** |  | [readonly] [default to false]
-**is_favourite** | **boolean** |  | [readonly] [default to false]
+**observation_flags** | [**ObservationFlags**](ObservationFlags.md) |  | [optional] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
 **updated_at** | **string** |  | [readonly] [default to undefined]
@@ -34,7 +34,7 @@ const instance: Annotation = {
     type,
     is_flagged,
     is_decisive,
-    is_favourite,
+    observation_flags,
     tags,
     created_at,
     updated_at,

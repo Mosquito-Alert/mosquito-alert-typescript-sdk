@@ -18,30 +18,30 @@
 import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode } from './identificationtasks-annotations-create-is-decisive-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr } from './identificationtasks-annotations-create-is-favourite-error-component-attr';
+import type { IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr } from './identificationtasks-annotations-create-observation-flags-is-visible-error-component-attr';
 
 /**
  * 
  * @export
- * @interface IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent
+ * @interface IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
  */
-export interface IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent {
+export interface IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent
+     * @type {IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr}
+     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
      */
-    'attr': IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr;
+    'attr': IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr;
     /**
      * 
      * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent
+     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
      */
     'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
     /**
      * 
      * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent
+     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
      */
     'detail': string;
 }

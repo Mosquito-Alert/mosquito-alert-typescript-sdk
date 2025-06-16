@@ -22,6 +22,9 @@ import type { AnnotationClassificationRequest } from './annotation-classificatio
 // May contain unused imports in some cases
 // @ts-ignore
 import type { AnnotationFeedbackRequest } from './annotation-feedback-request';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ObservationFlagsRequest } from './observation-flags-request';
 
 /**
  * 
@@ -67,10 +70,10 @@ export interface AnnotationRequest {
     'is_decisive'?: boolean;
     /**
      * 
-     * @type {boolean}
+     * @type {ObservationFlagsRequest}
      * @memberof AnnotationRequest
      */
-    'is_favourite'?: boolean;
+    'observation_flags'?: ObservationFlagsRequest;
     /**
      * 
      * @type {Array<string>}

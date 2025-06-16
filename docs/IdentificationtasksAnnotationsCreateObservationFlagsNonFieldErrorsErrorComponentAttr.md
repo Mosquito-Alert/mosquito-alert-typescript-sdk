@@ -1,9 +1,9 @@
-# IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr
+# IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr
 
 
 ## Enum
 
-* `IsFavourite` (value: `'is_favourite'`)
+* `ObservationFlagsNonFieldErrors` (value: `'observation_flags.non_field_errors'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

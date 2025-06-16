@@ -1,20 +1,20 @@
-# IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent
+# IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr**](IdentificationtasksAnnotationsCreateIsFavouriteErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr**](IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode**](IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent } from 'mosquito-alert';
+import { IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent } from 'mosquito-alert';
 
-const instance: IdentificationtasksAnnotationsCreateIsFavouriteErrorComponent = {
+const instance: IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent = {
     attr,
     code,
     detail,
