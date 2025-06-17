@@ -21,25 +21,25 @@
  */
 export interface BoundingBox {
     /**
-     * photo bounding box coordinates top left x
+     * photo bounding box relative coordinates top left x
      * @type {number}
      * @memberof BoundingBox
      */
     'x_min': number;
     /**
-     * photo bounding box coordinates top left y
+     * photo bounding box relative coordinates top left y
      * @type {number}
      * @memberof BoundingBox
      */
     'y_min': number;
     /**
-     * photo bounding box coordinates bottom right x
+     * photo bounding box relative coordinates bottom right x
      * @type {number}
      * @memberof BoundingBox
      */
     'x_max': number;
     /**
-     * photo bounding box coordinates bottom right y
+     * photo bounding box relative coordinates bottom right y
      * @type {number}
      * @memberof BoundingBox
      */

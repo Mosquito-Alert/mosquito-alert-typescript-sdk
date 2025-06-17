@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**x_min** | **number** | photo bounding box coordinates top left x | [default to undefined]
-**y_min** | **number** | photo bounding box coordinates top left y | [default to undefined]
-**x_max** | **number** | photo bounding box coordinates bottom right x | [default to undefined]
-**y_max** | **number** | photo bounding box coordinates bottom right y | [default to undefined]
+**x_min** | **number** | photo bounding box relative coordinates top left x | [default to undefined]
+**y_min** | **number** | photo bounding box relative coordinates top left y | [default to undefined]
+**x_max** | **number** | photo bounding box relative coordinates bottom right x | [default to undefined]
+**y_max** | **number** | photo bounding box relative coordinates bottom right y | [default to undefined]
 
 ## Example
 

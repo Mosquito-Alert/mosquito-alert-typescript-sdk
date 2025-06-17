@@ -28,6 +28,9 @@ import type { PredictionScore } from './prediction-score';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleTaxon } from './simple-taxon';
 
 /**
  * 
@@ -59,6 +62,12 @@ export interface PhotoPrediction {
      * @memberof PhotoPrediction
      */
     'predicted_class': CreatePhotoPredictionPredictedClass | null;
+    /**
+     * 
+     * @type {SimpleTaxon}
+     * @memberof PhotoPrediction
+     */
+    'taxon': SimpleTaxon | null;
     /**
      * 
      * @type {number}
