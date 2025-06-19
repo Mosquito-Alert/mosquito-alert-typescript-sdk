@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locale** | [**PatchedUserRequestLocale**](PatchedUserRequestLocale.md) |  | [optional] [default to undefined]
+**locale** | [**MinimalUserLocale**](MinimalUserLocale.md) |  | [optional] [default to undefined]
 
 ## Example
 

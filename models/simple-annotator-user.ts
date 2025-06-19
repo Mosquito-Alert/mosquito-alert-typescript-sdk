@@ -22,12 +22,12 @@
 export interface SimpleAnnotatorUser {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof SimpleAnnotatorUser
      */
-    'id': number;
+    'uuid': string;
     /**
-     * Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ 
+     * 
      * @type {string}
      * @memberof SimpleAnnotatorUser
      */
@@ -37,13 +37,13 @@ export interface SimpleAnnotatorUser {
      * @type {string}
      * @memberof SimpleAnnotatorUser
      */
-    'first_name'?: string;
+    'first_name': string;
     /**
      * 
      * @type {string}
      * @memberof SimpleAnnotatorUser
      */
-    'last_name'?: string;
+    'last_name': string;
     /**
      * 
      * @type {string}

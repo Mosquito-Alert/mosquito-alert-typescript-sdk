@@ -547,6 +547,8 @@ docs/LocationRequest.md
 docs/LocationSource.md
 docs/LocationTimezone.md
 docs/MetaNotificationRequest.md
+docs/MinimalUser.md
+docs/MinimalUserLocale.md
 docs/MobileApp.md
 docs/MobileAppRequest.md
 docs/MosquitoAppearance.md
@@ -760,7 +762,6 @@ docs/PatchedDeviceUpdateRequest.md
 docs/PatchedNotificationRequest.md
 docs/PatchedPhotoPredictionRequest.md
 docs/PatchedUserRequest.md
-docs/PatchedUserRequestLocale.md
 docs/Photo.md
 docs/PhotoPrediction.md
 docs/PhotoPredictionRequest.md
@@ -814,13 +815,11 @@ docs/PhotosPredictionUpdateValidationError.md
 docs/PredictionScore.md
 docs/PredictionScoreRequest.md
 docs/SimpleAnnotatorUser.md
-docs/SimpleAnnotatorUserRequest.md
 docs/SimplePhoto.md
 docs/SimplePhotoRequest.md
 docs/SimpleTaxon.md
 docs/SimpleTaxonRank.md
 docs/SimpleTaxonRequest.md
-docs/SimpleUser.md
 docs/SimplifiedLocation.md
 docs/SimplifiedObservationWithPhotos.md
 docs/TaxaApi.md
@@ -1374,6 +1373,8 @@ models/location-source.ts
 models/location-timezone.ts
 models/location.ts
 models/meta-notification-request.ts
+models/minimal-user-locale.ts
+models/minimal-user.ts
 models/mobile-app-request.ts
 models/mobile-app.ts
 models/mosquito-appearance-abdomen.ts
@@ -1583,7 +1584,6 @@ models/password-change-request.ts
 models/patched-device-update-request.ts
 models/patched-notification-request.ts
 models/patched-photo-prediction-request.ts
-models/patched-user-request-locale.ts
 models/patched-user-request.ts
 models/photo-prediction-request.ts
 models/photo-prediction.ts
@@ -1636,14 +1636,12 @@ models/photos-prediction-update-threshold-deviation-error-component.ts
 models/photos-prediction-update-validation-error.ts
 models/prediction-score-request.ts
 models/prediction-score.ts
-models/simple-annotator-user-request.ts
 models/simple-annotator-user.ts
 models/simple-photo-request.ts
 models/simple-photo.ts
 models/simple-taxon-rank.ts
 models/simple-taxon-request.ts
 models/simple-taxon.ts
-models/simple-user.ts
 models/simplified-location.ts
 models/simplified-observation-with-photos.ts
 models/taxa-list-rank-error-component-attr.ts

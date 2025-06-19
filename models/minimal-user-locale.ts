@@ -20,7 +20,7 @@
  * @enum {string}
  */
 
-export const PatchedUserRequestLocale = {
+export const MinimalUserLocale = {
     Es: 'es',
     Ca: 'ca',
     Eu: 'eu',
@@ -48,7 +48,7 @@ export const PatchedUserRequestLocale = {
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type PatchedUserRequestLocale = typeof PatchedUserRequestLocale[keyof typeof PatchedUserRequestLocale];
+export type MinimalUserLocale = typeof MinimalUserLocale[keyof typeof MinimalUserLocale];
 
 
 

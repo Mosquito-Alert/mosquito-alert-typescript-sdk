@@ -1,4 +1,4 @@
-# SimpleUser
+# MinimalUser
 
 
 ## Properties
@@ -6,14 +6,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** |  | [readonly] [default to undefined]
-**locale** | [**PatchedUserRequestLocale**](PatchedUserRequestLocale.md) |  | [optional] [default to undefined]
+**locale** | [**MinimalUserLocale**](MinimalUserLocale.md) |  | [optional] [default to undefined]
 
 ## Example
 
 ```typescript
-import { SimpleUser } from 'mosquito-alert';
+import { MinimalUser } from 'mosquito-alert';
 
-const instance: SimpleUser = {
+const instance: MinimalUser = {
     uuid,
     locale,
 };

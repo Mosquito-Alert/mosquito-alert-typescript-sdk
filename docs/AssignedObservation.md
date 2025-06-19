@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | [default to undefined]
 **note** | **string** | Note user attached to report. | [optional] [default to undefined]
 **photos** | [**Array&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | [default to undefined]
-**user** | [**SimpleUser**](SimpleUser.md) |  | [readonly] [default to undefined]
+**user** | [**MinimalUser**](MinimalUser.md) |  | [readonly] [default to undefined]
 
 ## Example
 

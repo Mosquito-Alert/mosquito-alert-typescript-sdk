@@ -15,26 +15,26 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { PatchedUserRequestLocale } from './patched-user-request-locale';
+import type { MinimalUserLocale } from './minimal-user-locale';
 
 /**
  * 
  * @export
- * @interface SimpleUser
+ * @interface MinimalUser
  */
-export interface SimpleUser {
+export interface MinimalUser {
     /**
      * 
      * @type {string}
-     * @memberof SimpleUser
+     * @memberof MinimalUser
      */
     'uuid': string;
     /**
      * 
-     * @type {PatchedUserRequestLocale}
-     * @memberof SimpleUser
+     * @type {MinimalUserLocale}
+     * @memberof MinimalUser
      */
-    'locale'?: PatchedUserRequestLocale;
+    'locale'?: MinimalUserLocale;
 }
 
 

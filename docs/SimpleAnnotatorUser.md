@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **number** |  | [readonly] [default to undefined]
-**username** | **string** | Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_  | [default to undefined]
-**first_name** | **string** |  | [optional] [default to undefined]
-**last_name** | **string** |  | [optional] [default to undefined]
+**uuid** | **string** |  | [readonly] [default to undefined]
+**username** | **string** |  | [readonly] [default to undefined]
+**first_name** | **string** |  | [readonly] [default to undefined]
+**last_name** | **string** |  | [readonly] [default to undefined]
 **full_name** | **string** |  | [readonly] [default to undefined]
 
 ## Example
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 import { SimpleAnnotatorUser } from 'mosquito-alert';
 
 const instance: SimpleAnnotatorUser = {
-    id,
+    uuid,
     username,
     first_name,
     last_name,

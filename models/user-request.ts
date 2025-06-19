@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { PatchedUserRequestLocale } from './patched-user-request-locale';
+import type { MinimalUserLocale } from './minimal-user-locale';
 
 /**
  * 
@@ -25,10 +25,10 @@ import type { PatchedUserRequestLocale } from './patched-user-request-locale';
 export interface UserRequest {
     /**
      * 
-     * @type {PatchedUserRequestLocale}
+     * @type {MinimalUserLocale}
      * @memberof UserRequest
      */
-    'locale'?: PatchedUserRequestLocale;
+    'locale'?: MinimalUserLocale;
 }
 
 

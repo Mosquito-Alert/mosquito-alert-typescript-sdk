@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimplePhoto } from './simple-photo';
+import type { MinimalUser } from './minimal-user';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SimpleUser } from './simple-user';
+import type { SimplePhoto } from './simple-photo';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplifiedLocation } from './simplified-location';
@@ -73,9 +73,9 @@ export interface AssignedObservation {
     'photos': Array<SimplePhoto>;
     /**
      * 
-     * @type {SimpleUser}
+     * @type {MinimalUser}
      * @memberof AssignedObservation
      */
-    'user': SimpleUser;
+    'user': MinimalUser;
 }
 

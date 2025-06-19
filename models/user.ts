@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { PatchedUserRequestLocale } from './patched-user-request-locale';
+import type { MinimalUserLocale } from './minimal-user-locale';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UserScore } from './user-score';
@@ -39,6 +39,24 @@ export interface User {
      */
     'username': string;
     /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'first_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'last_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'full_name': string;
+    /**
      * The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
      * @type {string}
      * @memberof User
@@ -46,10 +64,10 @@ export interface User {
     'registration_time': string;
     /**
      * 
-     * @type {PatchedUserRequestLocale}
+     * @type {MinimalUserLocale}
      * @memberof User
      */
-    'locale'?: PatchedUserRequestLocale;
+    'locale'?: MinimalUserLocale;
     /**
      * ISO 639-1 code
      * @type {string}

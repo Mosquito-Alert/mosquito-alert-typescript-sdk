@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.18
+## mosquito-alert@0.1.19
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.18 --save
+npm install mosquito-alert@0.1.19 --save
 ```
 
 _unPublished (not recommended):_
@@ -639,6 +639,8 @@ Class | Method | HTTP request | Description
  - [LocationSource](docs/LocationSource.md)
  - [LocationTimezone](docs/LocationTimezone.md)
  - [MetaNotificationRequest](docs/MetaNotificationRequest.md)
+ - [MinimalUser](docs/MinimalUser.md)
+ - [MinimalUserLocale](docs/MinimalUserLocale.md)
  - [MobileApp](docs/MobileApp.md)
  - [MobileAppRequest](docs/MobileAppRequest.md)
  - [MosquitoAppearance](docs/MosquitoAppearance.md)
@@ -849,7 +851,6 @@ Class | Method | HTTP request | Description
  - [PatchedNotificationRequest](docs/PatchedNotificationRequest.md)
  - [PatchedPhotoPredictionRequest](docs/PatchedPhotoPredictionRequest.md)
  - [PatchedUserRequest](docs/PatchedUserRequest.md)
- - [PatchedUserRequestLocale](docs/PatchedUserRequestLocale.md)
  - [Photo](docs/Photo.md)
  - [PhotoPrediction](docs/PhotoPrediction.md)
  - [PhotoPredictionRequest](docs/PhotoPredictionRequest.md)
@@ -902,13 +903,11 @@ Class | Method | HTTP request | Description
  - [PredictionScore](docs/PredictionScore.md)
  - [PredictionScoreRequest](docs/PredictionScoreRequest.md)
  - [SimpleAnnotatorUser](docs/SimpleAnnotatorUser.md)
- - [SimpleAnnotatorUserRequest](docs/SimpleAnnotatorUserRequest.md)
  - [SimplePhoto](docs/SimplePhoto.md)
  - [SimplePhotoRequest](docs/SimplePhotoRequest.md)
  - [SimpleTaxon](docs/SimpleTaxon.md)
  - [SimpleTaxonRank](docs/SimpleTaxonRank.md)
  - [SimpleTaxonRequest](docs/SimpleTaxonRequest.md)
- - [SimpleUser](docs/SimpleUser.md)
  - [SimplifiedLocation](docs/SimplifiedLocation.md)
  - [SimplifiedObservationWithPhotos](docs/SimplifiedObservationWithPhotos.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)
