@@ -13,6 +13,7 @@ api/identification-tasks-api.ts
 api/notifications-api.ts
 api/observations-api.ts
 api/partners-api.ts
+api/permissions-api.ts
 api/photos-api.ts
 api/taxa-api.ts
 api/users-api.ts
@@ -30,6 +31,7 @@ docs/AnnotationClassificationConfidenceLabel.md
 docs/AnnotationClassificationRequest.md
 docs/AnnotationFeedback.md
 docs/AnnotationFeedbackRequest.md
+docs/AnnotationPermission.md
 docs/AnnotationRequest.md
 docs/AnnotationType.md
 docs/AppUserTokenObtainPair.md
@@ -212,6 +214,8 @@ docs/CampaignsListOrderByParameter.md
 docs/CampaignsListValidationError.md
 docs/CountriesApi.md
 docs/Country.md
+docs/CountryPermission.md
+docs/CountryPermissionRole.md
 docs/CountryRequest.md
 docs/CreateNotification.md
 docs/CreateNotificationMessage.md
@@ -316,11 +320,13 @@ docs/FixesCreatePowerErrorComponentAttr.md
 docs/FixesCreatePowerErrorComponentCode.md
 docs/FixesCreateSentAtErrorComponent.md
 docs/FixesCreateValidationError.md
+docs/GeneralPermission.md
 docs/GuestRegistration.md
 docs/GuestRegistrationRequest.md
 docs/Identification.md
 docs/IdentificationRequest.md
 docs/IdentificationTask.md
+docs/IdentificationTaskPermission.md
 docs/IdentificationTaskResult.md
 docs/IdentificationTaskResultRequest.md
 docs/IdentificationTaskResultSource.md
@@ -762,6 +768,8 @@ docs/PatchedDeviceUpdateRequest.md
 docs/PatchedNotificationRequest.md
 docs/PatchedPhotoPredictionRequest.md
 docs/PatchedUserRequest.md
+docs/Permissions.md
+docs/PermissionsApi.md
 docs/Photo.md
 docs/PhotoPrediction.md
 docs/PhotoPredictionRequest.md
@@ -814,6 +822,7 @@ docs/PhotosPredictionUpdateThresholdDeviationErrorComponent.md
 docs/PhotosPredictionUpdateValidationError.md
 docs/PredictionScore.md
 docs/PredictionScoreRequest.md
+docs/ReviewPermission.md
 docs/SimpleAnnotatorUser.md
 docs/SimplePhoto.md
 docs/SimplePhotoRequest.md
@@ -838,6 +847,7 @@ docs/User.md
 docs/UserAssignment.md
 docs/UserNotificationCreateRequest.md
 docs/UserNotificationCreateRequestReceiverType.md
+docs/UserPermission.md
 docs/UserRequest.md
 docs/UserScore.md
 docs/UsersApi.md
@@ -862,6 +872,7 @@ models/annotation-classification-request.ts
 models/annotation-classification.ts
 models/annotation-feedback-request.ts
 models/annotation-feedback.ts
+models/annotation-permission.ts
 models/annotation-request.ts
 models/annotation-type.ts
 models/annotation.ts
@@ -1039,6 +1050,8 @@ models/campaigns-list-error.ts
 models/campaigns-list-order-by-error-component.ts
 models/campaigns-list-order-by-parameter.ts
 models/campaigns-list-validation-error.ts
+models/country-permission-role.ts
+models/country-permission.ts
 models/country-request.ts
 models/country.ts
 models/create-notification-message-request.ts
@@ -1142,9 +1155,11 @@ models/fixes-create-power-error-component-code.ts
 models/fixes-create-power-error-component.ts
 models/fixes-create-sent-at-error-component.ts
 models/fixes-create-validation-error.ts
+models/general-permission.ts
 models/guest-registration-request.ts
 models/guest-registration.ts
 models/identification-request.ts
+models/identification-task-permission.ts
 models/identification-task-result-request.ts
 models/identification-task-result-source.ts
 models/identification-task-result.ts
@@ -1585,6 +1600,7 @@ models/patched-device-update-request.ts
 models/patched-notification-request.ts
 models/patched-photo-prediction-request.ts
 models/patched-user-request.ts
+models/permissions.ts
 models/photo-prediction-request.ts
 models/photo-prediction.ts
 models/photo.ts
@@ -1636,6 +1652,7 @@ models/photos-prediction-update-threshold-deviation-error-component.ts
 models/photos-prediction-update-validation-error.ts
 models/prediction-score-request.ts
 models/prediction-score.ts
+models/review-permission.ts
 models/simple-annotator-user.ts
 models/simple-photo-request.ts
 models/simple-photo.ts
@@ -1658,6 +1675,7 @@ models/topic-notification-create-request.ts
 models/user-assignment.ts
 models/user-notification-create-request-receiver-type.ts
 models/user-notification-create-request.ts
+models/user-permission.ts
 models/user-request.ts
 models/user-score.ts
 models/user.ts

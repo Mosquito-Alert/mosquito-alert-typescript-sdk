@@ -13,20 +13,30 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { CountryPermission } from './country-permission';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { GeneralPermission } from './general-permission';
 
-export * from './api/auth-api';
-export * from './api/bites-api';
-export * from './api/breeding-sites-api';
-export * from './api/campaigns-api';
-export * from './api/countries-api';
-export * from './api/devices-api';
-export * from './api/fixes-api';
-export * from './api/identification-tasks-api';
-export * from './api/notifications-api';
-export * from './api/observations-api';
-export * from './api/partners-api';
-export * from './api/permissions-api';
-export * from './api/photos-api';
-export * from './api/taxa-api';
-export * from './api/users-api';
+/**
+ * 
+ * @export
+ * @interface UserPermission
+ */
+export interface UserPermission {
+    /**
+     * 
+     * @type {GeneralPermission}
+     * @memberof UserPermission
+     */
+    'general': GeneralPermission;
+    /**
+     * 
+     * @type {Array<CountryPermission>}
+     * @memberof UserPermission
+     */
+    'countries': Array<CountryPermission>;
+}
 

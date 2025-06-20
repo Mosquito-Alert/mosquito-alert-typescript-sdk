@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.19
+## mosquito-alert@0.1.20
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.19 --save
+npm install mosquito-alert@0.1.20 --save
 ```
 
 _unPublished (not recommended):_
@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *ObservationsApi* | [**retrieve**](docs/ObservationsApi.md#retrieve) | **GET** /observations/{uuid}/ | 
 *PartnersApi* | [**list**](docs/PartnersApi.md#list) | **GET** /partners/ | 
 *PartnersApi* | [**retrieve**](docs/PartnersApi.md#retrieve) | **GET** /partners/{id}/ | 
+*PermissionsApi* | [**retrieveMine**](docs/PermissionsApi.md#retrievemine) | **GET** /me/permissions/ | 
 *PhotosApi* | [**predictionDestroy**](docs/PhotosApi.md#predictiondestroy) | **DELETE** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**predictionPartialUpdate**](docs/PhotosApi.md#predictionpartialupdate) | **PATCH** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**predictionRetrieve**](docs/PhotosApi.md#predictionretrieve) | **GET** /photos/{uuid}/prediction/ | 
@@ -130,6 +131,7 @@ Class | Method | HTTP request | Description
  - [AnnotationClassificationRequest](docs/AnnotationClassificationRequest.md)
  - [AnnotationFeedback](docs/AnnotationFeedback.md)
  - [AnnotationFeedbackRequest](docs/AnnotationFeedbackRequest.md)
+ - [AnnotationPermission](docs/AnnotationPermission.md)
  - [AnnotationRequest](docs/AnnotationRequest.md)
  - [AnnotationType](docs/AnnotationType.md)
  - [AppUserTokenObtainPair](docs/AppUserTokenObtainPair.md)
@@ -307,6 +309,8 @@ Class | Method | HTTP request | Description
  - [CampaignsListOrderByParameter](docs/CampaignsListOrderByParameter.md)
  - [CampaignsListValidationError](docs/CampaignsListValidationError.md)
  - [Country](docs/Country.md)
+ - [CountryPermission](docs/CountryPermission.md)
+ - [CountryPermissionRole](docs/CountryPermissionRole.md)
  - [CountryRequest](docs/CountryRequest.md)
  - [CreateNotification](docs/CreateNotification.md)
  - [CreateNotificationMessage](docs/CreateNotificationMessage.md)
@@ -409,11 +413,13 @@ Class | Method | HTTP request | Description
  - [FixesCreatePowerErrorComponentCode](docs/FixesCreatePowerErrorComponentCode.md)
  - [FixesCreateSentAtErrorComponent](docs/FixesCreateSentAtErrorComponent.md)
  - [FixesCreateValidationError](docs/FixesCreateValidationError.md)
+ - [GeneralPermission](docs/GeneralPermission.md)
  - [GuestRegistration](docs/GuestRegistration.md)
  - [GuestRegistrationRequest](docs/GuestRegistrationRequest.md)
  - [Identification](docs/Identification.md)
  - [IdentificationRequest](docs/IdentificationRequest.md)
  - [IdentificationTask](docs/IdentificationTask.md)
+ - [IdentificationTaskPermission](docs/IdentificationTaskPermission.md)
  - [IdentificationTaskResult](docs/IdentificationTaskResult.md)
  - [IdentificationTaskResultRequest](docs/IdentificationTaskResultRequest.md)
  - [IdentificationTaskResultSource](docs/IdentificationTaskResultSource.md)
@@ -851,6 +857,7 @@ Class | Method | HTTP request | Description
  - [PatchedNotificationRequest](docs/PatchedNotificationRequest.md)
  - [PatchedPhotoPredictionRequest](docs/PatchedPhotoPredictionRequest.md)
  - [PatchedUserRequest](docs/PatchedUserRequest.md)
+ - [Permissions](docs/Permissions.md)
  - [Photo](docs/Photo.md)
  - [PhotoPrediction](docs/PhotoPrediction.md)
  - [PhotoPredictionRequest](docs/PhotoPredictionRequest.md)
@@ -902,6 +909,7 @@ Class | Method | HTTP request | Description
  - [PhotosPredictionUpdateValidationError](docs/PhotosPredictionUpdateValidationError.md)
  - [PredictionScore](docs/PredictionScore.md)
  - [PredictionScoreRequest](docs/PredictionScoreRequest.md)
+ - [ReviewPermission](docs/ReviewPermission.md)
  - [SimpleAnnotatorUser](docs/SimpleAnnotatorUser.md)
  - [SimplePhoto](docs/SimplePhoto.md)
  - [SimplePhotoRequest](docs/SimplePhotoRequest.md)
@@ -925,6 +933,7 @@ Class | Method | HTTP request | Description
  - [UserAssignment](docs/UserAssignment.md)
  - [UserNotificationCreateRequest](docs/UserNotificationCreateRequest.md)
  - [UserNotificationCreateRequestReceiverType](docs/UserNotificationCreateRequestReceiverType.md)
+ - [UserPermission](docs/UserPermission.md)
  - [UserRequest](docs/UserRequest.md)
  - [UserScore](docs/UserScore.md)
  - [UsersPartialUpdateError](docs/UsersPartialUpdateError.md)
