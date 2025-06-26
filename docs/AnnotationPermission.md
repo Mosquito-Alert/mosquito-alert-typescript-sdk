@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**add** | **boolean** |  | [optional] [default to undefined]
-**change** | **boolean** |  | [optional] [default to undefined]
-**view** | **boolean** |  | [optional] [default to undefined]
-**_delete** | **boolean** |  | [optional] [default to undefined]
-**mark_as_decisive** | **boolean** |  | [optional] [default to undefined]
+**add** | **boolean** |  | [default to undefined]
+**change** | **boolean** |  | [default to undefined]
+**view** | **boolean** |  | [default to undefined]
+**_delete** | **boolean** |  | [default to undefined]
+**mark_as_decisive** | **boolean** |  | [default to undefined]
 
 ## Example
 

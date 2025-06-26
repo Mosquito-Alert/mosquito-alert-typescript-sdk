@@ -25,24 +25,24 @@ export interface IdentificationTaskPermission {
      * @type {boolean}
      * @memberof IdentificationTaskPermission
      */
-    'add'?: boolean;
+    'add': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof IdentificationTaskPermission
      */
-    'change'?: boolean;
+    'change': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof IdentificationTaskPermission
      */
-    'view'?: boolean;
+    'view': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof IdentificationTaskPermission
      */
-    'delete'?: boolean;
+    'delete': boolean;
 }
 

@@ -25,30 +25,30 @@ export interface AnnotationPermission {
      * @type {boolean}
      * @memberof AnnotationPermission
      */
-    'add'?: boolean;
+    'add': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof AnnotationPermission
      */
-    'change'?: boolean;
+    'change': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof AnnotationPermission
      */
-    'view'?: boolean;
+    'view': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof AnnotationPermission
      */
-    'delete'?: boolean;
+    'delete': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof AnnotationPermission
      */
-    'mark_as_decisive'?: boolean;
+    'mark_as_decisive': boolean;
 }
 

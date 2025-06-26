@@ -25,24 +25,24 @@ export interface ReviewPermission {
      * @type {boolean}
      * @memberof ReviewPermission
      */
-    'add'?: boolean;
+    'add': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof ReviewPermission
      */
-    'change'?: boolean;
+    'change': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof ReviewPermission
      */
-    'view'?: boolean;
+    'view': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof ReviewPermission
      */
-    'delete'?: boolean;
+    'delete': boolean;
 }
 
