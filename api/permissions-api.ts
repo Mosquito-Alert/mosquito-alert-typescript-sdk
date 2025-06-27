@@ -24,8 +24,6 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 // @ts-ignore
 import type { ErrorResponse401 } from '../models';
 // @ts-ignore
-import type { ErrorResponse403 } from '../models';
-// @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { UserPermission } from '../models';

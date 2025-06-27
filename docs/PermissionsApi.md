@@ -47,7 +47,6 @@ This endpoint does not have any parameters.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** |  |  -  |
-|**403** |  |  -  |
 |**404** |  |  -  |
 |**200** |  |  -  |
 
