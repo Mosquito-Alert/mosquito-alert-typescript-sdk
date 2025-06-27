@@ -394,6 +394,7 @@ export * from './identificationtasks-list-mine-result-confidence-error-component
 export * from './identificationtasks-list-mine-result-confidence-error-component-attr';
 export * from './identificationtasks-list-mine-result-source-error-component';
 export * from './identificationtasks-list-mine-result-source-error-component-attr';
+export * from './identificationtasks-list-mine-result-source-error-component-code';
 export * from './identificationtasks-list-mine-result-taxon-ids-error-component';
 export * from './identificationtasks-list-mine-result-taxon-ids-error-component-attr';
 export * from './identificationtasks-list-mine-result-uncertainty-error-component';
@@ -402,7 +403,6 @@ export * from './identificationtasks-list-mine-review-type-error-component';
 export * from './identificationtasks-list-mine-review-type-error-component-attr';
 export * from './identificationtasks-list-mine-status-error-component';
 export * from './identificationtasks-list-mine-status-error-component-attr';
-export * from './identificationtasks-list-mine-status-error-component-code';
 export * from './identificationtasks-list-mine-updated-at-error-component';
 export * from './identificationtasks-list-mine-validation-error';
 export * from './identificationtasks-list-num-annotations-error-component';

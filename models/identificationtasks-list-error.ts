@@ -15,9 +15,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { IdentificationtasksListAnnotatorIdsErrorComponent } from './identificationtasks-list-annotator-ids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -28,6 +25,9 @@ import type { IdentificationtasksListCreatedAtErrorComponent } from './identific
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksListMineResultSourceErrorComponentCode } from './identificationtasks-list-mine-result-source-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksListNumAnnotationsErrorComponent } from './identificationtasks-list-num-annotations-error-component';

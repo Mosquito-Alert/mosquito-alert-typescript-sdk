@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineStatusErrorComponentCode } from './identificationtasks-list-mine-status-error-component-code';
+import type { IdentificationtasksListMineResultSourceErrorComponentCode } from './identificationtasks-list-mine-result-source-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { TaxaListRankErrorComponentAttr } from './taxa-list-rank-error-component-attr';
@@ -34,10 +34,10 @@ export interface TaxaListRankErrorComponent {
     'attr': TaxaListRankErrorComponentAttr;
     /**
      * 
-     * @type {IdentificationtasksListMineStatusErrorComponentCode}
+     * @type {IdentificationtasksListMineResultSourceErrorComponentCode}
      * @memberof TaxaListRankErrorComponent
      */
-    'code': IdentificationtasksListMineStatusErrorComponentCode;
+    'code': IdentificationtasksListMineResultSourceErrorComponentCode;
     /**
      * 
      * @type {string}

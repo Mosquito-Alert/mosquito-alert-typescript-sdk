@@ -492,7 +492,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
          * @param {string} [resultConfidenceMin] 
-         * @param {IdentificationtasksListResultSourceParameter} [resultSource] 
+         * @param {Array<IdentificationtasksListResultSourceParameter>} [resultSource] 
          * @param {Array<number>} [resultTaxonIds] 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
@@ -503,7 +503,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: IdentificationtasksListResultSourceParameter, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: Array<IdentificationtasksListResultSourceParameter>, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/identification-tasks/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -597,7 +597,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['result_confidence_min'] = resultConfidenceMin;
             }
 
-            if (resultSource !== undefined) {
+            if (resultSource) {
                 localVarQueryParameter['result_source'] = resultSource;
             }
 
@@ -663,7 +663,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
          * @param {string} [resultConfidenceMin] 
-         * @param {IdentificationtasksListResultSourceParameter} [resultSource] 
+         * @param {Array<IdentificationtasksListResultSourceParameter>} [resultSource] 
          * @param {Array<number>} [resultTaxonIds] 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
@@ -674,7 +674,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: IdentificationtasksListResultSourceParameter, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: Array<IdentificationtasksListResultSourceParameter>, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/identification-tasks/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -768,7 +768,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['result_confidence_min'] = resultConfidenceMin;
             }
 
-            if (resultSource !== undefined) {
+            if (resultSource) {
                 localVarQueryParameter['result_source'] = resultSource;
             }
 
@@ -1272,7 +1272,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
          * @param {string} [resultConfidenceMin] 
-         * @param {IdentificationtasksListResultSourceParameter} [resultSource] 
+         * @param {Array<IdentificationtasksListResultSourceParameter>} [resultSource] 
          * @param {Array<number>} [resultTaxonIds] 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
@@ -1283,7 +1283,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: IdentificationtasksListResultSourceParameter, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
+        async list(annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: Array<IdentificationtasksListResultSourceParameter>, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.list']?.[localVarOperationServerIndex]?.url;
@@ -1308,7 +1308,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
          * @param {string} [resultConfidenceMin] 
-         * @param {IdentificationtasksListResultSourceParameter} [resultSource] 
+         * @param {Array<IdentificationtasksListResultSourceParameter>} [resultSource] 
          * @param {Array<number>} [resultTaxonIds] 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
@@ -1319,7 +1319,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: IdentificationtasksListResultSourceParameter, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
+        async listMine(annotatorIds?: Array<number>, assigneeIds?: Array<number>, createdAtAfter?: string, createdAtBefore?: string, fullyPredicted?: boolean, isFlagged?: boolean, isSafe?: boolean, numAnnotationsMax?: number, numAnnotationsMin?: number, observationCountryIds?: Array<number>, orderBy?: Array<IdentificationtasksListOrderByParameter>, page?: number, pageSize?: number, resultAgreementMax?: number, resultAgreementMin?: number, resultConfidenceMax?: string, resultConfidenceMin?: string, resultSource?: Array<IdentificationtasksListResultSourceParameter>, resultTaxonIds?: Array<number>, resultUncertaintyMax?: number, resultUncertaintyMin?: number, reviewType?: IdentificationtasksListReviewTypeParameter, status?: Array<IdentificationtasksListStatusParameter>, updatedAtAfter?: string, updatedAtBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedIdentificationTaskList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.listMine']?.[localVarOperationServerIndex]?.url;
@@ -1970,10 +1970,10 @@ export interface IdentificationTasksApiListRequest {
 
     /**
      * 
-     * @type {IdentificationtasksListResultSourceParameter}
+     * @type {Array<IdentificationtasksListResultSourceParameter>}
      * @memberof IdentificationTasksApiList
      */
-    readonly resultSource?: IdentificationtasksListResultSourceParameter
+    readonly resultSource?: Array<IdentificationtasksListResultSourceParameter>
 
     /**
      * 
@@ -2152,10 +2152,10 @@ export interface IdentificationTasksApiListMineRequest {
 
     /**
      * 
-     * @type {IdentificationtasksListResultSourceParameter}
+     * @type {Array<IdentificationtasksListResultSourceParameter>}
      * @memberof IdentificationTasksApiListMine
      */
-    readonly resultSource?: IdentificationtasksListResultSourceParameter
+    readonly resultSource?: Array<IdentificationtasksListResultSourceParameter>
 
     /**
      * 

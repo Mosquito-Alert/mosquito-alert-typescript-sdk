@@ -20,13 +20,13 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListMineStatusErrorComponentCode = {
+export const IdentificationtasksListMineResultSourceErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     InvalidList: 'invalid_list',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListMineStatusErrorComponentCode = typeof IdentificationtasksListMineStatusErrorComponentCode[keyof typeof IdentificationtasksListMineStatusErrorComponentCode];
+export type IdentificationtasksListMineResultSourceErrorComponentCode = typeof IdentificationtasksListMineResultSourceErrorComponentCode[keyof typeof IdentificationtasksListMineResultSourceErrorComponentCode];
 
 
 

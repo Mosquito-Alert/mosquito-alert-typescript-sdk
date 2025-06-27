@@ -415,7 +415,7 @@ let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
 let resultConfidenceMax: string; // (optional) (default to undefined)
 let resultConfidenceMin: string; // (optional) (default to undefined)
-let resultSource: IdentificationtasksListResultSourceParameter; // (optional) (default to undefined)
+let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optional) (default to undefined)
 let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
@@ -474,7 +474,7 @@ const { status, data } = await apiInstance.list(
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
 | **resultConfidenceMax** | [**string**] |  | (optional) defaults to undefined|
 | **resultConfidenceMin** | [**string**] |  | (optional) defaults to undefined|
-| **resultSource** | **IdentificationtasksListResultSourceParameter** |  | (optional) defaults to undefined|
+| **resultSource** | **Array&lt;IdentificationtasksListResultSourceParameter&gt;** |  | (optional) defaults to undefined|
 | **resultTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|
@@ -542,7 +542,7 @@ let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
 let resultConfidenceMax: string; // (optional) (default to undefined)
 let resultConfidenceMin: string; // (optional) (default to undefined)
-let resultSource: IdentificationtasksListResultSourceParameter; // (optional) (default to undefined)
+let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optional) (default to undefined)
 let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
@@ -601,7 +601,7 @@ const { status, data } = await apiInstance.listMine(
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
 | **resultConfidenceMax** | [**string**] |  | (optional) defaults to undefined|
 | **resultConfidenceMin** | [**string**] |  | (optional) defaults to undefined|
-| **resultSource** | **IdentificationtasksListResultSourceParameter** |  | (optional) defaults to undefined|
+| **resultSource** | **Array&lt;IdentificationtasksListResultSourceParameter&gt;** |  | (optional) defaults to undefined|
 | **resultTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|

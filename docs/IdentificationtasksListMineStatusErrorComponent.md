@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksListMineStatusErrorComponentAttr**](IdentificationtasksListMineStatusErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksListMineStatusErrorComponentCode**](IdentificationtasksListMineStatusErrorComponentCode.md) |  | [default to undefined]
+**code** | [**IdentificationtasksListMineResultSourceErrorComponentCode**](IdentificationtasksListMineResultSourceErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

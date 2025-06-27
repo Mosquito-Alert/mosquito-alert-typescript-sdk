@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
+import type { IdentificationtasksListMineResultSourceErrorComponentCode } from './identificationtasks-list-mine-result-source-error-component-code';
 
 /**
  * 
@@ -34,10 +34,10 @@ export interface IdentificationtasksListMineResultSourceErrorComponent {
     'attr': IdentificationtasksListMineResultSourceErrorComponentAttr;
     /**
      * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
+     * @type {IdentificationtasksListMineResultSourceErrorComponentCode}
      * @memberof IdentificationtasksListMineResultSourceErrorComponent
      */
-    'code': BitesCreateEventEnvironmentErrorComponentCode;
+    'code': IdentificationtasksListMineResultSourceErrorComponentCode;
     /**
      * 
      * @type {string}
