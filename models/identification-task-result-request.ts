@@ -28,7 +28,7 @@ export interface IdentificationTaskResultRequest {
      * @type {IdentificationTaskResultSource}
      * @memberof IdentificationTaskResultRequest
      */
-    'source': IdentificationTaskResultSource | null;
+    'source': IdentificationTaskResultSource;
 }
 
 

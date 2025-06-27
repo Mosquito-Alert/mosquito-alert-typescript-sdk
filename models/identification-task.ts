@@ -97,7 +97,7 @@ export interface IdentificationTask {
      * @type {IdentificationTaskResult}
      * @memberof IdentificationTask
      */
-    'result': IdentificationTaskResult;
+    'result': IdentificationTaskResult | null;
     /**
      * 
      * @type {string}

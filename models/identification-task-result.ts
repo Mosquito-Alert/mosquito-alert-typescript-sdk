@@ -31,7 +31,7 @@ export interface IdentificationTaskResult {
      * @type {IdentificationTaskResultSource}
      * @memberof IdentificationTaskResult
      */
-    'source': IdentificationTaskResultSource | null;
+    'source': IdentificationTaskResultSource;
     /**
      * 
      * @type {SimpleTaxon}
