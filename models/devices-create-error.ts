@@ -30,13 +30,13 @@ import type { DevicesCreateMobileAppNonFieldErrorsErrorComponent } from './devic
 import type { DevicesCreateMobileAppPackageNameErrorComponent } from './devices-create-mobile-app-package-name-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devices-create-mobile-app-package-name-error-component-code';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { DevicesCreateMobileAppPackageVersionErrorComponent } from './devices-create-mobile-app-package-version-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DevicesCreateMobileAppPackageVersionErrorComponentAttr } from './devices-create-mobile-app-package-version-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DevicesCreateMobileAppPackageVersionErrorComponentCode } from './devices-create-mobile-app-package-version-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DevicesCreateModelErrorComponent } from './devices-create-model-error-component';

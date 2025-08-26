@@ -220,6 +220,7 @@ export * from './devices-create-mobile-app-package-name-error-component-attr';
 export * from './devices-create-mobile-app-package-name-error-component-code';
 export * from './devices-create-mobile-app-package-version-error-component';
 export * from './devices-create-mobile-app-package-version-error-component-attr';
+export * from './devices-create-mobile-app-package-version-error-component-code';
 export * from './devices-create-model-error-component';
 export * from './devices-create-model-error-component-attr';
 export * from './devices-create-name-error-component';

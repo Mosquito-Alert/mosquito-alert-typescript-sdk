@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devices-create-mobile-app-package-name-error-component-code';
+import type { DevicesCreateMobileAppPackageVersionErrorComponentAttr } from './devices-create-mobile-app-package-version-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageVersionErrorComponentAttr } from './devices-create-mobile-app-package-version-error-component-attr';
+import type { DevicesCreateMobileAppPackageVersionErrorComponentCode } from './devices-create-mobile-app-package-version-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DevicesUpdateFcmTokenErrorComponent } from './devices-update-fcm-token-error-component';

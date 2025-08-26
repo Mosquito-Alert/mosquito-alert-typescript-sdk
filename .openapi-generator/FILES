@@ -248,6 +248,7 @@ docs/DevicesCreateMobileAppPackageNameErrorComponentAttr.md
 docs/DevicesCreateMobileAppPackageNameErrorComponentCode.md
 docs/DevicesCreateMobileAppPackageVersionErrorComponent.md
 docs/DevicesCreateMobileAppPackageVersionErrorComponentAttr.md
+docs/DevicesCreateMobileAppPackageVersionErrorComponentCode.md
 docs/DevicesCreateModelErrorComponent.md
 docs/DevicesCreateModelErrorComponentAttr.md
 docs/DevicesCreateNameErrorComponent.md
@@ -1083,6 +1084,7 @@ models/devices-create-mobile-app-package-name-error-component-attr.ts
 models/devices-create-mobile-app-package-name-error-component-code.ts
 models/devices-create-mobile-app-package-name-error-component.ts
 models/devices-create-mobile-app-package-version-error-component-attr.ts
+models/devices-create-mobile-app-package-version-error-component-code.ts
 models/devices-create-mobile-app-package-version-error-component.ts
 models/devices-create-model-error-component-attr.ts
 models/devices-create-model-error-component.ts
