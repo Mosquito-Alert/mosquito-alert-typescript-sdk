@@ -13,29 +13,19 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationTaskReviewAction } from './identification-task-review-action';
 
 /**
  * 
  * @export
- * @interface IdentificationTaskReview
+ * @enum {string}
  */
-export interface IdentificationTaskReview {
-    /**
-     * 
-     * @type {IdentificationTaskReviewAction}
-     * @memberof IdentificationTaskReview
-     */
-    'action': IdentificationTaskReviewAction;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTaskReview
-     */
-    'created_at': string;
-}
+
+export const IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr = {
+    ResultConfidenceLabel: 'result.confidence_label',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr = typeof IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr[keyof typeof IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr];
 
 
 

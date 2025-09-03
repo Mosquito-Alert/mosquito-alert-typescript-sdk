@@ -20,13 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationTaskReviewType = {
-    Agree: 'agree',
-    Overwrite: 'overwrite',
+export const IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr = {
+    PublicPhotoUuid: 'public_photo_uuid',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationTaskReviewType = typeof IdentificationTaskReviewType[keyof typeof IdentificationTaskReviewType];
+export type IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr = typeof IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr[keyof typeof IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr];
 
 
 

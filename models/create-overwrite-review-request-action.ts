@@ -13,23 +13,19 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationTaskResultSource } from './identification-task-result-source';
 
 /**
  * 
  * @export
- * @interface IdentificationTaskResultRequest
+ * @enum {string}
  */
-export interface IdentificationTaskResultRequest {
-    /**
-     * 
-     * @type {IdentificationTaskResultSource}
-     * @memberof IdentificationTaskResultRequest
-     */
-    'source': IdentificationTaskResultSource;
-}
+
+export const CreateOverwriteReviewRequestAction = {
+    Overwrite: 'overwrite',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type CreateOverwriteReviewRequestAction = typeof CreateOverwriteReviewRequestAction[keyof typeof CreateOverwriteReviewRequestAction];
 
 
 

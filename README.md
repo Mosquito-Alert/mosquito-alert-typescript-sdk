@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.22
+## mosquito-alert@0.1.23
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.22 --save
+npm install mosquito-alert@0.1.23 --save
 ```
 
 _unPublished (not recommended):_
@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 *IdentificationTasksApi* | [**predictionsRetrieve**](docs/IdentificationTasksApi.md#predictionsretrieve) | **GET** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | 
 *IdentificationTasksApi* | [**predictionsUpdate**](docs/IdentificationTasksApi.md#predictionsupdate) | **PUT** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | 
 *IdentificationTasksApi* | [**retrieve**](docs/IdentificationTasksApi.md#retrieve) | **GET** /identification-tasks/{observation_uuid}/ | 
+*IdentificationTasksApi* | [**reviewCreate**](docs/IdentificationTasksApi.md#reviewcreate) | **POST** /identification-tasks/{observation_uuid}/review/ | 
 *NotificationsApi* | [**create**](docs/NotificationsApi.md#create) | **POST** /notifications/ | 
 *NotificationsApi* | [**list**](docs/NotificationsApi.md#list) | **GET** /notifications/ | 
 *NotificationsApi* | [**listMine**](docs/NotificationsApi.md#listmine) | **GET** /me/notifications/ | 
@@ -312,9 +313,13 @@ Class | Method | HTTP request | Description
  - [CountryPermission](docs/CountryPermission.md)
  - [CountryPermissionRole](docs/CountryPermissionRole.md)
  - [CountryRequest](docs/CountryRequest.md)
+ - [CreateAgreeReviewRequest](docs/CreateAgreeReviewRequest.md)
+ - [CreateAgreeReviewRequestAction](docs/CreateAgreeReviewRequestAction.md)
  - [CreateNotification](docs/CreateNotification.md)
  - [CreateNotificationMessage](docs/CreateNotificationMessage.md)
  - [CreateNotificationMessageRequest](docs/CreateNotificationMessageRequest.md)
+ - [CreateOverwriteReviewRequest](docs/CreateOverwriteReviewRequest.md)
+ - [CreateOverwriteReviewRequestAction](docs/CreateOverwriteReviewRequestAction.md)
  - [CreatePhotoPrediction](docs/CreatePhotoPrediction.md)
  - [CreatePhotoPredictionClassifierVersion](docs/CreatePhotoPredictionClassifierVersion.md)
  - [CreatePhotoPredictionPredictedClass](docs/CreatePhotoPredictionPredictedClass.md)
@@ -422,10 +427,9 @@ Class | Method | HTTP request | Description
  - [IdentificationTask](docs/IdentificationTask.md)
  - [IdentificationTaskPermission](docs/IdentificationTaskPermission.md)
  - [IdentificationTaskResult](docs/IdentificationTaskResult.md)
- - [IdentificationTaskResultRequest](docs/IdentificationTaskResultRequest.md)
  - [IdentificationTaskResultSource](docs/IdentificationTaskResultSource.md)
  - [IdentificationTaskReview](docs/IdentificationTaskReview.md)
- - [IdentificationTaskReviewType](docs/IdentificationTaskReviewType.md)
+ - [IdentificationTaskReviewAction](docs/IdentificationTaskReviewAction.md)
  - [IdentificationTaskStatus](docs/IdentificationTaskStatus.md)
  - [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent](docs/IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr.md)
@@ -636,6 +640,24 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent](docs/IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent.md)
  - [IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponent](docs/IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponent.md)
  - [IdentificationtasksPredictionsUpdateValidationError](docs/IdentificationtasksPredictionsUpdateValidationError.md)
+ - [IdentificationtasksReviewCreateActionErrorComponent](docs/IdentificationtasksReviewCreateActionErrorComponent.md)
+ - [IdentificationtasksReviewCreateActionErrorComponentAttr](docs/IdentificationtasksReviewCreateActionErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateError](docs/IdentificationtasksReviewCreateError.md)
+ - [IdentificationtasksReviewCreateIsSafeErrorComponent](docs/IdentificationtasksReviewCreateIsSafeErrorComponent.md)
+ - [IdentificationtasksReviewCreateIsSafeErrorComponentAttr](docs/IdentificationtasksReviewCreateIsSafeErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksReviewCreatePublicNoteErrorComponent](docs/IdentificationtasksReviewCreatePublicNoteErrorComponent.md)
+ - [IdentificationtasksReviewCreatePublicNoteErrorComponentAttr](docs/IdentificationtasksReviewCreatePublicNoteErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreatePublicNoteErrorComponentCode](docs/IdentificationtasksReviewCreatePublicNoteErrorComponentCode.md)
+ - [IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent](docs/IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent.md)
+ - [IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr](docs/IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent](docs/IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent.md)
+ - [IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr](docs/IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateResultTaxonIdErrorComponent](docs/IdentificationtasksReviewCreateResultTaxonIdErrorComponent.md)
+ - [IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr](docs/IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateValidationError](docs/IdentificationtasksReviewCreateValidationError.md)
  - [LocalizedMessageBody](docs/LocalizedMessageBody.md)
  - [LocalizedMessageBodyRequest](docs/LocalizedMessageBodyRequest.md)
  - [LocalizedMessageTitle](docs/LocalizedMessageTitle.md)
@@ -645,6 +667,7 @@ Class | Method | HTTP request | Description
  - [LocationRequest](docs/LocationRequest.md)
  - [LocationSource](docs/LocationSource.md)
  - [LocationTimezone](docs/LocationTimezone.md)
+ - [MetaCreateIdentificationTaskReviewRequest](docs/MetaCreateIdentificationTaskReviewRequest.md)
  - [MetaNotificationRequest](docs/MetaNotificationRequest.md)
  - [MinimalUser](docs/MinimalUser.md)
  - [MinimalUserLocale](docs/MinimalUserLocale.md)

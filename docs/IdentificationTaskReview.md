@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**IdentificationTaskReviewType**](IdentificationTaskReviewType.md) |  | [default to undefined]
+**action** | [**IdentificationTaskReviewAction**](IdentificationTaskReviewAction.md) |  | [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
 
 ## Example
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 import { IdentificationTaskReview } from 'mosquito-alert';
 
 const instance: IdentificationTaskReview = {
-    type,
+    action,
     created_at,
 };
 ```

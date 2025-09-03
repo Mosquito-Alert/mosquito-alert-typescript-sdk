@@ -1,19 +1,19 @@
-# IdentificationTaskResultRequest
+# CreateAgreeReviewRequest
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**IdentificationTaskResultSource**](IdentificationTaskResultSource.md) |  | [default to undefined]
+**action** | [**CreateAgreeReviewRequestAction**](CreateAgreeReviewRequestAction.md) |  | [optional] [default to undefined]
 
 ## Example
 
 ```typescript
-import { IdentificationTaskResultRequest } from 'mosquito-alert';
+import { CreateAgreeReviewRequest } from 'mosquito-alert';
 
-const instance: IdentificationTaskResultRequest = {
-    source,
+const instance: CreateAgreeReviewRequest = {
+    action,
 };
 ```
 

@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **observation** | [**SimplifiedObservationWithPhotos**](SimplifiedObservationWithPhotos.md) |  | [readonly] [default to undefined]
-**public_photo** | [**SimplePhoto**](SimplePhoto.md) |  | [default to undefined]
+**public_photo** | [**SimplePhoto**](SimplePhoto.md) |  | [readonly] [default to undefined]
 **assignments** | [**Array&lt;UserAssignment&gt;**](UserAssignment.md) |  | [readonly] [default to undefined]
-**status** | [**IdentificationTaskStatus**](IdentificationTaskStatus.md) |  | [optional] [default to undefined]
+**status** | [**IdentificationTaskStatus**](IdentificationTaskStatus.md) |  | [default to undefined]
 **is_flagged** | **boolean** |  | [readonly] [default to undefined]
 **is_safe** | **boolean** | Indicates if the content is safe for publication. | [readonly] [default to undefined]
 **public_note** | **string** |  | [readonly] [default to undefined]

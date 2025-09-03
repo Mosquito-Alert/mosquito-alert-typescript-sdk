@@ -40,6 +40,8 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { IdentificationTask } from '../models';
 // @ts-ignore
+import type { IdentificationTaskReview } from '../models';
+// @ts-ignore
 import type { IdentificationtasksAnnotationsCreateValidationError } from '../models';
 // @ts-ignore
 import type { IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter } from '../models';
@@ -67,6 +69,10 @@ import type { IdentificationtasksPredictionsCreateValidationError } from '../mod
 import type { IdentificationtasksPredictionsPartialUpdateValidationError } from '../models';
 // @ts-ignore
 import type { IdentificationtasksPredictionsUpdateValidationError } from '../models';
+// @ts-ignore
+import type { IdentificationtasksReviewCreateValidationError } from '../models';
+// @ts-ignore
+import type { MetaCreateIdentificationTaskReviewRequest } from '../models';
 // @ts-ignore
 import type { PaginatedAnnotationList } from '../models';
 // @ts-ignore
@@ -1151,6 +1157,52 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * 
+         * @param {string} observationUuid 
+         * @param {MetaCreateIdentificationTaskReviewRequest} [metaCreateIdentificationTaskReviewRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reviewCreate: async (observationUuid: string, metaCreateIdentificationTaskReviewRequest?: MetaCreateIdentificationTaskReviewRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('reviewCreate', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/review/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(metaCreateIdentificationTaskReviewRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -1418,6 +1470,19 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
             const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
+        /**
+         * 
+         * @param {string} observationUuid 
+         * @param {MetaCreateIdentificationTaskReviewRequest} [metaCreateIdentificationTaskReviewRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async reviewCreate(observationUuid: string, metaCreateIdentificationTaskReviewRequest?: MetaCreateIdentificationTaskReviewRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentificationTaskReview>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reviewCreate(observationUuid, metaCreateIdentificationTaskReviewRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.reviewCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
     }
 };
 
@@ -1552,6 +1617,15 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          */
         retrieve(requestParameters: IdentificationTasksApiRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<IdentificationTask> {
             return localVarFp.retrieve(requestParameters.observationUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {IdentificationTasksApiReviewCreateRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reviewCreate(requestParameters: IdentificationTasksApiReviewCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<IdentificationTaskReview> {
+            return localVarFp.reviewCreate(requestParameters.observationUuid, requestParameters.metaCreateIdentificationTaskReviewRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2369,6 +2443,27 @@ export interface IdentificationTasksApiRetrieveRequest {
 }
 
 /**
+ * Request parameters for reviewCreate operation in IdentificationTasksApi.
+ * @export
+ * @interface IdentificationTasksApiReviewCreateRequest
+ */
+export interface IdentificationTasksApiReviewCreateRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentificationTasksApiReviewCreate
+     */
+    readonly observationUuid: string
+
+    /**
+     * 
+     * @type {MetaCreateIdentificationTaskReviewRequest}
+     * @memberof IdentificationTasksApiReviewCreate
+     */
+    readonly metaCreateIdentificationTaskReviewRequest?: MetaCreateIdentificationTaskReviewRequest
+}
+
+/**
  * IdentificationTasksApi - object-oriented interface
  * @export
  * @class IdentificationTasksApi
@@ -2526,6 +2621,17 @@ export class IdentificationTasksApi extends BaseAPI {
      */
     public retrieve(requestParameters: IdentificationTasksApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).retrieve(requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {IdentificationTasksApiReviewCreateRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof IdentificationTasksApi
+     */
+    public reviewCreate(requestParameters: IdentificationTasksApiReviewCreateRequest, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).reviewCreate(requestParameters.observationUuid, requestParameters.metaCreateIdentificationTaskReviewRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

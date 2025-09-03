@@ -1,11 +1,9 @@
-# IdentificationTaskReviewType
+# IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr
 
 
 ## Enum
 
-* `Agree` (value: `'agree'`)
-
-* `Overwrite` (value: `'overwrite'`)
+* `ResultTaxonId` (value: `'result.taxon_id'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |[**predictionsRetrieve**](#predictionsretrieve) | **GET** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | |
 |[**predictionsUpdate**](#predictionsupdate) | **PUT** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | |
 |[**retrieve**](#retrieve) | **GET** /identification-tasks/{observation_uuid}/ | |
+|[**reviewCreate**](#reviewcreate) | **POST** /identification-tasks/{observation_uuid}/review/ | |
 
 # **annotationsCreate**
 > Annotation annotationsCreate(annotationRequest)
@@ -1037,6 +1038,64 @@ const { status, data } = await apiInstance.retrieve(
 |**403** |  |  -  |
 |**404** |  |  -  |
 |**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reviewCreate**
+> IdentificationTaskReview reviewCreate()
+
+
+### Example
+
+```typescript
+import {
+    IdentificationTasksApi,
+    Configuration,
+    MetaCreateIdentificationTaskReviewRequest
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new IdentificationTasksApi(configuration);
+
+let observationUuid: string; // (default to undefined)
+let metaCreateIdentificationTaskReviewRequest: MetaCreateIdentificationTaskReviewRequest; // (optional)
+
+const { status, data } = await apiInstance.reviewCreate(
+    observationUuid,
+    metaCreateIdentificationTaskReviewRequest
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **metaCreateIdentificationTaskReviewRequest** | **MetaCreateIdentificationTaskReviewRequest**|  | |
+| **observationUuid** | [**string**] |  | defaults to undefined|
+
+
+### Return type
+
+**IdentificationTaskReview**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**400** |  |  -  |
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**201** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

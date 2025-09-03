@@ -13,29 +13,20 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationTaskReviewAction } from './identification-task-review-action';
 
 /**
  * 
  * @export
- * @interface IdentificationTaskReview
+ * @enum {string}
  */
-export interface IdentificationTaskReview {
-    /**
-     * 
-     * @type {IdentificationTaskReviewAction}
-     * @memberof IdentificationTaskReview
-     */
-    'action': IdentificationTaskReviewAction;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTaskReview
-     */
-    'created_at': string;
-}
+
+export const IdentificationTaskReviewAction = {
+    Agree: 'agree',
+    Overwrite: 'overwrite',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationTaskReviewAction = typeof IdentificationTaskReviewAction[keyof typeof IdentificationTaskReviewAction];
 
 
 

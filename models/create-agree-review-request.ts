@@ -15,26 +15,20 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationTaskReviewAction } from './identification-task-review-action';
+import type { CreateAgreeReviewRequestAction } from './create-agree-review-request-action';
 
 /**
  * 
  * @export
- * @interface IdentificationTaskReview
+ * @interface CreateAgreeReviewRequest
  */
-export interface IdentificationTaskReview {
+export interface CreateAgreeReviewRequest {
     /**
      * 
-     * @type {IdentificationTaskReviewAction}
-     * @memberof IdentificationTaskReview
+     * @type {CreateAgreeReviewRequestAction}
+     * @memberof CreateAgreeReviewRequest
      */
-    'action': IdentificationTaskReviewAction;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTaskReview
-     */
-    'created_at': string;
+    'action'?: CreateAgreeReviewRequestAction;
 }
 
 

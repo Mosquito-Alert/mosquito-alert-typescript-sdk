@@ -61,7 +61,7 @@ export interface IdentificationTask {
      * @type {IdentificationTaskStatus}
      * @memberof IdentificationTask
      */
-    'status'?: IdentificationTaskStatus;
+    'status': IdentificationTaskStatus;
     /**
      * 
      * @type {boolean}
