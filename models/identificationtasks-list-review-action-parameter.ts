@@ -20,13 +20,14 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListReviewTypeParameter = {
+export const IdentificationtasksListReviewActionParameter = {
     Agree: 'agree',
+    Null: 'null',
     Overwrite: 'overwrite',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListReviewTypeParameter = typeof IdentificationtasksListReviewTypeParameter[keyof typeof IdentificationtasksListReviewTypeParameter];
+export type IdentificationtasksListReviewActionParameter = typeof IdentificationtasksListReviewActionParameter[keyof typeof IdentificationtasksListReviewActionParameter];
 
 
 

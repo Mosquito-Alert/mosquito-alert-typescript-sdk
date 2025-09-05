@@ -1,11 +1,9 @@
-# IdentificationtasksListReviewTypeParameter
+# IdentificationtasksListMineReviewActionErrorComponentAttr
 
 
 ## Enum
 
-* `Agree` (value: `'agree'`)
-
-* `Overwrite` (value: `'overwrite'`)
+* `ReviewAction` (value: `'review_action'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

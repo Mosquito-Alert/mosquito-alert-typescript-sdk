@@ -1,20 +1,20 @@
-# IdentificationtasksListReviewTypeErrorComponent
+# IdentificationtasksListReviewActionErrorComponent
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksListMineReviewTypeErrorComponentAttr**](IdentificationtasksListMineReviewTypeErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksListMineReviewActionErrorComponentAttr**](IdentificationtasksListMineReviewActionErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { IdentificationtasksListReviewTypeErrorComponent } from 'mosquito-alert';
+import { IdentificationtasksListReviewActionErrorComponent } from 'mosquito-alert';
 
-const instance: IdentificationtasksListReviewTypeErrorComponent = {
+const instance: IdentificationtasksListReviewActionErrorComponent = {
     attr,
     code,
     detail,

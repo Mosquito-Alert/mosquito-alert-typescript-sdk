@@ -18,30 +18,30 @@
 import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineReviewTypeErrorComponentAttr } from './identificationtasks-list-mine-review-type-error-component-attr';
+import type { IdentificationtasksListMineReviewActionErrorComponentAttr } from './identificationtasks-list-mine-review-action-error-component-attr';
 
 /**
  * 
  * @export
- * @interface IdentificationtasksListMineReviewTypeErrorComponent
+ * @interface IdentificationtasksListReviewActionErrorComponent
  */
-export interface IdentificationtasksListMineReviewTypeErrorComponent {
+export interface IdentificationtasksListReviewActionErrorComponent {
     /**
      * 
-     * @type {IdentificationtasksListMineReviewTypeErrorComponentAttr}
-     * @memberof IdentificationtasksListMineReviewTypeErrorComponent
+     * @type {IdentificationtasksListMineReviewActionErrorComponentAttr}
+     * @memberof IdentificationtasksListReviewActionErrorComponent
      */
-    'attr': IdentificationtasksListMineReviewTypeErrorComponentAttr;
+    'attr': IdentificationtasksListMineReviewActionErrorComponentAttr;
     /**
      * 
      * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof IdentificationtasksListMineReviewTypeErrorComponent
+     * @memberof IdentificationtasksListReviewActionErrorComponent
      */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
     /**
      * 
      * @type {string}
-     * @memberof IdentificationtasksListMineReviewTypeErrorComponent
+     * @memberof IdentificationtasksListReviewActionErrorComponent
      */
     'detail': string;
 }

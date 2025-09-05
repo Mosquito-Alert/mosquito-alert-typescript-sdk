@@ -20,12 +20,12 @@
  * @enum {string}
  */
 
-export const IdentificationtasksListMineReviewTypeErrorComponentAttr = {
-    ReviewType: 'review_type',
+export const IdentificationtasksListMineReviewActionErrorComponentAttr = {
+    ReviewAction: 'review_action',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksListMineReviewTypeErrorComponentAttr = typeof IdentificationtasksListMineReviewTypeErrorComponentAttr[keyof typeof IdentificationtasksListMineReviewTypeErrorComponentAttr];
+export type IdentificationtasksListMineReviewActionErrorComponentAttr = typeof IdentificationtasksListMineReviewActionErrorComponentAttr[keyof typeof IdentificationtasksListMineReviewActionErrorComponentAttr];
 
 
 

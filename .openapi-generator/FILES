@@ -433,8 +433,8 @@ docs/IdentificationtasksListMineResultTaxonIdsErrorComponent.md
 docs/IdentificationtasksListMineResultTaxonIdsErrorComponentAttr.md
 docs/IdentificationtasksListMineResultUncertaintyErrorComponent.md
 docs/IdentificationtasksListMineResultUncertaintyErrorComponentAttr.md
-docs/IdentificationtasksListMineReviewTypeErrorComponent.md
-docs/IdentificationtasksListMineReviewTypeErrorComponentAttr.md
+docs/IdentificationtasksListMineReviewActionErrorComponent.md
+docs/IdentificationtasksListMineReviewActionErrorComponentAttr.md
 docs/IdentificationtasksListMineStatusErrorComponent.md
 docs/IdentificationtasksListMineStatusErrorComponentAttr.md
 docs/IdentificationtasksListMineUpdatedAtErrorComponent.md
@@ -449,8 +449,8 @@ docs/IdentificationtasksListResultSourceErrorComponent.md
 docs/IdentificationtasksListResultSourceParameter.md
 docs/IdentificationtasksListResultTaxonIdsErrorComponent.md
 docs/IdentificationtasksListResultUncertaintyErrorComponent.md
-docs/IdentificationtasksListReviewTypeErrorComponent.md
-docs/IdentificationtasksListReviewTypeParameter.md
+docs/IdentificationtasksListReviewActionErrorComponent.md
+docs/IdentificationtasksListReviewActionParameter.md
 docs/IdentificationtasksListStatusErrorComponent.md
 docs/IdentificationtasksListStatusParameter.md
 docs/IdentificationtasksListUpdatedAtErrorComponent.md
@@ -1290,8 +1290,8 @@ models/identificationtasks-list-mine-result-taxon-ids-error-component-attr.ts
 models/identificationtasks-list-mine-result-taxon-ids-error-component.ts
 models/identificationtasks-list-mine-result-uncertainty-error-component-attr.ts
 models/identificationtasks-list-mine-result-uncertainty-error-component.ts
-models/identificationtasks-list-mine-review-type-error-component-attr.ts
-models/identificationtasks-list-mine-review-type-error-component.ts
+models/identificationtasks-list-mine-review-action-error-component-attr.ts
+models/identificationtasks-list-mine-review-action-error-component.ts
 models/identificationtasks-list-mine-status-error-component-attr.ts
 models/identificationtasks-list-mine-status-error-component.ts
 models/identificationtasks-list-mine-updated-at-error-component.ts
@@ -1306,8 +1306,8 @@ models/identificationtasks-list-result-source-error-component.ts
 models/identificationtasks-list-result-source-parameter.ts
 models/identificationtasks-list-result-taxon-ids-error-component.ts
 models/identificationtasks-list-result-uncertainty-error-component.ts
-models/identificationtasks-list-review-type-error-component.ts
-models/identificationtasks-list-review-type-parameter.ts
+models/identificationtasks-list-review-action-error-component.ts
+models/identificationtasks-list-review-action-parameter.ts
 models/identificationtasks-list-status-error-component.ts
 models/identificationtasks-list-status-parameter.ts
 models/identificationtasks-list-updated-at-error-component.ts

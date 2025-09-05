@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksListMineResultSourceErrorComponentAttr**](IdentificationtasksListMineResultSourceErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksListMineResultSourceErrorComponentCode**](IdentificationtasksListMineResultSourceErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksListMineReviewActionErrorComponentAttr**](IdentificationtasksListMineReviewActionErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

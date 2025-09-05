@@ -420,7 +420,7 @@ let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optio
 let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
-let reviewType: IdentificationtasksListReviewTypeParameter; // (optional) (default to undefined)
+let reviewAction: IdentificationtasksListReviewActionParameter; // (optional) (default to undefined)
 let status: Array<IdentificationtasksListStatusParameter>; // (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -447,7 +447,7 @@ const { status, data } = await apiInstance.list(
     resultTaxonIds,
     resultUncertaintyMax,
     resultUncertaintyMin,
-    reviewType,
+    reviewAction,
     status,
     updatedAtAfter,
     updatedAtBefore
@@ -479,7 +479,7 @@ const { status, data } = await apiInstance.list(
 | **resultTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|
-| **reviewType** | **IdentificationtasksListReviewTypeParameter** |  | (optional) defaults to undefined|
+| **reviewAction** | **IdentificationtasksListReviewActionParameter** |  | (optional) defaults to undefined|
 | **status** | **Array&lt;IdentificationtasksListStatusParameter&gt;** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
@@ -547,7 +547,7 @@ let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optio
 let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
-let reviewType: IdentificationtasksListReviewTypeParameter; // (optional) (default to undefined)
+let reviewAction: IdentificationtasksListReviewActionParameter; // (optional) (default to undefined)
 let status: Array<IdentificationtasksListStatusParameter>; // (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -574,7 +574,7 @@ const { status, data } = await apiInstance.listMine(
     resultTaxonIds,
     resultUncertaintyMax,
     resultUncertaintyMin,
-    reviewType,
+    reviewAction,
     status,
     updatedAtAfter,
     updatedAtBefore
@@ -606,7 +606,7 @@ const { status, data } = await apiInstance.listMine(
 | **resultTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|
-| **reviewType** | **IdentificationtasksListReviewTypeParameter** |  | (optional) defaults to undefined|
+| **reviewAction** | **IdentificationtasksListReviewActionParameter** |  | (optional) defaults to undefined|
 | **status** | **Array&lt;IdentificationtasksListStatusParameter&gt;** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
