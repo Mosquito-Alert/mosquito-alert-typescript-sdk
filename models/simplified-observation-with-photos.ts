@@ -22,6 +22,7 @@ import type { SimplifiedLocation } from './simplified-location';
 
 export interface SimplifiedObservationWithPhotos {
     'uuid': string;
+    'short_id': string;
     'user_uuid': string;
     'created_at': string;
     /**

@@ -25,6 +25,7 @@ import type { SimplifiedLocation } from './simplified-location';
 
 export interface AssignedObservation {
     'uuid': string;
+    'short_id': string;
     'created_at': string;
     /**
      * The date and time when the record was created, displayed in the local timezone specified for this entry.

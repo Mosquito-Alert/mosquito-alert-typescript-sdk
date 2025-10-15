@@ -208,6 +208,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -215,7 +216,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -281,6 +282,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                     receivedAtBefore;
             }
 
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
             if (shortId !== undefined) {
                 localVarQueryParameter['short_id'] = shortId;
             }
@@ -323,6 +328,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -330,7 +336,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -394,6 +400,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
                     (receivedAtBefore as any).toISOString() :
                     receivedAtBefore;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             if (shortId !== undefined) {
@@ -523,6 +533,7 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -530,8 +541,8 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -547,6 +558,7 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -554,8 +566,8 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -606,7 +618,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         list(requestParameters: BreedingSitesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Breeding Sites
@@ -615,7 +627,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listMine(requestParameters: BreedingSitesApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -725,6 +737,11 @@ export interface BreedingSitesApiListRequest {
     readonly receivedAtBefore?: string
 
     /**
+     * A search term.
+     */
+    readonly search?: string
+
+    /**
      * Short ID
      */
     readonly shortId?: string
@@ -789,6 +806,11 @@ export interface BreedingSitesApiListMineRequest {
     readonly receivedAtBefore?: string
 
     /**
+     * A search term.
+     */
+    readonly search?: string
+
+    /**
      * Short ID
      */
     readonly shortId?: string
@@ -844,7 +866,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public list(requestParameters: BreedingSitesApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BreedingSitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -854,7 +876,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public listMine(requestParameters: BreedingSitesApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BreedingSitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

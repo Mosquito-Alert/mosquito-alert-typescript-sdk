@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** |  | [readonly] [default to undefined]
+**short_id** | **string** |  | [readonly] [default to undefined]
 **created_at** | **string** |  | [default to undefined]
 **created_at_local** | **string** | The date and time when the record was created, displayed in the local timezone specified for this entry. | [readonly] [default to undefined]
 **received_at** | **string** |  | [readonly] [default to undefined]
@@ -21,6 +22,7 @@ import { AssignedObservation } from 'mosquito-alert';
 
 const instance: AssignedObservation = {
     uuid,
+    short_id,
     created_at,
     created_at_local,
     received_at,

@@ -142,6 +142,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -149,7 +150,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -211,6 +212,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
                     receivedAtBefore;
             }
 
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
             if (shortId !== undefined) {
                 localVarQueryParameter['short_id'] = shortId;
             }
@@ -252,6 +257,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -259,7 +265,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -319,6 +325,10 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
                     (receivedAtBefore as any).toISOString() :
                     receivedAtBefore;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
             }
 
             if (shortId !== undefined) {
@@ -437,6 +447,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -444,8 +455,8 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -460,6 +471,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -467,8 +479,8 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -519,7 +531,7 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         list(requestParameters: BitesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
-            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Bites
@@ -528,7 +540,7 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         listMine(requestParameters: BitesApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBiteList> {
-            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -598,6 +610,11 @@ export interface BitesApiListRequest {
     readonly receivedAtBefore?: string
 
     /**
+     * A search term.
+     */
+    readonly search?: string
+
+    /**
      * Short ID
      */
     readonly shortId?: string
@@ -657,6 +674,11 @@ export interface BitesApiListMineRequest {
     readonly receivedAtBefore?: string
 
     /**
+     * A search term.
+     */
+    readonly search?: string
+
+    /**
      * Short ID
      */
     readonly shortId?: string
@@ -712,7 +734,7 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public list(requestParameters: BitesApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -722,7 +744,7 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public listMine(requestParameters: BitesApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

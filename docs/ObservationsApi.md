@@ -168,6 +168,7 @@ let page: number; //A page number within the paginated result set. (optional) (d
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -184,6 +185,7 @@ const { status, data } = await apiInstance.list(
     pageSize,
     receivedAtAfter,
     receivedAtBefore,
+    search,
     shortId,
     updatedAtAfter,
     updatedAtBefore,
@@ -205,6 +207,7 @@ const { status, data } = await apiInstance.list(
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
@@ -261,6 +264,7 @@ let page: number; //A page number within the paginated result set. (optional) (d
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -277,6 +281,7 @@ const { status, data } = await apiInstance.listMine(
     pageSize,
     receivedAtAfter,
     receivedAtBefore,
+    search,
     shortId,
     updatedAtAfter,
     updatedAtBefore,
@@ -298,6 +303,7 @@ const { status, data } = await apiInstance.listMine(
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
