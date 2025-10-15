@@ -20,29 +20,9 @@ import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsi
 // @ts-ignore
 import type { NotificationsCreateReceiverTypeErrorComponentAttr } from './notifications-create-receiver-type-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateReceiverTypeErrorComponent
- */
 export interface NotificationsCreateReceiverTypeErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateReceiverTypeErrorComponentAttr}
-     * @memberof NotificationsCreateReceiverTypeErrorComponent
-     */
     'attr': NotificationsCreateReceiverTypeErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreateSiteTypeErrorComponentCode}
-     * @memberof NotificationsCreateReceiverTypeErrorComponent
-     */
     'code': BreedingsitesCreateSiteTypeErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateReceiverTypeErrorComponent
-     */
     'detail': string;
 }
 

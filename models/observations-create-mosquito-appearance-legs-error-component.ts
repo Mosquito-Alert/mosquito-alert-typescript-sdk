@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr } from './observations-create-mosquito-appearance-legs-error-component-attr';
 
-/**
- * 
- * @export
- * @interface ObservationsCreateMosquitoAppearanceLegsErrorComponent
- */
 export interface ObservationsCreateMosquitoAppearanceLegsErrorComponent {
-    /**
-     * 
-     * @type {ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr}
-     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
-     */
     'attr': ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateMosquitoAppearanceLegsErrorComponent
-     */
     'detail': string;
 }
 

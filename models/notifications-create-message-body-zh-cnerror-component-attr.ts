@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageBodyZhCNErrorComponentAttr = {
     MessageBodyZhMinusCn: 'message.body.zh-CN',

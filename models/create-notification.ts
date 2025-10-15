@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface CreateNotification
- */
 export interface CreateNotification {
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateNotification
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateNotification
-     */
     'created_at': string;
 }
 

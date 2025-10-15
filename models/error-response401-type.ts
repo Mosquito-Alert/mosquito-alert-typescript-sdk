@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const ErrorResponse401Type = {
     ClientError: 'client_error',

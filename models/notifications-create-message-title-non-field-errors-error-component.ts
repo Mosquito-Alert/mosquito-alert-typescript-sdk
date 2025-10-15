@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttr } from './notifications-create-message-title-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
- */
 export interface NotificationsCreateMessageTitleNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttr}
-     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
-     */
     'attr': NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateMessageTitleNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

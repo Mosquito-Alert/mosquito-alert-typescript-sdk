@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { NotificationsListMineOrderByErrorComponent } from './notifications-list-mine-order-by-error-component';
 
-/**
- * 
- * @export
- * @interface NotificationsListMineValidationError
- */
 export interface NotificationsListMineValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof NotificationsListMineValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<NotificationsListMineOrderByErrorComponent>}
-     * @memberof NotificationsListMineValidationError
-     */
     'errors': Array<NotificationsListMineOrderByErrorComponent>;
 }
 

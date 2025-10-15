@@ -20,29 +20,9 @@ import type { DevicesCreateManufacturerErrorComponentCode } from './devices-crea
 // @ts-ignore
 import type { DevicesCreateNameErrorComponentAttr } from './devices-create-name-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesUpdateNameErrorComponent
- */
 export interface DevicesUpdateNameErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateNameErrorComponentAttr}
-     * @memberof DevicesUpdateNameErrorComponent
-     */
     'attr': DevicesCreateNameErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateManufacturerErrorComponentCode}
-     * @memberof DevicesUpdateNameErrorComponent
-     */
     'code': DevicesCreateManufacturerErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesUpdateNameErrorComponent
-     */
     'detail': string;
 }
 

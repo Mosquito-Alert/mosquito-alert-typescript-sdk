@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineResultSourceErrorComponentCode = {
     InvalidChoice: 'invalid_choice',

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateEventEnvironmentErrorComponentAttr = {
     EventEnvironment: 'event_environment',

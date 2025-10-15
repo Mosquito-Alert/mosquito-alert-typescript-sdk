@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr = {
     IsDecisive: 'is_decisive',

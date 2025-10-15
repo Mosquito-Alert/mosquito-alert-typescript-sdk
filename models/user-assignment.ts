@@ -20,29 +20,9 @@ import type { AnnotationType } from './annotation-type';
 // @ts-ignore
 import type { SimpleAnnotatorUser } from './simple-annotator-user';
 
-/**
- * 
- * @export
- * @interface UserAssignment
- */
 export interface UserAssignment {
-    /**
-     * 
-     * @type {SimpleAnnotatorUser}
-     * @memberof UserAssignment
-     */
     'user': SimpleAnnotatorUser;
-    /**
-     * 
-     * @type {number}
-     * @memberof UserAssignment
-     */
     'annotation_id': number | null;
-    /**
-     * 
-     * @type {AnnotationType}
-     * @memberof UserAssignment
-     */
     'annotation_type': AnnotationType;
 }
 

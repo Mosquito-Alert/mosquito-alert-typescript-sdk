@@ -16,8 +16,6 @@
 
 /**
  * Breeding site type.
- * @export
- * @enum {string}
  */
 
 export const BreedingSiteSiteType = {

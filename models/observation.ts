@@ -32,112 +32,34 @@ import type { MosquitoAppearance } from './mosquito-appearance';
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
 
-/**
- * 
- * @export
- * @interface Observation
- */
 export interface Observation {
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'short_id': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'user_uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'created_at': string;
     /**
      * The date and time when the record was created, displayed in the local timezone specified for this entry.
-     * @type {string}
-     * @memberof Observation
      */
     'created_at_local': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'sent_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Observation
-     */
     'received_at': string;
     /**
      * Date and time when the report was last modified
-     * @type {string}
-     * @memberof Observation
      */
     'updated_at': string;
-    /**
-     * 
-     * @type {Location}
-     * @memberof Observation
-     */
     'location': Location;
     /**
      * Note user attached to report.
-     * @type {string}
-     * @memberof Observation
      */
     'note'?: string | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof Observation
-     */
     'tags'?: Array<string>;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Observation
-     */
     'published': boolean;
-    /**
-     * 
-     * @type {Array<SimplePhoto>}
-     * @memberof Observation
-     */
     'photos': Array<SimplePhoto>;
-    /**
-     * 
-     * @type {Identification}
-     * @memberof Observation
-     */
     'identification': Identification | null;
-    /**
-     * 
-     * @type {BiteEventEnvironment}
-     * @memberof Observation
-     */
     'event_environment'?: BiteEventEnvironment | null;
-    /**
-     * 
-     * @type {BiteEventMoment}
-     * @memberof Observation
-     */
     'event_moment'?: BiteEventMoment | null;
     /**
      * User-provided description of the mosquito\'s appearance
-     * @type {MosquitoAppearance}
-     * @memberof Observation
      */
     'mosquito_appearance'?: MosquitoAppearance | null;
 }

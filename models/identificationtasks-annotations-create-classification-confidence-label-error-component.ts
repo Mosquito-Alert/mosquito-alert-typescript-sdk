@@ -20,29 +20,9 @@ import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr } from './identificationtasks-annotations-create-classification-confidence-label-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateLocationSourceErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
-     */
     'code': BitesCreateLocationSourceErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
-     */
     'detail': string;
 }
 

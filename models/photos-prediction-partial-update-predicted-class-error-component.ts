@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreatePredictedClassErrorComponentAt
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode } from './identificationtasks-predictions-create-predicted-class-error-component-code';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionPartialUpdatePredictedClassErrorComponent
- */
 export interface PhotosPredictionPartialUpdatePredictedClassErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr}
-     * @memberof PhotosPredictionPartialUpdatePredictedClassErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode}
-     * @memberof PhotosPredictionPartialUpdatePredictedClassErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionPartialUpdatePredictedClassErrorComponent
-     */
     'detail': string;
 }
 

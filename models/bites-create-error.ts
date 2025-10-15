@@ -76,7 +76,6 @@ import type { BitesCreateTagsINDEXErrorComponent } from './bites-create-tags-ind
 
 /**
  * @type BitesCreateError
- * @export
  */
 export type BitesCreateError = { attr: 'counts.chest' } & BitesCreateCountsChestErrorComponent | { attr: 'counts.head' } & BitesCreateCountsHeadErrorComponent | { attr: 'counts.left_arm' } & BitesCreateCountsLeftArmErrorComponent | { attr: 'counts.left_leg' } & BitesCreateCountsLeftLegErrorComponent | { attr: 'counts.non_field_errors' } & BitesCreateCountsNonFieldErrorsErrorComponent | { attr: 'counts.right_arm' } & BitesCreateCountsRightArmErrorComponent | { attr: 'counts.right_leg' } & BitesCreateCountsRightLegErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
 

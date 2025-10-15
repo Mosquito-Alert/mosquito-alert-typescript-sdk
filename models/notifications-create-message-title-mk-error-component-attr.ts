@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageTitleMkErrorComponentAttr = {
     MessageTitleMk: 'message.title.mk',

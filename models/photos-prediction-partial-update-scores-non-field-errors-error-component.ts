@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr } from './identificationtasks-predictions-create-scores-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent
- */
 export interface PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr}
-     * @memberof PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageTitleCaErrorComponentAttr = {
     MessageTitleCa: 'message.title.ca',

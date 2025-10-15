@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Notification } from './notification';
 
-/**
- * 
- * @export
- * @interface PaginatedNotificationList
- */
 export interface PaginatedNotificationList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedNotificationList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedNotificationList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedNotificationList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Notification>}
-     * @memberof PaginatedNotificationList
-     */
     'results'?: Array<Notification>;
 }
 

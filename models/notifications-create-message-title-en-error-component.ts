@@ -20,29 +20,9 @@ import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devi
 // @ts-ignore
 import type { NotificationsCreateMessageTitleEnErrorComponentAttr } from './notifications-create-message-title-en-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateMessageTitleEnErrorComponent
- */
 export interface NotificationsCreateMessageTitleEnErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateMessageTitleEnErrorComponentAttr}
-     * @memberof NotificationsCreateMessageTitleEnErrorComponent
-     */
     'attr': NotificationsCreateMessageTitleEnErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateMobileAppPackageNameErrorComponentCode}
-     * @memberof NotificationsCreateMessageTitleEnErrorComponent
-     */
     'code': DevicesCreateMobileAppPackageNameErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateMessageTitleEnErrorComponent
-     */
     'detail': string;
 }
 

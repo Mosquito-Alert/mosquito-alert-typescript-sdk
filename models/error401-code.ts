@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const Error401Code = {
     TokenNotValid: 'token_not_valid',

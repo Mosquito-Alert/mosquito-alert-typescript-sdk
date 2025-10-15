@@ -73,7 +73,6 @@ import type { BreedingsitesCreateTagsINDEXErrorComponent } from './breedingsites
 
 /**
  * @type BreedingsitesCreateError
- * @export
  */
 export type BreedingsitesCreateError = { attr: 'created_at' } & BreedingsitesCreateCreatedAtErrorComponent | { attr: 'has_larvae' } & BreedingsitesCreateHasLarvaeErrorComponent | { attr: 'has_near_mosquitoes' } & BreedingsitesCreateHasNearMosquitoesErrorComponent | { attr: 'has_water' } & BreedingsitesCreateHasWaterErrorComponent | { attr: 'in_public_area' } & BreedingsitesCreateInPublicAreaErrorComponent | { attr: 'location.non_field_errors' } & BreedingsitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BreedingsitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BreedingsitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BreedingsitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BreedingsitesCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & BreedingsitesCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & BreedingsitesCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & BreedingsitesCreateSentAtErrorComponent | { attr: 'site_type' } & BreedingsitesCreateSiteTypeErrorComponent | { attr: 'tags' } & BreedingsitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BreedingsitesCreateTagsINDEXErrorComponent;
 

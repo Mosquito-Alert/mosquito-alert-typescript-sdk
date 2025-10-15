@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const DevicesCreateFcmTokenErrorComponentAttr = {
     FcmToken: 'fcm_token',

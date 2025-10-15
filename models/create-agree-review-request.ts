@@ -17,17 +17,7 @@
 // @ts-ignore
 import type { CreateAgreeReviewRequestAction } from './create-agree-review-request-action';
 
-/**
- * 
- * @export
- * @interface CreateAgreeReviewRequest
- */
 export interface CreateAgreeReviewRequest {
-    /**
-     * 
-     * @type {CreateAgreeReviewRequestAction}
-     * @memberof CreateAgreeReviewRequest
-     */
     'action'?: CreateAgreeReviewRequestAction;
 }
 

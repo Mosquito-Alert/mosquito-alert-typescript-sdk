@@ -20,29 +20,9 @@ import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-d
 // @ts-ignore
 import type { DevicesCreateOsNameErrorComponentAttr } from './devices-create-os-name-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesUpdateOsNameErrorComponent
- */
 export interface DevicesUpdateOsNameErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateOsNameErrorComponentAttr}
-     * @memberof DevicesUpdateOsNameErrorComponent
-     */
     'attr': DevicesCreateOsNameErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateDeviceIdErrorComponentCode}
-     * @memberof DevicesUpdateOsNameErrorComponent
-     */
     'code': DevicesCreateDeviceIdErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesUpdateOsNameErrorComponent
-     */
     'detail': string;
 }
 

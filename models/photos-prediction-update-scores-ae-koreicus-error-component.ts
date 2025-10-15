@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponentAttr } from './identificationtasks-predictions-create-scores-ae-koreicus-error-component-attr';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionUpdateScoresAeKoreicusErrorComponent
- */
 export interface PhotosPredictionUpdateScoresAeKoreicusErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponentAttr}
-     * @memberof PhotosPredictionUpdateScoresAeKoreicusErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof PhotosPredictionUpdateScoresAeKoreicusErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionUpdateScoresAeKoreicusErrorComponent
-     */
     'detail': string;
 }
 

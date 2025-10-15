@@ -20,29 +20,9 @@ import type { NotificationsCreateTopicCodesErrorComponentCode } from './notifica
 // @ts-ignore
 import type { NotificationsCreateUserUuidsErrorComponentAttr } from './notifications-create-user-uuids-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateUserUuidsErrorComponent
- */
 export interface NotificationsCreateUserUuidsErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateUserUuidsErrorComponentAttr}
-     * @memberof NotificationsCreateUserUuidsErrorComponent
-     */
     'attr': NotificationsCreateUserUuidsErrorComponentAttr;
-    /**
-     * 
-     * @type {NotificationsCreateTopicCodesErrorComponentCode}
-     * @memberof NotificationsCreateUserUuidsErrorComponent
-     */
     'code': NotificationsCreateTopicCodesErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateUserUuidsErrorComponent
-     */
     'detail': string;
 }
 

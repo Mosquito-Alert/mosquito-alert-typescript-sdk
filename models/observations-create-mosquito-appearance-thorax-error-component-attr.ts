@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttr = {
     MosquitoAppearanceThorax: 'mosquito_appearance.thorax',

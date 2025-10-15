@@ -47,7 +47,6 @@ import type { PaginatedBreedingSiteList } from '../models';
 import type { SimplePhotoRequest } from '../models';
 /**
  * BreedingSitesApi - axios parameter creator
- * @export
  */
 export const BreedingSitesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -475,7 +474,6 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
 
 /**
  * BreedingSitesApi - functional programming interface
- * @export
  */
 export const BreedingSitesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = BreedingSitesApiAxiosParamCreator(configuration)
@@ -579,7 +577,6 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
 
 /**
  * BreedingSitesApi - factory interface
- * @export
  */
 export const BreedingSitesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = BreedingSitesApiFp(configuration)
@@ -634,317 +631,190 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
 
 /**
  * Request parameters for create operation in BreedingSitesApi.
- * @export
- * @interface BreedingSitesApiCreateRequest
  */
 export interface BreedingSitesApiCreateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly createdAt: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly sentAt: string
 
-    /**
-     * 
-     * @type {LocationRequest}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly location: LocationRequest
 
-    /**
-     * 
-     * @type {Array<SimplePhotoRequest>}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly photos: Array<SimplePhotoRequest>
 
     /**
      * Note user attached to report.
-     * @type {string}
-     * @memberof BreedingSitesApiCreate
      */
     readonly note?: string | null
 
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly tags?: Array<string>
 
-    /**
-     * 
-     * @type {BreedingSiteSiteType}
-     * @memberof BreedingSitesApiCreate
-     */
     readonly siteType?: BreedingSiteSiteType
 
     /**
      * Either if the user perceived water in the breeding site.
-     * @type {boolean}
-     * @memberof BreedingSitesApiCreate
      */
     readonly hasWater?: boolean | null
 
     /**
      * Either if the breeding site is found in a public area.
-     * @type {boolean}
-     * @memberof BreedingSitesApiCreate
      */
     readonly inPublicArea?: boolean | null
 
     /**
      * Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
-     * @type {boolean}
-     * @memberof BreedingSitesApiCreate
      */
     readonly hasNearMosquitoes?: boolean | null
 
     /**
      * Either if the user perceived larvaes the breeding site.
-     * @type {boolean}
-     * @memberof BreedingSitesApiCreate
      */
     readonly hasLarvae?: boolean | null
 }
 
 /**
  * Request parameters for destroy operation in BreedingSitesApi.
- * @export
- * @interface BreedingSitesApiDestroyRequest
  */
 export interface BreedingSitesApiDestroyRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiDestroy
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for list operation in BreedingSitesApi.
- * @export
- * @interface BreedingSitesApiListRequest
  */
 export interface BreedingSitesApiListRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof BreedingSitesApiList
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly createdAtBefore?: string
 
     /**
      * Has any photo
-     * @type {boolean}
-     * @memberof BreedingSitesApiList
      */
     readonly hasPhotos?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof BreedingSitesApiList
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof BreedingSitesApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof BreedingSitesApiList
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BreedingSitesApiList
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiList
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for listMine operation in BreedingSitesApi.
- * @export
- * @interface BreedingSitesApiListMineRequest
  */
 export interface BreedingSitesApiListMineRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof BreedingSitesApiListMine
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly createdAtBefore?: string
 
     /**
      * Has any photo
-     * @type {boolean}
-     * @memberof BreedingSitesApiListMine
      */
     readonly hasPhotos?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof BreedingSitesApiListMine
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof BreedingSitesApiListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof BreedingSitesApiListMine
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiListMine
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for retrieve operation in BreedingSitesApi.
- * @export
- * @interface BreedingSitesApiRetrieveRequest
  */
 export interface BreedingSitesApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingSitesApiRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * BreedingSitesApi - object-oriented interface
- * @export
- * @class BreedingSitesApi
- * @extends {BaseAPI}
  */
 export class BreedingSitesApi extends BaseAPI {
     /**
@@ -952,7 +822,6 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {BreedingSitesApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BreedingSitesApi
      */
     public create(requestParameters: BreedingSitesApiCreateRequest, options?: RawAxiosRequestConfig) {
         return BreedingSitesApiFp(this.configuration).create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.note, requestParameters.tags, requestParameters.siteType, requestParameters.hasWater, requestParameters.inPublicArea, requestParameters.hasNearMosquitoes, requestParameters.hasLarvae, options).then((request) => request(this.axios, this.basePath));
@@ -963,7 +832,6 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {BreedingSitesApiDestroyRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BreedingSitesApi
      */
     public destroy(requestParameters: BreedingSitesApiDestroyRequest, options?: RawAxiosRequestConfig) {
         return BreedingSitesApiFp(this.configuration).destroy(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -974,7 +842,6 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {BreedingSitesApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BreedingSitesApi
      */
     public list(requestParameters: BreedingSitesApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return BreedingSitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -985,7 +852,6 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {BreedingSitesApiListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BreedingSitesApi
      */
     public listMine(requestParameters: BreedingSitesApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return BreedingSitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -996,7 +862,6 @@ export class BreedingSitesApi extends BaseAPI {
      * @param {BreedingSitesApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BreedingSitesApi
      */
     public retrieve(requestParameters: BreedingSitesApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return BreedingSitesApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));

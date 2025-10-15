@@ -14,28 +14,14 @@
 
 
 
-/**
- * 
- * @export
- * @interface Country
- */
 export interface Country {
-    /**
-     * 
-     * @type {number}
-     * @memberof Country
-     */
     'id': number;
     /**
      * Full name of the country in English (e.g., Spain).
-     * @type {string}
-     * @memberof Country
      */
     'name_en': string;
     /**
      * ISO 3166-1 alpha-3 country code (3-letter code, e.g., ESP).
-     * @type {string}
-     * @memberof Country
      */
     'iso3_code': string;
 }

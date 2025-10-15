@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { IdentificationTask } from './identification-task';
 
-/**
- * 
- * @export
- * @interface PaginatedIdentificationTaskList
- */
 export interface PaginatedIdentificationTaskList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedIdentificationTaskList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedIdentificationTaskList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedIdentificationTaskList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<IdentificationTask>}
-     * @memberof PaginatedIdentificationTaskList
-     */
     'results'?: Array<IdentificationTask>;
 }
 

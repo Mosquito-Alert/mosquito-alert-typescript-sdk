@@ -16,8 +16,6 @@
 
 /**
  * The moment of the day when the event took place.
- * @export
- * @enum {string}
  */
 
 export const BiteEventMoment = {

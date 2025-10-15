@@ -14,22 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface FixLocation
- */
 export interface FixLocation {
     /**
      * Latitude rounded down to nearest 0.025 decimal degree.
-     * @type {number}
-     * @memberof FixLocation
      */
     'latitude': number;
     /**
      * Longitude rounded down to nearest 0.025 decimal degree.
-     * @type {number}
-     * @memberof FixLocation
      */
     'longitude': number;
 }

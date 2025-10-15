@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttr = {
     ClassificationConfidence: 'classification_confidence',

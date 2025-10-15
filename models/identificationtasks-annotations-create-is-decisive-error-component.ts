@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr }
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode } from './identificationtasks-annotations-create-is-decisive-error-component-code';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,23 +20,8 @@ import type { LocationPoint } from './location-point';
 // @ts-ignore
 import type { LocationSource } from './location-source';
 
-/**
- * 
- * @export
- * @interface LocationRequest
- */
 export interface LocationRequest {
-    /**
-     * 
-     * @type {LocationSource}
-     * @memberof LocationRequest
-     */
     'source': LocationSource;
-    /**
-     * 
-     * @type {LocationPoint}
-     * @memberof LocationRequest
-     */
     'point': LocationPoint;
 }
 

@@ -20,23 +20,8 @@ import type { AnnotationType } from './annotation-type';
 // @ts-ignore
 import type { AssignedObservation } from './assigned-observation';
 
-/**
- * 
- * @export
- * @interface Assignment
- */
 export interface Assignment {
-    /**
-     * 
-     * @type {AssignedObservation}
-     * @memberof Assignment
-     */
     'observation': AssignedObservation;
-    /**
-     * 
-     * @type {AnnotationType}
-     * @memberof Assignment
-     */
     'annotation_type': AnnotationType;
 }
 

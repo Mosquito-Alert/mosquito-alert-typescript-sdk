@@ -28,7 +28,6 @@ import type { CreateOverwriteReviewRequestAction } from './create-overwrite-revi
 
 /**
  * @type MetaCreateIdentificationTaskReviewRequest
- * @export
  */
 export type MetaCreateIdentificationTaskReviewRequest = { action: 'agree' } & CreateAgreeReviewRequest | { action: 'overwrite' } & CreateOverwriteReviewRequest;
 

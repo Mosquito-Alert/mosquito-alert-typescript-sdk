@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateCountsNonFieldErrorsErrorComponentAttr = {
     CountsNonFieldErrors: 'counts.non_field_errors',

@@ -35,7 +35,6 @@ import type { FixRequest } from '../models';
 import type { FixesCreateValidationError } from '../models';
 /**
  * FixesApi - axios parameter creator
- * @export
  */
 export const FixesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -88,7 +87,6 @@ export const FixesApiAxiosParamCreator = function (configuration?: Configuration
 
 /**
  * FixesApi - functional programming interface
- * @export
  */
 export const FixesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = FixesApiAxiosParamCreator(configuration)
@@ -110,7 +108,6 @@ export const FixesApiFp = function(configuration?: Configuration) {
 
 /**
  * FixesApi - factory interface
- * @export
  */
 export const FixesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = FixesApiFp(configuration)
@@ -129,23 +126,13 @@ export const FixesApiFactory = function (configuration?: Configuration, basePath
 
 /**
  * Request parameters for create operation in FixesApi.
- * @export
- * @interface FixesApiCreateRequest
  */
 export interface FixesApiCreateRequest {
-    /**
-     * 
-     * @type {FixRequest}
-     * @memberof FixesApiCreate
-     */
     readonly fixRequest: FixRequest
 }
 
 /**
  * FixesApi - object-oriented interface
- * @export
- * @class FixesApi
- * @extends {BaseAPI}
  */
 export class FixesApi extends BaseAPI {
     /**
@@ -153,7 +140,6 @@ export class FixesApi extends BaseAPI {
      * @param {FixesApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FixesApi
      */
     public create(requestParameters: FixesApiCreateRequest, options?: RawAxiosRequestConfig) {
         return FixesApiFp(this.configuration).create(requestParameters.fixRequest, options).then((request) => request(this.axios, this.basePath));

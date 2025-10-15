@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface UserScore
- */
 export interface UserScore {
-    /**
-     * 
-     * @type {number}
-     * @memberof UserScore
-     */
     'value': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof UserScore
-     */
     'updated_at': string | null;
 }
 

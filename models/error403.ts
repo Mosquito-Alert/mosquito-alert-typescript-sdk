@@ -17,29 +17,9 @@
 // @ts-ignore
 import type { Error403Code } from './error403-code';
 
-/**
- * 
- * @export
- * @interface Error403
- */
 export interface Error403 {
-    /**
-     * 
-     * @type {Error403Code}
-     * @memberof Error403
-     */
     'code': Error403Code;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error403
-     */
     'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error403
-     */
     'attr': string | null;
 }
 

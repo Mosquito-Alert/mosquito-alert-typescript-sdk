@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { PhotoPrediction } from './photo-prediction';
 
-/**
- * 
- * @export
- * @interface PaginatedPhotoPredictionList
- */
 export interface PaginatedPhotoPredictionList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedPhotoPredictionList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedPhotoPredictionList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedPhotoPredictionList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<PhotoPrediction>}
-     * @memberof PaginatedPhotoPredictionList
-     */
     'results'?: Array<PhotoPrediction>;
 }
 

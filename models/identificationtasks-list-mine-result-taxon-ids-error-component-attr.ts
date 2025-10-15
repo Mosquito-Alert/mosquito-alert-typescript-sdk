@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineResultTaxonIdsErrorComponentAttr = {
     ResultTaxonIds: 'result_taxon_ids',

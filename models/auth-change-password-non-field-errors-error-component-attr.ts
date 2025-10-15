@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const AuthChangePasswordNonFieldErrorsErrorComponentAttr = {
     NonFieldErrors: 'non_field_errors',

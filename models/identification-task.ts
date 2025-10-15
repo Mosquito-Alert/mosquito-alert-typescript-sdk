@@ -32,83 +32,21 @@ import type { SimplifiedObservationWithPhotos } from './simplified-observation-w
 // @ts-ignore
 import type { UserAssignment } from './user-assignment';
 
-/**
- * 
- * @export
- * @interface IdentificationTask
- */
 export interface IdentificationTask {
-    /**
-     * 
-     * @type {SimplifiedObservationWithPhotos}
-     * @memberof IdentificationTask
-     */
     'observation': SimplifiedObservationWithPhotos;
-    /**
-     * 
-     * @type {SimplePhoto}
-     * @memberof IdentificationTask
-     */
     'public_photo': SimplePhoto;
-    /**
-     * 
-     * @type {Array<UserAssignment>}
-     * @memberof IdentificationTask
-     */
     'assignments': Array<UserAssignment>;
-    /**
-     * 
-     * @type {IdentificationTaskStatus}
-     * @memberof IdentificationTask
-     */
     'status': IdentificationTaskStatus;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTask
-     */
     'is_flagged': boolean;
     /**
      * Indicates if the content is safe for publication.
-     * @type {boolean}
-     * @memberof IdentificationTask
      */
     'is_safe': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTask
-     */
     'public_note': string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTask
-     */
     'num_annotations': number;
-    /**
-     * 
-     * @type {IdentificationTaskReview}
-     * @memberof IdentificationTask
-     */
     'review': IdentificationTaskReview | null;
-    /**
-     * 
-     * @type {IdentificationTaskResult}
-     * @memberof IdentificationTask
-     */
     'result': IdentificationTaskResult | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTask
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTask
-     */
     'updated_at': string;
 }
 

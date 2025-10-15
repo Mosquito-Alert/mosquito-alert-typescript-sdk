@@ -20,29 +20,9 @@ import type { BitesListMineUserUuidErrorComponentAttr } from './bites-list-mine-
 // @ts-ignore
 import type { BitesListMineUserUuidErrorComponentCode } from './bites-list-mine-user-uuid-error-component-code';
 
-/**
- * 
- * @export
- * @interface ObservationsListMineUserUuidErrorComponent
- */
 export interface ObservationsListMineUserUuidErrorComponent {
-    /**
-     * 
-     * @type {BitesListMineUserUuidErrorComponentAttr}
-     * @memberof ObservationsListMineUserUuidErrorComponent
-     */
     'attr': BitesListMineUserUuidErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListMineUserUuidErrorComponentCode}
-     * @memberof ObservationsListMineUserUuidErrorComponent
-     */
     'code': BitesListMineUserUuidErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListMineUserUuidErrorComponent
-     */
     'detail': string;
 }
 

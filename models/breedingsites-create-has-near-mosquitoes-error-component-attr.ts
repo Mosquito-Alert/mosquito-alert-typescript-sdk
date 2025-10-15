@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BreedingsitesCreateHasNearMosquitoesErrorComponentAttr = {
     HasNearMosquitoes: 'has_near_mosquitoes',

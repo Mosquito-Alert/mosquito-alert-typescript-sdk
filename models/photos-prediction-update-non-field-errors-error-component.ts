@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentAttr } from './auth-
 // @ts-ignore
 import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionUpdateNonFieldErrorsErrorComponent
- */
 export interface PhotosPredictionUpdateNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentAttr}
-     * @memberof PhotosPredictionUpdateNonFieldErrorsErrorComponent
-     */
     'attr': AuthChangePasswordNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof PhotosPredictionUpdateNonFieldErrorsErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionUpdateNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

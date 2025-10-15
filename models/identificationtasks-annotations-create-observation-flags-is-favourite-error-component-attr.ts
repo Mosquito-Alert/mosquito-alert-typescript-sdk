@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr = {
     ObservationFlagsIsFavourite: 'observation_flags.is_favourite',

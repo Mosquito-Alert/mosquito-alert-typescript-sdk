@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr } from './identificationtasks-review-create-public-photo-uuid-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
- */
 export interface IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
-     */
     'attr': IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
-     */
     'detail': string;
 }
 

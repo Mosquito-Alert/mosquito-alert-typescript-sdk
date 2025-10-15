@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { TaxaListRankErrorComponent } from './taxa-list-rank-error-component';
 
-/**
- * 
- * @export
- * @interface TaxaListValidationError
- */
 export interface TaxaListValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof TaxaListValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<TaxaListRankErrorComponent>}
-     * @memberof TaxaListValidationError
-     */
     'errors': Array<TaxaListRankErrorComponent>;
 }
 

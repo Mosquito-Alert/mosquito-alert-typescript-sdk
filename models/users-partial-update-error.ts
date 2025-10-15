@@ -28,7 +28,6 @@ import type { UsersPartialUpdateNonFieldErrorsErrorComponent } from './users-par
 
 /**
  * @type UsersPartialUpdateError
- * @export
  */
 export type UsersPartialUpdateError = { attr: 'locale' } & UsersPartialUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersPartialUpdateNonFieldErrorsErrorComponent;
 

@@ -16,152 +16,102 @@
 
 /**
  * A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as \'title\', \'message\', max_length, help_text, etc.
- * @export
- * @interface LocalizedMessageTitle
  */
 export interface LocalizedMessageTitle {
     /**
      * Български
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'bg'?: string;
     /**
      * বাংলা
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'bn'?: string;
     /**
      * Català
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'ca'?: string;
     /**
      * Deutsch
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'de'?: string;
     /**
      * Ελληνικά
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'el'?: string;
     /**
      * English
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'en': string;
     /**
      * Español
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'es'?: string;
     /**
      * Euskara
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'eu'?: string;
     /**
      * Français
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'fr'?: string;
     /**
      * Galego
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'gl'?: string;
     /**
      * Hrvatski
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'hr'?: string;
     /**
      * Magyar
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'hu'?: string;
     /**
      * Italiano
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'it'?: string;
     /**
      * Lëtzebuergesch
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'lb'?: string;
     /**
      * Македонски
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'mk'?: string;
     /**
      * Nederlands
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'nl'?: string;
     /**
      * Português
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'pt'?: string;
     /**
      * Română
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'ro'?: string;
     /**
      * Slovenščina
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'sl'?: string;
     /**
      * Shqip
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'sq'?: string;
     /**
      * Српски
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'sr'?: string;
     /**
      * Svenska
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'sv'?: string;
     /**
      * Türkçe
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'tr'?: string;
     /**
      * 中文（中国）
-     * @type {string}
-     * @memberof LocalizedMessageTitle
      */
     'zh-CN'?: string;
 }

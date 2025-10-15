@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface AnnotationPermission
- */
 export interface AnnotationPermission {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationPermission
-     */
     'add': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationPermission
-     */
     'change': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationPermission
-     */
     'view': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationPermission
-     */
     'delete': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationPermission
-     */
     'mark_as_decisive': boolean;
 }
 

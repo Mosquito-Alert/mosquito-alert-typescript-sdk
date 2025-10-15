@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedNotificationRequest
- */
 export interface PatchedNotificationRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedNotificationRequest
-     */
     'is_read'?: boolean;
 }
 

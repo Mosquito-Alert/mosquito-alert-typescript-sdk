@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode }
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr } from './identificationtasks-annotations-create-observation-flags-is-visible-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
-     */
     'detail': string;
 }
 

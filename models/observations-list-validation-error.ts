@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { ObservationsListError } from './observations-list-error';
 
-/**
- * 
- * @export
- * @interface ObservationsListValidationError
- */
 export interface ObservationsListValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof ObservationsListValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<ObservationsListError>}
-     * @memberof ObservationsListValidationError
-     */
     'errors': Array<ObservationsListError>;
 }
 

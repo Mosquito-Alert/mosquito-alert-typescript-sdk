@@ -29,47 +29,12 @@ import type { LocationSource } from './location-source';
 // @ts-ignore
 import type { LocationTimezone } from './location-timezone';
 
-/**
- * 
- * @export
- * @interface Location
- */
 export interface Location {
-    /**
-     * 
-     * @type {LocationSource}
-     * @memberof Location
-     */
     'source': LocationSource;
-    /**
-     * 
-     * @type {LocationPoint}
-     * @memberof Location
-     */
     'point': LocationPoint;
-    /**
-     * 
-     * @type {LocationTimezone}
-     * @memberof Location
-     */
     'timezone': LocationTimezone | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Location
-     */
     'display_name': string | null;
-    /**
-     * 
-     * @type {Country}
-     * @memberof Location
-     */
     'country': Country | null;
-    /**
-     * 
-     * @type {Array<AdmBoundary>}
-     * @memberof Location
-     */
     'adm_boundaries': Array<AdmBoundary>;
 }
 

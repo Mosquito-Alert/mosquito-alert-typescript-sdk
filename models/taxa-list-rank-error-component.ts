@@ -20,29 +20,9 @@ import type { IdentificationtasksListMineResultSourceErrorComponentCode } from '
 // @ts-ignore
 import type { TaxaListRankErrorComponentAttr } from './taxa-list-rank-error-component-attr';
 
-/**
- * 
- * @export
- * @interface TaxaListRankErrorComponent
- */
 export interface TaxaListRankErrorComponent {
-    /**
-     * 
-     * @type {TaxaListRankErrorComponentAttr}
-     * @memberof TaxaListRankErrorComponent
-     */
     'attr': TaxaListRankErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksListMineResultSourceErrorComponentCode}
-     * @memberof TaxaListRankErrorComponent
-     */
     'code': IdentificationtasksListMineResultSourceErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof TaxaListRankErrorComponent
-     */
     'detail': string;
 }
 

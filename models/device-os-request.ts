@@ -14,28 +14,17 @@
 
 
 
-/**
- * 
- * @export
- * @interface DeviceOsRequest
- */
 export interface DeviceOsRequest {
     /**
      * Operating system of device from which this report was submitted.
-     * @type {string}
-     * @memberof DeviceOsRequest
      */
     'name': string;
     /**
      * Operating system version of device from which this report was submitted.
-     * @type {string}
-     * @memberof DeviceOsRequest
      */
     'version': string;
     /**
      * The locale configured in the device following the BCP 47 standard in \'language\' or \'language-region\' format (e.g., \'en\' for English, \'en-US\' for English (United States), \'fr\' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
-     * @type {string}
-     * @memberof DeviceOsRequest
      */
     'locale'?: string | null;
 }

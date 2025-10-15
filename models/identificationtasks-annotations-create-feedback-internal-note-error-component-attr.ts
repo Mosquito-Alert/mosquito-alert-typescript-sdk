@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr = {
     FeedbackInternalNote: 'feedback.internal_note',

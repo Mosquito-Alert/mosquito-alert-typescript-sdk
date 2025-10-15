@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Partner } from './partner';
 
-/**
- * 
- * @export
- * @interface PaginatedPartnerList
- */
 export interface PaginatedPartnerList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedPartnerList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedPartnerList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedPartnerList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Partner>}
-     * @memberof PaginatedPartnerList
-     */
     'results'?: Array<Partner>;
 }
 

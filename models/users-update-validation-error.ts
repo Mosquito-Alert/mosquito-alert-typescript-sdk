@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { UsersUpdateError } from './users-update-error';
 
-/**
- * 
- * @export
- * @interface UsersUpdateValidationError
- */
 export interface UsersUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof UsersUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<UsersUpdateError>}
-     * @memberof UsersUpdateValidationError
-     */
     'errors': Array<UsersUpdateError>;
 }
 

@@ -20,29 +20,9 @@ import type { NotificationsPartialUpdateIsReadErrorComponentAttr } from './notif
 // @ts-ignore
 import type { NotificationsPartialUpdateIsReadErrorComponentCode } from './notifications-partial-update-is-read-error-component-code';
 
-/**
- * 
- * @export
- * @interface NotificationsPartialUpdateIsReadErrorComponent
- */
 export interface NotificationsPartialUpdateIsReadErrorComponent {
-    /**
-     * 
-     * @type {NotificationsPartialUpdateIsReadErrorComponentAttr}
-     * @memberof NotificationsPartialUpdateIsReadErrorComponent
-     */
     'attr': NotificationsPartialUpdateIsReadErrorComponentAttr;
-    /**
-     * 
-     * @type {NotificationsPartialUpdateIsReadErrorComponentCode}
-     * @memberof NotificationsPartialUpdateIsReadErrorComponent
-     */
     'code': NotificationsPartialUpdateIsReadErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsPartialUpdateIsReadErrorComponent
-     */
     'detail': string;
 }
 

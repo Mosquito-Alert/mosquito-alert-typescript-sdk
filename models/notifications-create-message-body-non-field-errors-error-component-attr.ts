@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttr = {
     MessageBodyNonFieldErrors: 'message.body.non_field_errors',

@@ -28,7 +28,6 @@ import type { CampaignsListOrderByErrorComponent } from './campaigns-list-order-
 
 /**
  * @type CampaignsListError
- * @export
  */
 export type CampaignsListError = { attr: 'country_id' } & CampaignsListCountryIdErrorComponent | { attr: 'order_by' } & CampaignsListOrderByErrorComponent;
 

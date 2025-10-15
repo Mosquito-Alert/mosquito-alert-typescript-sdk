@@ -20,29 +20,9 @@ import type { AuthObtainTokenDeviceIdErrorComponentAttr } from './auth-obtain-to
 // @ts-ignore
 import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
 
-/**
- * 
- * @export
- * @interface DevicesCreateDeviceIdErrorComponent
- */
 export interface DevicesCreateDeviceIdErrorComponent {
-    /**
-     * 
-     * @type {AuthObtainTokenDeviceIdErrorComponentAttr}
-     * @memberof DevicesCreateDeviceIdErrorComponent
-     */
     'attr': AuthObtainTokenDeviceIdErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateDeviceIdErrorComponentCode}
-     * @memberof DevicesCreateDeviceIdErrorComponent
-     */
     'code': DevicesCreateDeviceIdErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesCreateDeviceIdErrorComponent
-     */
     'detail': string;
 }
 

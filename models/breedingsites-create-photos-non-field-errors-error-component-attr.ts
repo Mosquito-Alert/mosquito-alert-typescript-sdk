@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttr = {
     PhotosNonFieldErrors: 'photos.non_field_errors',

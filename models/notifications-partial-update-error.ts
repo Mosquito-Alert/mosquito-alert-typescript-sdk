@@ -28,7 +28,6 @@ import type { NotificationsPartialUpdateNonFieldErrorsErrorComponent } from './n
 
 /**
  * @type NotificationsPartialUpdateError
- * @export
  */
 export type NotificationsPartialUpdateError = { attr: 'is_read' } & NotificationsPartialUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsPartialUpdateNonFieldErrorsErrorComponent;
 

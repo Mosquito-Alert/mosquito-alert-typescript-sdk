@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Observation } from './observation';
 
-/**
- * 
- * @export
- * @interface PaginatedObservationList
- */
 export interface PaginatedObservationList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedObservationList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedObservationList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedObservationList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Observation>}
-     * @memberof PaginatedObservationList
-     */
     'results'?: Array<Observation>;
 }
 

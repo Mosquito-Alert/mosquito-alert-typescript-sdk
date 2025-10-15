@@ -17,17 +17,7 @@
 // @ts-ignore
 import type { MinimalUserLocale } from './minimal-user-locale';
 
-/**
- * 
- * @export
- * @interface UserRequest
- */
 export interface UserRequest {
-    /**
-     * 
-     * @type {MinimalUserLocale}
-     * @memberof UserRequest
-     */
     'locale'?: MinimalUserLocale;
 }
 

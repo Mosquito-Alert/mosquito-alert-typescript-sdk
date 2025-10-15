@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode }
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr } from './identificationtasks-annotations-create-observation-flags-is-favourite-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
-     */
     'detail': string;
 }
 

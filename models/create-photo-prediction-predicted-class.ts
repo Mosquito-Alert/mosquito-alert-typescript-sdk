@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const CreatePhotoPredictionPredictedClass = {
     AeAlbopictus: 'ae_albopictus',

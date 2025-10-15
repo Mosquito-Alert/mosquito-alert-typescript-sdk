@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { NotificationsPartialUpdateError } from './notifications-partial-update-error';
 
-/**
- * 
- * @export
- * @interface NotificationsPartialUpdateValidationError
- */
 export interface NotificationsPartialUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof NotificationsPartialUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<NotificationsPartialUpdateError>}
-     * @memberof NotificationsPartialUpdateValidationError
-     */
     'errors': Array<NotificationsPartialUpdateError>;
 }
 

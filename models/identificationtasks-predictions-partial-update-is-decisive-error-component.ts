@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr } from './identificationtasks-annotations-create-is-decisive-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
- */
 export interface IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
-     */
     'detail': string;
 }
 

@@ -32,77 +32,23 @@ import type { SimplePhoto } from './simple-photo';
 // @ts-ignore
 import type { SimpleTaxon } from './simple-taxon';
 
-/**
- * 
- * @export
- * @interface CreatePhotoPrediction
- */
 export interface CreatePhotoPrediction {
-    /**
-     * 
-     * @type {SimplePhoto}
-     * @memberof CreatePhotoPrediction
-     */
     'photo': SimplePhoto;
-    /**
-     * 
-     * @type {BoundingBox}
-     * @memberof CreatePhotoPrediction
-     */
     'bbox': BoundingBox;
     /**
      * Insect confidence
-     * @type {number}
-     * @memberof CreatePhotoPrediction
      */
     'insect_confidence': number;
-    /**
-     * 
-     * @type {CreatePhotoPredictionPredictedClass}
-     * @memberof CreatePhotoPrediction
-     */
     'predicted_class': CreatePhotoPredictionPredictedClass | null;
-    /**
-     * 
-     * @type {SimpleTaxon}
-     * @memberof CreatePhotoPrediction
-     */
     'taxon': SimpleTaxon | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreatePhotoPrediction
-     */
     'threshold_deviation': number;
     /**
      * Indicates if this prediction can close the identification task.
-     * @type {boolean}
-     * @memberof CreatePhotoPrediction
      */
     'is_decisive'?: boolean;
-    /**
-     * 
-     * @type {PredictionScore}
-     * @memberof CreatePhotoPrediction
-     */
     'scores': PredictionScore;
-    /**
-     * 
-     * @type {CreatePhotoPredictionClassifierVersion}
-     * @memberof CreatePhotoPrediction
-     */
     'classifier_version': CreatePhotoPredictionClassifierVersion;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreatePhotoPrediction
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreatePhotoPrediction
-     */
     'updated_at': string;
 }
 

@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { FixesCreatePointNonFieldErrorsErrorComponentAttr } from './fixes-create-point-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface FixesCreatePointNonFieldErrorsErrorComponent
- */
 export interface FixesCreatePointNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {FixesCreatePointNonFieldErrorsErrorComponentAttr}
-     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
-     */
     'attr': FixesCreatePointNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixesCreatePointNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

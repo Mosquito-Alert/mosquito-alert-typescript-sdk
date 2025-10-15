@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const AuthObtainTokenDeviceIdErrorComponentAttr = {
     DeviceId: 'device_id',

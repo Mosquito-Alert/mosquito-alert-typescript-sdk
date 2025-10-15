@@ -20,29 +20,9 @@ import type { FixesCreatePointLatitudeErrorComponentAttr } from './fixes-create-
 // @ts-ignore
 import type { FixesCreatePointLatitudeErrorComponentCode } from './fixes-create-point-latitude-error-component-code';
 
-/**
- * 
- * @export
- * @interface FixesCreatePointLatitudeErrorComponent
- */
 export interface FixesCreatePointLatitudeErrorComponent {
-    /**
-     * 
-     * @type {FixesCreatePointLatitudeErrorComponentAttr}
-     * @memberof FixesCreatePointLatitudeErrorComponent
-     */
     'attr': FixesCreatePointLatitudeErrorComponentAttr;
-    /**
-     * 
-     * @type {FixesCreatePointLatitudeErrorComponentCode}
-     * @memberof FixesCreatePointLatitudeErrorComponent
-     */
     'code': FixesCreatePointLatitudeErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixesCreatePointLatitudeErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface NotificationRequest
- */
 export interface NotificationRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof NotificationRequest
-     */
     'is_read': boolean;
 }
 

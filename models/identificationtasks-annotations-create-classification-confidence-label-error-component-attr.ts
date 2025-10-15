@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr = {
     ClassificationConfidenceLabel: 'classification.confidence_label',

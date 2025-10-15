@@ -26,53 +26,19 @@ import type { CreatePhotoPredictionPredictedClass } from './create-photo-predict
 // @ts-ignore
 import type { PredictionScoreRequest } from './prediction-score-request';
 
-/**
- * 
- * @export
- * @interface PhotoPredictionRequest
- */
 export interface PhotoPredictionRequest {
-    /**
-     * 
-     * @type {BoundingBoxRequest}
-     * @memberof PhotoPredictionRequest
-     */
     'bbox': BoundingBoxRequest;
     /**
      * Insect confidence
-     * @type {number}
-     * @memberof PhotoPredictionRequest
      */
     'insect_confidence': number;
-    /**
-     * 
-     * @type {CreatePhotoPredictionPredictedClass}
-     * @memberof PhotoPredictionRequest
-     */
     'predicted_class': CreatePhotoPredictionPredictedClass | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoPredictionRequest
-     */
     'threshold_deviation': number;
     /**
      * Indicates if this prediction can close the identification task.
-     * @type {boolean}
-     * @memberof PhotoPredictionRequest
      */
     'is_decisive'?: boolean;
-    /**
-     * 
-     * @type {PredictionScoreRequest}
-     * @memberof PhotoPredictionRequest
-     */
     'scores': PredictionScoreRequest;
-    /**
-     * 
-     * @type {CreatePhotoPredictionClassifierVersion}
-     * @memberof PhotoPredictionRequest
-     */
     'classifier_version': CreatePhotoPredictionClassifierVersion;
 }
 

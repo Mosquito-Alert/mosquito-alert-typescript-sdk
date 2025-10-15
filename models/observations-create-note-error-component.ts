@@ -20,29 +20,9 @@ import type { BitesCreateNoteErrorComponentAttr } from './bites-create-note-erro
 // @ts-ignore
 import type { BitesCreateNoteErrorComponentCode } from './bites-create-note-error-component-code';
 
-/**
- * 
- * @export
- * @interface ObservationsCreateNoteErrorComponent
- */
 export interface ObservationsCreateNoteErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateNoteErrorComponentAttr}
-     * @memberof ObservationsCreateNoteErrorComponent
-     */
     'attr': BitesCreateNoteErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateNoteErrorComponentCode}
-     * @memberof ObservationsCreateNoteErrorComponent
-     */
     'code': BitesCreateNoteErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateNoteErrorComponent
-     */
     'detail': string;
 }
 

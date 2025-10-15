@@ -17,40 +17,13 @@
 // @ts-ignore
 import type { SimpleTaxonRank } from './simple-taxon-rank';
 
-/**
- * 
- * @export
- * @interface SimpleTaxon
- */
 export interface SimpleTaxon {
-    /**
-     * 
-     * @type {number}
-     * @memberof SimpleTaxon
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleTaxon
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleTaxon
-     */
     'common_name'?: string | null;
-    /**
-     * 
-     * @type {SimpleTaxonRank}
-     * @memberof SimpleTaxon
-     */
     'rank': SimpleTaxonRank;
     /**
      * Display the name in italics when rendering.
-     * @type {boolean}
-     * @memberof SimpleTaxon
      */
     'italicize': boolean;
 }

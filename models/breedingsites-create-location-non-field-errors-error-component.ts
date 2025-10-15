@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { BitesCreateLocationNonFieldErrorsErrorComponentAttr } from './bites-create-location-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateLocationNonFieldErrorsErrorComponent
- */
 export interface BreedingsitesCreateLocationNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateLocationNonFieldErrorsErrorComponentAttr}
-     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
-     */
     'attr': BitesCreateLocationNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateLocationNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

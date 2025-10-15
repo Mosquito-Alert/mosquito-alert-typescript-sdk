@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr = {
     ResultConfidenceLabel: 'result.confidence_label',

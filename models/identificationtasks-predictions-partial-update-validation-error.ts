@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { IdentificationtasksPredictionsPartialUpdateError } from './identificationtasks-predictions-partial-update-error';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsPartialUpdateValidationError
- */
 export interface IdentificationtasksPredictionsPartialUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof IdentificationtasksPredictionsPartialUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<IdentificationtasksPredictionsPartialUpdateError>}
-     * @memberof IdentificationtasksPredictionsPartialUpdateValidationError
-     */
     'errors': Array<IdentificationtasksPredictionsPartialUpdateError>;
 }
 

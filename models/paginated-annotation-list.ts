@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Annotation } from './annotation';
 
-/**
- * 
- * @export
- * @interface PaginatedAnnotationList
- */
 export interface PaginatedAnnotationList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedAnnotationList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedAnnotationList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedAnnotationList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Annotation>}
-     * @memberof PaginatedAnnotationList
-     */
     'results'?: Array<Annotation>;
 }
 

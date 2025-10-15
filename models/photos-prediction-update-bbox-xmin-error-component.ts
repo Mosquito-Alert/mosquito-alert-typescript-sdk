@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr } from './identificationtasks-predictions-create-bbox-xmin-error-component-attr';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionUpdateBboxXMinErrorComponent
- */
 export interface PhotosPredictionUpdateBboxXMinErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr}
-     * @memberof PhotosPredictionUpdateBboxXMinErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof PhotosPredictionUpdateBboxXMinErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionUpdateBboxXMinErrorComponent
-     */
     'detail': string;
 }
 

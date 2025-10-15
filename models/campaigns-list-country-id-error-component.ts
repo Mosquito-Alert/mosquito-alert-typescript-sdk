@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { BitesListCountryIdErrorComponentAttr } from './bites-list-country-id-error-component-attr';
 
-/**
- * 
- * @export
- * @interface CampaignsListCountryIdErrorComponent
- */
 export interface CampaignsListCountryIdErrorComponent {
-    /**
-     * 
-     * @type {BitesListCountryIdErrorComponentAttr}
-     * @memberof CampaignsListCountryIdErrorComponent
-     */
     'attr': BitesListCountryIdErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof CampaignsListCountryIdErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof CampaignsListCountryIdErrorComponent
-     */
     'detail': string;
 }
 

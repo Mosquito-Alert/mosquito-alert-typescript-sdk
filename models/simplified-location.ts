@@ -23,35 +23,10 @@ import type { LocationPoint } from './location-point';
 // @ts-ignore
 import type { LocationTimezone } from './location-timezone';
 
-/**
- * 
- * @export
- * @interface SimplifiedLocation
- */
 export interface SimplifiedLocation {
-    /**
-     * 
-     * @type {LocationPoint}
-     * @memberof SimplifiedLocation
-     */
     'point': LocationPoint;
-    /**
-     * 
-     * @type {LocationTimezone}
-     * @memberof SimplifiedLocation
-     */
     'timezone': LocationTimezone | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimplifiedLocation
-     */
     'display_name': string | null;
-    /**
-     * 
-     * @type {Country}
-     * @memberof SimplifiedLocation
-     */
     'country': Country | null;
 }
 

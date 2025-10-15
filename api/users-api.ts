@@ -39,7 +39,6 @@ import type { UsersPartialUpdateValidationError } from '../models';
 import type { UsersUpdateValidationError } from '../models';
 /**
  * UsersApi - axios parameter creator
- * @export
  */
 export const UsersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -220,7 +219,6 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
 
 /**
  * UsersApi - functional programming interface
- * @export
  */
 export const UsersApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = UsersApiAxiosParamCreator(configuration)
@@ -279,7 +277,6 @@ export const UsersApiFp = function(configuration?: Configuration) {
 
 /**
  * UsersApi - factory interface
- * @export
  */
 export const UsersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = UsersApiFp(configuration)
@@ -324,65 +321,31 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
 
 /**
  * Request parameters for partialUpdate operation in UsersApi.
- * @export
- * @interface UsersApiPartialUpdateRequest
  */
 export interface UsersApiPartialUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersApiPartialUpdate
-     */
     readonly uuid: string
 
-    /**
-     * 
-     * @type {PatchedUserRequest}
-     * @memberof UsersApiPartialUpdate
-     */
     readonly patchedUserRequest?: PatchedUserRequest
 }
 
 /**
  * Request parameters for retrieve operation in UsersApi.
- * @export
- * @interface UsersApiRetrieveRequest
  */
 export interface UsersApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersApiRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for update operation in UsersApi.
- * @export
- * @interface UsersApiUpdateRequest
  */
 export interface UsersApiUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersApiUpdate
-     */
     readonly uuid: string
 
-    /**
-     * 
-     * @type {UserRequest}
-     * @memberof UsersApiUpdate
-     */
     readonly userRequest?: UserRequest
 }
 
 /**
  * UsersApi - object-oriented interface
- * @export
- * @class UsersApi
- * @extends {BaseAPI}
  */
 export class UsersApi extends BaseAPI {
     /**
@@ -390,7 +353,6 @@ export class UsersApi extends BaseAPI {
      * @param {UsersApiPartialUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UsersApi
      */
     public partialUpdate(requestParameters: UsersApiPartialUpdateRequest, options?: RawAxiosRequestConfig) {
         return UsersApiFp(this.configuration).partialUpdate(requestParameters.uuid, requestParameters.patchedUserRequest, options).then((request) => request(this.axios, this.basePath));
@@ -401,7 +363,6 @@ export class UsersApi extends BaseAPI {
      * @param {UsersApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UsersApi
      */
     public retrieve(requestParameters: UsersApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return UsersApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -411,7 +372,6 @@ export class UsersApi extends BaseAPI {
      * Get Current User\'s Profile
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UsersApi
      */
     public retrieveMine(options?: RawAxiosRequestConfig) {
         return UsersApiFp(this.configuration).retrieveMine(options).then((request) => request(this.axios, this.basePath));
@@ -422,7 +382,6 @@ export class UsersApi extends BaseAPI {
      * @param {UsersApiUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UsersApi
      */
     public update(requestParameters: UsersApiUpdateRequest, options?: RawAxiosRequestConfig) {
         return UsersApiFp(this.configuration).update(requestParameters.uuid, requestParameters.userRequest, options).then((request) => request(this.axios, this.basePath));

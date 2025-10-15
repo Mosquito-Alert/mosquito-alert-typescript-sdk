@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const FixesCreateCoverageUuidErrorComponentAttr = {
     CoverageUuid: 'coverage_uuid',

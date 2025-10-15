@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { UsersPartialUpdateError } from './users-partial-update-error';
 
-/**
- * 
- * @export
- * @interface UsersPartialUpdateValidationError
- */
 export interface UsersPartialUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof UsersPartialUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<UsersPartialUpdateError>}
-     * @memberof UsersPartialUpdateValidationError
-     */
     'errors': Array<UsersPartialUpdateError>;
 }
 

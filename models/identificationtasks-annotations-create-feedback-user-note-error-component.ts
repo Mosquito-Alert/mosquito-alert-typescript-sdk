@@ -20,29 +20,9 @@ import type { BitesCreateNoteErrorComponentCode } from './bites-create-note-erro
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr } from './identificationtasks-annotations-create-feedback-user-note-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateNoteErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent
-     */
     'code': BitesCreateNoteErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,29 +20,9 @@ import type { DevicesCreateMobileAppPackageNameErrorComponentAttr } from './devi
 // @ts-ignore
 import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devices-create-mobile-app-package-name-error-component-code';
 
-/**
- * 
- * @export
- * @interface DevicesPartialUpdateMobileAppPackageNameErrorComponent
- */
 export interface DevicesPartialUpdateMobileAppPackageNameErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateMobileAppPackageNameErrorComponentAttr}
-     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
-     */
     'attr': DevicesCreateMobileAppPackageNameErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateMobileAppPackageNameErrorComponentCode}
-     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
-     */
     'code': DevicesCreateMobileAppPackageNameErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesPartialUpdateMobileAppPackageNameErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr = {
     FeedbackUserNote: 'feedback.user_note',

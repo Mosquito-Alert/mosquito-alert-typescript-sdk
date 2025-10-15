@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const DevicesCreateOsNonFieldErrorsErrorComponentAttr = {
     OsNonFieldErrors: 'os.non_field_errors',

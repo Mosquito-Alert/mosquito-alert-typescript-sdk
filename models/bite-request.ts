@@ -26,59 +26,17 @@ import type { BiteEventMoment } from './bite-event-moment';
 // @ts-ignore
 import type { LocationRequest } from './location-request';
 
-/**
- * 
- * @export
- * @interface BiteRequest
- */
 export interface BiteRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BiteRequest
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof BiteRequest
-     */
     'sent_at': string;
-    /**
-     * 
-     * @type {LocationRequest}
-     * @memberof BiteRequest
-     */
     'location': LocationRequest;
     /**
      * Note user attached to report.
-     * @type {string}
-     * @memberof BiteRequest
      */
     'note'?: string | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof BiteRequest
-     */
     'tags'?: Array<string>;
-    /**
-     * 
-     * @type {BiteEventEnvironment}
-     * @memberof BiteRequest
-     */
     'event_environment'?: BiteEventEnvironment | null;
-    /**
-     * 
-     * @type {BiteEventMoment}
-     * @memberof BiteRequest
-     */
     'event_moment'?: BiteEventMoment | null;
-    /**
-     * 
-     * @type {BiteCountsRequest}
-     * @memberof BiteRequest
-     */
     'counts': BiteCountsRequest;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateCountsLeftLegErrorComponentAttr = {
     CountsLeftLeg: 'counts.left_leg',

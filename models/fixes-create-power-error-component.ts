@@ -20,29 +20,9 @@ import type { FixesCreatePowerErrorComponentAttr } from './fixes-create-power-er
 // @ts-ignore
 import type { FixesCreatePowerErrorComponentCode } from './fixes-create-power-error-component-code';
 
-/**
- * 
- * @export
- * @interface FixesCreatePowerErrorComponent
- */
 export interface FixesCreatePowerErrorComponent {
-    /**
-     * 
-     * @type {FixesCreatePowerErrorComponentAttr}
-     * @memberof FixesCreatePowerErrorComponent
-     */
     'attr': FixesCreatePowerErrorComponentAttr;
-    /**
-     * 
-     * @type {FixesCreatePowerErrorComponentCode}
-     * @memberof FixesCreatePowerErrorComponent
-     */
     'code': FixesCreatePowerErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixesCreatePowerErrorComponent
-     */
     'detail': string;
 }
 

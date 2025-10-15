@@ -20,29 +20,9 @@ import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsi
 // @ts-ignore
 import type { IdentificationtasksReviewCreateActionErrorComponentAttr } from './identificationtasks-review-create-action-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreateActionErrorComponent
- */
 export interface IdentificationtasksReviewCreateActionErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreateActionErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreateActionErrorComponent
-     */
     'attr': IdentificationtasksReviewCreateActionErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreateSiteTypeErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreateActionErrorComponent
-     */
     'code': BreedingsitesCreateSiteTypeErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreateActionErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,29 +20,9 @@ import type { BitesListMineShortIdErrorComponentAttr } from './bites-list-mine-s
 // @ts-ignore
 import type { BitesListMineShortIdErrorComponentCode } from './bites-list-mine-short-id-error-component-code';
 
-/**
- * 
- * @export
- * @interface BreedingsitesListMineShortIdErrorComponent
- */
 export interface BreedingsitesListMineShortIdErrorComponent {
-    /**
-     * 
-     * @type {BitesListMineShortIdErrorComponentAttr}
-     * @memberof BreedingsitesListMineShortIdErrorComponent
-     */
     'attr': BitesListMineShortIdErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListMineShortIdErrorComponentCode}
-     * @memberof BreedingsitesListMineShortIdErrorComponent
-     */
     'code': BitesListMineShortIdErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListMineShortIdErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentAttr } from './identificationtasks-predictions-create-bbox-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent
- */
 export interface IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentAttr } from './auth-
 // @ts-ignore
 import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 
-/**
- * 
- * @export
- * @interface BitesCreateNonFieldErrorsErrorComponent
- */
 export interface BitesCreateNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentAttr}
-     * @memberof BitesCreateNonFieldErrorsErrorComponent
-     */
     'attr': AuthChangePasswordNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof BitesCreateNonFieldErrorsErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

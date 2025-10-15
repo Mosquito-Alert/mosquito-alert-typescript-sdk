@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr } from './identificationtasks-predictions-create-scores-not-sure-error-component-attr';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionPartialUpdateScoresNotSureErrorComponent
- */
 export interface PhotosPredictionPartialUpdateScoresNotSureErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr}
-     * @memberof PhotosPredictionPartialUpdateScoresNotSureErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof PhotosPredictionPartialUpdateScoresNotSureErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionPartialUpdateScoresNotSureErrorComponent
-     */
     'detail': string;
 }
 

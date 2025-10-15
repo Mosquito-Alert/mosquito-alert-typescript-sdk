@@ -20,29 +20,9 @@ import type { CountryPermissionRole } from './country-permission-role';
 // @ts-ignore
 import type { Permissions } from './permissions';
 
-/**
- * 
- * @export
- * @interface GeneralPermission
- */
 export interface GeneralPermission {
-    /**
-     * 
-     * @type {CountryPermissionRole}
-     * @memberof GeneralPermission
-     */
     'role': CountryPermissionRole;
-    /**
-     * 
-     * @type {Permissions}
-     * @memberof GeneralPermission
-     */
     'permissions': Permissions;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof GeneralPermission
-     */
     'is_staff': boolean;
 }
 

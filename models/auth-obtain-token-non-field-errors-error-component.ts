@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentAttr } from './auth-
 // @ts-ignore
 import type { AuthObtainTokenNonFieldErrorsErrorComponentCode } from './auth-obtain-token-non-field-errors-error-component-code';
 
-/**
- * 
- * @export
- * @interface AuthObtainTokenNonFieldErrorsErrorComponent
- */
 export interface AuthObtainTokenNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentAttr}
-     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
-     */
     'attr': AuthChangePasswordNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenNonFieldErrorsErrorComponentCode}
-     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
-     */
     'code': AuthObtainTokenNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthObtainTokenNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

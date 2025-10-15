@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr = {
     ObservationFlagsIsVisible: 'observation_flags.is_visible',

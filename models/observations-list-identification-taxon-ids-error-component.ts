@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorCompo
 // @ts-ignore
 import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
 
-/**
- * 
- * @export
- * @interface ObservationsListIdentificationTaxonIdsErrorComponent
- */
 export interface ObservationsListIdentificationTaxonIdsErrorComponent {
-    /**
-     * 
-     * @type {ObservationsListIdentificationTaxonIdsErrorComponentAttr}
-     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
-     */
     'attr': ObservationsListIdentificationTaxonIdsErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode}
-     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
-     */
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsListIdentificationTaxonIdsErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateError } from './identificationtasks-predictions-create-error';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsCreateValidationError
- */
 export interface IdentificationtasksPredictionsCreateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof IdentificationtasksPredictionsCreateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<IdentificationtasksPredictionsCreateError>}
-     * @memberof IdentificationtasksPredictionsCreateValidationError
-     */
     'errors': Array<IdentificationtasksPredictionsCreateError>;
 }
 

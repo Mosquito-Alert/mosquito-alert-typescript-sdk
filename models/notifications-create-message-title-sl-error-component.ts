@@ -20,29 +20,9 @@ import type { NotificationsCreateMessageTitleBgErrorComponentCode } from './noti
 // @ts-ignore
 import type { NotificationsCreateMessageTitleSlErrorComponentAttr } from './notifications-create-message-title-sl-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateMessageTitleSlErrorComponent
- */
 export interface NotificationsCreateMessageTitleSlErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateMessageTitleSlErrorComponentAttr}
-     * @memberof NotificationsCreateMessageTitleSlErrorComponent
-     */
     'attr': NotificationsCreateMessageTitleSlErrorComponentAttr;
-    /**
-     * 
-     * @type {NotificationsCreateMessageTitleBgErrorComponentCode}
-     * @memberof NotificationsCreateMessageTitleSlErrorComponent
-     */
     'code': NotificationsCreateMessageTitleBgErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateMessageTitleSlErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineReviewActionErrorComponentAttr = {
     ReviewAction: 'review_action',

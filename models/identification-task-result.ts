@@ -20,53 +20,13 @@ import type { IdentificationTaskResultSource } from './identification-task-resul
 // @ts-ignore
 import type { SimpleTaxon } from './simple-taxon';
 
-/**
- * 
- * @export
- * @interface IdentificationTaskResult
- */
 export interface IdentificationTaskResult {
-    /**
-     * 
-     * @type {IdentificationTaskResultSource}
-     * @memberof IdentificationTaskResult
-     */
     'source': IdentificationTaskResultSource;
-    /**
-     * 
-     * @type {SimpleTaxon}
-     * @memberof IdentificationTaskResult
-     */
     'taxon': SimpleTaxon | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTaskResult
-     */
     'is_high_confidence': boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTaskResult
-     */
     'confidence': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTaskResult
-     */
     'confidence_label': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTaskResult
-     */
     'uncertainty': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTaskResult
-     */
     'agreement': number;
 }
 

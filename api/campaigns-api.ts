@@ -37,7 +37,6 @@ import type { ErrorResponse404 } from '../models';
 import type { PaginatedCampaignList } from '../models';
 /**
  * CampaignsApi - axios parameter creator
- * @export
  */
 export const CampaignsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -151,7 +150,6 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * CampaignsApi - functional programming interface
- * @export
  */
 export const CampaignsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = CampaignsApiAxiosParamCreator(configuration)
@@ -189,7 +187,6 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
 
 /**
  * CampaignsApi - factory interface
- * @export
  */
 export const CampaignsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CampaignsApiFp(configuration)
@@ -217,65 +214,43 @@ export const CampaignsApiFactory = function (configuration?: Configuration, base
 
 /**
  * Request parameters for list operation in CampaignsApi.
- * @export
- * @interface CampaignsApiListRequest
  */
 export interface CampaignsApiListRequest {
     /**
      * Country in which the campaign is taking place
-     * @type {number}
-     * @memberof CampaignsApiList
      */
     readonly countryId?: number
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CampaignsApiList
-     */
     readonly isActive?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<CampaignsListOrderByParameter>}
-     * @memberof CampaignsApiList
      */
     readonly orderBy?: Array<CampaignsListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof CampaignsApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof CampaignsApiList
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for retrieve operation in CampaignsApi.
- * @export
- * @interface CampaignsApiRetrieveRequest
  */
 export interface CampaignsApiRetrieveRequest {
     /**
      * A unique integer value identifying this ow campaigns.
-     * @type {number}
-     * @memberof CampaignsApiRetrieve
      */
     readonly id: number
 }
 
 /**
  * CampaignsApi - object-oriented interface
- * @export
- * @class CampaignsApi
- * @extends {BaseAPI}
  */
 export class CampaignsApi extends BaseAPI {
     /**
@@ -283,7 +258,6 @@ export class CampaignsApi extends BaseAPI {
      * @param {CampaignsApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CampaignsApi
      */
     public list(requestParameters: CampaignsApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return CampaignsApiFp(this.configuration).list(requestParameters.countryId, requestParameters.isActive, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -294,7 +268,6 @@ export class CampaignsApi extends BaseAPI {
      * @param {CampaignsApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CampaignsApi
      */
     public retrieve(requestParameters: CampaignsApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return CampaignsApiFp(this.configuration).retrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));

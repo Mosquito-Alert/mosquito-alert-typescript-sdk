@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageTitleNonFieldErrorsErrorComponentAttr = {
     MessageTitleNonFieldErrors: 'message.title.non_field_errors',

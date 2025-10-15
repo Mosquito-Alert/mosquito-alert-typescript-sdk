@@ -51,7 +51,6 @@ import type { PaginatedObservationList } from '../models';
 import type { SimplePhotoRequest } from '../models';
 /**
  * ObservationsApi - axios parameter creator
- * @export
  */
 export const ObservationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -479,7 +478,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
 /**
  * ObservationsApi - functional programming interface
- * @export
  */
 export const ObservationsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ObservationsApiAxiosParamCreator(configuration)
@@ -583,7 +581,6 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
 
 /**
  * ObservationsApi - factory interface
- * @export
  */
 export const ObservationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ObservationsApiFp(configuration)
@@ -638,317 +635,181 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
 
 /**
  * Request parameters for create operation in ObservationsApi.
- * @export
- * @interface ObservationsApiCreateRequest
  */
 export interface ObservationsApiCreateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiCreate
-     */
     readonly createdAt: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiCreate
-     */
     readonly sentAt: string
 
-    /**
-     * 
-     * @type {LocationRequest}
-     * @memberof ObservationsApiCreate
-     */
     readonly location: LocationRequest
 
-    /**
-     * 
-     * @type {Array<SimplePhotoRequest>}
-     * @memberof ObservationsApiCreate
-     */
     readonly photos: Array<SimplePhotoRequest>
 
     /**
      * Note user attached to report.
-     * @type {string}
-     * @memberof ObservationsApiCreate
      */
     readonly note?: string | null
 
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ObservationsApiCreate
-     */
     readonly tags?: Array<string>
 
-    /**
-     * 
-     * @type {BiteEventEnvironment}
-     * @memberof ObservationsApiCreate
-     */
     readonly eventEnvironment?: BiteEventEnvironment | null
 
-    /**
-     * 
-     * @type {BiteEventMoment}
-     * @memberof ObservationsApiCreate
-     */
     readonly eventMoment?: BiteEventMoment | null
 
     /**
      * User-provided description of the mosquito\\\&#39;s appearance
-     * @type {MosquitoAppearanceRequest}
-     * @memberof ObservationsApiCreate
      */
     readonly mosquitoAppearance?: MosquitoAppearanceRequest | null
 }
 
 /**
  * Request parameters for destroy operation in ObservationsApi.
- * @export
- * @interface ObservationsApiDestroyRequest
  */
 export interface ObservationsApiDestroyRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiDestroy
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for list operation in ObservationsApi.
- * @export
- * @interface ObservationsApiListRequest
  */
 export interface ObservationsApiListRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof ObservationsApiList
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly createdAtBefore?: string
 
     /**
      * Has any photo
-     * @type {boolean}
-     * @memberof ObservationsApiList
      */
     readonly hasPhotos?: boolean
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof ObservationsApiList
-     */
     readonly identificationTaxonIds?: Array<number>
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof ObservationsApiList
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof ObservationsApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof ObservationsApiList
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof ObservationsApiList
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiList
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for listMine operation in ObservationsApi.
- * @export
- * @interface ObservationsApiListMineRequest
  */
 export interface ObservationsApiListMineRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof ObservationsApiListMine
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly createdAtBefore?: string
 
     /**
      * Has any photo
-     * @type {boolean}
-     * @memberof ObservationsApiListMine
      */
     readonly hasPhotos?: boolean
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof ObservationsApiListMine
-     */
     readonly identificationTaxonIds?: Array<number>
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof ObservationsApiListMine
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof ObservationsApiListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof ObservationsApiListMine
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof ObservationsApiListMine
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiListMine
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for retrieve operation in ObservationsApi.
- * @export
- * @interface ObservationsApiRetrieveRequest
  */
 export interface ObservationsApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsApiRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * ObservationsApi - object-oriented interface
- * @export
- * @class ObservationsApi
- * @extends {BaseAPI}
  */
 export class ObservationsApi extends BaseAPI {
     /**
@@ -956,7 +817,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {ObservationsApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ObservationsApi
      */
     public create(requestParameters: ObservationsApiCreateRequest, options?: RawAxiosRequestConfig) {
         return ObservationsApiFp(this.configuration).create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.note, requestParameters.tags, requestParameters.eventEnvironment, requestParameters.eventMoment, requestParameters.mosquitoAppearance, options).then((request) => request(this.axios, this.basePath));
@@ -967,7 +827,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {ObservationsApiDestroyRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ObservationsApi
      */
     public destroy(requestParameters: ObservationsApiDestroyRequest, options?: RawAxiosRequestConfig) {
         return ObservationsApiFp(this.configuration).destroy(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -978,7 +837,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {ObservationsApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ObservationsApi
      */
     public list(requestParameters: ObservationsApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return ObservationsApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -989,7 +847,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {ObservationsApiListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ObservationsApi
      */
     public listMine(requestParameters: ObservationsApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return ObservationsApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -1000,7 +857,6 @@ export class ObservationsApi extends BaseAPI {
      * @param {ObservationsApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ObservationsApi
      */
     public retrieve(requestParameters: ObservationsApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return ObservationsApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));

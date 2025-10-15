@@ -28,7 +28,6 @@ import type { UsersUpdateNonFieldErrorsErrorComponent } from './users-update-non
 
 /**
  * @type UsersUpdateError
- * @export
  */
 export type UsersUpdateError = { attr: 'locale' } & UsersUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersUpdateNonFieldErrorsErrorComponent;
 

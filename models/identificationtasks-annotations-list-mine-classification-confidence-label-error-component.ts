@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr } from './identificationtasks-annotations-list-classification-confidence-label-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent
- */
 export interface IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent
-     */
     'detail': string;
 }
 

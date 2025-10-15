@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { NotificationMessage } from './notification-message';
 
-/**
- * 
- * @export
- * @interface Notification
- */
 export interface Notification {
-    /**
-     * 
-     * @type {number}
-     * @memberof Notification
-     */
     'id': number;
-    /**
-     * 
-     * @type {NotificationMessage}
-     * @memberof Notification
-     */
     'message': NotificationMessage;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Notification
-     */
     'is_read': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof Notification
-     */
     'created_at': string;
 }
 

@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface TokenVerifyRequest
- */
 export interface TokenVerifyRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenVerifyRequest
-     */
     'token': string;
 }
 

@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { AuthRefreshTokenError } from './auth-refresh-token-error';
 
-/**
- * 
- * @export
- * @interface AuthRefreshTokenValidationError
- */
 export interface AuthRefreshTokenValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof AuthRefreshTokenValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<AuthRefreshTokenError>}
-     * @memberof AuthRefreshTokenValidationError
-     */
     'errors': Array<AuthRefreshTokenError>;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentAttr = {
     ClassificationNonFieldErrors: 'classification.non_field_errors',

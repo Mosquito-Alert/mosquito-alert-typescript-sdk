@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { AuthObtainTokenError } from './auth-obtain-token-error';
 
-/**
- * 
- * @export
- * @interface AuthObtainTokenValidationError
- */
 export interface AuthObtainTokenValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof AuthObtainTokenValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<AuthObtainTokenError>}
-     * @memberof AuthObtainTokenValidationError
-     */
     'errors': Array<AuthObtainTokenError>;
 }
 

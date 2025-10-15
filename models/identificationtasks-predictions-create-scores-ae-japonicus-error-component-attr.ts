@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttr = {
     ScoresAeJaponicus: 'scores.ae_japonicus',

@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { AuthRefreshTokenRefreshErrorComponentAttr } from './auth-refresh-token-refresh-error-component-attr';
 
-/**
- * 
- * @export
- * @interface AuthRefreshTokenRefreshErrorComponent
- */
 export interface AuthRefreshTokenRefreshErrorComponent {
-    /**
-     * 
-     * @type {AuthRefreshTokenRefreshErrorComponentAttr}
-     * @memberof AuthRefreshTokenRefreshErrorComponent
-     */
     'attr': AuthRefreshTokenRefreshErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof AuthRefreshTokenRefreshErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthRefreshTokenRefreshErrorComponent
-     */
     'detail': string;
 }
 

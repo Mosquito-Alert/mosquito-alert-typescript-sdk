@@ -64,7 +64,6 @@ import type { DevicesCreateTypeErrorComponent } from './devices-create-type-erro
 
 /**
  * @type DevicesCreateError
- * @export
  */
 export type DevicesCreateError = { attr: 'device_id' } & DevicesCreateDeviceIdErrorComponent | { attr: 'fcm_token' } & DevicesCreateFcmTokenErrorComponent | { attr: 'manufacturer' } & DevicesCreateManufacturerErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesCreateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesCreateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesCreateMobileAppPackageVersionErrorComponent | { attr: 'model' } & DevicesCreateModelErrorComponent | { attr: 'name' } & DevicesCreateNameErrorComponent | { attr: 'non_field_errors' } & DevicesCreateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesCreateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesCreateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesCreateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesCreateOsVersionErrorComponent | { attr: 'type' } & DevicesCreateTypeErrorComponent;
 

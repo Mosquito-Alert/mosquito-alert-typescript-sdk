@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { DevicesCreateOsNonFieldErrorsErrorComponentAttr } from './devices-create-os-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesCreateOsNonFieldErrorsErrorComponent
- */
 export interface DevicesCreateOsNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateOsNonFieldErrorsErrorComponentAttr}
-     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
-     */
     'attr': DevicesCreateOsNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesCreateOsNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

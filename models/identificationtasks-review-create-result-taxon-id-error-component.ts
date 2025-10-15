@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComp
 // @ts-ignore
 import type { IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr } from './identificationtasks-review-create-result-taxon-id-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreateResultTaxonIdErrorComponent
- */
 export interface IdentificationtasksReviewCreateResultTaxonIdErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreateResultTaxonIdErrorComponent
-     */
     'attr': IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreateResultTaxonIdErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreateResultTaxonIdErrorComponent
-     */
     'detail': string;
 }
 

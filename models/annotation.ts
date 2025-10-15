@@ -32,89 +32,22 @@ import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
 
-/**
- * 
- * @export
- * @interface Annotation
- */
 export interface Annotation {
-    /**
-     * 
-     * @type {number}
-     * @memberof Annotation
-     */
     'id': number;
     /**
      * UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
-     * @type {string}
-     * @memberof Annotation
      */
     'observation_uuid': string;
-    /**
-     * 
-     * @type {SimpleAnnotatorUser}
-     * @memberof Annotation
-     */
     'user': SimpleAnnotatorUser;
-    /**
-     * 
-     * @type {SimplePhoto}
-     * @memberof Annotation
-     */
     'best_photo': SimplePhoto | null;
-    /**
-     * 
-     * @type {AnnotationClassification}
-     * @memberof Annotation
-     */
     'classification': AnnotationClassification | null;
-    /**
-     * 
-     * @type {AnnotationFeedback}
-     * @memberof Annotation
-     */
     'feedback'?: AnnotationFeedback;
-    /**
-     * 
-     * @type {AnnotationType}
-     * @memberof Annotation
-     */
     'type': AnnotationType;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Annotation
-     */
     'is_flagged': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Annotation
-     */
     'is_decisive': boolean;
-    /**
-     * 
-     * @type {ObservationFlags}
-     * @memberof Annotation
-     */
     'observation_flags'?: ObservationFlags;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof Annotation
-     */
     'tags'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof Annotation
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Annotation
-     */
     'updated_at': string;
 }
 

@@ -20,29 +20,9 @@ import type { BitesCreateLocationSourceErrorComponentAttr } from './bites-create
 // @ts-ignore
 import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
 
-/**
- * 
- * @export
- * @interface ObservationsCreateLocationSourceErrorComponent
- */
 export interface ObservationsCreateLocationSourceErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateLocationSourceErrorComponentAttr}
-     * @memberof ObservationsCreateLocationSourceErrorComponent
-     */
     'attr': BitesCreateLocationSourceErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateLocationSourceErrorComponentCode}
-     * @memberof ObservationsCreateLocationSourceErrorComponent
-     */
     'code': BitesCreateLocationSourceErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateLocationSourceErrorComponent
-     */
     'detail': string;
 }
 

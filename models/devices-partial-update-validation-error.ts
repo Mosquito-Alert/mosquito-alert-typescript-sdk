@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { DevicesPartialUpdateError } from './devices-partial-update-error';
 
-/**
- * 
- * @export
- * @interface DevicesPartialUpdateValidationError
- */
 export interface DevicesPartialUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof DevicesPartialUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<DevicesPartialUpdateError>}
-     * @memberof DevicesPartialUpdateValidationError
-     */
     'errors': Array<DevicesPartialUpdateError>;
 }
 

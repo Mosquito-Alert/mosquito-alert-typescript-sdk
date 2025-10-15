@@ -23,29 +23,9 @@ import type { CountryPermissionRole } from './country-permission-role';
 // @ts-ignore
 import type { Permissions } from './permissions';
 
-/**
- * 
- * @export
- * @interface CountryPermission
- */
 export interface CountryPermission {
-    /**
-     * 
-     * @type {CountryPermissionRole}
-     * @memberof CountryPermission
-     */
     'role': CountryPermissionRole;
-    /**
-     * 
-     * @type {Permissions}
-     * @memberof CountryPermission
-     */
     'permissions': Permissions;
-    /**
-     * 
-     * @type {Country}
-     * @memberof CountryPermission
-     */
     'country': Country;
 }
 

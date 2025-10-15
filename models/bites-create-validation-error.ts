@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { BitesCreateError } from './bites-create-error';
 
-/**
- * 
- * @export
- * @interface BitesCreateValidationError
- */
 export interface BitesCreateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof BitesCreateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<BitesCreateError>}
-     * @memberof BitesCreateValidationError
-     */
     'errors': Array<BitesCreateError>;
 }
 

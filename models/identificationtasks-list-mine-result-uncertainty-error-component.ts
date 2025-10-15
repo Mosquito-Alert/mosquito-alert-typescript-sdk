@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { IdentificationtasksListMineResultUncertaintyErrorComponentAttr } from './identificationtasks-list-mine-result-uncertainty-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksListMineResultUncertaintyErrorComponent
- */
 export interface IdentificationtasksListMineResultUncertaintyErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksListMineResultUncertaintyErrorComponentAttr}
-     * @memberof IdentificationtasksListMineResultUncertaintyErrorComponent
-     */
     'attr': IdentificationtasksListMineResultUncertaintyErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof IdentificationtasksListMineResultUncertaintyErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksListMineResultUncertaintyErrorComponent
-     */
     'detail': string;
 }
 

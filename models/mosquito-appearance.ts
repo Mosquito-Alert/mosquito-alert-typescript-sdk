@@ -26,35 +26,10 @@ import type { MosquitoAppearanceSpecie } from './mosquito-appearance-specie';
 // @ts-ignore
 import type { MosquitoAppearanceThorax } from './mosquito-appearance-thorax';
 
-/**
- * 
- * @export
- * @interface MosquitoAppearance
- */
 export interface MosquitoAppearance {
-    /**
-     * 
-     * @type {MosquitoAppearanceSpecie}
-     * @memberof MosquitoAppearance
-     */
     'specie'?: MosquitoAppearanceSpecie | null;
-    /**
-     * 
-     * @type {MosquitoAppearanceThorax}
-     * @memberof MosquitoAppearance
-     */
     'thorax'?: MosquitoAppearanceThorax | null;
-    /**
-     * 
-     * @type {MosquitoAppearanceAbdomen}
-     * @memberof MosquitoAppearance
-     */
     'abdomen'?: MosquitoAppearanceAbdomen | null;
-    /**
-     * 
-     * @type {MosquitoAppearanceLegs}
-     * @memberof MosquitoAppearance
-     */
     'legs'?: MosquitoAppearanceLegs | null;
 }
 

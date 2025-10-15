@@ -28,7 +28,6 @@ import type { AuthSignupGuestPasswordErrorComponent } from './auth-signup-guest-
 
 /**
  * @type AuthSignupGuestError
- * @export
  */
 export type AuthSignupGuestError = { attr: 'non_field_errors' } & AuthSignupGuestNonFieldErrorsErrorComponent | { attr: 'password' } & AuthSignupGuestPasswordErrorComponent;
 

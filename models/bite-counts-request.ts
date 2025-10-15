@@ -14,46 +14,29 @@
 
 
 
-/**
- * 
- * @export
- * @interface BiteCountsRequest
- */
 export interface BiteCountsRequest {
     /**
      * Number of bites reported in the head.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'head'?: number;
     /**
      * Number of bites reported in the left arm.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'left_arm'?: number;
     /**
      * Number of bites reported in the right arm.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'right_arm'?: number;
     /**
      * Number of bites reported in the chest.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'chest'?: number;
     /**
      * Number of bites reported in the left leg.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'left_leg'?: number;
     /**
      * Number of bites reported in the right leg.
-     * @type {number}
-     * @memberof BiteCountsRequest
      */
     'right_leg'?: number;
 }

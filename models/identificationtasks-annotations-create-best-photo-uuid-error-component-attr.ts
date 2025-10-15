@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr = {
     BestPhotoUuid: 'best_photo_uuid',

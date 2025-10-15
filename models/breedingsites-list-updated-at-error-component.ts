@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { BitesListMineUpdatedAtErrorComponentAttr } from './bites-list-mine-updated-at-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesListUpdatedAtErrorComponent
- */
 export interface BreedingsitesListUpdatedAtErrorComponent {
-    /**
-     * 
-     * @type {BitesListMineUpdatedAtErrorComponentAttr}
-     * @memberof BreedingsitesListUpdatedAtErrorComponent
-     */
     'attr': BitesListMineUpdatedAtErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof BreedingsitesListUpdatedAtErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListUpdatedAtErrorComponent
-     */
     'detail': string;
 }
 

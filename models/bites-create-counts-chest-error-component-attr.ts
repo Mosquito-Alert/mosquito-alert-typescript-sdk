@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateCountsChestErrorComponentAttr = {
     CountsChest: 'counts.chest',

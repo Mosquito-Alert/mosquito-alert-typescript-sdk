@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { NotificationsUpdateError } from './notifications-update-error';
 
-/**
- * 
- * @export
- * @interface NotificationsUpdateValidationError
- */
 export interface NotificationsUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof NotificationsUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<NotificationsUpdateError>}
-     * @memberof NotificationsUpdateValidationError
-     */
     'errors': Array<NotificationsUpdateError>;
 }
 

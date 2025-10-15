@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { PhotosPredictionUpdateError } from './photos-prediction-update-error';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionUpdateValidationError
- */
 export interface PhotosPredictionUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof PhotosPredictionUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<PhotosPredictionUpdateError>}
-     * @memberof PhotosPredictionUpdateValidationError
-     */
     'errors': Array<PhotosPredictionUpdateError>;
 }
 

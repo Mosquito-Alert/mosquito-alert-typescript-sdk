@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { BreedingSite } from './breeding-site';
 
-/**
- * 
- * @export
- * @interface PaginatedBreedingSiteList
- */
 export interface PaginatedBreedingSiteList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedBreedingSiteList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedBreedingSiteList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedBreedingSiteList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<BreedingSite>}
-     * @memberof PaginatedBreedingSiteList
-     */
     'results'?: Array<BreedingSite>;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const DevicesCreateMobileAppPackageVersionErrorComponentAttr = {
     MobileAppPackageVersion: 'mobile_app.package_version',

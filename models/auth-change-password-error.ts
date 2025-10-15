@@ -28,7 +28,6 @@ import type { AuthChangePasswordPasswordErrorComponentCode } from './auth-change
 
 /**
  * @type AuthChangePasswordError
- * @export
  */
 export type AuthChangePasswordError = { attr: 'non_field_errors' } & AuthChangePasswordNonFieldErrorsErrorComponent | { attr: 'password' } & AuthChangePasswordPasswordErrorComponent;
 

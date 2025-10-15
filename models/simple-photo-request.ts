@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface SimplePhotoRequest
- */
 export interface SimplePhotoRequest {
-    /**
-     * 
-     * @type {File}
-     * @memberof SimplePhotoRequest
-     */
     'file': File;
 }
 

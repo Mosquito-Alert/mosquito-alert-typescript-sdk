@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentAttr } from './bites-crea
 // @ts-ignore
 import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 
-/**
- * 
- * @export
- * @interface BitesCreateEventEnvironmentErrorComponent
- */
 export interface BitesCreateEventEnvironmentErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentAttr}
-     * @memberof BitesCreateEventEnvironmentErrorComponent
-     */
     'attr': BitesCreateEventEnvironmentErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof BitesCreateEventEnvironmentErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateEventEnvironmentErrorComponent
-     */
     'detail': string;
 }
 

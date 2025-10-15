@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { DevicesCreateError } from './devices-create-error';
 
-/**
- * 
- * @export
- * @interface DevicesCreateValidationError
- */
 export interface DevicesCreateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof DevicesCreateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<DevicesCreateError>}
-     * @memberof DevicesCreateValidationError
-     */
     'errors': Array<DevicesCreateError>;
 }
 

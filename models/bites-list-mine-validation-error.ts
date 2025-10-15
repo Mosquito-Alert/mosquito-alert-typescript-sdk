@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { BitesListMineError } from './bites-list-mine-error';
 
-/**
- * 
- * @export
- * @interface BitesListMineValidationError
- */
 export interface BitesListMineValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof BitesListMineValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<BitesListMineError>}
-     * @memberof BitesListMineValidationError
-     */
     'errors': Array<BitesListMineError>;
 }
 

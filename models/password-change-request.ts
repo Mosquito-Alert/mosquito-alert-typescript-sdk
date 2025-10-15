@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface PasswordChangeRequest
- */
 export interface PasswordChangeRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PasswordChangeRequest
-     */
     'password': string;
 }
 

@@ -20,29 +20,9 @@ import type { BreedingsitesCreatePhotosINDEXFileErrorComponentAttr } from './bre
 // @ts-ignore
 import type { BreedingsitesCreatePhotosINDEXFileErrorComponentCode } from './breedingsites-create-photos-indexfile-error-component-code';
 
-/**
- * 
- * @export
- * @interface ObservationsCreatePhotosINDEXFileErrorComponent
- */
 export interface ObservationsCreatePhotosINDEXFileErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreatePhotosINDEXFileErrorComponentAttr}
-     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
-     */
     'attr': BreedingsitesCreatePhotosINDEXFileErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreatePhotosINDEXFileErrorComponentCode}
-     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
-     */
     'code': BreedingsitesCreatePhotosINDEXFileErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreatePhotosINDEXFileErrorComponent
-     */
     'detail': string;
 }
 

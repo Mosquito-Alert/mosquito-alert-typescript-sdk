@@ -20,29 +20,9 @@ import type { BitesCreateCountsChestErrorComponentCode } from './bites-create-co
 // @ts-ignore
 import type { BitesCreateCountsRightArmErrorComponentAttr } from './bites-create-counts-right-arm-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BitesCreateCountsRightArmErrorComponent
- */
 export interface BitesCreateCountsRightArmErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateCountsRightArmErrorComponentAttr}
-     * @memberof BitesCreateCountsRightArmErrorComponent
-     */
     'attr': BitesCreateCountsRightArmErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsChestErrorComponentCode}
-     * @memberof BitesCreateCountsRightArmErrorComponent
-     */
     'code': BitesCreateCountsChestErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateCountsRightArmErrorComponent
-     */
     'detail': string;
 }
 

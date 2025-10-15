@@ -17,23 +17,8 @@
 // @ts-ignore
 import type { MinimalUserLocale } from './minimal-user-locale';
 
-/**
- * 
- * @export
- * @interface MinimalUser
- */
 export interface MinimalUser {
-    /**
-     * 
-     * @type {string}
-     * @memberof MinimalUser
-     */
     'uuid': string;
-    /**
-     * 
-     * @type {MinimalUserLocale}
-     * @memberof MinimalUser
-     */
     'locale'?: MinimalUserLocale;
 }
 

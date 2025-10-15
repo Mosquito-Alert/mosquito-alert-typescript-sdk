@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface ReviewPermission
- */
 export interface ReviewPermission {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ReviewPermission
-     */
     'add': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ReviewPermission
-     */
     'change': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ReviewPermission
-     */
     'view': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ReviewPermission
-     */
     'delete': boolean;
 }
 

@@ -20,35 +20,10 @@ import type { DeviceOsRequest } from './device-os-request';
 // @ts-ignore
 import type { MobileAppRequest } from './mobile-app-request';
 
-/**
- * 
- * @export
- * @interface DeviceUpdateRequest
- */
 export interface DeviceUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdateRequest
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdateRequest
-     */
     'fcm_token': string;
-    /**
-     * 
-     * @type {DeviceOsRequest}
-     * @memberof DeviceUpdateRequest
-     */
     'os': DeviceOsRequest;
-    /**
-     * 
-     * @type {MobileAppRequest}
-     * @memberof DeviceUpdateRequest
-     */
     'mobile_app'?: MobileAppRequest;
 }
 

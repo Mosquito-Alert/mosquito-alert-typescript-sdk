@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageBodyCaErrorComponentAttr = {
     MessageBodyCa: 'message.body.ca',

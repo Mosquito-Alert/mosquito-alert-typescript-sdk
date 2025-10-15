@@ -20,29 +20,9 @@ import type { BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttr } from '
 // @ts-ignore
 import type { BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCode } from './breedingsites-create-photos-non-field-errors-error-component-code';
 
-/**
- * 
- * @export
- * @interface ObservationsCreatePhotosNonFieldErrorsErrorComponent
- */
 export interface ObservationsCreatePhotosNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttr}
-     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
-     */
     'attr': BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCode}
-     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
-     */
     'code': BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreatePhotosNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

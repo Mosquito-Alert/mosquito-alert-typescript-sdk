@@ -17,23 +17,8 @@
 // @ts-ignore
 import type { AnnotationClassificationConfidenceLabel } from './annotation-classification-confidence-label';
 
-/**
- * 
- * @export
- * @interface AnnotationClassificationRequest
- */
 export interface AnnotationClassificationRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof AnnotationClassificationRequest
-     */
     'taxon_id': number;
-    /**
-     * 
-     * @type {AnnotationClassificationConfidenceLabel}
-     * @memberof AnnotationClassificationRequest
-     */
     'confidence_label': AnnotationClassificationConfidenceLabel;
 }
 

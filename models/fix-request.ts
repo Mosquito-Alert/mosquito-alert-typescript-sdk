@@ -17,40 +17,13 @@
 // @ts-ignore
 import type { FixLocationRequest } from './fix-location-request';
 
-/**
- * 
- * @export
- * @interface FixRequest
- */
 export interface FixRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof FixRequest
-     */
     'coverage_uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixRequest
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixRequest
-     */
     'sent_at': string;
-    /**
-     * 
-     * @type {FixLocationRequest}
-     * @memberof FixRequest
-     */
     'point': FixLocationRequest;
     /**
      * Power level of phone at time fix recorded, expressed as proportion of full charge. Range: 0-1.
-     * @type {number}
-     * @memberof FixRequest
      */
     'power'?: number | null;
 }

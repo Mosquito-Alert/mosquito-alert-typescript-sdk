@@ -28,7 +28,6 @@ import type { UserNotificationCreateRequest } from './user-notification-create-r
 
 /**
  * @type MetaNotificationRequest
- * @export
  */
 export type MetaNotificationRequest = { receiver_type: 'topic' } & TopicNotificationCreateRequest | { receiver_type: 'user' } & UserNotificationCreateRequest;
 

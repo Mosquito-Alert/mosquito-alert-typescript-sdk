@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr = {
     MosquitoAppearanceNonFieldErrors: 'mosquito_appearance.non_field_errors',

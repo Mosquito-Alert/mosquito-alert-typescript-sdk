@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { FixesCreateError } from './fixes-create-error';
 
-/**
- * 
- * @export
- * @interface FixesCreateValidationError
- */
 export interface FixesCreateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof FixesCreateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<FixesCreateError>}
-     * @memberof FixesCreateValidationError
-     */
     'errors': Array<FixesCreateError>;
 }
 

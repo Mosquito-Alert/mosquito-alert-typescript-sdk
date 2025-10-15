@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { IdentificationtasksListMineNumAnnotationsErrorComponentAttr } from './identificationtasks-list-mine-num-annotations-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksListNumAnnotationsErrorComponent
- */
 export interface IdentificationtasksListNumAnnotationsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksListMineNumAnnotationsErrorComponentAttr}
-     * @memberof IdentificationtasksListNumAnnotationsErrorComponent
-     */
     'attr': IdentificationtasksListMineNumAnnotationsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof IdentificationtasksListNumAnnotationsErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksListNumAnnotationsErrorComponent
-     */
     'detail': string;
 }
 

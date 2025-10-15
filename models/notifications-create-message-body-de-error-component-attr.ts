@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageBodyDeErrorComponentAttr = {
     MessageBodyDe: 'message.body.de',

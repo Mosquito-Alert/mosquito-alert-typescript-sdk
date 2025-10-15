@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListOrderByParameter = {
     MinusCreatedAt: '-created_at',

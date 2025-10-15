@@ -17,29 +17,9 @@
 // @ts-ignore
 import type { Error401Code } from './error401-code';
 
-/**
- * 
- * @export
- * @interface Error401
- */
 export interface Error401 {
-    /**
-     * 
-     * @type {Error401Code}
-     * @memberof Error401
-     */
     'code': Error401Code;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error401
-     */
     'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error401
-     */
     'attr': string | null;
 }
 

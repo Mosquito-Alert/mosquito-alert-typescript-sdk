@@ -53,7 +53,6 @@ import type { PaginatedNotificationList } from '../models';
 import type { PatchedNotificationRequest } from '../models';
 /**
  * NotificationsApi - axios parameter creator
- * @export
  */
 export const NotificationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -356,7 +355,6 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
 
 /**
  * NotificationsApi - functional programming interface
- * @export
  */
 export const NotificationsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = NotificationsApiAxiosParamCreator(configuration)
@@ -446,7 +444,6 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
 
 /**
  * NotificationsApi - factory interface
- * @export
  */
 export const NotificationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = NotificationsApiFp(configuration)
@@ -510,149 +507,91 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
 
 /**
  * Request parameters for create operation in NotificationsApi.
- * @export
- * @interface NotificationsApiCreateRequest
  */
 export interface NotificationsApiCreateRequest {
-    /**
-     * 
-     * @type {MetaNotificationRequest}
-     * @memberof NotificationsApiCreate
-     */
     readonly metaNotificationRequest?: MetaNotificationRequest
 }
 
 /**
  * Request parameters for list operation in NotificationsApi.
- * @export
- * @interface NotificationsApiListRequest
  */
 export interface NotificationsApiListRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof NotificationsApiList
-     */
     readonly isRead?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<NotificationsListMineOrderByParameter>}
-     * @memberof NotificationsApiList
      */
     readonly orderBy?: Array<NotificationsListMineOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof NotificationsApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof NotificationsApiList
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for listMine operation in NotificationsApi.
- * @export
- * @interface NotificationsApiListMineRequest
  */
 export interface NotificationsApiListMineRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof NotificationsApiListMine
-     */
     readonly isRead?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<NotificationsListMineOrderByParameter>}
-     * @memberof NotificationsApiListMine
      */
     readonly orderBy?: Array<NotificationsListMineOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof NotificationsApiListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof NotificationsApiListMine
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for partialUpdate operation in NotificationsApi.
- * @export
- * @interface NotificationsApiPartialUpdateRequest
  */
 export interface NotificationsApiPartialUpdateRequest {
     /**
      * A unique integer value identifying this notification.
-     * @type {number}
-     * @memberof NotificationsApiPartialUpdate
      */
     readonly id: number
 
-    /**
-     * 
-     * @type {PatchedNotificationRequest}
-     * @memberof NotificationsApiPartialUpdate
-     */
     readonly patchedNotificationRequest?: PatchedNotificationRequest
 }
 
 /**
  * Request parameters for retrieve operation in NotificationsApi.
- * @export
- * @interface NotificationsApiRetrieveRequest
  */
 export interface NotificationsApiRetrieveRequest {
     /**
      * A unique integer value identifying this notification.
-     * @type {number}
-     * @memberof NotificationsApiRetrieve
      */
     readonly id: number
 }
 
 /**
  * Request parameters for update operation in NotificationsApi.
- * @export
- * @interface NotificationsApiUpdateRequest
  */
 export interface NotificationsApiUpdateRequest {
     /**
      * A unique integer value identifying this notification.
-     * @type {number}
-     * @memberof NotificationsApiUpdate
      */
     readonly id: number
 
-    /**
-     * 
-     * @type {NotificationRequest}
-     * @memberof NotificationsApiUpdate
-     */
     readonly notificationRequest: NotificationRequest
 }
 
 /**
  * NotificationsApi - object-oriented interface
- * @export
- * @class NotificationsApi
- * @extends {BaseAPI}
  */
 export class NotificationsApi extends BaseAPI {
     /**
@@ -660,7 +599,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public create(requestParameters: NotificationsApiCreateRequest = {}, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).create(requestParameters.metaNotificationRequest, options).then((request) => request(this.axios, this.basePath));
@@ -671,7 +609,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public list(requestParameters: NotificationsApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).list(requestParameters.isRead, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -682,7 +619,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public listMine(requestParameters: NotificationsApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).listMine(requestParameters.isRead, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -693,7 +629,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiPartialUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public partialUpdate(requestParameters: NotificationsApiPartialUpdateRequest, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).partialUpdate(requestParameters.id, requestParameters.patchedNotificationRequest, options).then((request) => request(this.axios, this.basePath));
@@ -704,7 +639,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public retrieve(requestParameters: NotificationsApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).retrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
@@ -715,7 +649,6 @@ export class NotificationsApi extends BaseAPI {
      * @param {NotificationsApiUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NotificationsApi
      */
     public update(requestParameters: NotificationsApiUpdateRequest, options?: RawAxiosRequestConfig) {
         return NotificationsApiFp(this.configuration).update(requestParameters.id, requestParameters.notificationRequest, options).then((request) => request(this.axios, this.basePath));

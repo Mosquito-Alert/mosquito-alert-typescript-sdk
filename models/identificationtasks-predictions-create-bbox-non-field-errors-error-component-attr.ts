@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentAttr = {
     BboxNonFieldErrors: 'bbox.non_field_errors',

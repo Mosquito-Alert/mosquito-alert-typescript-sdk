@@ -20,29 +20,9 @@ import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from '
 // @ts-ignore
 import type { IdentificationtasksListMineResultSourceErrorComponentCode } from './identificationtasks-list-mine-result-source-error-component-code';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksListResultSourceErrorComponent
- */
 export interface IdentificationtasksListResultSourceErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksListMineResultSourceErrorComponentAttr}
-     * @memberof IdentificationtasksListResultSourceErrorComponent
-     */
     'attr': IdentificationtasksListMineResultSourceErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksListMineResultSourceErrorComponentCode}
-     * @memberof IdentificationtasksListResultSourceErrorComponent
-     */
     'code': IdentificationtasksListMineResultSourceErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksListResultSourceErrorComponent
-     */
     'detail': string;
 }
 

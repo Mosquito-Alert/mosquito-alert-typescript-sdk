@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListMineShortIdErrorComponentAttr = {
     ShortId: 'short_id',

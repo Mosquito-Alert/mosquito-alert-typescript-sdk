@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const FixesCreatePointLongitudeErrorComponentAttr = {
     PointLongitude: 'point.longitude',

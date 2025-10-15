@@ -46,7 +46,6 @@ import type { IdentificationtasksAnnotationsListMineUserIdsErrorComponent } from
 
 /**
  * @type IdentificationtasksAnnotationsListMineError
- * @export
  */
 export type IdentificationtasksAnnotationsListMineError = { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListMineCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListMineOrderByErrorComponent | { attr: 'type' } & IdentificationtasksAnnotationsListMineTypeErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListMineUserIdsErrorComponent;
 

@@ -28,7 +28,6 @@ import type { AuthVerifyTokenTokenErrorComponentAttr } from './auth-verify-token
 
 /**
  * @type AuthVerifyTokenError
- * @export
  */
 export type AuthVerifyTokenError = { attr: 'non_field_errors' } & AuthVerifyTokenNonFieldErrorsErrorComponent | { attr: 'token' } & AuthVerifyTokenTokenErrorComponent;
 

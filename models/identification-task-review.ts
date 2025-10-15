@@ -17,23 +17,8 @@
 // @ts-ignore
 import type { IdentificationTaskReviewAction } from './identification-task-review-action';
 
-/**
- * 
- * @export
- * @interface IdentificationTaskReview
- */
 export interface IdentificationTaskReview {
-    /**
-     * 
-     * @type {IdentificationTaskReviewAction}
-     * @memberof IdentificationTaskReview
-     */
     'action': IdentificationTaskReviewAction;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTaskReview
-     */
     'created_at': string;
 }
 

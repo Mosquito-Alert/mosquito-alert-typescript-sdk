@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { NotificationsCreateUserUuidsINDEXErrorComponentAttr } from './notifications-create-user-uuids-indexerror-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateUserUuidsINDEXErrorComponent
- */
 export interface NotificationsCreateUserUuidsINDEXErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateUserUuidsINDEXErrorComponentAttr}
-     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
-     */
     'attr': NotificationsCreateUserUuidsINDEXErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateUserUuidsINDEXErrorComponent
-     */
     'detail': string;
 }
 

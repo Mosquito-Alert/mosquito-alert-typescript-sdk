@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr = {
     IsFlagged: 'is_flagged',

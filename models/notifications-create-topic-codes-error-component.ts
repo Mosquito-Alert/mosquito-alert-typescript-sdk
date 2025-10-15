@@ -20,29 +20,9 @@ import type { NotificationsCreateTopicCodesErrorComponentAttr } from './notifica
 // @ts-ignore
 import type { NotificationsCreateTopicCodesErrorComponentCode } from './notifications-create-topic-codes-error-component-code';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateTopicCodesErrorComponent
- */
 export interface NotificationsCreateTopicCodesErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateTopicCodesErrorComponentAttr}
-     * @memberof NotificationsCreateTopicCodesErrorComponent
-     */
     'attr': NotificationsCreateTopicCodesErrorComponentAttr;
-    /**
-     * 
-     * @type {NotificationsCreateTopicCodesErrorComponentCode}
-     * @memberof NotificationsCreateTopicCodesErrorComponent
-     */
     'code': NotificationsCreateTopicCodesErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateTopicCodesErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { NotificationsCreateTopicCodesINDEXErrorComponentAttr } from './notifications-create-topic-codes-indexerror-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateTopicCodesINDEXErrorComponent
- */
 export interface NotificationsCreateTopicCodesINDEXErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateTopicCodesINDEXErrorComponentAttr}
-     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
-     */
     'attr': NotificationsCreateTopicCodesINDEXErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateTopicCodesINDEXErrorComponent
-     */
     'detail': string;
 }
 

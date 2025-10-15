@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { NotificationsCreateMessageBodyEnErrorComponentAttr } from './notifications-create-message-body-en-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateMessageBodyEnErrorComponent
- */
 export interface NotificationsCreateMessageBodyEnErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateMessageBodyEnErrorComponentAttr}
-     * @memberof NotificationsCreateMessageBodyEnErrorComponent
-     */
     'attr': NotificationsCreateMessageBodyEnErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof NotificationsCreateMessageBodyEnErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateMessageBodyEnErrorComponent
-     */
     'detail': string;
 }
 

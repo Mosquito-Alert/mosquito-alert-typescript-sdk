@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface TokenRefreshRequest
- */
 export interface TokenRefreshRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenRefreshRequest
-     */
     'refresh': string;
 }
 

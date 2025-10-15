@@ -20,29 +20,9 @@ import type { AuthChangePasswordPasswordErrorComponentAttr } from './auth-change
 // @ts-ignore
 import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-token-password-error-component-code';
 
-/**
- * 
- * @export
- * @interface AuthObtainTokenPasswordErrorComponent
- */
 export interface AuthObtainTokenPasswordErrorComponent {
-    /**
-     * 
-     * @type {AuthChangePasswordPasswordErrorComponentAttr}
-     * @memberof AuthObtainTokenPasswordErrorComponent
-     */
     'attr': AuthChangePasswordPasswordErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof AuthObtainTokenPasswordErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthObtainTokenPasswordErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,35 +20,10 @@ import type { IdentificationTaskResult } from './identification-task-result';
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
 
-/**
- * 
- * @export
- * @interface Identification
- */
 export interface Identification {
-    /**
-     * 
-     * @type {SimplePhoto}
-     * @memberof Identification
-     */
     'photo': SimplePhoto;
-    /**
-     * 
-     * @type {number}
-     * @memberof Identification
-     */
     'num_annotations': number;
-    /**
-     * 
-     * @type {IdentificationTaskResult}
-     * @memberof Identification
-     */
     'result': IdentificationTaskResult | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Identification
-     */
     'public_note': string | null;
 }
 

@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { BitesListMineOrderByErrorComponentAttr } from './bites-list-mine-order-by-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsListMineOrderByErrorComponent
- */
 export interface IdentificationtasksAnnotationsListMineOrderByErrorComponent {
-    /**
-     * 
-     * @type {BitesListMineOrderByErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsListMineOrderByErrorComponent
-     */
     'attr': BitesListMineOrderByErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsListMineOrderByErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsListMineOrderByErrorComponent
-     */
     'detail': string;
 }
 

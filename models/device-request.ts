@@ -23,59 +23,23 @@ import type { DeviceType } from './device-type';
 // @ts-ignore
 import type { MobileAppRequest } from './mobile-app-request';
 
-/**
- * 
- * @export
- * @interface DeviceRequest
- */
 export interface DeviceRequest {
     /**
      * Unique device identifier
-     * @type {string}
-     * @memberof DeviceRequest
      */
     'device_id': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceRequest
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceRequest
-     */
     'fcm_token': string;
-    /**
-     * 
-     * @type {DeviceType}
-     * @memberof DeviceRequest
-     */
     'type': DeviceType;
     /**
      * The manufacturer of the device.
-     * @type {string}
-     * @memberof DeviceRequest
      */
     'manufacturer'?: string | null;
     /**
      * The end-user-visible name for the end product.
-     * @type {string}
-     * @memberof DeviceRequest
      */
     'model': string;
-    /**
-     * 
-     * @type {DeviceOsRequest}
-     * @memberof DeviceRequest
-     */
     'os': DeviceOsRequest;
-    /**
-     * 
-     * @type {MobileAppRequest}
-     * @memberof DeviceRequest
-     */
     'mobile_app'?: MobileAppRequest;
 }
 

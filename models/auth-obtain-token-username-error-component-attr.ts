@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const AuthObtainTokenUsernameErrorComponentAttr = {
     Username: 'username',

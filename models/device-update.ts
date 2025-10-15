@@ -23,77 +23,26 @@ import type { DeviceUpdateType } from './device-update-type';
 // @ts-ignore
 import type { MobileApp } from './mobile-app';
 
-/**
- * 
- * @export
- * @interface DeviceUpdate
- */
 export interface DeviceUpdate {
     /**
      * Unique device identifier
-     * @type {string}
-     * @memberof DeviceUpdate
      */
     'device_id': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdate
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {DeviceUpdateType}
-     * @memberof DeviceUpdate
-     */
     'type': DeviceUpdateType;
     /**
      * The manufacturer of the device.
-     * @type {string}
-     * @memberof DeviceUpdate
      */
     'manufacturer': string;
     /**
      * The end-user-visible name for the end product.
-     * @type {string}
-     * @memberof DeviceUpdate
      */
     'model': string;
-    /**
-     * 
-     * @type {DeviceOs}
-     * @memberof DeviceUpdate
-     */
     'os': DeviceOs;
-    /**
-     * 
-     * @type {MobileApp}
-     * @memberof DeviceUpdate
-     */
     'mobile_app'?: MobileApp;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdate
-     */
     'user_uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdate
-     */
     'last_login': string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdate
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DeviceUpdate
-     */
     'updated_at': string;
 }
 

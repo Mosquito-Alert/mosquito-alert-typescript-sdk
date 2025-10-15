@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr } from './devices-create-mobile-app-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesCreateMobileAppNonFieldErrorsErrorComponent
- */
 export interface DevicesCreateMobileAppNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr}
-     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
-     */
     'attr': DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesCreateMobileAppNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

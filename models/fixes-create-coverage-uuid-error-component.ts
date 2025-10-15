@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { FixesCreateCoverageUuidErrorComponentAttr } from './fixes-create-coverage-uuid-error-component-attr';
 
-/**
- * 
- * @export
- * @interface FixesCreateCoverageUuidErrorComponent
- */
 export interface FixesCreateCoverageUuidErrorComponent {
-    /**
-     * 
-     * @type {FixesCreateCoverageUuidErrorComponentAttr}
-     * @memberof FixesCreateCoverageUuidErrorComponent
-     */
     'attr': FixesCreateCoverageUuidErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof FixesCreateCoverageUuidErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof FixesCreateCoverageUuidErrorComponent
-     */
     'detail': string;
 }
 

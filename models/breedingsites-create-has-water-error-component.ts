@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { BreedingsitesCreateHasWaterErrorComponentAttr } from './breedingsites-create-has-water-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateHasWaterErrorComponent
- */
 export interface BreedingsitesCreateHasWaterErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreateHasWaterErrorComponentAttr}
-     * @memberof BreedingsitesCreateHasWaterErrorComponent
-     */
     'attr': BreedingsitesCreateHasWaterErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof BreedingsitesCreateHasWaterErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateHasWaterErrorComponent
-     */
     'detail': string;
 }
 

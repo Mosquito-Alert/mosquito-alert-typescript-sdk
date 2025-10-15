@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const CreatePhotoPredictionClassifierVersion = {
     V20231: 'v2023.1',

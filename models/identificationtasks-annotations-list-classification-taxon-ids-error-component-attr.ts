@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttr = {
     ClassificationTaxonIds: 'classification_taxon_ids',

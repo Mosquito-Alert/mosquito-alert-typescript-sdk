@@ -14,40 +14,22 @@
 
 
 
-/**
- * 
- * @export
- * @interface Campaign
- */
 export interface Campaign {
-    /**
-     * 
-     * @type {number}
-     * @memberof Campaign
-     */
     'id': number;
     /**
      * Country in which the campaign is taking place
-     * @type {number}
-     * @memberof Campaign
      */
     'country_id': number;
     /**
      * Full posting address of the place where the samples will be sent
-     * @type {string}
-     * @memberof Campaign
      */
     'posting_address': string;
     /**
      * Date when the campaign starts. No samples should be collected BEFORE this date.
-     * @type {string}
-     * @memberof Campaign
      */
     'start_date': string;
     /**
      * Date when the campaign ends. No samples should be collected AFTER this date.
-     * @type {string}
-     * @memberof Campaign
      */
     'end_date': string;
 }

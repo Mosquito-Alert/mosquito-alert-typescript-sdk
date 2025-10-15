@@ -20,29 +20,9 @@ import type { IdentificationtasksReviewCreatePublicNoteErrorComponentAttr } from
 // @ts-ignore
 import type { IdentificationtasksReviewCreatePublicNoteErrorComponentCode } from './identificationtasks-review-create-public-note-error-component-code';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreatePublicNoteErrorComponent
- */
 export interface IdentificationtasksReviewCreatePublicNoteErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreatePublicNoteErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreatePublicNoteErrorComponent
-     */
     'attr': IdentificationtasksReviewCreatePublicNoteErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreatePublicNoteErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreatePublicNoteErrorComponent
-     */
     'code': IdentificationtasksReviewCreatePublicNoteErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreatePublicNoteErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface SimpleAnnotatorUser
- */
 export interface SimpleAnnotatorUser {
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleAnnotatorUser
-     */
     'uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleAnnotatorUser
-     */
     'username': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleAnnotatorUser
-     */
     'first_name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleAnnotatorUser
-     */
     'last_name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleAnnotatorUser
-     */
     'full_name': string;
 }
 

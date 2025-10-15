@@ -34,7 +34,6 @@ import type { AuthObtainTokenUsernameErrorComponent } from './auth-obtain-token-
 
 /**
  * @type AuthObtainTokenError
- * @export
  */
 export type AuthObtainTokenError = { attr: 'device_id' } & AuthObtainTokenDeviceIdErrorComponent | { attr: 'non_field_errors' } & AuthObtainTokenNonFieldErrorsErrorComponent | { attr: 'password' } & AuthObtainTokenPasswordErrorComponent | { attr: 'username' } & AuthObtainTokenUsernameErrorComponent;
 

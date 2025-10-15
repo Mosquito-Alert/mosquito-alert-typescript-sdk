@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Campaign } from './campaign';
 
-/**
- * 
- * @export
- * @interface PaginatedCampaignList
- */
 export interface PaginatedCampaignList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedCampaignList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedCampaignList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedCampaignList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Campaign>}
-     * @memberof PaginatedCampaignList
-     */
     'results'?: Array<Campaign>;
 }
 

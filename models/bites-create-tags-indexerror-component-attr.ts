@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateTagsINDEXErrorComponentAttr = {
     TagsIndex: 'tags.INDEX',

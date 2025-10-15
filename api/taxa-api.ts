@@ -39,7 +39,6 @@ import type { Taxon } from '../models';
 import type { TaxonTreeNode } from '../models';
 /**
  * TaxaApi - axios parameter creator
- * @export
  */
 export const TaxaApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -228,7 +227,6 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
 
 /**
  * TaxaApi - functional programming interface
- * @export
  */
 export const TaxaApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = TaxaApiAxiosParamCreator(configuration)
@@ -288,7 +286,6 @@ export const TaxaApiFp = function(configuration?: Configuration) {
 
 /**
  * TaxaApi - factory interface
- * @export
  */
 export const TaxaApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = TaxaApiFp(configuration)
@@ -333,72 +330,45 @@ export const TaxaApiFactory = function (configuration?: Configuration, basePath?
 
 /**
  * Request parameters for list operation in TaxaApi.
- * @export
- * @interface TaxaApiListRequest
  */
 export interface TaxaApiListRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof TaxaApiList
-     */
     readonly isRelevant?: boolean
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof TaxaApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof TaxaApiList
      */
     readonly pageSize?: number
 
-    /**
-     * 
-     * @type {Array<TaxaListRankParameter>}
-     * @memberof TaxaApiList
-     */
     readonly rank?: Array<TaxaListRankParameter>
 }
 
 /**
  * Request parameters for retrieve operation in TaxaApi.
- * @export
- * @interface TaxaApiRetrieveRequest
  */
 export interface TaxaApiRetrieveRequest {
     /**
      * A unique integer value identifying this taxon.
-     * @type {number}
-     * @memberof TaxaApiRetrieve
      */
     readonly id: number
 }
 
 /**
  * Request parameters for treeRetrieve operation in TaxaApi.
- * @export
- * @interface TaxaApiTreeRetrieveRequest
  */
 export interface TaxaApiTreeRetrieveRequest {
     /**
      * A unique integer value identifying this taxon.
-     * @type {number}
-     * @memberof TaxaApiTreeRetrieve
      */
     readonly id: number
 }
 
 /**
  * TaxaApi - object-oriented interface
- * @export
- * @class TaxaApi
- * @extends {BaseAPI}
  */
 export class TaxaApi extends BaseAPI {
     /**
@@ -406,7 +376,6 @@ export class TaxaApi extends BaseAPI {
      * @param {TaxaApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TaxaApi
      */
     public list(requestParameters: TaxaApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return TaxaApiFp(this.configuration).list(requestParameters.isRelevant, requestParameters.page, requestParameters.pageSize, requestParameters.rank, options).then((request) => request(this.axios, this.basePath));
@@ -417,7 +386,6 @@ export class TaxaApi extends BaseAPI {
      * @param {TaxaApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TaxaApi
      */
     public retrieve(requestParameters: TaxaApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return TaxaApiFp(this.configuration).retrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
@@ -427,7 +395,6 @@ export class TaxaApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TaxaApi
      */
     public rootTreeRetrieve(options?: RawAxiosRequestConfig) {
         return TaxaApiFp(this.configuration).rootTreeRetrieve(options).then((request) => request(this.axios, this.basePath));
@@ -438,7 +405,6 @@ export class TaxaApi extends BaseAPI {
      * @param {TaxaApiTreeRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TaxaApi
      */
     public treeRetrieve(requestParameters: TaxaApiTreeRetrieveRequest, options?: RawAxiosRequestConfig) {
         return TaxaApiFp(this.configuration).treeRetrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));

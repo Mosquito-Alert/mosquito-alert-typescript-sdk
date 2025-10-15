@@ -23,59 +23,20 @@ import type { SimplePhoto } from './simple-photo';
 // @ts-ignore
 import type { SimplifiedLocation } from './simplified-location';
 
-/**
- * 
- * @export
- * @interface AssignedObservation
- */
 export interface AssignedObservation {
-    /**
-     * 
-     * @type {string}
-     * @memberof AssignedObservation
-     */
     'uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AssignedObservation
-     */
     'created_at': string;
     /**
      * The date and time when the record was created, displayed in the local timezone specified for this entry.
-     * @type {string}
-     * @memberof AssignedObservation
      */
     'created_at_local': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AssignedObservation
-     */
     'received_at': string;
-    /**
-     * 
-     * @type {SimplifiedLocation}
-     * @memberof AssignedObservation
-     */
     'location': SimplifiedLocation;
     /**
      * Note user attached to report.
-     * @type {string}
-     * @memberof AssignedObservation
      */
     'note'?: string | null;
-    /**
-     * 
-     * @type {Array<SimplePhoto>}
-     * @memberof AssignedObservation
-     */
     'photos': Array<SimplePhoto>;
-    /**
-     * 
-     * @type {MinimalUser}
-     * @memberof AssignedObservation
-     */
     'user': MinimalUser;
 }
 

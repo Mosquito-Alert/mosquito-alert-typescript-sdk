@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode = {
     DoesNotExist: 'does_not_exist',

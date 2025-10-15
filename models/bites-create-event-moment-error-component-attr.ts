@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateEventMomentErrorComponentAttr = {
     EventMoment: 'event_moment',

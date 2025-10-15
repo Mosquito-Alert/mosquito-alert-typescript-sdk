@@ -20,29 +20,9 @@ import type { AuthChangePasswordPasswordErrorComponentAttr } from './auth-change
 // @ts-ignore
 import type { AuthChangePasswordPasswordErrorComponentCode } from './auth-change-password-password-error-component-code';
 
-/**
- * 
- * @export
- * @interface AuthChangePasswordPasswordErrorComponent
- */
 export interface AuthChangePasswordPasswordErrorComponent {
-    /**
-     * 
-     * @type {AuthChangePasswordPasswordErrorComponentAttr}
-     * @memberof AuthChangePasswordPasswordErrorComponent
-     */
     'attr': AuthChangePasswordPasswordErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordPasswordErrorComponentCode}
-     * @memberof AuthChangePasswordPasswordErrorComponent
-     */
     'code': AuthChangePasswordPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthChangePasswordPasswordErrorComponent
-     */
     'detail': string;
 }
 

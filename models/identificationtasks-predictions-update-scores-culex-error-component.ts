@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr } from './identificationtasks-predictions-create-scores-culex-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsUpdateScoresCulexErrorComponent
- */
 export interface IdentificationtasksPredictionsUpdateScoresCulexErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsUpdateScoresCulexErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsUpdateScoresCulexErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsUpdateScoresCulexErrorComponent
-     */
     'detail': string;
 }
 

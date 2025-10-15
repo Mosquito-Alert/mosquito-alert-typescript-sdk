@@ -20,29 +20,9 @@ import type { BreedingsitesCreateSiteTypeErrorComponentAttr } from './breedingsi
 // @ts-ignore
 import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsites-create-site-type-error-component-code';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateSiteTypeErrorComponent
- */
 export interface BreedingsitesCreateSiteTypeErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreateSiteTypeErrorComponentAttr}
-     * @memberof BreedingsitesCreateSiteTypeErrorComponent
-     */
     'attr': BreedingsitesCreateSiteTypeErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreateSiteTypeErrorComponentCode}
-     * @memberof BreedingsitesCreateSiteTypeErrorComponent
-     */
     'code': BreedingsitesCreateSiteTypeErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateSiteTypeErrorComponent
-     */
     'detail': string;
 }
 

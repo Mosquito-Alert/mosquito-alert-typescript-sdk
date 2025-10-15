@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr } from './identificationtasks-predictions-create-insect-confidence-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
- */
 export interface IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
-     */
     'detail': string;
 }
 

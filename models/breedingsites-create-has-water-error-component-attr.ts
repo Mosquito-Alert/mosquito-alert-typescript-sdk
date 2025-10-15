@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BreedingsitesCreateHasWaterErrorComponentAttr = {
     HasWater: 'has_water',

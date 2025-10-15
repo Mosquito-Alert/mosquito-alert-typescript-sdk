@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { CampaignsListError } from './campaigns-list-error';
 
-/**
- * 
- * @export
- * @interface CampaignsListValidationError
- */
 export interface CampaignsListValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof CampaignsListValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<CampaignsListError>}
-     * @memberof CampaignsListValidationError
-     */
     'errors': Array<CampaignsListError>;
 }
 

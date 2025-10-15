@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorCompo
 // @ts-ignore
 import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
- */
 export interface IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
-     */
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
-     */
     'detail': string;
 }
 

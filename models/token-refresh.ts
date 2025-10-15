@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface TokenRefresh
- */
 export interface TokenRefresh {
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenRefresh
-     */
     'access': string;
 }
 

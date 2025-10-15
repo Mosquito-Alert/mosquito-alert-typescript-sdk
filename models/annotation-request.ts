@@ -26,59 +26,14 @@ import type { AnnotationFeedbackRequest } from './annotation-feedback-request';
 // @ts-ignore
 import type { ObservationFlagsRequest } from './observation-flags-request';
 
-/**
- * 
- * @export
- * @interface AnnotationRequest
- */
 export interface AnnotationRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnnotationRequest
-     */
     'best_photo_uuid'?: string;
-    /**
-     * 
-     * @type {AnnotationClassificationRequest}
-     * @memberof AnnotationRequest
-     */
     'classification': AnnotationClassificationRequest | null;
-    /**
-     * 
-     * @type {AnnotationCharacteristicsRequest}
-     * @memberof AnnotationRequest
-     */
     'characteristics'?: AnnotationCharacteristicsRequest;
-    /**
-     * 
-     * @type {AnnotationFeedbackRequest}
-     * @memberof AnnotationRequest
-     */
     'feedback'?: AnnotationFeedbackRequest;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationRequest
-     */
     'is_flagged'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationRequest
-     */
     'is_decisive'?: boolean;
-    /**
-     * 
-     * @type {ObservationFlagsRequest}
-     * @memberof AnnotationRequest
-     */
     'observation_flags'?: ObservationFlagsRequest;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof AnnotationRequest
-     */
     'tags'?: Array<string>;
 }
 

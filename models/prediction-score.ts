@@ -14,64 +14,41 @@
 
 
 
-/**
- * 
- * @export
- * @interface PredictionScore
- */
 export interface PredictionScore {
     /**
      * Score value for the class Aedes albopictus
-     * @type {number}
-     * @memberof PredictionScore
      */
     'ae_albopictus': number;
     /**
      * Score value for the class Aedes aegypti
-     * @type {number}
-     * @memberof PredictionScore
      */
     'ae_aegypti': number;
     /**
      * Score value for the class Aedes japonicus
-     * @type {number}
-     * @memberof PredictionScore
      */
     'ae_japonicus': number;
     /**
      * Score value for the class Aedes koreicus
-     * @type {number}
-     * @memberof PredictionScore
      */
     'ae_koreicus': number;
     /**
      * Score value for the class Culex (s.p)
-     * @type {number}
-     * @memberof PredictionScore
      */
     'culex': number;
     /**
      * Score value for the class Anopheles (s.p.)
-     * @type {number}
-     * @memberof PredictionScore
      */
     'anopheles': number;
     /**
      * Score value for the class Culiseta (s.p.)
-     * @type {number}
-     * @memberof PredictionScore
      */
     'culiseta': number;
     /**
      * Score value for the class Ohter species
-     * @type {number}
-     * @memberof PredictionScore
      */
     'other_species': number;
     /**
      * Score value for the class Unidentifiable
-     * @type {number}
-     * @memberof PredictionScore
      */
     'not_sure': number;
 }

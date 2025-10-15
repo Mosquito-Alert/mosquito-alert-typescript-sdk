@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { IdentificationtasksListMineError } from './identificationtasks-list-mine-error';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksListMineValidationError
- */
 export interface IdentificationtasksListMineValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof IdentificationtasksListMineValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<IdentificationtasksListMineError>}
-     * @memberof IdentificationtasksListMineValidationError
-     */
     'errors': Array<IdentificationtasksListMineError>;
 }
 

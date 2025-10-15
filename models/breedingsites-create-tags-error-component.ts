@@ -20,29 +20,9 @@ import type { BitesCreateTagsErrorComponentAttr } from './bites-create-tags-erro
 // @ts-ignore
 import type { BitesCreateTagsErrorComponentCode } from './bites-create-tags-error-component-code';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateTagsErrorComponent
- */
 export interface BreedingsitesCreateTagsErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateTagsErrorComponentAttr}
-     * @memberof BreedingsitesCreateTagsErrorComponent
-     */
     'attr': BitesCreateTagsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateTagsErrorComponentCode}
-     * @memberof BreedingsitesCreateTagsErrorComponent
-     */
     'code': BitesCreateTagsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateTagsErrorComponent
-     */
     'detail': string;
 }
 

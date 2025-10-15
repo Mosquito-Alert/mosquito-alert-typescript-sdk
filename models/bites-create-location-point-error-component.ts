@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { BitesCreateLocationPointErrorComponentAttr } from './bites-create-location-point-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BitesCreateLocationPointErrorComponent
- */
 export interface BitesCreateLocationPointErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateLocationPointErrorComponentAttr}
-     * @memberof BitesCreateLocationPointErrorComponent
-     */
     'attr': BitesCreateLocationPointErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof BitesCreateLocationPointErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesCreateLocationPointErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListAssigneeIdsErrorComponentAttr = {
     AssigneeIds: 'assignee_ids',

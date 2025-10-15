@@ -87,7 +87,6 @@ import type { PhotoPrediction } from '../models';
 import type { PhotoPredictionRequest } from '../models';
 /**
  * IdentificationTasksApi - axios parameter creator
- * @export
  */
 export const IdentificationTasksApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -1208,7 +1207,6 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
 
 /**
  * IdentificationTasksApi - functional programming interface
- * @export
  */
 export const IdentificationTasksApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = IdentificationTasksApiAxiosParamCreator(configuration)
@@ -1488,7 +1486,6 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
 
 /**
  * IdentificationTasksApi - factory interface
- * @export
  */
 export const IdentificationTasksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = IdentificationTasksApiFp(configuration)
@@ -1632,842 +1629,412 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
 
 /**
  * Request parameters for annotationsCreate operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiAnnotationsCreateRequest
  */
 export interface IdentificationTasksApiAnnotationsCreateRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsCreate
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {AnnotationRequest}
-     * @memberof IdentificationTasksApiAnnotationsCreate
-     */
     readonly annotationRequest: AnnotationRequest
 }
 
 /**
  * Request parameters for annotationsList operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiAnnotationsListRequest
  */
 export interface IdentificationTasksApiAnnotationsListRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly classificationConfidenceMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly classificationConfidenceMin?: number
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly classificationTaxonIds?: Array<number>
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly createdAtBefore?: string
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly isDecisive?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly isFavourite?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly isFlagged?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<IdentificationtasksListOrderByParameter>}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly pageSize?: number
 
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListTypeParameter}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly type?: IdentificationtasksAnnotationsListTypeParameter
 
     /**
      * Updated at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly updatedAtAfter?: string
 
     /**
      * Updated at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsList
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiAnnotationsList
-     */
     readonly userIds?: Array<number>
 }
 
 /**
  * Request parameters for annotationsListMine operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiAnnotationsListMineRequest
  */
 export interface IdentificationTasksApiAnnotationsListMineRequest {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly classificationConfidenceLabel?: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly classificationConfidenceMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly classificationConfidenceMin?: number
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly classificationTaxonIds?: Array<number>
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly createdAtBefore?: string
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly isDecisive?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly isFavourite?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly isFlagged?: boolean
 
     /**
      * Ordenado  
-     * @type {Array<IdentificationtasksListOrderByParameter>}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly pageSize?: number
 
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListTypeParameter}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly type?: IdentificationtasksAnnotationsListTypeParameter
 
     /**
      * Updated at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly updatedAtAfter?: string
 
     /**
      * Updated at
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsListMine
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiAnnotationsListMine
-     */
     readonly userIds?: Array<number>
 }
 
 /**
  * Request parameters for annotationsRetrieve operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiAnnotationsRetrieveRequest
  */
 export interface IdentificationTasksApiAnnotationsRetrieveRequest {
     /**
      * A unique integer value identifying this expert report annotation.
-     * @type {number}
-     * @memberof IdentificationTasksApiAnnotationsRetrieve
      */
     readonly id: number
 
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiAnnotationsRetrieve
      */
     readonly observationUuid: string
 }
 
 /**
  * Request parameters for list operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiListRequest
  */
 export interface IdentificationTasksApiListRequest {
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly annotatorIds?: Array<number>
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly assigneeIds?: Array<number>
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiList
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiList
      */
     readonly createdAtBefore?: string
 
     /**
      * Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
-     * @type {boolean}
-     * @memberof IdentificationTasksApiList
      */
     readonly fullyPredicted?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiList
-     */
     readonly isFlagged?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiList
-     */
     readonly isSafe?: boolean
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly numAnnotationsMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly numAnnotationsMin?: number
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly observationCountryIds?: Array<number>
 
     /**
      * Ordenado  
-     * @type {Array<IdentificationtasksListOrderByParameter>}
-     * @memberof IdentificationTasksApiList
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof IdentificationTasksApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof IdentificationTasksApiList
      */
     readonly pageSize?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultAgreementMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultAgreementMin?: number
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultConfidenceMax?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultConfidenceMin?: string
 
-    /**
-     * 
-     * @type {Array<IdentificationtasksListResultSourceParameter>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultSource?: Array<IdentificationtasksListResultSourceParameter>
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultTaxonIds?: Array<number>
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultUncertaintyMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiList
-     */
     readonly resultUncertaintyMin?: number
 
-    /**
-     * 
-     * @type {IdentificationtasksListReviewActionParameter}
-     * @memberof IdentificationTasksApiList
-     */
     readonly reviewAction?: IdentificationtasksListReviewActionParameter
 
-    /**
-     * 
-     * @type {Array<IdentificationtasksListStatusParameter>}
-     * @memberof IdentificationTasksApiList
-     */
     readonly status?: Array<IdentificationtasksListStatusParameter>
 
     /**
      * Update at
-     * @type {string}
-     * @memberof IdentificationTasksApiList
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof IdentificationTasksApiList
      */
     readonly updatedAtBefore?: string
 }
 
 /**
  * Request parameters for listMine operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiListMineRequest
  */
 export interface IdentificationTasksApiListMineRequest {
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly annotatorIds?: Array<number>
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly assigneeIds?: Array<number>
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly createdAtBefore?: string
 
     /**
      * Filters identification task based on whether all associated photos have predictions. Set to True to include identification tasks where every photo has a prediction; set to False to include identification tasks where at least one photo is missing a prediction.
-     * @type {boolean}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly fullyPredicted?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly isFlagged?: boolean
 
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly isSafe?: boolean
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly numAnnotationsMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly numAnnotationsMin?: number
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly observationCountryIds?: Array<number>
 
     /**
      * Ordenado  
-     * @type {Array<IdentificationtasksListOrderByParameter>}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly pageSize?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultAgreementMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultAgreementMin?: number
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultConfidenceMax?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultConfidenceMin?: string
 
-    /**
-     * 
-     * @type {Array<IdentificationtasksListResultSourceParameter>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultSource?: Array<IdentificationtasksListResultSourceParameter>
 
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultTaxonIds?: Array<number>
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultUncertaintyMax?: number
 
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly resultUncertaintyMin?: number
 
-    /**
-     * 
-     * @type {IdentificationtasksListReviewActionParameter}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly reviewAction?: IdentificationtasksListReviewActionParameter
 
-    /**
-     * 
-     * @type {Array<IdentificationtasksListStatusParameter>}
-     * @memberof IdentificationTasksApiListMine
-     */
     readonly status?: Array<IdentificationtasksListStatusParameter>
 
     /**
      * Update at
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof IdentificationTasksApiListMine
      */
     readonly updatedAtBefore?: string
 }
 
 /**
  * Request parameters for predictionsCreate operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsCreateRequest
  */
 export interface IdentificationTasksApiPredictionsCreateRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsCreate
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {CreatePhotoPredictionRequest}
-     * @memberof IdentificationTasksApiPredictionsCreate
-     */
     readonly createPhotoPredictionRequest: CreatePhotoPredictionRequest
 }
 
 /**
  * Request parameters for predictionsDestroy operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsDestroyRequest
  */
 export interface IdentificationTasksApiPredictionsDestroyRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsDestroy
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsDestroy
-     */
     readonly photoUuid: string
 }
 
 /**
  * Request parameters for predictionsList operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsListRequest
  */
 export interface IdentificationTasksApiPredictionsListRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsList
      */
     readonly observationUuid: string
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof IdentificationTasksApiPredictionsList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof IdentificationTasksApiPredictionsList
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for predictionsPartialUpdate operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsPartialUpdateRequest
  */
 export interface IdentificationTasksApiPredictionsPartialUpdateRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsPartialUpdate
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsPartialUpdate
-     */
     readonly photoUuid: string
 
-    /**
-     * 
-     * @type {PatchedPhotoPredictionRequest}
-     * @memberof IdentificationTasksApiPredictionsPartialUpdate
-     */
     readonly patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest
 }
 
 /**
  * Request parameters for predictionsRetrieve operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsRetrieveRequest
  */
 export interface IdentificationTasksApiPredictionsRetrieveRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsRetrieve
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsRetrieve
-     */
     readonly photoUuid: string
 }
 
 /**
  * Request parameters for predictionsUpdate operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiPredictionsUpdateRequest
  */
 export interface IdentificationTasksApiPredictionsUpdateRequest {
     /**
      * UUID of the Observation
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsUpdate
      */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiPredictionsUpdate
-     */
     readonly photoUuid: string
 
-    /**
-     * 
-     * @type {PhotoPredictionRequest}
-     * @memberof IdentificationTasksApiPredictionsUpdate
-     */
     readonly photoPredictionRequest: PhotoPredictionRequest
 }
 
 /**
  * Request parameters for retrieve operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiRetrieveRequest
  */
 export interface IdentificationTasksApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiRetrieve
-     */
     readonly observationUuid: string
 }
 
 /**
  * Request parameters for reviewCreate operation in IdentificationTasksApi.
- * @export
- * @interface IdentificationTasksApiReviewCreateRequest
  */
 export interface IdentificationTasksApiReviewCreateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationTasksApiReviewCreate
-     */
     readonly observationUuid: string
 
-    /**
-     * 
-     * @type {MetaCreateIdentificationTaskReviewRequest}
-     * @memberof IdentificationTasksApiReviewCreate
-     */
     readonly metaCreateIdentificationTaskReviewRequest?: MetaCreateIdentificationTaskReviewRequest
 }
 
 /**
  * IdentificationTasksApi - object-oriented interface
- * @export
- * @class IdentificationTasksApi
- * @extends {BaseAPI}
  */
 export class IdentificationTasksApi extends BaseAPI {
     /**
@@ -2475,7 +2042,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiAnnotationsCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public annotationsCreate(requestParameters: IdentificationTasksApiAnnotationsCreateRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).annotationsCreate(requestParameters.observationUuid, requestParameters.annotationRequest, options).then((request) => request(this.axios, this.basePath));
@@ -2486,7 +2052,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiAnnotationsListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public annotationsList(requestParameters: IdentificationTasksApiAnnotationsListRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).annotationsList(requestParameters.observationUuid, requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
@@ -2497,7 +2062,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiAnnotationsListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public annotationsListMine(requestParameters: IdentificationTasksApiAnnotationsListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).annotationsListMine(requestParameters.classificationConfidenceLabel, requestParameters.classificationConfidenceMax, requestParameters.classificationConfidenceMin, requestParameters.classificationTaxonIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.isDecisive, requestParameters.isFavourite, requestParameters.isFlagged, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.type, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userIds, options).then((request) => request(this.axios, this.basePath));
@@ -2508,7 +2072,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiAnnotationsRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public annotationsRetrieve(requestParameters: IdentificationTasksApiAnnotationsRetrieveRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).annotationsRetrieve(requestParameters.id, requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
@@ -2518,7 +2081,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * Assign the next available identification task.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public assignNext(options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).assignNext(options).then((request) => request(this.axios, this.basePath));
@@ -2529,7 +2091,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public list(requestParameters: IdentificationTasksApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).list(requestParameters.annotatorIds, requestParameters.assigneeIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.observationCountryIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultSource, requestParameters.resultTaxonIds, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewAction, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(this.axios, this.basePath));
@@ -2540,7 +2101,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public listMine(requestParameters: IdentificationTasksApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).listMine(requestParameters.annotatorIds, requestParameters.assigneeIds, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.fullyPredicted, requestParameters.isFlagged, requestParameters.isSafe, requestParameters.numAnnotationsMax, requestParameters.numAnnotationsMin, requestParameters.observationCountryIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.resultAgreementMax, requestParameters.resultAgreementMin, requestParameters.resultConfidenceMax, requestParameters.resultConfidenceMin, requestParameters.resultSource, requestParameters.resultTaxonIds, requestParameters.resultUncertaintyMax, requestParameters.resultUncertaintyMin, requestParameters.reviewAction, requestParameters.status, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, options).then((request) => request(this.axios, this.basePath));
@@ -2551,7 +2111,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsCreate(requestParameters: IdentificationTasksApiPredictionsCreateRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsCreate(requestParameters.observationUuid, requestParameters.createPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
@@ -2562,7 +2121,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsDestroyRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsDestroy(requestParameters: IdentificationTasksApiPredictionsDestroyRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsDestroy(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
@@ -2573,7 +2131,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsList(requestParameters: IdentificationTasksApiPredictionsListRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsList(requestParameters.observationUuid, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -2584,7 +2141,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsPartialUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsPartialUpdate(requestParameters: IdentificationTasksApiPredictionsPartialUpdateRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsPartialUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
@@ -2595,7 +2151,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsRetrieve(requestParameters: IdentificationTasksApiPredictionsRetrieveRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsRetrieve(requestParameters.observationUuid, requestParameters.photoUuid, options).then((request) => request(this.axios, this.basePath));
@@ -2606,7 +2161,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiPredictionsUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public predictionsUpdate(requestParameters: IdentificationTasksApiPredictionsUpdateRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).predictionsUpdate(requestParameters.observationUuid, requestParameters.photoUuid, requestParameters.photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
@@ -2617,7 +2171,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public retrieve(requestParameters: IdentificationTasksApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).retrieve(requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
@@ -2628,7 +2181,6 @@ export class IdentificationTasksApi extends BaseAPI {
      * @param {IdentificationTasksApiReviewCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof IdentificationTasksApi
      */
     public reviewCreate(requestParameters: IdentificationTasksApiReviewCreateRequest, options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).reviewCreate(requestParameters.observationUuid, requestParameters.metaCreateIdentificationTaskReviewRequest, options).then((request) => request(this.axios, this.basePath));

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateLocationNonFieldErrorsErrorComponentAttr = {
     LocationNonFieldErrors: 'location.non_field_errors',

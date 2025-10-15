@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Bite } from './bite';
 
-/**
- * 
- * @export
- * @interface PaginatedBiteList
- */
 export interface PaginatedBiteList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedBiteList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedBiteList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedBiteList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Bite>}
-     * @memberof PaginatedBiteList
-     */
     'results'?: Array<Bite>;
 }
 

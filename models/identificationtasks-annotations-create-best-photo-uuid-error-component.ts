@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr } from './identificationtasks-annotations-create-best-photo-uuid-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
-     */
     'detail': string;
 }
 

@@ -20,22 +20,13 @@ import type { LocalizedMessageBodyRequest } from './localized-message-body-reque
 // @ts-ignore
 import type { LocalizedMessageTitleRequest } from './localized-message-title-request';
 
-/**
- * 
- * @export
- * @interface CreateNotificationMessageRequest
- */
 export interface CreateNotificationMessageRequest {
     /**
      * Provide the message\'s title in all supported languages
-     * @type {LocalizedMessageTitleRequest}
-     * @memberof CreateNotificationMessageRequest
      */
     'title': LocalizedMessageTitleRequest;
     /**
      * Provide the message\'s body in all supported languages
-     * @type {LocalizedMessageBodyRequest}
-     * @memberof CreateNotificationMessageRequest
      */
     'body': LocalizedMessageBodyRequest;
 }

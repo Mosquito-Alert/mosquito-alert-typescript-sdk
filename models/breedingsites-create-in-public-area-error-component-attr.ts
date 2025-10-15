@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BreedingsitesCreateInPublicAreaErrorComponentAttr = {
     InPublicArea: 'in_public_area',

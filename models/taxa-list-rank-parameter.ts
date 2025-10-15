@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {number}
- */
 
 export const TaxaListRankParameter = {
     NUMBER_unknown_default_open_api: 11184809

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr = {
     CharacteristicsIsGravid: 'characteristics.is_gravid',

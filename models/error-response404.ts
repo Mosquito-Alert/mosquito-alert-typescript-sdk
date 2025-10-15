@@ -20,23 +20,8 @@ import type { Error404 } from './error404';
 // @ts-ignore
 import type { ErrorResponse401Type } from './error-response401-type';
 
-/**
- * 
- * @export
- * @interface ErrorResponse404
- */
 export interface ErrorResponse404 {
-    /**
-     * 
-     * @type {ErrorResponse401Type}
-     * @memberof ErrorResponse404
-     */
     'type': ErrorResponse401Type;
-    /**
-     * 
-     * @type {Array<Error404>}
-     * @memberof ErrorResponse404
-     */
     'errors': Array<Error404>;
 }
 

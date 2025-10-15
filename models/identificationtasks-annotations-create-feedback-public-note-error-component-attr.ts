@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr = {
     FeedbackPublicNote: 'feedback.public_note',

@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr } from './identificationtasks-predictions-create-threshold-deviation-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
- */
 export interface IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
-     */
     'detail': string;
 }
 

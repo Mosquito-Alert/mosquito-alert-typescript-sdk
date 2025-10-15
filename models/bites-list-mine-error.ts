@@ -43,7 +43,6 @@ import type { BitesListMineUserUuidErrorComponent } from './bites-list-mine-user
 
 /**
  * @type BitesListMineError
- * @export
  */
 export type BitesListMineError = { attr: 'country_id' } & BitesListMineCountryIdErrorComponent | { attr: 'created_at' } & BitesListMineCreatedAtErrorComponent | { attr: 'order_by' } & BitesListMineOrderByErrorComponent | { attr: 'received_at' } & BitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListMineUserUuidErrorComponent;
 

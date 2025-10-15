@@ -20,23 +20,8 @@ import type { CountryPermission } from './country-permission';
 // @ts-ignore
 import type { GeneralPermission } from './general-permission';
 
-/**
- * 
- * @export
- * @interface UserPermission
- */
 export interface UserPermission {
-    /**
-     * 
-     * @type {GeneralPermission}
-     * @memberof UserPermission
-     */
     'general': GeneralPermission;
-    /**
-     * 
-     * @type {Array<CountryPermission>}
-     * @memberof UserPermission
-     */
     'countries': Array<CountryPermission>;
 }
 

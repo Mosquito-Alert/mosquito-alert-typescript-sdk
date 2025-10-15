@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageTitleRoErrorComponentAttr = {
     MessageTitleRo: 'message.title.ro',

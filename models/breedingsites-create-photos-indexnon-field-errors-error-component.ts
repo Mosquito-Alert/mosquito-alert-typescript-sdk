@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttr } from './breedingsites-create-photos-indexnon-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
- */
 export interface BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttr}
-     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
-     */
     'attr': BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

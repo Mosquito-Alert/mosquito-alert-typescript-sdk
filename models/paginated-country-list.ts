@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Country } from './country';
 
-/**
- * 
- * @export
- * @interface PaginatedCountryList
- */
 export interface PaginatedCountryList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedCountryList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedCountryList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedCountryList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Country>}
-     * @memberof PaginatedCountryList
-     */
     'results'?: Array<Country>;
 }
 

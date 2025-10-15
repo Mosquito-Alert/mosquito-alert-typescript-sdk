@@ -20,29 +20,9 @@ import type { DevicesCreateManufacturerErrorComponentCode } from './devices-crea
 // @ts-ignore
 import type { DevicesCreateOsLocaleErrorComponentAttr } from './devices-create-os-locale-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesUpdateOsLocaleErrorComponent
- */
 export interface DevicesUpdateOsLocaleErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateOsLocaleErrorComponentAttr}
-     * @memberof DevicesUpdateOsLocaleErrorComponent
-     */
     'attr': DevicesCreateOsLocaleErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateManufacturerErrorComponentCode}
-     * @memberof DevicesUpdateOsLocaleErrorComponent
-     */
     'code': DevicesCreateManufacturerErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesUpdateOsLocaleErrorComponent
-     */
     'detail': string;
 }
 

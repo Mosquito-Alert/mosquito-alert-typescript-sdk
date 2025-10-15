@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface GuestRegistrationRequest
- */
 export interface GuestRegistrationRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof GuestRegistrationRequest
-     */
     'password': string;
 }
 

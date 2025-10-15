@@ -20,29 +20,9 @@ import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-
 // @ts-ignore
 import type { IdentificationtasksReviewCreateIsSafeErrorComponentAttr } from './identificationtasks-review-create-is-safe-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreateIsSafeErrorComponent
- */
 export interface IdentificationtasksReviewCreateIsSafeErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreateIsSafeErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreateIsSafeErrorComponent
-     */
     'attr': IdentificationtasksReviewCreateIsSafeErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateCountsNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreateIsSafeErrorComponent
-     */
     'code': BitesCreateCountsNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreateIsSafeErrorComponent
-     */
     'detail': string;
 }
 

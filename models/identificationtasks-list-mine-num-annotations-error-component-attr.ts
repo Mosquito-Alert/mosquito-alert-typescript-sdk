@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineNumAnnotationsErrorComponentAttr = {
     NumAnnotations: 'num_annotations',

@@ -17,29 +17,9 @@
 // @ts-ignore
 import type { SimpleTaxonRank } from './simple-taxon-rank';
 
-/**
- * 
- * @export
- * @interface SimpleTaxonRequest
- */
 export interface SimpleTaxonRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleTaxonRequest
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SimpleTaxonRequest
-     */
     'common_name'?: string | null;
-    /**
-     * 
-     * @type {SimpleTaxonRank}
-     * @memberof SimpleTaxonRequest
-     */
     'rank': SimpleTaxonRank;
 }
 

@@ -20,29 +20,9 @@ import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr } from './identificationtasks-predictions-create-classifier-version-error-component-attr';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionPartialUpdateClassifierVersionErrorComponent
- */
 export interface PhotosPredictionPartialUpdateClassifierVersionErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr}
-     * @memberof PhotosPredictionPartialUpdateClassifierVersionErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateLocationSourceErrorComponentCode}
-     * @memberof PhotosPredictionPartialUpdateClassifierVersionErrorComponent
-     */
     'code': BitesCreateLocationSourceErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosPredictionPartialUpdateClassifierVersionErrorComponent
-     */
     'detail': string;
 }
 

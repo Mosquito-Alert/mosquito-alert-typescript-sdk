@@ -20,29 +20,12 @@ import type { CreateNotificationMessageRequest } from './create-notification-mes
 // @ts-ignore
 import type { UserNotificationCreateRequestReceiverType } from './user-notification-create-request-receiver-type';
 
-/**
- * 
- * @export
- * @interface UserNotificationCreateRequest
- */
 export interface UserNotificationCreateRequest {
-    /**
-     * 
-     * @type {UserNotificationCreateRequestReceiverType}
-     * @memberof UserNotificationCreateRequest
-     */
     'receiver_type'?: UserNotificationCreateRequestReceiverType;
     /**
      * The message of the notification
-     * @type {CreateNotificationMessageRequest}
-     * @memberof UserNotificationCreateRequest
      */
     'message': CreateNotificationMessageRequest;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof UserNotificationCreateRequest
-     */
     'user_uuids': Array<string>;
 }
 

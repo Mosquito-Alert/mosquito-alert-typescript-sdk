@@ -20,29 +20,9 @@ import type { AuthObtainTokenDeviceIdErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { NotificationsCreateMessageBodySqErrorComponentAttr } from './notifications-create-message-body-sq-error-component-attr';
 
-/**
- * 
- * @export
- * @interface NotificationsCreateMessageBodySqErrorComponent
- */
 export interface NotificationsCreateMessageBodySqErrorComponent {
-    /**
-     * 
-     * @type {NotificationsCreateMessageBodySqErrorComponentAttr}
-     * @memberof NotificationsCreateMessageBodySqErrorComponent
-     */
     'attr': NotificationsCreateMessageBodySqErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenDeviceIdErrorComponentCode}
-     * @memberof NotificationsCreateMessageBodySqErrorComponent
-     */
     'code': AuthObtainTokenDeviceIdErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationsCreateMessageBodySqErrorComponent
-     */
     'detail': string;
 }
 

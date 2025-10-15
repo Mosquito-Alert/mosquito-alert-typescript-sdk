@@ -20,29 +20,9 @@ import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsi
 // @ts-ignore
 import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
 
-/**
- * 
- * @export
- * @interface UsersUpdateLocaleErrorComponent
- */
 export interface UsersUpdateLocaleErrorComponent {
-    /**
-     * 
-     * @type {UsersPartialUpdateLocaleErrorComponentAttr}
-     * @memberof UsersUpdateLocaleErrorComponent
-     */
     'attr': UsersPartialUpdateLocaleErrorComponentAttr;
-    /**
-     * 
-     * @type {BreedingsitesCreateSiteTypeErrorComponentCode}
-     * @memberof UsersUpdateLocaleErrorComponent
-     */
     'code': BreedingsitesCreateSiteTypeErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof UsersUpdateLocaleErrorComponent
-     */
     'detail': string;
 }
 

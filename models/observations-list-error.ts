@@ -46,7 +46,6 @@ import type { ObservationsListUserUuidErrorComponent } from './observations-list
 
 /**
  * @type ObservationsListError
- * @export
  */
 export type ObservationsListError = { attr: 'country_id' } & ObservationsListCountryIdErrorComponent | { attr: 'created_at' } & ObservationsListCreatedAtErrorComponent | { attr: 'identification_taxon_ids' } & ObservationsListIdentificationTaxonIdsErrorComponent | { attr: 'order_by' } & ObservationsListOrderByErrorComponent | { attr: 'received_at' } & ObservationsListReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListUserUuidErrorComponent;
 

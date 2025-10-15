@@ -14,28 +14,17 @@
 
 
 
-/**
- * 
- * @export
- * @interface AnnotationFeedback
- */
 export interface AnnotationFeedback {
     /**
      * Notes to display on public map
-     * @type {string}
-     * @memberof AnnotationFeedback
      */
     'public_note'?: string | null;
     /**
      * Internal notes for yourself or other experts
-     * @type {string}
-     * @memberof AnnotationFeedback
      */
     'internal_note'?: string | null;
     /**
      * Message that user will receive when viewing report on phone
-     * @type {string}
-     * @memberof AnnotationFeedback
      */
     'user_note'?: string | null;
 }

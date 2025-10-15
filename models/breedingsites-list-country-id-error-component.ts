@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { BitesListCountryIdErrorComponentAttr } from './bites-list-country-id-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesListCountryIdErrorComponent
- */
 export interface BreedingsitesListCountryIdErrorComponent {
-    /**
-     * 
-     * @type {BitesListCountryIdErrorComponentAttr}
-     * @memberof BreedingsitesListCountryIdErrorComponent
-     */
     'attr': BitesListCountryIdErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof BreedingsitesListCountryIdErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesListCountryIdErrorComponent
-     */
     'detail': string;
 }
 

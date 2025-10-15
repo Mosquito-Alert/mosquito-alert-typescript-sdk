@@ -14,29 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface AppUserTokenObtainPairRequest
- */
 export interface AppUserTokenObtainPairRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof AppUserTokenObtainPairRequest
-     */
     'username': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AppUserTokenObtainPairRequest
-     */
     'password': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AppUserTokenObtainPairRequest
-     */
     'device_id'?: string;
 }
 

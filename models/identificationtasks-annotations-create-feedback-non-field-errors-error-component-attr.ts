@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr = {
     FeedbackNonFieldErrors: 'feedback.non_field_errors',

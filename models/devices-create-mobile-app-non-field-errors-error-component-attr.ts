@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr = {
     MobileAppNonFieldErrors: 'mobile_app.non_field_errors',

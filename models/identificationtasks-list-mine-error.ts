@@ -64,7 +64,6 @@ import type { IdentificationtasksListMineUpdatedAtErrorComponent } from './ident
 
 /**
  * @type IdentificationtasksListMineError
- * @export
  */
 export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListMineAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListMineResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_action' } & IdentificationtasksListMineReviewActionErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
 

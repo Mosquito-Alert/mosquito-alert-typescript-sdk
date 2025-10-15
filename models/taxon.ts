@@ -17,46 +17,17 @@
 // @ts-ignore
 import type { SimpleTaxonRank } from './simple-taxon-rank';
 
-/**
- * 
- * @export
- * @interface Taxon
- */
 export interface Taxon {
-    /**
-     * 
-     * @type {number}
-     * @memberof Taxon
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Taxon
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Taxon
-     */
     'common_name'?: string | null;
-    /**
-     * 
-     * @type {SimpleTaxonRank}
-     * @memberof Taxon
-     */
     'rank': SimpleTaxonRank;
     /**
      * Display the name in italics when rendering.
-     * @type {boolean}
-     * @memberof Taxon
      */
     'italicize': boolean;
     /**
      * Indicates if this taxon is relevant for the application. Will be shown first and will set task to conflict if final taxon is not this.
-     * @type {boolean}
-     * @memberof Taxon
      */
     'is_relevant': boolean;
 }

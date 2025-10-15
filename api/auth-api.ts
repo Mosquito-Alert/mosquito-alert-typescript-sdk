@@ -55,7 +55,6 @@ import type { TokenRefreshRequest } from '../models';
 import type { TokenVerifyRequest } from '../models';
 /**
  * AuthApi - axios parameter creator
- * @export
  */
 export const AuthApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -248,7 +247,6 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
 
 /**
  * AuthApi - functional programming interface
- * @export
  */
 export const AuthApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = AuthApiAxiosParamCreator(configuration)
@@ -318,7 +316,6 @@ export const AuthApiFp = function(configuration?: Configuration) {
 
 /**
  * AuthApi - factory interface
- * @export
  */
 export const AuthApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AuthApiFp(configuration)
@@ -373,79 +370,41 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
 
 /**
  * Request parameters for changePassword operation in AuthApi.
- * @export
- * @interface AuthApiChangePasswordRequest
  */
 export interface AuthApiChangePasswordRequest {
-    /**
-     * 
-     * @type {PasswordChangeRequest}
-     * @memberof AuthApiChangePassword
-     */
     readonly passwordChangeRequest: PasswordChangeRequest
 }
 
 /**
  * Request parameters for obtainToken operation in AuthApi.
- * @export
- * @interface AuthApiObtainTokenRequest
  */
 export interface AuthApiObtainTokenRequest {
-    /**
-     * 
-     * @type {AppUserTokenObtainPairRequest}
-     * @memberof AuthApiObtainToken
-     */
     readonly appUserTokenObtainPairRequest: AppUserTokenObtainPairRequest
 }
 
 /**
  * Request parameters for refreshToken operation in AuthApi.
- * @export
- * @interface AuthApiRefreshTokenRequest
  */
 export interface AuthApiRefreshTokenRequest {
-    /**
-     * 
-     * @type {TokenRefreshRequest}
-     * @memberof AuthApiRefreshToken
-     */
     readonly tokenRefreshRequest: TokenRefreshRequest
 }
 
 /**
  * Request parameters for signupGuest operation in AuthApi.
- * @export
- * @interface AuthApiSignupGuestRequest
  */
 export interface AuthApiSignupGuestRequest {
-    /**
-     * 
-     * @type {GuestRegistrationRequest}
-     * @memberof AuthApiSignupGuest
-     */
     readonly guestRegistrationRequest: GuestRegistrationRequest
 }
 
 /**
  * Request parameters for verifyToken operation in AuthApi.
- * @export
- * @interface AuthApiVerifyTokenRequest
  */
 export interface AuthApiVerifyTokenRequest {
-    /**
-     * 
-     * @type {TokenVerifyRequest}
-     * @memberof AuthApiVerifyToken
-     */
     readonly tokenVerifyRequest: TokenVerifyRequest
 }
 
 /**
  * AuthApi - object-oriented interface
- * @export
- * @class AuthApi
- * @extends {BaseAPI}
  */
 export class AuthApi extends BaseAPI {
     /**
@@ -453,7 +412,6 @@ export class AuthApi extends BaseAPI {
      * @param {AuthApiChangePasswordRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AuthApi
      */
     public changePassword(requestParameters: AuthApiChangePasswordRequest, options?: RawAxiosRequestConfig) {
         return AuthApiFp(this.configuration).changePassword(requestParameters.passwordChangeRequest, options).then((request) => request(this.axios, this.basePath));
@@ -464,7 +422,6 @@ export class AuthApi extends BaseAPI {
      * @param {AuthApiObtainTokenRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AuthApi
      */
     public obtainToken(requestParameters: AuthApiObtainTokenRequest, options?: RawAxiosRequestConfig) {
         return AuthApiFp(this.configuration).obtainToken(requestParameters.appUserTokenObtainPairRequest, options).then((request) => request(this.axios, this.basePath));
@@ -475,7 +432,6 @@ export class AuthApi extends BaseAPI {
      * @param {AuthApiRefreshTokenRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AuthApi
      */
     public refreshToken(requestParameters: AuthApiRefreshTokenRequest, options?: RawAxiosRequestConfig) {
         return AuthApiFp(this.configuration).refreshToken(requestParameters.tokenRefreshRequest, options).then((request) => request(this.axios, this.basePath));
@@ -486,7 +442,6 @@ export class AuthApi extends BaseAPI {
      * @param {AuthApiSignupGuestRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AuthApi
      */
     public signupGuest(requestParameters: AuthApiSignupGuestRequest, options?: RawAxiosRequestConfig) {
         return AuthApiFp(this.configuration).signupGuest(requestParameters.guestRegistrationRequest, options).then((request) => request(this.axios, this.basePath));
@@ -497,7 +452,6 @@ export class AuthApi extends BaseAPI {
      * @param {AuthApiVerifyTokenRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AuthApi
      */
     public verifyToken(requestParameters: AuthApiVerifyTokenRequest, options?: RawAxiosRequestConfig) {
         return AuthApiFp(this.configuration).verifyToken(requestParameters.tokenVerifyRequest, options).then((request) => request(this.axios, this.basePath));

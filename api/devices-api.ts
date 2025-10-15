@@ -45,7 +45,6 @@ import type { ErrorResponse404 } from '../models';
 import type { PatchedDeviceUpdateRequest } from '../models';
 /**
  * DevicesApi - axios parameter creator
- * @export
  */
 export const DevicesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -234,7 +233,6 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
 
 /**
  * DevicesApi - functional programming interface
- * @export
  */
 export const DevicesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = DevicesApiAxiosParamCreator(configuration)
@@ -294,7 +292,6 @@ export const DevicesApiFp = function(configuration?: Configuration) {
 
 /**
  * DevicesApi - factory interface
- * @export
  */
 export const DevicesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = DevicesApiFp(configuration)
@@ -340,79 +337,38 @@ export const DevicesApiFactory = function (configuration?: Configuration, basePa
 
 /**
  * Request parameters for create operation in DevicesApi.
- * @export
- * @interface DevicesApiCreateRequest
  */
 export interface DevicesApiCreateRequest {
-    /**
-     * 
-     * @type {DeviceRequest}
-     * @memberof DevicesApiCreate
-     */
     readonly deviceRequest: DeviceRequest
 }
 
 /**
  * Request parameters for partialUpdate operation in DevicesApi.
- * @export
- * @interface DevicesApiPartialUpdateRequest
  */
 export interface DevicesApiPartialUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesApiPartialUpdate
-     */
     readonly deviceId: string
 
-    /**
-     * 
-     * @type {PatchedDeviceUpdateRequest}
-     * @memberof DevicesApiPartialUpdate
-     */
     readonly patchedDeviceUpdateRequest?: PatchedDeviceUpdateRequest
 }
 
 /**
  * Request parameters for retrieve operation in DevicesApi.
- * @export
- * @interface DevicesApiRetrieveRequest
  */
 export interface DevicesApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesApiRetrieve
-     */
     readonly deviceId: string
 }
 
 /**
  * Request parameters for update operation in DevicesApi.
- * @export
- * @interface DevicesApiUpdateRequest
  */
 export interface DevicesApiUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesApiUpdate
-     */
     readonly deviceId: string
 
-    /**
-     * 
-     * @type {DeviceUpdateRequest}
-     * @memberof DevicesApiUpdate
-     */
     readonly deviceUpdateRequest: DeviceUpdateRequest
 }
 
 /**
  * DevicesApi - object-oriented interface
- * @export
- * @class DevicesApi
- * @extends {BaseAPI}
  */
 export class DevicesApi extends BaseAPI {
     /**
@@ -420,7 +376,6 @@ export class DevicesApi extends BaseAPI {
      * @param {DevicesApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DevicesApi
      */
     public create(requestParameters: DevicesApiCreateRequest, options?: RawAxiosRequestConfig) {
         return DevicesApiFp(this.configuration).create(requestParameters.deviceRequest, options).then((request) => request(this.axios, this.basePath));
@@ -431,7 +386,6 @@ export class DevicesApi extends BaseAPI {
      * @param {DevicesApiPartialUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DevicesApi
      */
     public partialUpdate(requestParameters: DevicesApiPartialUpdateRequest, options?: RawAxiosRequestConfig) {
         return DevicesApiFp(this.configuration).partialUpdate(requestParameters.deviceId, requestParameters.patchedDeviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));
@@ -442,7 +396,6 @@ export class DevicesApi extends BaseAPI {
      * @param {DevicesApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DevicesApi
      */
     public retrieve(requestParameters: DevicesApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return DevicesApiFp(this.configuration).retrieve(requestParameters.deviceId, options).then((request) => request(this.axios, this.basePath));
@@ -453,7 +406,6 @@ export class DevicesApi extends BaseAPI {
      * @param {DevicesApiUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DevicesApi
      */
     public update(requestParameters: DevicesApiUpdateRequest, options?: RawAxiosRequestConfig) {
         return DevicesApiFp(this.configuration).update(requestParameters.deviceId, requestParameters.deviceUpdateRequest, options).then((request) => request(this.axios, this.basePath));

@@ -52,7 +52,6 @@ import type { DevicesPartialUpdateOsVersionErrorComponent } from './devices-part
 
 /**
  * @type DevicesPartialUpdateError
- * @export
  */
 export type DevicesPartialUpdateError = { attr: 'fcm_token' } & DevicesPartialUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesPartialUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesPartialUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesPartialUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesPartialUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesPartialUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesPartialUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesPartialUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesPartialUpdateOsVersionErrorComponent;
 

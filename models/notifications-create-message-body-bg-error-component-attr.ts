@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageBodyBgErrorComponentAttr = {
     MessageBodyBg: 'message.body.bg',

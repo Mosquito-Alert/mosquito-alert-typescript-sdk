@@ -17,35 +17,10 @@
 // @ts-ignore
 import type { Taxon } from './taxon';
 
-/**
- * 
- * @export
- * @interface PaginatedTaxonList
- */
 export interface PaginatedTaxonList {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaginatedTaxonList
-     */
     'count'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedTaxonList
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaginatedTaxonList
-     */
     'previous'?: string | null;
-    /**
-     * 
-     * @type {Array<Taxon>}
-     * @memberof PaginatedTaxonList
-     */
     'results'?: Array<Taxon>;
 }
 

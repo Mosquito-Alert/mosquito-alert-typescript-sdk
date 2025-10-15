@@ -20,29 +20,9 @@ import type { IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode } f
 // @ts-ignore
 import type { IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr } from './identificationtasks-predictions-create-scores-anopheles-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
- */
 export interface IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr}
-     * @memberof IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
-     */
     'attr': IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode}
-     * @memberof IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
-     */
     'code': IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
-     */
     'detail': string;
 }
 

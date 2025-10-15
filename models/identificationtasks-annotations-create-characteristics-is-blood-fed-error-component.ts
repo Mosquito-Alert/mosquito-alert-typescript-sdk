@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-is-blood-fed-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
-     */
     'detail': string;
 }
 

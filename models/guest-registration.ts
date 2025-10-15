@@ -14,16 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface GuestRegistration
- */
 export interface GuestRegistration {
     /**
      * UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
-     * @type {string}
-     * @memberof GuestRegistration
      */
     'username': string;
 }

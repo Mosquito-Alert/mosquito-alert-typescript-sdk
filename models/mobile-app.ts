@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface MobileApp
- */
 export interface MobileApp {
-    /**
-     * 
-     * @type {string}
-     * @memberof MobileApp
-     */
     'package_name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MobileApp
-     */
     'package_version': string;
 }
 

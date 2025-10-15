@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface IdentificationTaskPermission
- */
 export interface IdentificationTaskPermission {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTaskPermission
-     */
     'add': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTaskPermission
-     */
     'change': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTaskPermission
-     */
     'view': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IdentificationTaskPermission
-     */
     'delete': boolean;
 }
 

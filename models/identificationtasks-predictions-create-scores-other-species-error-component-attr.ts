@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponentAttr = {
     ScoresOtherSpecies: 'scores.other_species',

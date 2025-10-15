@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { BreedingsitesCreateHasNearMosquitoesErrorComponentAttr } from './breedingsites-create-has-near-mosquitoes-error-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateHasNearMosquitoesErrorComponent
- */
 export interface BreedingsitesCreateHasNearMosquitoesErrorComponent {
-    /**
-     * 
-     * @type {BreedingsitesCreateHasNearMosquitoesErrorComponentAttr}
-     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
-     */
     'attr': BreedingsitesCreateHasNearMosquitoesErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateHasNearMosquitoesErrorComponent
-     */
     'detail': string;
 }
 

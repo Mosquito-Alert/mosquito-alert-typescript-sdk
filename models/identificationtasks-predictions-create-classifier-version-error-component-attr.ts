@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr = {
     ClassifierVersion: 'classifier_version',

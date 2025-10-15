@@ -33,7 +33,6 @@ import type { ErrorResponse404 } from '../models';
 import type { PaginatedCountryList } from '../models';
 /**
  * CountriesApi - axios parameter creator
- * @export
  */
 export const CountriesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -132,7 +131,6 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * CountriesApi - functional programming interface
- * @export
  */
 export const CountriesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = CountriesApiAxiosParamCreator(configuration)
@@ -167,7 +165,6 @@ export const CountriesApiFp = function(configuration?: Configuration) {
 
 /**
  * CountriesApi - factory interface
- * @export
  */
 export const CountriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CountriesApiFp(configuration)
@@ -195,44 +192,31 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
 
 /**
  * Request parameters for list operation in CountriesApi.
- * @export
- * @interface CountriesApiListRequest
  */
 export interface CountriesApiListRequest {
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof CountriesApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof CountriesApiList
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for retrieve operation in CountriesApi.
- * @export
- * @interface CountriesApiRetrieveRequest
  */
 export interface CountriesApiRetrieveRequest {
     /**
      * A unique integer value identifying this europe country.
-     * @type {number}
-     * @memberof CountriesApiRetrieve
      */
     readonly id: number
 }
 
 /**
  * CountriesApi - object-oriented interface
- * @export
- * @class CountriesApi
- * @extends {BaseAPI}
  */
 export class CountriesApi extends BaseAPI {
     /**
@@ -240,7 +224,6 @@ export class CountriesApi extends BaseAPI {
      * @param {CountriesApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CountriesApi
      */
     public list(requestParameters: CountriesApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return CountriesApiFp(this.configuration).list(requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -251,7 +234,6 @@ export class CountriesApi extends BaseAPI {
      * @param {CountriesApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CountriesApi
      */
     public retrieve(requestParameters: CountriesApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return CountriesApiFp(this.configuration).retrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));

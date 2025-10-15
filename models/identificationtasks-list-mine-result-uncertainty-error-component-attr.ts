@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineResultUncertaintyErrorComponentAttr = {
     ResultUncertainty: 'result_uncertainty',

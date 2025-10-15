@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListMineUserUuidErrorComponentAttr = {
     UserUuid: 'user_uuid',

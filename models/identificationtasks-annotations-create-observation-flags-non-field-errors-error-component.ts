@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr } from './identificationtasks-annotations-create-observation-flags-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListMineReceivedAtErrorComponentAttr = {
     ReceivedAt: 'received_at',

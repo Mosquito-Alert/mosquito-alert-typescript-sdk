@@ -52,7 +52,6 @@ import type { DevicesUpdateOsVersionErrorComponent } from './devices-update-os-v
 
 /**
  * @type DevicesUpdateError
- * @export
  */
 export type DevicesUpdateError = { attr: 'fcm_token' } & DevicesUpdateFcmTokenErrorComponent | { attr: 'mobile_app.non_field_errors' } & DevicesUpdateMobileAppNonFieldErrorsErrorComponent | { attr: 'mobile_app.package_name' } & DevicesUpdateMobileAppPackageNameErrorComponent | { attr: 'mobile_app.package_version' } & DevicesUpdateMobileAppPackageVersionErrorComponent | { attr: 'name' } & DevicesUpdateNameErrorComponent | { attr: 'non_field_errors' } & DevicesUpdateNonFieldErrorsErrorComponent | { attr: 'os.locale' } & DevicesUpdateOsLocaleErrorComponent | { attr: 'os.name' } & DevicesUpdateOsNameErrorComponent | { attr: 'os.non_field_errors' } & DevicesUpdateOsNonFieldErrorsErrorComponent | { attr: 'os.version' } & DevicesUpdateOsVersionErrorComponent;
 

@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { AuthSignupGuestError } from './auth-signup-guest-error';
 
-/**
- * 
- * @export
- * @interface AuthSignupGuestValidationError
- */
 export interface AuthSignupGuestValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof AuthSignupGuestValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<AuthSignupGuestError>}
-     * @memberof AuthSignupGuestValidationError
-     */
     'errors': Array<AuthSignupGuestError>;
 }
 

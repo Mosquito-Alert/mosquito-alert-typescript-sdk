@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface AdmBoundary
- */
 export interface AdmBoundary {
-    /**
-     * 
-     * @type {string}
-     * @memberof AdmBoundary
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AdmBoundary
-     */
     'code': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AdmBoundary
-     */
     'source': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof AdmBoundary
-     */
     'level': number;
 }
 

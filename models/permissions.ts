@@ -23,29 +23,9 @@ import type { IdentificationTaskPermission } from './identification-task-permiss
 // @ts-ignore
 import type { ReviewPermission } from './review-permission';
 
-/**
- * 
- * @export
- * @interface Permissions
- */
 export interface Permissions {
-    /**
-     * 
-     * @type {AnnotationPermission}
-     * @memberof Permissions
-     */
     'annotation': AnnotationPermission;
-    /**
-     * 
-     * @type {IdentificationTaskPermission}
-     * @memberof Permissions
-     */
     'identification_task': IdentificationTaskPermission;
-    /**
-     * 
-     * @type {ReviewPermission}
-     * @memberof Permissions
-     */
     'review': ReviewPermission;
 }
 

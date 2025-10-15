@@ -20,71 +20,22 @@ import type { MinimalUserLocale } from './minimal-user-locale';
 // @ts-ignore
 import type { UserScore } from './user-score';
 
-/**
- * 
- * @export
- * @interface User
- */
 export interface User {
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
     'uuid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
     'username': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
     'first_name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
     'last_name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
     'full_name': string;
     /**
      * The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
-     * @type {string}
-     * @memberof User
      */
     'registration_time': string;
-    /**
-     * 
-     * @type {MinimalUserLocale}
-     * @memberof User
-     */
     'locale'?: MinimalUserLocale;
     /**
      * ISO 639-1 code
-     * @type {string}
-     * @memberof User
      */
     'language_iso': string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof User
-     */
     'is_guest': boolean;
-    /**
-     * 
-     * @type {UserScore}
-     * @memberof User
-     */
     'score': UserScore;
 }
 

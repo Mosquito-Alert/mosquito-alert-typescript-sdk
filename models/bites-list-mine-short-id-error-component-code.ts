@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListMineShortIdErrorComponentCode = {
     NullCharactersNotAllowed: 'null_characters_not_allowed',

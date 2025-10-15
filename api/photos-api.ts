@@ -41,7 +41,6 @@ import type { PhotosPredictionPartialUpdateValidationError } from '../models';
 import type { PhotosPredictionUpdateValidationError } from '../models';
 /**
  * PhotosApi - axios parameter creator
- * @export
  */
 export const PhotosApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -270,7 +269,6 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
 
 /**
  * PhotosApi - functional programming interface
- * @export
  */
 export const PhotosApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PhotosApiAxiosParamCreator(configuration)
@@ -342,7 +340,6 @@ export const PhotosApiFp = function(configuration?: Configuration) {
 
 /**
  * PhotosApi - factory interface
- * @export
  */
 export const PhotosApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PhotosApiFp(configuration)
@@ -397,93 +394,45 @@ export const PhotosApiFactory = function (configuration?: Configuration, basePat
 
 /**
  * Request parameters for predictionDestroy operation in PhotosApi.
- * @export
- * @interface PhotosApiPredictionDestroyRequest
  */
 export interface PhotosApiPredictionDestroyRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosApiPredictionDestroy
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for predictionPartialUpdate operation in PhotosApi.
- * @export
- * @interface PhotosApiPredictionPartialUpdateRequest
  */
 export interface PhotosApiPredictionPartialUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosApiPredictionPartialUpdate
-     */
     readonly uuid: string
 
-    /**
-     * 
-     * @type {PatchedPhotoPredictionRequest}
-     * @memberof PhotosApiPredictionPartialUpdate
-     */
     readonly patchedPhotoPredictionRequest?: PatchedPhotoPredictionRequest
 }
 
 /**
  * Request parameters for predictionRetrieve operation in PhotosApi.
- * @export
- * @interface PhotosApiPredictionRetrieveRequest
  */
 export interface PhotosApiPredictionRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosApiPredictionRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for predictionUpdate operation in PhotosApi.
- * @export
- * @interface PhotosApiPredictionUpdateRequest
  */
 export interface PhotosApiPredictionUpdateRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosApiPredictionUpdate
-     */
     readonly uuid: string
 
-    /**
-     * 
-     * @type {PhotoPredictionRequest}
-     * @memberof PhotosApiPredictionUpdate
-     */
     readonly photoPredictionRequest: PhotoPredictionRequest
 }
 
 /**
  * Request parameters for retrieve operation in PhotosApi.
- * @export
- * @interface PhotosApiRetrieveRequest
  */
 export interface PhotosApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof PhotosApiRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * PhotosApi - object-oriented interface
- * @export
- * @class PhotosApi
- * @extends {BaseAPI}
  */
 export class PhotosApi extends BaseAPI {
     /**
@@ -491,7 +440,6 @@ export class PhotosApi extends BaseAPI {
      * @param {PhotosApiPredictionDestroyRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PhotosApi
      */
     public predictionDestroy(requestParameters: PhotosApiPredictionDestroyRequest, options?: RawAxiosRequestConfig) {
         return PhotosApiFp(this.configuration).predictionDestroy(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -502,7 +450,6 @@ export class PhotosApi extends BaseAPI {
      * @param {PhotosApiPredictionPartialUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PhotosApi
      */
     public predictionPartialUpdate(requestParameters: PhotosApiPredictionPartialUpdateRequest, options?: RawAxiosRequestConfig) {
         return PhotosApiFp(this.configuration).predictionPartialUpdate(requestParameters.uuid, requestParameters.patchedPhotoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
@@ -513,7 +460,6 @@ export class PhotosApi extends BaseAPI {
      * @param {PhotosApiPredictionRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PhotosApi
      */
     public predictionRetrieve(requestParameters: PhotosApiPredictionRetrieveRequest, options?: RawAxiosRequestConfig) {
         return PhotosApiFp(this.configuration).predictionRetrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -524,7 +470,6 @@ export class PhotosApi extends BaseAPI {
      * @param {PhotosApiPredictionUpdateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PhotosApi
      */
     public predictionUpdate(requestParameters: PhotosApiPredictionUpdateRequest, options?: RawAxiosRequestConfig) {
         return PhotosApiFp(this.configuration).predictionUpdate(requestParameters.uuid, requestParameters.photoPredictionRequest, options).then((request) => request(this.axios, this.basePath));
@@ -535,7 +480,6 @@ export class PhotosApi extends BaseAPI {
      * @param {PhotosApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PhotosApi
      */
     public retrieve(requestParameters: PhotosApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return PhotosApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));

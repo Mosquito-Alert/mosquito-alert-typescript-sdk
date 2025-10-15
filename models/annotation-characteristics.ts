@@ -17,29 +17,9 @@
 // @ts-ignore
 import type { AnnotationCharacteristicsSex } from './annotation-characteristics-sex';
 
-/**
- * 
- * @export
- * @interface AnnotationCharacteristics
- */
 export interface AnnotationCharacteristics {
-    /**
-     * 
-     * @type {AnnotationCharacteristicsSex}
-     * @memberof AnnotationCharacteristics
-     */
     'sex'?: AnnotationCharacteristicsSex | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationCharacteristics
-     */
     'is_blood_fed'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationCharacteristics
-     */
     'is_gravid'?: boolean;
 }
 

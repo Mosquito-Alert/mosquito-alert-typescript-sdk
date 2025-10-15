@@ -20,29 +20,9 @@ import type { DevicesCreateMobileAppPackageVersionErrorComponentAttr } from './d
 // @ts-ignore
 import type { DevicesCreateMobileAppPackageVersionErrorComponentCode } from './devices-create-mobile-app-package-version-error-component-code';
 
-/**
- * 
- * @export
- * @interface DevicesCreateMobileAppPackageVersionErrorComponent
- */
 export interface DevicesCreateMobileAppPackageVersionErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateMobileAppPackageVersionErrorComponentAttr}
-     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
-     */
     'attr': DevicesCreateMobileAppPackageVersionErrorComponentAttr;
-    /**
-     * 
-     * @type {DevicesCreateMobileAppPackageVersionErrorComponentCode}
-     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
-     */
     'code': DevicesCreateMobileAppPackageVersionErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesCreateMobileAppPackageVersionErrorComponent
-     */
     'detail': string;
 }
 

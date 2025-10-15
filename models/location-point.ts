@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface LocationPoint
- */
 export interface LocationPoint {
-    /**
-     * 
-     * @type {number}
-     * @memberof LocationPoint
-     */
     'latitude': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LocationPoint
-     */
     'longitude': number;
 }
 

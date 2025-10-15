@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { AuthVerifyTokenTokenErrorComponentAttr } from './auth-verify-token-token-error-component-attr';
 
-/**
- * 
- * @export
- * @interface AuthVerifyTokenTokenErrorComponent
- */
 export interface AuthVerifyTokenTokenErrorComponent {
-    /**
-     * 
-     * @type {AuthVerifyTokenTokenErrorComponentAttr}
-     * @memberof AuthVerifyTokenTokenErrorComponent
-     */
     'attr': AuthVerifyTokenTokenErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof AuthVerifyTokenTokenErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthVerifyTokenTokenErrorComponent
-     */
     'detail': string;
 }
 

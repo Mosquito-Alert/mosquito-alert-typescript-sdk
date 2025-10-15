@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineResultAgreementErrorComponentAttr = {
     ResultAgreement: 'result_agreement',

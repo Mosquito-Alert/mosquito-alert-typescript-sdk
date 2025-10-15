@@ -43,7 +43,6 @@ import type { BreedingsitesListMineUserUuidErrorComponent } from './breedingsite
 
 /**
  * @type BreedingsitesListMineError
- * @export
  */
 export type BreedingsitesListMineError = { attr: 'country_id' } & BreedingsitesListMineCountryIdErrorComponent | { attr: 'created_at' } & BreedingsitesListMineCreatedAtErrorComponent | { attr: 'order_by' } & BreedingsitesListMineOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListMineReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListMineShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListMineUserUuidErrorComponent;
 

@@ -14,22 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface SimplePhoto
- */
 export interface SimplePhoto {
-    /**
-     * 
-     * @type {string}
-     * @memberof SimplePhoto
-     */
     'uuid': string;
     /**
      * URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
-     * @type {string}
-     * @memberof SimplePhoto
      */
     'url': string;
 }

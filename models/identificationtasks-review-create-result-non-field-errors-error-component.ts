@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsEr
 // @ts-ignore
 import type { IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr } from './identificationtasks-review-create-result-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
- */
 export interface IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr}
-     * @memberof IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
-     */
     'attr': IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

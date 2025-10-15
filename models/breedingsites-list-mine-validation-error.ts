@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { BreedingsitesListMineError } from './breedingsites-list-mine-error';
 
-/**
- * 
- * @export
- * @interface BreedingsitesListMineValidationError
- */
 export interface BreedingsitesListMineValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof BreedingsitesListMineValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<BreedingsitesListMineError>}
-     * @memberof BreedingsitesListMineValidationError
-     */
     'errors': Array<BreedingsitesListMineError>;
 }
 

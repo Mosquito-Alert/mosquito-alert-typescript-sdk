@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr = {
     InsectConfidence: 'insect_confidence',

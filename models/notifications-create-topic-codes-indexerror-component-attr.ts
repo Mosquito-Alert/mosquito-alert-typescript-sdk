@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateTopicCodesINDEXErrorComponentAttr = {
     TopicCodesIndex: 'topic_codes.INDEX',

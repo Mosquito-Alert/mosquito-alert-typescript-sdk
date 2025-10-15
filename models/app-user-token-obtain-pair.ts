@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface AppUserTokenObtainPair
- */
 export interface AppUserTokenObtainPair {
-    /**
-     * 
-     * @type {string}
-     * @memberof AppUserTokenObtainPair
-     */
     'access': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AppUserTokenObtainPair
-     */
     'refresh': string;
 }
 

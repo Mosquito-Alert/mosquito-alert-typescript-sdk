@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesCreateSentAtErrorComponentAttr = {
     SentAt: 'sent_at',

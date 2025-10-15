@@ -17,29 +17,9 @@
 // @ts-ignore
 import type { Error404Code } from './error404-code';
 
-/**
- * 
- * @export
- * @interface Error404
- */
 export interface Error404 {
-    /**
-     * 
-     * @type {Error404Code}
-     * @memberof Error404
-     */
     'code': Error404Code;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error404
-     */
     'detail': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Error404
-     */
     'attr': string | null;
 }
 

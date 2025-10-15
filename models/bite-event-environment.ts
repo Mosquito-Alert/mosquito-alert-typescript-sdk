@@ -16,8 +16,6 @@
 
 /**
  * The environment where the event took place.
- * @export
- * @enum {string}
  */
 
 export const BiteEventEnvironment = {

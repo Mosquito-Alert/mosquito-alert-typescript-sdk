@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BitesListMineOrderByErrorComponentAttr = {
     OrderBy: 'order_by',

@@ -28,7 +28,6 @@ import type { NotificationsUpdateNonFieldErrorsErrorComponent } from './notifica
 
 /**
  * @type NotificationsUpdateError
- * @export
  */
 export type NotificationsUpdateError = { attr: 'is_read' } & NotificationsUpdateIsReadErrorComponent | { attr: 'non_field_errors' } & NotificationsUpdateNonFieldErrorsErrorComponent;
 

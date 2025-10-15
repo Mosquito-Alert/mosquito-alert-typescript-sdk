@@ -46,7 +46,6 @@ import type { FixesCreateSentAtErrorComponent } from './fixes-create-sent-at-err
 
 /**
  * @type FixesCreateError
- * @export
  */
 export type FixesCreateError = { attr: 'coverage_uuid' } & FixesCreateCoverageUuidErrorComponent | { attr: 'created_at' } & FixesCreateCreatedAtErrorComponent | { attr: 'non_field_errors' } & FixesCreateNonFieldErrorsErrorComponent | { attr: 'point.latitude' } & FixesCreatePointLatitudeErrorComponent | { attr: 'point.longitude' } & FixesCreatePointLongitudeErrorComponent | { attr: 'point.non_field_errors' } & FixesCreatePointNonFieldErrorsErrorComponent | { attr: 'power' } & FixesCreatePowerErrorComponent | { attr: 'sent_at' } & FixesCreateSentAtErrorComponent;
 

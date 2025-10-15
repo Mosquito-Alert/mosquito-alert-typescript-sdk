@@ -28,7 +28,6 @@ import type { AuthRefreshTokenRefreshErrorComponentAttr } from './auth-refresh-t
 
 /**
  * @type AuthRefreshTokenError
- * @export
  */
 export type AuthRefreshTokenError = { attr: 'non_field_errors' } & AuthRefreshTokenNonFieldErrorsErrorComponent | { attr: 'refresh' } & AuthRefreshTokenRefreshErrorComponent;
 

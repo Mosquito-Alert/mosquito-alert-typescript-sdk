@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorCompo
 // @ts-ignore
 import type { IdentificationtasksListMineObservationCountryIdsErrorComponentAttr } from './identificationtasks-list-mine-observation-country-ids-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksListMineObservationCountryIdsErrorComponent
- */
 export interface IdentificationtasksListMineObservationCountryIdsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksListMineObservationCountryIdsErrorComponentAttr}
-     * @memberof IdentificationtasksListMineObservationCountryIdsErrorComponent
-     */
     'attr': IdentificationtasksListMineObservationCountryIdsErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode}
-     * @memberof IdentificationtasksListMineObservationCountryIdsErrorComponent
-     */
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksListMineObservationCountryIdsErrorComponent
-     */
     'detail': string;
 }
 

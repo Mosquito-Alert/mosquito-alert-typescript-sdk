@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr = {
     CharacteristicsIsBloodFed: 'characteristics.is_blood_fed',

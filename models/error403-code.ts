@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const Error403Code = {
     PermissionDenied: 'permission_denied',

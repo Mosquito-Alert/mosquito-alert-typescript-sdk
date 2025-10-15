@@ -16,8 +16,6 @@
 
 /**
  * The mosquito specie perceived by the user.
- * @export
- * @enum {string}
  */
 
 export const MosquitoAppearanceSpecie = {

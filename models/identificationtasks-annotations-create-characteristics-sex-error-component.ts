@@ -20,29 +20,9 @@ import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-crea
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-sex-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesCreateEventEnvironmentErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent
-     */
     'code': BitesCreateEventEnvironmentErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent
-     */
     'detail': string;
 }
 

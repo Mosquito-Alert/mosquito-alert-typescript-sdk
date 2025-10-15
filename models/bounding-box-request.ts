@@ -14,34 +14,21 @@
 
 
 
-/**
- * 
- * @export
- * @interface BoundingBoxRequest
- */
 export interface BoundingBoxRequest {
     /**
      * photo bounding box relative coordinates top left x
-     * @type {number}
-     * @memberof BoundingBoxRequest
      */
     'x_min': number;
     /**
      * photo bounding box relative coordinates top left y
-     * @type {number}
-     * @memberof BoundingBoxRequest
      */
     'y_min': number;
     /**
      * photo bounding box relative coordinates bottom right x
-     * @type {number}
-     * @memberof BoundingBoxRequest
      */
     'x_max': number;
     /**
      * photo bounding box relative coordinates bottom right y
-     * @type {number}
-     * @memberof BoundingBoxRequest
      */
     'y_max': number;
 }

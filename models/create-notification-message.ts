@@ -20,22 +20,13 @@ import type { LocalizedMessageBody } from './localized-message-body';
 // @ts-ignore
 import type { LocalizedMessageTitle } from './localized-message-title';
 
-/**
- * 
- * @export
- * @interface CreateNotificationMessage
- */
 export interface CreateNotificationMessage {
     /**
      * Provide the message\'s title in all supported languages
-     * @type {LocalizedMessageTitle}
-     * @memberof CreateNotificationMessage
      */
     'title': LocalizedMessageTitle;
     /**
      * Provide the message\'s body in all supported languages
-     * @type {LocalizedMessageBody}
-     * @memberof CreateNotificationMessage
      */
     'body': LocalizedMessageBody;
 }

@@ -43,7 +43,6 @@ import type { ErrorResponse404 } from '../models';
 import type { PaginatedBiteList } from '../models';
 /**
  * BitesApi - axios parameter creator
- * @export
  */
 export const BitesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -400,7 +399,6 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
 
 /**
  * BitesApi - functional programming interface
- * @export
  */
 export const BitesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = BitesApiAxiosParamCreator(configuration)
@@ -492,7 +490,6 @@ export const BitesApiFp = function(configuration?: Configuration) {
 
 /**
  * BitesApi - factory interface
- * @export
  */
 export const BitesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = BitesApiFp(configuration)
@@ -547,233 +544,145 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
 
 /**
  * Request parameters for create operation in BitesApi.
- * @export
- * @interface BitesApiCreateRequest
  */
 export interface BitesApiCreateRequest {
-    /**
-     * 
-     * @type {BiteRequest}
-     * @memberof BitesApiCreate
-     */
     readonly biteRequest: BiteRequest
 }
 
 /**
  * Request parameters for destroy operation in BitesApi.
- * @export
- * @interface BitesApiDestroyRequest
  */
 export interface BitesApiDestroyRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesApiDestroy
-     */
     readonly uuid: string
 }
 
 /**
  * Request parameters for list operation in BitesApi.
- * @export
- * @interface BitesApiListRequest
  */
 export interface BitesApiListRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof BitesApiList
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly createdAtBefore?: string
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof BitesApiList
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof BitesApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof BitesApiList
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BitesApiList
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesApiList
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for listMine operation in BitesApi.
- * @export
- * @interface BitesApiListMineRequest
  */
 export interface BitesApiListMineRequest {
-    /**
-     * 
-     * @type {number}
-     * @memberof BitesApiListMine
-     */
     readonly countryId?: number | null
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly createdAtAfter?: string
 
     /**
      * Created at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly createdAtBefore?: string
 
     /**
      * Ordenado  
-     * @type {Array<BitesListOrderByParameter>}
-     * @memberof BitesApiListMine
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof BitesApiListMine
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof BitesApiListMine
      */
     readonly pageSize?: number
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly receivedAtAfter?: string
 
     /**
      * Received at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly receivedAtBefore?: string
 
     /**
      * Short ID
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly shortId?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly updatedAtAfter?: string
 
     /**
      * Update at
-     * @type {string}
-     * @memberof BitesApiListMine
      */
     readonly updatedAtBefore?: string
 
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesApiListMine
-     */
     readonly userUuid?: string
 }
 
 /**
  * Request parameters for retrieve operation in BitesApi.
- * @export
- * @interface BitesApiRetrieveRequest
  */
 export interface BitesApiRetrieveRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof BitesApiRetrieve
-     */
     readonly uuid: string
 }
 
 /**
  * BitesApi - object-oriented interface
- * @export
- * @class BitesApi
- * @extends {BaseAPI}
  */
 export class BitesApi extends BaseAPI {
     /**
@@ -781,7 +690,6 @@ export class BitesApi extends BaseAPI {
      * @param {BitesApiCreateRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BitesApi
      */
     public create(requestParameters: BitesApiCreateRequest, options?: RawAxiosRequestConfig) {
         return BitesApiFp(this.configuration).create(requestParameters.biteRequest, options).then((request) => request(this.axios, this.basePath));
@@ -792,7 +700,6 @@ export class BitesApi extends BaseAPI {
      * @param {BitesApiDestroyRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BitesApi
      */
     public destroy(requestParameters: BitesApiDestroyRequest, options?: RawAxiosRequestConfig) {
         return BitesApiFp(this.configuration).destroy(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));
@@ -803,7 +710,6 @@ export class BitesApi extends BaseAPI {
      * @param {BitesApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BitesApi
      */
     public list(requestParameters: BitesApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return BitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -814,7 +720,6 @@ export class BitesApi extends BaseAPI {
      * @param {BitesApiListMineRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BitesApi
      */
     public listMine(requestParameters: BitesApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
         return BitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
@@ -825,7 +730,6 @@ export class BitesApi extends BaseAPI {
      * @param {BitesApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof BitesApi
      */
     public retrieve(requestParameters: BitesApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return BitesApiFp(this.configuration).retrieve(requestParameters.uuid, options).then((request) => request(this.axios, this.basePath));

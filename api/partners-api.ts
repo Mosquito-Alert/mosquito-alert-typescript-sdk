@@ -33,7 +33,6 @@ import type { PaginatedPartnerList } from '../models';
 import type { Partner } from '../models';
 /**
  * PartnersApi - axios parameter creator
- * @export
  */
 export const PartnersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -132,7 +131,6 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * PartnersApi - functional programming interface
- * @export
  */
 export const PartnersApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PartnersApiAxiosParamCreator(configuration)
@@ -167,7 +165,6 @@ export const PartnersApiFp = function(configuration?: Configuration) {
 
 /**
  * PartnersApi - factory interface
- * @export
  */
 export const PartnersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PartnersApiFp(configuration)
@@ -195,44 +192,31 @@ export const PartnersApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * Request parameters for list operation in PartnersApi.
- * @export
- * @interface PartnersApiListRequest
  */
 export interface PartnersApiListRequest {
     /**
      * A page number within the paginated result set.
-     * @type {number}
-     * @memberof PartnersApiList
      */
     readonly page?: number
 
     /**
      * Number of results to return per page.
-     * @type {number}
-     * @memberof PartnersApiList
      */
     readonly pageSize?: number
 }
 
 /**
  * Request parameters for retrieve operation in PartnersApi.
- * @export
- * @interface PartnersApiRetrieveRequest
  */
 export interface PartnersApiRetrieveRequest {
     /**
      * A unique integer value identifying this organization pin.
-     * @type {number}
-     * @memberof PartnersApiRetrieve
      */
     readonly id: number
 }
 
 /**
  * PartnersApi - object-oriented interface
- * @export
- * @class PartnersApi
- * @extends {BaseAPI}
  */
 export class PartnersApi extends BaseAPI {
     /**
@@ -240,7 +224,6 @@ export class PartnersApi extends BaseAPI {
      * @param {PartnersApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PartnersApi
      */
     public list(requestParameters: PartnersApiListRequest = {}, options?: RawAxiosRequestConfig) {
         return PartnersApiFp(this.configuration).list(requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
@@ -251,7 +234,6 @@ export class PartnersApi extends BaseAPI {
      * @param {PartnersApiRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PartnersApi
      */
     public retrieve(requestParameters: PartnersApiRetrieveRequest, options?: RawAxiosRequestConfig) {
         return PartnersApiFp(this.configuration).retrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));

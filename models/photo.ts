@@ -14,28 +14,14 @@
 
 
 
-/**
- * 
- * @export
- * @interface Photo
- */
 export interface Photo {
-    /**
-     * 
-     * @type {string}
-     * @memberof Photo
-     */
     'uuid': string;
     /**
      * Photo uploaded by user.
-     * @type {string}
-     * @memberof Photo
      */
     'image_url': string;
     /**
      * Internal server path of the image.
-     * @type {string}
-     * @memberof Photo
      */
     'image_path': string;
 }

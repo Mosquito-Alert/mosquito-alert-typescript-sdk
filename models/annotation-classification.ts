@@ -20,35 +20,10 @@ import type { AnnotationClassificationConfidenceLabel } from './annotation-class
 // @ts-ignore
 import type { SimpleTaxon } from './simple-taxon';
 
-/**
- * 
- * @export
- * @interface AnnotationClassification
- */
 export interface AnnotationClassification {
-    /**
-     * 
-     * @type {SimpleTaxon}
-     * @memberof AnnotationClassification
-     */
     'taxon': SimpleTaxon;
-    /**
-     * 
-     * @type {number}
-     * @memberof AnnotationClassification
-     */
     'confidence': number;
-    /**
-     * 
-     * @type {AnnotationClassificationConfidenceLabel}
-     * @memberof AnnotationClassification
-     */
     'confidence_label': AnnotationClassificationConfidenceLabel;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnnotationClassification
-     */
     'is_high_confidence': boolean;
 }
 

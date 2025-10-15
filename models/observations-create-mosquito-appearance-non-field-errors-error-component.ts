@@ -20,29 +20,9 @@ import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-
 // @ts-ignore
 import type { ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr } from './observations-create-mosquito-appearance-non-field-errors-error-component-attr';
 
-/**
- * 
- * @export
- * @interface ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
- */
 export interface ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr}
-     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
-     */
     'attr': ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {BitesListCreatedAtErrorComponentCode}
-     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
-     */
     'code': BitesListCreatedAtErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

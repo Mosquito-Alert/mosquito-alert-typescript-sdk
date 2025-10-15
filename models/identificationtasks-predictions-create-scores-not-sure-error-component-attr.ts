@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr = {
     ScoresNotSure: 'scores.not_sure',

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksListMineResultSourceErrorComponentAttr = {
     ResultSource: 'result_source',

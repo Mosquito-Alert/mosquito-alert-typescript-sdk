@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateBboxYMinErrorComponentAttr = {
     BboxYMin: 'bbox.y_min',

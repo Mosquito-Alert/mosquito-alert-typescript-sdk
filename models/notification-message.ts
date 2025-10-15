@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface NotificationMessage
- */
 export interface NotificationMessage {
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationMessage
-     */
     'title': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NotificationMessage
-     */
     'body': string;
 }
 

@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttr = {
     BboxYMax: 'bbox.y_max',

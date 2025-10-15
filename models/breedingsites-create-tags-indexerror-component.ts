@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { BitesCreateTagsINDEXErrorComponentAttr } from './bites-create-tags-indexerror-component-attr';
 
-/**
- * 
- * @export
- * @interface BreedingsitesCreateTagsINDEXErrorComponent
- */
 export interface BreedingsitesCreateTagsINDEXErrorComponent {
-    /**
-     * 
-     * @type {BitesCreateTagsINDEXErrorComponentAttr}
-     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
-     */
     'attr': BitesCreateTagsINDEXErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof BreedingsitesCreateTagsINDEXErrorComponent
-     */
     'detail': string;
 }
 

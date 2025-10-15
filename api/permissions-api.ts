@@ -29,7 +29,6 @@ import type { ErrorResponse404 } from '../models';
 import type { UserPermission } from '../models';
 /**
  * PermissionsApi - axios parameter creator
- * @export
  */
 export const PermissionsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -76,7 +75,6 @@ export const PermissionsApiAxiosParamCreator = function (configuration?: Configu
 
 /**
  * PermissionsApi - functional programming interface
- * @export
  */
 export const PermissionsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PermissionsApiAxiosParamCreator(configuration)
@@ -97,7 +95,6 @@ export const PermissionsApiFp = function(configuration?: Configuration) {
 
 /**
  * PermissionsApi - factory interface
- * @export
  */
 export const PermissionsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PermissionsApiFp(configuration)
@@ -115,16 +112,12 @@ export const PermissionsApiFactory = function (configuration?: Configuration, ba
 
 /**
  * PermissionsApi - object-oriented interface
- * @export
- * @class PermissionsApi
- * @extends {BaseAPI}
  */
 export class PermissionsApi extends BaseAPI {
     /**
      * Get Current User\'s Permissions
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PermissionsApi
      */
     public retrieveMine(options?: RawAxiosRequestConfig) {
         return PermissionsApiFp(this.configuration).retrieveMine(options).then((request) => request(this.axios, this.basePath));

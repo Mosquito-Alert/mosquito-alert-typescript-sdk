@@ -20,29 +20,9 @@ import type { IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsEr
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode } from './identificationtasks-annotations-create-classification-non-field-errors-error-component-code';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentAttr;
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent
-     */
     'code': IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent
-     */
     'detail': string;
 }
 

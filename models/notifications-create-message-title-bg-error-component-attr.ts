@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const NotificationsCreateMessageTitleBgErrorComponentAttr = {
     MessageTitleBg: 'message.title.bg',

@@ -16,8 +16,6 @@
 
 /**
  * The species of mosquito that the leg resembles, according to the user.
- * @export
- * @enum {string}
  */
 
 export const MosquitoAppearanceLegs = {

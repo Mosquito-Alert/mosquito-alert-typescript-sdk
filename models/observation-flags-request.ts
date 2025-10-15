@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface ObservationFlagsRequest
- */
 export interface ObservationFlagsRequest {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ObservationFlagsRequest
-     */
     'is_favourite'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ObservationFlagsRequest
-     */
     'is_visible'?: boolean;
 }
 

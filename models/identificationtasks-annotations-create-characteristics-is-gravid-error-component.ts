@@ -20,29 +20,9 @@ import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-is-gravid-error-component-attr';
 
-/**
- * 
- * @export
- * @interface IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
- */
 export interface IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent {
-    /**
-     * 
-     * @type {IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
-     */
     'attr': IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthChangePasswordNonFieldErrorsErrorComponentCode}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
-     */
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
-     */
     'detail': string;
 }
 

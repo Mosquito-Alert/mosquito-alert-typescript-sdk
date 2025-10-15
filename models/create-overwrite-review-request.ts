@@ -20,41 +20,14 @@ import type { AnnotationClassificationRequest } from './annotation-classificatio
 // @ts-ignore
 import type { CreateOverwriteReviewRequestAction } from './create-overwrite-review-request-action';
 
-/**
- * 
- * @export
- * @interface CreateOverwriteReviewRequest
- */
 export interface CreateOverwriteReviewRequest {
-    /**
-     * 
-     * @type {CreateOverwriteReviewRequestAction}
-     * @memberof CreateOverwriteReviewRequest
-     */
     'action'?: CreateOverwriteReviewRequestAction;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateOverwriteReviewRequest
-     */
     'public_photo_uuid': string;
     /**
      * Indicates if the content is safe for publication.
-     * @type {boolean}
-     * @memberof CreateOverwriteReviewRequest
      */
     'is_safe': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateOverwriteReviewRequest
-     */
     'public_note': string | null;
-    /**
-     * 
-     * @type {AnnotationClassificationRequest}
-     * @memberof CreateOverwriteReviewRequest
-     */
     'result': AnnotationClassificationRequest | null;
 }
 

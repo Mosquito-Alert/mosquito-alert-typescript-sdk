@@ -17,17 +17,7 @@
 // @ts-ignore
 import type { SimplePhotoRequest } from './simple-photo-request';
 
-/**
- * 
- * @export
- * @interface IdentificationRequest
- */
 export interface IdentificationRequest {
-    /**
-     * 
-     * @type {SimplePhotoRequest}
-     * @memberof IdentificationRequest
-     */
     'photo': SimplePhotoRequest;
 }
 

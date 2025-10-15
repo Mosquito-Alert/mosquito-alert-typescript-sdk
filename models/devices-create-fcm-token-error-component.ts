@@ -20,29 +20,9 @@ import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-to
 // @ts-ignore
 import type { DevicesCreateFcmTokenErrorComponentAttr } from './devices-create-fcm-token-error-component-attr';
 
-/**
- * 
- * @export
- * @interface DevicesCreateFcmTokenErrorComponent
- */
 export interface DevicesCreateFcmTokenErrorComponent {
-    /**
-     * 
-     * @type {DevicesCreateFcmTokenErrorComponentAttr}
-     * @memberof DevicesCreateFcmTokenErrorComponent
-     */
     'attr': DevicesCreateFcmTokenErrorComponentAttr;
-    /**
-     * 
-     * @type {AuthObtainTokenPasswordErrorComponentCode}
-     * @memberof DevicesCreateFcmTokenErrorComponent
-     */
     'code': AuthObtainTokenPasswordErrorComponentCode;
-    /**
-     * 
-     * @type {string}
-     * @memberof DevicesCreateFcmTokenErrorComponent
-     */
     'detail': string;
 }
 

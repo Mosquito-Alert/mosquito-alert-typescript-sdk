@@ -20,23 +20,8 @@ import type { AuthChangePasswordValidationErrorType } from './auth-change-passwo
 // @ts-ignore
 import type { PhotosPredictionPartialUpdateError } from './photos-prediction-partial-update-error';
 
-/**
- * 
- * @export
- * @interface PhotosPredictionPartialUpdateValidationError
- */
 export interface PhotosPredictionPartialUpdateValidationError {
-    /**
-     * 
-     * @type {AuthChangePasswordValidationErrorType}
-     * @memberof PhotosPredictionPartialUpdateValidationError
-     */
     'type': AuthChangePasswordValidationErrorType;
-    /**
-     * 
-     * @type {Array<PhotosPredictionPartialUpdateError>}
-     * @memberof PhotosPredictionPartialUpdateValidationError
-     */
     'errors': Array<PhotosPredictionPartialUpdateError>;
 }
 

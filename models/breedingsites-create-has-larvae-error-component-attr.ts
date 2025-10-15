@@ -14,11 +14,6 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BreedingsitesCreateHasLarvaeErrorComponentAttr = {
     HasLarvae: 'has_larvae',
