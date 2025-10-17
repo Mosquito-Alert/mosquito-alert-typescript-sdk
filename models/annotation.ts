@@ -34,9 +34,6 @@ import type { SimplePhoto } from './simple-photo';
 
 export interface Annotation {
     'id': number;
-    /**
-     * UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
-     */
     'observation_uuid': string;
     'user': SimpleAnnotatorUser;
     'best_photo': SimplePhoto | null;
