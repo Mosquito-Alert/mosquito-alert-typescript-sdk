@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { LocationPoint } from './location-point';
+import type { LocationSource } from './location-source';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { LocationSource } from './location-source';
+import type { PointRequest } from './point-request';
 
 export interface LocationRequest {
     'source': LocationSource;
-    'point': LocationPoint;
+    'point': PointRequest;
 }
 
 

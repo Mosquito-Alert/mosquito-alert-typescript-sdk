@@ -47,8 +47,6 @@ import type { ObservationsListMineValidationError } from '../models';
 import type { ObservationsListValidationError } from '../models';
 // @ts-ignore
 import type { PaginatedObservationList } from '../models';
-// @ts-ignore
-import type { SimplePhotoRequest } from '../models';
 /**
  * ObservationsApi - axios parameter creator
  */
@@ -59,7 +57,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} createdAt 
          * @param {string} sentAt 
          * @param {LocationRequest} location 
-         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {Array<File>} photos 
          * @param {string | null} [note] Note user attached to report.
          * @param {Array<string>} [tags] 
          * @param {BiteEventEnvironment | null} [eventEnvironment] 
@@ -68,7 +66,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: BiteEventEnvironment | null, eventMoment?: BiteEventMoment | null, mosquitoAppearance?: MosquitoAppearanceRequest | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, note?: string | null, tags?: Array<string>, eventEnvironment?: BiteEventEnvironment | null, eventMoment?: BiteEventMoment | null, mosquitoAppearance?: MosquitoAppearanceRequest | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'createdAt' is not null or undefined
             assertParamExists('create', 'createdAt', createdAt)
             // verify required parameter 'sentAt' is not null or undefined
@@ -120,7 +118,9 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             }
 
                 if (photos) {
-                localVarFormParams.append('photos', photos.join(COLLECTION_FORMATS.csv));
+                photos.forEach((element) => {
+                    localVarFormParams.append('photos', element as any);
+                })
             }
 
     
@@ -497,7 +497,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} createdAt 
          * @param {string} sentAt 
          * @param {LocationRequest} location 
-         * @param {Array<SimplePhotoRequest>} photos 
+         * @param {Array<File>} photos 
          * @param {string | null} [note] Note user attached to report.
          * @param {Array<string>} [tags] 
          * @param {BiteEventEnvironment | null} [eventEnvironment] 
@@ -506,7 +506,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<SimplePhotoRequest>, note?: string | null, tags?: Array<string>, eventEnvironment?: BiteEventEnvironment | null, eventMoment?: BiteEventMoment | null, mosquitoAppearance?: MosquitoAppearanceRequest | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
+        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, note?: string | null, tags?: Array<string>, eventEnvironment?: BiteEventEnvironment | null, eventMoment?: BiteEventMoment | null, mosquitoAppearance?: MosquitoAppearanceRequest | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Observation>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.create']?.[localVarOperationServerIndex]?.url;
@@ -655,7 +655,7 @@ export interface ObservationsApiCreateRequest {
 
     readonly location: LocationRequest
 
-    readonly photos: Array<SimplePhotoRequest>
+    readonly photos: Array<File>
 
     /**
      * Note user attached to report.

@@ -30,7 +30,13 @@ import type { ObservationsCreateEventMomentErrorComponent } from './observations
 import type { ObservationsCreateLocationNonFieldErrorsErrorComponent } from './observations-create-location-non-field-errors-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsCreateLocationPointErrorComponent } from './observations-create-location-point-error-component';
+import type { ObservationsCreateLocationPointLatitudeErrorComponent } from './observations-create-location-point-latitude-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ObservationsCreateLocationPointLongitudeErrorComponent } from './observations-create-location-point-longitude-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ObservationsCreateLocationPointNonFieldErrorsErrorComponent } from './observations-create-location-point-non-field-errors-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationsCreateLocationSourceErrorComponent } from './observations-create-location-source-error-component';
@@ -60,13 +66,10 @@ import type { ObservationsCreateNonFieldErrorsErrorComponent } from './observati
 import type { ObservationsCreateNoteErrorComponent } from './observations-create-note-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsCreatePhotosINDEXFileErrorComponent } from './observations-create-photos-indexfile-error-component';
+import type { ObservationsCreatePhotosErrorComponent } from './observations-create-photos-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent } from './observations-create-photos-indexnon-field-errors-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ObservationsCreatePhotosNonFieldErrorsErrorComponent } from './observations-create-photos-non-field-errors-error-component';
+import type { ObservationsCreatePhotosINDEXErrorComponent } from './observations-create-photos-indexerror-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationsCreateSentAtErrorComponent } from './observations-create-sent-at-error-component';
@@ -80,6 +83,6 @@ import type { ObservationsCreateTagsINDEXErrorComponent } from './observations-c
 /**
  * @type ObservationsCreateError
  */
-export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & ObservationsCreateLocationPointErrorComponent | { attr: 'location.source' } & ObservationsCreateLocationSourceErrorComponent | { attr: 'mosquito_appearance.abdomen' } & ObservationsCreateMosquitoAppearanceAbdomenErrorComponent | { attr: 'mosquito_appearance.legs' } & ObservationsCreateMosquitoAppearanceLegsErrorComponent | { attr: 'mosquito_appearance.non_field_errors' } & ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent | { attr: 'mosquito_appearance.specie' } & ObservationsCreateMosquitoAppearanceSpecieErrorComponent | { attr: 'mosquito_appearance.thorax' } & ObservationsCreateMosquitoAppearanceThoraxErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos.INDEX.file' } & ObservationsCreatePhotosINDEXFileErrorComponent | { attr: 'photos.INDEX.non_field_errors' } & ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent | { attr: 'photos.non_field_errors' } & ObservationsCreatePhotosNonFieldErrorsErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent;
+export type ObservationsCreateError = { attr: 'created_at' } & ObservationsCreateCreatedAtErrorComponent | { attr: 'event_environment' } & ObservationsCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & ObservationsCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & ObservationsCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point.latitude' } & ObservationsCreateLocationPointLatitudeErrorComponent | { attr: 'location.point.longitude' } & ObservationsCreateLocationPointLongitudeErrorComponent | { attr: 'location.point.non_field_errors' } & ObservationsCreateLocationPointNonFieldErrorsErrorComponent | { attr: 'location.source' } & ObservationsCreateLocationSourceErrorComponent | { attr: 'mosquito_appearance.abdomen' } & ObservationsCreateMosquitoAppearanceAbdomenErrorComponent | { attr: 'mosquito_appearance.legs' } & ObservationsCreateMosquitoAppearanceLegsErrorComponent | { attr: 'mosquito_appearance.non_field_errors' } & ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent | { attr: 'mosquito_appearance.specie' } & ObservationsCreateMosquitoAppearanceSpecieErrorComponent | { attr: 'mosquito_appearance.thorax' } & ObservationsCreateMosquitoAppearanceThoraxErrorComponent | { attr: 'non_field_errors' } & ObservationsCreateNonFieldErrorsErrorComponent | { attr: 'note' } & ObservationsCreateNoteErrorComponent | { attr: 'photos' } & ObservationsCreatePhotosErrorComponent | { attr: 'photos.INDEX' } & ObservationsCreatePhotosINDEXErrorComponent | { attr: 'sent_at' } & ObservationsCreateSentAtErrorComponent | { attr: 'tags' } & ObservationsCreateTagsErrorComponent | { attr: 'tags.INDEX' } & ObservationsCreateTagsINDEXErrorComponent;
 
 

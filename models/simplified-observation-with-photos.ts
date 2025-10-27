@@ -26,7 +26,7 @@ export interface SimplifiedObservationWithPhotos {
     'user_uuid': string;
     'created_at': string;
     /**
-     * The date and time when the record was created, displayed in the local timezone specified for this entry.
+     * The date and time when the record was created, displayed without timezone field.
      */
     'created_at_local': string;
     'received_at': string;

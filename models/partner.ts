@@ -15,11 +15,11 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { LocationPoint } from './location-point';
+import type { PartnerPoint } from './partner-point';
 
 export interface Partner {
     'id': number;
-    'point': LocationPoint;
+    'point': PartnerPoint;
     /**
      * Text desription on the pin. This text is meant to be visualized as the text body of the dialog on the map
      */

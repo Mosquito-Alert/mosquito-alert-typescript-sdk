@@ -54,7 +54,13 @@ import type { BitesCreateEventMomentErrorComponent } from './bites-create-event-
 import type { BitesCreateLocationNonFieldErrorsErrorComponent } from './bites-create-location-non-field-errors-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateLocationPointErrorComponent } from './bites-create-location-point-error-component';
+import type { BitesCreateLocationPointLatitudeErrorComponent } from './bites-create-location-point-latitude-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BitesCreateLocationPointLongitudeErrorComponent } from './bites-create-location-point-longitude-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BitesCreateLocationPointNonFieldErrorsErrorComponent } from './bites-create-location-point-non-field-errors-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BitesCreateLocationSourceErrorComponent } from './bites-create-location-source-error-component';
@@ -77,6 +83,6 @@ import type { BitesCreateTagsINDEXErrorComponent } from './bites-create-tags-ind
 /**
  * @type BitesCreateError
  */
-export type BitesCreateError = { attr: 'counts.chest' } & BitesCreateCountsChestErrorComponent | { attr: 'counts.head' } & BitesCreateCountsHeadErrorComponent | { attr: 'counts.left_arm' } & BitesCreateCountsLeftArmErrorComponent | { attr: 'counts.left_leg' } & BitesCreateCountsLeftLegErrorComponent | { attr: 'counts.non_field_errors' } & BitesCreateCountsNonFieldErrorsErrorComponent | { attr: 'counts.right_arm' } & BitesCreateCountsRightArmErrorComponent | { attr: 'counts.right_leg' } & BitesCreateCountsRightLegErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point' } & BitesCreateLocationPointErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
+export type BitesCreateError = { attr: 'counts.chest' } & BitesCreateCountsChestErrorComponent | { attr: 'counts.head' } & BitesCreateCountsHeadErrorComponent | { attr: 'counts.left_arm' } & BitesCreateCountsLeftArmErrorComponent | { attr: 'counts.left_leg' } & BitesCreateCountsLeftLegErrorComponent | { attr: 'counts.non_field_errors' } & BitesCreateCountsNonFieldErrorsErrorComponent | { attr: 'counts.right_arm' } & BitesCreateCountsRightArmErrorComponent | { attr: 'counts.right_leg' } & BitesCreateCountsRightLegErrorComponent | { attr: 'created_at' } & BitesCreateCreatedAtErrorComponent | { attr: 'event_environment' } & BitesCreateEventEnvironmentErrorComponent | { attr: 'event_moment' } & BitesCreateEventMomentErrorComponent | { attr: 'location.non_field_errors' } & BitesCreateLocationNonFieldErrorsErrorComponent | { attr: 'location.point.latitude' } & BitesCreateLocationPointLatitudeErrorComponent | { attr: 'location.point.longitude' } & BitesCreateLocationPointLongitudeErrorComponent | { attr: 'location.point.non_field_errors' } & BitesCreateLocationPointNonFieldErrorsErrorComponent | { attr: 'location.source' } & BitesCreateLocationSourceErrorComponent | { attr: 'non_field_errors' } & BitesCreateNonFieldErrorsErrorComponent | { attr: 'note' } & BitesCreateNoteErrorComponent | { attr: 'sent_at' } & BitesCreateSentAtErrorComponent | { attr: 'tags' } & BitesCreateTagsErrorComponent | { attr: 'tags.INDEX' } & BitesCreateTagsINDEXErrorComponent;
 
 

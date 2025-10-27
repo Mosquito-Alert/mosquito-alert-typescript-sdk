@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { NotificationsPartialUpdateIsReadErrorComponentAttr } from './notifications-partial-update-is-read-error-component-attr';
+import type { BitesCreateLocationPointLatitudeErrorComponentCode } from './bites-create-location-point-latitude-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { NotificationsPartialUpdateIsReadErrorComponentCode } from './notifications-partial-update-is-read-error-component-code';
+import type { NotificationsPartialUpdateIsReadErrorComponentAttr } from './notifications-partial-update-is-read-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { NotificationsUpdateIsReadErrorComponent } from './notifications-update-is-read-error-component';

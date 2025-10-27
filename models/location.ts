@@ -21,17 +21,17 @@ import type { AdmBoundary } from './adm-boundary';
 import type { Country } from './country';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { LocationPoint } from './location-point';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { LocationSource } from './location-source';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { LocationTimezone } from './location-timezone';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { Point } from './point';
 
 export interface Location {
     'source': LocationSource;
-    'point': LocationPoint;
+    'point': Point;
     'timezone': LocationTimezone | null;
     'display_name': string | null;
     'country': Country | null;

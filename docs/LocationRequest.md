@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **source** | [**LocationSource**](LocationSource.md) |  | [default to undefined]
-**point** | [**LocationPoint**](LocationPoint.md) |  | [default to undefined]
+**point** | [**PointRequest**](PointRequest.md) |  | [default to undefined]
 
 ## Example
 

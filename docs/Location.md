@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **source** | [**LocationSource**](LocationSource.md) |  | [default to undefined]
-**point** | [**LocationPoint**](LocationPoint.md) |  | [default to undefined]
+**point** | [**Point**](Point.md) |  | [default to undefined]
 **timezone** | [**LocationTimezone**](LocationTimezone.md) |  | [default to undefined]
 **display_name** | **string** |  | [readonly] [default to undefined]
 **country** | [**Country**](Country.md) |  | [readonly] [default to undefined]

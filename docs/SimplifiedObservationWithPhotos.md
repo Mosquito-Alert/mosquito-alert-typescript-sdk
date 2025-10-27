@@ -9,11 +9,11 @@ Name | Type | Description | Notes
 **short_id** | **string** |  | [readonly] [default to undefined]
 **user_uuid** | **string** |  | [readonly] [default to undefined]
 **created_at** | **string** |  | [default to undefined]
-**created_at_local** | **string** | The date and time when the record was created, displayed in the local timezone specified for this entry. | [readonly] [default to undefined]
+**created_at_local** | **string** | The date and time when the record was created, displayed without timezone field. | [readonly] [default to undefined]
 **received_at** | **string** |  | [readonly] [default to undefined]
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | [default to undefined]
 **note** | **string** | Note user attached to report. | [optional] [default to undefined]
-**photos** | [**Array&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | [default to undefined]
+**photos** | [**Array&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | [readonly] [default to undefined]
 
 ## Example
 

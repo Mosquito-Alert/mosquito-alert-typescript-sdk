@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **short_id** | **string** |  | [readonly] [default to undefined]
 **user_uuid** | **string** |  | [readonly] [default to undefined]
 **created_at** | **string** |  | [default to undefined]
-**created_at_local** | **string** | The date and time when the record was created, displayed in the local timezone specified for this entry. | [readonly] [default to undefined]
+**created_at_local** | **string** | The date and time when the record was created, displayed without timezone field. | [readonly] [default to undefined]
 **sent_at** | **string** |  | [default to undefined]
 **received_at** | **string** |  | [readonly] [default to undefined]
 **updated_at** | **string** | Date and time when the report was last modified | [readonly] [default to undefined]

@@ -29,7 +29,7 @@ const apiInstance = new BreedingSitesApi(configuration);
 let createdAt: string; // (default to undefined)
 let sentAt: string; // (default to undefined)
 let location: LocationRequest; // (default to undefined)
-let photos: Array<SimplePhotoRequest>; // (default to undefined)
+let photos: Array<File>; // (default to undefined)
 let note: string; //Note user attached to report. (optional) (default to undefined)
 let tags: Array<string>; // (optional) (default to undefined)
 let siteType: BreedingSiteSiteType; // (optional) (default to undefined)
@@ -60,7 +60,7 @@ const { status, data } = await apiInstance.create(
 | **createdAt** | [**string**] |  | defaults to undefined|
 | **sentAt** | [**string**] |  | defaults to undefined|
 | **location** | **LocationRequest** |  | defaults to undefined|
-| **photos** | **Array&lt;SimplePhotoRequest&gt;** |  | defaults to undefined|
+| **photos** | **Array&lt;File&gt;** |  | defaults to undefined|
 | **note** | [**string**] | Note user attached to report. | (optional) defaults to undefined|
 | **tags** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|
 | **siteType** | **BreedingSiteSiteType** |  | (optional) defaults to undefined|
