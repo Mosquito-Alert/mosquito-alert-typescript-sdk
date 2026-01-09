@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsites-create-site-type-error-component-code';
+import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
 
 export interface UsersUpdateLocaleErrorComponent {
     'attr': UsersPartialUpdateLocaleErrorComponentAttr;
-    'code': BreedingsitesCreateSiteTypeErrorComponentCode;
+    'code': IdentificationtasksReviewCreateActionErrorComponentCode;
     'detail': string;
 }
 

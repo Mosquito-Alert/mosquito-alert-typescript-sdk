@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**BreedingsitesCreateSiteTypeErrorComponentAttr**](BreedingsitesCreateSiteTypeErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BreedingsitesCreateSiteTypeErrorComponentCode**](BreedingsitesCreateSiteTypeErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesCreateLocationSourceErrorComponentCode**](BitesCreateLocationSourceErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

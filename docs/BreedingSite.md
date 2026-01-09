@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **published** | **boolean** |  | [readonly] [default to undefined]
 **photos** | [**Array&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | [readonly] [default to undefined]
-**site_type** | [**BreedingSiteSiteType**](BreedingSiteSiteType.md) |  | [optional] [default to undefined]
+**site_type** | [**BreedingSiteSiteType**](BreedingSiteSiteType.md) |  | [default to undefined]
 **has_water** | **boolean** | Either if the user perceived water in the breeding site. | [optional] [default to undefined]
 **in_public_area** | **boolean** | Either if the breeding site is found in a public area. | [optional] [default to undefined]
 **has_near_mosquitoes** | **boolean** | Either if the user perceived mosquitoes near the breeding site (less than 10 meters). | [optional] [default to undefined]

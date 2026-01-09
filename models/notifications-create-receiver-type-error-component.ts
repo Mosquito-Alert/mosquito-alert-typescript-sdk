@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsites-create-site-type-error-component-code';
+import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { NotificationsCreateReceiverTypeErrorComponentAttr } from './notifications-create-receiver-type-error-component-attr';
 
 export interface NotificationsCreateReceiverTypeErrorComponent {
     'attr': NotificationsCreateReceiverTypeErrorComponentAttr;
-    'code': BreedingsitesCreateSiteTypeErrorComponentCode;
+    'code': IdentificationtasksReviewCreateActionErrorComponentCode;
     'detail': string;
 }
 

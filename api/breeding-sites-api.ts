@@ -54,9 +54,9 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} sentAt 
          * @param {LocationRequest} location 
          * @param {Array<File>} photos 
+         * @param {BreedingSiteSiteType} siteType 
          * @param {string | null} [note] Note user attached to report.
          * @param {Array<string>} [tags] 
-         * @param {BreedingSiteSiteType} [siteType] 
          * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
          * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
          * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
@@ -64,7 +64,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, note?: string | null, tags?: Array<string>, siteType?: BreedingSiteSiteType, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        create: async (createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, siteType: BreedingSiteSiteType, note?: string | null, tags?: Array<string>, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'createdAt' is not null or undefined
             assertParamExists('create', 'createdAt', createdAt)
             // verify required parameter 'sentAt' is not null or undefined
@@ -73,6 +73,8 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             assertParamExists('create', 'location', location)
             // verify required parameter 'photos' is not null or undefined
             assertParamExists('create', 'photos', photos)
+            // verify required parameter 'siteType' is not null or undefined
+            assertParamExists('create', 'siteType', siteType)
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -494,9 +496,9 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {string} sentAt 
          * @param {LocationRequest} location 
          * @param {Array<File>} photos 
+         * @param {BreedingSiteSiteType} siteType 
          * @param {string | null} [note] Note user attached to report.
          * @param {Array<string>} [tags] 
-         * @param {BreedingSiteSiteType} [siteType] 
          * @param {boolean | null} [hasWater] Either if the user perceived water in the breeding site.
          * @param {boolean | null} [inPublicArea] Either if the breeding site is found in a public area.
          * @param {boolean | null} [hasNearMosquitoes] Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
@@ -504,8 +506,8 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, note?: string | null, tags?: Array<string>, siteType?: BreedingSiteSiteType, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae, options);
+        async create(createdAt: string, sentAt: string, location: LocationRequest, photos: Array<File>, siteType: BreedingSiteSiteType, note?: string | null, tags?: Array<string>, hasWater?: boolean | null, inPublicArea?: boolean | null, hasNearMosquitoes?: boolean | null, hasLarvae?: boolean | null, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BreedingSite>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createdAt, sentAt, location, photos, siteType, note, tags, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -600,7 +602,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         create(requestParameters: BreedingSitesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<BreedingSite> {
-            return localVarFp.create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.note, requestParameters.tags, requestParameters.siteType, requestParameters.hasWater, requestParameters.inPublicArea, requestParameters.hasNearMosquitoes, requestParameters.hasLarvae, options).then((request) => request(axios, basePath));
+            return localVarFp.create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.siteType, requestParameters.note, requestParameters.tags, requestParameters.hasWater, requestParameters.inPublicArea, requestParameters.hasNearMosquitoes, requestParameters.hasLarvae, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -653,14 +655,14 @@ export interface BreedingSitesApiCreateRequest {
 
     readonly photos: Array<File>
 
+    readonly siteType: BreedingSiteSiteType
+
     /**
      * Note user attached to report.
      */
     readonly note?: string | null
 
     readonly tags?: Array<string>
-
-    readonly siteType?: BreedingSiteSiteType
 
     /**
      * Either if the user perceived water in the breeding site.
@@ -846,7 +848,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public create(requestParameters: BreedingSitesApiCreateRequest, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.note, requestParameters.tags, requestParameters.siteType, requestParameters.hasWater, requestParameters.inPublicArea, requestParameters.hasNearMosquitoes, requestParameters.hasLarvae, options).then((request) => request(this.axios, this.basePath));
+        return BreedingSitesApiFp(this.configuration).create(requestParameters.createdAt, requestParameters.sentAt, requestParameters.location, requestParameters.photos, requestParameters.siteType, requestParameters.note, requestParameters.tags, requestParameters.hasWater, requestParameters.inPublicArea, requestParameters.hasNearMosquitoes, requestParameters.hasLarvae, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

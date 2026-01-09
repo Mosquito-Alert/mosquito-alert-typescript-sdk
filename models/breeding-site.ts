@@ -46,7 +46,7 @@ export interface BreedingSite {
     'tags'?: Array<string>;
     'published': boolean;
     'photos': Array<SimplePhoto>;
-    'site_type'?: BreedingSiteSiteType;
+    'site_type': BreedingSiteSiteType;
     /**
      * Either if the user perceived water in the breeding site.
      */

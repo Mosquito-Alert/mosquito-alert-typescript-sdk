@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**NotificationsCreateReceiverTypeErrorComponentAttr**](NotificationsCreateReceiverTypeErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BreedingsitesCreateSiteTypeErrorComponentCode**](BreedingsitesCreateSiteTypeErrorComponentCode.md) |  | [default to undefined]
+**code** | [**IdentificationtasksReviewCreateActionErrorComponentCode**](IdentificationtasksReviewCreateActionErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

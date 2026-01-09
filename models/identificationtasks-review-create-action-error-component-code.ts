@@ -15,13 +15,13 @@
 
 
 
-export const BreedingsitesCreateSiteTypeErrorComponentCode = {
+export const IdentificationtasksReviewCreateActionErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type BreedingsitesCreateSiteTypeErrorComponentCode = typeof BreedingsitesCreateSiteTypeErrorComponentCode[keyof typeof BreedingsitesCreateSiteTypeErrorComponentCode];
+export type IdentificationtasksReviewCreateActionErrorComponentCode = typeof IdentificationtasksReviewCreateActionErrorComponentCode[keyof typeof IdentificationtasksReviewCreateActionErrorComponentCode];
 
 
 

@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BreedingsitesCreateSiteTypeErrorComponentAttr } from './breedingsites-create-site-type-error-component-attr';
+import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsites-create-site-type-error-component-code';
+import type { BreedingsitesCreateSiteTypeErrorComponentAttr } from './breedingsites-create-site-type-error-component-attr';
 
 export interface BreedingsitesCreateSiteTypeErrorComponent {
     'attr': BreedingsitesCreateSiteTypeErrorComponentAttr;
-    'code': BreedingsitesCreateSiteTypeErrorComponentCode;
+    'code': BitesCreateLocationSourceErrorComponentCode;
     'detail': string;
 }
 

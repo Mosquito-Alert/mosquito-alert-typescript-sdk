@@ -15,6 +15,7 @@ api/observations-api.ts
 api/partners-api.ts
 api/permissions-api.ts
 api/photos-api.ts
+api/status-api.ts
 api/taxa-api.ts
 api/users-api.ts
 base.ts
@@ -188,7 +189,6 @@ docs/BreedingsitesCreatePhotosINDEXErrorComponentCode.md
 docs/BreedingsitesCreateSentAtErrorComponent.md
 docs/BreedingsitesCreateSiteTypeErrorComponent.md
 docs/BreedingsitesCreateSiteTypeErrorComponentAttr.md
-docs/BreedingsitesCreateSiteTypeErrorComponentCode.md
 docs/BreedingsitesCreateTagsErrorComponent.md
 docs/BreedingsitesCreateTagsINDEXErrorComponent.md
 docs/BreedingsitesCreateValidationError.md
@@ -553,6 +553,7 @@ docs/IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponent.md
 docs/IdentificationtasksPredictionsUpdateValidationError.md
 docs/IdentificationtasksReviewCreateActionErrorComponent.md
 docs/IdentificationtasksReviewCreateActionErrorComponentAttr.md
+docs/IdentificationtasksReviewCreateActionErrorComponentCode.md
 docs/IdentificationtasksReviewCreateError.md
 docs/IdentificationtasksReviewCreateIsSafeErrorComponent.md
 docs/IdentificationtasksReviewCreateIsSafeErrorComponentAttr.md
@@ -859,6 +860,7 @@ docs/SimpleTaxonRank.md
 docs/SimpleTaxonRequest.md
 docs/SimplifiedLocation.md
 docs/SimplifiedObservationWithPhotos.md
+docs/StatusApi.md
 docs/TaxaApi.md
 docs/TaxaListRankErrorComponent.md
 docs/TaxaListRankErrorComponentAttr.md
@@ -1054,7 +1056,6 @@ models/breedingsites-create-photos-indexerror-component-code.ts
 models/breedingsites-create-photos-indexerror-component.ts
 models/breedingsites-create-sent-at-error-component.ts
 models/breedingsites-create-site-type-error-component-attr.ts
-models/breedingsites-create-site-type-error-component-code.ts
 models/breedingsites-create-site-type-error-component.ts
 models/breedingsites-create-tags-error-component.ts
 models/breedingsites-create-tags-indexerror-component.ts
@@ -1414,6 +1415,7 @@ models/identificationtasks-predictions-update-scores-other-species-error-compone
 models/identificationtasks-predictions-update-threshold-deviation-error-component.ts
 models/identificationtasks-predictions-update-validation-error.ts
 models/identificationtasks-review-create-action-error-component-attr.ts
+models/identificationtasks-review-create-action-error-component-code.ts
 models/identificationtasks-review-create-action-error-component.ts
 models/identificationtasks-review-create-error.ts
 models/identificationtasks-review-create-is-safe-error-component-attr.ts

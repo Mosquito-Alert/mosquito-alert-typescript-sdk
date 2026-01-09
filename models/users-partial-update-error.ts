@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BreedingsitesCreateSiteTypeErrorComponentCode } from './breedingsites-create-site-type-error-component-code';
+import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersPartialUpdateLocaleErrorComponent } from './users-partial-update-locale-error-component';

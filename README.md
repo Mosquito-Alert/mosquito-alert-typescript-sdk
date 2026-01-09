@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.27
+## mosquito-alert@0.1.29
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.27 --save
+npm install mosquito-alert@0.1.29 --save
 ```
 
 _unPublished (not recommended):_
@@ -109,6 +109,7 @@ Class | Method | HTTP request | Description
 *PhotosApi* | [**predictionRetrieve**](docs/PhotosApi.md#predictionretrieve) | **GET** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**predictionUpdate**](docs/PhotosApi.md#predictionupdate) | **PUT** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**retrieve**](docs/PhotosApi.md#retrieve) | **GET** /photos/{uuid}/ | 
+*StatusApi* | [**retrieve**](docs/StatusApi.md#retrieve) | **GET** /status/ | 
 *TaxaApi* | [**list**](docs/TaxaApi.md#list) | **GET** /taxa/ | 
 *TaxaApi* | [**retrieve**](docs/TaxaApi.md#retrieve) | **GET** /taxa/{id}/ | 
 *TaxaApi* | [**rootTreeRetrieve**](docs/TaxaApi.md#roottreeretrieve) | **GET** /taxa/tree/ | 
@@ -286,7 +287,6 @@ Class | Method | HTTP request | Description
  - [BreedingsitesCreateSentAtErrorComponent](docs/BreedingsitesCreateSentAtErrorComponent.md)
  - [BreedingsitesCreateSiteTypeErrorComponent](docs/BreedingsitesCreateSiteTypeErrorComponent.md)
  - [BreedingsitesCreateSiteTypeErrorComponentAttr](docs/BreedingsitesCreateSiteTypeErrorComponentAttr.md)
- - [BreedingsitesCreateSiteTypeErrorComponentCode](docs/BreedingsitesCreateSiteTypeErrorComponentCode.md)
  - [BreedingsitesCreateTagsErrorComponent](docs/BreedingsitesCreateTagsErrorComponent.md)
  - [BreedingsitesCreateTagsINDEXErrorComponent](docs/BreedingsitesCreateTagsINDEXErrorComponent.md)
  - [BreedingsitesCreateValidationError](docs/BreedingsitesCreateValidationError.md)
@@ -646,6 +646,7 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksPredictionsUpdateValidationError](docs/IdentificationtasksPredictionsUpdateValidationError.md)
  - [IdentificationtasksReviewCreateActionErrorComponent](docs/IdentificationtasksReviewCreateActionErrorComponent.md)
  - [IdentificationtasksReviewCreateActionErrorComponentAttr](docs/IdentificationtasksReviewCreateActionErrorComponentAttr.md)
+ - [IdentificationtasksReviewCreateActionErrorComponentCode](docs/IdentificationtasksReviewCreateActionErrorComponentCode.md)
  - [IdentificationtasksReviewCreateError](docs/IdentificationtasksReviewCreateError.md)
  - [IdentificationtasksReviewCreateIsSafeErrorComponent](docs/IdentificationtasksReviewCreateIsSafeErrorComponent.md)
  - [IdentificationtasksReviewCreateIsSafeErrorComponentAttr](docs/IdentificationtasksReviewCreateIsSafeErrorComponentAttr.md)
