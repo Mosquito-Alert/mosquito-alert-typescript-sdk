@@ -24,17 +24,17 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 /**
- * StatusApi - axios parameter creator
+ * PingApi - axios parameter creator
  */
-export const StatusApiAxiosParamCreator = function (configuration?: Configuration) {
+export const PingApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 
+         * Simple ping endpoint to check API connectivity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         retrieve: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/status/`;
+            const localVarPath = `/ping/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -61,33 +61,33 @@ export const StatusApiAxiosParamCreator = function (configuration?: Configuratio
 };
 
 /**
- * StatusApi - functional programming interface
+ * PingApi - functional programming interface
  */
-export const StatusApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = StatusApiAxiosParamCreator(configuration)
+export const PingApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PingApiAxiosParamCreator(configuration)
     return {
         /**
-         * 
+         * Simple ping endpoint to check API connectivity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async retrieve(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['StatusApi.retrieve']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['PingApi.retrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
 
 /**
- * StatusApi - factory interface
+ * PingApi - factory interface
  */
-export const StatusApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = StatusApiFp(configuration)
+export const PingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PingApiFp(configuration)
     return {
         /**
-         * 
+         * Simple ping endpoint to check API connectivity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -98,16 +98,16 @@ export const StatusApiFactory = function (configuration?: Configuration, basePat
 };
 
 /**
- * StatusApi - object-oriented interface
+ * PingApi - object-oriented interface
  */
-export class StatusApi extends BaseAPI {
+export class PingApi extends BaseAPI {
     /**
-     * 
+     * Simple ping endpoint to check API connectivity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public retrieve(options?: RawAxiosRequestConfig) {
-        return StatusApiFp(this.configuration).retrieve(options).then((request) => request(this.axios, this.basePath));
+        return PingApiFp(this.configuration).retrieve(options).then((request) => request(this.axios, this.basePath));
     }
 }
 

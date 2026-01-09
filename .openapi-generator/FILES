@@ -15,7 +15,7 @@ api/observations-api.ts
 api/partners-api.ts
 api/permissions-api.ts
 api/photos-api.ts
-api/status-api.ts
+api/ping-api.ts
 api/taxa-api.ts
 api/users-api.ts
 base.ts
@@ -848,6 +848,7 @@ docs/PhotosPredictionUpdateScoresNotSureErrorComponent.md
 docs/PhotosPredictionUpdateScoresOtherSpeciesErrorComponent.md
 docs/PhotosPredictionUpdateThresholdDeviationErrorComponent.md
 docs/PhotosPredictionUpdateValidationError.md
+docs/PingApi.md
 docs/Point.md
 docs/PointRequest.md
 docs/PredictionScore.md
@@ -860,7 +861,6 @@ docs/SimpleTaxonRank.md
 docs/SimpleTaxonRequest.md
 docs/SimplifiedLocation.md
 docs/SimplifiedObservationWithPhotos.md
-docs/StatusApi.md
 docs/TaxaApi.md
 docs/TaxaListRankErrorComponent.md
 docs/TaxaListRankErrorComponentAttr.md

@@ -1,25 +1,26 @@
-# StatusApi
+# PingApi
 
 All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**retrieve**](#retrieve) | **GET** /status/ | |
+|[**retrieve**](#retrieve) | **GET** /ping/ | |
 
 # **retrieve**
 > retrieve()
 
+Simple ping endpoint to check API connectivity
 
 ### Example
 
 ```typescript
 import {
-    StatusApi,
+    PingApi,
     Configuration
 } from 'mosquito-alert';
 
 const configuration = new Configuration();
-const apiInstance = new StatusApi(configuration);
+const apiInstance = new PingApi(configuration);
 
 const { status, data } = await apiInstance.retrieve();
 ```
@@ -46,7 +47,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**404** |  |  -  |
-|**200** | No response body |  -  |
+|**204** | No response body |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
