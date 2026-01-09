@@ -101,52 +101,51 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             if (createdAt !== undefined) { 
                 localVarFormParams.append('created_at', createdAt as any);
             }
-    
+
             if (sentAt !== undefined) { 
                 localVarFormParams.append('sent_at', sentAt as any);
             }
-    
+
             if (location !== undefined) { 
                 localVarFormParams.append('location', new Blob([JSON.stringify(location)], { type: "application/json", }));
             }
-    
+
             if (note !== undefined) { 
                 localVarFormParams.append('note', note as any);
             }
-                if (tags) {
+            if (tags) {
                 localVarFormParams.append('tags', tags.join(COLLECTION_FORMATS.csv));
             }
 
-                if (photos) {
+            if (photos) {
                 photos.forEach((element) => {
                     localVarFormParams.append('photos', element as any);
                 })
             }
 
-    
+
             if (siteType !== undefined) { 
                 localVarFormParams.append('site_type', siteType as any);
             }
-    
+
             if (hasWater !== undefined) { 
                 localVarFormParams.append('has_water', String(hasWater) as any);
             }
-    
+
             if (inPublicArea !== undefined) { 
                 localVarFormParams.append('in_public_area', String(inPublicArea) as any);
             }
-    
+
             if (hasNearMosquitoes !== undefined) { 
                 localVarFormParams.append('has_near_mosquitoes', String(hasNearMosquitoes) as any);
             }
-    
+
             if (hasLarvae !== undefined) { 
                 localVarFormParams.append('has_larvae', String(hasLarvae) as any);
             }
-    
-    
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-    
+            localVarHeaderParameter['Accept'] = 'application/json';
+
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -188,8 +187,8 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -308,8 +307,8 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -428,8 +427,8 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -470,8 +469,8 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};

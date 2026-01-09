@@ -101,44 +101,43 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             if (createdAt !== undefined) { 
                 localVarFormParams.append('created_at', createdAt as any);
             }
-    
+
             if (sentAt !== undefined) { 
                 localVarFormParams.append('sent_at', sentAt as any);
             }
-    
+
             if (location !== undefined) { 
                 localVarFormParams.append('location', new Blob([JSON.stringify(location)], { type: "application/json", }));
             }
-    
+
             if (note !== undefined) { 
                 localVarFormParams.append('note', note as any);
             }
-                if (tags) {
+            if (tags) {
                 localVarFormParams.append('tags', tags.join(COLLECTION_FORMATS.csv));
             }
 
-                if (photos) {
+            if (photos) {
                 photos.forEach((element) => {
                     localVarFormParams.append('photos', element as any);
                 })
             }
 
-    
+
             if (eventEnvironment !== undefined) { 
                 localVarFormParams.append('event_environment', eventEnvironment as any);
             }
-    
+
             if (eventMoment !== undefined) { 
                 localVarFormParams.append('event_moment', eventMoment as any);
             }
-    
+
             if (mosquitoAppearance !== undefined) { 
                 localVarFormParams.append('mosquito_appearance', new Blob([JSON.stringify(mosquitoAppearance)], { type: "application/json", }));
             }
-    
-    
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-    
+            localVarHeaderParameter['Accept'] = 'application/json';
+
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -180,8 +179,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -305,8 +304,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -430,8 +429,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -472,8 +471,8 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
