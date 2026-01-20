@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**BitesListCountryIdErrorComponentAttr**](BitesListCountryIdErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**BitesGeoListCountryIdErrorComponentAttr**](BitesGeoListCountryIdErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 

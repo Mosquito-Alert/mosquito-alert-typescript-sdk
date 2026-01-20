@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**BitesListMineOrderByErrorComponentAttr**](BitesListMineOrderByErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**BreedingsitesCreateSiteTypeErrorComponentAttr**](BreedingsitesCreateSiteTypeErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**BreedingsitesGeoListSiteTypeErrorComponentCode**](BreedingsitesGeoListSiteTypeErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

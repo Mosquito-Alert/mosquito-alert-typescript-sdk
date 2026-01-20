@@ -18,10 +18,10 @@
 import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListCountryIdErrorComponentAttr } from './bites-list-country-id-error-component-attr';
+import type { BitesGeoListCountryIdErrorComponentAttr } from './bites-geo-list-country-id-error-component-attr';
 
 export interface CampaignsListCountryIdErrorComponent {
-    'attr': BitesListCountryIdErrorComponentAttr;
+    'attr': BitesGeoListCountryIdErrorComponentAttr;
     'code': BitesCreateEventEnvironmentErrorComponentCode;
     'detail': string;
 }

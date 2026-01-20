@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**BitesListMineOrderByErrorComponentAttr**](BitesListMineOrderByErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**BitesGeoListOrderByErrorComponentAttr**](BitesGeoListOrderByErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 

@@ -18,11 +18,11 @@
 import type { BitesCreateCreatedAtErrorComponentAttr } from './bites-create-created-at-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
+import type { BitesGeoListCreatedAtErrorComponentCode } from './bites-geo-list-created-at-error-component-code';
 
 export interface IdentificationtasksListMineCreatedAtErrorComponent {
     'attr': BitesCreateCreatedAtErrorComponentAttr;
-    'code': BitesListCreatedAtErrorComponentCode;
+    'code': BitesGeoListCreatedAtErrorComponentCode;
     'detail': string;
 }
 

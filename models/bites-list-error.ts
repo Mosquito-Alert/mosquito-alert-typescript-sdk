@@ -15,7 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+import type { BitesGeoListGeoPrecisionErrorComponentAttr } from './bites-geo-list-geo-precision-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BitesGeoListGeoPrecisionErrorComponentCode } from './bites-geo-list-geo-precision-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BitesListCountryIdErrorComponent } from './bites-list-country-id-error-component';
@@ -24,7 +27,7 @@ import type { BitesListCountryIdErrorComponent } from './bites-list-country-id-e
 import type { BitesListCreatedAtErrorComponent } from './bites-list-created-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineOrderByErrorComponentAttr } from './bites-list-mine-order-by-error-component-attr';
+import type { BitesListGeoPrecisionErrorComponent } from './bites-list-geo-precision-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BitesListOrderByErrorComponent } from './bites-list-order-by-error-component';
@@ -36,14 +39,20 @@ import type { BitesListReceivedAtErrorComponent } from './bites-list-received-at
 import type { BitesListShortIdErrorComponent } from './bites-list-short-id-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BitesListTagsErrorComponent } from './bites-list-tags-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { BitesListUpdatedAtErrorComponent } from './bites-list-updated-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BitesListUserUuidErrorComponent } from './bites-list-user-uuid-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BitesListWithinGeomErrorComponent } from './bites-list-within-geom-error-component';
 
 /**
  * @type BitesListError
  */
-export type BitesListError = { attr: 'country_id' } & BitesListCountryIdErrorComponent | { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent;
+export type BitesListError = { attr: 'country_id' } & BitesListCountryIdErrorComponent | { attr: 'created_at' } & BitesListCreatedAtErrorComponent | { attr: 'geo_precision' } & BitesListGeoPrecisionErrorComponent | { attr: 'order_by' } & BitesListOrderByErrorComponent | { attr: 'received_at' } & BitesListReceivedAtErrorComponent | { attr: 'short_id' } & BitesListShortIdErrorComponent | { attr: 'tags' } & BitesListTagsErrorComponent | { attr: 'updated_at' } & BitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BitesListUserUuidErrorComponent | { attr: 'within_geom' } & BitesListWithinGeomErrorComponent;
 
 

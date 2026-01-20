@@ -22,15 +22,27 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
+import type { BitesGeoListFormatParameter } from '../models';
+// @ts-ignore
+import type { BitesListFormatParameter } from '../models';
+// @ts-ignore
 import type { BitesListOrderByParameter } from '../models';
 // @ts-ignore
 import type { BreedingSite } from '../models';
+// @ts-ignore
+import type { BreedingSiteGeoJsonModelList } from '../models';
+// @ts-ignore
+import type { BreedingSiteGeoModel } from '../models';
 // @ts-ignore
 import type { BreedingSiteSiteType } from '../models';
 // @ts-ignore
 import type { BreedingsitesCreateValidationError } from '../models';
 // @ts-ignore
+import type { BreedingsitesGeoListValidationError } from '../models';
+// @ts-ignore
 import type { BreedingsitesListMineValidationError } from '../models';
+// @ts-ignore
+import type { BreedingsitesListSiteTypeParameter } from '../models';
 // @ts-ignore
 import type { BreedingsitesListValidationError } from '../models';
 // @ts-ignore
@@ -203,21 +215,191 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesGeoListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        geoList: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/breeding-sites/geo/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (countryId !== undefined) {
+                localVarQueryParameter['country_id'] = countryId;
+            }
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
+            if (hasLarvae !== undefined) {
+                localVarQueryParameter['has_larvae'] = hasLarvae;
+            }
+
+            if (hasNearMosquitoes !== undefined) {
+                localVarQueryParameter['has_near_mosquitoes'] = hasNearMosquitoes;
+            }
+
+            if (hasPhotos !== undefined) {
+                localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (hasWater !== undefined) {
+                localVarQueryParameter['has_water'] = hasWater;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (receivedAtAfter !== undefined) {
+                localVarQueryParameter['received_at_after'] = (receivedAtAfter as any instanceof Date) ?
+                    (receivedAtAfter as any).toISOString() :
+                    receivedAtAfter;
+            }
+
+            if (receivedAtBefore !== undefined) {
+                localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
+                    (receivedAtBefore as any).toISOString() :
+                    receivedAtBefore;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (shortId !== undefined) {
+                localVarQueryParameter['short_id'] = shortId;
+            }
+
+            if (siteType) {
+                localVarQueryParameter['site_type'] = siteType;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+            if (userUuid !== undefined) {
+                localVarQueryParameter['user_uuid'] = userUuid;
+            }
+
+            if (withinGeom !== undefined) {
+                localVarQueryParameter['within_geom'] = withinGeom;
+            }
+
+            localVarHeaderParameter['Accept'] = 'application/json,application/geo+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} [countryId] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -255,8 +437,32 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                     createdAtBefore;
             }
 
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
+            if (hasLarvae !== undefined) {
+                localVarQueryParameter['has_larvae'] = hasLarvae;
+            }
+
+            if (hasNearMosquitoes !== undefined) {
+                localVarQueryParameter['has_near_mosquitoes'] = hasNearMosquitoes;
+            }
+
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (hasWater !== undefined) {
+                localVarQueryParameter['has_water'] = hasWater;
             }
 
             if (orderBy) {
@@ -269,6 +475,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
             }
 
             if (receivedAtAfter !== undefined) {
@@ -291,6 +501,14 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['short_id'] = shortId;
             }
 
+            if (siteType) {
+                localVarQueryParameter['site_type'] = siteType;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
             if (updatedAtAfter !== undefined) {
                 localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
                     (updatedAtAfter as any).toISOString() :
@@ -307,7 +525,11 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
-            localVarHeaderParameter['Accept'] = 'application/json';
+            if (withinGeom !== undefined) {
+                localVarQueryParameter['within_geom'] = withinGeom;
+            }
+
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -323,21 +545,31 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
          * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/breeding-sites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -375,8 +607,32 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                     createdAtBefore;
             }
 
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
+            if (hasLarvae !== undefined) {
+                localVarQueryParameter['has_larvae'] = hasLarvae;
+            }
+
+            if (hasNearMosquitoes !== undefined) {
+                localVarQueryParameter['has_near_mosquitoes'] = hasNearMosquitoes;
+            }
+
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (hasWater !== undefined) {
+                localVarQueryParameter['has_water'] = hasWater;
             }
 
             if (orderBy) {
@@ -389,6 +645,10 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
             }
 
             if (receivedAtAfter !== undefined) {
@@ -411,6 +671,14 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['short_id'] = shortId;
             }
 
+            if (siteType) {
+                localVarQueryParameter['site_type'] = siteType;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
             if (updatedAtAfter !== undefined) {
                 localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
                     (updatedAtAfter as any).toISOString() :
@@ -427,7 +695,11 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
-            localVarHeaderParameter['Accept'] = 'application/json';
+            if (withinGeom !== undefined) {
+                localVarQueryParameter['within_geom'] = withinGeom;
+            }
+
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -528,22 +800,65 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesGeoListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async geoList(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<BreedingSiteGeoModel>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasLarvae, hasNearMosquitoes, hasPhotos, hasWater, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, siteType, tags, updatedAtAfter, updatedAtBefore, userUuid, withinGeom, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.geoList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {number} [countryId] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async list(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasLarvae, hasNearMosquitoes, hasPhotos, hasWater, orderBy, page, pageSize, point, receivedAtAfter, receivedAtBefore, search, shortId, siteType, tags, updatedAtAfter, updatedAtBefore, userUuid, withinGeom, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -553,22 +868,32 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasLarvae] 
+         * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
+         * @param {boolean} [hasWater] 
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
          * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
+         * @param {string} [withinGeom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasLarvae?: boolean, hasNearMosquitoes?: boolean, hasPhotos?: boolean, hasWater?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, siteType?: Array<BreedingsitesListSiteTypeParameter>, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, withinGeom?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBreedingSiteList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasLarvae, hasNearMosquitoes, hasPhotos, hasWater, orderBy, page, pageSize, point, receivedAtAfter, receivedAtBefore, search, shortId, siteType, tags, updatedAtAfter, updatedAtBefore, userUuid, withinGeom, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BreedingSitesApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -614,12 +939,21 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
         },
         /**
          * 
+         * @param {BreedingSitesApiGeoListRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        geoList(requestParameters: BreedingSitesApiGeoListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<BreedingSiteGeoModel>> {
+            return localVarFp.geoList(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {BreedingSitesApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         list(requestParameters: BreedingSitesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Breeding Sites
@@ -628,7 +962,7 @@ export const BreedingSitesApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         listMine(requestParameters: BreedingSitesApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedBreedingSiteList> {
-            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -692,9 +1026,9 @@ export interface BreedingSitesApiDestroyRequest {
 }
 
 /**
- * Request parameters for list operation in BreedingSitesApi.
+ * Request parameters for geoList operation in BreedingSitesApi.
  */
-export interface BreedingSitesApiListRequest {
+export interface BreedingSitesApiGeoListRequest {
     readonly countryId?: number
 
     /**
@@ -708,9 +1042,27 @@ export interface BreedingSitesApiListRequest {
     readonly createdAtBefore?: string
 
     /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesGeoListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    readonly hasLarvae?: boolean
+
+    readonly hasNearMosquitoes?: boolean
+
+    /**
      * Has any photo
      */
     readonly hasPhotos?: boolean
+
+    readonly hasWater?: boolean
 
     /**
      * Ordenamiento  
@@ -718,14 +1070,9 @@ export interface BreedingSitesApiListRequest {
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * Un número de página dentro del conjunto de resultados paginado.
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
      */
-    readonly page?: number
-
-    /**
-     * Número de resultados a devolver por página.
-     */
-    readonly pageSize?: number
+    readonly point?: Array<number>
 
     /**
      * Received at
@@ -748,6 +1095,16 @@ export interface BreedingSitesApiListRequest {
     readonly shortId?: string
 
     /**
+     * Breeding site type.  
+     */
+    readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
+
+    /**
      * Update at
      */
     readonly updatedAtAfter?: string
@@ -758,6 +1115,112 @@ export interface BreedingSitesApiListRequest {
     readonly updatedAtBefore?: string
 
     readonly userUuid?: string
+
+    readonly withinGeom?: string
+}
+
+/**
+ * Request parameters for list operation in BreedingSitesApi.
+ */
+export interface BreedingSitesApiListRequest {
+    readonly countryId?: number
+
+    /**
+     * Created at
+     */
+    readonly createdAtAfter?: string
+
+    /**
+     * Created at
+     */
+    readonly createdAtBefore?: string
+
+    /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    readonly hasLarvae?: boolean
+
+    readonly hasNearMosquitoes?: boolean
+
+    /**
+     * Has any photo
+     */
+    readonly hasPhotos?: boolean
+
+    readonly hasWater?: boolean
+
+    /**
+     * Ordenamiento  
+     */
+    readonly orderBy?: Array<BitesListOrderByParameter>
+
+    /**
+     * Un número de página dentro del conjunto de resultados paginado.
+     */
+    readonly page?: number
+
+    /**
+     * Número de resultados a devolver por página.
+     */
+    readonly pageSize?: number
+
+    /**
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+     */
+    readonly point?: Array<number>
+
+    /**
+     * Received at
+     */
+    readonly receivedAtAfter?: string
+
+    /**
+     * Received at
+     */
+    readonly receivedAtBefore?: string
+
+    /**
+     * Un término de búsqueda.
+     */
+    readonly search?: string
+
+    /**
+     * Short ID
+     */
+    readonly shortId?: string
+
+    /**
+     * Breeding site type.  
+     */
+    readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
+
+    /**
+     * Update at
+     */
+    readonly updatedAtAfter?: string
+
+    /**
+     * Update at
+     */
+    readonly updatedAtBefore?: string
+
+    readonly userUuid?: string
+
+    readonly withinGeom?: string
 }
 
 /**
@@ -777,9 +1240,27 @@ export interface BreedingSitesApiListMineRequest {
     readonly createdAtBefore?: string
 
     /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    readonly hasLarvae?: boolean
+
+    readonly hasNearMosquitoes?: boolean
+
+    /**
      * Has any photo
      */
     readonly hasPhotos?: boolean
+
+    readonly hasWater?: boolean
 
     /**
      * Ordenamiento  
@@ -795,6 +1276,11 @@ export interface BreedingSitesApiListMineRequest {
      * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
+
+    /**
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+     */
+    readonly point?: Array<number>
 
     /**
      * Received at
@@ -817,6 +1303,16 @@ export interface BreedingSitesApiListMineRequest {
     readonly shortId?: string
 
     /**
+     * Breeding site type.  
+     */
+    readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
+
+    /**
      * Update at
      */
     readonly updatedAtAfter?: string
@@ -827,6 +1323,8 @@ export interface BreedingSitesApiListMineRequest {
     readonly updatedAtBefore?: string
 
     readonly userUuid?: string
+
+    readonly withinGeom?: string
 }
 
 /**
@@ -862,12 +1360,22 @@ export class BreedingSitesApi extends BaseAPI {
 
     /**
      * 
+     * @param {BreedingSitesApiGeoListRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public geoList(requestParameters: BreedingSitesApiGeoListRequest = {}, options?: RawAxiosRequestConfig) {
+        return BreedingSitesApiFp(this.configuration).geoList(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {BreedingSitesApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public list(requestParameters: BreedingSitesApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BreedingSitesApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -877,7 +1385,7 @@ export class BreedingSitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public listMine(requestParameters: BreedingSitesApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return BreedingSitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BreedingSitesApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasLarvae, requestParameters.hasNearMosquitoes, requestParameters.hasPhotos, requestParameters.hasWater, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.siteType, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, requestParameters.withinGeom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

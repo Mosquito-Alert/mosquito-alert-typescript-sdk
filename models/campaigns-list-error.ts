@@ -18,7 +18,7 @@
 import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineOrderByErrorComponentAttr } from './bites-list-mine-order-by-error-component-attr';
+import type { BitesGeoListOrderByErrorComponentAttr } from './bites-geo-list-order-by-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { CampaignsListCountryIdErrorComponent } from './campaigns-list-country-id-error-component';

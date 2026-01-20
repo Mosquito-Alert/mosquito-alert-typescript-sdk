@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
+import type { BreedingsitesGeoListSiteTypeErrorComponentCode } from './breedingsites-geo-list-site-type-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksListMineResultSourceErrorComponentCode } from './identificationtasks-list-mine-result-source-error-component-code';
+import type { IdentificationtasksListMineResultSourceErrorComponentAttr } from './identificationtasks-list-mine-result-source-error-component-attr';
 
 export interface IdentificationtasksListMineResultSourceErrorComponent {
     'attr': IdentificationtasksListMineResultSourceErrorComponentAttr;
-    'code': IdentificationtasksListMineResultSourceErrorComponentCode;
+    'code': BreedingsitesGeoListSiteTypeErrorComponentCode;
     'detail': string;
 }
 

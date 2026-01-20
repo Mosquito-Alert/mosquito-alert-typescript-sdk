@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
+import type { BitesGeoListCreatedAtErrorComponentCode } from './bites-geo-list-created-at-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineUpdatedAtErrorComponentAttr } from './bites-list-mine-updated-at-error-component-attr';
+import type { BitesGeoListUpdatedAtErrorComponentAttr } from './bites-geo-list-updated-at-error-component-attr';
 
 export interface BreedingsitesListMineUpdatedAtErrorComponent {
-    'attr': BitesListMineUpdatedAtErrorComponentAttr;
-    'code': BitesListCreatedAtErrorComponentCode;
+    'attr': BitesGeoListUpdatedAtErrorComponentAttr;
+    'code': BitesGeoListCreatedAtErrorComponentCode;
     'detail': string;
 }
 
