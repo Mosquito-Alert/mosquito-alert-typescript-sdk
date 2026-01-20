@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.31
+## mosquito-alert@0.1.32
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.31 --save
+npm install mosquito-alert@0.1.32 --save
 ```
 
 _unPublished (not recommended):_
@@ -347,14 +347,15 @@ Class | Method | HTTP request | Description
  - [DevicesCreateManufacturerErrorComponentCode](docs/DevicesCreateManufacturerErrorComponentCode.md)
  - [DevicesCreateMobileAppNonFieldErrorsErrorComponent](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponent.md)
  - [DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr.md)
+ - [DevicesCreateMobileAppNonFieldErrorsErrorComponentCode](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponentCode.md)
  - [DevicesCreateMobileAppPackageNameErrorComponent](docs/DevicesCreateMobileAppPackageNameErrorComponent.md)
  - [DevicesCreateMobileAppPackageNameErrorComponentAttr](docs/DevicesCreateMobileAppPackageNameErrorComponentAttr.md)
- - [DevicesCreateMobileAppPackageNameErrorComponentCode](docs/DevicesCreateMobileAppPackageNameErrorComponentCode.md)
  - [DevicesCreateMobileAppPackageVersionErrorComponent](docs/DevicesCreateMobileAppPackageVersionErrorComponent.md)
  - [DevicesCreateMobileAppPackageVersionErrorComponentAttr](docs/DevicesCreateMobileAppPackageVersionErrorComponentAttr.md)
  - [DevicesCreateMobileAppPackageVersionErrorComponentCode](docs/DevicesCreateMobileAppPackageVersionErrorComponentCode.md)
  - [DevicesCreateModelErrorComponent](docs/DevicesCreateModelErrorComponent.md)
  - [DevicesCreateModelErrorComponentAttr](docs/DevicesCreateModelErrorComponentAttr.md)
+ - [DevicesCreateModelErrorComponentCode](docs/DevicesCreateModelErrorComponentCode.md)
  - [DevicesCreateNameErrorComponent](docs/DevicesCreateNameErrorComponent.md)
  - [DevicesCreateNameErrorComponentAttr](docs/DevicesCreateNameErrorComponentAttr.md)
  - [DevicesCreateNonFieldErrorsErrorComponent](docs/DevicesCreateNonFieldErrorsErrorComponent.md)

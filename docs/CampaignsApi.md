@@ -24,9 +24,9 @@ const apiInstance = new CampaignsApi(configuration);
 
 let countryId: number; //Country in which the campaign is taking place (optional) (default to undefined)
 let isActive: boolean; // (optional) (default to undefined)
-let orderBy: Array<CampaignsListOrderByParameter>; //Ordenado   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let orderBy: Array<CampaignsListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
     countryId,
@@ -43,9 +43,9 @@ const { status, data } = await apiInstance.list(
 |------------- | ------------- | ------------- | -------------|
 | **countryId** | [**number**] | Country in which the campaign is taking place | (optional) defaults to undefined|
 | **isActive** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;CampaignsListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;CampaignsListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -88,7 +88,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new CampaignsApi(configuration);
 
-let id: number; //A unique integer value identifying this ow campaigns. (default to undefined)
+let id: number; //Un valor de entero único que identifique este ow campaigns. (default to undefined)
 
 const { status, data } = await apiInstance.retrieve(
     id
@@ -99,7 +99,7 @@ const { status, data } = await apiInstance.retrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | A unique integer value identifying this ow campaigns. | defaults to undefined|
+| **id** | [**number**] | Un valor de entero único que identifique este ow campaigns. | defaults to undefined|
 
 
 ### Return type

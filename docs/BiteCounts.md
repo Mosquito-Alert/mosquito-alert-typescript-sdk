@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **number** | Total number of bites reported. | [readonly] [default to undefined]
+**total** | **number** | Total number of bites reported. | [readonly] [default to 0]
 **head** | **number** | Number of bites reported in the head. | [optional] [default to 0]
 **left_arm** | **number** | Number of bites reported in the left arm. | [optional] [default to 0]
 **right_arm** | **number** | Number of bites reported in the right arm. | [optional] [default to 0]

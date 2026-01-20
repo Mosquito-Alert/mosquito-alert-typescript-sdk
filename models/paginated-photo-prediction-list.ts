@@ -18,9 +18,9 @@
 import type { PhotoPrediction } from './photo-prediction';
 
 export interface PaginatedPhotoPredictionList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<PhotoPrediction>;
+    'results': Array<PhotoPrediction>;
 }
 

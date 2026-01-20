@@ -18,9 +18,9 @@
 import type { Annotation } from './annotation';
 
 export interface PaginatedAnnotationList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Annotation>;
+    'results': Array<Annotation>;
 }
 

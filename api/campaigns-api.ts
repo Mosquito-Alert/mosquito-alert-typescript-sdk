@@ -44,9 +44,9 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<CampaignsListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -105,7 +105,7 @@ export const CampaignsApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this ow campaigns.
+         * @param {number} id Un valor de entero único que identifique este ow campaigns.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -158,9 +158,9 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
          * 
          * @param {number} [countryId] Country in which the campaign is taking place
          * @param {boolean} [isActive] 
-         * @param {Array<CampaignsListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<CampaignsListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -172,7 +172,7 @@ export const CampaignsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this ow campaigns.
+         * @param {number} id Un valor de entero único que identifique este ow campaigns.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -224,17 +224,17 @@ export interface CampaignsApiListRequest {
     readonly isActive?: boolean
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<CampaignsListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 }
@@ -244,7 +244,7 @@ export interface CampaignsApiListRequest {
  */
 export interface CampaignsApiRetrieveRequest {
     /**
-     * A unique integer value identifying this ow campaigns.
+     * Un valor de entero único que identifique este ow campaigns.
      */
     readonly id: number
 }

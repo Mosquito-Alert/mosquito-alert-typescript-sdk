@@ -18,9 +18,9 @@
 import type { Notification } from './notification';
 
 export interface PaginatedNotificationList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Notification>;
+    'results': Array<Notification>;
 }
 

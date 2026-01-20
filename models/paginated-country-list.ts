@@ -18,9 +18,9 @@
 import type { Country } from './country';
 
 export interface PaginatedCountryList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Country>;
+    'results': Array<Country>;
 }
 

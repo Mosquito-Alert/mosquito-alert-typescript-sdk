@@ -18,9 +18,9 @@
 import type { Campaign } from './campaign';
 
 export interface PaginatedCampaignList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Campaign>;
+    'results': Array<Campaign>;
 }
 

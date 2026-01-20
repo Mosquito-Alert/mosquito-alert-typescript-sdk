@@ -18,9 +18,9 @@
 import type { Bite } from './bite';
 
 export interface PaginatedBiteList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Bite>;
+    'results': Array<Bite>;
 }
 

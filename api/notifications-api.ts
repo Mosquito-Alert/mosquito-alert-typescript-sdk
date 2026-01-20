@@ -100,9 +100,9 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         /**
          * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -158,9 +158,9 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         /**
          * Get Current User\'s Notifications
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -215,7 +215,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {PatchedNotificationRequest} [patchedNotificationRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -260,7 +260,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -302,7 +302,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {NotificationRequest} notificationRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -371,9 +371,9 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -386,9 +386,9 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         /**
          * Get Current User\'s Notifications
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -400,7 +400,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {PatchedNotificationRequest} [patchedNotificationRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -413,7 +413,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -425,7 +425,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this notification.
+         * @param {number} id Un valor de entero único que identifique este notification.
          * @param {NotificationRequest} notificationRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -516,17 +516,17 @@ export interface NotificationsApiListRequest {
     readonly isRead?: boolean
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<NotificationsListMineOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 }
@@ -538,17 +538,17 @@ export interface NotificationsApiListMineRequest {
     readonly isRead?: boolean
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<NotificationsListMineOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 }
@@ -558,7 +558,7 @@ export interface NotificationsApiListMineRequest {
  */
 export interface NotificationsApiPartialUpdateRequest {
     /**
-     * A unique integer value identifying this notification.
+     * Un valor de entero único que identifique este notification.
      */
     readonly id: number
 
@@ -570,7 +570,7 @@ export interface NotificationsApiPartialUpdateRequest {
  */
 export interface NotificationsApiRetrieveRequest {
     /**
-     * A unique integer value identifying this notification.
+     * Un valor de entero único que identifique este notification.
      */
     readonly id: number
 }
@@ -580,7 +580,7 @@ export interface NotificationsApiRetrieveRequest {
  */
 export interface NotificationsApiUpdateRequest {
     /**
-     * A unique integer value identifying this notification.
+     * Un valor de entero único que identifique este notification.
      */
     readonly id: number
 

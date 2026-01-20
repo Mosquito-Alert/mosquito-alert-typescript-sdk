@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
+import type { DevicesCreateModelErrorComponentCode } from './devices-create-model-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DevicesCreateOsVersionErrorComponentAttr } from './devices-create-os-version-error-component-attr';
 
 export interface DevicesCreateOsVersionErrorComponent {
     'attr': DevicesCreateOsVersionErrorComponentAttr;
-    'code': DevicesCreateDeviceIdErrorComponentCode;
+    'code': DevicesCreateModelErrorComponentCode;
     'detail': string;
 }
 

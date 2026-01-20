@@ -149,10 +149,10 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {boolean} [isDecisive] 
          * @param {boolean} [isFavourite] 
          * @param {boolean} [isFlagged] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {string} [search] Un término de búsqueda.
          * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
@@ -283,10 +283,10 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {boolean} [isDecisive] 
          * @param {boolean} [isFavourite] 
          * @param {boolean} [isFlagged] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {string} [search] Un término de búsqueda.
          * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
@@ -405,7 +405,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this expert report annotation.
+         * @param {number} id Un valor de entero único que identifique este expert report annotation.
          * @param {string} observationUuid UUID of the Observation
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -499,9 +499,9 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [numAnnotationsMax] 
          * @param {number} [numAnnotationsMin] 
          * @param {Array<number>} [observationCountryIds] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {number} [resultAgreementMax] 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
@@ -511,7 +511,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
          * @param {IdentificationtasksListReviewActionParameter} [reviewAction] 
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -675,9 +675,9 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [numAnnotationsMax] 
          * @param {number} [numAnnotationsMin] 
          * @param {Array<number>} [observationCountryIds] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {number} [resultAgreementMax] 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
@@ -687,7 +687,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
          * @param {IdentificationtasksListReviewActionParameter} [reviewAction] 
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -935,8 +935,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
         /**
          * 
          * @param {string} observationUuid UUID of the Observation
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1251,10 +1251,10 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {boolean} [isDecisive] 
          * @param {boolean} [isFavourite] 
          * @param {boolean} [isFlagged] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {string} [search] Un término de búsqueda.
          * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
@@ -1279,10 +1279,10 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {boolean} [isDecisive] 
          * @param {boolean} [isFavourite] 
          * @param {boolean} [isFlagged] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {string} [search] Un término de búsqueda.
          * @param {IdentificationtasksAnnotationsListTypeParameter} [type] 
          * @param {string} [updatedAtAfter] Updated at
          * @param {string} [updatedAtBefore] Updated at
@@ -1298,7 +1298,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this expert report annotation.
+         * @param {number} id Un valor de entero único que identifique este expert report annotation.
          * @param {string} observationUuid UUID of the Observation
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1332,9 +1332,9 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [numAnnotationsMax] 
          * @param {number} [numAnnotationsMin] 
          * @param {Array<number>} [observationCountryIds] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {number} [resultAgreementMax] 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
@@ -1344,7 +1344,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
          * @param {IdentificationtasksListReviewActionParameter} [reviewAction] 
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -1369,9 +1369,9 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [numAnnotationsMax] 
          * @param {number} [numAnnotationsMin] 
          * @param {Array<number>} [observationCountryIds] 
-         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<IdentificationtasksListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {number} [resultAgreementMax] 
          * @param {number} [resultAgreementMin] 
          * @param {string} [resultConfidenceMax] 
@@ -1381,7 +1381,7 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
          * @param {number} [resultUncertaintyMax] 
          * @param {number} [resultUncertaintyMin] 
          * @param {IdentificationtasksListReviewActionParameter} [reviewAction] 
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {Array<IdentificationtasksListStatusParameter>} [status] 
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -1423,8 +1423,8 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
         /**
          * 
          * @param {string} observationUuid UUID of the Observation
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1692,22 +1692,22 @@ export interface IdentificationTasksApiAnnotationsListRequest {
     readonly isFlagged?: boolean
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 
@@ -1755,22 +1755,22 @@ export interface IdentificationTasksApiAnnotationsListMineRequest {
     readonly isFlagged?: boolean
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 
@@ -1794,7 +1794,7 @@ export interface IdentificationTasksApiAnnotationsListMineRequest {
  */
 export interface IdentificationTasksApiAnnotationsRetrieveRequest {
     /**
-     * A unique integer value identifying this expert report annotation.
+     * Un valor de entero único que identifique este expert report annotation.
      */
     readonly id: number
 
@@ -1838,17 +1838,17 @@ export interface IdentificationTasksApiListRequest {
     readonly observationCountryIds?: Array<number>
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
@@ -1871,7 +1871,7 @@ export interface IdentificationTasksApiListRequest {
     readonly reviewAction?: IdentificationtasksListReviewActionParameter
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 
@@ -1922,17 +1922,17 @@ export interface IdentificationTasksApiListMineRequest {
     readonly observationCountryIds?: Array<number>
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<IdentificationtasksListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
@@ -1955,7 +1955,7 @@ export interface IdentificationTasksApiListMineRequest {
     readonly reviewAction?: IdentificationtasksListReviewActionParameter
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 
@@ -2006,12 +2006,12 @@ export interface IdentificationTasksApiPredictionsListRequest {
     readonly observationUuid: string
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 }

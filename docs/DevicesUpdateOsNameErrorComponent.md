@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**DevicesCreateOsNameErrorComponentAttr**](DevicesCreateOsNameErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**DevicesCreateDeviceIdErrorComponentCode**](DevicesCreateDeviceIdErrorComponentCode.md) |  | [default to undefined]
+**code** | [**DevicesCreateModelErrorComponentCode**](DevicesCreateModelErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

@@ -16,6 +16,7 @@
 
 
 export const DevicesCreateDeviceIdErrorComponentCode = {
+    Blank: 'blank',
     Invalid: 'invalid',
     MaxLength: 'max_length',
     Null: 'null',

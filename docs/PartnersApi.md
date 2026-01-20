@@ -22,8 +22,8 @@ import {
 const configuration = new Configuration();
 const apiInstance = new PartnersApi(configuration);
 
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
     page,
@@ -35,8 +35,8 @@ const { status, data } = await apiInstance.list(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -78,7 +78,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new PartnersApi(configuration);
 
-let id: number; //A unique integer value identifying this organization pin. (default to undefined)
+let id: number; //Un valor de entero único que identifique este organization pin. (default to undefined)
 
 const { status, data } = await apiInstance.retrieve(
     id
@@ -89,7 +89,7 @@ const { status, data } = await apiInstance.retrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | A unique integer value identifying this organization pin. | defaults to undefined|
+| **id** | [**number**] | Un valor de entero único que identifique este organization pin. | defaults to undefined|
 
 
 ### Return type

@@ -33,7 +33,7 @@ export interface DeviceUpdate {
     /**
      * The manufacturer of the device.
      */
-    'manufacturer': string;
+    'manufacturer': string | null;
     /**
      * The end-user-visible name for the end product.
      */

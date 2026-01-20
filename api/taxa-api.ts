@@ -45,8 +45,8 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @param {boolean} [isRelevant] 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {Array<TaxaListRankParameter>} [rank] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -102,7 +102,7 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this taxon.
+         * @param {number} id Un valor de entero único que identifique este taxon.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -182,7 +182,7 @@ export const TaxaApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this taxon.
+         * @param {number} id Un valor de entero único que identifique este taxon.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -234,8 +234,8 @@ export const TaxaApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {boolean} [isRelevant] 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {Array<TaxaListRankParameter>} [rank] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -248,7 +248,7 @@ export const TaxaApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this taxon.
+         * @param {number} id Un valor de entero único que identifique este taxon.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -271,7 +271,7 @@ export const TaxaApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this taxon.
+         * @param {number} id Un valor de entero único que identifique este taxon.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -335,12 +335,12 @@ export interface TaxaApiListRequest {
     readonly isRelevant?: boolean
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
@@ -352,7 +352,7 @@ export interface TaxaApiListRequest {
  */
 export interface TaxaApiRetrieveRequest {
     /**
-     * A unique integer value identifying this taxon.
+     * Un valor de entero único que identifique este taxon.
      */
     readonly id: number
 }
@@ -362,7 +362,7 @@ export interface TaxaApiRetrieveRequest {
  */
 export interface TaxaApiTreeRetrieveRequest {
     /**
-     * A unique integer value identifying this taxon.
+     * Un valor de entero único que identifique este taxon.
      */
     readonly id: number
 }

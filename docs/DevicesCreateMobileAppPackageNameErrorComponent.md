@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**DevicesCreateMobileAppPackageNameErrorComponentAttr**](DevicesCreateMobileAppPackageNameErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**DevicesCreateMobileAppPackageNameErrorComponentCode**](DevicesCreateMobileAppPackageNameErrorComponentCode.md) |  | [default to undefined]
+**code** | [**DevicesCreateDeviceIdErrorComponentCode**](DevicesCreateDeviceIdErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

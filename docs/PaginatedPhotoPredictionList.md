@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **number** |  | [optional] [default to undefined]
+**count** | **number** |  | [default to undefined]
 **next** | **string** |  | [optional] [default to undefined]
 **previous** | **string** |  | [optional] [default to undefined]
-**results** | [**Array&lt;PhotoPrediction&gt;**](PhotoPrediction.md) |  | [optional] [default to undefined]
+**results** | [**Array&lt;PhotoPrediction&gt;**](PhotoPrediction.md) |  | [default to undefined]
 
 ## Example
 

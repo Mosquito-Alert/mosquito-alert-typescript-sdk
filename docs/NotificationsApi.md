@@ -82,9 +82,9 @@ const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
 let isRead: boolean; // (optional) (default to undefined)
-let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordenado   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
     isRead,
@@ -99,9 +99,9 @@ const { status, data } = await apiInstance.list(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **isRead** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -146,9 +146,9 @@ const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
 let isRead: boolean; // (optional) (default to undefined)
-let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordenado   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.listMine(
     isRead,
@@ -163,9 +163,9 @@ const { status, data } = await apiInstance.listMine(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **isRead** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -209,7 +209,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; //Un valor de entero único que identifique este notification. (default to undefined)
 let patchedNotificationRequest: PatchedNotificationRequest; // (optional)
 
 const { status, data } = await apiInstance.partialUpdate(
@@ -223,7 +223,7 @@ const { status, data } = await apiInstance.partialUpdate(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **patchedNotificationRequest** | **PatchedNotificationRequest**|  | |
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] | Un valor de entero único que identifique este notification. | defaults to undefined|
 
 
 ### Return type
@@ -266,7 +266,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; //Un valor de entero único que identifique este notification. (default to undefined)
 
 const { status, data } = await apiInstance.retrieve(
     id
@@ -277,7 +277,7 @@ const { status, data } = await apiInstance.retrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] | Un valor de entero único que identifique este notification. | defaults to undefined|
 
 
 ### Return type
@@ -320,7 +320,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; //Un valor de entero único que identifique este notification. (default to undefined)
 let notificationRequest: NotificationRequest; //
 
 const { status, data } = await apiInstance.update(
@@ -334,7 +334,7 @@ const { status, data } = await apiInstance.update(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **notificationRequest** | **NotificationRequest**|  | |
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] | Un valor de entero único que identifique este notification. | defaults to undefined|
 
 
 ### Return type

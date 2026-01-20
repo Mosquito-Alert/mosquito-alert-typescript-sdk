@@ -167,12 +167,12 @@ let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
-let orderBy: Array<BitesListOrderByParameter>; //Ordenado   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
-let search: string; //A search term. (optional) (default to undefined)
+let search: string; //Un término de búsqueda. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -204,12 +204,12 @@ const { status, data } = await apiInstance.list(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
-| **search** | [**string**] | A search term. | (optional) defaults to undefined|
+| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
@@ -260,12 +260,12 @@ let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
-let orderBy: Array<BitesListOrderByParameter>; //Ordenado   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
+let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
-let search: string; //A search term. (optional) (default to undefined)
+let search: string; //Un término de búsqueda. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -297,12 +297,12 @@ const { status, data } = await apiInstance.listMine(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenado   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
-| **search** | [**string**] | A search term. | (optional) defaults to undefined|
+| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr**](DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**AuthChangePasswordNonFieldErrorsErrorComponentCode**](AuthChangePasswordNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
+**code** | [**DevicesCreateMobileAppNonFieldErrorsErrorComponentCode**](DevicesCreateMobileAppNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

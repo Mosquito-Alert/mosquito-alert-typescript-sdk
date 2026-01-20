@@ -18,9 +18,9 @@
 import type { Taxon } from './taxon';
 
 export interface PaginatedTaxonList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Taxon>;
+    'results': Array<Taxon>;
 }
 

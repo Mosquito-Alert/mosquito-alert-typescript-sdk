@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentAttr } from './devices-create-mobile-app-package-name-error-component-attr';
+import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devices-create-mobile-app-package-name-error-component-code';
+import type { DevicesCreateMobileAppPackageNameErrorComponentAttr } from './devices-create-mobile-app-package-name-error-component-attr';
 
 export interface DevicesPartialUpdateMobileAppPackageNameErrorComponent {
     'attr': DevicesCreateMobileAppPackageNameErrorComponentAttr;
-    'code': DevicesCreateMobileAppPackageNameErrorComponentCode;
+    'code': DevicesCreateDeviceIdErrorComponentCode;
     'detail': string;
 }
 

@@ -18,9 +18,9 @@
 import type { Partner } from './partner';
 
 export interface PaginatedPartnerList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Partner>;
+    'results': Array<Partner>;
 }
 

@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **number** |  | [optional] [default to undefined]
+**count** | **number** |  | [default to undefined]
 **next** | **string** |  | [optional] [default to undefined]
 **previous** | **string** |  | [optional] [default to undefined]
-**results** | [**Array&lt;BreedingSite&gt;**](BreedingSite.md) |  | [optional] [default to undefined]
+**results** | [**Array&lt;BreedingSite&gt;**](BreedingSite.md) |  | [default to undefined]
 
 ## Example
 

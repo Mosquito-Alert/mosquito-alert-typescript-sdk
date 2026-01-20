@@ -115,6 +115,7 @@ export const LocationTimezone = {
     AmericaCoralHarbour: 'America/Coral_Harbour',
     AmericaCordoba: 'America/Cordoba',
     AmericaCostaRica: 'America/Costa_Rica',
+    AmericaCoyhaique: 'America/Coyhaique',
     AmericaCreston: 'America/Creston',
     AmericaCuiaba: 'America/Cuiaba',
     AmericaCuracao: 'America/Curacao',

@@ -38,8 +38,8 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
     return {
         /**
          * 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -86,7 +86,7 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this europe country.
+         * @param {number} id Un valor de entero único que identifique este europe country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -137,8 +137,8 @@ export const CountriesApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -150,7 +150,7 @@ export const CountriesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this europe country.
+         * @param {number} id Un valor de entero único que identifique este europe country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -195,12 +195,12 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
  */
 export interface CountriesApiListRequest {
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 }
@@ -210,7 +210,7 @@ export interface CountriesApiListRequest {
  */
 export interface CountriesApiRetrieveRequest {
     /**
-     * A unique integer value identifying this europe country.
+     * Un valor de entero único que identifique este europe country.
      */
     readonly id: number
 }

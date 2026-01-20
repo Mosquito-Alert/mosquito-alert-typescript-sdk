@@ -1,9 +1,7 @@
-# DevicesCreateMobileAppPackageNameErrorComponentCode
+# DevicesCreateModelErrorComponentCode
 
 
 ## Enum
-
-* `Blank` (value: `'blank'`)
 
 * `Invalid` (value: `'invalid'`)
 

@@ -18,9 +18,9 @@
 import type { BreedingSite } from './breeding-site';
 
 export interface PaginatedBreedingSiteList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<BreedingSite>;
+    'results': Array<BreedingSite>;
 }
 

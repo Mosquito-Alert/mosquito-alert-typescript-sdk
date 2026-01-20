@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentCode } from './devices-create-mobile-app-package-name-error-component-code';
+import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { NotificationsCreateMessageTitleEnErrorComponentAttr } from './notifications-create-message-title-en-error-component-attr';
 
 export interface NotificationsCreateMessageTitleEnErrorComponent {
     'attr': NotificationsCreateMessageTitleEnErrorComponentAttr;
-    'code': DevicesCreateMobileAppPackageNameErrorComponentCode;
+    'code': DevicesCreateDeviceIdErrorComponentCode;
     'detail': string;
 }
 

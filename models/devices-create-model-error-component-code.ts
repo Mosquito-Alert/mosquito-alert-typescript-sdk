@@ -15,8 +15,7 @@
 
 
 
-export const DevicesCreateMobileAppPackageNameErrorComponentCode = {
-    Blank: 'blank',
+export const DevicesCreateModelErrorComponentCode = {
     Invalid: 'invalid',
     MaxLength: 'max_length',
     Null: 'null',
@@ -26,7 +25,7 @@ export const DevicesCreateMobileAppPackageNameErrorComponentCode = {
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type DevicesCreateMobileAppPackageNameErrorComponentCode = typeof DevicesCreateMobileAppPackageNameErrorComponentCode[keyof typeof DevicesCreateMobileAppPackageNameErrorComponentCode];
+export type DevicesCreateModelErrorComponentCode = typeof DevicesCreateModelErrorComponentCode[keyof typeof DevicesCreateModelErrorComponentCode];
 
 
 

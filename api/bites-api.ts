@@ -133,15 +133,15 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {number | null} [countryId] 
+         * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -149,7 +149,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -248,15 +248,15 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * Get Current User\'s Bites
-         * @param {number | null} [countryId] 
+         * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -264,7 +264,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/bites/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -438,15 +438,15 @@ export const BitesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number | null} [countryId] 
+         * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -454,7 +454,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+        async list(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.list']?.[localVarOperationServerIndex]?.url;
@@ -462,15 +462,15 @@ export const BitesApiFp = function(configuration?: Configuration) {
         },
         /**
          * Get Current User\'s Bites
-         * @param {number | null} [countryId] 
+         * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenado  
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] A search term.
+         * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
@@ -478,7 +478,7 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number | null, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
+        async listMine(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedBiteList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.listMine']?.[localVarOperationServerIndex]?.url;
@@ -571,7 +571,7 @@ export interface BitesApiDestroyRequest {
  * Request parameters for list operation in BitesApi.
  */
 export interface BitesApiListRequest {
-    readonly countryId?: number | null
+    readonly countryId?: number
 
     /**
      * Created at
@@ -584,17 +584,17 @@ export interface BitesApiListRequest {
     readonly createdAtBefore?: string
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
@@ -609,7 +609,7 @@ export interface BitesApiListRequest {
     readonly receivedAtBefore?: string
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 
@@ -635,7 +635,7 @@ export interface BitesApiListRequest {
  * Request parameters for listMine operation in BitesApi.
  */
 export interface BitesApiListMineRequest {
-    readonly countryId?: number | null
+    readonly countryId?: number
 
     /**
      * Created at
@@ -648,17 +648,17 @@ export interface BitesApiListMineRequest {
     readonly createdAtBefore?: string
 
     /**
-     * Ordenado  
+     * Ordenamiento  
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * A page number within the paginated result set.
+     * Un número de página dentro del conjunto de resultados paginado.
      */
     readonly page?: number
 
     /**
-     * Number of results to return per page.
+     * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
 
@@ -673,7 +673,7 @@ export interface BitesApiListMineRequest {
     readonly receivedAtBefore?: string
 
     /**
-     * A search term.
+     * Un término de búsqueda.
      */
     readonly search?: string
 

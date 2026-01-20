@@ -3,6 +3,8 @@
 
 ## Enum
 
+* `Blank` (value: `'blank'`)
+
 * `Invalid` (value: `'invalid'`)
 
 * `MaxLength` (value: `'max_length'`)

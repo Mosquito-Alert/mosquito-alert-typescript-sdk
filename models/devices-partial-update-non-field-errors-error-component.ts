@@ -18,11 +18,11 @@
 import type { AuthChangePasswordNonFieldErrorsErrorComponentAttr } from './auth-change-password-non-field-errors-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
+import type { DevicesCreateMobileAppNonFieldErrorsErrorComponentCode } from './devices-create-mobile-app-non-field-errors-error-component-code';
 
 export interface DevicesPartialUpdateNonFieldErrorsErrorComponent {
     'attr': AuthChangePasswordNonFieldErrorsErrorComponentAttr;
-    'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
+    'code': DevicesCreateMobileAppNonFieldErrorsErrorComponentCode;
     'detail': string;
 }
 

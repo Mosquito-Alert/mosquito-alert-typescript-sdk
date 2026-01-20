@@ -18,9 +18,9 @@
 import type { IdentificationTask } from './identification-task';
 
 export interface PaginatedIdentificationTaskList {
-    'count'?: number;
+    'count': number;
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<IdentificationTask>;
+    'results': Array<IdentificationTask>;
 }
 

@@ -201,6 +201,8 @@
 
 * `AmericaCostaRica` (value: `'America/Costa_Rica'`)
 
+* `AmericaCoyhaique` (value: `'America/Coyhaique'`)
+
 * `AmericaCreston` (value: `'America/Creston'`)
 
 * `AmericaCuiaba` (value: `'America/Cuiaba'`)

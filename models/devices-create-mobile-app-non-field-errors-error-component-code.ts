@@ -13,18 +13,16 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { DevicesCreateMobileAppPackageNameErrorComponentAttr } from './devices-create-mobile-app-package-name-error-component-attr';
 
-export interface DevicesUpdateMobileAppPackageNameErrorComponent {
-    'attr': DevicesCreateMobileAppPackageNameErrorComponentAttr;
-    'code': DevicesCreateDeviceIdErrorComponentCode;
-    'detail': string;
-}
+
+export const DevicesCreateMobileAppNonFieldErrorsErrorComponentCode = {
+    Invalid: 'invalid',
+    Null: 'null',
+    Unique: 'unique',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type DevicesCreateMobileAppNonFieldErrorsErrorComponentCode = typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCode[keyof typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCode];
 
 
 
