@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**BitesListMineUserUuidErrorComponentAttr**](BitesListMineUserUuidErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesListMineUserUuidErrorComponentCode**](BitesListMineUserUuidErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**BitesGeoListUserUuidErrorComponentAttr**](BitesGeoListUserUuidErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**BitesGeoListBoundaryUuidErrorComponentCode**](BitesGeoListBoundaryUuidErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

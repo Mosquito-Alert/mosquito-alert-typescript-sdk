@@ -26,6 +26,10 @@ import type { BiteEventEnvironment } from '../models';
 // @ts-ignore
 import type { BiteEventMoment } from '../models';
 // @ts-ignore
+import type { BitesGeoListFormatParameter } from '../models';
+// @ts-ignore
+import type { BitesListFormatParameter } from '../models';
+// @ts-ignore
 import type { BitesListOrderByParameter } from '../models';
 // @ts-ignore
 import type { ErrorResponse401 } from '../models';
@@ -40,7 +44,15 @@ import type { MosquitoAppearanceRequest } from '../models';
 // @ts-ignore
 import type { Observation } from '../models';
 // @ts-ignore
+import type { ObservationGeoJsonModelList } from '../models';
+// @ts-ignore
+import type { ObservationGeoModel } from '../models';
+// @ts-ignore
 import type { ObservationsCreateValidationError } from '../models';
+// @ts-ignore
+import type { ObservationsGeoListValidationError } from '../models';
+// @ts-ignore
+import type { ObservationsListMineIdentificationTaxonIdsLookupParameter } from '../models';
 // @ts-ignore
 import type { ObservationsListMineValidationError } from '../models';
 // @ts-ignore
@@ -192,25 +204,188 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @param {string} [boundaryUuid] 
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesGeoListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxonIds] 
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        geoList: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/observations/geo/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (boundaryUuid !== undefined) {
+                localVarQueryParameter['boundary_uuid'] = boundaryUuid;
+            }
+
+            if (countryId !== undefined) {
+                localVarQueryParameter['country_id'] = countryId;
+            }
+
+            if (createdAtAfter !== undefined) {
+                localVarQueryParameter['created_at_after'] = (createdAtAfter as any instanceof Date) ?
+                    (createdAtAfter as any).toISOString() :
+                    createdAtAfter;
+            }
+
+            if (createdAtBefore !== undefined) {
+                localVarQueryParameter['created_at_before'] = (createdAtBefore as any instanceof Date) ?
+                    (createdAtBefore as any).toISOString() :
+                    createdAtBefore;
+            }
+
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
+            if (hasPhotos !== undefined) {
+                localVarQueryParameter['has_photos'] = hasPhotos;
+            }
+
+            if (identificationTaxonIds) {
+                localVarQueryParameter['identification_taxon_ids'] = identificationTaxonIds;
+            }
+
+            if (identificationTaxonIdsLookup !== undefined) {
+                localVarQueryParameter['identification_taxon_ids_lookup'] = identificationTaxonIdsLookup;
+            }
+
+            if (negateIdentificationTaxonIds !== undefined) {
+                localVarQueryParameter['negate_identification_taxon_ids'] = negateIdentificationTaxonIds;
+            }
+
+            if (orderBy) {
+                localVarQueryParameter['order_by'] = orderBy.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (receivedAtAfter !== undefined) {
+                localVarQueryParameter['received_at_after'] = (receivedAtAfter as any instanceof Date) ?
+                    (receivedAtAfter as any).toISOString() :
+                    receivedAtAfter;
+            }
+
+            if (receivedAtBefore !== undefined) {
+                localVarQueryParameter['received_at_before'] = (receivedAtBefore as any instanceof Date) ?
+                    (receivedAtBefore as any).toISOString() :
+                    receivedAtBefore;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (shortId !== undefined) {
+                localVarQueryParameter['short_id'] = shortId;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (updatedAtAfter !== undefined) {
+                localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
+                    (updatedAtAfter as any).toISOString() :
+                    updatedAtAfter;
+            }
+
+            if (updatedAtBefore !== undefined) {
+                localVarQueryParameter['updated_at_before'] = (updatedAtBefore as any instanceof Date) ?
+                    (updatedAtBefore as any).toISOString() :
+                    updatedAtBefore;
+            }
+
+            if (userUuid !== undefined) {
+                localVarQueryParameter['user_uuid'] = userUuid;
+            }
+
+            localVarHeaderParameter['Accept'] = 'application/json,application/geo+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [boundaryUuid] 
+         * @param {number} [countryId] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -232,6 +407,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (boundaryUuid !== undefined) {
+                localVarQueryParameter['boundary_uuid'] = boundaryUuid;
+            }
+
             if (countryId !== undefined) {
                 localVarQueryParameter['country_id'] = countryId;
             }
@@ -248,12 +427,32 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                     createdAtBefore;
             }
 
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
             if (identificationTaxonIds) {
                 localVarQueryParameter['identification_taxon_ids'] = identificationTaxonIds;
+            }
+
+            if (identificationTaxonIdsLookup !== undefined) {
+                localVarQueryParameter['identification_taxon_ids_lookup'] = identificationTaxonIdsLookup;
+            }
+
+            if (negateIdentificationTaxonIds !== undefined) {
+                localVarQueryParameter['negate_identification_taxon_ids'] = negateIdentificationTaxonIds;
             }
 
             if (orderBy) {
@@ -266,6 +465,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
             }
 
             if (receivedAtAfter !== undefined) {
@@ -288,6 +491,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['short_id'] = shortId;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
             if (updatedAtAfter !== undefined) {
                 localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
                     (updatedAtAfter as any).toISOString() :
@@ -304,7 +511,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
-            localVarHeaderParameter['Accept'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -317,25 +524,33 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * Get Current User\'s Observations
+         * @param {string} [boundaryUuid] 
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxonIds] 
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
          * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/observations/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -357,6 +572,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (boundaryUuid !== undefined) {
+                localVarQueryParameter['boundary_uuid'] = boundaryUuid;
+            }
+
             if (countryId !== undefined) {
                 localVarQueryParameter['country_id'] = countryId;
             }
@@ -373,12 +592,32 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                     createdAtBefore;
             }
 
+            if (dist !== undefined) {
+                localVarQueryParameter['dist'] = dist;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (geoPrecision !== undefined) {
+                localVarQueryParameter['geo_precision'] = geoPrecision;
+            }
+
             if (hasPhotos !== undefined) {
                 localVarQueryParameter['has_photos'] = hasPhotos;
             }
 
             if (identificationTaxonIds) {
                 localVarQueryParameter['identification_taxon_ids'] = identificationTaxonIds;
+            }
+
+            if (identificationTaxonIdsLookup !== undefined) {
+                localVarQueryParameter['identification_taxon_ids_lookup'] = identificationTaxonIdsLookup;
+            }
+
+            if (negateIdentificationTaxonIds !== undefined) {
+                localVarQueryParameter['negate_identification_taxon_ids'] = negateIdentificationTaxonIds;
             }
 
             if (orderBy) {
@@ -391,6 +630,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (point) {
+                localVarQueryParameter['point'] = point.join(COLLECTION_FORMATS.csv);
             }
 
             if (receivedAtAfter !== undefined) {
@@ -413,6 +656,10 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['short_id'] = shortId;
             }
 
+            if (tags) {
+                localVarQueryParameter['tags'] = tags.join(COLLECTION_FORMATS.csv);
+            }
+
             if (updatedAtAfter !== undefined) {
                 localVarQueryParameter['updated_at_after'] = (updatedAtAfter as any instanceof Date) ?
                     (updatedAtAfter as any).toISOString() :
@@ -429,7 +676,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
                 localVarQueryParameter['user_uuid'] = userUuid;
             }
 
-            localVarHeaderParameter['Accept'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -525,52 +772,100 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [boundaryUuid] 
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesGeoListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxonIds] 
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async geoList(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ObservationGeoModel>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ObservationsApi.geoList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {string} [boundaryUuid] 
+         * @param {number} [countryId] 
+         * @param {string} [createdAtAfter] Created at
+         * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
+         * @param {boolean} [hasPhotos] Has any photo
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
+         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+         * @param {string} [receivedAtAfter] Received at
+         * @param {string} [receivedAtBefore] Received at
+         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {string} [updatedAtAfter] Update at
+         * @param {string} [updatedAtBefore] Update at
+         * @param {string} [userUuid] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async list(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, page, pageSize, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * Get Current User\'s Observations
+         * @param {string} [boundaryUuid] 
          * @param {number} [countryId] 
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
+         * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+         * @param {BitesListFormatParameter} [format] 
+         * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
-         * @param {Array<number>} [identificationTaxonIds] 
+         * @param {Array<string>} [identificationTaxonIds] 
+         * @param {ObservationsListMineIdentificationTaxonIdsLookupParameter} [identificationTaxonIdsLookup] 
+         * @param {boolean} [negateIdentificationTaxonIds] Negate identification_taxon_ids filter
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
          * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
          * @param {string} [search] Un término de búsqueda.
          * @param {string} [shortId] Short ID
+         * @param {Array<string>} [tags] Múltiples valores separados por comas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(countryId?: number, createdAtAfter?: string, createdAtBefore?: string, hasPhotos?: boolean, identificationTaxonIds?: Array<number>, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async listMine(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, page?: number, pageSize?: number, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedObservationList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, page, pageSize, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.listMine']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -616,12 +911,21 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @param {ObservationsApiGeoListRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        geoList(requestParameters: ObservationsApiGeoListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ObservationGeoModel>> {
+            return localVarFp.geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {ObservationsApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         list(requestParameters: ObservationsApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * Get Current User\'s Observations
@@ -630,7 +934,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         listMine(requestParameters: ObservationsApiListMineRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedObservationList> {
-            return localVarFp.listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.listMine(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -681,9 +985,11 @@ export interface ObservationsApiDestroyRequest {
 }
 
 /**
- * Request parameters for list operation in ObservationsApi.
+ * Request parameters for geoList operation in ObservationsApi.
  */
-export interface ObservationsApiListRequest {
+export interface ObservationsApiGeoListRequest {
+    readonly boundaryUuid?: string
+
     readonly countryId?: number
 
     /**
@@ -697,11 +1003,30 @@ export interface ObservationsApiListRequest {
     readonly createdAtBefore?: string
 
     /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesGeoListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    /**
      * Has any photo
      */
     readonly hasPhotos?: boolean
 
-    readonly identificationTaxonIds?: Array<number>
+    readonly identificationTaxonIds?: Array<string>
+
+    readonly identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter
+
+    /**
+     * Negate identification_taxon_ids filter
+     */
+    readonly negateIdentificationTaxonIds?: boolean
 
     /**
      * Ordenamiento  
@@ -709,14 +1034,9 @@ export interface ObservationsApiListRequest {
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * Un número de página dentro del conjunto de resultados paginado.
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
      */
-    readonly page?: number
-
-    /**
-     * Número de resultados a devolver por página.
-     */
-    readonly pageSize?: number
+    readonly point?: Array<number>
 
     /**
      * Received at
@@ -737,6 +1057,113 @@ export interface ObservationsApiListRequest {
      * Short ID
      */
     readonly shortId?: string
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
+
+    /**
+     * Update at
+     */
+    readonly updatedAtAfter?: string
+
+    /**
+     * Update at
+     */
+    readonly updatedAtBefore?: string
+
+    readonly userUuid?: string
+}
+
+/**
+ * Request parameters for list operation in ObservationsApi.
+ */
+export interface ObservationsApiListRequest {
+    readonly boundaryUuid?: string
+
+    readonly countryId?: number
+
+    /**
+     * Created at
+     */
+    readonly createdAtAfter?: string
+
+    /**
+     * Created at
+     */
+    readonly createdAtBefore?: string
+
+    /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    /**
+     * Has any photo
+     */
+    readonly hasPhotos?: boolean
+
+    readonly identificationTaxonIds?: Array<string>
+
+    readonly identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter
+
+    /**
+     * Negate identification_taxon_ids filter
+     */
+    readonly negateIdentificationTaxonIds?: boolean
+
+    /**
+     * Ordenamiento  
+     */
+    readonly orderBy?: Array<BitesListOrderByParameter>
+
+    /**
+     * Un número de página dentro del conjunto de resultados paginado.
+     */
+    readonly page?: number
+
+    /**
+     * Número de resultados a devolver por página.
+     */
+    readonly pageSize?: number
+
+    /**
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+     */
+    readonly point?: Array<number>
+
+    /**
+     * Received at
+     */
+    readonly receivedAtAfter?: string
+
+    /**
+     * Received at
+     */
+    readonly receivedAtBefore?: string
+
+    /**
+     * Un término de búsqueda.
+     */
+    readonly search?: string
+
+    /**
+     * Short ID
+     */
+    readonly shortId?: string
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
 
     /**
      * Update at
@@ -755,6 +1182,8 @@ export interface ObservationsApiListRequest {
  * Request parameters for listMine operation in ObservationsApi.
  */
 export interface ObservationsApiListMineRequest {
+    readonly boundaryUuid?: string
+
     readonly countryId?: number
 
     /**
@@ -768,11 +1197,30 @@ export interface ObservationsApiListMineRequest {
     readonly createdAtBefore?: string
 
     /**
+     * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
+     */
+    readonly dist?: number
+
+    readonly format?: BitesListFormatParameter
+
+    /**
+     * Latitude/Longitude precision
+     */
+    readonly geoPrecision?: number
+
+    /**
      * Has any photo
      */
     readonly hasPhotos?: boolean
 
-    readonly identificationTaxonIds?: Array<number>
+    readonly identificationTaxonIds?: Array<string>
+
+    readonly identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter
+
+    /**
+     * Negate identification_taxon_ids filter
+     */
+    readonly negateIdentificationTaxonIds?: boolean
 
     /**
      * Ordenamiento  
@@ -788,6 +1236,11 @@ export interface ObservationsApiListMineRequest {
      * Número de resultados a devolver por página.
      */
     readonly pageSize?: number
+
+    /**
+     * Point represented in **x,y** format. Represents **point** in **Distance to point filter**
+     */
+    readonly point?: Array<number>
 
     /**
      * Received at
@@ -808,6 +1261,11 @@ export interface ObservationsApiListMineRequest {
      * Short ID
      */
     readonly shortId?: string
+
+    /**
+     * Múltiples valores separados por comas.
+     */
+    readonly tags?: Array<string>
 
     /**
      * Update at
@@ -855,12 +1313,22 @@ export class ObservationsApi extends BaseAPI {
 
     /**
      * 
+     * @param {ObservationsApiGeoListRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public geoList(requestParameters: ObservationsApiGeoListRequest = {}, options?: RawAxiosRequestConfig) {
+        return ObservationsApiFp(this.configuration).geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {ObservationsApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public list(requestParameters: ObservationsApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).list(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return ObservationsApiFp(this.configuration).list(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -870,7 +1338,7 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public listMine(requestParameters: ObservationsApiListMineRequest = {}, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).listMine(requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return ObservationsApiFp(this.configuration).listMine(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

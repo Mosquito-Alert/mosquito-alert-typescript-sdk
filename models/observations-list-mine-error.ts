@@ -15,10 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
+import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
+import type { ObservationsGeoListIdentificationTaxonIdsLookupErrorComponentAttr } from './observations-geo-list-identification-taxon-ids-lookup-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ObservationsListMineBoundaryUuidErrorComponent } from './observations-list-mine-boundary-uuid-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationsListMineCountryIdErrorComponent } from './observations-list-mine-country-id-error-component';
@@ -27,7 +30,13 @@ import type { ObservationsListMineCountryIdErrorComponent } from './observations
 import type { ObservationsListMineCreatedAtErrorComponent } from './observations-list-mine-created-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ObservationsListMineGeoPrecisionErrorComponent } from './observations-list-mine-geo-precision-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ObservationsListMineIdentificationTaxonIdsErrorComponent } from './observations-list-mine-identification-taxon-ids-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ObservationsListMineIdentificationTaxonIdsLookupErrorComponent } from './observations-list-mine-identification-taxon-ids-lookup-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationsListMineOrderByErrorComponent } from './observations-list-mine-order-by-error-component';
@@ -39,6 +48,9 @@ import type { ObservationsListMineReceivedAtErrorComponent } from './observation
 import type { ObservationsListMineShortIdErrorComponent } from './observations-list-mine-short-id-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ObservationsListMineTagsErrorComponent } from './observations-list-mine-tags-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ObservationsListMineUpdatedAtErrorComponent } from './observations-list-mine-updated-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -47,6 +59,6 @@ import type { ObservationsListMineUserUuidErrorComponent } from './observations-
 /**
  * @type ObservationsListMineError
  */
-export type ObservationsListMineError = { attr: 'country_id' } & ObservationsListMineCountryIdErrorComponent | { attr: 'created_at' } & ObservationsListMineCreatedAtErrorComponent | { attr: 'identification_taxon_ids' } & ObservationsListMineIdentificationTaxonIdsErrorComponent | { attr: 'order_by' } & ObservationsListMineOrderByErrorComponent | { attr: 'received_at' } & ObservationsListMineReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListMineShortIdErrorComponent | { attr: 'updated_at' } & ObservationsListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListMineUserUuidErrorComponent;
+export type ObservationsListMineError = { attr: 'boundary_uuid' } & ObservationsListMineBoundaryUuidErrorComponent | { attr: 'country_id' } & ObservationsListMineCountryIdErrorComponent | { attr: 'created_at' } & ObservationsListMineCreatedAtErrorComponent | { attr: 'geo_precision' } & ObservationsListMineGeoPrecisionErrorComponent | { attr: 'identification_taxon_ids' } & ObservationsListMineIdentificationTaxonIdsErrorComponent | { attr: 'identification_taxon_ids_lookup' } & ObservationsListMineIdentificationTaxonIdsLookupErrorComponent | { attr: 'order_by' } & ObservationsListMineOrderByErrorComponent | { attr: 'received_at' } & ObservationsListMineReceivedAtErrorComponent | { attr: 'short_id' } & ObservationsListMineShortIdErrorComponent | { attr: 'tags' } & ObservationsListMineTagsErrorComponent | { attr: 'updated_at' } & ObservationsListMineUpdatedAtErrorComponent | { attr: 'user_uuid' } & ObservationsListMineUserUuidErrorComponent;
 
 

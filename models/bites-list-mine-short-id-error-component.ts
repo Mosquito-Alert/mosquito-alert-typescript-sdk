@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineShortIdErrorComponentAttr } from './bites-list-mine-short-id-error-component-attr';
+import type { BitesGeoListShortIdErrorComponentAttr } from './bites-geo-list-short-id-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineShortIdErrorComponentCode } from './bites-list-mine-short-id-error-component-code';
+import type { BitesGeoListShortIdErrorComponentCode } from './bites-geo-list-short-id-error-component-code';
 
 export interface BitesListMineShortIdErrorComponent {
-    'attr': BitesListMineShortIdErrorComponentAttr;
-    'code': BitesListMineShortIdErrorComponentCode;
+    'attr': BitesGeoListShortIdErrorComponentAttr;
+    'code': BitesGeoListShortIdErrorComponentCode;
     'detail': string;
 }
 

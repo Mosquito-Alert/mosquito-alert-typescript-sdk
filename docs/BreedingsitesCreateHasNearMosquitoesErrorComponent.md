@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**BreedingsitesCreateHasNearMosquitoesErrorComponentAttr**](BreedingsitesCreateHasNearMosquitoesErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesListCreatedAtErrorComponentCode**](BitesListCreatedAtErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesGeoListCreatedAtErrorComponentCode**](BitesGeoListCreatedAtErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

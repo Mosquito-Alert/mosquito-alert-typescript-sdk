@@ -15,16 +15,22 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+import type { BreedingsitesCreateSiteTypeErrorComponentAttr } from './breedingsites-create-site-type-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineOrderByErrorComponentAttr } from './bites-list-mine-order-by-error-component-attr';
+import type { BreedingsitesGeoListSiteTypeErrorComponentCode } from './breedingsites-geo-list-site-type-error-component-code';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BreedingsitesListBoundaryUuidErrorComponent } from './breedingsites-list-boundary-uuid-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BreedingsitesListCountryIdErrorComponent } from './breedingsites-list-country-id-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BreedingsitesListCreatedAtErrorComponent } from './breedingsites-list-created-at-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BreedingsitesListGeoPrecisionErrorComponent } from './breedingsites-list-geo-precision-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BreedingsitesListOrderByErrorComponent } from './breedingsites-list-order-by-error-component';
@@ -36,6 +42,12 @@ import type { BreedingsitesListReceivedAtErrorComponent } from './breedingsites-
 import type { BreedingsitesListShortIdErrorComponent } from './breedingsites-list-short-id-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BreedingsitesListSiteTypeErrorComponent } from './breedingsites-list-site-type-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BreedingsitesListTagsErrorComponent } from './breedingsites-list-tags-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { BreedingsitesListUpdatedAtErrorComponent } from './breedingsites-list-updated-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -44,6 +56,6 @@ import type { BreedingsitesListUserUuidErrorComponent } from './breedingsites-li
 /**
  * @type BreedingsitesListError
  */
-export type BreedingsitesListError = { attr: 'country_id' } & BreedingsitesListCountryIdErrorComponent | { attr: 'created_at' } & BreedingsitesListCreatedAtErrorComponent | { attr: 'order_by' } & BreedingsitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListShortIdErrorComponent | { attr: 'updated_at' } & BreedingsitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListUserUuidErrorComponent;
+export type BreedingsitesListError = { attr: 'boundary_uuid' } & BreedingsitesListBoundaryUuidErrorComponent | { attr: 'country_id' } & BreedingsitesListCountryIdErrorComponent | { attr: 'created_at' } & BreedingsitesListCreatedAtErrorComponent | { attr: 'geo_precision' } & BreedingsitesListGeoPrecisionErrorComponent | { attr: 'order_by' } & BreedingsitesListOrderByErrorComponent | { attr: 'received_at' } & BreedingsitesListReceivedAtErrorComponent | { attr: 'short_id' } & BreedingsitesListShortIdErrorComponent | { attr: 'site_type' } & BreedingsitesListSiteTypeErrorComponent | { attr: 'tags' } & BreedingsitesListTagsErrorComponent | { attr: 'updated_at' } & BreedingsitesListUpdatedAtErrorComponent | { attr: 'user_uuid' } & BreedingsitesListUserUuidErrorComponent;
 
 

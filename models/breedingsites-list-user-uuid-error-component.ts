@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineUserUuidErrorComponentAttr } from './bites-list-mine-user-uuid-error-component-attr';
+import type { BitesGeoListBoundaryUuidErrorComponentCode } from './bites-geo-list-boundary-uuid-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListMineUserUuidErrorComponentCode } from './bites-list-mine-user-uuid-error-component-code';
+import type { BitesGeoListUserUuidErrorComponentAttr } from './bites-geo-list-user-uuid-error-component-attr';
 
 export interface BreedingsitesListUserUuidErrorComponent {
-    'attr': BitesListMineUserUuidErrorComponentAttr;
-    'code': BitesListMineUserUuidErrorComponentCode;
+    'attr': BitesGeoListUserUuidErrorComponentAttr;
+    'code': BitesGeoListBoundaryUuidErrorComponentCode;
     'detail': string;
 }
 

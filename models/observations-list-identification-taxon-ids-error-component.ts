@@ -18,10 +18,10 @@
 import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ObservationsListIdentificationTaxonIdsErrorComponentAttr } from './observations-list-identification-taxon-ids-error-component-attr';
+import type { ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr } from './observations-geo-list-identification-taxon-ids-error-component-attr';
 
 export interface ObservationsListIdentificationTaxonIdsErrorComponent {
-    'attr': ObservationsListIdentificationTaxonIdsErrorComponentAttr;
+    'attr': ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr;
     'code': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode;
     'detail': string;
 }

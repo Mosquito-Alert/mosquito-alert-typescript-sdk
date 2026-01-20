@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**BreedingsitesCreateInPublicAreaErrorComponentAttr**](BreedingsitesCreateInPublicAreaErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesListCreatedAtErrorComponentCode**](BitesListCreatedAtErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesGeoListCreatedAtErrorComponentCode**](BitesGeoListCreatedAtErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

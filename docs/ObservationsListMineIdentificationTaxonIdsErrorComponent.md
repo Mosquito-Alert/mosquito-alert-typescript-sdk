@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**ObservationsListIdentificationTaxonIdsErrorComponentAttr**](ObservationsListIdentificationTaxonIdsErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr**](ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode**](IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 

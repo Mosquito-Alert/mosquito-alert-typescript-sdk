@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesListCreatedAtErrorComponentCode } from './bites-list-created-at-error-component-code';
+import type { BitesGeoListCreatedAtErrorComponentCode } from './bites-geo-list-created-at-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BreedingsitesCreateCreatedAtErrorComponent } from './breedingsites-create-created-at-error-component';

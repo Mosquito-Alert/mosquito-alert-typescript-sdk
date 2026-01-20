@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |------------- | ------------- | -------------|
 |[**create**](#create) | **POST** /observations/ | |
 |[**destroy**](#destroy) | **DELETE** /observations/{uuid}/ | |
+|[**geoList**](#geolist) | **GET** /observations/geo/ | |
 |[**list**](#list) | **GET** /observations/ | |
 |[**listMine**](#listmine) | **GET** /me/observations/ | |
 |[**retrieve**](#retrieve) | **GET** /observations/{uuid}/ | |
@@ -143,6 +144,119 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **geoList**
+> Array<ObservationGeoModel> geoList()
+
+
+### Example
+
+```typescript
+import {
+    ObservationsApi,
+    Configuration
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new ObservationsApi(configuration);
+
+let boundaryUuid: string; // (optional) (default to undefined)
+let countryId: number; // (optional) (default to undefined)
+let createdAtAfter: string; //Created at (optional) (default to undefined)
+let createdAtBefore: string; //Created at (optional) (default to undefined)
+let dist: number; //Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. (optional) (default to 1000)
+let format: BitesGeoListFormatParameter; // (optional) (default to undefined)
+let geoPrecision: number; //Latitude/Longitude precision (optional) (default to undefined)
+let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
+let identificationTaxonIds: Array<string>; // (optional) (default to undefined)
+let identificationTaxonIdsLookup: ObservationsListMineIdentificationTaxonIdsLookupParameter; // (optional) (default to undefined)
+let negateIdentificationTaxonIds: boolean; //Negate identification_taxon_ids filter (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
+let receivedAtAfter: string; //Received at (optional) (default to undefined)
+let receivedAtBefore: string; //Received at (optional) (default to undefined)
+let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let shortId: string; //Short ID (optional) (default to undefined)
+let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
+let updatedAtAfter: string; //Update at (optional) (default to undefined)
+let updatedAtBefore: string; //Update at (optional) (default to undefined)
+let userUuid: string; // (optional) (default to undefined)
+
+const { status, data } = await apiInstance.geoList(
+    boundaryUuid,
+    countryId,
+    createdAtAfter,
+    createdAtBefore,
+    dist,
+    format,
+    geoPrecision,
+    hasPhotos,
+    identificationTaxonIds,
+    identificationTaxonIdsLookup,
+    negateIdentificationTaxonIds,
+    orderBy,
+    point,
+    receivedAtAfter,
+    receivedAtBefore,
+    search,
+    shortId,
+    tags,
+    updatedAtAfter,
+    updatedAtBefore,
+    userUuid
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **boundaryUuid** | [**string**] |  | (optional) defaults to undefined|
+| **countryId** | [**number**] |  | (optional) defaults to undefined|
+| **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
+| **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
+| **dist** | [**number**] | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | (optional) defaults to 1000|
+| **format** | **BitesGeoListFormatParameter** |  | (optional) defaults to undefined|
+| **geoPrecision** | [**number**] | Latitude/Longitude precision | (optional) defaults to undefined|
+| **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
+| **identificationTaxonIds** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|
+| **identificationTaxonIdsLookup** | **ObservationsListMineIdentificationTaxonIdsLookupParameter** |  | (optional) defaults to undefined|
+| **negateIdentificationTaxonIds** | [**boolean**] | Negate identification_taxon_ids filter | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
+| **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
+| **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
+| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
+| **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
+| **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
+| **userUuid** | [**string**] |  | (optional) defaults to undefined|
+
+
+### Return type
+
+**Array<ObservationGeoModel>**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/geo+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**400** |  |  -  |
+|**401** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list**
 > PaginatedObservationList list()
 
@@ -158,35 +272,51 @@ import {
 const configuration = new Configuration();
 const apiInstance = new ObservationsApi(configuration);
 
+let boundaryUuid: string; // (optional) (default to undefined)
 let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
+let dist: number; //Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. (optional) (default to 1000)
+let format: BitesListFormatParameter; // (optional) (default to undefined)
+let geoPrecision: number; //Latitude/Longitude precision (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
-let identificationTaxonIds: Array<number>; // (optional) (default to undefined)
+let identificationTaxonIds: Array<string>; // (optional) (default to undefined)
+let identificationTaxonIdsLookup: ObservationsListMineIdentificationTaxonIdsLookupParameter; // (optional) (default to undefined)
+let negateIdentificationTaxonIds: boolean; //Negate identification_taxon_ids filter (optional) (default to undefined)
 let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
 let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
 let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
 let search: string; //Un término de búsqueda. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
+let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
 let userUuid: string; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
+    boundaryUuid,
     countryId,
     createdAtAfter,
     createdAtBefore,
+    dist,
+    format,
+    geoPrecision,
     hasPhotos,
     identificationTaxonIds,
+    identificationTaxonIdsLookup,
+    negateIdentificationTaxonIds,
     orderBy,
     page,
     pageSize,
+    point,
     receivedAtAfter,
     receivedAtBefore,
     search,
     shortId,
+    tags,
     updatedAtAfter,
     updatedAtBefore,
     userUuid
@@ -197,18 +327,26 @@ const { status, data } = await apiInstance.list(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
+| **boundaryUuid** | [**string**] |  | (optional) defaults to undefined|
 | **countryId** | [**number**] |  | (optional) defaults to undefined|
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
+| **dist** | [**number**] | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | (optional) defaults to 1000|
+| **format** | **BitesListFormatParameter** |  | (optional) defaults to undefined|
+| **geoPrecision** | [**number**] | Latitude/Longitude precision | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
-| **identificationTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
+| **identificationTaxonIds** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|
+| **identificationTaxonIdsLookup** | **ObservationsListMineIdentificationTaxonIdsLookupParameter** |  | (optional) defaults to undefined|
+| **negateIdentificationTaxonIds** | [**boolean**] | Negate identification_taxon_ids filter | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
 | **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
 | **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
 | **userUuid** | [**string**] |  | (optional) defaults to undefined|
@@ -225,7 +363,7 @@ const { status, data } = await apiInstance.list(
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/csv
 
 
 ### HTTP response details
@@ -254,35 +392,51 @@ import {
 const configuration = new Configuration();
 const apiInstance = new ObservationsApi(configuration);
 
+let boundaryUuid: string; // (optional) (default to undefined)
 let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
+let dist: number; //Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. (optional) (default to 1000)
+let format: BitesListFormatParameter; // (optional) (default to undefined)
+let geoPrecision: number; //Latitude/Longitude precision (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
-let identificationTaxonIds: Array<number>; // (optional) (default to undefined)
+let identificationTaxonIds: Array<string>; // (optional) (default to undefined)
+let identificationTaxonIdsLookup: ObservationsListMineIdentificationTaxonIdsLookupParameter; // (optional) (default to undefined)
+let negateIdentificationTaxonIds: boolean; //Negate identification_taxon_ids filter (optional) (default to undefined)
 let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
 let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
 let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
 let search: string; //Un término de búsqueda. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
+let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
 let userUuid: string; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.listMine(
+    boundaryUuid,
     countryId,
     createdAtAfter,
     createdAtBefore,
+    dist,
+    format,
+    geoPrecision,
     hasPhotos,
     identificationTaxonIds,
+    identificationTaxonIdsLookup,
+    negateIdentificationTaxonIds,
     orderBy,
     page,
     pageSize,
+    point,
     receivedAtAfter,
     receivedAtBefore,
     search,
     shortId,
+    tags,
     updatedAtAfter,
     updatedAtBefore,
     userUuid
@@ -293,18 +447,26 @@ const { status, data } = await apiInstance.listMine(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
+| **boundaryUuid** | [**string**] |  | (optional) defaults to undefined|
 | **countryId** | [**number**] |  | (optional) defaults to undefined|
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
+| **dist** | [**number**] | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | (optional) defaults to 1000|
+| **format** | **BitesListFormatParameter** |  | (optional) defaults to undefined|
+| **geoPrecision** | [**number**] | Latitude/Longitude precision | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
-| **identificationTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
+| **identificationTaxonIds** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|
+| **identificationTaxonIdsLookup** | **ObservationsListMineIdentificationTaxonIdsLookupParameter** |  | (optional) defaults to undefined|
+| **negateIdentificationTaxonIds** | [**boolean**] | Negate identification_taxon_ids filter | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
 | **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
 | **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
 | **userUuid** | [**string**] |  | (optional) defaults to undefined|
@@ -321,7 +483,7 @@ const { status, data } = await apiInstance.listMine(
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/csv
 
 
 ### HTTP response details

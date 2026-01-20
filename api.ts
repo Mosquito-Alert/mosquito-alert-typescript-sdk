@@ -16,6 +16,7 @@
 
 export * from './api/auth-api';
 export * from './api/bites-api';
+export * from './api/boundaries-api';
 export * from './api/breeding-sites-api';
 export * from './api/campaigns-api';
 export * from './api/countries-api';
