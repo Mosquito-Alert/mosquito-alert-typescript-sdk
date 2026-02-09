@@ -1,13 +1,9 @@
-# BitesCreateNoteErrorComponentCode
+# BiteGeoJsonModelGeometryType
 
 
 ## Enum
 
-* `Invalid` (value: `'invalid'`)
-
-* `NullCharactersNotAllowed` (value: `'null_characters_not_allowed'`)
-
-* `SurrogateCharactersNotAllowed` (value: `'surrogate_characters_not_allowed'`)
+* `Point` (value: `'Point'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

@@ -1,4 +1,4 @@
-# BoundariesCreateTemporalNonFieldErrorsErrorComponent
+# BoundariesCreateTemporaryNonFieldErrorsErrorComponent
 
 
 ## Properties
@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { BoundariesCreateTemporalNonFieldErrorsErrorComponent } from 'mosquito-alert';
+import { BoundariesCreateTemporaryNonFieldErrorsErrorComponent } from 'mosquito-alert';
 
-const instance: BoundariesCreateTemporalNonFieldErrorsErrorComponent = {
+const instance: BoundariesCreateTemporaryNonFieldErrorsErrorComponent = {
     attr,
     code,
     detail,

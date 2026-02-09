@@ -30,9 +30,6 @@ export interface BiteRequest {
     'created_at': string;
     'sent_at': string;
     'location': LocationRequest;
-    /**
-     * Note user attached to report.
-     */
     'note'?: string | null;
     'tags'?: Array<string>;
     'event_environment'?: BiteEventEnvironment | null;

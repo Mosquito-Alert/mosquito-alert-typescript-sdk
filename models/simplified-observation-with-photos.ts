@@ -31,10 +31,7 @@ export interface SimplifiedObservationWithPhotos {
     'created_at_local': string;
     'received_at': string;
     'location': SimplifiedLocation;
-    /**
-     * Note user attached to report.
-     */
-    'note'?: string | null;
+    'note': string | null;
     'photos': Array<SimplePhoto>;
 }
 

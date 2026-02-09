@@ -4,12 +4,12 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**createTemporal**](#createtemporal) | **POST** /boundaries/ | |
+|[**createTemporary**](#createtemporary) | **POST** /boundaries/ | |
 
-# **createTemporal**
-> TemporalBoundary createTemporal(temporalBoundaryRequest)
+# **createTemporary**
+> TemporaryBoundary createTemporary(temporaryBoundaryRequest)
 
-Create a temporal boundary
+Create a temporary boundary
 
 ### Example
 
@@ -17,16 +17,16 @@ Create a temporal boundary
 import {
     BoundariesApi,
     Configuration,
-    TemporalBoundaryRequest
+    TemporaryBoundaryRequest
 } from 'mosquito-alert';
 
 const configuration = new Configuration();
 const apiInstance = new BoundariesApi(configuration);
 
-let temporalBoundaryRequest: TemporalBoundaryRequest; //
+let temporaryBoundaryRequest: TemporaryBoundaryRequest; //
 
-const { status, data } = await apiInstance.createTemporal(
-    temporalBoundaryRequest
+const { status, data } = await apiInstance.createTemporary(
+    temporaryBoundaryRequest
 );
 ```
 
@@ -34,12 +34,12 @@ const { status, data } = await apiInstance.createTemporal(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **temporalBoundaryRequest** | **TemporalBoundaryRequest**|  | |
+| **temporaryBoundaryRequest** | **TemporaryBoundaryRequest**|  | |
 
 
 ### Return type
 
-**TemporalBoundary**
+**TemporaryBoundary**
 
 ### Authorization
 

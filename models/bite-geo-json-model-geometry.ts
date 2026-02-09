@@ -13,12 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BiteGeoJsonModelGeometryType } from './bite-geo-json-model-geometry-type';
 
-export interface TemporalBoundary {
-    'uuid': string;
-    /**
-     * Time in seconds until this cached boundary expires.
-     */
-    'expires_in': number;
+export interface BiteGeoJsonModelGeometry {
+    'type'?: BiteGeoJsonModelGeometryType;
+    'coordinates'?: Array<number>;
 }
+
+
 

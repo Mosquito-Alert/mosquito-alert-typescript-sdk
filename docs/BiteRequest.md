@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **created_at** | **string** |  | [default to undefined]
 **sent_at** | **string** |  | [default to undefined]
 **location** | [**LocationRequest**](LocationRequest.md) |  | [default to undefined]
-**note** | **string** | Note user attached to report. | [optional] [default to undefined]
+**note** | **string** |  | [optional] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **event_environment** | [**BiteEventEnvironment**](BiteEventEnvironment.md) |  | [optional] [default to undefined]
 **event_moment** | [**BiteEventMoment**](BiteEventMoment.md) |  | [optional] [default to undefined]

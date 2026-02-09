@@ -1,9 +1,9 @@
-# BitesCreateNoteErrorComponentAttr
+# BoundariesCreateTemporaryGeojsonErrorComponentAttr
 
 
 ## Enum
 
-* `Note` (value: `'note'`)
+* `Geojson` (value: `'geojson'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

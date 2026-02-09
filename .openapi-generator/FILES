@@ -81,6 +81,8 @@ docs/BiteCountsRequest.md
 docs/BiteEventEnvironment.md
 docs/BiteEventMoment.md
 docs/BiteGeoJsonModel.md
+docs/BiteGeoJsonModelGeometry.md
+docs/BiteGeoJsonModelGeometryType.md
 docs/BiteGeoJsonModelList.md
 docs/BiteGeoJsonModelListType.md
 docs/BiteGeoJsonModelProperties.md
@@ -126,9 +128,6 @@ docs/BitesCreateLocationSourceErrorComponent.md
 docs/BitesCreateLocationSourceErrorComponentAttr.md
 docs/BitesCreateLocationSourceErrorComponentCode.md
 docs/BitesCreateNonFieldErrorsErrorComponent.md
-docs/BitesCreateNoteErrorComponent.md
-docs/BitesCreateNoteErrorComponentAttr.md
-docs/BitesCreateNoteErrorComponentCode.md
 docs/BitesCreateSentAtErrorComponent.md
 docs/BitesCreateSentAtErrorComponentAttr.md
 docs/BitesCreateTagsErrorComponent.md
@@ -189,11 +188,11 @@ docs/BitesListUpdatedAtErrorComponent.md
 docs/BitesListUserUuidErrorComponent.md
 docs/BitesListValidationError.md
 docs/BoundariesApi.md
-docs/BoundariesCreateTemporalError.md
-docs/BoundariesCreateTemporalGeojsonErrorComponent.md
-docs/BoundariesCreateTemporalGeojsonErrorComponentAttr.md
-docs/BoundariesCreateTemporalNonFieldErrorsErrorComponent.md
-docs/BoundariesCreateTemporalValidationError.md
+docs/BoundariesCreateTemporaryError.md
+docs/BoundariesCreateTemporaryGeojsonErrorComponent.md
+docs/BoundariesCreateTemporaryGeojsonErrorComponentAttr.md
+docs/BoundariesCreateTemporaryNonFieldErrorsErrorComponent.md
+docs/BoundariesCreateTemporaryValidationError.md
 docs/BoundingBox.md
 docs/BoundingBoxRequest.md
 docs/BreedingSite.md
@@ -201,6 +200,7 @@ docs/BreedingSiteGeoJsonModel.md
 docs/BreedingSiteGeoJsonModelList.md
 docs/BreedingSiteGeoJsonModelProperties.md
 docs/BreedingSiteGeoModel.md
+docs/BreedingSiteRequestSiteType.md
 docs/BreedingSiteSiteType.md
 docs/BreedingSitesApi.md
 docs/BreedingsitesCreateCreatedAtErrorComponent.md
@@ -219,7 +219,6 @@ docs/BreedingsitesCreateLocationPointLongitudeErrorComponent.md
 docs/BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent.md
 docs/BreedingsitesCreateLocationSourceErrorComponent.md
 docs/BreedingsitesCreateNonFieldErrorsErrorComponent.md
-docs/BreedingsitesCreateNoteErrorComponent.md
 docs/BreedingsitesCreatePhotosErrorComponent.md
 docs/BreedingsitesCreatePhotosErrorComponentAttr.md
 docs/BreedingsitesCreatePhotosErrorComponentCode.md
@@ -427,6 +426,7 @@ docs/IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode
 docs/IdentificationtasksAnnotationsCreateError.md
 docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr.md
+docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode.md
 docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent.md
 docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr.md
 docs/IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent.md
@@ -816,7 +816,6 @@ docs/ObservationsCreateMosquitoAppearanceSpecieErrorComponentAttr.md
 docs/ObservationsCreateMosquitoAppearanceThoraxErrorComponent.md
 docs/ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttr.md
 docs/ObservationsCreateNonFieldErrorsErrorComponent.md
-docs/ObservationsCreateNoteErrorComponent.md
 docs/ObservationsCreatePhotosErrorComponent.md
 docs/ObservationsCreatePhotosINDEXErrorComponent.md
 docs/ObservationsCreateSentAtErrorComponent.md
@@ -959,8 +958,8 @@ docs/TaxaListRankParameter.md
 docs/TaxaListValidationError.md
 docs/Taxon.md
 docs/TaxonTreeNode.md
-docs/TemporalBoundary.md
-docs/TemporalBoundaryRequest.md
+docs/TemporaryBoundary.md
+docs/TemporaryBoundaryRequest.md
 docs/TokenRefresh.md
 docs/TokenRefreshRequest.md
 docs/TokenVerifyRequest.md
@@ -1041,6 +1040,8 @@ models/bite-counts-request.ts
 models/bite-counts.ts
 models/bite-event-environment.ts
 models/bite-event-moment.ts
+models/bite-geo-json-model-geometry-type.ts
+models/bite-geo-json-model-geometry.ts
 models/bite-geo-json-model-list-type.ts
 models/bite-geo-json-model-list.ts
 models/bite-geo-json-model-properties.ts
@@ -1087,9 +1088,6 @@ models/bites-create-location-source-error-component-attr.ts
 models/bites-create-location-source-error-component-code.ts
 models/bites-create-location-source-error-component.ts
 models/bites-create-non-field-errors-error-component.ts
-models/bites-create-note-error-component-attr.ts
-models/bites-create-note-error-component-code.ts
-models/bites-create-note-error-component.ts
 models/bites-create-sent-at-error-component-attr.ts
 models/bites-create-sent-at-error-component.ts
 models/bites-create-tags-error-component-attr.ts
@@ -1149,17 +1147,18 @@ models/bites-list-tags-error-component.ts
 models/bites-list-updated-at-error-component.ts
 models/bites-list-user-uuid-error-component.ts
 models/bites-list-validation-error.ts
-models/boundaries-create-temporal-error.ts
-models/boundaries-create-temporal-geojson-error-component-attr.ts
-models/boundaries-create-temporal-geojson-error-component.ts
-models/boundaries-create-temporal-non-field-errors-error-component.ts
-models/boundaries-create-temporal-validation-error.ts
+models/boundaries-create-temporary-error.ts
+models/boundaries-create-temporary-geojson-error-component-attr.ts
+models/boundaries-create-temporary-geojson-error-component.ts
+models/boundaries-create-temporary-non-field-errors-error-component.ts
+models/boundaries-create-temporary-validation-error.ts
 models/bounding-box-request.ts
 models/bounding-box.ts
 models/breeding-site-geo-json-model-list.ts
 models/breeding-site-geo-json-model-properties.ts
 models/breeding-site-geo-json-model.ts
 models/breeding-site-geo-model.ts
+models/breeding-site-request-site-type.ts
 models/breeding-site-site-type.ts
 models/breeding-site.ts
 models/breedingsites-create-created-at-error-component.ts
@@ -1178,7 +1177,6 @@ models/breedingsites-create-location-point-longitude-error-component.ts
 models/breedingsites-create-location-point-non-field-errors-error-component.ts
 models/breedingsites-create-location-source-error-component.ts
 models/breedingsites-create-non-field-errors-error-component.ts
-models/breedingsites-create-note-error-component.ts
 models/breedingsites-create-photos-error-component-attr.ts
 models/breedingsites-create-photos-error-component-code.ts
 models/breedingsites-create-photos-error-component.ts
@@ -1380,6 +1378,7 @@ models/identificationtasks-annotations-create-classification-taxon-id-error-comp
 models/identificationtasks-annotations-create-classification-taxon-id-error-component.ts
 models/identificationtasks-annotations-create-error.ts
 models/identificationtasks-annotations-create-feedback-internal-note-error-component-attr.ts
+models/identificationtasks-annotations-create-feedback-internal-note-error-component-code.ts
 models/identificationtasks-annotations-create-feedback-internal-note-error-component.ts
 models/identificationtasks-annotations-create-feedback-non-field-errors-error-component-attr.ts
 models/identificationtasks-annotations-create-feedback-non-field-errors-error-component.ts
@@ -1769,7 +1768,6 @@ models/observations-create-mosquito-appearance-specie-error-component.ts
 models/observations-create-mosquito-appearance-thorax-error-component-attr.ts
 models/observations-create-mosquito-appearance-thorax-error-component.ts
 models/observations-create-non-field-errors-error-component.ts
-models/observations-create-note-error-component.ts
 models/observations-create-photos-error-component.ts
 models/observations-create-photos-indexerror-component.ts
 models/observations-create-sent-at-error-component.ts
@@ -1907,8 +1905,8 @@ models/taxa-list-rank-parameter.ts
 models/taxa-list-validation-error.ts
 models/taxon-tree-node.ts
 models/taxon.ts
-models/temporal-boundary-request.ts
-models/temporal-boundary.ts
+models/temporary-boundary-request.ts
+models/temporary-boundary.ts
 models/token-refresh-request.ts
 models/token-refresh.ts
 models/token-verify-request.ts

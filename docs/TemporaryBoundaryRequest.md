@@ -1,4 +1,4 @@
-# TemporalBoundaryRequest
+# TemporaryBoundaryRequest
 
 
 ## Properties
@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { TemporalBoundaryRequest } from 'mosquito-alert';
+import { TemporaryBoundaryRequest } from 'mosquito-alert';
 
-const instance: TemporalBoundaryRequest = {
+const instance: TemporaryBoundaryRequest = {
     geojson,
 };
 ```

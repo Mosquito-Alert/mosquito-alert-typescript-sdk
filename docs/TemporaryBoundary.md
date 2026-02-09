@@ -1,4 +1,4 @@
-# TemporalBoundary
+# TemporaryBoundary
 
 
 ## Properties
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { TemporalBoundary } from 'mosquito-alert';
+import { TemporaryBoundary } from 'mosquito-alert';
 
-const instance: TemporalBoundary = {
+const instance: TemporaryBoundary = {
     uuid,
     expires_in,
 };

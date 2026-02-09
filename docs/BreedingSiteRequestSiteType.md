@@ -1,4 +1,4 @@
-# BreedingSiteSiteType
+# BreedingSiteRequestSiteType
 
 
 ## Enum

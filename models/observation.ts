@@ -48,10 +48,7 @@ export interface Observation {
      */
     'updated_at': string;
     'location': Location;
-    /**
-     * Note user attached to report.
-     */
-    'note'?: string | null;
+    'note': string | null;
     'tags'?: Array<string>;
     'published': boolean;
     'photos': Array<SimplePhoto>;

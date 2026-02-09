@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **received_at** | **string** |  | [readonly] [default to undefined]
 **updated_at** | **string** | Date and time when the report was last modified | [readonly] [default to undefined]
 **location** | [**Location**](Location.md) |  | [default to undefined]
-**note** | **string** | Note user attached to report. | [optional] [default to undefined]
+**note** | **string** |  | [readonly] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **published** | **boolean** |  | [readonly] [default to undefined]
 **event_environment** | [**BiteEventEnvironment**](BiteEventEnvironment.md) |  | [optional] [default to undefined]

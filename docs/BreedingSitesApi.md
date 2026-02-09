@@ -31,8 +31,8 @@ let createdAt: string; // (default to undefined)
 let sentAt: string; // (default to undefined)
 let location: LocationRequest; // (default to undefined)
 let photos: Array<File>; // (default to undefined)
-let siteType: BreedingSiteSiteType; // (default to undefined)
-let note: string; //Note user attached to report. (optional) (default to undefined)
+let siteType: BreedingSiteRequestSiteType; // (default to undefined)
+let note: string; // (optional) (default to undefined)
 let tags: Array<string>; // (optional) (default to undefined)
 let hasWater: boolean; //Either if the user perceived water in the breeding site. (optional) (default to undefined)
 let inPublicArea: boolean; //Either if the breeding site is found in a public area. (optional) (default to undefined)
@@ -62,8 +62,8 @@ const { status, data } = await apiInstance.create(
 | **sentAt** | [**string**] |  | defaults to undefined|
 | **location** | **LocationRequest** |  | defaults to undefined|
 | **photos** | **Array&lt;File&gt;** |  | defaults to undefined|
-| **siteType** | **BreedingSiteSiteType** |  | defaults to undefined|
-| **note** | [**string**] | Note user attached to report. | (optional) defaults to undefined|
+| **siteType** | **BreedingSiteRequestSiteType** |  | defaults to undefined|
+| **note** | [**string**] |  | (optional) defaults to undefined|
 | **tags** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|
 | **hasWater** | [**boolean**] | Either if the user perceived water in the breeding site. | (optional) defaults to undefined|
 | **inPublicArea** | [**boolean**] | Either if the breeding site is found in a public area. | (optional) defaults to undefined|

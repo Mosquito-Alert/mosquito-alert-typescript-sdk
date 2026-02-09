@@ -14,7 +14,11 @@
 
 
 
-export interface TemporalBoundaryRequest {
-    'geojson': any;
+export interface TemporaryBoundary {
+    'uuid': string;
+    /**
+     * Time in seconds until this cached boundary expires.
+     */
+    'expires_in': number;
 }
 

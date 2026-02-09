@@ -13,18 +13,16 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BitesCreateNoteErrorComponentAttr } from './bites-create-note-error-component-attr';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BitesCreateNoteErrorComponentCode } from './bites-create-note-error-component-code';
 
-export interface BreedingsitesCreateNoteErrorComponent {
-    'attr': BitesCreateNoteErrorComponentAttr;
-    'code': BitesCreateNoteErrorComponentCode;
-    'detail': string;
-}
+
+export const IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode = {
+    Invalid: 'invalid',
+    NullCharactersNotAllowed: 'null_characters_not_allowed',
+    SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode = typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode];
 
 
 

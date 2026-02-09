@@ -18,13 +18,17 @@
 import type { BitesCreateLocationPointLatitudeErrorComponentCode } from './bites-create-location-point-latitude-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BoundariesCreateTemporalGeojsonErrorComponentAttr } from './boundaries-create-temporal-geojson-error-component-attr';
+import type { BoundariesCreateTemporaryGeojsonErrorComponent } from './boundaries-create-temporary-geojson-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BoundariesCreateTemporaryGeojsonErrorComponentAttr } from './boundaries-create-temporary-geojson-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BoundariesCreateTemporaryNonFieldErrorsErrorComponent } from './boundaries-create-temporary-non-field-errors-error-component';
 
-export interface BoundariesCreateTemporalGeojsonErrorComponent {
-    'attr': BoundariesCreateTemporalGeojsonErrorComponentAttr;
-    'code': BitesCreateLocationPointLatitudeErrorComponentCode;
-    'detail': string;
-}
-
+/**
+ * @type BoundariesCreateTemporaryError
+ */
+export type BoundariesCreateTemporaryError = { attr: 'geojson' } & BoundariesCreateTemporaryGeojsonErrorComponent | { attr: 'non_field_errors' } & BoundariesCreateTemporaryNonFieldErrorsErrorComponent;
 
 

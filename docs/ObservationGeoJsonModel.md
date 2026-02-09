@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | [**BiteGeoJsonModelType**](BiteGeoJsonModelType.md) |  | [optional] [default to undefined]
-**id** | **string** | UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens). | [optional] [readonly] [default to undefined]
-**geometry** | **any** |  | [optional] [default to undefined]
+**id** | **string** |  | [optional] [readonly] [default to undefined]
+**geometry** | [**BiteGeoJsonModelGeometry**](BiteGeoJsonModelGeometry.md) |  | [optional] [default to undefined]
 **properties** | [**ObservationGeoJsonModelProperties**](ObservationGeoJsonModelProperties.md) |  | [optional] [default to undefined]
 
 ## Example

@@ -13,17 +13,20 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { AuthChangePasswordValidationErrorType } from './auth-change-password-validation-error-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BoundariesCreateTemporalError } from './boundaries-create-temporal-error';
 
-export interface BoundariesCreateTemporalValidationError {
-    'type': AuthChangePasswordValidationErrorType;
-    'errors': Array<BoundariesCreateTemporalError>;
-}
+
+export const BreedingSiteRequestSiteType = {
+    Basin: 'basin',
+    Bucket: 'bucket',
+    Fountain: 'fountain',
+    SmallContainer: 'small_container',
+    StormDrain: 'storm_drain',
+    Well: 'well',
+    Other: 'other',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type BreedingSiteRequestSiteType = typeof BreedingSiteRequestSiteType[keyof typeof BreedingSiteRequestSiteType];
 
 
 

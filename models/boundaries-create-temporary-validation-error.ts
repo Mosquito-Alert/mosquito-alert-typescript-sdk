@@ -13,14 +13,17 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { AuthChangePasswordValidationErrorType } from './auth-change-password-validation-error-type';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BoundariesCreateTemporaryError } from './boundaries-create-temporary-error';
 
-
-export const BoundariesCreateTemporalGeojsonErrorComponentAttr = {
-    Geojson: 'geojson',
-    UnknownDefaultOpenApi: '11184809'
-} as const;
-
-export type BoundariesCreateTemporalGeojsonErrorComponentAttr = typeof BoundariesCreateTemporalGeojsonErrorComponentAttr[keyof typeof BoundariesCreateTemporalGeojsonErrorComponentAttr];
+export interface BoundariesCreateTemporaryValidationError {
+    'type': AuthChangePasswordValidationErrorType;
+    'errors': Array<BoundariesCreateTemporaryError>;
+}
 
 
 

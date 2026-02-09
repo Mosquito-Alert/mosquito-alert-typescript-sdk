@@ -1,4 +1,4 @@
-# BoundariesCreateTemporalValidationError
+# BoundariesCreateTemporaryValidationError
 
 
 ## Properties
@@ -6,14 +6,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | [**AuthChangePasswordValidationErrorType**](AuthChangePasswordValidationErrorType.md) |  | [default to undefined]
-**errors** | [**Array&lt;BoundariesCreateTemporalError&gt;**](BoundariesCreateTemporalError.md) |  | [default to undefined]
+**errors** | [**Array&lt;BoundariesCreateTemporaryError&gt;**](BoundariesCreateTemporaryError.md) |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { BoundariesCreateTemporalValidationError } from 'mosquito-alert';
+import { BoundariesCreateTemporaryValidationError } from 'mosquito-alert';
 
-const instance: BoundariesCreateTemporalValidationError = {
+const instance: BoundariesCreateTemporaryValidationError = {
     type,
     errors,
 };

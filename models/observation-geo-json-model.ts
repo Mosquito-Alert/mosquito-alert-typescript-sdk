@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BiteGeoJsonModelGeometry } from './bite-geo-json-model-geometry';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { BiteGeoJsonModelType } from './bite-geo-json-model-type';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -22,11 +25,8 @@ import type { ObservationGeoJsonModelProperties } from './observation-geo-json-m
 
 export interface ObservationGeoJsonModel {
     'type'?: BiteGeoJsonModelType;
-    /**
-     * UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
-     */
     'id'?: string;
-    'geometry'?: any;
+    'geometry'?: BiteGeoJsonModelGeometry;
     'properties'?: ObservationGeoJsonModelProperties;
 }
 

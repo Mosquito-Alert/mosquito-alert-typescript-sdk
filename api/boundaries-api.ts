@@ -22,29 +22,29 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import type { BoundariesCreateTemporalValidationError } from '../models';
+import type { BoundariesCreateTemporaryValidationError } from '../models';
 // @ts-ignore
 import type { ErrorResponse401 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
-import type { TemporalBoundary } from '../models';
+import type { TemporaryBoundary } from '../models';
 // @ts-ignore
-import type { TemporalBoundaryRequest } from '../models';
+import type { TemporaryBoundaryRequest } from '../models';
 /**
  * BoundariesApi - axios parameter creator
  */
 export const BoundariesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a temporal boundary
-         * @param {TemporalBoundaryRequest} temporalBoundaryRequest 
+         * Create a temporary boundary
+         * @param {TemporaryBoundaryRequest} temporaryBoundaryRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createTemporal: async (temporalBoundaryRequest: TemporalBoundaryRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'temporalBoundaryRequest' is not null or undefined
-            assertParamExists('createTemporal', 'temporalBoundaryRequest', temporalBoundaryRequest)
+        createTemporary: async (temporaryBoundaryRequest: TemporaryBoundaryRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'temporaryBoundaryRequest' is not null or undefined
+            assertParamExists('createTemporary', 'temporaryBoundaryRequest', temporaryBoundaryRequest)
             const localVarPath = `/boundaries/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -72,7 +72,7 @@ export const BoundariesApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(temporalBoundaryRequest, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(temporaryBoundaryRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -89,15 +89,15 @@ export const BoundariesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = BoundariesApiAxiosParamCreator(configuration)
     return {
         /**
-         * Create a temporal boundary
-         * @param {TemporalBoundaryRequest} temporalBoundaryRequest 
+         * Create a temporary boundary
+         * @param {TemporaryBoundaryRequest} temporaryBoundaryRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createTemporal(temporalBoundaryRequest: TemporalBoundaryRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemporalBoundary>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createTemporal(temporalBoundaryRequest, options);
+        async createTemporary(temporaryBoundaryRequest: TemporaryBoundaryRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TemporaryBoundary>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createTemporary(temporaryBoundaryRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['BoundariesApi.createTemporal']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BoundariesApi.createTemporary']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -110,22 +110,22 @@ export const BoundariesApiFactory = function (configuration?: Configuration, bas
     const localVarFp = BoundariesApiFp(configuration)
     return {
         /**
-         * Create a temporal boundary
-         * @param {BoundariesApiCreateTemporalRequest} requestParameters Request parameters.
+         * Create a temporary boundary
+         * @param {BoundariesApiCreateTemporaryRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createTemporal(requestParameters: BoundariesApiCreateTemporalRequest, options?: RawAxiosRequestConfig): AxiosPromise<TemporalBoundary> {
-            return localVarFp.createTemporal(requestParameters.temporalBoundaryRequest, options).then((request) => request(axios, basePath));
+        createTemporary(requestParameters: BoundariesApiCreateTemporaryRequest, options?: RawAxiosRequestConfig): AxiosPromise<TemporaryBoundary> {
+            return localVarFp.createTemporary(requestParameters.temporaryBoundaryRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * Request parameters for createTemporal operation in BoundariesApi.
+ * Request parameters for createTemporary operation in BoundariesApi.
  */
-export interface BoundariesApiCreateTemporalRequest {
-    readonly temporalBoundaryRequest: TemporalBoundaryRequest
+export interface BoundariesApiCreateTemporaryRequest {
+    readonly temporaryBoundaryRequest: TemporaryBoundaryRequest
 }
 
 /**
@@ -133,13 +133,13 @@ export interface BoundariesApiCreateTemporalRequest {
  */
 export class BoundariesApi extends BaseAPI {
     /**
-     * Create a temporal boundary
-     * @param {BoundariesApiCreateTemporalRequest} requestParameters Request parameters.
+     * Create a temporary boundary
+     * @param {BoundariesApiCreateTemporaryRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public createTemporal(requestParameters: BoundariesApiCreateTemporalRequest, options?: RawAxiosRequestConfig) {
-        return BoundariesApiFp(this.configuration).createTemporal(requestParameters.temporalBoundaryRequest, options).then((request) => request(this.axios, this.basePath));
+    public createTemporary(requestParameters: BoundariesApiCreateTemporaryRequest, options?: RawAxiosRequestConfig) {
+        return BoundariesApiFp(this.configuration).createTemporary(requestParameters.temporaryBoundaryRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

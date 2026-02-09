@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.34-dev
+## mosquito-alert@0.1.34
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.34-dev --save
+npm install mosquito-alert@0.1.34 --save
 ```
 
 _unPublished (not recommended):_
@@ -62,7 +62,7 @@ Class | Method | HTTP request | Description
 *BitesApi* | [**list**](docs/BitesApi.md#list) | **GET** /bites/ | 
 *BitesApi* | [**listMine**](docs/BitesApi.md#listmine) | **GET** /me/bites/ | 
 *BitesApi* | [**retrieve**](docs/BitesApi.md#retrieve) | **GET** /bites/{uuid}/ | 
-*BoundariesApi* | [**createTemporal**](docs/BoundariesApi.md#createtemporal) | **POST** /boundaries/ | 
+*BoundariesApi* | [**createTemporary**](docs/BoundariesApi.md#createtemporary) | **POST** /boundaries/ | 
 *BreedingSitesApi* | [**create**](docs/BreedingSitesApi.md#create) | **POST** /breeding-sites/ | 
 *BreedingSitesApi* | [**destroy**](docs/BreedingSitesApi.md#destroy) | **DELETE** /breeding-sites/{uuid}/ | 
 *BreedingSitesApi* | [**geoList**](docs/BreedingSitesApi.md#geolist) | **GET** /breeding-sites/geo/ | 
@@ -184,6 +184,8 @@ Class | Method | HTTP request | Description
  - [BiteEventEnvironment](docs/BiteEventEnvironment.md)
  - [BiteEventMoment](docs/BiteEventMoment.md)
  - [BiteGeoJsonModel](docs/BiteGeoJsonModel.md)
+ - [BiteGeoJsonModelGeometry](docs/BiteGeoJsonModelGeometry.md)
+ - [BiteGeoJsonModelGeometryType](docs/BiteGeoJsonModelGeometryType.md)
  - [BiteGeoJsonModelList](docs/BiteGeoJsonModelList.md)
  - [BiteGeoJsonModelListType](docs/BiteGeoJsonModelListType.md)
  - [BiteGeoJsonModelProperties](docs/BiteGeoJsonModelProperties.md)
@@ -228,9 +230,6 @@ Class | Method | HTTP request | Description
  - [BitesCreateLocationSourceErrorComponentAttr](docs/BitesCreateLocationSourceErrorComponentAttr.md)
  - [BitesCreateLocationSourceErrorComponentCode](docs/BitesCreateLocationSourceErrorComponentCode.md)
  - [BitesCreateNonFieldErrorsErrorComponent](docs/BitesCreateNonFieldErrorsErrorComponent.md)
- - [BitesCreateNoteErrorComponent](docs/BitesCreateNoteErrorComponent.md)
- - [BitesCreateNoteErrorComponentAttr](docs/BitesCreateNoteErrorComponentAttr.md)
- - [BitesCreateNoteErrorComponentCode](docs/BitesCreateNoteErrorComponentCode.md)
  - [BitesCreateSentAtErrorComponent](docs/BitesCreateSentAtErrorComponent.md)
  - [BitesCreateSentAtErrorComponentAttr](docs/BitesCreateSentAtErrorComponentAttr.md)
  - [BitesCreateTagsErrorComponent](docs/BitesCreateTagsErrorComponent.md)
@@ -290,11 +289,11 @@ Class | Method | HTTP request | Description
  - [BitesListUpdatedAtErrorComponent](docs/BitesListUpdatedAtErrorComponent.md)
  - [BitesListUserUuidErrorComponent](docs/BitesListUserUuidErrorComponent.md)
  - [BitesListValidationError](docs/BitesListValidationError.md)
- - [BoundariesCreateTemporalError](docs/BoundariesCreateTemporalError.md)
- - [BoundariesCreateTemporalGeojsonErrorComponent](docs/BoundariesCreateTemporalGeojsonErrorComponent.md)
- - [BoundariesCreateTemporalGeojsonErrorComponentAttr](docs/BoundariesCreateTemporalGeojsonErrorComponentAttr.md)
- - [BoundariesCreateTemporalNonFieldErrorsErrorComponent](docs/BoundariesCreateTemporalNonFieldErrorsErrorComponent.md)
- - [BoundariesCreateTemporalValidationError](docs/BoundariesCreateTemporalValidationError.md)
+ - [BoundariesCreateTemporaryError](docs/BoundariesCreateTemporaryError.md)
+ - [BoundariesCreateTemporaryGeojsonErrorComponent](docs/BoundariesCreateTemporaryGeojsonErrorComponent.md)
+ - [BoundariesCreateTemporaryGeojsonErrorComponentAttr](docs/BoundariesCreateTemporaryGeojsonErrorComponentAttr.md)
+ - [BoundariesCreateTemporaryNonFieldErrorsErrorComponent](docs/BoundariesCreateTemporaryNonFieldErrorsErrorComponent.md)
+ - [BoundariesCreateTemporaryValidationError](docs/BoundariesCreateTemporaryValidationError.md)
  - [BoundingBox](docs/BoundingBox.md)
  - [BoundingBoxRequest](docs/BoundingBoxRequest.md)
  - [BreedingSite](docs/BreedingSite.md)
@@ -302,6 +301,7 @@ Class | Method | HTTP request | Description
  - [BreedingSiteGeoJsonModelList](docs/BreedingSiteGeoJsonModelList.md)
  - [BreedingSiteGeoJsonModelProperties](docs/BreedingSiteGeoJsonModelProperties.md)
  - [BreedingSiteGeoModel](docs/BreedingSiteGeoModel.md)
+ - [BreedingSiteRequestSiteType](docs/BreedingSiteRequestSiteType.md)
  - [BreedingSiteSiteType](docs/BreedingSiteSiteType.md)
  - [BreedingsitesCreateCreatedAtErrorComponent](docs/BreedingsitesCreateCreatedAtErrorComponent.md)
  - [BreedingsitesCreateError](docs/BreedingsitesCreateError.md)
@@ -319,7 +319,6 @@ Class | Method | HTTP request | Description
  - [BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent](docs/BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent.md)
  - [BreedingsitesCreateLocationSourceErrorComponent](docs/BreedingsitesCreateLocationSourceErrorComponent.md)
  - [BreedingsitesCreateNonFieldErrorsErrorComponent](docs/BreedingsitesCreateNonFieldErrorsErrorComponent.md)
- - [BreedingsitesCreateNoteErrorComponent](docs/BreedingsitesCreateNoteErrorComponent.md)
  - [BreedingsitesCreatePhotosErrorComponent](docs/BreedingsitesCreatePhotosErrorComponent.md)
  - [BreedingsitesCreatePhotosErrorComponentAttr](docs/BreedingsitesCreatePhotosErrorComponentAttr.md)
  - [BreedingsitesCreatePhotosErrorComponentCode](docs/BreedingsitesCreatePhotosErrorComponentCode.md)
@@ -522,6 +521,7 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsCreateError](docs/IdentificationtasksAnnotationsCreateError.md)
  - [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode](docs/IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode.md)
  - [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent.md)
@@ -909,7 +909,6 @@ Class | Method | HTTP request | Description
  - [ObservationsCreateMosquitoAppearanceThoraxErrorComponent](docs/ObservationsCreateMosquitoAppearanceThoraxErrorComponent.md)
  - [ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttr](docs/ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttr.md)
  - [ObservationsCreateNonFieldErrorsErrorComponent](docs/ObservationsCreateNonFieldErrorsErrorComponent.md)
- - [ObservationsCreateNoteErrorComponent](docs/ObservationsCreateNoteErrorComponent.md)
  - [ObservationsCreatePhotosErrorComponent](docs/ObservationsCreatePhotosErrorComponent.md)
  - [ObservationsCreatePhotosINDEXErrorComponent](docs/ObservationsCreatePhotosINDEXErrorComponent.md)
  - [ObservationsCreateSentAtErrorComponent](docs/ObservationsCreateSentAtErrorComponent.md)
@@ -1047,8 +1046,8 @@ Class | Method | HTTP request | Description
  - [TaxaListValidationError](docs/TaxaListValidationError.md)
  - [Taxon](docs/Taxon.md)
  - [TaxonTreeNode](docs/TaxonTreeNode.md)
- - [TemporalBoundary](docs/TemporalBoundary.md)
- - [TemporalBoundaryRequest](docs/TemporalBoundaryRequest.md)
+ - [TemporaryBoundary](docs/TemporaryBoundary.md)
+ - [TemporaryBoundaryRequest](docs/TemporaryBoundaryRequest.md)
  - [TokenRefresh](docs/TokenRefresh.md)
  - [TokenRefreshRequest](docs/TokenRefreshRequest.md)
  - [TokenVerifyRequest](docs/TokenVerifyRequest.md)

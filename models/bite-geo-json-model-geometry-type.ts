@@ -15,12 +15,12 @@
 
 
 
-export const BitesCreateNoteErrorComponentAttr = {
-    Note: 'note',
+export const BiteGeoJsonModelGeometryType = {
+    Point: 'Point',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type BitesCreateNoteErrorComponentAttr = typeof BitesCreateNoteErrorComponentAttr[keyof typeof BitesCreateNoteErrorComponentAttr];
+export type BiteGeoJsonModelGeometryType = typeof BiteGeoJsonModelGeometryType[keyof typeof BiteGeoJsonModelGeometryType];
 
 
 

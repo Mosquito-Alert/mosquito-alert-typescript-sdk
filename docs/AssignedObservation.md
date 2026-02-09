@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_at_local** | **string** | The date and time when the record was created, displayed without timezone field. | [readonly] [default to undefined]
 **received_at** | **string** |  | [readonly] [default to undefined]
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | [default to undefined]
-**note** | **string** | Note user attached to report. | [optional] [default to undefined]
+**note** | **string** |  | [readonly] [default to undefined]
 **photos** | [**Array&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | [readonly] [default to undefined]
 **user** | [**MinimalUser**](MinimalUser.md) |  | [readonly] [default to undefined]
 

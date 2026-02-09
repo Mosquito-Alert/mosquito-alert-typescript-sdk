@@ -70,7 +70,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} sentAt 
          * @param {LocationRequest} location 
          * @param {Array<File>} photos 
-         * @param {string | null} [note] Note user attached to report.
+         * @param {string | null} [note] 
          * @param {Array<string>} [tags] 
          * @param {BiteEventEnvironment | null} [eventEnvironment] 
          * @param {BiteEventMoment | null} [eventMoment] 
@@ -744,7 +744,7 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} sentAt 
          * @param {LocationRequest} location 
          * @param {Array<File>} photos 
-         * @param {string | null} [note] Note user attached to report.
+         * @param {string | null} [note] 
          * @param {Array<string>} [tags] 
          * @param {BiteEventEnvironment | null} [eventEnvironment] 
          * @param {BiteEventMoment | null} [eventMoment] 
@@ -960,9 +960,6 @@ export interface ObservationsApiCreateRequest {
 
     readonly photos: Array<File>
 
-    /**
-     * Note user attached to report.
-     */
     readonly note?: string | null
 
     readonly tags?: Array<string>

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr**](IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateNoteErrorComponentCode**](BitesCreateNoteErrorComponentCode.md) |  | [default to undefined]
+**code** | [**IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode**](IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

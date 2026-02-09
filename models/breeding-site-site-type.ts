@@ -14,9 +14,6 @@
 
 
 
-/**
- * Breeding site type.
- */
 
 export const BreedingSiteSiteType = {
     Basin: 'basin',

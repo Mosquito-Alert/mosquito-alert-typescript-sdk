@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateNoteErrorComponentCode } from './bites-create-note-error-component-code';
+import type { IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr } from './identificationtasks-annotations-create-feedback-internal-note-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr } from './identificationtasks-annotations-create-feedback-internal-note-error-component-attr';
+import type { IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode } from './identificationtasks-annotations-create-feedback-internal-note-error-component-code';
 
 export interface IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr;
-    'code': BitesCreateNoteErrorComponentCode;
+    'code': IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode;
     'detail': string;
 }
 

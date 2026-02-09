@@ -1,20 +1,20 @@
-# BoundariesCreateTemporalGeojsonErrorComponent
+# BoundariesCreateTemporaryGeojsonErrorComponent
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**BoundariesCreateTemporalGeojsonErrorComponentAttr**](BoundariesCreateTemporalGeojsonErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**BoundariesCreateTemporaryGeojsonErrorComponentAttr**](BoundariesCreateTemporaryGeojsonErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**BitesCreateLocationPointLatitudeErrorComponentCode**](BitesCreateLocationPointLatitudeErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { BoundariesCreateTemporalGeojsonErrorComponent } from 'mosquito-alert';
+import { BoundariesCreateTemporaryGeojsonErrorComponent } from 'mosquito-alert';
 
-const instance: BoundariesCreateTemporalGeojsonErrorComponent = {
+const instance: BoundariesCreateTemporaryGeojsonErrorComponent = {
     attr,
     code,
     detail,

@@ -13,18 +13,14 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BitesCreateNoteErrorComponentAttr } from './bites-create-note-error-component-attr';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BitesCreateNoteErrorComponentCode } from './bites-create-note-error-component-code';
 
-export interface BitesCreateNoteErrorComponent {
-    'attr': BitesCreateNoteErrorComponentAttr;
-    'code': BitesCreateNoteErrorComponentCode;
-    'detail': string;
-}
+
+export const BoundariesCreateTemporaryGeojsonErrorComponentAttr = {
+    Geojson: 'geojson',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type BoundariesCreateTemporaryGeojsonErrorComponentAttr = typeof BoundariesCreateTemporaryGeojsonErrorComponentAttr[keyof typeof BoundariesCreateTemporaryGeojsonErrorComponentAttr];
 
 
 
