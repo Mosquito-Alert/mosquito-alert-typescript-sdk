@@ -118,7 +118,6 @@ export * from './bites-geo-list-country-id-error-component-attr';
 export * from './bites-geo-list-created-at-error-component';
 export * from './bites-geo-list-created-at-error-component-code';
 export * from './bites-geo-list-error';
-export * from './bites-geo-list-format-parameter';
 export * from './bites-geo-list-geo-precision-error-component';
 export * from './bites-geo-list-geo-precision-error-component-attr';
 export * from './bites-geo-list-geo-precision-error-component-code';

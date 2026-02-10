@@ -144,7 +144,6 @@ docs/BitesGeoListCountryIdErrorComponentAttr.md
 docs/BitesGeoListCreatedAtErrorComponent.md
 docs/BitesGeoListCreatedAtErrorComponentCode.md
 docs/BitesGeoListError.md
-docs/BitesGeoListFormatParameter.md
 docs/BitesGeoListGeoPrecisionErrorComponent.md
 docs/BitesGeoListGeoPrecisionErrorComponentAttr.md
 docs/BitesGeoListGeoPrecisionErrorComponentCode.md
@@ -1104,7 +1103,6 @@ models/bites-geo-list-country-id-error-component.ts
 models/bites-geo-list-created-at-error-component-code.ts
 models/bites-geo-list-created-at-error-component.ts
 models/bites-geo-list-error.ts
-models/bites-geo-list-format-parameter.ts
 models/bites-geo-list-geo-precision-error-component-attr.ts
 models/bites-geo-list-geo-precision-error-component-code.ts
 models/bites-geo-list-geo-precision-error-component.ts

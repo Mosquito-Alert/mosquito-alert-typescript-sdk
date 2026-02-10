@@ -139,7 +139,6 @@ let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let dist: number; //Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. (optional) (default to 1000)
-let format: BitesGeoListFormatParameter; // (optional) (default to undefined)
 let geoPrecision: number; //Latitude/Longitude precision (optional) (default to undefined)
 let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
 let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
@@ -158,7 +157,6 @@ const { status, data } = await apiInstance.geoList(
     createdAtAfter,
     createdAtBefore,
     dist,
-    format,
     geoPrecision,
     orderBy,
     point,
@@ -182,7 +180,6 @@ const { status, data } = await apiInstance.geoList(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **dist** | [**number**] | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | (optional) defaults to 1000|
-| **format** | **BitesGeoListFormatParameter** |  | (optional) defaults to undefined|
 | **geoPrecision** | [**number**] | Latitude/Longitude precision | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
 | **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|

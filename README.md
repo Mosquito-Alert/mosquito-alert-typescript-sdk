@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.34
+## mosquito-alert@0.1.35
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.34 --save
+npm install mosquito-alert@0.1.35 --save
 ```
 
 _unPublished (not recommended):_
@@ -246,7 +246,6 @@ Class | Method | HTTP request | Description
  - [BitesGeoListCreatedAtErrorComponent](docs/BitesGeoListCreatedAtErrorComponent.md)
  - [BitesGeoListCreatedAtErrorComponentCode](docs/BitesGeoListCreatedAtErrorComponentCode.md)
  - [BitesGeoListError](docs/BitesGeoListError.md)
- - [BitesGeoListFormatParameter](docs/BitesGeoListFormatParameter.md)
  - [BitesGeoListGeoPrecisionErrorComponent](docs/BitesGeoListGeoPrecisionErrorComponent.md)
  - [BitesGeoListGeoPrecisionErrorComponentAttr](docs/BitesGeoListGeoPrecisionErrorComponentAttr.md)
  - [BitesGeoListGeoPrecisionErrorComponentCode](docs/BitesGeoListGeoPrecisionErrorComponentCode.md)

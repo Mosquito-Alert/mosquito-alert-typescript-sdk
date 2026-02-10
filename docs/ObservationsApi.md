@@ -164,7 +164,6 @@ let countryId: number; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
 let dist: number; //Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. (optional) (default to 1000)
-let format: BitesGeoListFormatParameter; // (optional) (default to undefined)
 let geoPrecision: number; //Latitude/Longitude precision (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
 let identificationTaxonIds: Array<string>; // (optional) (default to undefined)
@@ -187,7 +186,6 @@ const { status, data } = await apiInstance.geoList(
     createdAtAfter,
     createdAtBefore,
     dist,
-    format,
     geoPrecision,
     hasPhotos,
     identificationTaxonIds,
@@ -215,7 +213,6 @@ const { status, data } = await apiInstance.geoList(
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
 | **dist** | [**number**] | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | (optional) defaults to 1000|
-| **format** | **BitesGeoListFormatParameter** |  | (optional) defaults to undefined|
 | **geoPrecision** | [**number**] | Latitude/Longitude precision | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
 | **identificationTaxonIds** | **Array&lt;string&gt;** |  | (optional) defaults to undefined|

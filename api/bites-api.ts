@@ -32,8 +32,6 @@ import type { BiteRequest } from '../models';
 // @ts-ignore
 import type { BitesCreateValidationError } from '../models';
 // @ts-ignore
-import type { BitesGeoListFormatParameter } from '../models';
-// @ts-ignore
 import type { BitesGeoListValidationError } from '../models';
 // @ts-ignore
 import type { BitesListFormatParameter } from '../models';
@@ -148,7 +146,6 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-         * @param {BitesGeoListFormatParameter} [format] 
          * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
@@ -163,7 +160,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        geoList: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        geoList: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, geoPrecision?: number, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/bites/geo/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -207,10 +204,6 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
 
             if (dist !== undefined) {
                 localVarQueryParameter['dist'] = dist;
-            }
-
-            if (format !== undefined) {
-                localVarQueryParameter['format'] = format;
             }
 
             if (geoPrecision !== undefined) {
@@ -648,7 +641,6 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-         * @param {BitesGeoListFormatParameter} [format] 
          * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
@@ -663,8 +655,8 @@ export const BitesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async geoList(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<BiteGeoModel>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async geoList(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, geoPrecision?: number, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<BiteGeoModel>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, geoPrecision, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BitesApi.geoList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -775,7 +767,7 @@ export const BitesApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         geoList(requestParameters: BitesApiGeoListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<BiteGeoModel>> {
-            return localVarFp.geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.geoPrecision, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -843,8 +835,6 @@ export interface BitesApiGeoListRequest {
      * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
      */
     readonly dist?: number
-
-    readonly format?: BitesGeoListFormatParameter
 
     /**
      * Latitude/Longitude precision
@@ -1113,7 +1103,7 @@ export class BitesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public geoList(requestParameters: BitesApiGeoListRequest = {}, options?: RawAxiosRequestConfig) {
-        return BitesApiFp(this.configuration).geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return BitesApiFp(this.configuration).geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.geoPrecision, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

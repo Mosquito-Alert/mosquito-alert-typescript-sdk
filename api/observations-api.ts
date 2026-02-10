@@ -26,8 +26,6 @@ import type { BiteEventEnvironment } from '../models';
 // @ts-ignore
 import type { BiteEventMoment } from '../models';
 // @ts-ignore
-import type { BitesGeoListFormatParameter } from '../models';
-// @ts-ignore
 import type { BitesListFormatParameter } from '../models';
 // @ts-ignore
 import type { BitesListOrderByParameter } from '../models';
@@ -209,7 +207,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-         * @param {BitesGeoListFormatParameter} [format] 
          * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
          * @param {Array<string>} [identificationTaxonIds] 
@@ -228,7 +225,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        geoList: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        geoList: async (boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/observations/geo/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -272,10 +269,6 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
 
             if (dist !== undefined) {
                 localVarQueryParameter['dist'] = dist;
-            }
-
-            if (format !== undefined) {
-                localVarQueryParameter['format'] = format;
             }
 
             if (geoPrecision !== undefined) {
@@ -777,7 +770,6 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {string} [createdAtAfter] Created at
          * @param {string} [createdAtBefore] Created at
          * @param {number} [dist] Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-         * @param {BitesGeoListFormatParameter} [format] 
          * @param {number} [geoPrecision] Latitude/Longitude precision
          * @param {boolean} [hasPhotos] Has any photo
          * @param {Array<string>} [identificationTaxonIds] 
@@ -796,8 +788,8 @@ export const ObservationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async geoList(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, format?: BitesGeoListFormatParameter, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ObservationGeoModel>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
+        async geoList(boundaryUuid?: string, countryId?: number, createdAtAfter?: string, createdAtBefore?: string, dist?: number, geoPrecision?: number, hasPhotos?: boolean, identificationTaxonIds?: Array<string>, identificationTaxonIdsLookup?: ObservationsListMineIdentificationTaxonIdsLookupParameter, negateIdentificationTaxonIds?: boolean, orderBy?: Array<BitesListOrderByParameter>, point?: Array<number>, receivedAtAfter?: string, receivedAtBefore?: string, search?: string, shortId?: string, tags?: Array<string>, updatedAtAfter?: string, updatedAtBefore?: string, userUuid?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ObservationGeoModel>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ObservationsApi.geoList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -916,7 +908,7 @@ export const ObservationsApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         geoList(requestParameters: ObservationsApiGeoListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ObservationGeoModel>> {
-            return localVarFp.geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
+            return localVarFp.geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1003,8 +995,6 @@ export interface ObservationsApiGeoListRequest {
      * Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
      */
     readonly dist?: number
-
-    readonly format?: BitesGeoListFormatParameter
 
     /**
      * Latitude/Longitude precision
@@ -1315,7 +1305,7 @@ export class ObservationsApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public geoList(requestParameters: ObservationsApiGeoListRequest = {}, options?: RawAxiosRequestConfig) {
-        return ObservationsApiFp(this.configuration).geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.format, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
+        return ObservationsApiFp(this.configuration).geoList(requestParameters.boundaryUuid, requestParameters.countryId, requestParameters.createdAtAfter, requestParameters.createdAtBefore, requestParameters.dist, requestParameters.geoPrecision, requestParameters.hasPhotos, requestParameters.identificationTaxonIds, requestParameters.identificationTaxonIdsLookup, requestParameters.negateIdentificationTaxonIds, requestParameters.orderBy, requestParameters.point, requestParameters.receivedAtAfter, requestParameters.receivedAtBefore, requestParameters.search, requestParameters.shortId, requestParameters.tags, requestParameters.updatedAtAfter, requestParameters.updatedAtBefore, requestParameters.userUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
