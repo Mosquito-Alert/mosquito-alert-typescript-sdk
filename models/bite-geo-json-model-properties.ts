@@ -15,6 +15,7 @@
 
 
 export interface BiteGeoJsonModelProperties {
+    'uuid'?: string;
     'received_at'?: string;
 }
 

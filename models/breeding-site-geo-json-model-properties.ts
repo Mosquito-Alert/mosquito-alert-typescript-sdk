@@ -18,6 +18,7 @@
 import type { BreedingSiteSiteType } from './breeding-site-site-type';
 
 export interface BreedingSiteGeoJsonModelProperties {
+    'uuid'?: string;
     'received_at'?: string;
     'site_type'?: BreedingSiteSiteType;
     /**

@@ -25,7 +25,6 @@ import type { BiteGeoJsonModelType } from './bite-geo-json-model-type';
 
 export interface BiteGeoJsonModel {
     'type'?: BiteGeoJsonModelType;
-    'id'?: string;
     'geometry'?: BiteGeoJsonModelGeometry;
     'properties'?: BiteGeoJsonModelProperties;
 }

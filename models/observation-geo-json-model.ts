@@ -25,7 +25,6 @@ import type { ObservationGeoJsonModelProperties } from './observation-geo-json-m
 
 export interface ObservationGeoJsonModel {
     'type'?: BiteGeoJsonModelType;
-    'id'?: string;
     'geometry'?: BiteGeoJsonModelGeometry;
     'properties'?: ObservationGeoJsonModelProperties;
 }

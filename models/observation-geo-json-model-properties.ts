@@ -15,6 +15,7 @@
 
 
 export interface ObservationGeoJsonModelProperties {
+    'uuid'?: string;
     'received_at'?: string;
     'identification_taxon_id'?: number | null;
 }

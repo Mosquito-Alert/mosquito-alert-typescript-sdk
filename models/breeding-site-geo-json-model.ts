@@ -25,7 +25,6 @@ import type { BreedingSiteGeoJsonModelProperties } from './breeding-site-geo-jso
 
 export interface BreedingSiteGeoJsonModel {
     'type'?: BiteGeoJsonModelType;
-    'id'?: string;
     'geometry'?: BiteGeoJsonModelGeometry;
     'properties'?: BreedingSiteGeoJsonModelProperties;
 }

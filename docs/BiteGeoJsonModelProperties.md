@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**uuid** | **string** |  | [optional] [readonly] [default to undefined]
 **received_at** | **string** |  | [optional] [readonly] [default to undefined]
 
 ## Example
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 import { BiteGeoJsonModelProperties } from 'mosquito-alert';
 
 const instance: BiteGeoJsonModelProperties = {
+    uuid,
     received_at,
 };
 ```

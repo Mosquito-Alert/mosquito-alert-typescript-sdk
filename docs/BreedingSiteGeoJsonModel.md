@@ -6,7 +6,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | [**BiteGeoJsonModelType**](BiteGeoJsonModelType.md) |  | [optional] [default to undefined]
-**id** | **string** |  | [optional] [readonly] [default to undefined]
 **geometry** | [**BiteGeoJsonModelGeometry**](BiteGeoJsonModelGeometry.md) |  | [optional] [default to undefined]
 **properties** | [**BreedingSiteGeoJsonModelProperties**](BreedingSiteGeoJsonModelProperties.md) |  | [optional] [default to undefined]
 
@@ -17,7 +16,6 @@ import { BreedingSiteGeoJsonModel } from 'mosquito-alert';
 
 const instance: BreedingSiteGeoJsonModel = {
     type,
-    id,
     geometry,
     properties,
 };
