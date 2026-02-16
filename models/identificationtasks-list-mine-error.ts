@@ -39,6 +39,9 @@ import type { IdentificationtasksListMineOrderByErrorComponent } from './identif
 import type { IdentificationtasksListMineResultAgreementErrorComponent } from './identificationtasks-list-mine-result-agreement-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksListMineResultCharacteristicsSexErrorComponent } from './identificationtasks-list-mine-result-characteristics-sex-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksListMineResultConfidenceErrorComponent } from './identificationtasks-list-mine-result-confidence-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -65,6 +68,6 @@ import type { IdentificationtasksListMineUpdatedAtErrorComponent } from './ident
 /**
  * @type IdentificationtasksListMineError
  */
-export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListMineAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListMineResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_action' } & IdentificationtasksListMineReviewActionErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
+export type IdentificationtasksListMineError = { attr: 'annotator_ids' } & IdentificationtasksListMineAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListMineAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListMineCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListMineNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListMineObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListMineOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListMineResultAgreementErrorComponent | { attr: 'result_characteristics_sex' } & IdentificationtasksListMineResultCharacteristicsSexErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListMineResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListMineResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListMineResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListMineResultUncertaintyErrorComponent | { attr: 'review_action' } & IdentificationtasksListMineReviewActionErrorComponent | { attr: 'status' } & IdentificationtasksListMineStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListMineUpdatedAtErrorComponent;
 
 

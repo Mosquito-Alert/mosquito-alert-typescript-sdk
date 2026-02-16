@@ -94,6 +94,9 @@ const configuration = new Configuration();
 const apiInstance = new IdentificationTasksApi(configuration);
 
 let observationUuid: string; //UUID of the Observation (default to undefined)
+let characteristicsIsBloodFed: boolean; // (optional) (default to undefined)
+let characteristicsIsGravid: boolean; // (optional) (default to undefined)
+let characteristicsSex: IdentificationtasksAnnotationsListCharacteristicsSexParameter; // (optional) (default to undefined)
 let classificationConfidenceLabel: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter; // (optional) (default to undefined)
 let classificationConfidenceMax: number; // (optional) (default to undefined)
 let classificationConfidenceMin: number; // (optional) (default to undefined)
@@ -114,6 +117,9 @@ let userIds: Array<number>; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.annotationsList(
     observationUuid,
+    characteristicsIsBloodFed,
+    characteristicsIsGravid,
+    characteristicsSex,
     classificationConfidenceLabel,
     classificationConfidenceMax,
     classificationConfidenceMin,
@@ -139,6 +145,9 @@ const { status, data } = await apiInstance.annotationsList(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **observationUuid** | [**string**] | UUID of the Observation | defaults to undefined|
+| **characteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
+| **characteristicsIsGravid** | [**boolean**] |  | (optional) defaults to undefined|
+| **characteristicsSex** | **IdentificationtasksAnnotationsListCharacteristicsSexParameter** |  | (optional) defaults to undefined|
 | **classificationConfidenceLabel** | **IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter** |  | (optional) defaults to undefined|
 | **classificationConfidenceMax** | [**number**] |  | (optional) defaults to undefined|
 | **classificationConfidenceMin** | [**number**] |  | (optional) defaults to undefined|
@@ -199,6 +208,9 @@ import {
 const configuration = new Configuration();
 const apiInstance = new IdentificationTasksApi(configuration);
 
+let characteristicsIsBloodFed: boolean; // (optional) (default to undefined)
+let characteristicsIsGravid: boolean; // (optional) (default to undefined)
+let characteristicsSex: IdentificationtasksAnnotationsListCharacteristicsSexParameter; // (optional) (default to undefined)
 let classificationConfidenceLabel: IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter; // (optional) (default to undefined)
 let classificationConfidenceMax: number; // (optional) (default to undefined)
 let classificationConfidenceMin: number; // (optional) (default to undefined)
@@ -218,6 +230,9 @@ let updatedAtBefore: string; //Updated at (optional) (default to undefined)
 let userIds: Array<number>; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.annotationsListMine(
+    characteristicsIsBloodFed,
+    characteristicsIsGravid,
+    characteristicsSex,
     classificationConfidenceLabel,
     classificationConfidenceMax,
     classificationConfidenceMin,
@@ -242,6 +257,9 @@ const { status, data } = await apiInstance.annotationsListMine(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
+| **characteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
+| **characteristicsIsGravid** | [**boolean**] |  | (optional) defaults to undefined|
+| **characteristicsSex** | **IdentificationtasksAnnotationsListCharacteristicsSexParameter** |  | (optional) defaults to undefined|
 | **classificationConfidenceLabel** | **IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter** |  | (optional) defaults to undefined|
 | **classificationConfidenceMax** | [**number**] |  | (optional) defaults to undefined|
 | **classificationConfidenceMin** | [**number**] |  | (optional) defaults to undefined|
@@ -420,6 +438,9 @@ let page: number; //Un número de página dentro del conjunto de resultados pagi
 let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
+let resultCharacteristicsIsBloodFed: boolean; // (optional) (default to undefined)
+let resultCharacteristicsIsGravid: boolean; // (optional) (default to undefined)
+let resultCharacteristicsSex: IdentificationtasksListResultCharacteristicsSexParameter; // (optional) (default to undefined)
 let resultConfidenceMax: string; // (optional) (default to undefined)
 let resultConfidenceMin: string; // (optional) (default to undefined)
 let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optional) (default to undefined)
@@ -448,6 +469,9 @@ const { status, data } = await apiInstance.list(
     pageSize,
     resultAgreementMax,
     resultAgreementMin,
+    resultCharacteristicsIsBloodFed,
+    resultCharacteristicsIsGravid,
+    resultCharacteristicsSex,
     resultConfidenceMax,
     resultConfidenceMin,
     resultSource,
@@ -481,6 +505,9 @@ const { status, data } = await apiInstance.list(
 | **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 | **resultAgreementMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsIsGravid** | [**boolean**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsSex** | **IdentificationtasksListResultCharacteristicsSexParameter** |  | (optional) defaults to undefined|
 | **resultConfidenceMax** | [**string**] |  | (optional) defaults to undefined|
 | **resultConfidenceMin** | [**string**] |  | (optional) defaults to undefined|
 | **resultSource** | **Array&lt;IdentificationtasksListResultSourceParameter&gt;** |  | (optional) defaults to undefined|
@@ -550,6 +577,9 @@ let page: number; //Un número de página dentro del conjunto de resultados pagi
 let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
 let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
+let resultCharacteristicsIsBloodFed: boolean; // (optional) (default to undefined)
+let resultCharacteristicsIsGravid: boolean; // (optional) (default to undefined)
+let resultCharacteristicsSex: IdentificationtasksListResultCharacteristicsSexParameter; // (optional) (default to undefined)
 let resultConfidenceMax: string; // (optional) (default to undefined)
 let resultConfidenceMin: string; // (optional) (default to undefined)
 let resultSource: Array<IdentificationtasksListResultSourceParameter>; // (optional) (default to undefined)
@@ -578,6 +608,9 @@ const { status, data } = await apiInstance.listMine(
     pageSize,
     resultAgreementMax,
     resultAgreementMin,
+    resultCharacteristicsIsBloodFed,
+    resultCharacteristicsIsGravid,
+    resultCharacteristicsSex,
     resultConfidenceMax,
     resultConfidenceMin,
     resultSource,
@@ -611,6 +644,9 @@ const { status, data } = await apiInstance.listMine(
 | **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
 | **resultAgreementMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsIsGravid** | [**boolean**] |  | (optional) defaults to undefined|
+| **resultCharacteristicsSex** | **IdentificationtasksListResultCharacteristicsSexParameter** |  | (optional) defaults to undefined|
 | **resultConfidenceMax** | [**string**] |  | (optional) defaults to undefined|
 | **resultConfidenceMin** | [**string**] |  | (optional) defaults to undefined|
 | **resultSource** | **Array&lt;IdentificationtasksListResultSourceParameter&gt;** |  | (optional) defaults to undefined|

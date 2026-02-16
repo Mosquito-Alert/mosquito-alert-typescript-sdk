@@ -15,21 +15,21 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AnnotationCharacteristicsRequest } from './annotation-characteristics-request';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { AnnotationClassificationRequest } from './annotation-classification-request';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { AnnotationFeedbackRequest } from './annotation-feedback-request';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ObservationFlagsRequest } from './observation-flags-request';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesCharacteristicsRequest } from './species-characteristics-request';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesClassificationRequest } from './species-classification-request';
 
 export interface AnnotationRequest {
     'best_photo_uuid'?: string;
-    'classification': AnnotationClassificationRequest | null;
-    'characteristics'?: AnnotationCharacteristicsRequest;
+    'classification': SpeciesClassificationRequest | null;
+    'characteristics'?: SpeciesCharacteristicsRequest | null;
     'feedback'?: AnnotationFeedbackRequest;
     'is_flagged'?: boolean;
     'is_decisive'?: boolean;

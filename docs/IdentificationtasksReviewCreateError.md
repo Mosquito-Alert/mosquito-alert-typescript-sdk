@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr**](IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateLocationSourceErrorComponentCode**](BitesCreateLocationSourceErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr**](IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**BitesGeoListCreatedAtErrorComponentCode**](BitesGeoListCreatedAtErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

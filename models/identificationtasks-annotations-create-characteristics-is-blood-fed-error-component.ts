@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
+import type { BitesGeoListCreatedAtErrorComponentCode } from './bites-geo-list-created-at-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-is-blood-fed-error-component-attr';
 
 export interface IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr;
-    'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
+    'code': BitesGeoListCreatedAtErrorComponentCode;
     'detail': string;
 }
 

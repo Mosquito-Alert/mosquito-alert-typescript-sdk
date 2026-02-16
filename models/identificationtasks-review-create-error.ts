@@ -15,10 +15,34 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
+import type { BitesGeoListCreatedAtErrorComponentCode } from './bites-geo-list-created-at-error-component-code';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-is-gravid-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksReviewCreateActionErrorComponent } from './identificationtasks-review-create-action-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent } from './identificationtasks-review-create-characteristics-is-blood-fed-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent } from './identificationtasks-review-create-characteristics-is-gravid-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent } from './identificationtasks-review-create-characteristics-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateCharacteristicsSexErrorComponent } from './identificationtasks-review-create-characteristics-sex-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent } from './identificationtasks-review-create-classification-confidence-label-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent } from './identificationtasks-review-create-classification-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent } from './identificationtasks-review-create-classification-taxon-id-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksReviewCreateIsSafeErrorComponent } from './identificationtasks-review-create-is-safe-error-component';
@@ -31,22 +55,10 @@ import type { IdentificationtasksReviewCreatePublicNoteErrorComponent } from './
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent } from './identificationtasks-review-create-public-photo-uuid-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent } from './identificationtasks-review-create-result-confidence-label-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr } from './identificationtasks-review-create-result-confidence-label-error-component-attr';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent } from './identificationtasks-review-create-result-non-field-errors-error-component';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { IdentificationtasksReviewCreateResultTaxonIdErrorComponent } from './identificationtasks-review-create-result-taxon-id-error-component';
 
 /**
  * @type IdentificationtasksReviewCreateError
  */
-export type IdentificationtasksReviewCreateError = { attr: 'action' } & IdentificationtasksReviewCreateActionErrorComponent | { attr: 'is_safe' } & IdentificationtasksReviewCreateIsSafeErrorComponent | { attr: 'non_field_errors' } & IdentificationtasksReviewCreateNonFieldErrorsErrorComponent | { attr: 'public_note' } & IdentificationtasksReviewCreatePublicNoteErrorComponent | { attr: 'public_photo_uuid' } & IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent | { attr: 'result.confidence_label' } & IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent | { attr: 'result.non_field_errors' } & IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent | { attr: 'result.taxon_id' } & IdentificationtasksReviewCreateResultTaxonIdErrorComponent;
+export type IdentificationtasksReviewCreateError = { attr: 'action' } & IdentificationtasksReviewCreateActionErrorComponent | { attr: 'characteristics.is_blood_fed' } & IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent | { attr: 'characteristics.is_gravid' } & IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent | { attr: 'characteristics.non_field_errors' } & IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent | { attr: 'characteristics.sex' } & IdentificationtasksReviewCreateCharacteristicsSexErrorComponent | { attr: 'classification.confidence_label' } & IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent | { attr: 'classification.non_field_errors' } & IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent | { attr: 'classification.taxon_id' } & IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent | { attr: 'is_safe' } & IdentificationtasksReviewCreateIsSafeErrorComponent | { attr: 'non_field_errors' } & IdentificationtasksReviewCreateNonFieldErrorsErrorComponent | { attr: 'public_note' } & IdentificationtasksReviewCreatePublicNoteErrorComponent | { attr: 'public_photo_uuid' } & IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent;
 
 

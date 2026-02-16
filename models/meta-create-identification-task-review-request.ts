@@ -15,9 +15,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AnnotationClassificationRequest } from './annotation-classification-request';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { CreateAgreeReviewRequest } from './create-agree-review-request';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -25,6 +22,12 @@ import type { CreateOverwriteReviewRequest } from './create-overwrite-review-req
 // May contain unused imports in some cases
 // @ts-ignore
 import type { CreateOverwriteReviewRequestAction } from './create-overwrite-review-request-action';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesCharacteristicsRequest } from './species-characteristics-request';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesClassificationRequest } from './species-classification-request';
 
 /**
  * @type MetaCreateIdentificationTaskReviewRequest

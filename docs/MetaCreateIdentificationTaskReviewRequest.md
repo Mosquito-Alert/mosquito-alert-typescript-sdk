@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **public_photo_uuid** | **string** |  | [default to undefined]
 **is_safe** | **boolean** | Indicates if the content is safe for publication. | [default to undefined]
 **public_note** | **string** |  | [default to undefined]
-**result** | [**AnnotationClassificationRequest**](AnnotationClassificationRequest.md) |  | [default to undefined]
+**classification** | [**SpeciesClassificationRequest**](SpeciesClassificationRequest.md) |  | [default to undefined]
+**characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] [default to undefined]
 
 ## Example
 
@@ -21,7 +22,8 @@ const instance: MetaCreateIdentificationTaskReviewRequest = {
     public_photo_uuid,
     is_safe,
     public_note,
-    result,
+    classification,
+    characteristics,
 };
 ```
 

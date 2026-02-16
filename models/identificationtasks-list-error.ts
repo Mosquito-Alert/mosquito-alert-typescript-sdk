@@ -42,6 +42,9 @@ import type { IdentificationtasksListOrderByErrorComponent } from './identificat
 import type { IdentificationtasksListResultAgreementErrorComponent } from './identificationtasks-list-result-agreement-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksListResultCharacteristicsSexErrorComponent } from './identificationtasks-list-result-characteristics-sex-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksListResultConfidenceErrorComponent } from './identificationtasks-list-result-confidence-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -65,6 +68,6 @@ import type { IdentificationtasksListUpdatedAtErrorComponent } from './identific
 /**
  * @type IdentificationtasksListError
  */
-export type IdentificationtasksListError = { attr: 'annotator_ids' } & IdentificationtasksListAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListResultAgreementErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListResultUncertaintyErrorComponent | { attr: 'review_action' } & IdentificationtasksListReviewActionErrorComponent | { attr: 'status' } & IdentificationtasksListStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListUpdatedAtErrorComponent;
+export type IdentificationtasksListError = { attr: 'annotator_ids' } & IdentificationtasksListAnnotatorIdsErrorComponent | { attr: 'assignee_ids' } & IdentificationtasksListAssigneeIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksListCreatedAtErrorComponent | { attr: 'num_annotations' } & IdentificationtasksListNumAnnotationsErrorComponent | { attr: 'observation_country_ids' } & IdentificationtasksListObservationCountryIdsErrorComponent | { attr: 'order_by' } & IdentificationtasksListOrderByErrorComponent | { attr: 'result_agreement' } & IdentificationtasksListResultAgreementErrorComponent | { attr: 'result_characteristics_sex' } & IdentificationtasksListResultCharacteristicsSexErrorComponent | { attr: 'result_confidence' } & IdentificationtasksListResultConfidenceErrorComponent | { attr: 'result_source' } & IdentificationtasksListResultSourceErrorComponent | { attr: 'result_taxon_ids' } & IdentificationtasksListResultTaxonIdsErrorComponent | { attr: 'result_uncertainty' } & IdentificationtasksListResultUncertaintyErrorComponent | { attr: 'review_action' } & IdentificationtasksListReviewActionErrorComponent | { attr: 'status' } & IdentificationtasksListStatusErrorComponent | { attr: 'updated_at' } & IdentificationtasksListUpdatedAtErrorComponent;
 
 

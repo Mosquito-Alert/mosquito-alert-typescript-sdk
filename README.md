@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.36
+## mosquito-alert@0.1.37
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.36 --save
+npm install mosquito-alert@0.1.37 --save
 ```
 
 _unPublished (not recommended):_
@@ -129,12 +129,6 @@ Class | Method | HTTP request | Description
  - [AdmBoundary](docs/AdmBoundary.md)
  - [AdmBoundaryRequest](docs/AdmBoundaryRequest.md)
  - [Annotation](docs/Annotation.md)
- - [AnnotationCharacteristics](docs/AnnotationCharacteristics.md)
- - [AnnotationCharacteristicsRequest](docs/AnnotationCharacteristicsRequest.md)
- - [AnnotationCharacteristicsSex](docs/AnnotationCharacteristicsSex.md)
- - [AnnotationClassification](docs/AnnotationClassification.md)
- - [AnnotationClassificationConfidenceLabel](docs/AnnotationClassificationConfidenceLabel.md)
- - [AnnotationClassificationRequest](docs/AnnotationClassificationRequest.md)
  - [AnnotationFeedback](docs/AnnotationFeedback.md)
  - [AnnotationFeedbackRequest](docs/AnnotationFeedbackRequest.md)
  - [AnnotationPermission](docs/AnnotationPermission.md)
@@ -542,6 +536,9 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsCreateTagsErrorComponent](docs/IdentificationtasksAnnotationsCreateTagsErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent](docs/IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateValidationError](docs/IdentificationtasksAnnotationsCreateValidationError.md)
+ - [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent](docs/IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent.md)
+ - [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponentAttr](docs/IdentificationtasksAnnotationsListCharacteristicsSexErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsListCharacteristicsSexParameter](docs/IdentificationtasksAnnotationsListCharacteristicsSexParameter.md)
  - [IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent](docs/IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent.md)
  - [IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttr](docs/IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent](docs/IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent.md)
@@ -552,6 +549,7 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode](docs/IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode.md)
  - [IdentificationtasksAnnotationsListCreatedAtErrorComponent](docs/IdentificationtasksAnnotationsListCreatedAtErrorComponent.md)
  - [IdentificationtasksAnnotationsListError](docs/IdentificationtasksAnnotationsListError.md)
+ - [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent](docs/IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent.md)
@@ -586,6 +584,8 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksListMineOrderByErrorComponent](docs/IdentificationtasksListMineOrderByErrorComponent.md)
  - [IdentificationtasksListMineResultAgreementErrorComponent](docs/IdentificationtasksListMineResultAgreementErrorComponent.md)
  - [IdentificationtasksListMineResultAgreementErrorComponentAttr](docs/IdentificationtasksListMineResultAgreementErrorComponentAttr.md)
+ - [IdentificationtasksListMineResultCharacteristicsSexErrorComponent](docs/IdentificationtasksListMineResultCharacteristicsSexErrorComponent.md)
+ - [IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr](docs/IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr.md)
  - [IdentificationtasksListMineResultConfidenceErrorComponent](docs/IdentificationtasksListMineResultConfidenceErrorComponent.md)
  - [IdentificationtasksListMineResultConfidenceErrorComponentAttr](docs/IdentificationtasksListMineResultConfidenceErrorComponentAttr.md)
  - [IdentificationtasksListMineResultSourceErrorComponent](docs/IdentificationtasksListMineResultSourceErrorComponent.md)
@@ -605,6 +605,8 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksListOrderByErrorComponent](docs/IdentificationtasksListOrderByErrorComponent.md)
  - [IdentificationtasksListOrderByParameter](docs/IdentificationtasksListOrderByParameter.md)
  - [IdentificationtasksListResultAgreementErrorComponent](docs/IdentificationtasksListResultAgreementErrorComponent.md)
+ - [IdentificationtasksListResultCharacteristicsSexErrorComponent](docs/IdentificationtasksListResultCharacteristicsSexErrorComponent.md)
+ - [IdentificationtasksListResultCharacteristicsSexParameter](docs/IdentificationtasksListResultCharacteristicsSexParameter.md)
  - [IdentificationtasksListResultConfidenceErrorComponent](docs/IdentificationtasksListResultConfidenceErrorComponent.md)
  - [IdentificationtasksListResultSourceErrorComponent](docs/IdentificationtasksListResultSourceErrorComponent.md)
  - [IdentificationtasksListResultSourceParameter](docs/IdentificationtasksListResultSourceParameter.md)
@@ -711,6 +713,13 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksReviewCreateActionErrorComponent](docs/IdentificationtasksReviewCreateActionErrorComponent.md)
  - [IdentificationtasksReviewCreateActionErrorComponentAttr](docs/IdentificationtasksReviewCreateActionErrorComponentAttr.md)
  - [IdentificationtasksReviewCreateActionErrorComponentCode](docs/IdentificationtasksReviewCreateActionErrorComponentCode.md)
+ - [IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent.md)
+ - [IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent.md)
+ - [IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksReviewCreateCharacteristicsSexErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsSexErrorComponent.md)
+ - [IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent](docs/IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent.md)
+ - [IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent.md)
+ - [IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent](docs/IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent.md)
  - [IdentificationtasksReviewCreateError](docs/IdentificationtasksReviewCreateError.md)
  - [IdentificationtasksReviewCreateIsSafeErrorComponent](docs/IdentificationtasksReviewCreateIsSafeErrorComponent.md)
  - [IdentificationtasksReviewCreateIsSafeErrorComponentAttr](docs/IdentificationtasksReviewCreateIsSafeErrorComponentAttr.md)
@@ -720,12 +729,6 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksReviewCreatePublicNoteErrorComponentCode](docs/IdentificationtasksReviewCreatePublicNoteErrorComponentCode.md)
  - [IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent](docs/IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent.md)
  - [IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr](docs/IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttr.md)
- - [IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent](docs/IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent.md)
- - [IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr](docs/IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttr.md)
- - [IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent.md)
- - [IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr](docs/IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttr.md)
- - [IdentificationtasksReviewCreateResultTaxonIdErrorComponent](docs/IdentificationtasksReviewCreateResultTaxonIdErrorComponent.md)
- - [IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr](docs/IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttr.md)
  - [IdentificationtasksReviewCreateValidationError](docs/IdentificationtasksReviewCreateValidationError.md)
  - [LocalizedMessageBody](docs/LocalizedMessageBody.md)
  - [LocalizedMessageBodyRequest](docs/LocalizedMessageBodyRequest.md)
@@ -1039,6 +1042,12 @@ Class | Method | HTTP request | Description
  - [SimpleTaxonRequest](docs/SimpleTaxonRequest.md)
  - [SimplifiedLocation](docs/SimplifiedLocation.md)
  - [SimplifiedObservationWithPhotos](docs/SimplifiedObservationWithPhotos.md)
+ - [SpeciesCharacteristics](docs/SpeciesCharacteristics.md)
+ - [SpeciesCharacteristicsRequest](docs/SpeciesCharacteristicsRequest.md)
+ - [SpeciesCharacteristicsSex](docs/SpeciesCharacteristicsSex.md)
+ - [SpeciesClassification](docs/SpeciesClassification.md)
+ - [SpeciesClassificationConfidenceLabel](docs/SpeciesClassificationConfidenceLabel.md)
+ - [SpeciesClassificationRequest](docs/SpeciesClassificationRequest.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)
  - [TaxaListRankErrorComponentAttr](docs/TaxaListRankErrorComponentAttr.md)
  - [TaxaListRankParameter](docs/TaxaListRankParameter.md)

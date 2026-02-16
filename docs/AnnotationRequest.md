@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **best_photo_uuid** | **string** |  | [optional] [default to undefined]
-**classification** | [**AnnotationClassificationRequest**](AnnotationClassificationRequest.md) |  | [default to undefined]
-**characteristics** | [**AnnotationCharacteristicsRequest**](AnnotationCharacteristicsRequest.md) |  | [optional] [default to undefined]
+**classification** | [**SpeciesClassificationRequest**](SpeciesClassificationRequest.md) |  | [default to undefined]
+**characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] [default to undefined]
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] [default to undefined]
 **is_flagged** | **boolean** |  | [optional] [default to false]
 **is_decisive** | **boolean** |  | [optional] [default to false]

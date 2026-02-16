@@ -15,10 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AnnotationClassificationRequest } from './annotation-classification-request';
+import type { CreateOverwriteReviewRequestAction } from './create-overwrite-review-request-action';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { CreateOverwriteReviewRequestAction } from './create-overwrite-review-request-action';
+import type { SpeciesCharacteristicsRequest } from './species-characteristics-request';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesClassificationRequest } from './species-classification-request';
 
 export interface CreateOverwriteReviewRequest {
     'action'?: CreateOverwriteReviewRequestAction;
@@ -28,7 +31,8 @@ export interface CreateOverwriteReviewRequest {
      */
     'is_safe': boolean;
     'public_note': string | null;
-    'result': AnnotationClassificationRequest | null;
+    'classification': SpeciesClassificationRequest | null;
+    'characteristics'?: SpeciesCharacteristicsRequest | null;
 }
 
 

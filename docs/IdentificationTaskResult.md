@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **confidence_label** | **string** |  | [readonly] [default to undefined]
 **uncertainty** | **number** |  | [readonly] [default to undefined]
 **agreement** | **number** |  | [readonly] [default to undefined]
+**characteristics** | [**SpeciesCharacteristics**](SpeciesCharacteristics.md) |  | [readonly] [default to undefined]
 
 ## Example
 
@@ -26,6 +27,7 @@ const instance: IdentificationTaskResult = {
     confidence_label,
     uncertainty,
     agreement,
+    characteristics,
 };
 ```
 

@@ -15,9 +15,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AnnotationClassification } from './annotation-classification';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { AnnotationFeedback } from './annotation-feedback';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -31,13 +28,20 @@ import type { SimpleAnnotatorUser } from './simple-annotator-user';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimplePhoto } from './simple-photo';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesCharacteristics } from './species-characteristics';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SpeciesClassification } from './species-classification';
 
 export interface Annotation {
     'id': number;
     'observation_uuid': string;
     'user': SimpleAnnotatorUser;
     'best_photo': SimplePhoto | null;
-    'classification': AnnotationClassification | null;
+    'classification': SpeciesClassification | null;
+    'characteristics'?: SpeciesCharacteristics | null;
     'feedback'?: AnnotationFeedback;
     'type': AnnotationType;
     'is_flagged': boolean;

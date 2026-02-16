@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr } from './identificationtasks-annotations-create-characteristics-sex-error-component-attr';
 
 export interface IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr;
-    'code': BitesCreateEventEnvironmentErrorComponentCode;
+    'code': BitesCreateLocationSourceErrorComponentCode;
     'detail': string;
 }
 

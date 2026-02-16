@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr**](IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesCreateLocationSourceErrorComponentCode**](BitesCreateLocationSourceErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

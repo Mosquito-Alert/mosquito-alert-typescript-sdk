@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **observation_uuid** | **string** |  | [readonly] [default to undefined]
 **user** | [**SimpleAnnotatorUser**](SimpleAnnotatorUser.md) |  | [readonly] [default to undefined]
 **best_photo** | [**SimplePhoto**](SimplePhoto.md) |  | [readonly] [default to undefined]
-**classification** | [**AnnotationClassification**](AnnotationClassification.md) |  | [default to undefined]
+**classification** | [**SpeciesClassification**](SpeciesClassification.md) |  | [default to undefined]
+**characteristics** | [**SpeciesCharacteristics**](SpeciesCharacteristics.md) |  | [optional] [default to undefined]
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] [default to undefined]
 **type** | [**AnnotationType**](AnnotationType.md) |  | [default to undefined]
 **is_flagged** | **boolean** |  | [readonly] [default to false]
@@ -30,6 +31,7 @@ const instance: Annotation = {
     user,
     best_photo,
     classification,
+    characteristics,
     feedback,
     type,
     is_flagged,

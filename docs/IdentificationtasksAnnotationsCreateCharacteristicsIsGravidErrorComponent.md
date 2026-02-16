@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr**](IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**AuthChangePasswordNonFieldErrorsErrorComponentCode**](AuthChangePasswordNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesGeoListCreatedAtErrorComponentCode**](BitesGeoListCreatedAtErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
