@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | [**CreateAgreeReviewRequestAction**](CreateAgreeReviewRequestAction.md) |  | [optional] [default to undefined]
+**action** | [**CreateAgreeReviewRequestAction**](CreateAgreeReviewRequestAction.md) |  | [default to undefined]
 
 ## Example
 

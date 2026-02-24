@@ -584,7 +584,6 @@ export * from './identificationtasks-predictions-update-threshold-deviation-erro
 export * from './identificationtasks-predictions-update-validation-error';
 export * from './identificationtasks-review-create-action-error-component';
 export * from './identificationtasks-review-create-action-error-component-attr';
-export * from './identificationtasks-review-create-action-error-component-code';
 export * from './identificationtasks-review-create-characteristics-is-blood-fed-error-component';
 export * from './identificationtasks-review-create-characteristics-is-gravid-error-component';
 export * from './identificationtasks-review-create-characteristics-non-field-errors-error-component';
@@ -732,6 +731,7 @@ export * from './notifications-create-message-title-zh-cnerror-component-attr';
 export * from './notifications-create-non-field-errors-error-component';
 export * from './notifications-create-receiver-type-error-component';
 export * from './notifications-create-receiver-type-error-component-attr';
+export * from './notifications-create-receiver-type-error-component-code';
 export * from './notifications-create-topic-codes-error-component';
 export * from './notifications-create-topic-codes-error-component-attr';
 export * from './notifications-create-topic-codes-error-component-code';

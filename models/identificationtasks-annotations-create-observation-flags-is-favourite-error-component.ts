@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode } from './identificationtasks-annotations-create-is-decisive-error-component-code';
+import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr } from './identificationtasks-annotations-create-observation-flags-is-favourite-error-component-attr';
 
 export interface IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr;
-    'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
+    'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
     'detail': string;
 }
 

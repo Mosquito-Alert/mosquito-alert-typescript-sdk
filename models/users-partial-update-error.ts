@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
+import type { NotificationsCreateReceiverTypeErrorComponentCode } from './notifications-create-receiver-type-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersPartialUpdateLocaleErrorComponent } from './users-partial-update-locale-error-component';

@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksReviewCreateActionErrorComponentAttr } from './identificationtasks-review-create-action-error-component-attr';
+import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
+import type { IdentificationtasksReviewCreateActionErrorComponentAttr } from './identificationtasks-review-create-action-error-component-attr';
 
 export interface IdentificationtasksReviewCreateActionErrorComponent {
     'attr': IdentificationtasksReviewCreateActionErrorComponentAttr;
-    'code': IdentificationtasksReviewCreateActionErrorComponentCode;
+    'code': BitesCreateLocationSourceErrorComponentCode;
     'detail': string;
 }
 

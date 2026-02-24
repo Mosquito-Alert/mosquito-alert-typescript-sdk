@@ -24,12 +24,12 @@ import type { SpeciesCharacteristicsRequest } from './species-characteristics-re
 import type { SpeciesClassificationRequest } from './species-classification-request';
 
 export interface CreateOverwriteReviewRequest {
-    'action'?: CreateOverwriteReviewRequestAction;
+    'action': CreateOverwriteReviewRequestAction;
     'public_photo_uuid': string;
-    /**
-     * Indicates if the content is safe for publication.
-     */
     'is_safe': boolean;
+    /**
+     * Notes to display on public map
+     */
     'public_note': string | null;
     'classification': SpeciesClassificationRequest | null;
     'characteristics'?: SpeciesCharacteristicsRequest | null;

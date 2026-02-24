@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**UsersPartialUpdateLocaleErrorComponentAttr**](UsersPartialUpdateLocaleErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksReviewCreateActionErrorComponentCode**](IdentificationtasksReviewCreateActionErrorComponentCode.md) |  | [default to undefined]
+**code** | [**NotificationsCreateReceiverTypeErrorComponentCode**](NotificationsCreateReceiverTypeErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

@@ -1,4 +1,4 @@
-# IdentificationtasksReviewCreateActionErrorComponentCode
+# NotificationsCreateReceiverTypeErrorComponentCode
 
 
 ## Enum

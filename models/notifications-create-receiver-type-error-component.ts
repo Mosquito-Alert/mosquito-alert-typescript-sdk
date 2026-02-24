@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksReviewCreateActionErrorComponentCode } from './identificationtasks-review-create-action-error-component-code';
+import type { NotificationsCreateReceiverTypeErrorComponentAttr } from './notifications-create-receiver-type-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { NotificationsCreateReceiverTypeErrorComponentAttr } from './notifications-create-receiver-type-error-component-attr';
+import type { NotificationsCreateReceiverTypeErrorComponentCode } from './notifications-create-receiver-type-error-component-code';
 
 export interface NotificationsCreateReceiverTypeErrorComponent {
     'attr': NotificationsCreateReceiverTypeErrorComponentAttr;
-    'code': IdentificationtasksReviewCreateActionErrorComponentCode;
+    'code': NotificationsCreateReceiverTypeErrorComponentCode;
     'detail': string;
 }
 

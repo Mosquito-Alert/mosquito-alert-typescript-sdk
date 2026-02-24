@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.37
+## mosquito-alert@0.1.38
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.37 --save
+npm install mosquito-alert@0.1.38 --save
 ```
 
 _unPublished (not recommended):_
@@ -712,7 +712,6 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksPredictionsUpdateValidationError](docs/IdentificationtasksPredictionsUpdateValidationError.md)
  - [IdentificationtasksReviewCreateActionErrorComponent](docs/IdentificationtasksReviewCreateActionErrorComponent.md)
  - [IdentificationtasksReviewCreateActionErrorComponentAttr](docs/IdentificationtasksReviewCreateActionErrorComponentAttr.md)
- - [IdentificationtasksReviewCreateActionErrorComponentCode](docs/IdentificationtasksReviewCreateActionErrorComponentCode.md)
  - [IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent.md)
  - [IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent.md)
  - [IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent](docs/IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent.md)
@@ -860,6 +859,7 @@ Class | Method | HTTP request | Description
  - [NotificationsCreateNonFieldErrorsErrorComponent](docs/NotificationsCreateNonFieldErrorsErrorComponent.md)
  - [NotificationsCreateReceiverTypeErrorComponent](docs/NotificationsCreateReceiverTypeErrorComponent.md)
  - [NotificationsCreateReceiverTypeErrorComponentAttr](docs/NotificationsCreateReceiverTypeErrorComponentAttr.md)
+ - [NotificationsCreateReceiverTypeErrorComponentCode](docs/NotificationsCreateReceiverTypeErrorComponentCode.md)
  - [NotificationsCreateTopicCodesErrorComponent](docs/NotificationsCreateTopicCodesErrorComponent.md)
  - [NotificationsCreateTopicCodesErrorComponentAttr](docs/NotificationsCreateTopicCodesErrorComponentAttr.md)
  - [NotificationsCreateTopicCodesErrorComponentCode](docs/NotificationsCreateTopicCodesErrorComponentCode.md)

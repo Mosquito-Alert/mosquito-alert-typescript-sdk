@@ -15,13 +15,13 @@
 
 
 
-export const IdentificationtasksReviewCreateActionErrorComponentCode = {
+export const NotificationsCreateReceiverTypeErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksReviewCreateActionErrorComponentCode = typeof IdentificationtasksReviewCreateActionErrorComponentCode[keyof typeof IdentificationtasksReviewCreateActionErrorComponentCode];
+export type NotificationsCreateReceiverTypeErrorComponentCode = typeof NotificationsCreateReceiverTypeErrorComponentCode[keyof typeof NotificationsCreateReceiverTypeErrorComponentCode];
 
 
 

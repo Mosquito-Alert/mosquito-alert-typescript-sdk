@@ -15,7 +15,7 @@
 
 
 export interface ObservationFlags {
-    'is_favourite': boolean;
+    'is_favourite'?: boolean;
     'is_visible': boolean;
 }
 

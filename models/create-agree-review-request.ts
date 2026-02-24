@@ -18,7 +18,7 @@
 import type { CreateAgreeReviewRequestAction } from './create-agree-review-request-action';
 
 export interface CreateAgreeReviewRequest {
-    'action'?: CreateAgreeReviewRequestAction;
+    'action': CreateAgreeReviewRequestAction;
 }
 
 

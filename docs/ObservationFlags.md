@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_favourite** | **boolean** |  | [readonly] [default to false]
+**is_favourite** | **boolean** |  | [optional] [default to false]
 **is_visible** | **boolean** |  | [readonly] [default to true]
 
 ## Example

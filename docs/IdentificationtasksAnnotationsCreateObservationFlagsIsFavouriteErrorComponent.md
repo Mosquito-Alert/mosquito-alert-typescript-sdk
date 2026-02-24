@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr**](IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode**](IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md) |  | [default to undefined]
+**code** | [**AuthChangePasswordNonFieldErrorsErrorComponentCode**](AuthChangePasswordNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
