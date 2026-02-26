@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **change** | **boolean** |  | [default to undefined]
 **view** | **boolean** |  | [default to undefined]
 **_delete** | **boolean** |  | [default to undefined]
-**mark_as_decisive** | **boolean** |  | [default to undefined]
+**mark_as_executive** | **boolean** |  | [default to undefined]
 
 ## Example
 
@@ -21,7 +21,7 @@ const instance: AnnotationPermission = {
     change,
     view,
     _delete,
-    mark_as_decisive,
+    mark_as_executive,
 };
 ```
 

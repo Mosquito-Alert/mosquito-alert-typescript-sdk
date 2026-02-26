@@ -18,10 +18,10 @@
 import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr } from './identificationtasks-predictions-create-is-decisive-error-component-attr';
+import type { IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr } from './identificationtasks-annotations-create-is-executive-error-component-attr';
 
-export interface IdentificationtasksPredictionsCreateIsDecisiveErrorComponent {
-    'attr': IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr;
+export interface IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent {
+    'attr': IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr;
     'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
     'detail': string;
 }

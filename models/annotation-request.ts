@@ -32,7 +32,7 @@ export interface AnnotationRequest {
     'characteristics'?: SpeciesCharacteristicsRequest | null;
     'feedback'?: AnnotationFeedbackRequest;
     'is_flagged'?: boolean;
-    'is_decisive'?: boolean;
+    'is_executive'?: boolean;
     'observation_flags'?: ObservationFlagsRequest;
     'tags'?: Array<string>;
 }

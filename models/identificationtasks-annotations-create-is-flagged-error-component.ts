@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode } from './identificationtasks-annotations-create-is-decisive-error-component-code';
+import type { IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr } from './identificationtasks-annotations-create-is-flagged-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr } from './identificationtasks-annotations-create-is-flagged-error-component-attr';
+import type { IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode } from './identificationtasks-annotations-create-is-flagged-error-component-code';
 
 export interface IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr;
-    'code': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode;
+    'code': IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode;
     'detail': string;
 }
 

@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateLocationSourceErrorComponentCode } from './bites-create-location-source-error-component-code';
+import type { BitesCreateLocationPointLatitudeErrorComponentCode } from './bites-create-location-point-latitude-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr } from './identificationtasks-annotations-create-classification-confidence-label-error-component-attr';
 
 export interface IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent {
     'attr': IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr;
-    'code': BitesCreateLocationSourceErrorComponentCode;
+    'code': BitesCreateLocationPointLatitudeErrorComponentCode;
     'detail': string;
 }
 

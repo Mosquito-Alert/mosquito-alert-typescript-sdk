@@ -17,8 +17,10 @@
 
 export const BitesListOrderByParameter = {
     MinusCreatedAt: '-created_at',
+    MinusDistance: '-distance',
     MinusReceivedAt: '-received_at',
     CreatedAt: 'created_at',
+    Distance: 'distance',
     ReceivedAt: 'received_at',
     UnknownDefaultOpenApi: '11184809'
 } as const;

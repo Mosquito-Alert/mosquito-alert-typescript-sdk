@@ -14,11 +14,13 @@
 
 
 
-export interface AnnotationPermission {
-    'add': boolean;
-    'change': boolean;
-    'view': boolean;
-    'delete': boolean;
-    'mark_as_executive': boolean;
-}
+
+export const IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr = {
+    IsExecutive: 'is_executive',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr];
+
+
 

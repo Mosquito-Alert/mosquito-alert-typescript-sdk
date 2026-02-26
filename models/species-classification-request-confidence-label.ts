@@ -14,11 +14,14 @@
 
 
 
-export interface AnnotationPermission {
-    'add': boolean;
-    'change': boolean;
-    'view': boolean;
-    'delete': boolean;
-    'mark_as_executive': boolean;
-}
+
+export const SpeciesClassificationRequestConfidenceLabel = {
+    Definitely: 'definitely',
+    Probably: 'probably',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type SpeciesClassificationRequestConfidenceLabel = typeof SpeciesClassificationRequestConfidenceLabel[keyof typeof SpeciesClassificationRequestConfidenceLabel];
+
+
 

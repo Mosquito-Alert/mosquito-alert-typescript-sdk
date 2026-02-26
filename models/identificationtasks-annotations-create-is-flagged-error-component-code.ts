@@ -14,11 +14,13 @@
 
 
 
-export interface AnnotationPermission {
-    'add': boolean;
-    'change': boolean;
-    'view': boolean;
-    'delete': boolean;
-    'mark_as_executive': boolean;
-}
+
+export const IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode = {
+    Null: 'null',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode = typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode];
+
+
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr**](IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr**](IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**AuthChangePasswordNonFieldErrorsErrorComponentCode**](AuthChangePasswordNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 

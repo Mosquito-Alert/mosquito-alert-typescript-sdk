@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **taxon_id** | **number** |  | [default to undefined]
-**confidence_label** | [**SpeciesClassificationConfidenceLabel**](SpeciesClassificationConfidenceLabel.md) |  | [default to undefined]
+**confidence_label** | [**SpeciesClassificationRequestConfidenceLabel**](SpeciesClassificationRequestConfidenceLabel.md) |  | [default to undefined]
 
 ## Example
 

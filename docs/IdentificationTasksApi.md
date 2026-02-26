@@ -103,7 +103,7 @@ let classificationConfidenceMin: number; // (optional) (default to undefined)
 let classificationTaxonIds: Array<number>; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
-let isDecisive: boolean; // (optional) (default to undefined)
+let decisionLevel: Array<IdentificationtasksAnnotationsListDecisionLevelParameter>; // (optional) (default to undefined)
 let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
@@ -126,7 +126,7 @@ const { status, data } = await apiInstance.annotationsList(
     classificationTaxonIds,
     createdAtAfter,
     createdAtBefore,
-    isDecisive,
+    decisionLevel,
     isFavourite,
     isFlagged,
     orderBy,
@@ -154,7 +154,7 @@ const { status, data } = await apiInstance.annotationsList(
 | **classificationTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
-| **isDecisive** | [**boolean**] |  | (optional) defaults to undefined|
+| **decisionLevel** | **Array&lt;IdentificationtasksAnnotationsListDecisionLevelParameter&gt;** |  | (optional) defaults to undefined|
 | **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
@@ -217,7 +217,7 @@ let classificationConfidenceMin: number; // (optional) (default to undefined)
 let classificationTaxonIds: Array<number>; // (optional) (default to undefined)
 let createdAtAfter: string; //Created at (optional) (default to undefined)
 let createdAtBefore: string; //Created at (optional) (default to undefined)
-let isDecisive: boolean; // (optional) (default to undefined)
+let decisionLevel: Array<IdentificationtasksAnnotationsListDecisionLevelParameter>; // (optional) (default to undefined)
 let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
 let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
@@ -239,7 +239,7 @@ const { status, data } = await apiInstance.annotationsListMine(
     classificationTaxonIds,
     createdAtAfter,
     createdAtBefore,
-    isDecisive,
+    decisionLevel,
     isFavourite,
     isFlagged,
     orderBy,
@@ -266,7 +266,7 @@ const { status, data } = await apiInstance.annotationsListMine(
 | **classificationTaxonIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
 | **createdAtAfter** | [**string**] | Created at | (optional) defaults to undefined|
 | **createdAtBefore** | [**string**] | Created at | (optional) defaults to undefined|
-| **isDecisive** | [**boolean**] |  | (optional) defaults to undefined|
+| **decisionLevel** | **Array&lt;IdentificationtasksAnnotationsListDecisionLevelParameter&gt;** |  | (optional) defaults to undefined|
 | **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
 | **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|

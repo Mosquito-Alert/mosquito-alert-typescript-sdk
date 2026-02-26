@@ -15,12 +15,12 @@
 
 
 
-export const IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode = {
-    Null: 'null',
+export const IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr = {
+    DecisionLevel: 'decision_level',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode = typeof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode];
+export type IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr = typeof IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr];
 
 
 

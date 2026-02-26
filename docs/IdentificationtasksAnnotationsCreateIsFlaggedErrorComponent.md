@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr**](IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode**](IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md) |  | [default to undefined]
+**code** | [**IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode**](IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

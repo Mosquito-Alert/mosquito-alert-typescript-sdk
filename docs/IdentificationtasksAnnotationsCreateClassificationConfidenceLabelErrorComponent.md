@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr**](IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateLocationSourceErrorComponentCode**](BitesCreateLocationSourceErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesCreateLocationPointLatitudeErrorComponentCode**](BitesCreateLocationPointLatitudeErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

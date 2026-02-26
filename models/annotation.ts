@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AnnotationDecisionLevel } from './annotation-decision-level';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { AnnotationFeedback } from './annotation-feedback';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -45,7 +48,7 @@ export interface Annotation {
     'feedback'?: AnnotationFeedback;
     'type': AnnotationType;
     'is_flagged': boolean;
-    'is_decisive': boolean;
+    'decision_level': AnnotationDecisionLevel;
     'observation_flags'?: ObservationFlags;
     'tags'?: Array<string>;
     'created_at': string;

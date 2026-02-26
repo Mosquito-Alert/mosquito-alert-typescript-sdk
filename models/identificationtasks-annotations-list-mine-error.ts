@@ -36,6 +36,9 @@ import type { IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorC
 import type { IdentificationtasksAnnotationsListMineCreatedAtErrorComponent } from './identificationtasks-annotations-list-mine-created-at-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent } from './identificationtasks-annotations-list-mine-decision-level-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { IdentificationtasksAnnotationsListMineOrderByErrorComponent } from './identificationtasks-annotations-list-mine-order-by-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -50,6 +53,6 @@ import type { IdentificationtasksAnnotationsListMineUserIdsErrorComponent } from
 /**
  * @type IdentificationtasksAnnotationsListMineError
  */
-export type IdentificationtasksAnnotationsListMineError = { attr: 'characteristics_sex' } & IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent | { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListMineCreatedAtErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListMineOrderByErrorComponent | { attr: 'type' } & IdentificationtasksAnnotationsListMineTypeErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListMineUserIdsErrorComponent;
+export type IdentificationtasksAnnotationsListMineError = { attr: 'characteristics_sex' } & IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent | { attr: 'classification_confidence' } & IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent | { attr: 'classification_confidence_label' } & IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent | { attr: 'classification_taxon_ids' } & IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent | { attr: 'created_at' } & IdentificationtasksAnnotationsListMineCreatedAtErrorComponent | { attr: 'decision_level' } & IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent | { attr: 'order_by' } & IdentificationtasksAnnotationsListMineOrderByErrorComponent | { attr: 'type' } & IdentificationtasksAnnotationsListMineTypeErrorComponent | { attr: 'updated_at' } & IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent | { attr: 'user_ids' } & IdentificationtasksAnnotationsListMineUserIdsErrorComponent;
 
 

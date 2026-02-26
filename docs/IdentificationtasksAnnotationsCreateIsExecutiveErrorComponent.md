@@ -1,20 +1,20 @@
-# IdentificationtasksPredictionsUpdateIsDecisiveErrorComponent
+# IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr**](IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr**](IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**AuthChangePasswordNonFieldErrorsErrorComponentCode**](AuthChangePasswordNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { IdentificationtasksPredictionsUpdateIsDecisiveErrorComponent } from 'mosquito-alert';
+import { IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent } from 'mosquito-alert';
 
-const instance: IdentificationtasksPredictionsUpdateIsDecisiveErrorComponent = {
+const instance: IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent = {
     attr,
     code,
     detail,

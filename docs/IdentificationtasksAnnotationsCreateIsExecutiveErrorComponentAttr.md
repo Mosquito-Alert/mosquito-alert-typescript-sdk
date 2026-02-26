@@ -1,9 +1,9 @@
-# IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode
+# IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr
 
 
 ## Enum
 
-* `Null` (value: `'null'`)
+* `IsExecutive` (value: `'is_executive'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

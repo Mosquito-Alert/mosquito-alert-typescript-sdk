@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] [default to undefined]
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] [default to undefined]
 **is_flagged** | **boolean** |  | [optional] [default to false]
-**is_decisive** | **boolean** |  | [optional] [default to false]
+**is_executive** | **boolean** |  | [optional] [default to false]
 **observation_flags** | [**ObservationFlagsRequest**](ObservationFlagsRequest.md) |  | [optional] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 
@@ -25,7 +25,7 @@ const instance: AnnotationRequest = {
     characteristics,
     feedback,
     is_flagged,
-    is_decisive,
+    is_executive,
     observation_flags,
     tags,
 };

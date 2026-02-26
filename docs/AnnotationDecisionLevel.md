@@ -1,9 +1,13 @@
-# IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr
+# AnnotationDecisionLevel
 
 
 ## Enum
 
-* `IsDecisive` (value: `'is_decisive'`)
+* `Normal` (value: `'normal'`)
+
+* `Executive` (value: `'executive'`)
+
+* `Final` (value: `'final'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

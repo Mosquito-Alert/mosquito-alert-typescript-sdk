@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] [default to undefined]
 **type** | [**AnnotationType**](AnnotationType.md) |  | [default to undefined]
 **is_flagged** | **boolean** |  | [readonly] [default to false]
-**is_decisive** | **boolean** |  | [readonly] [default to false]
+**decision_level** | [**AnnotationDecisionLevel**](AnnotationDecisionLevel.md) |  | [default to undefined]
 **observation_flags** | [**ObservationFlags**](ObservationFlags.md) |  | [optional] [default to undefined]
 **tags** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
@@ -35,7 +35,7 @@ const instance: Annotation = {
     feedback,
     type,
     is_flagged,
-    is_decisive,
+    decision_level,
     observation_flags,
     tags,
     created_at,

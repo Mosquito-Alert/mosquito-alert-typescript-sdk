@@ -15,12 +15,12 @@
 
 
 
-export const IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr = {
+export const IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr = {
     IsDecisive: 'is_decisive',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr];
+export type IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr = typeof IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr];
 
 
 

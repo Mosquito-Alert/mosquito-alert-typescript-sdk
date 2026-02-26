@@ -14,11 +14,15 @@
 
 
 
-export interface AnnotationPermission {
-    'add': boolean;
-    'change': boolean;
-    'view': boolean;
-    'delete': boolean;
-    'mark_as_executive': boolean;
-}
+
+export const IdentificationtasksAnnotationsListDecisionLevelParameter = {
+    Executive: 'executive',
+    Final: 'final',
+    Normal: 'normal',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type IdentificationtasksAnnotationsListDecisionLevelParameter = typeof IdentificationtasksAnnotationsListDecisionLevelParameter[keyof typeof IdentificationtasksAnnotationsListDecisionLevelParameter];
+
+
 

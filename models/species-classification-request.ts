@@ -15,11 +15,11 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { SpeciesClassificationConfidenceLabel } from './species-classification-confidence-label';
+import type { SpeciesClassificationRequestConfidenceLabel } from './species-classification-request-confidence-label';
 
 export interface SpeciesClassificationRequest {
     'taxon_id': number;
-    'confidence_label': SpeciesClassificationConfidenceLabel;
+    'confidence_label': SpeciesClassificationRequestConfidenceLabel;
 }
 
 

@@ -1,4 +1,4 @@
-## mosquito-alert@0.1.38
+## mosquito-alert@0.2.0
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.1.38 --save
+npm install mosquito-alert@0.2.0 --save
 ```
 
 _unPublished (not recommended):_
@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
  - [AdmBoundary](docs/AdmBoundary.md)
  - [AdmBoundaryRequest](docs/AdmBoundaryRequest.md)
  - [Annotation](docs/Annotation.md)
+ - [AnnotationDecisionLevel](docs/AnnotationDecisionLevel.md)
  - [AnnotationFeedback](docs/AnnotationFeedback.md)
  - [AnnotationFeedbackRequest](docs/AnnotationFeedbackRequest.md)
  - [AnnotationPermission](docs/AnnotationPermission.md)
@@ -521,11 +522,11 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent](docs/IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttr.md)
- - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent.md)
- - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttr.md)
- - [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode](docs/IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCode.md)
+ - [IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent](docs/IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent.md)
+ - [IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent](docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode](docs/IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode.md)
  - [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent](docs/IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent.md)
  - [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr](docs/IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr.md)
@@ -548,12 +549,16 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttr](docs/IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttr.md)
  - [IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode](docs/IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode.md)
  - [IdentificationtasksAnnotationsListCreatedAtErrorComponent](docs/IdentificationtasksAnnotationsListCreatedAtErrorComponent.md)
+ - [IdentificationtasksAnnotationsListDecisionLevelErrorComponent](docs/IdentificationtasksAnnotationsListDecisionLevelErrorComponent.md)
+ - [IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr](docs/IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttr.md)
+ - [IdentificationtasksAnnotationsListDecisionLevelParameter](docs/IdentificationtasksAnnotationsListDecisionLevelParameter.md)
  - [IdentificationtasksAnnotationsListError](docs/IdentificationtasksAnnotationsListError.md)
  - [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent](docs/IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent](docs/IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent](docs/IdentificationtasksAnnotationsListMineCreatedAtErrorComponent.md)
+ - [IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent](docs/IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineError](docs/IdentificationtasksAnnotationsListMineError.md)
  - [IdentificationtasksAnnotationsListMineOrderByErrorComponent](docs/IdentificationtasksAnnotationsListMineOrderByErrorComponent.md)
  - [IdentificationtasksAnnotationsListMineTypeErrorComponent](docs/IdentificationtasksAnnotationsListMineTypeErrorComponent.md)
@@ -635,6 +640,7 @@ Class | Method | HTTP request | Description
  - [IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent](docs/IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent.md)
  - [IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr](docs/IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr.md)
  - [IdentificationtasksPredictionsCreateIsDecisiveErrorComponent](docs/IdentificationtasksPredictionsCreateIsDecisiveErrorComponent.md)
+ - [IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr](docs/IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr.md)
  - [IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent](docs/IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent.md)
  - [IdentificationtasksPredictionsCreatePhotoUuidErrorComponent](docs/IdentificationtasksPredictionsCreatePhotoUuidErrorComponent.md)
  - [IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttr](docs/IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttr.md)
@@ -1048,6 +1054,7 @@ Class | Method | HTTP request | Description
  - [SpeciesClassification](docs/SpeciesClassification.md)
  - [SpeciesClassificationConfidenceLabel](docs/SpeciesClassificationConfidenceLabel.md)
  - [SpeciesClassificationRequest](docs/SpeciesClassificationRequest.md)
+ - [SpeciesClassificationRequestConfidenceLabel](docs/SpeciesClassificationRequestConfidenceLabel.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)
  - [TaxaListRankErrorComponentAttr](docs/TaxaListRankErrorComponentAttr.md)
  - [TaxaListRankParameter](docs/TaxaListRankParameter.md)
