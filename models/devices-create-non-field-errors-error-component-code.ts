@@ -15,14 +15,14 @@
 
 
 
-export const DevicesCreateMobileAppNonFieldErrorsErrorComponentCode = {
+export const DevicesCreateNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Null: 'null',
     Unique: 'unique',
     UnknownDefaultOpenApi: '11184809'
 } as const;
 
-export type DevicesCreateMobileAppNonFieldErrorsErrorComponentCode = typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCode[keyof typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentCode];
+export type DevicesCreateNonFieldErrorsErrorComponentCode = typeof DevicesCreateNonFieldErrorsErrorComponentCode[keyof typeof DevicesCreateNonFieldErrorsErrorComponentCode];
 
 
 

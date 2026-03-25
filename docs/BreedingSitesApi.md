@@ -174,14 +174,14 @@ let hasLarvae: boolean; // (optional) (default to undefined)
 let hasNearMosquitoes: boolean; // (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
 let hasWater: boolean; // (optional) (default to undefined)
-let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordering   (optional) (default to undefined)
 let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let siteType: Array<BreedingsitesListSiteTypeParameter>; //Breeding site type.   (optional) (default to undefined)
-let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
+let tags: Array<string>; //Multiple values may be separated by commas. (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
 let userUuid: string; // (optional) (default to undefined)
@@ -225,14 +225,14 @@ const { status, data } = await apiInstance.geoList(
 | **hasNearMosquitoes** | [**boolean**] |  | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
 | **hasWater** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
 | **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **siteType** | **Array&lt;BreedingsitesListSiteTypeParameter&gt;** | Breeding site type.   | (optional) defaults to undefined|
-| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Multiple values may be separated by commas. | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
 | **userUuid** | [**string**] |  | (optional) defaults to undefined|
@@ -288,16 +288,16 @@ let hasLarvae: boolean; // (optional) (default to undefined)
 let hasNearMosquitoes: boolean; // (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
 let hasWater: boolean; // (optional) (default to undefined)
-let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let siteType: Array<BreedingsitesListSiteTypeParameter>; //Breeding site type.   (optional) (default to undefined)
-let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
+let tags: Array<string>; //Multiple values may be separated by commas. (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
 let userUuid: string; // (optional) (default to undefined)
@@ -345,16 +345,16 @@ const { status, data } = await apiInstance.list(
 | **hasNearMosquitoes** | [**boolean**] |  | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
 | **hasWater** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **siteType** | **Array&lt;BreedingsitesListSiteTypeParameter&gt;** | Breeding site type.   | (optional) defaults to undefined|
-| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Multiple values may be separated by commas. | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
 | **userUuid** | [**string**] |  | (optional) defaults to undefined|
@@ -411,16 +411,16 @@ let hasLarvae: boolean; // (optional) (default to undefined)
 let hasNearMosquitoes: boolean; // (optional) (default to undefined)
 let hasPhotos: boolean; //Has any photo (optional) (default to undefined)
 let hasWater: boolean; // (optional) (default to undefined)
-let orderBy: Array<BitesListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let orderBy: Array<BitesListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let point: Array<number>; //Point represented in **x,y** format. Represents **point** in **Distance to point filter** (optional) (default to undefined)
 let receivedAtAfter: string; //Received at (optional) (default to undefined)
 let receivedAtBefore: string; //Received at (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let shortId: string; //Short ID (optional) (default to undefined)
 let siteType: Array<BreedingsitesListSiteTypeParameter>; //Breeding site type.   (optional) (default to undefined)
-let tags: Array<string>; //Múltiples valores separados por comas. (optional) (default to undefined)
+let tags: Array<string>; //Multiple values may be separated by commas. (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
 let userUuid: string; // (optional) (default to undefined)
@@ -468,16 +468,16 @@ const { status, data } = await apiInstance.listMine(
 | **hasNearMosquitoes** | [**boolean**] |  | (optional) defaults to undefined|
 | **hasPhotos** | [**boolean**] | Has any photo | (optional) defaults to undefined|
 | **hasWater** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;BitesListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **point** | **Array&lt;number&gt;** | Point represented in **x,y** format. Represents **point** in **Distance to point filter** | (optional) defaults to undefined|
 | **receivedAtAfter** | [**string**] | Received at | (optional) defaults to undefined|
 | **receivedAtBefore** | [**string**] | Received at | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **shortId** | [**string**] | Short ID | (optional) defaults to undefined|
 | **siteType** | **Array&lt;BreedingsitesListSiteTypeParameter&gt;** | Breeding site type.   | (optional) defaults to undefined|
-| **tags** | **Array&lt;string&gt;** | Múltiples valores separados por comas. | (optional) defaults to undefined|
+| **tags** | **Array&lt;string&gt;** | Multiple values may be separated by commas. | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
 | **userUuid** | [**string**] |  | (optional) defaults to undefined|

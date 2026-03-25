@@ -4,6 +4,8 @@ The locale code representing the language preference selected by the user for di
 
 ## Enum
 
+* `En` (value: `'en'`)
+
 * `Es` (value: `'es'`)
 
 * `Ca` (value: `'ca'`)
@@ -13,8 +15,6 @@ The locale code representing the language preference selected by the user for di
 * `Bn` (value: `'bn'`)
 
 * `Sv` (value: `'sv'`)
-
-* `En` (value: `'en'`)
 
 * `De` (value: `'de'`)
 

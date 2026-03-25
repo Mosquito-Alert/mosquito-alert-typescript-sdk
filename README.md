@@ -1,4 +1,4 @@
-## mosquito-alert@0.2.0
+## mosquito-alert@0.2.1
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.2.0 --save
+npm install mosquito-alert@0.2.1 --save
 ```
 
 _unPublished (not recommended):_
@@ -405,7 +405,6 @@ Class | Method | HTTP request | Description
  - [DevicesCreateManufacturerErrorComponentCode](docs/DevicesCreateManufacturerErrorComponentCode.md)
  - [DevicesCreateMobileAppNonFieldErrorsErrorComponent](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponent.md)
  - [DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr.md)
- - [DevicesCreateMobileAppNonFieldErrorsErrorComponentCode](docs/DevicesCreateMobileAppNonFieldErrorsErrorComponentCode.md)
  - [DevicesCreateMobileAppPackageNameErrorComponent](docs/DevicesCreateMobileAppPackageNameErrorComponent.md)
  - [DevicesCreateMobileAppPackageNameErrorComponentAttr](docs/DevicesCreateMobileAppPackageNameErrorComponentAttr.md)
  - [DevicesCreateMobileAppPackageVersionErrorComponent](docs/DevicesCreateMobileAppPackageVersionErrorComponent.md)
@@ -417,6 +416,7 @@ Class | Method | HTTP request | Description
  - [DevicesCreateNameErrorComponent](docs/DevicesCreateNameErrorComponent.md)
  - [DevicesCreateNameErrorComponentAttr](docs/DevicesCreateNameErrorComponentAttr.md)
  - [DevicesCreateNonFieldErrorsErrorComponent](docs/DevicesCreateNonFieldErrorsErrorComponent.md)
+ - [DevicesCreateNonFieldErrorsErrorComponentCode](docs/DevicesCreateNonFieldErrorsErrorComponentCode.md)
  - [DevicesCreateOsLocaleErrorComponent](docs/DevicesCreateOsLocaleErrorComponent.md)
  - [DevicesCreateOsLocaleErrorComponentAttr](docs/DevicesCreateOsLocaleErrorComponentAttr.md)
  - [DevicesCreateOsNameErrorComponent](docs/DevicesCreateOsNameErrorComponent.md)

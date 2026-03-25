@@ -19,12 +19,12 @@
  */
 
 export const MinimalUserLocale = {
+    En: 'en',
     Es: 'es',
     Ca: 'ca',
     Eu: 'eu',
     Bn: 'bn',
     Sv: 'sv',
-    En: 'en',
     De: 'de',
     Sq: 'sq',
     El: 'el',

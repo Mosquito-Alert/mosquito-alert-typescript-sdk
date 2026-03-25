@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr } from './devices-create-mobile-app-non-field-errors-error-component-attr';
+import type { AuthChangePasswordNonFieldErrorsErrorComponentCode } from './auth-change-password-non-field-errors-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DevicesCreateMobileAppNonFieldErrorsErrorComponentCode } from './devices-create-mobile-app-non-field-errors-error-component-code';
+import type { DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr } from './devices-create-mobile-app-non-field-errors-error-component-attr';
 
 export interface DevicesUpdateMobileAppNonFieldErrorsErrorComponent {
     'attr': DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr;
-    'code': DevicesCreateMobileAppNonFieldErrorsErrorComponentCode;
+    'code': AuthChangePasswordNonFieldErrorsErrorComponentCode;
     'detail': string;
 }
 

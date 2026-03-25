@@ -38,8 +38,8 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
     return {
         /**
          * 
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -86,7 +86,7 @@ export const PartnersApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * 
-         * @param {number} id Un valor de entero único que identifique este organization pin.
+         * @param {number} id A unique integer value identifying this organization pin.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -137,8 +137,8 @@ export const PartnersApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -150,7 +150,7 @@ export const PartnersApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id Un valor de entero único que identifique este organization pin.
+         * @param {number} id A unique integer value identifying this organization pin.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -195,12 +195,12 @@ export const PartnersApiFactory = function (configuration?: Configuration, baseP
  */
 export interface PartnersApiListRequest {
     /**
-     * Un número de página dentro del conjunto de resultados paginado.
+     * A page number within the paginated result set.
      */
     readonly page?: number
 
     /**
-     * Número de resultados a devolver por página.
+     * Number of results to return per page.
      */
     readonly pageSize?: number
 }
@@ -210,7 +210,7 @@ export interface PartnersApiListRequest {
  */
 export interface PartnersApiRetrieveRequest {
     /**
-     * Un valor de entero único que identifique este organization pin.
+     * A unique integer value identifying this organization pin.
      */
     readonly id: number
 }

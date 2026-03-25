@@ -106,10 +106,10 @@ let createdAtBefore: string; //Created at (optional) (default to undefined)
 let decisionLevel: Array<IdentificationtasksAnnotationsListDecisionLevelParameter>; // (optional) (default to undefined)
 let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
-let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let type: IdentificationtasksAnnotationsListTypeParameter; // (optional) (default to undefined)
 let updatedAtAfter: string; //Updated at (optional) (default to undefined)
 let updatedAtBefore: string; //Updated at (optional) (default to undefined)
@@ -157,10 +157,10 @@ const { status, data } = await apiInstance.annotationsList(
 | **decisionLevel** | **Array&lt;IdentificationtasksAnnotationsListDecisionLevelParameter&gt;** |  | (optional) defaults to undefined|
 | **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **type** | **IdentificationtasksAnnotationsListTypeParameter** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Updated at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Updated at | (optional) defaults to undefined|
@@ -220,10 +220,10 @@ let createdAtBefore: string; //Created at (optional) (default to undefined)
 let decisionLevel: Array<IdentificationtasksAnnotationsListDecisionLevelParameter>; // (optional) (default to undefined)
 let isFavourite: boolean; // (optional) (default to undefined)
 let isFlagged: boolean; // (optional) (default to undefined)
-let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let type: IdentificationtasksAnnotationsListTypeParameter; // (optional) (default to undefined)
 let updatedAtAfter: string; //Updated at (optional) (default to undefined)
 let updatedAtBefore: string; //Updated at (optional) (default to undefined)
@@ -269,10 +269,10 @@ const { status, data } = await apiInstance.annotationsListMine(
 | **decisionLevel** | **Array&lt;IdentificationtasksAnnotationsListDecisionLevelParameter&gt;** |  | (optional) defaults to undefined|
 | **isFavourite** | [**boolean**] |  | (optional) defaults to undefined|
 | **isFlagged** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **type** | **IdentificationtasksAnnotationsListTypeParameter** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Updated at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Updated at | (optional) defaults to undefined|
@@ -319,7 +319,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new IdentificationTasksApi(configuration);
 
-let id: number; //Un valor de entero único que identifique este expert report annotation. (default to undefined)
+let id: number; //A unique integer value identifying this expert report annotation. (default to undefined)
 let observationUuid: string; //UUID of the Observation (default to undefined)
 
 const { status, data } = await apiInstance.annotationsRetrieve(
@@ -332,7 +332,7 @@ const { status, data } = await apiInstance.annotationsRetrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | Un valor de entero único que identifique este expert report annotation. | defaults to undefined|
+| **id** | [**number**] | A unique integer value identifying this expert report annotation. | defaults to undefined|
 | **observationUuid** | [**string**] | UUID of the Observation | defaults to undefined|
 
 
@@ -433,9 +433,9 @@ let isSafe: boolean; // (optional) (default to undefined)
 let numAnnotationsMax: number; // (optional) (default to undefined)
 let numAnnotationsMin: number; // (optional) (default to undefined)
 let observationCountryIds: Array<number>; // (optional) (default to undefined)
-let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
 let resultCharacteristicsIsBloodFed: boolean; // (optional) (default to undefined)
@@ -448,7 +448,7 @@ let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
 let reviewAction: IdentificationtasksListReviewActionParameter; // (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let status: Array<IdentificationtasksListStatusParameter>; // (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -500,9 +500,9 @@ const { status, data } = await apiInstance.list(
 | **numAnnotationsMax** | [**number**] |  | (optional) defaults to undefined|
 | **numAnnotationsMin** | [**number**] |  | (optional) defaults to undefined|
 | **observationCountryIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **resultAgreementMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
 | **resultCharacteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
@@ -515,7 +515,7 @@ const { status, data } = await apiInstance.list(
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|
 | **reviewAction** | **IdentificationtasksListReviewActionParameter** |  | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **status** | **Array&lt;IdentificationtasksListStatusParameter&gt;** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
@@ -572,9 +572,9 @@ let isSafe: boolean; // (optional) (default to undefined)
 let numAnnotationsMax: number; // (optional) (default to undefined)
 let numAnnotationsMin: number; // (optional) (default to undefined)
 let observationCountryIds: Array<number>; // (optional) (default to undefined)
-let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordenamiento   (optional) (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let orderBy: Array<IdentificationtasksListOrderByParameter>; //Ordering   (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let resultAgreementMax: number; // (optional) (default to undefined)
 let resultAgreementMin: number; // (optional) (default to undefined)
 let resultCharacteristicsIsBloodFed: boolean; // (optional) (default to undefined)
@@ -587,7 +587,7 @@ let resultTaxonIds: Array<number>; // (optional) (default to undefined)
 let resultUncertaintyMax: number; // (optional) (default to undefined)
 let resultUncertaintyMin: number; // (optional) (default to undefined)
 let reviewAction: IdentificationtasksListReviewActionParameter; // (optional) (default to undefined)
-let search: string; //Un término de búsqueda. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
 let status: Array<IdentificationtasksListStatusParameter>; // (optional) (default to undefined)
 let updatedAtAfter: string; //Update at (optional) (default to undefined)
 let updatedAtBefore: string; //Update at (optional) (default to undefined)
@@ -639,9 +639,9 @@ const { status, data } = await apiInstance.listMine(
 | **numAnnotationsMax** | [**number**] |  | (optional) defaults to undefined|
 | **numAnnotationsMin** | [**number**] |  | (optional) defaults to undefined|
 | **observationCountryIds** | **Array&lt;number&gt;** |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordenamiento   | (optional) defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;IdentificationtasksListOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **resultAgreementMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultAgreementMin** | [**number**] |  | (optional) defaults to undefined|
 | **resultCharacteristicsIsBloodFed** | [**boolean**] |  | (optional) defaults to undefined|
@@ -654,7 +654,7 @@ const { status, data } = await apiInstance.listMine(
 | **resultUncertaintyMax** | [**number**] |  | (optional) defaults to undefined|
 | **resultUncertaintyMin** | [**number**] |  | (optional) defaults to undefined|
 | **reviewAction** | **IdentificationtasksListReviewActionParameter** |  | (optional) defaults to undefined|
-| **search** | [**string**] | Un término de búsqueda. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
 | **status** | **Array&lt;IdentificationtasksListStatusParameter&gt;** |  | (optional) defaults to undefined|
 | **updatedAtAfter** | [**string**] | Update at | (optional) defaults to undefined|
 | **updatedAtBefore** | [**string**] | Update at | (optional) defaults to undefined|
@@ -815,8 +815,8 @@ const configuration = new Configuration();
 const apiInstance = new IdentificationTasksApi(configuration);
 
 let observationUuid: string; //UUID of the Observation (default to undefined)
-let page: number; //Un número de página dentro del conjunto de resultados paginado. (optional) (default to undefined)
-let pageSize: number; //Número de resultados a devolver por página. (optional) (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.predictionsList(
     observationUuid,
@@ -830,8 +830,8 @@ const { status, data } = await apiInstance.predictionsList(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **observationUuid** | [**string**] | UUID of the Observation | defaults to undefined|
-| **page** | [**number**] | Un número de página dentro del conjunto de resultados paginado. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Número de resultados a devolver por página. | (optional) defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 
 
 ### Return type

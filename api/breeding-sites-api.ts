@@ -220,14 +220,14 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -376,16 +376,16 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -546,16 +546,16 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -800,14 +800,14 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -833,16 +833,16 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -868,16 +868,16 @@ export const BreedingSitesApiFp = function(configuration?: Configuration) {
          * @param {boolean} [hasNearMosquitoes] 
          * @param {boolean} [hasPhotos] Has any photo
          * @param {boolean} [hasWater] 
-         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordenamiento  
-         * @param {number} [page] Un número de página dentro del conjunto de resultados paginado.
-         * @param {number} [pageSize] Número de resultados a devolver por página.
+         * @param {Array<BitesListOrderByParameter>} [orderBy] Ordering  
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<number>} [point] Point represented in **x,y** format. Represents **point** in **Distance to point filter**
          * @param {string} [receivedAtAfter] Received at
          * @param {string} [receivedAtBefore] Received at
-         * @param {string} [search] Un término de búsqueda.
+         * @param {string} [search] A search term.
          * @param {string} [shortId] Short ID
          * @param {Array<BreedingsitesListSiteTypeParameter>} [siteType] Breeding site type.  
-         * @param {Array<string>} [tags] Múltiples valores separados por comas.
+         * @param {Array<string>} [tags] Multiple values may be separated by commas.
          * @param {string} [updatedAtAfter] Update at
          * @param {string} [updatedAtBefore] Update at
          * @param {string} [userUuid] 
@@ -1054,7 +1054,7 @@ export interface BreedingSitesApiGeoListRequest {
     readonly hasWater?: boolean
 
     /**
-     * Ordenamiento  
+     * Ordering  
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
@@ -1074,7 +1074,7 @@ export interface BreedingSitesApiGeoListRequest {
     readonly receivedAtBefore?: string
 
     /**
-     * Un término de búsqueda.
+     * A search term.
      */
     readonly search?: string
 
@@ -1089,7 +1089,7 @@ export interface BreedingSitesApiGeoListRequest {
     readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
 
     /**
-     * Múltiples valores separados por comas.
+     * Multiple values may be separated by commas.
      */
     readonly tags?: Array<string>
 
@@ -1148,17 +1148,17 @@ export interface BreedingSitesApiListRequest {
     readonly hasWater?: boolean
 
     /**
-     * Ordenamiento  
+     * Ordering  
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * Un número de página dentro del conjunto de resultados paginado.
+     * A page number within the paginated result set.
      */
     readonly page?: number
 
     /**
-     * Número de resultados a devolver por página.
+     * Number of results to return per page.
      */
     readonly pageSize?: number
 
@@ -1178,7 +1178,7 @@ export interface BreedingSitesApiListRequest {
     readonly receivedAtBefore?: string
 
     /**
-     * Un término de búsqueda.
+     * A search term.
      */
     readonly search?: string
 
@@ -1193,7 +1193,7 @@ export interface BreedingSitesApiListRequest {
     readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
 
     /**
-     * Múltiples valores separados por comas.
+     * Multiple values may be separated by commas.
      */
     readonly tags?: Array<string>
 
@@ -1252,17 +1252,17 @@ export interface BreedingSitesApiListMineRequest {
     readonly hasWater?: boolean
 
     /**
-     * Ordenamiento  
+     * Ordering  
      */
     readonly orderBy?: Array<BitesListOrderByParameter>
 
     /**
-     * Un número de página dentro del conjunto de resultados paginado.
+     * A page number within the paginated result set.
      */
     readonly page?: number
 
     /**
-     * Número de resultados a devolver por página.
+     * Number of results to return per page.
      */
     readonly pageSize?: number
 
@@ -1282,7 +1282,7 @@ export interface BreedingSitesApiListMineRequest {
     readonly receivedAtBefore?: string
 
     /**
-     * Un término de búsqueda.
+     * A search term.
      */
     readonly search?: string
 
@@ -1297,7 +1297,7 @@ export interface BreedingSitesApiListMineRequest {
     readonly siteType?: Array<BreedingsitesListSiteTypeParameter>
 
     /**
-     * Múltiples valores separados por comas.
+     * Multiple values may be separated by commas.
      */
     readonly tags?: Array<string>
 

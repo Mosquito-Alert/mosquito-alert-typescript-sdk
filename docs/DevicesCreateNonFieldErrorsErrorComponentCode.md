@@ -1,4 +1,4 @@
-# DevicesCreateMobileAppNonFieldErrorsErrorComponentCode
+# DevicesCreateNonFieldErrorsErrorComponentCode
 
 
 ## Enum
