@@ -4,10 +4,70 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
+|[**list**](#list) | **GET** /users/ | |
 |[**partialUpdate**](#partialupdate) | **PATCH** /users/{uuid}/ | |
 |[**retrieve**](#retrieve) | **GET** /users/{uuid}/ | |
 |[**retrieveMine**](#retrievemine) | **GET** /me/ | |
 |[**update**](#update) | **PUT** /users/{uuid}/ | |
+
+# **list**
+> PaginatedUserList list()
+
+
+### Example
+
+```typescript
+import {
+    UsersApi,
+    Configuration
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new UsersApi(configuration);
+
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let search: string; //A search term. (optional) (default to undefined)
+
+const { status, data } = await apiInstance.list(
+    page,
+    pageSize,
+    search
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+| **search** | [**string**] | A search term. | (optional) defaults to undefined|
+
+
+### Return type
+
+**PaginatedUserList**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partialUpdate**
 > User partialUpdate()

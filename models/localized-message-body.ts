@@ -41,7 +41,7 @@ export interface LocalizedMessageBody {
     /**
      * English
      */
-    'en': string;
+    'en'?: string;
     /**
      * Español
      */

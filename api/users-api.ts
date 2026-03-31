@@ -28,6 +28,8 @@ import type { ErrorResponse403 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
+import type { PaginatedUserList } from '../models';
+// @ts-ignore
 import type { PatchedUserRequest } from '../models';
 // @ts-ignore
 import type { User } from '../models';
@@ -42,6 +44,59 @@ import type { UsersUpdateValidationError } from '../models';
  */
 export const UsersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * 
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [search] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list: async (page?: number, pageSize?: number, search?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/users/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            localVarHeaderParameter['Accept'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * 
          * @param {string} uuid 
@@ -223,6 +278,20 @@ export const UsersApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [search] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async list(page?: number, pageSize?: number, search?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedUserList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(page, pageSize, search, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.list']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @param {string} uuid 
          * @param {PatchedUserRequest} [patchedUserRequest] 
          * @param {*} [options] Override http request option.
@@ -281,6 +350,15 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * 
+         * @param {UsersApiListRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list(requestParameters: UsersApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedUserList> {
+            return localVarFp.list(requestParameters.page, requestParameters.pageSize, requestParameters.search, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {UsersApiPartialUpdateRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -318,6 +396,26 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
 };
 
 /**
+ * Request parameters for list operation in UsersApi.
+ */
+export interface UsersApiListRequest {
+    /**
+     * A page number within the paginated result set.
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     */
+    readonly pageSize?: number
+
+    /**
+     * A search term.
+     */
+    readonly search?: string
+}
+
+/**
  * Request parameters for partialUpdate operation in UsersApi.
  */
 export interface UsersApiPartialUpdateRequest {
@@ -346,6 +444,16 @@ export interface UsersApiUpdateRequest {
  * UsersApi - object-oriented interface
  */
 export class UsersApi extends BaseAPI {
+    /**
+     * 
+     * @param {UsersApiListRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public list(requestParameters: UsersApiListRequest = {}, options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).list(requestParameters.page, requestParameters.pageSize, requestParameters.search, options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * 
      * @param {UsersApiPartialUpdateRequest} requestParameters Request parameters.

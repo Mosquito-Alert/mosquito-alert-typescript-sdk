@@ -22,23 +22,17 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import type { CreateNotification } from '../models';
-// @ts-ignore
 import type { ErrorResponse401 } from '../models';
 // @ts-ignore
 import type { ErrorResponse403 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
-import type { MetaNotificationRequest } from '../models';
+import type { MessagesListMineSentOrderByParameter } from '../models';
 // @ts-ignore
 import type { Notification } from '../models';
 // @ts-ignore
 import type { NotificationRequest } from '../models';
-// @ts-ignore
-import type { NotificationsCreateValidationError } from '../models';
-// @ts-ignore
-import type { NotificationsListMineOrderByParameter } from '../models';
 // @ts-ignore
 import type { NotificationsListMineValidationError } from '../models';
 // @ts-ignore
@@ -58,55 +52,14 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
     return {
         /**
          * 
-         * @param {MetaNotificationRequest} [metaNotificationRequest] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        create: async (metaNotificationRequest?: MetaNotificationRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/notifications/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-            // authentication cookieAuth required
-
-            // authentication jwtAuth required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarHeaderParameter['Accept'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(metaNotificationRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordering  
+         * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (isRead?: boolean, orderBy?: Array<NotificationsListMineOrderByParameter>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (isRead?: boolean, orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/notifications/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -158,13 +111,13 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         /**
          * Get Current User\'s Notifications
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordering  
+         * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMine: async (isRead?: boolean, orderBy?: Array<NotificationsListMineOrderByParameter>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMine: async (isRead?: boolean, orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/notifications/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -358,26 +311,14 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {MetaNotificationRequest} [metaNotificationRequest] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async create(metaNotificationRequest?: MetaNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CreateNotification>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(metaNotificationRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['NotificationsApi.create']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordering  
+         * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(isRead?: boolean, orderBy?: Array<NotificationsListMineOrderByParameter>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
+        async list(isRead?: boolean, orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.list(isRead, orderBy, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['NotificationsApi.list']?.[localVarOperationServerIndex]?.url;
@@ -386,13 +327,13 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
         /**
          * Get Current User\'s Notifications
          * @param {boolean} [isRead] 
-         * @param {Array<NotificationsListMineOrderByParameter>} [orderBy] Ordering  
+         * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMine(isRead?: boolean, orderBy?: Array<NotificationsListMineOrderByParameter>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
+        async listMine(isRead?: boolean, orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedNotificationList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listMine(isRead, orderBy, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['NotificationsApi.listMine']?.[localVarOperationServerIndex]?.url;
@@ -447,15 +388,6 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
     return {
         /**
          * 
-         * @param {NotificationsApiCreateRequest} requestParameters Request parameters.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        create(requestParameters: NotificationsApiCreateRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<CreateNotification>> {
-            return localVarFp.create(requestParameters.metaNotificationRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {NotificationsApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -503,13 +435,6 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
 };
 
 /**
- * Request parameters for create operation in NotificationsApi.
- */
-export interface NotificationsApiCreateRequest {
-    readonly metaNotificationRequest?: MetaNotificationRequest
-}
-
-/**
  * Request parameters for list operation in NotificationsApi.
  */
 export interface NotificationsApiListRequest {
@@ -518,7 +443,7 @@ export interface NotificationsApiListRequest {
     /**
      * Ordering  
      */
-    readonly orderBy?: Array<NotificationsListMineOrderByParameter>
+    readonly orderBy?: Array<MessagesListMineSentOrderByParameter>
 
     /**
      * A page number within the paginated result set.
@@ -540,7 +465,7 @@ export interface NotificationsApiListMineRequest {
     /**
      * Ordering  
      */
-    readonly orderBy?: Array<NotificationsListMineOrderByParameter>
+    readonly orderBy?: Array<MessagesListMineSentOrderByParameter>
 
     /**
      * A page number within the paginated result set.
@@ -591,16 +516,6 @@ export interface NotificationsApiUpdateRequest {
  * NotificationsApi - object-oriented interface
  */
 export class NotificationsApi extends BaseAPI {
-    /**
-     * 
-     * @param {NotificationsApiCreateRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    public create(requestParameters: NotificationsApiCreateRequest = {}, options?: RawAxiosRequestConfig) {
-        return NotificationsApiFp(this.configuration).create(requestParameters.metaNotificationRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
     /**
      * 
      * @param {NotificationsApiListRequest} requestParameters Request parameters.

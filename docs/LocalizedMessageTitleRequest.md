@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ca** | **string** | Català | [optional] [default to undefined]
 **de** | **string** | Deutsch | [optional] [default to undefined]
 **el** | **string** | Ελληνικά | [optional] [default to undefined]
-**en** | **string** | English | [default to undefined]
+**en** | **string** | English | [optional] [default to undefined]
 **es** | **string** | Español | [optional] [default to undefined]
 **eu** | **string** | Euskara | [optional] [default to undefined]
 **fr** | **string** | Français | [optional] [default to undefined]

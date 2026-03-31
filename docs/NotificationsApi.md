@@ -4,67 +4,11 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**create**](#create) | **POST** /notifications/ | |
 |[**list**](#list) | **GET** /notifications/ | |
 |[**listMine**](#listmine) | **GET** /me/notifications/ | |
 |[**partialUpdate**](#partialupdate) | **PATCH** /notifications/{id}/ | |
 |[**retrieve**](#retrieve) | **GET** /notifications/{id}/ | |
 |[**update**](#update) | **PUT** /notifications/{id}/ | |
-
-# **create**
-> Array<CreateNotification> create()
-
-
-### Example
-
-```typescript
-import {
-    NotificationsApi,
-    Configuration,
-    MetaNotificationRequest
-} from 'mosquito-alert';
-
-const configuration = new Configuration();
-const apiInstance = new NotificationsApi(configuration);
-
-let metaNotificationRequest: MetaNotificationRequest; // (optional)
-
-const { status, data } = await apiInstance.create(
-    metaNotificationRequest
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **metaNotificationRequest** | **MetaNotificationRequest**|  | |
-
-
-### Return type
-
-**Array<CreateNotification>**
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**400** |  |  -  |
-|**401** |  |  -  |
-|**403** |  |  -  |
-|**404** |  |  -  |
-|**201** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
 > PaginatedNotificationList list()
@@ -82,7 +26,7 @@ const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
 let isRead: boolean; // (optional) (default to undefined)
-let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordering   (optional) (default to undefined)
+let orderBy: Array<MessagesListMineSentOrderByParameter>; //Ordering   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 
@@ -99,7 +43,7 @@ const { status, data } = await apiInstance.list(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **isRead** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;MessagesListMineSentOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 
@@ -146,7 +90,7 @@ const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
 let isRead: boolean; // (optional) (default to undefined)
-let orderBy: Array<NotificationsListMineOrderByParameter>; //Ordering   (optional) (default to undefined)
+let orderBy: Array<MessagesListMineSentOrderByParameter>; //Ordering   (optional) (default to undefined)
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 
@@ -163,7 +107,7 @@ const { status, data } = await apiInstance.listMine(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **isRead** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;NotificationsListMineOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
+| **orderBy** | **Array&lt;MessagesListMineSentOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 

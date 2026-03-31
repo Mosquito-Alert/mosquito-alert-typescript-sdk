@@ -23,6 +23,7 @@ export * from './api/countries-api';
 export * from './api/devices-api';
 export * from './api/fixes-api';
 export * from './api/identification-tasks-api';
+export * from './api/messages-api';
 export * from './api/notifications-api';
 export * from './api/observations-api';
 export * from './api/partners-api';

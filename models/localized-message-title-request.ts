@@ -41,7 +41,7 @@ export interface LocalizedMessageTitleRequest {
     /**
      * English
      */
-    'en': string;
+    'en'?: string;
     /**
      * Español
      */

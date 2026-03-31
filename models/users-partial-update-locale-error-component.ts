@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { NotificationsCreateReceiverTypeErrorComponentCode } from './notifications-create-receiver-type-error-component-code';
+import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
+import type { UsersPartialUpdateLocaleErrorComponentCode } from './users-partial-update-locale-error-component-code';
 
 export interface UsersPartialUpdateLocaleErrorComponent {
     'attr': UsersPartialUpdateLocaleErrorComponentAttr;
-    'code': NotificationsCreateReceiverTypeErrorComponentCode;
+    'code': UsersPartialUpdateLocaleErrorComponentCode;
     'detail': string;
 }
 

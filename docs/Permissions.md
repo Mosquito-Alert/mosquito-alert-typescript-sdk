@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **annotation** | [**AnnotationPermission**](AnnotationPermission.md) |  | [default to undefined]
 **identification_task** | [**IdentificationTaskPermission**](IdentificationTaskPermission.md) |  | [default to undefined]
 **review** | [**ReviewPermission**](ReviewPermission.md) |  | [default to undefined]
+**message** | [**MessagePermission**](MessagePermission.md) |  | [default to undefined]
 
 ## Example
 
@@ -18,6 +19,7 @@ const instance: Permissions = {
     annotation,
     identification_task,
     review,
+    message,
 };
 ```
 
