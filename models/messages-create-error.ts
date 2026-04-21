@@ -15,13 +15,163 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateLocationPointLatitudeErrorComponentCode } from './bites-create-location-point-latitude-error-component-code';
+import type { MessagesCreateContentBodyBgErrorComponent } from './messages-create-content-body-bg-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateContentErrorComponent } from './messages-create-content-error-component';
+import type { MessagesCreateContentBodyBgErrorComponentCode } from './messages-create-content-body-bg-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateContentErrorComponentAttr } from './messages-create-content-error-component-attr';
+import type { MessagesCreateContentBodyBnErrorComponent } from './messages-create-content-body-bn-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyCaErrorComponent } from './messages-create-content-body-ca-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyDeErrorComponent } from './messages-create-content-body-de-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyElErrorComponent } from './messages-create-content-body-el-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyEnErrorComponent } from './messages-create-content-body-en-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyEsErrorComponent } from './messages-create-content-body-es-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyEuErrorComponent } from './messages-create-content-body-eu-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyFrErrorComponent } from './messages-create-content-body-fr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyGlErrorComponent } from './messages-create-content-body-gl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyHrErrorComponent } from './messages-create-content-body-hr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyHuErrorComponent } from './messages-create-content-body-hu-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyItErrorComponent } from './messages-create-content-body-it-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyLbErrorComponent } from './messages-create-content-body-lb-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyMkErrorComponent } from './messages-create-content-body-mk-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyNlErrorComponent } from './messages-create-content-body-nl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyNonFieldErrorsErrorComponent } from './messages-create-content-body-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyPtErrorComponent } from './messages-create-content-body-pt-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyRoErrorComponent } from './messages-create-content-body-ro-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodySlErrorComponent } from './messages-create-content-body-sl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodySqErrorComponent } from './messages-create-content-body-sq-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodySrErrorComponent } from './messages-create-content-body-sr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodySvErrorComponent } from './messages-create-content-body-sv-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyTrErrorComponent } from './messages-create-content-body-tr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyZhCnErrorComponent } from './messages-create-content-body-zh-cn-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentBodyZhCnErrorComponentAttr } from './messages-create-content-body-zh-cn-error-component-attr';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentNonFieldErrorsErrorComponent } from './messages-create-content-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleBgErrorComponent } from './messages-create-content-title-bg-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleBnErrorComponent } from './messages-create-content-title-bn-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleCaErrorComponent } from './messages-create-content-title-ca-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleDeErrorComponent } from './messages-create-content-title-de-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleElErrorComponent } from './messages-create-content-title-el-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleEnErrorComponent } from './messages-create-content-title-en-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleEsErrorComponent } from './messages-create-content-title-es-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleEuErrorComponent } from './messages-create-content-title-eu-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleFrErrorComponent } from './messages-create-content-title-fr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleGlErrorComponent } from './messages-create-content-title-gl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleHrErrorComponent } from './messages-create-content-title-hr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleHuErrorComponent } from './messages-create-content-title-hu-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleItErrorComponent } from './messages-create-content-title-it-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleLbErrorComponent } from './messages-create-content-title-lb-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleMkErrorComponent } from './messages-create-content-title-mk-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleNlErrorComponent } from './messages-create-content-title-nl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleNonFieldErrorsErrorComponent } from './messages-create-content-title-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitlePtErrorComponent } from './messages-create-content-title-pt-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleRoErrorComponent } from './messages-create-content-title-ro-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleSlErrorComponent } from './messages-create-content-title-sl-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleSqErrorComponent } from './messages-create-content-title-sq-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleSrErrorComponent } from './messages-create-content-title-sr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleSvErrorComponent } from './messages-create-content-title-sv-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleTrErrorComponent } from './messages-create-content-title-tr-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateContentTitleZhCnErrorComponent } from './messages-create-content-title-zh-cn-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesCreateNonFieldErrorsErrorComponent } from './messages-create-non-field-errors-error-component';
@@ -35,6 +185,6 @@ import type { MessagesCreateUserUuidsINDEXErrorComponent } from './messages-crea
 /**
  * @type MessagesCreateError
  */
-export type MessagesCreateError = { attr: 'content' } & MessagesCreateContentErrorComponent | { attr: 'non_field_errors' } & MessagesCreateNonFieldErrorsErrorComponent | { attr: 'user_uuids' } & MessagesCreateUserUuidsErrorComponent | { attr: 'user_uuids.INDEX' } & MessagesCreateUserUuidsINDEXErrorComponent;
+export type MessagesCreateError = { attr: 'content.body.bg' } & MessagesCreateContentBodyBgErrorComponent | { attr: 'content.body.bn' } & MessagesCreateContentBodyBnErrorComponent | { attr: 'content.body.ca' } & MessagesCreateContentBodyCaErrorComponent | { attr: 'content.body.de' } & MessagesCreateContentBodyDeErrorComponent | { attr: 'content.body.el' } & MessagesCreateContentBodyElErrorComponent | { attr: 'content.body.en' } & MessagesCreateContentBodyEnErrorComponent | { attr: 'content.body.es' } & MessagesCreateContentBodyEsErrorComponent | { attr: 'content.body.eu' } & MessagesCreateContentBodyEuErrorComponent | { attr: 'content.body.fr' } & MessagesCreateContentBodyFrErrorComponent | { attr: 'content.body.gl' } & MessagesCreateContentBodyGlErrorComponent | { attr: 'content.body.hr' } & MessagesCreateContentBodyHrErrorComponent | { attr: 'content.body.hu' } & MessagesCreateContentBodyHuErrorComponent | { attr: 'content.body.it' } & MessagesCreateContentBodyItErrorComponent | { attr: 'content.body.lb' } & MessagesCreateContentBodyLbErrorComponent | { attr: 'content.body.mk' } & MessagesCreateContentBodyMkErrorComponent | { attr: 'content.body.nl' } & MessagesCreateContentBodyNlErrorComponent | { attr: 'content.body.non_field_errors' } & MessagesCreateContentBodyNonFieldErrorsErrorComponent | { attr: 'content.body.pt' } & MessagesCreateContentBodyPtErrorComponent | { attr: 'content.body.ro' } & MessagesCreateContentBodyRoErrorComponent | { attr: 'content.body.sl' } & MessagesCreateContentBodySlErrorComponent | { attr: 'content.body.sq' } & MessagesCreateContentBodySqErrorComponent | { attr: 'content.body.sr' } & MessagesCreateContentBodySrErrorComponent | { attr: 'content.body.sv' } & MessagesCreateContentBodySvErrorComponent | { attr: 'content.body.tr' } & MessagesCreateContentBodyTrErrorComponent | { attr: 'content.body.zh-cn' } & MessagesCreateContentBodyZhCnErrorComponent | { attr: 'content.non_field_errors' } & MessagesCreateContentNonFieldErrorsErrorComponent | { attr: 'content.title.bg' } & MessagesCreateContentTitleBgErrorComponent | { attr: 'content.title.bn' } & MessagesCreateContentTitleBnErrorComponent | { attr: 'content.title.ca' } & MessagesCreateContentTitleCaErrorComponent | { attr: 'content.title.de' } & MessagesCreateContentTitleDeErrorComponent | { attr: 'content.title.el' } & MessagesCreateContentTitleElErrorComponent | { attr: 'content.title.en' } & MessagesCreateContentTitleEnErrorComponent | { attr: 'content.title.es' } & MessagesCreateContentTitleEsErrorComponent | { attr: 'content.title.eu' } & MessagesCreateContentTitleEuErrorComponent | { attr: 'content.title.fr' } & MessagesCreateContentTitleFrErrorComponent | { attr: 'content.title.gl' } & MessagesCreateContentTitleGlErrorComponent | { attr: 'content.title.hr' } & MessagesCreateContentTitleHrErrorComponent | { attr: 'content.title.hu' } & MessagesCreateContentTitleHuErrorComponent | { attr: 'content.title.it' } & MessagesCreateContentTitleItErrorComponent | { attr: 'content.title.lb' } & MessagesCreateContentTitleLbErrorComponent | { attr: 'content.title.mk' } & MessagesCreateContentTitleMkErrorComponent | { attr: 'content.title.nl' } & MessagesCreateContentTitleNlErrorComponent | { attr: 'content.title.non_field_errors' } & MessagesCreateContentTitleNonFieldErrorsErrorComponent | { attr: 'content.title.pt' } & MessagesCreateContentTitlePtErrorComponent | { attr: 'content.title.ro' } & MessagesCreateContentTitleRoErrorComponent | { attr: 'content.title.sl' } & MessagesCreateContentTitleSlErrorComponent | { attr: 'content.title.sq' } & MessagesCreateContentTitleSqErrorComponent | { attr: 'content.title.sr' } & MessagesCreateContentTitleSrErrorComponent | { attr: 'content.title.sv' } & MessagesCreateContentTitleSvErrorComponent | { attr: 'content.title.tr' } & MessagesCreateContentTitleTrErrorComponent | { attr: 'content.title.zh-cn' } & MessagesCreateContentTitleZhCnErrorComponent | { attr: 'non_field_errors' } & MessagesCreateNonFieldErrorsErrorComponent | { attr: 'user_uuids' } & MessagesCreateUserUuidsErrorComponent | { attr: 'user_uuids.INDEX' } & MessagesCreateUserUuidsINDEXErrorComponent;
 
 

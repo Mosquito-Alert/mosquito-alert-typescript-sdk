@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **el** | **string** | Ελληνικά | [optional] [default to undefined]
 **en** | **string** | English | [optional] [default to undefined]
 **es** | **string** | Español | [optional] [default to undefined]
-**eu** | **string** | Euskara | [optional] [default to undefined]
+**eu** | **string** | Basque | [optional] [default to undefined]
 **fr** | **string** | Français | [optional] [default to undefined]
 **gl** | **string** | Galego | [optional] [default to undefined]
 **hr** | **string** | Hrvatski | [optional] [default to undefined]
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **sr** | **string** | Српски | [optional] [default to undefined]
 **sv** | **string** | Svenska | [optional] [default to undefined]
 **tr** | **string** | Türkçe | [optional] [default to undefined]
-**zh_CN** | **string** | 中文（中国） | [optional] [default to undefined]
+**zh_cn** | **string** | 简体中文 | [optional] [default to undefined]
 
 ## Example
 
@@ -60,7 +60,7 @@ const instance: LocalizedMessageBodyRequest = {
     sr,
     sv,
     tr,
-    zh_CN,
+    zh_cn,
 };
 ```
 

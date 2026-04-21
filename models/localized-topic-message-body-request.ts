@@ -21,23 +21,23 @@ export interface LocalizedTopicMessageBodyRequest {
     /**
      * Български
      */
-    'bg'?: string;
+    'bg'?: string | null;
     /**
      * বাংলা
      */
-    'bn'?: string;
+    'bn'?: string | null;
     /**
      * Català
      */
-    'ca'?: string;
+    'ca'?: string | null;
     /**
      * Deutsch
      */
-    'de'?: string;
+    'de'?: string | null;
     /**
      * Ελληνικά
      */
-    'el'?: string;
+    'el'?: string | null;
     /**
      * English
      */
@@ -45,74 +45,74 @@ export interface LocalizedTopicMessageBodyRequest {
     /**
      * Español
      */
-    'es'?: string;
+    'es'?: string | null;
     /**
-     * Euskara
+     * Basque
      */
-    'eu'?: string;
+    'eu'?: string | null;
     /**
      * Français
      */
-    'fr'?: string;
+    'fr'?: string | null;
     /**
      * Galego
      */
-    'gl'?: string;
+    'gl'?: string | null;
     /**
      * Hrvatski
      */
-    'hr'?: string;
+    'hr'?: string | null;
     /**
      * Magyar
      */
-    'hu'?: string;
+    'hu'?: string | null;
     /**
      * Italiano
      */
-    'it'?: string;
+    'it'?: string | null;
     /**
      * Lëtzebuergesch
      */
-    'lb'?: string;
+    'lb'?: string | null;
     /**
      * Македонски
      */
-    'mk'?: string;
+    'mk'?: string | null;
     /**
      * Nederlands
      */
-    'nl'?: string;
+    'nl'?: string | null;
     /**
      * Português
      */
-    'pt'?: string;
+    'pt'?: string | null;
     /**
      * Română
      */
-    'ro'?: string;
+    'ro'?: string | null;
     /**
      * Slovenščina
      */
-    'sl'?: string;
+    'sl'?: string | null;
     /**
      * Shqip
      */
-    'sq'?: string;
+    'sq'?: string | null;
     /**
      * Српски
      */
-    'sr'?: string;
+    'sr'?: string | null;
     /**
      * Svenska
      */
-    'sv'?: string;
+    'sv'?: string | null;
     /**
      * Türkçe
      */
-    'tr'?: string;
+    'tr'?: string | null;
     /**
-     * 中文（中国）
+     * 简体中文
      */
-    'zh-CN'?: string;
+    'zh-cn'?: string | null;
 }
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **number** |  | [readonly] [default to undefined]
 **message** | [**NotificationMessage**](NotificationMessage.md) |  | [readonly] [default to undefined]
-**is_read** | **boolean** |  | [readonly] [default to undefined]
+**is_read** | **boolean** |  | [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
 
 ## Example

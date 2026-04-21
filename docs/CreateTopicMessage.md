@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **number** |  | [readonly] [default to undefined]
 **sender_user** | [**SimpleUser**](SimpleUser.md) |  | [readonly] [default to undefined]
-**content** | [**MessageContent**](MessageContent.md) | The content of the message for the topic | [readonly] [default to undefined]
+**content** | [**CreateTopicMessageContent**](CreateTopicMessageContent.md) | The content of the message for the topic | [default to undefined]
 **created_at** | **string** |  | [readonly] [default to undefined]
 
 ## Example

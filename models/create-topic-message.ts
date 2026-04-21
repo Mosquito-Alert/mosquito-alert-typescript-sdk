@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessageContent } from './message-content';
+import type { CreateTopicMessageContent } from './create-topic-message-content';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { SimpleUser } from './simple-user';
@@ -26,7 +26,7 @@ export interface CreateTopicMessage {
     /**
      * The content of the message for the topic
      */
-    'content': MessageContent;
+    'content': CreateTopicMessageContent;
     'created_at': string;
 }
 

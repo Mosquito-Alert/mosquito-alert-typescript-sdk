@@ -4,74 +4,10 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**list**](#list) | **GET** /notifications/ | |
 |[**listMine**](#listmine) | **GET** /me/notifications/ | |
 |[**partialUpdate**](#partialupdate) | **PATCH** /notifications/{id}/ | |
 |[**retrieve**](#retrieve) | **GET** /notifications/{id}/ | |
 |[**update**](#update) | **PUT** /notifications/{id}/ | |
-
-# **list**
-> PaginatedNotificationList list()
-
-
-### Example
-
-```typescript
-import {
-    NotificationsApi,
-    Configuration
-} from 'mosquito-alert';
-
-const configuration = new Configuration();
-const apiInstance = new NotificationsApi(configuration);
-
-let isRead: boolean; // (optional) (default to undefined)
-let orderBy: Array<MessagesListMineSentOrderByParameter>; //Ordering   (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
-
-const { status, data } = await apiInstance.list(
-    isRead,
-    orderBy,
-    page,
-    pageSize
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **isRead** | [**boolean**] |  | (optional) defaults to undefined|
-| **orderBy** | **Array&lt;MessagesListMineSentOrderByParameter&gt;** | Ordering   | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
-
-
-### Return type
-
-**PaginatedNotificationList**
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**400** |  |  -  |
-|**401** |  |  -  |
-|**403** |  |  -  |
-|**404** |  |  -  |
-|**200** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
 > PaginatedNotificationList listMine()
@@ -153,7 +89,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; // (default to undefined)
 let patchedNotificationRequest: PatchedNotificationRequest; // (optional)
 
 const { status, data } = await apiInstance.partialUpdate(
@@ -167,7 +103,7 @@ const { status, data } = await apiInstance.partialUpdate(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **patchedNotificationRequest** | **PatchedNotificationRequest**|  | |
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] |  | defaults to undefined|
 
 
 ### Return type
@@ -210,7 +146,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; // (default to undefined)
 
 const { status, data } = await apiInstance.retrieve(
     id
@@ -221,7 +157,7 @@ const { status, data } = await apiInstance.retrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] |  | defaults to undefined|
 
 
 ### Return type
@@ -264,7 +200,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new NotificationsApi(configuration);
 
-let id: number; //A unique integer value identifying this notification. (default to undefined)
+let id: number; // (default to undefined)
 let notificationRequest: NotificationRequest; //
 
 const { status, data } = await apiInstance.update(
@@ -278,7 +214,7 @@ const { status, data } = await apiInstance.update(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **notificationRequest** | **NotificationRequest**|  | |
-| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **id** | [**number**] |  | defaults to undefined|
 
 
 ### Return type

@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BitesCreateLocationPointLatitudeErrorComponentCode } from './bites-create-location-point-latitude-error-component-code';
+import type { BitesCreateCountsNonFieldErrorsErrorComponentCode } from './bites-create-counts-non-field-errors-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { NotificationsPartialUpdateIsReadErrorComponentAttr } from './notifications-partial-update-is-read-error-component-attr';

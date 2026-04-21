@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**NotificationsPartialUpdateIsReadErrorComponentAttr**](NotificationsPartialUpdateIsReadErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateLocationPointLatitudeErrorComponentCode**](BitesCreateLocationPointLatitudeErrorComponentCode.md) |  | [default to undefined]
+**code** | [**BitesCreateCountsNonFieldErrorsErrorComponentCode**](BitesCreateCountsNonFieldErrorsErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

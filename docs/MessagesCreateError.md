@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**MessagesCreateContentErrorComponentAttr**](MessagesCreateContentErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**BitesCreateLocationPointLatitudeErrorComponentCode**](BitesCreateLocationPointLatitudeErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**MessagesCreateContentBodyZhCnErrorComponentAttr**](MessagesCreateContentBodyZhCnErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**MessagesCreateContentBodyBgErrorComponentCode**](MessagesCreateContentBodyBgErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

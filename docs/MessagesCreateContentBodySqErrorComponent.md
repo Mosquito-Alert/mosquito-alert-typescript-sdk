@@ -1,0 +1,24 @@
+# MessagesCreateContentBodySqErrorComponent
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**attr** | [**MessagesCreateContentBodySqErrorComponentAttr**](MessagesCreateContentBodySqErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**MessagesCreateContentBodyBgErrorComponentCode**](MessagesCreateContentBodyBgErrorComponentCode.md) |  | [default to undefined]
+**detail** | **string** |  | [default to undefined]
+
+## Example
+
+```typescript
+import { MessagesCreateContentBodySqErrorComponent } from 'mosquito-alert';
+
+const instance: MessagesCreateContentBodySqErrorComponent = {
+    attr,
+    code,
+    detail,
+};
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
