@@ -13,15 +13,16 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { CountryPermission } from './country-permission';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GeneralPermission } from './general-permission';
 
-export interface UserPermission {
-    'general': GeneralPermission;
-    'countries': Array<CountryPermission>;
-}
+
+export const WorkspaceMembershipRole = {
+    Member: 'member',
+    Annotator: 'annotator',
+    Supervisor: 'supervisor',
+    UnknownDefaultOpenApi: '11184809'
+} as const;
+
+export type WorkspaceMembershipRole = typeof WorkspaceMembershipRole[keyof typeof WorkspaceMembershipRole];
+
+
 

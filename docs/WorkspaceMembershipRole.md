@@ -1,17 +1,13 @@
-# CountryPermissionRole
+# WorkspaceMembershipRole
 
 
 ## Enum
 
-* `Base` (value: `'base'`)
+* `Member` (value: `'member'`)
 
 * `Annotator` (value: `'annotator'`)
 
 * `Supervisor` (value: `'supervisor'`)
-
-* `Reviewer` (value: `'reviewer'`)
-
-* `Admin` (value: `'admin'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

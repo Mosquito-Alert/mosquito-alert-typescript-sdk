@@ -40,6 +40,8 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { IdentificationTask } from '../models';
 // @ts-ignore
+import type { IdentificationTaskCapabilities } from '../models';
+// @ts-ignore
 import type { IdentificationTaskReview } from '../models';
 // @ts-ignore
 import type { IdentificationtasksAnnotationsCreateValidationError } from '../models';
@@ -500,6 +502,48 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             }
 
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            localVarHeaderParameter['Accept'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} observationUuid 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        capabilitiesRetrieve: async (observationUuid: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'observationUuid' is not null or undefined
+            assertParamExists('capabilitiesRetrieve', 'observationUuid', observationUuid)
+            const localVarPath = `/identification-tasks/{observation_uuid}/capabilities/`
+                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -1394,6 +1438,18 @@ export const IdentificationTasksApiFp = function(configuration?: Configuration) 
         },
         /**
          * 
+         * @param {string} observationUuid 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async capabilitiesRetrieve(observationUuid: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentificationTaskCapabilities>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.capabilitiesRetrieve(observationUuid, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['IdentificationTasksApi.capabilitiesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @param {Array<number>} [annotatorIds] 
          * @param {Array<number>} [assigneeIds] 
          * @param {string} [createdAtAfter] Created at
@@ -1630,6 +1686,15 @@ export const IdentificationTasksApiFactory = function (configuration?: Configura
          */
         assignNext(options?: RawAxiosRequestConfig): AxiosPromise<Assignment> {
             return localVarFp.assignNext(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {IdentificationTasksApiCapabilitiesRetrieveRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        capabilitiesRetrieve(requestParameters: IdentificationTasksApiCapabilitiesRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<IdentificationTaskCapabilities> {
+            return localVarFp.capabilitiesRetrieve(requestParameters.observationUuid, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1891,6 +1956,13 @@ export interface IdentificationTasksApiAnnotationsRetrieveRequest {
     /**
      * UUID of the Observation
      */
+    readonly observationUuid: string
+}
+
+/**
+ * Request parameters for capabilitiesRetrieve operation in IdentificationTasksApi.
+ */
+export interface IdentificationTasksApiCapabilitiesRetrieveRequest {
     readonly observationUuid: string
 }
 
@@ -2225,6 +2297,16 @@ export class IdentificationTasksApi extends BaseAPI {
      */
     public assignNext(options?: RawAxiosRequestConfig) {
         return IdentificationTasksApiFp(this.configuration).assignNext(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {IdentificationTasksApiCapabilitiesRetrieveRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public capabilitiesRetrieve(requestParameters: IdentificationTasksApiCapabilitiesRetrieveRequest, options?: RawAxiosRequestConfig) {
+        return IdentificationTasksApiFp(this.configuration).capabilitiesRetrieve(requestParameters.observationUuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

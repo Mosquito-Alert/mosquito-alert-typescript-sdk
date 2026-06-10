@@ -1,4 +1,4 @@
-## mosquito-alert@0.3.1
+## mosquito-alert@0.4.0
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.3.1 --save
+npm install mosquito-alert@0.4.0 --save
 ```
 
 _unPublished (not recommended):_
@@ -83,6 +83,7 @@ Class | Method | HTTP request | Description
 *IdentificationTasksApi* | [**annotationsListMine**](docs/IdentificationTasksApi.md#annotationslistmine) | **GET** /me/identification-tasks/annotations/ | 
 *IdentificationTasksApi* | [**annotationsRetrieve**](docs/IdentificationTasksApi.md#annotationsretrieve) | **GET** /identification-tasks/{observation_uuid}/annotations/{id}/ | 
 *IdentificationTasksApi* | [**assignNext**](docs/IdentificationTasksApi.md#assignnext) | **POST** /identification-tasks/assignments/next/ | 
+*IdentificationTasksApi* | [**capabilitiesRetrieve**](docs/IdentificationTasksApi.md#capabilitiesretrieve) | **GET** /identification-tasks/{observation_uuid}/capabilities/ | 
 *IdentificationTasksApi* | [**list**](docs/IdentificationTasksApi.md#list) | **GET** /identification-tasks/ | 
 *IdentificationTasksApi* | [**listMine**](docs/IdentificationTasksApi.md#listmine) | **GET** /me/identification-tasks/ | 
 *IdentificationTasksApi* | [**predictionsCreate**](docs/IdentificationTasksApi.md#predictionscreate) | **POST** /identification-tasks/{observation_uuid}/predictions/ | 
@@ -129,6 +130,12 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**retrieve**](docs/UsersApi.md#retrieve) | **GET** /users/{uuid}/ | 
 *UsersApi* | [**retrieveMine**](docs/UsersApi.md#retrievemine) | **GET** /me/ | 
 *UsersApi* | [**update**](docs/UsersApi.md#update) | **PUT** /users/{uuid}/ | 
+*WorkspacesApi* | [**collaborationsList**](docs/WorkspacesApi.md#collaborationslist) | **GET** /workspaces/collaborations/ | 
+*WorkspacesApi* | [**collaborationsListMine**](docs/WorkspacesApi.md#collaborationslistmine) | **GET** /me/workspaces/collaborations/ | 
+*WorkspacesApi* | [**collaborationsRetrieve**](docs/WorkspacesApi.md#collaborationsretrieve) | **GET** /workspaces/collaborations/{id}/ | 
+*WorkspacesApi* | [**list**](docs/WorkspacesApi.md#list) | **GET** /workspaces/ | 
+*WorkspacesApi* | [**listMine**](docs/WorkspacesApi.md#listmine) | **GET** /me/workspaces/ | 
+*WorkspacesApi* | [**retrieve**](docs/WorkspacesApi.md#retrieve) | **GET** /workspaces/{id}/ | 
 
 
 ### Documentation For Models
@@ -380,8 +387,6 @@ Class | Method | HTTP request | Description
  - [CampaignsListOrderByParameter](docs/CampaignsListOrderByParameter.md)
  - [CampaignsListValidationError](docs/CampaignsListValidationError.md)
  - [Country](docs/Country.md)
- - [CountryPermission](docs/CountryPermission.md)
- - [CountryPermissionRole](docs/CountryPermissionRole.md)
  - [CountryRequest](docs/CountryRequest.md)
  - [CreateAgreeReviewRequest](docs/CreateAgreeReviewRequest.md)
  - [CreateAgreeReviewRequestAction](docs/CreateAgreeReviewRequestAction.md)
@@ -493,11 +498,11 @@ Class | Method | HTTP request | Description
  - [FixesCreatePowerErrorComponentCode](docs/FixesCreatePowerErrorComponentCode.md)
  - [FixesCreateSentAtErrorComponent](docs/FixesCreateSentAtErrorComponent.md)
  - [FixesCreateValidationError](docs/FixesCreateValidationError.md)
- - [GeneralPermission](docs/GeneralPermission.md)
  - [GuestRegistration](docs/GuestRegistration.md)
  - [GuestRegistrationRequest](docs/GuestRegistrationRequest.md)
  - [Identification](docs/Identification.md)
  - [IdentificationTask](docs/IdentificationTask.md)
+ - [IdentificationTaskCapabilities](docs/IdentificationTaskCapabilities.md)
  - [IdentificationTaskPermission](docs/IdentificationTaskPermission.md)
  - [IdentificationTaskResult](docs/IdentificationTaskResult.md)
  - [IdentificationTaskResultSource](docs/IdentificationTaskResultSource.md)
@@ -1057,6 +1062,8 @@ Class | Method | HTTP request | Description
  - [PaginatedPhotoPredictionList](docs/PaginatedPhotoPredictionList.md)
  - [PaginatedTaxonList](docs/PaginatedTaxonList.md)
  - [PaginatedUserList](docs/PaginatedUserList.md)
+ - [PaginatedWorkspaceCollaborationGroupList](docs/PaginatedWorkspaceCollaborationGroupList.md)
+ - [PaginatedWorkspaceList](docs/PaginatedWorkspaceList.md)
  - [Partner](docs/Partner.md)
  - [PartnerPoint](docs/PartnerPoint.md)
  - [PasswordChangeRequest](docs/PasswordChangeRequest.md)
@@ -1125,6 +1132,7 @@ Class | Method | HTTP request | Description
  - [SimpleTaxonRank](docs/SimpleTaxonRank.md)
  - [SimpleTaxonRequest](docs/SimpleTaxonRequest.md)
  - [SimpleUser](docs/SimpleUser.md)
+ - [SimpleWorkspace](docs/SimpleWorkspace.md)
  - [SimplifiedLocation](docs/SimplifiedLocation.md)
  - [SimplifiedObservationWithPhotos](docs/SimplifiedObservationWithPhotos.md)
  - [SpeciesCharacteristics](docs/SpeciesCharacteristics.md)
@@ -1147,7 +1155,6 @@ Class | Method | HTTP request | Description
  - [TokenVerifyRequest](docs/TokenVerifyRequest.md)
  - [User](docs/User.md)
  - [UserAssignment](docs/UserAssignment.md)
- - [UserPermission](docs/UserPermission.md)
  - [UserRequest](docs/UserRequest.md)
  - [UserScore](docs/UserScore.md)
  - [UsersPartialUpdateError](docs/UsersPartialUpdateError.md)
@@ -1160,6 +1167,10 @@ Class | Method | HTTP request | Description
  - [UsersUpdateLocaleErrorComponent](docs/UsersUpdateLocaleErrorComponent.md)
  - [UsersUpdateNonFieldErrorsErrorComponent](docs/UsersUpdateNonFieldErrorsErrorComponent.md)
  - [UsersUpdateValidationError](docs/UsersUpdateValidationError.md)
+ - [Workspace](docs/Workspace.md)
+ - [WorkspaceCollaborationGroup](docs/WorkspaceCollaborationGroup.md)
+ - [WorkspaceMembership](docs/WorkspaceMembership.md)
+ - [WorkspaceMembershipRole](docs/WorkspaceMembershipRole.md)
 
 
 <a id="documentation-for-authorization"></a>

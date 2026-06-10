@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |[**retrieveMine**](#retrievemine) | **GET** /me/permissions/ | |
 
 # **retrieveMine**
-> UserPermission retrieveMine()
+> Permissions retrieveMine()
 
 Get Current User\'s Permissions
 
@@ -31,7 +31,7 @@ This endpoint does not have any parameters.
 
 ### Return type
 
-**UserPermission**
+**Permissions**
 
 ### Authorization
 

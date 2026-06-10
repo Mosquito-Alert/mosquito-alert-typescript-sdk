@@ -78,7 +78,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new CountriesApi(configuration);
 
-let id: number; //A unique integer value identifying this europe country. (default to undefined)
+let id: number; //A unique integer value identifying this country. (default to undefined)
 
 const { status, data } = await apiInstance.retrieve(
     id
@@ -89,7 +89,7 @@ const { status, data } = await apiInstance.retrieve(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] | A unique integer value identifying this europe country. | defaults to undefined|
+| **id** | [**number**] | A unique integer value identifying this country. | defaults to undefined|
 
 
 ### Return type

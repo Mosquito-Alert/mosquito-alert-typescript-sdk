@@ -26,7 +26,7 @@ import type { ErrorResponse401 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
-import type { UserPermission } from '../models';
+import type { Permissions } from '../models';
 /**
  * PermissionsApi - axios parameter creator
  */
@@ -84,7 +84,7 @@ export const PermissionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveMine(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserPermission>> {
+        async retrieveMine(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Permissions>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveMine(options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['PermissionsApi.retrieveMine']?.[localVarOperationServerIndex]?.url;
@@ -104,7 +104,7 @@ export const PermissionsApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveMine(options?: RawAxiosRequestConfig): AxiosPromise<UserPermission> {
+        retrieveMine(options?: RawAxiosRequestConfig): AxiosPromise<Permissions> {
             return localVarFp.retrieveMine(options).then((request) => request(axios, basePath));
         },
     };

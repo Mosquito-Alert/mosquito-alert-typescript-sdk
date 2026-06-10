@@ -19,6 +19,5 @@ export interface AnnotationPermission {
     'change': boolean;
     'view': boolean;
     'delete': boolean;
-    'mark_as_executive': boolean;
 }
 

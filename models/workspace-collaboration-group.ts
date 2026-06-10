@@ -13,18 +13,19 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleUser } from './simple-user';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleWorkspace } from './simple-workspace';
 
-
-export const CountryPermissionRole = {
-    Base: 'base',
-    Annotator: 'annotator',
-    Supervisor: 'supervisor',
-    Reviewer: 'reviewer',
-    Admin: 'admin',
-    UnknownDefaultOpenApi: '11184809'
-} as const;
-
-export type CountryPermissionRole = typeof CountryPermissionRole[keyof typeof CountryPermissionRole];
-
-
+export interface WorkspaceCollaborationGroup {
+    'id': number;
+    'name': string;
+    'workspaces': Array<SimpleWorkspace>;
+    'reviewers': Array<SimpleUser>;
+    'created_at': string;
+    'updated_at': string;
+}
 

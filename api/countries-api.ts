@@ -86,7 +86,7 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this europe country.
+         * @param {number} id A unique integer value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -150,7 +150,7 @@ export const CountriesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} id A unique integer value identifying this europe country.
+         * @param {number} id A unique integer value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -210,7 +210,7 @@ export interface CountriesApiListRequest {
  */
 export interface CountriesApiRetrieveRequest {
     /**
-     * A unique integer value identifying this europe country.
+     * A unique integer value identifying this country.
      */
     readonly id: number
 }

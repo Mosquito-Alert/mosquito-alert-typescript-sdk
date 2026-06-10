@@ -16,18 +16,10 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Country } from './country';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { CountryPermissionRole } from './country-permission-role';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { Permissions } from './permissions';
 
-export interface CountryPermission {
-    'role': CountryPermissionRole;
-    'permissions': Permissions;
-    'country': Country;
+export interface SimpleWorkspace {
+    'id': number;
+    'name'?: string | null;
+    'country': Country | null;
 }
-
-
 

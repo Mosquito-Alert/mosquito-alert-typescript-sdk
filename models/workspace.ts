@@ -15,16 +15,24 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { CountryPermissionRole } from './country-permission-role';
+import type { Country } from './country';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { Permissions } from './permissions';
+import type { WorkspaceMembership } from './workspace-membership';
 
-export interface GeneralPermission {
-    'role': CountryPermissionRole;
-    'permissions': Permissions;
-    'is_staff': boolean;
+export interface Workspace {
+    'id': number;
+    'name'?: string | null;
+    'country': Country | null;
+    'memberships': Array<WorkspaceMembership>;
+    /**
+     * Whether the results of the workspace are visible to the public.
+     */
+    'is_public'?: boolean;
+    /**
+     * Number of days that a identification tasks in the queue is exclusively available to the supervisors.
+     */
+    'supervisor_exclusivity_days'?: number;
+    'updated_at': string;
 }
-
-
 

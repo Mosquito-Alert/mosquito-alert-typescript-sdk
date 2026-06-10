@@ -32,4 +32,5 @@ export * from './api/photos-api';
 export * from './api/ping-api';
 export * from './api/taxa-api';
 export * from './api/users-api';
+export * from './api/workspaces-api';
 

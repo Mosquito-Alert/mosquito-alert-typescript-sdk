@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |[**annotationsListMine**](#annotationslistmine) | **GET** /me/identification-tasks/annotations/ | |
 |[**annotationsRetrieve**](#annotationsretrieve) | **GET** /identification-tasks/{observation_uuid}/annotations/{id}/ | |
 |[**assignNext**](#assignnext) | **POST** /identification-tasks/assignments/next/ | |
+|[**capabilitiesRetrieve**](#capabilitiesretrieve) | **GET** /identification-tasks/{observation_uuid}/capabilities/ | |
 |[**list**](#list) | **GET** /identification-tasks/ | |
 |[**listMine**](#listmine) | **GET** /me/identification-tasks/ | |
 |[**predictionsCreate**](#predictionscreate) | **POST** /identification-tasks/{observation_uuid}/predictions/ | |
@@ -405,6 +406,59 @@ This endpoint does not have any parameters.
 |**404** |  |  -  |
 |**201** |  |  -  |
 |**204** | No available tasks pending to assign |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **capabilitiesRetrieve**
+> IdentificationTaskCapabilities capabilitiesRetrieve()
+
+
+### Example
+
+```typescript
+import {
+    IdentificationTasksApi,
+    Configuration
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new IdentificationTasksApi(configuration);
+
+let observationUuid: string; // (default to undefined)
+
+const { status, data } = await apiInstance.capabilitiesRetrieve(
+    observationUuid
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **observationUuid** | [**string**] |  | defaults to undefined|
+
+
+### Return type
+
+**IdentificationTaskCapabilities**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -20,6 +20,7 @@ api/photos-api.ts
 api/ping-api.ts
 api/taxa-api.ts
 api/users-api.ts
+api/workspaces-api.ts
 base.ts
 common.ts
 configuration.ts
@@ -276,8 +277,6 @@ docs/CampaignsListOrderByParameter.md
 docs/CampaignsListValidationError.md
 docs/CountriesApi.md
 docs/Country.md
-docs/CountryPermission.md
-docs/CountryPermissionRole.md
 docs/CountryRequest.md
 docs/CreateAgreeReviewRequest.md
 docs/CreateAgreeReviewRequestAction.md
@@ -391,11 +390,11 @@ docs/FixesCreatePowerErrorComponentAttr.md
 docs/FixesCreatePowerErrorComponentCode.md
 docs/FixesCreateSentAtErrorComponent.md
 docs/FixesCreateValidationError.md
-docs/GeneralPermission.md
 docs/GuestRegistration.md
 docs/GuestRegistrationRequest.md
 docs/Identification.md
 docs/IdentificationTask.md
+docs/IdentificationTaskCapabilities.md
 docs/IdentificationTaskPermission.md
 docs/IdentificationTaskResult.md
 docs/IdentificationTaskResultSource.md
@@ -959,6 +958,8 @@ docs/PaginatedPartnerList.md
 docs/PaginatedPhotoPredictionList.md
 docs/PaginatedTaxonList.md
 docs/PaginatedUserList.md
+docs/PaginatedWorkspaceCollaborationGroupList.md
+docs/PaginatedWorkspaceList.md
 docs/Partner.md
 docs/PartnerPoint.md
 docs/PartnersApi.md
@@ -1031,6 +1032,7 @@ docs/SimpleTaxon.md
 docs/SimpleTaxonRank.md
 docs/SimpleTaxonRequest.md
 docs/SimpleUser.md
+docs/SimpleWorkspace.md
 docs/SimplifiedLocation.md
 docs/SimplifiedObservationWithPhotos.md
 docs/SpeciesCharacteristics.md
@@ -1054,7 +1056,6 @@ docs/TokenRefreshRequest.md
 docs/TokenVerifyRequest.md
 docs/User.md
 docs/UserAssignment.md
-docs/UserPermission.md
 docs/UserRequest.md
 docs/UserScore.md
 docs/UsersApi.md
@@ -1068,6 +1069,11 @@ docs/UsersUpdateError.md
 docs/UsersUpdateLocaleErrorComponent.md
 docs/UsersUpdateNonFieldErrorsErrorComponent.md
 docs/UsersUpdateValidationError.md
+docs/Workspace.md
+docs/WorkspaceCollaborationGroup.md
+docs/WorkspaceMembership.md
+docs/WorkspaceMembershipRole.md
+docs/WorkspacesApi.md
 git_push.sh
 index.ts
 models/adm-boundary-request.ts
@@ -1316,8 +1322,6 @@ models/campaigns-list-error.ts
 models/campaigns-list-order-by-error-component.ts
 models/campaigns-list-order-by-parameter.ts
 models/campaigns-list-validation-error.ts
-models/country-permission-role.ts
-models/country-permission.ts
 models/country-request.ts
 models/country.ts
 models/create-agree-review-request-action.ts
@@ -1430,9 +1434,9 @@ models/fixes-create-power-error-component-code.ts
 models/fixes-create-power-error-component.ts
 models/fixes-create-sent-at-error-component.ts
 models/fixes-create-validation-error.ts
-models/general-permission.ts
 models/guest-registration-request.ts
 models/guest-registration.ts
+models/identification-task-capabilities.ts
 models/identification-task-permission.ts
 models/identification-task-result-source.ts
 models/identification-task-result.ts
@@ -1995,6 +1999,8 @@ models/paginated-partner-list.ts
 models/paginated-photo-prediction-list.ts
 models/paginated-taxon-list.ts
 models/paginated-user-list.ts
+models/paginated-workspace-collaboration-group-list.ts
+models/paginated-workspace-list.ts
 models/partner-point.ts
 models/partner.ts
 models/password-change-request.ts
@@ -2063,6 +2069,7 @@ models/simple-taxon-rank.ts
 models/simple-taxon-request.ts
 models/simple-taxon.ts
 models/simple-user.ts
+models/simple-workspace.ts
 models/simplified-location.ts
 models/simplified-observation-with-photos.ts
 models/species-characteristics-request.ts
@@ -2084,7 +2091,6 @@ models/token-refresh-request.ts
 models/token-refresh.ts
 models/token-verify-request.ts
 models/user-assignment.ts
-models/user-permission.ts
 models/user-request.ts
 models/user-score.ts
 models/user.ts
@@ -2098,6 +2104,10 @@ models/users-update-error.ts
 models/users-update-locale-error-component.ts
 models/users-update-non-field-errors-error-component.ts
 models/users-update-validation-error.ts
+models/workspace-collaboration-group.ts
+models/workspace-membership-role.ts
+models/workspace-membership.ts
+models/workspace.ts
 package.json
 tsconfig.esm.json
 tsconfig.json
