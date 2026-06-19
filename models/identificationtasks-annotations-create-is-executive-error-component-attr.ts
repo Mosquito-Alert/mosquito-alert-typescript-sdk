@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr = {
     IsExecutive: 'is_executive',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttr];

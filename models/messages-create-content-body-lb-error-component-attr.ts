@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodyLbErrorComponentAttr = {
     ContentBodyLb: 'content.body.lb',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyLbErrorComponentAttr = typeof MessagesCreateContentBodyLbErrorComponentAttr[keyof typeof MessagesCreateContentBodyLbErrorComponentAttr];

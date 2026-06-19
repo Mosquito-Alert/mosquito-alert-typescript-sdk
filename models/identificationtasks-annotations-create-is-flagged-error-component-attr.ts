@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr = {
     IsFlagged: 'is_flagged',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttr];

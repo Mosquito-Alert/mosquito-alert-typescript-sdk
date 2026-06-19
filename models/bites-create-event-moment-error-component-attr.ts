@@ -17,7 +17,7 @@
 
 export const BitesCreateEventMomentErrorComponentAttr = {
     EventMoment: 'event_moment',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateEventMomentErrorComponentAttr = typeof BitesCreateEventMomentErrorComponentAttr[keyof typeof BitesCreateEventMomentErrorComponentAttr];

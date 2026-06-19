@@ -17,7 +17,7 @@
 
 export const BitesCreateLocationPointLongitudeErrorComponentAttr = {
     LocationPointLongitude: 'location.point.longitude',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateLocationPointLongitudeErrorComponentAttr = typeof BitesCreateLocationPointLongitudeErrorComponentAttr[keyof typeof BitesCreateLocationPointLongitudeErrorComponentAttr];

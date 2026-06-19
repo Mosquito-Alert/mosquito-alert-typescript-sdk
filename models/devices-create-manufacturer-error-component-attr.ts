@@ -17,7 +17,7 @@
 
 export const DevicesCreateManufacturerErrorComponentAttr = {
     Manufacturer: 'manufacturer',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateManufacturerErrorComponentAttr = typeof DevicesCreateManufacturerErrorComponentAttr[keyof typeof DevicesCreateManufacturerErrorComponentAttr];

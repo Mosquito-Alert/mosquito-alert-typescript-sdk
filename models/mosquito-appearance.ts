@@ -15,22 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MosquitoAppearanceAbdomen } from './mosquito-appearance-abdomen';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { MosquitoAppearanceLegs } from './mosquito-appearance-legs';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { MosquitoAppearanceSpecie } from './mosquito-appearance-specie';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { MosquitoAppearanceThorax } from './mosquito-appearance-thorax';
 
 export interface MosquitoAppearance {
     'specie'?: MosquitoAppearanceSpecie | null;
-    'thorax'?: MosquitoAppearanceThorax | null;
-    'abdomen'?: MosquitoAppearanceAbdomen | null;
-    'legs'?: MosquitoAppearanceLegs | null;
+    'thorax'?: MosquitoAppearanceSpecie | null;
+    'abdomen'?: MosquitoAppearanceSpecie | null;
+    'legs'?: MosquitoAppearanceSpecie | null;
 }
 
 

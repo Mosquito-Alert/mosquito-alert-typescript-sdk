@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListAssigneeIdsErrorComponentAttr = {
     AssigneeIds: 'assignee_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListAssigneeIdsErrorComponentAttr = typeof IdentificationtasksListAssigneeIdsErrorComponentAttr[keyof typeof IdentificationtasksListAssigneeIdsErrorComponentAttr];

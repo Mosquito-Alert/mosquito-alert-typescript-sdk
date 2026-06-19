@@ -17,7 +17,7 @@
 
 export const BitesCreateEventEnvironmentErrorComponentAttr = {
     EventEnvironment: 'event_environment',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateEventEnvironmentErrorComponentAttr = typeof BitesCreateEventEnvironmentErrorComponentAttr[keyof typeof BitesCreateEventEnvironmentErrorComponentAttr];

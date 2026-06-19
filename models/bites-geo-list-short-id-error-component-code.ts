@@ -17,7 +17,7 @@
 
 export const BitesGeoListShortIdErrorComponentCode = {
     NullCharactersNotAllowed: 'null_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListShortIdErrorComponentCode = typeof BitesGeoListShortIdErrorComponentCode[keyof typeof BitesGeoListShortIdErrorComponentCode];

@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr = {
     CharacteristicsIsBloodFed: 'characteristics.is_blood_fed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttr];

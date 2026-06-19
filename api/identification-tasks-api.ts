@@ -111,7 +111,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'annotationRequest' is not null or undefined
             assertParamExists('annotationsCreate', 'annotationRequest', annotationRequest)
             const localVarPath = `/identification-tasks/{observation_uuid}/annotations/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,7 +175,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('annotationsList', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/annotations/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -454,8 +454,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('annotationsRetrieve', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/annotations/{id}/`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -535,7 +535,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('capabilitiesRetrieve', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/capabilities/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -962,7 +962,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'createPhotoPredictionRequest' is not null or undefined
             assertParamExists('predictionsCreate', 'createPhotoPredictionRequest', createPhotoPredictionRequest)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1009,8 +1009,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsDestroy', 'photoUuid', photoUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
-                .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)))
+                .replace('{photo_uuid}', encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1054,7 +1054,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('predictionsList', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1108,8 +1108,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsPartialUpdate', 'photoUuid', photoUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
-                .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)))
+                .replace('{photo_uuid}', encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1156,8 +1156,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'photoUuid' is not null or undefined
             assertParamExists('predictionsRetrieve', 'photoUuid', photoUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
-                .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)))
+                .replace('{photo_uuid}', encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1205,8 +1205,8 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'photoPredictionRequest' is not null or undefined
             assertParamExists('predictionsUpdate', 'photoPredictionRequest', photoPredictionRequest)
             const localVarPath = `/identification-tasks/{observation_uuid}/predictions/{photo_uuid}/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)))
-                .replace(`{${"photo_uuid"}}`, encodeURIComponent(String(photoUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)))
+                .replace('{photo_uuid}', encodeURIComponent(String(photoUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1250,7 +1250,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('retrieve', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1293,7 +1293,7 @@ export const IdentificationTasksApiAxiosParamCreator = function (configuration?:
             // verify required parameter 'observationUuid' is not null or undefined
             assertParamExists('reviewCreate', 'observationUuid', observationUuid)
             const localVarPath = `/identification-tasks/{observation_uuid}/review/`
-                .replace(`{${"observation_uuid"}}`, encodeURIComponent(String(observationUuid)));
+                .replace('{observation_uuid}', encodeURIComponent(String(observationUuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

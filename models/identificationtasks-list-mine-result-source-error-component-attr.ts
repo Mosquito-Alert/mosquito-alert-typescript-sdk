@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultSourceErrorComponentAttr = {
     ResultSource: 'result_source',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultSourceErrorComponentAttr = typeof IdentificationtasksListMineResultSourceErrorComponentAttr[keyof typeof IdentificationtasksListMineResultSourceErrorComponentAttr];

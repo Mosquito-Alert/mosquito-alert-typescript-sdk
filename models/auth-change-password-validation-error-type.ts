@@ -17,7 +17,7 @@
 
 export const AuthChangePasswordValidationErrorType = {
     ValidationError: 'validation_error',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthChangePasswordValidationErrorType = typeof AuthChangePasswordValidationErrorType[keyof typeof AuthChangePasswordValidationErrorType];

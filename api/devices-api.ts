@@ -102,7 +102,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'deviceId' is not null or undefined
             assertParamExists('partialUpdate', 'deviceId', deviceId)
             const localVarPath = `/devices/{device_id}/`
-                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+                .replace('{device_id}', encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -146,7 +146,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'deviceId' is not null or undefined
             assertParamExists('retrieve', 'deviceId', deviceId)
             const localVarPath = `/devices/{device_id}/`
-                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+                .replace('{device_id}', encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -191,7 +191,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'deviceUpdateRequest' is not null or undefined
             assertParamExists('update', 'deviceUpdateRequest', deviceUpdateRequest)
             const localVarPath = `/devices/{device_id}/`
-                .replace(`{${"device_id"}}`, encodeURIComponent(String(deviceId)));
+                .replace('{device_id}', encodeURIComponent(String(deviceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

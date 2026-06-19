@@ -17,7 +17,7 @@
 
 export const BitesCreateLocationSourceErrorComponentAttr = {
     LocationSource: 'location.source',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateLocationSourceErrorComponentAttr = typeof BitesCreateLocationSourceErrorComponentAttr[keyof typeof BitesCreateLocationSourceErrorComponentAttr];

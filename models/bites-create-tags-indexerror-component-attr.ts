@@ -17,7 +17,7 @@
 
 export const BitesCreateTagsINDEXErrorComponentAttr = {
     TagsIndex: 'tags.INDEX',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateTagsINDEXErrorComponentAttr = typeof BitesCreateTagsINDEXErrorComponentAttr[keyof typeof BitesCreateTagsINDEXErrorComponentAttr];

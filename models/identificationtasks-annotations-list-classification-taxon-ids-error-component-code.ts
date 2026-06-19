@@ -19,7 +19,7 @@ export const IdentificationtasksAnnotationsListClassificationTaxonIdsErrorCompon
     InvalidChoice: 'invalid_choice',
     InvalidList: 'invalid_list',
     InvalidPkValue: 'invalid_pk_value',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode = typeof IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode[keyof typeof IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode];

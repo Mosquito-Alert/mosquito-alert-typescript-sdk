@@ -19,7 +19,7 @@ export const BitesCreateCountsNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCountsNonFieldErrorsErrorComponentCode = typeof BitesCreateCountsNonFieldErrorsErrorComponentCode[keyof typeof BitesCreateCountsNonFieldErrorsErrorComponentCode];

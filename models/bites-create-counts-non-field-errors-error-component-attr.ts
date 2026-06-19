@@ -17,7 +17,7 @@
 
 export const BitesCreateCountsNonFieldErrorsErrorComponentAttr = {
     CountsNonFieldErrors: 'counts.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCountsNonFieldErrorsErrorComponentAttr = typeof BitesCreateCountsNonFieldErrorsErrorComponentAttr[keyof typeof BitesCreateCountsNonFieldErrorsErrorComponentAttr];

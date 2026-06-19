@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreateHasNearMosquitoesErrorComponentAttr = {
     HasNearMosquitoes: 'has_near_mosquitoes',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreateHasNearMosquitoesErrorComponentAttr = typeof BreedingsitesCreateHasNearMosquitoesErrorComponentAttr[keyof typeof BreedingsitesCreateHasNearMosquitoesErrorComponentAttr];

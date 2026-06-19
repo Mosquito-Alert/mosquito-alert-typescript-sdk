@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr = {
     ScoresCulex: 'scores.culex',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr = typeof IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttr];

@@ -20,7 +20,7 @@ export const MessagesCreateContentBodyNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyNonFieldErrorsErrorComponentCode = typeof MessagesCreateContentBodyNonFieldErrorsErrorComponentCode[keyof typeof MessagesCreateContentBodyNonFieldErrorsErrorComponentCode];

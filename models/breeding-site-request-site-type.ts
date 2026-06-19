@@ -23,7 +23,7 @@ export const BreedingSiteRequestSiteType = {
     StormDrain: 'storm_drain',
     Well: 'well',
     Other: 'other',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingSiteRequestSiteType = typeof BreedingSiteRequestSiteType[keyof typeof BreedingSiteRequestSiteType];

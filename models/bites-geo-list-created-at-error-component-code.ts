@@ -17,7 +17,7 @@
 
 export const BitesGeoListCreatedAtErrorComponentCode = {
     Invalid: 'invalid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListCreatedAtErrorComponentCode = typeof BitesGeoListCreatedAtErrorComponentCode[keyof typeof BitesGeoListCreatedAtErrorComponentCode];

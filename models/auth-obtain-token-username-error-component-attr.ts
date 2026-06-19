@@ -17,7 +17,7 @@
 
 export const AuthObtainTokenUsernameErrorComponentAttr = {
     Username: 'username',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthObtainTokenUsernameErrorComponentAttr = typeof AuthObtainTokenUsernameErrorComponentAttr[keyof typeof AuthObtainTokenUsernameErrorComponentAttr];

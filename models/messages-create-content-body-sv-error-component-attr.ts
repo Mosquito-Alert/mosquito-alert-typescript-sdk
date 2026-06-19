@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodySvErrorComponentAttr = {
     ContentBodySv: 'content.body.sv',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodySvErrorComponentAttr = typeof MessagesCreateContentBodySvErrorComponentAttr[keyof typeof MessagesCreateContentBodySvErrorComponentAttr];

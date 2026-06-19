@@ -18,7 +18,7 @@
 export const IdentificationTaskResultSource = {
     Expert: 'expert',
     Ai: 'ai',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationTaskResultSource = typeof IdentificationTaskResultSource[keyof typeof IdentificationTaskResultSource];

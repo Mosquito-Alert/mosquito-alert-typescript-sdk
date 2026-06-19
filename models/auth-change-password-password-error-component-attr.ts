@@ -17,7 +17,7 @@
 
 export const AuthChangePasswordPasswordErrorComponentAttr = {
     Password: 'password',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthChangePasswordPasswordErrorComponentAttr = typeof AuthChangePasswordPasswordErrorComponentAttr[keyof typeof AuthChangePasswordPasswordErrorComponentAttr];

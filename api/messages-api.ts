@@ -229,7 +229,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('recipientsList', 'id', id)
             const localVarPath = `/messages/{id}/recipients/`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -271,7 +271,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieve', 'id', id)
             const localVarPath = `/messages/{id}/`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -366,7 +366,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'code' is not null or undefined
             assertParamExists('topicsRetrieve', 'code', code)
             const localVarPath = `/messages/topics/{code}/`
-                .replace(`{${"code"}}`, encodeURIComponent(String(code)));
+                .replace('{code}', encodeURIComponent(String(code)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -411,7 +411,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'createTopicMessageRequest' is not null or undefined
             assertParamExists('topicsSend', 'createTopicMessageRequest', createTopicMessageRequest)
             const localVarPath = `/messages/topics/{code}/send/`
-                .replace(`{${"code"}}`, encodeURIComponent(String(code)));
+                .replace('{code}', encodeURIComponent(String(code)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

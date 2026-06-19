@@ -17,7 +17,7 @@
 
 export const FixesCreatePointLongitudeErrorComponentAttr = {
     PointLongitude: 'point.longitude',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type FixesCreatePointLongitudeErrorComponentAttr = typeof FixesCreatePointLongitudeErrorComponentAttr[keyof typeof FixesCreatePointLongitudeErrorComponentAttr];

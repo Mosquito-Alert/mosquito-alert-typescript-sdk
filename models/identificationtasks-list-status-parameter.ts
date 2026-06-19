@@ -21,7 +21,7 @@ export const IdentificationtasksListStatusParameter = {
     Done: 'done',
     Open: 'open',
     Review: 'review',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListStatusParameter = typeof IdentificationtasksListStatusParameter[keyof typeof IdentificationtasksListStatusParameter];

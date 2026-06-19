@@ -17,7 +17,7 @@
 
 export const FixesCreateCoverageUuidErrorComponentAttr = {
     CoverageUuid: 'coverage_uuid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type FixesCreateCoverageUuidErrorComponentAttr = typeof FixesCreateCoverageUuidErrorComponentAttr[keyof typeof FixesCreateCoverageUuidErrorComponentAttr];

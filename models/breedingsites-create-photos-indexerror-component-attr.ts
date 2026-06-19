@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreatePhotosINDEXErrorComponentAttr = {
     PhotosIndex: 'photos.INDEX',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreatePhotosINDEXErrorComponentAttr = typeof BreedingsitesCreatePhotosINDEXErrorComponentAttr[keyof typeof BreedingsitesCreatePhotosINDEXErrorComponentAttr];

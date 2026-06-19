@@ -168,7 +168,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -690,7 +690,7 @@ export const ObservationsApiAxiosParamCreator = function (configuration?: Config
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/observations/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

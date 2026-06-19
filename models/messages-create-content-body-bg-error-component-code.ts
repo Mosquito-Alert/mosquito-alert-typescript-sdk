@@ -20,7 +20,7 @@ export const MessagesCreateContentBodyBgErrorComponentCode = {
     Invalid: 'invalid',
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyBgErrorComponentCode = typeof MessagesCreateContentBodyBgErrorComponentCode[keyof typeof MessagesCreateContentBodyBgErrorComponentCode];

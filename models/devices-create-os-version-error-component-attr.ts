@@ -17,7 +17,7 @@
 
 export const DevicesCreateOsVersionErrorComponentAttr = {
     OsVersion: 'os.version',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateOsVersionErrorComponentAttr = typeof DevicesCreateOsVersionErrorComponentAttr[keyof typeof DevicesCreateOsVersionErrorComponentAttr];

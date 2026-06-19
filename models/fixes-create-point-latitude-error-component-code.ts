@@ -20,7 +20,7 @@ export const FixesCreatePointLatitudeErrorComponentCode = {
     MaxStringLength: 'max_string_length',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type FixesCreatePointLatitudeErrorComponentCode = typeof FixesCreatePointLatitudeErrorComponentCode[keyof typeof FixesCreatePointLatitudeErrorComponentCode];

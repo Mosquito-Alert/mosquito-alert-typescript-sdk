@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreateHasWaterErrorComponentAttr = {
     HasWater: 'has_water',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreateHasWaterErrorComponentAttr = typeof BreedingsitesCreateHasWaterErrorComponentAttr[keyof typeof BreedingsitesCreateHasWaterErrorComponentAttr];

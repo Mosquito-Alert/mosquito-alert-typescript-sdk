@@ -18,7 +18,7 @@
 export const AuthChangePasswordNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthChangePasswordNonFieldErrorsErrorComponentCode = typeof AuthChangePasswordNonFieldErrorsErrorComponentCode[keyof typeof AuthChangePasswordNonFieldErrorsErrorComponentCode];

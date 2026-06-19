@@ -17,7 +17,7 @@
 
 export const DevicesCreateTypeErrorComponentAttr = {
     Type: 'type',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateTypeErrorComponentAttr = typeof DevicesCreateTypeErrorComponentAttr[keyof typeof DevicesCreateTypeErrorComponentAttr];

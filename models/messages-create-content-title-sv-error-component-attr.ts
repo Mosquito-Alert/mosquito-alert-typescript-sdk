@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleSvErrorComponentAttr = {
     ContentTitleSv: 'content.title.sv',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleSvErrorComponentAttr = typeof MessagesCreateContentTitleSvErrorComponentAttr[keyof typeof MessagesCreateContentTitleSvErrorComponentAttr];

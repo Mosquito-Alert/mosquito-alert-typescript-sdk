@@ -19,7 +19,7 @@ export const AuthObtainTokenNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     NoActiveAccount: 'no_active_account',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthObtainTokenNonFieldErrorsErrorComponentCode = typeof AuthObtainTokenNonFieldErrorsErrorComponentCode[keyof typeof AuthObtainTokenNonFieldErrorsErrorComponentCode];

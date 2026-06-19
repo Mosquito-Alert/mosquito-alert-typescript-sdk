@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr = {
     UserIds: 'user_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr = typeof IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttr];

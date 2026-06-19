@@ -17,7 +17,7 @@
 
 export const IdentificationtasksReviewCreateActionErrorComponentAttr = {
     Action: 'action',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksReviewCreateActionErrorComponentAttr = typeof IdentificationtasksReviewCreateActionErrorComponentAttr[keyof typeof IdentificationtasksReviewCreateActionErrorComponentAttr];

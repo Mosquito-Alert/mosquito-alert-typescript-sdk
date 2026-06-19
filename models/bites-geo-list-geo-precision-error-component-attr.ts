@@ -17,7 +17,7 @@
 
 export const BitesGeoListGeoPrecisionErrorComponentAttr = {
     GeoPrecision: 'geo_precision',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListGeoPrecisionErrorComponentAttr = typeof BitesGeoListGeoPrecisionErrorComponentAttr[keyof typeof BitesGeoListGeoPrecisionErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreateHasLarvaeErrorComponentAttr = {
     HasLarvae: 'has_larvae',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreateHasLarvaeErrorComponentAttr = typeof BreedingsitesCreateHasLarvaeErrorComponentAttr[keyof typeof BreedingsitesCreateHasLarvaeErrorComponentAttr];

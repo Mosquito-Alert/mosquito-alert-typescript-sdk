@@ -17,7 +17,7 @@
 
 export const FixesCreatePowerErrorComponentAttr = {
     Power: 'power',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type FixesCreatePowerErrorComponentAttr = typeof FixesCreatePowerErrorComponentAttr[keyof typeof FixesCreatePowerErrorComponentAttr];

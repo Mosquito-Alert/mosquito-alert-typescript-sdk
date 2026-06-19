@@ -17,7 +17,7 @@
 
 export const AuthObtainTokenDeviceIdErrorComponentAttr = {
     DeviceId: 'device_id',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthObtainTokenDeviceIdErrorComponentAttr = typeof AuthObtainTokenDeviceIdErrorComponentAttr[keyof typeof AuthObtainTokenDeviceIdErrorComponentAttr];

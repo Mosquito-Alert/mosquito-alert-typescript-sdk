@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleSqErrorComponentAttr = {
     ContentTitleSq: 'content.title.sq',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleSqErrorComponentAttr = typeof MessagesCreateContentTitleSqErrorComponentAttr[keyof typeof MessagesCreateContentTitleSqErrorComponentAttr];

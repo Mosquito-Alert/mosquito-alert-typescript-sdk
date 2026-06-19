@@ -19,7 +19,7 @@ export const BitesGeoListGeoPrecisionErrorComponentCode = {
     Invalid: 'invalid',
     MaxValue: 'max_value',
     MinValue: 'min_value',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListGeoPrecisionErrorComponentCode = typeof BitesGeoListGeoPrecisionErrorComponentCode[keyof typeof BitesGeoListGeoPrecisionErrorComponentCode];

@@ -21,7 +21,7 @@ export const MessagesCreateContentTitleBgErrorComponentCode = {
     MaxLength: 'max_length',
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleBgErrorComponentCode = typeof MessagesCreateContentTitleBgErrorComponentCode[keyof typeof MessagesCreateContentTitleBgErrorComponentCode];

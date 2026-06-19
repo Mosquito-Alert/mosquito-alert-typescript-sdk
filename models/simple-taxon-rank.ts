@@ -23,7 +23,7 @@ export const SimpleTaxonRank = {
     Subgenus: 'subgenus',
     SpeciesComplex: 'species_complex',
     Species: 'species',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type SimpleTaxonRank = typeof SimpleTaxonRank[keyof typeof SimpleTaxonRank];

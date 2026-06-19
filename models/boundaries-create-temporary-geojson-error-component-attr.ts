@@ -17,7 +17,7 @@
 
 export const BoundariesCreateTemporaryGeojsonErrorComponentAttr = {
     Geojson: 'geojson',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BoundariesCreateTemporaryGeojsonErrorComponentAttr = typeof BoundariesCreateTemporaryGeojsonErrorComponentAttr[keyof typeof BoundariesCreateTemporaryGeojsonErrorComponentAttr];

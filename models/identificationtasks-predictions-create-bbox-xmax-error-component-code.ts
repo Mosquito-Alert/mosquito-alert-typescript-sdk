@@ -22,7 +22,7 @@ export const IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode = {
     MinValue: 'min_value',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode = typeof IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode[keyof typeof IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCode];

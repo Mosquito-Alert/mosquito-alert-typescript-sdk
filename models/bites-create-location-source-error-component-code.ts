@@ -19,7 +19,7 @@ export const BitesCreateLocationSourceErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateLocationSourceErrorComponentCode = typeof BitesCreateLocationSourceErrorComponentCode[keyof typeof BitesCreateLocationSourceErrorComponentCode];

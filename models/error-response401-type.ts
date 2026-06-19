@@ -17,7 +17,7 @@
 
 export const ErrorResponse401Type = {
     ClientError: 'client_error',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type ErrorResponse401Type = typeof ErrorResponse401Type[keyof typeof ErrorResponse401Type];

@@ -20,7 +20,7 @@ export const CampaignsListOrderByParameter = {
     MinusStartDate: '-start_date',
     EndDate: 'end_date',
     StartDate: 'start_date',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type CampaignsListOrderByParameter = typeof CampaignsListOrderByParameter[keyof typeof CampaignsListOrderByParameter];

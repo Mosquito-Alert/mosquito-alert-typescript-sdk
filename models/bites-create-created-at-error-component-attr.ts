@@ -17,7 +17,7 @@
 
 export const BitesCreateCreatedAtErrorComponentAttr = {
     CreatedAt: 'created_at',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCreatedAtErrorComponentAttr = typeof BitesCreateCreatedAtErrorComponentAttr[keyof typeof BitesCreateCreatedAtErrorComponentAttr];

@@ -18,7 +18,7 @@
 export const BitesListFormatParameter = {
     Csv: 'csv',
     Json: 'json',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesListFormatParameter = typeof BitesListFormatParameter[keyof typeof BitesListFormatParameter];

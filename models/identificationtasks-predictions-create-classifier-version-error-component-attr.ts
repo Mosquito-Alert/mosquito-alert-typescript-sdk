@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr = {
     ClassifierVersion: 'classifier_version',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr = typeof IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttr];

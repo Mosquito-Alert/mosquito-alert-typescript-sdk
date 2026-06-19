@@ -22,7 +22,7 @@ export const BreedingsitesCreatePhotosINDEXErrorComponentCode = {
     NoName: 'no_name',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreatePhotosINDEXErrorComponentCode = typeof BreedingsitesCreatePhotosINDEXErrorComponentCode[keyof typeof BreedingsitesCreatePhotosINDEXErrorComponentCode];

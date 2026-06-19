@@ -17,7 +17,7 @@
 
 export const BitesGeoListBoundaryUuidErrorComponentAttr = {
     BoundaryUuid: 'boundary_uuid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListBoundaryUuidErrorComponentAttr = typeof BitesGeoListBoundaryUuidErrorComponentAttr[keyof typeof BitesGeoListBoundaryUuidErrorComponentAttr];

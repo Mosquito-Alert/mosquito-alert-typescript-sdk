@@ -18,7 +18,7 @@
 export const IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode = typeof IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode[keyof typeof IdentificationtasksPredictionsCreatePredictedClassErrorComponentCode];

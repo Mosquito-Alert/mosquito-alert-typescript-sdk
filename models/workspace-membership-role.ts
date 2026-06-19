@@ -19,7 +19,7 @@ export const WorkspaceMembershipRole = {
     Member: 'member',
     Annotator: 'annotator',
     Supervisor: 'supervisor',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type WorkspaceMembershipRole = typeof WorkspaceMembershipRole[keyof typeof WorkspaceMembershipRole];

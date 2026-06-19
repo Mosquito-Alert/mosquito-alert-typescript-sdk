@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodyGlErrorComponentAttr = {
     ContentBodyGl: 'content.body.gl',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyGlErrorComponentAttr = typeof MessagesCreateContentBodyGlErrorComponentAttr[keyof typeof MessagesCreateContentBodyGlErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const BitesGeoListCountryIdErrorComponentAttr = {
     CountryId: 'country_id',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListCountryIdErrorComponentAttr = typeof BitesGeoListCountryIdErrorComponentAttr[keyof typeof BitesGeoListCountryIdErrorComponentAttr];

@@ -18,7 +18,7 @@
 export const SpeciesClassificationRequestConfidenceLabel = {
     Definitely: 'definitely',
     Probably: 'probably',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type SpeciesClassificationRequestConfidenceLabel = typeof SpeciesClassificationRequestConfidenceLabel[keyof typeof SpeciesClassificationRequestConfidenceLabel];

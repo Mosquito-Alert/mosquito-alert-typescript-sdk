@@ -17,7 +17,7 @@
 
 export const BitesGeoListReceivedAtErrorComponentAttr = {
     ReceivedAt: 'received_at',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListReceivedAtErrorComponentAttr = typeof BitesGeoListReceivedAtErrorComponentAttr[keyof typeof BitesGeoListReceivedAtErrorComponentAttr];

@@ -18,7 +18,7 @@
 export const MessagesListMineSentOrderByParameter = {
     MinusCreatedAt: '-created_at',
     CreatedAt: 'created_at',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesListMineSentOrderByParameter = typeof MessagesListMineSentOrderByParameter[keyof typeof MessagesListMineSentOrderByParameter];

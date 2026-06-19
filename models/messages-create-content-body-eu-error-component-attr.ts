@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodyEuErrorComponentAttr = {
     ContentBodyEu: 'content.body.eu',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyEuErrorComponentAttr = typeof MessagesCreateContentBodyEuErrorComponentAttr[keyof typeof MessagesCreateContentBodyEuErrorComponentAttr];

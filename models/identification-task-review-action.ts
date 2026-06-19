@@ -18,7 +18,7 @@
 export const IdentificationTaskReviewAction = {
     Agree: 'agree',
     Overwrite: 'overwrite',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationTaskReviewAction = typeof IdentificationTaskReviewAction[keyof typeof IdentificationTaskReviewAction];

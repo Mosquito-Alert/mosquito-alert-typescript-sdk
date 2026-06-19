@@ -17,7 +17,7 @@
 
 export const MessagesCreateUserUuidsErrorComponentAttr = {
     UserUuids: 'user_uuids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateUserUuidsErrorComponentAttr = typeof MessagesCreateUserUuidsErrorComponentAttr[keyof typeof MessagesCreateUserUuidsErrorComponentAttr];

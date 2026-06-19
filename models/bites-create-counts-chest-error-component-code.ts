@@ -19,7 +19,7 @@ export const BitesCreateCountsChestErrorComponentCode = {
     Invalid: 'invalid',
     MaxStringLength: 'max_string_length',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCountsChestErrorComponentCode = typeof BitesCreateCountsChestErrorComponentCode[keyof typeof BitesCreateCountsChestErrorComponentCode];

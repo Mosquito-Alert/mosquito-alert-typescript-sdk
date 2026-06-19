@@ -17,7 +17,7 @@
 
 export const DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr = {
     MobileAppNonFieldErrors: 'mobile_app.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr = typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr[keyof typeof DevicesCreateMobileAppNonFieldErrorsErrorComponentAttr];

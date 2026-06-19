@@ -107,7 +107,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/bites/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -569,7 +569,7 @@ export const BitesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/bites/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

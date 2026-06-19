@@ -17,7 +17,7 @@
 
 export const DevicesCreateOsNameErrorComponentAttr = {
     OsName: 'os.name',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateOsNameErrorComponentAttr = typeof DevicesCreateOsNameErrorComponentAttr[keyof typeof DevicesCreateOsNameErrorComponentAttr];

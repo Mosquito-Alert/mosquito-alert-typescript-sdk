@@ -22,7 +22,7 @@ export const BitesCreateCreatedAtErrorComponentCode = {
     Null: 'null',
     Overflow: 'overflow',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCreatedAtErrorComponentCode = typeof BitesCreateCreatedAtErrorComponentCode[keyof typeof BitesCreateCreatedAtErrorComponentCode];

@@ -18,7 +18,7 @@
 export const FixesCreatePowerErrorComponentCode = {
     Invalid: 'invalid',
     MaxStringLength: 'max_string_length',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type FixesCreatePowerErrorComponentCode = typeof FixesCreatePowerErrorComponentCode[keyof typeof FixesCreatePowerErrorComponentCode];

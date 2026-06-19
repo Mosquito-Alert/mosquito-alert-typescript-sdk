@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreateSiteTypeErrorComponentAttr = {
     SiteType: 'site_type',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreateSiteTypeErrorComponentAttr = typeof BreedingsitesCreateSiteTypeErrorComponentAttr[keyof typeof BreedingsitesCreateSiteTypeErrorComponentAttr];

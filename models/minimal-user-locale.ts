@@ -43,7 +43,7 @@ export const MinimalUserLocale = {
     Nl: 'nl',
     Tr: 'tr',
     ZhMinusCn: 'zh-CN',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MinimalUserLocale = typeof MinimalUserLocale[keyof typeof MinimalUserLocale];

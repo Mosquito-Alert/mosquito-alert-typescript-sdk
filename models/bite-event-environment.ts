@@ -23,7 +23,7 @@ export const BiteEventEnvironment = {
     Outdoors: 'outdoors',
     Vehicle: 'vehicle',
     Empty: '',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BiteEventEnvironment = typeof BiteEventEnvironment[keyof typeof BiteEventEnvironment];

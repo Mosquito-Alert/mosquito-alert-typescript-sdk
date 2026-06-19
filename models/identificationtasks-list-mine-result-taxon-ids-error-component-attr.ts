@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultTaxonIdsErrorComponentAttr = {
     ResultTaxonIds: 'result_taxon_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultTaxonIdsErrorComponentAttr = typeof IdentificationtasksListMineResultTaxonIdsErrorComponentAttr[keyof typeof IdentificationtasksListMineResultTaxonIdsErrorComponentAttr];

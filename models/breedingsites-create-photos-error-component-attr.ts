@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreatePhotosErrorComponentAttr = {
     Photos: 'photos',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreatePhotosErrorComponentAttr = typeof BreedingsitesCreatePhotosErrorComponentAttr[keyof typeof BreedingsitesCreatePhotosErrorComponentAttr];

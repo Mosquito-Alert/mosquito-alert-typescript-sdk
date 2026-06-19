@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr = {
     IsDecisive: 'is_decisive',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr = typeof IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttr];

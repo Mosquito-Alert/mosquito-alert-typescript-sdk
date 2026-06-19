@@ -17,7 +17,7 @@
 
 export const BitesGeoListUserUuidErrorComponentAttr = {
     UserUuid: 'user_uuid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListUserUuidErrorComponentAttr = typeof BitesGeoListUserUuidErrorComponentAttr[keyof typeof BitesGeoListUserUuidErrorComponentAttr];

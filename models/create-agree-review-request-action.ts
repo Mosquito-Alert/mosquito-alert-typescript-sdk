@@ -17,7 +17,7 @@
 
 export const CreateAgreeReviewRequestAction = {
     Agree: 'agree',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type CreateAgreeReviewRequestAction = typeof CreateAgreeReviewRequestAction[keyof typeof CreateAgreeReviewRequestAction];

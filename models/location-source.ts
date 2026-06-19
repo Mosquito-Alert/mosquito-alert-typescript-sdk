@@ -21,7 +21,7 @@
 export const LocationSource = {
     Auto: 'auto',
     Manual: 'manual',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type LocationSource = typeof LocationSource[keyof typeof LocationSource];

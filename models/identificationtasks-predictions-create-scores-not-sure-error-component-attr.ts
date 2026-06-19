@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr = {
     ScoresNotSure: 'scores.not_sure',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr = typeof IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttr];

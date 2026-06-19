@@ -613,7 +613,7 @@ export const LocationTimezone = {
     WMinusSu: 'W-SU',
     Wet: 'WET',
     Zulu: 'Zulu',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type LocationTimezone = typeof LocationTimezone[keyof typeof LocationTimezone];

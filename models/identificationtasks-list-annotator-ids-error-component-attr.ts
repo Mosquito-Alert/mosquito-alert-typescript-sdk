@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListAnnotatorIdsErrorComponentAttr = {
     AnnotatorIds: 'annotator_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListAnnotatorIdsErrorComponentAttr = typeof IdentificationtasksListAnnotatorIdsErrorComponentAttr[keyof typeof IdentificationtasksListAnnotatorIdsErrorComponentAttr];

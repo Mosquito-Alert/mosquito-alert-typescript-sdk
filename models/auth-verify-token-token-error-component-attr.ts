@@ -17,7 +17,7 @@
 
 export const AuthVerifyTokenTokenErrorComponentAttr = {
     Token: 'token',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthVerifyTokenTokenErrorComponentAttr = typeof AuthVerifyTokenTokenErrorComponentAttr[keyof typeof AuthVerifyTokenTokenErrorComponentAttr];

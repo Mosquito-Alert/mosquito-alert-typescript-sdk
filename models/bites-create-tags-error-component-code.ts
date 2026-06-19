@@ -20,7 +20,7 @@ export const BitesCreateTagsErrorComponentCode = {
     NotAList: 'not_a_list',
     NotAStr: 'not_a_str',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateTagsErrorComponentCode = typeof BitesCreateTagsErrorComponentCode[keyof typeof BitesCreateTagsErrorComponentCode];

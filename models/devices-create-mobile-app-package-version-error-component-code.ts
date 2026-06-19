@@ -24,7 +24,7 @@ export const DevicesCreateMobileAppPackageVersionErrorComponentCode = {
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     Required: 'required',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateMobileAppPackageVersionErrorComponentCode = typeof DevicesCreateMobileAppPackageVersionErrorComponentCode[keyof typeof DevicesCreateMobileAppPackageVersionErrorComponentCode];

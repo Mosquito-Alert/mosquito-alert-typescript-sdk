@@ -18,7 +18,7 @@
 export const SpeciesCharacteristicsSex = {
     Male: 'male',
     Female: 'female',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type SpeciesCharacteristicsSex = typeof SpeciesCharacteristicsSex[keyof typeof SpeciesCharacteristicsSex];

@@ -17,7 +17,7 @@
 
 export const UsersPartialUpdateLocaleErrorComponentAttr = {
     Locale: 'locale',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type UsersPartialUpdateLocaleErrorComponentAttr = typeof UsersPartialUpdateLocaleErrorComponentAttr[keyof typeof UsersPartialUpdateLocaleErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr = {
     FeedbackPublicNote: 'feedback.public_note',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const BitesCreateTagsErrorComponentAttr = {
     Tags: 'tags',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateTagsErrorComponentAttr = typeof BitesCreateTagsErrorComponentAttr[keyof typeof BitesCreateTagsErrorComponentAttr];

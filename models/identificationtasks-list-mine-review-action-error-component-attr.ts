@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineReviewActionErrorComponentAttr = {
     ReviewAction: 'review_action',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineReviewActionErrorComponentAttr = typeof IdentificationtasksListMineReviewActionErrorComponentAttr[keyof typeof IdentificationtasksListMineReviewActionErrorComponentAttr];

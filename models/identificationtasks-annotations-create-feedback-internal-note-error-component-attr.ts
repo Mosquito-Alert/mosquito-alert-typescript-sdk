@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr = {
     FeedbackInternalNote: 'feedback.internal_note',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttr];

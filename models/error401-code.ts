@@ -19,7 +19,7 @@ export const Error401Code = {
     TokenNotValid: 'token_not_valid',
     AuthenticationFailed: 'authentication_failed',
     NotAuthenticated: 'not_authenticated',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type Error401Code = typeof Error401Code[keyof typeof Error401Code];

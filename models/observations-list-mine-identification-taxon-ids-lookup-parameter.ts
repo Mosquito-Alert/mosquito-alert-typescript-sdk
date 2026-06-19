@@ -19,7 +19,7 @@ export const ObservationsListMineIdentificationTaxonIdsLookupParameter = {
     IsChildOf: 'is_child_of',
     IsDescendantOf: 'is_descendant_of',
     IsTreeOf: 'is_tree_of',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type ObservationsListMineIdentificationTaxonIdsLookupParameter = typeof ObservationsListMineIdentificationTaxonIdsLookupParameter[keyof typeof ObservationsListMineIdentificationTaxonIdsLookupParameter];

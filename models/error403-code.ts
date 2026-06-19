@@ -17,7 +17,7 @@
 
 export const Error403Code = {
     PermissionDenied: 'permission_denied',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type Error403Code = typeof Error403Code[keyof typeof Error403Code];

@@ -20,7 +20,7 @@ export const IdentificationtasksListOrderByParameter = {
     MinusUpdatedAt: '-updated_at',
     CreatedAt: 'created_at',
     UpdatedAt: 'updated_at',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListOrderByParameter = typeof IdentificationtasksListOrderByParameter[keyof typeof IdentificationtasksListOrderByParameter];

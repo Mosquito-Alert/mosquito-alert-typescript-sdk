@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr = {
     ObservationFlagsIsFavourite: 'observation_flags.is_favourite',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttr];

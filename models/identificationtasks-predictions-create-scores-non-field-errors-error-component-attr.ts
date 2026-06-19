@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr = {
     ScoresNonFieldErrors: 'scores.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr = typeof IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr = {
     ClassificationConfidenceLabel: 'classification_confidence_label',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr = typeof IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttr];

@@ -19,7 +19,7 @@ export const IdentificationtasksListResultCharacteristicsSexParameter = {
     Female: 'female',
     Male: 'male',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListResultCharacteristicsSexParameter = typeof IdentificationtasksListResultCharacteristicsSexParameter[keyof typeof IdentificationtasksListResultCharacteristicsSexParameter];

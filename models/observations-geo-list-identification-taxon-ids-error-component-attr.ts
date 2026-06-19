@@ -17,7 +17,7 @@
 
 export const ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr = {
     IdentificationTaxonIds: 'identification_taxon_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr = typeof ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr[keyof typeof ObservationsGeoListIdentificationTaxonIdsErrorComponentAttr];

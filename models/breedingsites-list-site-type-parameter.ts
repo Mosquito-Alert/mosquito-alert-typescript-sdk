@@ -23,7 +23,7 @@ export const BreedingsitesListSiteTypeParameter = {
     SmallContainer: 'small_container',
     StormDrain: 'storm_drain',
     Well: 'well',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesListSiteTypeParameter = typeof BreedingsitesListSiteTypeParameter[keyof typeof BreedingsitesListSiteTypeParameter];

@@ -17,7 +17,7 @@
 
 export const BiteGeoJsonModelListType = {
     FeatureCollection: 'FeatureCollection',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BiteGeoJsonModelListType = typeof BiteGeoJsonModelListType[keyof typeof BiteGeoJsonModelListType];

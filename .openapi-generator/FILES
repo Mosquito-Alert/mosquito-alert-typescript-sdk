@@ -845,11 +845,8 @@ docs/MinimalUserLocale.md
 docs/MobileApp.md
 docs/MobileAppRequest.md
 docs/MosquitoAppearance.md
-docs/MosquitoAppearanceAbdomen.md
-docs/MosquitoAppearanceLegs.md
 docs/MosquitoAppearanceRequest.md
 docs/MosquitoAppearanceSpecie.md
-docs/MosquitoAppearanceThorax.md
 docs/Notification.md
 docs/NotificationMessage.md
 docs/NotificationRequest.md
@@ -1887,11 +1884,8 @@ models/minimal-user-locale.ts
 models/minimal-user.ts
 models/mobile-app-request.ts
 models/mobile-app.ts
-models/mosquito-appearance-abdomen.ts
-models/mosquito-appearance-legs.ts
 models/mosquito-appearance-request.ts
 models/mosquito-appearance-specie.ts
-models/mosquito-appearance-thorax.ts
 models/mosquito-appearance.ts
 models/notification-message.ts
 models/notification-request.ts

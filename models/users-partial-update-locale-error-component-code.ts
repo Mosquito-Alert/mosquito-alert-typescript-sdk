@@ -18,7 +18,7 @@
 export const UsersPartialUpdateLocaleErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type UsersPartialUpdateLocaleErrorComponentCode = typeof UsersPartialUpdateLocaleErrorComponentCode[keyof typeof UsersPartialUpdateLocaleErrorComponentCode];

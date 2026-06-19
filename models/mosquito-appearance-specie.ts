@@ -26,7 +26,7 @@ export const MosquitoAppearanceSpecie = {
     Culex: 'culex',
     Other: 'other',
     Empty: '',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MosquitoAppearanceSpecie = typeof MosquitoAppearanceSpecie[keyof typeof MosquitoAppearanceSpecie];

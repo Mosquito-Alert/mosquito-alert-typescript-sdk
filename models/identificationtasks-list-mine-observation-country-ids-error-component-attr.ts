@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineObservationCountryIdsErrorComponentAttr = {
     ObservationCountryIds: 'observation_country_ids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineObservationCountryIdsErrorComponentAttr = typeof IdentificationtasksListMineObservationCountryIdsErrorComponentAttr[keyof typeof IdentificationtasksListMineObservationCountryIdsErrorComponentAttr];

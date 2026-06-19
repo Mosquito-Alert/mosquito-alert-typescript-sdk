@@ -17,7 +17,7 @@
 
 export const ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr = {
     MosquitoAppearanceLegs: 'mosquito_appearance.legs',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr = typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr[keyof typeof ObservationsCreateMosquitoAppearanceLegsErrorComponentAttr];

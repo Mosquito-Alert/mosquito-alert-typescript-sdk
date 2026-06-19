@@ -16,7 +16,7 @@
 
 
 export const TaxaListRankParameter = {
-    NUMBER_unknown_default_open_api: 11184809
+    NUMBER_unknown_default_open_api: 11184809,
 } as const;
 
 export type TaxaListRankParameter = typeof TaxaListRankParameter[keyof typeof TaxaListRankParameter];

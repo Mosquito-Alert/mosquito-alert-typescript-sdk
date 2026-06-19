@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr = {
     InsectConfidence: 'insect_confidence',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr = typeof IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttr];

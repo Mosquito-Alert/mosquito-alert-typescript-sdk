@@ -17,7 +17,7 @@
 
 export const BreedingsitesCreateInPublicAreaErrorComponentAttr = {
     InPublicArea: 'in_public_area',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreateInPublicAreaErrorComponentAttr = typeof BreedingsitesCreateInPublicAreaErrorComponentAttr[keyof typeof BreedingsitesCreateInPublicAreaErrorComponentAttr];

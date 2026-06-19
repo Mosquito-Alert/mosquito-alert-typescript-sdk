@@ -19,7 +19,7 @@ export const AnnotationDecisionLevel = {
     Normal: 'normal',
     Executive: 'executive',
     Final: 'final',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AnnotationDecisionLevel = typeof AnnotationDecisionLevel[keyof typeof AnnotationDecisionLevel];

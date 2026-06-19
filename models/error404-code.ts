@@ -17,7 +17,7 @@
 
 export const Error404Code = {
     NotFound: 'not_found',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type Error404Code = typeof Error404Code[keyof typeof Error404Code];

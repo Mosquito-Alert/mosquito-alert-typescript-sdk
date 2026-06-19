@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr = {
     ObservationFlagsIsVisible: 'observation_flags.is_visible',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttr];

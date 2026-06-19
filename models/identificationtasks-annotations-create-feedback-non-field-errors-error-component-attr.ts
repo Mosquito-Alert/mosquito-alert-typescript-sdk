@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr = {
     FeedbackNonFieldErrors: 'feedback.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttr];

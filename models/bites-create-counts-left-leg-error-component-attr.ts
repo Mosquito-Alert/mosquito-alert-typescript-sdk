@@ -17,7 +17,7 @@
 
 export const BitesCreateCountsLeftLegErrorComponentAttr = {
     CountsLeftLeg: 'counts.left_leg',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateCountsLeftLegErrorComponentAttr = typeof BitesCreateCountsLeftLegErrorComponentAttr[keyof typeof BitesCreateCountsLeftLegErrorComponentAttr];

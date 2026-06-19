@@ -22,7 +22,7 @@ export const BitesListOrderByParameter = {
     CreatedAt: 'created_at',
     Distance: 'distance',
     ReceivedAt: 'received_at',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesListOrderByParameter = typeof BitesListOrderByParameter[keyof typeof BitesListOrderByParameter];

@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleZhCnErrorComponentAttr = {
     ContentTitleZhMinusCn: 'content.title.zh-cn',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleZhCnErrorComponentAttr = typeof MessagesCreateContentTitleZhCnErrorComponentAttr[keyof typeof MessagesCreateContentTitleZhCnErrorComponentAttr];

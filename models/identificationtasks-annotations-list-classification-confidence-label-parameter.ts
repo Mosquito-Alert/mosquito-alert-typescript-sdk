@@ -18,7 +18,7 @@
 export const IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter = {
     Definitely: 'definitely',
     Probably: 'probably',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter = typeof IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter[keyof typeof IdentificationtasksAnnotationsListClassificationConfidenceLabelParameter];

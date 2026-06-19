@@ -17,7 +17,7 @@
 
 export const IdentificationtasksReviewCreateIsSafeErrorComponentAttr = {
     IsSafe: 'is_safe',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksReviewCreateIsSafeErrorComponentAttr = typeof IdentificationtasksReviewCreateIsSafeErrorComponentAttr[keyof typeof IdentificationtasksReviewCreateIsSafeErrorComponentAttr];

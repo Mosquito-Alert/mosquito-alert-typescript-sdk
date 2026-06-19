@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleNonFieldErrorsErrorComponentAttr = {
     ContentTitleNonFieldErrors: 'content.title.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleNonFieldErrorsErrorComponentAttr = typeof MessagesCreateContentTitleNonFieldErrorsErrorComponentAttr[keyof typeof MessagesCreateContentTitleNonFieldErrorsErrorComponentAttr];

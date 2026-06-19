@@ -18,7 +18,7 @@
 export const BitesCreateLocationPointLatitudeErrorComponentCode = {
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateLocationPointLatitudeErrorComponentCode = typeof BitesCreateLocationPointLatitudeErrorComponentCode[keyof typeof BitesCreateLocationPointLatitudeErrorComponentCode];

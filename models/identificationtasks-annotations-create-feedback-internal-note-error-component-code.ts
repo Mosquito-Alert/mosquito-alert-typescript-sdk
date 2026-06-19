@@ -19,7 +19,7 @@ export const IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorCompon
     Invalid: 'invalid',
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode = typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCode];

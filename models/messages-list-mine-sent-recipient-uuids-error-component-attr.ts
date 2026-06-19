@@ -17,7 +17,7 @@
 
 export const MessagesListMineSentRecipientUuidsErrorComponentAttr = {
     RecipientUuids: 'recipient_uuids',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesListMineSentRecipientUuidsErrorComponentAttr = typeof MessagesListMineSentRecipientUuidsErrorComponentAttr[keyof typeof MessagesListMineSentRecipientUuidsErrorComponentAttr];

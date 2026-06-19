@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr = {
     BboxXMin: 'bbox.x_min',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr = typeof IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttr];

@@ -25,7 +25,7 @@ export const CreatePhotoPredictionPredictedClass = {
     Culiseta: 'culiseta',
     OtherSpecies: 'other_species',
     NotSure: 'not_sure',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type CreatePhotoPredictionPredictedClass = typeof CreatePhotoPredictionPredictedClass[keyof typeof CreatePhotoPredictionPredictedClass];

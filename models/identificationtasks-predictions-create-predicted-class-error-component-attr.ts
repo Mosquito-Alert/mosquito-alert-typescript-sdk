@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr = {
     PredictedClass: 'predicted_class',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr = typeof IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttr];

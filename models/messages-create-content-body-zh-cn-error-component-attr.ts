@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodyZhCnErrorComponentAttr = {
     ContentBodyZhMinusCn: 'content.body.zh-cn',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyZhCnErrorComponentAttr = typeof MessagesCreateContentBodyZhCnErrorComponentAttr[keyof typeof MessagesCreateContentBodyZhCnErrorComponentAttr];

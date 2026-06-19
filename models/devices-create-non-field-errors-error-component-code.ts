@@ -19,7 +19,7 @@ export const DevicesCreateNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Null: 'null',
     Unique: 'unique',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateNonFieldErrorsErrorComponentCode = typeof DevicesCreateNonFieldErrorsErrorComponentCode[keyof typeof DevicesCreateNonFieldErrorsErrorComponentCode];

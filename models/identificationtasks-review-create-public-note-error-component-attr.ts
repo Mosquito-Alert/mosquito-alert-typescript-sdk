@@ -17,7 +17,7 @@
 
 export const IdentificationtasksReviewCreatePublicNoteErrorComponentAttr = {
     PublicNote: 'public_note',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksReviewCreatePublicNoteErrorComponentAttr = typeof IdentificationtasksReviewCreatePublicNoteErrorComponentAttr[keyof typeof IdentificationtasksReviewCreatePublicNoteErrorComponentAttr];

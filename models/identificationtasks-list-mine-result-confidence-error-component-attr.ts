@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultConfidenceErrorComponentAttr = {
     ResultConfidence: 'result_confidence',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultConfidenceErrorComponentAttr = typeof IdentificationtasksListMineResultConfidenceErrorComponentAttr[keyof typeof IdentificationtasksListMineResultConfidenceErrorComponentAttr];

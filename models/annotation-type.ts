@@ -18,7 +18,7 @@
 export const AnnotationType = {
     Short: 'short',
     Long: 'long',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AnnotationType = typeof AnnotationType[keyof typeof AnnotationType];

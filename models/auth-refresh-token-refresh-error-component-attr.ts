@@ -17,7 +17,7 @@
 
 export const AuthRefreshTokenRefreshErrorComponentAttr = {
     Refresh: 'refresh',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthRefreshTokenRefreshErrorComponentAttr = typeof AuthRefreshTokenRefreshErrorComponentAttr[keyof typeof AuthRefreshTokenRefreshErrorComponentAttr];

@@ -20,7 +20,7 @@ export const IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorCompo
     IncorrectType: 'incorrect_type',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode = typeof IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCode];

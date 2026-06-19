@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr = {
     CharacteristicsIsGravid: 'characteristics.is_gravid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttr];

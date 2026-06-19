@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodyMkErrorComponentAttr = {
     ContentBodyMk: 'content.body.mk',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodyMkErrorComponentAttr = typeof MessagesCreateContentBodyMkErrorComponentAttr[keyof typeof MessagesCreateContentBodyMkErrorComponentAttr];

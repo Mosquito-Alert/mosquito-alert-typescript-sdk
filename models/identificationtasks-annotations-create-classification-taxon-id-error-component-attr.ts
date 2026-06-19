@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr = {
     ClassificationTaxonId: 'classification.taxon_id',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttr];

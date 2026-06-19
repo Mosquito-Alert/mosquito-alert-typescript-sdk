@@ -17,7 +17,7 @@
 
 export const DevicesCreateModelErrorComponentAttr = {
     Model: 'model',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateModelErrorComponentAttr = typeof DevicesCreateModelErrorComponentAttr[keyof typeof DevicesCreateModelErrorComponentAttr];

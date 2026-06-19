@@ -17,7 +17,7 @@
 
 export const DevicesCreateOsLocaleErrorComponentAttr = {
     OsLocale: 'os.locale',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateOsLocaleErrorComponentAttr = typeof DevicesCreateOsLocaleErrorComponentAttr[keyof typeof DevicesCreateOsLocaleErrorComponentAttr];

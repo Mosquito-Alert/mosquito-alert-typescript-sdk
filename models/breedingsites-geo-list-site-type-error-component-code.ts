@@ -18,7 +18,7 @@
 export const BreedingsitesGeoListSiteTypeErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
     InvalidList: 'invalid_list',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesGeoListSiteTypeErrorComponentCode = typeof BreedingsitesGeoListSiteTypeErrorComponentCode[keyof typeof BreedingsitesGeoListSiteTypeErrorComponentCode];

@@ -20,7 +20,7 @@ export const BreedingsitesCreatePhotosErrorComponentCode = {
     NotAList: 'not_a_list',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BreedingsitesCreatePhotosErrorComponentCode = typeof BreedingsitesCreatePhotosErrorComponentCode[keyof typeof BreedingsitesCreatePhotosErrorComponentCode];

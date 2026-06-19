@@ -54,7 +54,7 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('predictionDestroy', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -97,7 +97,7 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('predictionPartialUpdate', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -141,7 +141,7 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('predictionRetrieve', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -186,7 +186,7 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'photoPredictionRequest' is not null or undefined
             assertParamExists('predictionUpdate', 'photoPredictionRequest', photoPredictionRequest)
             const localVarPath = `/photos/{uuid}/prediction/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -230,7 +230,7 @@ export const PhotosApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/photos/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

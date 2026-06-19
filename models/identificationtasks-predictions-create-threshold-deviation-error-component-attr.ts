@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr = {
     ThresholdDeviation: 'threshold_deviation',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr = typeof IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttr];

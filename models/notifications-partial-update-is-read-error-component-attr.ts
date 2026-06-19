@@ -17,7 +17,7 @@
 
 export const NotificationsPartialUpdateIsReadErrorComponentAttr = {
     IsRead: 'is_read',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type NotificationsPartialUpdateIsReadErrorComponentAttr = typeof NotificationsPartialUpdateIsReadErrorComponentAttr[keyof typeof NotificationsPartialUpdateIsReadErrorComponentAttr];

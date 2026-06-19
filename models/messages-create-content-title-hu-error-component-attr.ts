@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleHuErrorComponentAttr = {
     ContentTitleHu: 'content.title.hu',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleHuErrorComponentAttr = typeof MessagesCreateContentTitleHuErrorComponentAttr[keyof typeof MessagesCreateContentTitleHuErrorComponentAttr];

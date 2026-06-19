@@ -17,7 +17,7 @@
 
 export const DevicesCreateMobileAppPackageNameErrorComponentAttr = {
     MobileAppPackageName: 'mobile_app.package_name',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateMobileAppPackageNameErrorComponentAttr = typeof DevicesCreateMobileAppPackageNameErrorComponentAttr[keyof typeof DevicesCreateMobileAppPackageNameErrorComponentAttr];

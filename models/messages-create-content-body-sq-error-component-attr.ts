@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentBodySqErrorComponentAttr = {
     ContentBodySq: 'content.body.sq',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentBodySqErrorComponentAttr = typeof MessagesCreateContentBodySqErrorComponentAttr[keyof typeof MessagesCreateContentBodySqErrorComponentAttr];

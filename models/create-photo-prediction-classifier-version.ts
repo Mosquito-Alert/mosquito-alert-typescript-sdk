@@ -22,7 +22,7 @@ export const CreatePhotoPredictionClassifierVersion = {
     V20252: 'v2025.2',
     V20253: 'v2025.3',
     V20254: 'v2025.4',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type CreatePhotoPredictionClassifierVersion = typeof CreatePhotoPredictionClassifierVersion[keyof typeof CreatePhotoPredictionClassifierVersion];

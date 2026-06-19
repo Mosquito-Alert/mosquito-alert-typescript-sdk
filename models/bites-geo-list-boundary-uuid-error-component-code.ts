@@ -18,7 +18,7 @@
 export const BitesGeoListBoundaryUuidErrorComponentCode = {
     Invalid: 'invalid',
     NullCharactersNotAllowed: 'null_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListBoundaryUuidErrorComponentCode = typeof BitesGeoListBoundaryUuidErrorComponentCode[keyof typeof BitesGeoListBoundaryUuidErrorComponentCode];

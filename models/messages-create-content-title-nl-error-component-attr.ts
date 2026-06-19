@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleNlErrorComponentAttr = {
     ContentTitleNl: 'content.title.nl',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleNlErrorComponentAttr = typeof MessagesCreateContentTitleNlErrorComponentAttr[keyof typeof MessagesCreateContentTitleNlErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const BitesCreateEventEnvironmentErrorComponentCode = {
     InvalidChoice: 'invalid_choice',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateEventEnvironmentErrorComponentCode = typeof BitesCreateEventEnvironmentErrorComponentCode[keyof typeof BitesCreateEventEnvironmentErrorComponentCode];

@@ -19,7 +19,7 @@ export const DeviceType = {
     Ios: 'ios',
     Android: 'android',
     Web: 'web',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DeviceType = typeof DeviceType[keyof typeof DeviceType];

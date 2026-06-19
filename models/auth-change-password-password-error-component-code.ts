@@ -23,7 +23,7 @@ export const AuthChangePasswordPasswordErrorComponentCode = {
     NullCharactersNotAllowed: 'null_characters_not_allowed',
     Required: 'required',
     SurrogateCharactersNotAllowed: 'surrogate_characters_not_allowed',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type AuthChangePasswordPasswordErrorComponentCode = typeof AuthChangePasswordPasswordErrorComponentCode[keyof typeof AuthChangePasswordPasswordErrorComponentCode];

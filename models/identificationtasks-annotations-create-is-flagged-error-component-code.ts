@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode = {
     Null: 'null',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode = typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCode];

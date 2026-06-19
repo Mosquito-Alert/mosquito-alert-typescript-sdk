@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultAgreementErrorComponentAttr = {
     ResultAgreement: 'result_agreement',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultAgreementErrorComponentAttr = typeof IdentificationtasksListMineResultAgreementErrorComponentAttr[keyof typeof IdentificationtasksListMineResultAgreementErrorComponentAttr];

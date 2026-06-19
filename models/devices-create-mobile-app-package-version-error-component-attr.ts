@@ -17,7 +17,7 @@
 
 export const DevicesCreateMobileAppPackageVersionErrorComponentAttr = {
     MobileAppPackageVersion: 'mobile_app.package_version',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type DevicesCreateMobileAppPackageVersionErrorComponentAttr = typeof DevicesCreateMobileAppPackageVersionErrorComponentAttr[keyof typeof DevicesCreateMobileAppPackageVersionErrorComponentAttr];

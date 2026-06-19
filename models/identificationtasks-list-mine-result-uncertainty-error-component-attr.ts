@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultUncertaintyErrorComponentAttr = {
     ResultUncertainty: 'result_uncertainty',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultUncertaintyErrorComponentAttr = typeof IdentificationtasksListMineResultUncertaintyErrorComponentAttr[keyof typeof IdentificationtasksListMineResultUncertaintyErrorComponentAttr];

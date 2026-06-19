@@ -17,7 +17,7 @@
 
 export const BitesGeoListOrderByErrorComponentAttr = {
     OrderBy: 'order_by',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesGeoListOrderByErrorComponentAttr = typeof BitesGeoListOrderByErrorComponentAttr[keyof typeof BitesGeoListOrderByErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr = {
     BestPhotoUuid: 'best_photo_uuid',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttr];

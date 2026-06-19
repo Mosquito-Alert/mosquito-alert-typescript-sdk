@@ -17,7 +17,7 @@
 
 export const MessagesCreateContentTitleGlErrorComponentAttr = {
     ContentTitleGl: 'content.title.gl',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateContentTitleGlErrorComponentAttr = typeof MessagesCreateContentTitleGlErrorComponentAttr[keyof typeof MessagesCreateContentTitleGlErrorComponentAttr];

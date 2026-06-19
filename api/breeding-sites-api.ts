@@ -176,7 +176,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('destroy', 'uuid', uuid)
             const localVarPath = `/breeding-sites/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -713,7 +713,7 @@ export const BreedingSitesApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('retrieve', 'uuid', uuid)
             const localVarPath = `/breeding-sites/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+                .replace('{uuid}', encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

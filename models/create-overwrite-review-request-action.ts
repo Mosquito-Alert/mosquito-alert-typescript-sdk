@@ -17,7 +17,7 @@
 
 export const CreateOverwriteReviewRequestAction = {
     Overwrite: 'overwrite',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type CreateOverwriteReviewRequestAction = typeof CreateOverwriteReviewRequestAction[keyof typeof CreateOverwriteReviewRequestAction];

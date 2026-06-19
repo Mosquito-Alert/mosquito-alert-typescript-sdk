@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineStatusErrorComponentAttr = {
     Status: 'status',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineStatusErrorComponentAttr = typeof IdentificationtasksListMineStatusErrorComponentAttr[keyof typeof IdentificationtasksListMineStatusErrorComponentAttr];

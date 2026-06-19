@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr = {
     ScoresAnopheles: 'scores.anopheles',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr = typeof IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttr];

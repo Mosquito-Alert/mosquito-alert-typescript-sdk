@@ -18,7 +18,7 @@
 export const IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode = {
     Invalid: 'invalid',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode = typeof IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode[keyof typeof IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCode];

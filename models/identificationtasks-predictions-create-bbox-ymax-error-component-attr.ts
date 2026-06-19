@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttr = {
     BboxYMax: 'bbox.y_max',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttr = typeof IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttr];

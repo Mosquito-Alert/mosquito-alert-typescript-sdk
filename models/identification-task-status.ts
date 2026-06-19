@@ -21,7 +21,7 @@ export const IdentificationTaskStatus = {
     Review: 'review',
     Done: 'done',
     Archived: 'archived',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationTaskStatus = typeof IdentificationTaskStatus[keyof typeof IdentificationTaskStatus];

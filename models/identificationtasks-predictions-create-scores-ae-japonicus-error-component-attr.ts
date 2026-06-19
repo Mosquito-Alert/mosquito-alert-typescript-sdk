@@ -17,7 +17,7 @@
 
 export const IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttr = {
     ScoresAeJaponicus: 'scores.ae_japonicus',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttr = typeof IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttr[keyof typeof IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttr];

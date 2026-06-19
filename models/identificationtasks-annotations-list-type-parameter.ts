@@ -18,7 +18,7 @@
 export const IdentificationtasksAnnotationsListTypeParameter = {
     Long: 'long',
     Short: 'short',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsListTypeParameter = typeof IdentificationtasksAnnotationsListTypeParameter[keyof typeof IdentificationtasksAnnotationsListTypeParameter];

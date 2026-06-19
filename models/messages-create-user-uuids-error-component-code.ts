@@ -21,7 +21,7 @@ export const MessagesCreateUserUuidsErrorComponentCode = {
     NotAList: 'not_a_list',
     Null: 'null',
     Required: 'required',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type MessagesCreateUserUuidsErrorComponentCode = typeof MessagesCreateUserUuidsErrorComponentCode[keyof typeof MessagesCreateUserUuidsErrorComponentCode];

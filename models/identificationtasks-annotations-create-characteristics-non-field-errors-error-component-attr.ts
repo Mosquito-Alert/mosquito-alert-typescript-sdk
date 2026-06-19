@@ -17,7 +17,7 @@
 
 export const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr = {
     CharacteristicsNonFieldErrors: 'characteristics.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr = typeof IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr[keyof typeof IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttr];

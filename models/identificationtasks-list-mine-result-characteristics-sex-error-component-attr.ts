@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr = {
     ResultCharacteristicsSex: 'result_characteristics_sex',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr = typeof IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr[keyof typeof IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttr];

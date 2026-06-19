@@ -19,7 +19,7 @@ export const IdentificationtasksListReviewActionParameter = {
     Agree: 'agree',
     Null: 'null',
     Overwrite: 'overwrite',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListReviewActionParameter = typeof IdentificationtasksListReviewActionParameter[keyof typeof IdentificationtasksListReviewActionParameter];

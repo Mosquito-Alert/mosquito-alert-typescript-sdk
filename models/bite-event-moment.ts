@@ -25,7 +25,7 @@ export const BiteEventMoment = {
     LastAfternoon: 'last_afternoon',
     LastNight: 'last_night',
     Empty: '',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BiteEventMoment = typeof BiteEventMoment[keyof typeof BiteEventMoment];

@@ -17,7 +17,7 @@
 
 export const IdentificationtasksListMineNumAnnotationsErrorComponentAttr = {
     NumAnnotations: 'num_annotations',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type IdentificationtasksListMineNumAnnotationsErrorComponentAttr = typeof IdentificationtasksListMineNumAnnotationsErrorComponentAttr[keyof typeof IdentificationtasksListMineNumAnnotationsErrorComponentAttr];

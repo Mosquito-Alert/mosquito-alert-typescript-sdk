@@ -17,7 +17,7 @@
 
 export const BitesCreateLocationPointNonFieldErrorsErrorComponentAttr = {
     LocationPointNonFieldErrors: 'location.point.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type BitesCreateLocationPointNonFieldErrorsErrorComponentAttr = typeof BitesCreateLocationPointNonFieldErrorsErrorComponentAttr[keyof typeof BitesCreateLocationPointNonFieldErrorsErrorComponentAttr];

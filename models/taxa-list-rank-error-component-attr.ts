@@ -17,7 +17,7 @@
 
 export const TaxaListRankErrorComponentAttr = {
     Rank: 'rank',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type TaxaListRankErrorComponentAttr = typeof TaxaListRankErrorComponentAttr[keyof typeof TaxaListRankErrorComponentAttr];

@@ -17,7 +17,7 @@
 
 export const ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr = {
     MosquitoAppearanceNonFieldErrors: 'mosquito_appearance.non_field_errors',
-    UnknownDefaultOpenApi: '11184809'
+    UnknownDefaultOpenApi: '11184809',
 } as const;
 
 export type ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr = typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr[keyof typeof ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttr];
