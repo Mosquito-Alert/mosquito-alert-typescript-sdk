@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** |  | [readonly] [default to undefined]
 **short_id** | **string** |  | [readonly] [default to undefined]
-**user_uuid** | **string** |  | [readonly] [default to undefined]
+**user** | [**MinimalUser**](MinimalUser.md) |  | [readonly] [default to undefined]
 **created_at** | **string** |  | [default to undefined]
 **created_at_local** | **string** | The date and time when the record was created, displayed without timezone field. | [readonly] [default to undefined]
 **received_at** | **string** |  | [readonly] [default to undefined]
@@ -23,7 +23,7 @@ import { SimplifiedObservationWithPhotos } from 'mosquito-alert';
 const instance: SimplifiedObservationWithPhotos = {
     uuid,
     short_id,
-    user_uuid,
+    user,
     created_at,
     created_at_local,
     received_at,

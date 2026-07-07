@@ -9,7 +9,6 @@ export * from './annotation-request';
 export * from './annotation-type';
 export * from './app-user-token-obtain-pair';
 export * from './app-user-token-obtain-pair-request';
-export * from './assigned-observation';
 export * from './assignment';
 export * from './auth-change-password-error';
 export * from './auth-change-password-non-field-errors-error-component';

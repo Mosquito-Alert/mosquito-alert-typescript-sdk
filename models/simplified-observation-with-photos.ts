@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { MinimalUser } from './minimal-user';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { SimplePhoto } from './simple-photo';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -23,7 +26,7 @@ import type { SimplifiedLocation } from './simplified-location';
 export interface SimplifiedObservationWithPhotos {
     'uuid': string;
     'short_id': string;
-    'user_uuid': string;
+    'user': MinimalUser;
     'created_at': string;
     /**
      * The date and time when the record was created, displayed without timezone field.

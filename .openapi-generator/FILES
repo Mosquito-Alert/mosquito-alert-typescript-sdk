@@ -35,7 +35,6 @@ docs/AnnotationRequest.md
 docs/AnnotationType.md
 docs/AppUserTokenObtainPair.md
 docs/AppUserTokenObtainPairRequest.md
-docs/AssignedObservation.md
 docs/Assignment.md
 docs/AuthApi.md
 docs/AuthChangePasswordError.md
@@ -1084,7 +1083,6 @@ models/annotation-type.ts
 models/annotation.ts
 models/app-user-token-obtain-pair-request.ts
 models/app-user-token-obtain-pair.ts
-models/assigned-observation.ts
 models/assignment.ts
 models/auth-change-password-error.ts
 models/auth-change-password-non-field-errors-error-component-attr.ts

@@ -18,10 +18,10 @@
 import type { AnnotationType } from './annotation-type';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AssignedObservation } from './assigned-observation';
+import type { SimplifiedObservationWithPhotos } from './simplified-observation-with-photos';
 
 export interface Assignment {
-    'observation': AssignedObservation;
+    'observation': SimplifiedObservationWithPhotos;
     'annotation_type': AnnotationType;
 }
 
