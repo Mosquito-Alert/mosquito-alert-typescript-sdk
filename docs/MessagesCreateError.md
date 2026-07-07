@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**MessagesCreateContentBodyZhCnErrorComponentAttr**](MessagesCreateContentBodyZhCnErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**MessagesCreateContentBodyBgErrorComponentCode**](MessagesCreateContentBodyBgErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**MessagesCreateAudienceLocaleErrorComponentAttr**](MessagesCreateAudienceLocaleErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**MessagesCreateAudienceLocaleErrorComponentCode**](MessagesCreateAudienceLocaleErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

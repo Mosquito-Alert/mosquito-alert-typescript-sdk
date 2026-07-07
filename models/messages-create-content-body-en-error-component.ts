@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateContentBodyBgErrorComponentCode } from './messages-create-content-body-bg-error-component-code';
+import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-token-password-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesCreateContentBodyEnErrorComponentAttr } from './messages-create-content-body-en-error-component-attr';
 
 export interface MessagesCreateContentBodyEnErrorComponent {
     'attr': MessagesCreateContentBodyEnErrorComponentAttr;
-    'code': MessagesCreateContentBodyBgErrorComponentCode;
+    'code': AuthObtainTokenPasswordErrorComponentCode;
     'detail': string;
 }
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**MessagesListMineSentRecipientUuidsErrorComponentAttr**](MessagesListMineSentRecipientUuidsErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode**](IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**MessagesCreateTargetErrorComponentAttr**](MessagesCreateTargetErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**BitesCreateEventEnvironmentErrorComponentCode**](BitesCreateEventEnvironmentErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

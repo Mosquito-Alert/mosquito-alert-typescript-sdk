@@ -15,14 +15,14 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateContentTitleBgErrorComponentCode } from './messages-create-content-title-bg-error-component-code';
+import type { DevicesCreateDeviceIdErrorComponentCode } from './devices-create-device-id-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesCreateContentTitleEnErrorComponentAttr } from './messages-create-content-title-en-error-component-attr';
 
 export interface MessagesCreateContentTitleEnErrorComponent {
     'attr': MessagesCreateContentTitleEnErrorComponentAttr;
-    'code': MessagesCreateContentTitleBgErrorComponentCode;
+    'code': DevicesCreateDeviceIdErrorComponentCode;
     'detail': string;
 }
 

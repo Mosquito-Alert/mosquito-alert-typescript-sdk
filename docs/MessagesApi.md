@@ -9,12 +9,10 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |[**listMineSent**](#listminesent) | **GET** /me/messages/sent/ | |
 |[**recipientsList**](#recipientslist) | **GET** /messages/{id}/recipients/ | |
 |[**retrieve**](#retrieve) | **GET** /messages/{id}/ | |
-|[**topicsList**](#topicslist) | **GET** /messages/topics/ | |
-|[**topicsRetrieve**](#topicsretrieve) | **GET** /messages/topics/{code}/ | |
-|[**topicsSend**](#topicssend) | **POST** /messages/topics/{code}/send/ | |
+|[**targetingRetrieve**](#targetingretrieve) | **GET** /messages/{id}/targeting/ | |
 
 # **create**
-> CreateUserMessage create(createUserMessageRequest)
+> Message create()
 
 
 ### Example
@@ -23,16 +21,16 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 import {
     MessagesApi,
     Configuration,
-    CreateUserMessageRequest
+    MetaCreateMessageRequest
 } from 'mosquito-alert';
 
 const configuration = new Configuration();
 const apiInstance = new MessagesApi(configuration);
 
-let createUserMessageRequest: CreateUserMessageRequest; //
+let metaCreateMessageRequest: MetaCreateMessageRequest; // (optional)
 
 const { status, data } = await apiInstance.create(
-    createUserMessageRequest
+    metaCreateMessageRequest
 );
 ```
 
@@ -40,12 +38,12 @@ const { status, data } = await apiInstance.create(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **createUserMessageRequest** | **CreateUserMessageRequest**|  | |
+| **metaCreateMessageRequest** | **MetaCreateMessageRequest**|  | |
 
 
 ### Return type
 
-**CreateUserMessage**
+**Message**
 
 ### Authorization
 
@@ -87,12 +85,14 @@ let orderBy: Array<MessagesListMineSentOrderByParameter>; //Ordering   (optional
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let recipientUuids: Array<string>; //UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens). (optional) (default to undefined)
+let target: MessagesListMineSentTargetParameter; //Filter messages by target audience. Use \'users\' to filter messages sent to specific users, and \'audience\' to filter messages sent to a broader audience.   (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
     orderBy,
     page,
     pageSize,
-    recipientUuids
+    recipientUuids,
+    target
 );
 ```
 
@@ -104,6 +104,7 @@ const { status, data } = await apiInstance.list(
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **recipientUuids** | **Array&lt;string&gt;** | UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens). | (optional) defaults to undefined|
+| **target** | **MessagesListMineSentTargetParameter** | Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.   | (optional) defaults to undefined|
 
 
 ### Return type
@@ -151,12 +152,14 @@ let orderBy: Array<MessagesListMineSentOrderByParameter>; //Ordering   (optional
 let page: number; //A page number within the paginated result set. (optional) (default to undefined)
 let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let recipientUuids: Array<string>; //UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens). (optional) (default to undefined)
+let target: MessagesListMineSentTargetParameter; //Filter messages by target audience. Use \'users\' to filter messages sent to specific users, and \'audience\' to filter messages sent to a broader audience.   (optional) (default to undefined)
 
 const { status, data } = await apiInstance.listMineSent(
     orderBy,
     page,
     pageSize,
-    recipientUuids
+    recipientUuids,
+    target
 );
 ```
 
@@ -168,6 +171,7 @@ const { status, data } = await apiInstance.listMineSent(
 | **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
 | **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **recipientUuids** | **Array&lt;string&gt;** | UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens). | (optional) defaults to undefined|
+| **target** | **MessagesListMineSentTargetParameter** | Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.   | (optional) defaults to undefined|
 
 
 ### Return type
@@ -301,8 +305,8 @@ const { status, data } = await apiInstance.retrieve(
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **topicsList**
-> PaginatedMessageTopicList topicsList()
+# **targetingRetrieve**
+> MessageTargeting targetingRetrieve()
 
 
 ### Example
@@ -316,14 +320,10 @@ import {
 const configuration = new Configuration();
 const apiInstance = new MessagesApi(configuration);
 
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
-let search: string; //A search term. (optional) (default to undefined)
+let id: number; //A unique integer value identifying this notification. (default to undefined)
 
-const { status, data } = await apiInstance.topicsList(
-    page,
-    pageSize,
-    search
+const { status, data } = await apiInstance.targetingRetrieve(
+    id
 );
 ```
 
@@ -331,14 +331,12 @@ const { status, data } = await apiInstance.topicsList(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
-| **search** | [**string**] | A search term. | (optional) defaults to undefined|
+| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
 
 
 ### Return type
 
-**PaginatedMessageTopicList**
+**MessageTargeting**
 
 ### Authorization
 
@@ -353,118 +351,6 @@ const { status, data } = await apiInstance.topicsList(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**401** |  |  -  |
-|**403** |  |  -  |
-|**404** |  |  -  |
-|**200** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **topicsRetrieve**
-> MessageTopic topicsRetrieve()
-
-
-### Example
-
-```typescript
-import {
-    MessagesApi,
-    Configuration
-} from 'mosquito-alert';
-
-const configuration = new Configuration();
-const apiInstance = new MessagesApi(configuration);
-
-let code: string; // (default to undefined)
-
-const { status, data } = await apiInstance.topicsRetrieve(
-    code
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **code** | [**string**] |  | defaults to undefined|
-
-
-### Return type
-
-**MessageTopic**
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**401** |  |  -  |
-|**403** |  |  -  |
-|**404** |  |  -  |
-|**200** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **topicsSend**
-> CreateTopicMessage topicsSend(createTopicMessageRequest)
-
-Send a message to a specific topic
-
-### Example
-
-```typescript
-import {
-    MessagesApi,
-    Configuration,
-    CreateTopicMessageRequest
-} from 'mosquito-alert';
-
-const configuration = new Configuration();
-const apiInstance = new MessagesApi(configuration);
-
-let code: string; // (default to undefined)
-let createTopicMessageRequest: CreateTopicMessageRequest; //
-
-const { status, data } = await apiInstance.topicsSend(
-    code,
-    createTopicMessageRequest
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **createTopicMessageRequest** | **CreateTopicMessageRequest**|  | |
-| **code** | [**string**] |  | defaults to undefined|
-
-
-### Return type
-
-**CreateTopicMessage**
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**400** |  |  -  |
 |**401** |  |  -  |
 |**403** |  |  -  |
 |**404** |  |  -  |

@@ -15,13 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { CreateUserMessageRequestTarget } from './create-user-message-request-target';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { MessageContentRequest } from './message-content-request';
 
 export interface CreateUserMessageRequest {
-    'user_uuids': Array<string>;
     /**
      * The content of the message
      */
     'content': MessageContentRequest;
+    'target': CreateUserMessageRequestTarget;
+    'user_uuids': Array<string>;
 }
+
+
 

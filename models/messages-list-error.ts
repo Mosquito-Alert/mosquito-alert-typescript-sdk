@@ -15,20 +15,23 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
+import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesListMineSentRecipientUuidsErrorComponentAttr } from './messages-list-mine-sent-recipient-uuids-error-component-attr';
+import type { MessagesCreateTargetErrorComponentAttr } from './messages-create-target-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesListOrderByErrorComponent } from './messages-list-order-by-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesListRecipientUuidsErrorComponent } from './messages-list-recipient-uuids-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesListTargetErrorComponent } from './messages-list-target-error-component';
 
 /**
  * @type MessagesListError
  */
-export type MessagesListError = { attr: 'order_by' } & MessagesListOrderByErrorComponent | { attr: 'recipient_uuids' } & MessagesListRecipientUuidsErrorComponent;
+export type MessagesListError = { attr: 'order_by' } & MessagesListOrderByErrorComponent | { attr: 'recipient_uuids' } & MessagesListRecipientUuidsErrorComponent | { attr: 'target' } & MessagesListTargetErrorComponent;
 
 

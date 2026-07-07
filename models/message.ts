@@ -18,6 +18,9 @@
 import type { MessageContent } from './message-content';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { MessageTarget } from './message-target';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { SimpleUser } from './simple-user';
 
 export interface Message {
@@ -27,6 +30,9 @@ export interface Message {
      * The content of the message
      */
     'content': MessageContent;
+    'target': MessageTarget;
     'created_at': string;
 }
+
+
 

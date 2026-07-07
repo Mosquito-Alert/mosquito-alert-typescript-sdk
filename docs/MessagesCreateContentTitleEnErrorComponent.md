@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**MessagesCreateContentTitleEnErrorComponentAttr**](MessagesCreateContentTitleEnErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**MessagesCreateContentTitleBgErrorComponentCode**](MessagesCreateContentTitleBgErrorComponentCode.md) |  | [default to undefined]
+**code** | [**DevicesCreateDeviceIdErrorComponentCode**](DevicesCreateDeviceIdErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

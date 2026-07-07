@@ -22,14 +22,6 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import type { CreateTopicMessage } from '../models';
-// @ts-ignore
-import type { CreateTopicMessageRequest } from '../models';
-// @ts-ignore
-import type { CreateUserMessage } from '../models';
-// @ts-ignore
-import type { CreateUserMessageRequest } from '../models';
-// @ts-ignore
 import type { ErrorResponse401 } from '../models';
 // @ts-ignore
 import type { ErrorResponse403 } from '../models';
@@ -40,21 +32,21 @@ import type { Message } from '../models';
 // @ts-ignore
 import type { MessageRecipient } from '../models';
 // @ts-ignore
-import type { MessageTopic } from '../models';
+import type { MessageTargeting } from '../models';
 // @ts-ignore
 import type { MessagesCreateValidationError } from '../models';
 // @ts-ignore
 import type { MessagesListMineSentOrderByParameter } from '../models';
 // @ts-ignore
+import type { MessagesListMineSentTargetParameter } from '../models';
+// @ts-ignore
 import type { MessagesListMineSentValidationError } from '../models';
 // @ts-ignore
 import type { MessagesListValidationError } from '../models';
 // @ts-ignore
-import type { MessagesTopicsSendValidationError } from '../models';
+import type { MetaCreateMessageRequest } from '../models';
 // @ts-ignore
 import type { PaginatedMessageList } from '../models';
-// @ts-ignore
-import type { PaginatedMessageTopicList } from '../models';
 /**
  * MessagesApi - axios parameter creator
  */
@@ -62,13 +54,11 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
     return {
         /**
          * 
-         * @param {CreateUserMessageRequest} createUserMessageRequest 
+         * @param {MetaCreateMessageRequest} [metaCreateMessageRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create: async (createUserMessageRequest: CreateUserMessageRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'createUserMessageRequest' is not null or undefined
-            assertParamExists('create', 'createUserMessageRequest', createUserMessageRequest)
+        create: async (metaCreateMessageRequest?: MetaCreateMessageRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/messages/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -96,7 +86,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(createUserMessageRequest, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(metaCreateMessageRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -109,10 +99,11 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<string>} [recipientUuids] UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+         * @param {MessagesListMineSentTargetParameter} [target] Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/messages/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -150,6 +141,10 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['recipient_uuids'] = recipientUuids;
             }
 
+            if (target !== undefined) {
+                localVarQueryParameter['target'] = target;
+            }
+
             localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -167,10 +162,11 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<string>} [recipientUuids] UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+         * @param {MessagesListMineSentTargetParameter} [target] Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMineSent: async (orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listMineSent: async (orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/me/messages/sent/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -206,6 +202,10 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
 
             if (recipientUuids) {
                 localVarQueryParameter['recipient_uuids'] = recipientUuids;
+            }
+
+            if (target !== undefined) {
+                localVarQueryParameter['target'] = target;
             }
 
             localVarHeaderParameter['Accept'] = 'application/json';
@@ -305,68 +305,15 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {number} id A unique integer value identifying this notification.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicsList: async (page?: number, pageSize?: number, search?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/messages/topics/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-            // authentication cookieAuth required
-
-            // authentication jwtAuth required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-            if (page !== undefined) {
-                localVarQueryParameter['page'] = page;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page_size'] = pageSize;
-            }
-
-            if (search !== undefined) {
-                localVarQueryParameter['search'] = search;
-            }
-
-            localVarHeaderParameter['Accept'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} code 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicsRetrieve: async (code: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'code' is not null or undefined
-            assertParamExists('topicsRetrieve', 'code', code)
-            const localVarPath = `/messages/topics/{code}/`
-                .replace('{code}', encodeURIComponent(String(code)));
+        targetingRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('targetingRetrieve', 'id', id)
+            const localVarPath = `/messages/{id}/targeting/`
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -392,53 +339,6 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Send a message to a specific topic
-         * @param {string} code 
-         * @param {CreateTopicMessageRequest} createTopicMessageRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicsSend: async (code: string, createTopicMessageRequest: CreateTopicMessageRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'code' is not null or undefined
-            assertParamExists('topicsSend', 'code', code)
-            // verify required parameter 'createTopicMessageRequest' is not null or undefined
-            assertParamExists('topicsSend', 'createTopicMessageRequest', createTopicMessageRequest)
-            const localVarPath = `/messages/topics/{code}/send/`
-                .replace('{code}', encodeURIComponent(String(code)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication tokenAuth required
-            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
-
-            // authentication cookieAuth required
-
-            // authentication jwtAuth required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarHeaderParameter['Accept'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(createTopicMessageRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -456,12 +356,12 @@ export const MessagesApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {CreateUserMessageRequest} createUserMessageRequest 
+         * @param {MetaCreateMessageRequest} [metaCreateMessageRequest] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async create(createUserMessageRequest: CreateUserMessageRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateUserMessage>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.create(createUserMessageRequest, options);
+        async create(metaCreateMessageRequest?: MetaCreateMessageRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Message>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.create(metaCreateMessageRequest, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.create']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -472,11 +372,12 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<string>} [recipientUuids] UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+         * @param {MessagesListMineSentTargetParameter} [target] Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(orderBy, page, pageSize, recipientUuids, options);
+        async list(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(orderBy, page, pageSize, recipientUuids, target, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -487,11 +388,12 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<string>} [recipientUuids] UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+         * @param {MessagesListMineSentTargetParameter} [target] Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMineSent(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listMineSent(orderBy, page, pageSize, recipientUuids, options);
+        async listMineSent(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listMineSent(orderBy, page, pageSize, recipientUuids, target, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.listMineSent']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -522,41 +424,14 @@ export const MessagesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [search] A search term.
+         * @param {number} id A unique integer value identifying this notification.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async topicsList(page?: number, pageSize?: number, search?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageTopicList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.topicsList(page, pageSize, search, options);
+        async targetingRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTargeting>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.targetingRetrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['MessagesApi.topicsList']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @param {string} code 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async topicsRetrieve(code: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTopic>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.topicsRetrieve(code, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['MessagesApi.topicsRetrieve']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * Send a message to a specific topic
-         * @param {string} code 
-         * @param {CreateTopicMessageRequest} createTopicMessageRequest 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async topicsSend(code: string, createTopicMessageRequest: CreateTopicMessageRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateTopicMessage>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.topicsSend(code, createTopicMessageRequest, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['MessagesApi.topicsSend']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['MessagesApi.targetingRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -574,8 +449,8 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        create(requestParameters: MessagesApiCreateRequest, options?: RawAxiosRequestConfig): AxiosPromise<CreateUserMessage> {
-            return localVarFp.create(requestParameters.createUserMessageRequest, options).then((request) => request(axios, basePath));
+        create(requestParameters: MessagesApiCreateRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Message> {
+            return localVarFp.create(requestParameters.metaCreateMessageRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -584,7 +459,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         list(requestParameters: MessagesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageList> {
-            return localVarFp.list(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, options).then((request) => request(axios, basePath));
+            return localVarFp.list(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(axios, basePath));
         },
         /**
          * Get current user\'s sent messages
@@ -593,7 +468,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         listMineSent(requestParameters: MessagesApiListMineSentRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageList> {
-            return localVarFp.listMineSent(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, options).then((request) => request(axios, basePath));
+            return localVarFp.listMineSent(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -615,30 +490,12 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
         },
         /**
          * 
-         * @param {MessagesApiTopicsListRequest} requestParameters Request parameters.
+         * @param {MessagesApiTargetingRetrieveRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicsList(requestParameters: MessagesApiTopicsListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageTopicList> {
-            return localVarFp.topicsList(requestParameters.page, requestParameters.pageSize, requestParameters.search, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {MessagesApiTopicsRetrieveRequest} requestParameters Request parameters.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicsRetrieve(requestParameters: MessagesApiTopicsRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<MessageTopic> {
-            return localVarFp.topicsRetrieve(requestParameters.code, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Send a message to a specific topic
-         * @param {MessagesApiTopicsSendRequest} requestParameters Request parameters.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        topicsSend(requestParameters: MessagesApiTopicsSendRequest, options?: RawAxiosRequestConfig): AxiosPromise<CreateTopicMessage> {
-            return localVarFp.topicsSend(requestParameters.code, requestParameters.createTopicMessageRequest, options).then((request) => request(axios, basePath));
+        targetingRetrieve(requestParameters: MessagesApiTargetingRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<MessageTargeting> {
+            return localVarFp.targetingRetrieve(requestParameters.id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -647,7 +504,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
  * Request parameters for create operation in MessagesApi.
  */
 export interface MessagesApiCreateRequest {
-    readonly createUserMessageRequest: CreateUserMessageRequest
+    readonly metaCreateMessageRequest?: MetaCreateMessageRequest
 }
 
 /**
@@ -673,6 +530,11 @@ export interface MessagesApiListRequest {
      * UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
      */
     readonly recipientUuids?: Array<string>
+
+    /**
+     * Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
+     */
+    readonly target?: MessagesListMineSentTargetParameter
 }
 
 /**
@@ -698,6 +560,11 @@ export interface MessagesApiListMineSentRequest {
      * UUID randomly generated on phone to identify each unique user. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
      */
     readonly recipientUuids?: Array<string>
+
+    /**
+     * Filter messages by target audience. Use \&#39;users\&#39; to filter messages sent to specific users, and \&#39;audience\&#39; to filter messages sent to a broader audience.  
+     */
+    readonly target?: MessagesListMineSentTargetParameter
 }
 
 /**
@@ -721,39 +588,13 @@ export interface MessagesApiRetrieveRequest {
 }
 
 /**
- * Request parameters for topicsList operation in MessagesApi.
+ * Request parameters for targetingRetrieve operation in MessagesApi.
  */
-export interface MessagesApiTopicsListRequest {
+export interface MessagesApiTargetingRetrieveRequest {
     /**
-     * A page number within the paginated result set.
+     * A unique integer value identifying this notification.
      */
-    readonly page?: number
-
-    /**
-     * Number of results to return per page.
-     */
-    readonly pageSize?: number
-
-    /**
-     * A search term.
-     */
-    readonly search?: string
-}
-
-/**
- * Request parameters for topicsRetrieve operation in MessagesApi.
- */
-export interface MessagesApiTopicsRetrieveRequest {
-    readonly code: string
-}
-
-/**
- * Request parameters for topicsSend operation in MessagesApi.
- */
-export interface MessagesApiTopicsSendRequest {
-    readonly code: string
-
-    readonly createTopicMessageRequest: CreateTopicMessageRequest
+    readonly id: number
 }
 
 /**
@@ -766,8 +607,8 @@ export class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public create(requestParameters: MessagesApiCreateRequest, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).create(requestParameters.createUserMessageRequest, options).then((request) => request(this.axios, this.basePath));
+    public create(requestParameters: MessagesApiCreateRequest = {}, options?: RawAxiosRequestConfig) {
+        return MessagesApiFp(this.configuration).create(requestParameters.metaCreateMessageRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -777,7 +618,7 @@ export class MessagesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public list(requestParameters: MessagesApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).list(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, options).then((request) => request(this.axios, this.basePath));
+        return MessagesApiFp(this.configuration).list(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -787,7 +628,7 @@ export class MessagesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public listMineSent(requestParameters: MessagesApiListMineSentRequest = {}, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).listMineSent(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, options).then((request) => request(this.axios, this.basePath));
+        return MessagesApiFp(this.configuration).listMineSent(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -812,32 +653,12 @@ export class MessagesApi extends BaseAPI {
 
     /**
      * 
-     * @param {MessagesApiTopicsListRequest} requestParameters Request parameters.
+     * @param {MessagesApiTargetingRetrieveRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public topicsList(requestParameters: MessagesApiTopicsListRequest = {}, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).topicsList(requestParameters.page, requestParameters.pageSize, requestParameters.search, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {MessagesApiTopicsRetrieveRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    public topicsRetrieve(requestParameters: MessagesApiTopicsRetrieveRequest, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).topicsRetrieve(requestParameters.code, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Send a message to a specific topic
-     * @param {MessagesApiTopicsSendRequest} requestParameters Request parameters.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    public topicsSend(requestParameters: MessagesApiTopicsSendRequest, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).topicsSend(requestParameters.code, requestParameters.createTopicMessageRequest, options).then((request) => request(this.axios, this.basePath));
+    public targetingRetrieve(requestParameters: MessagesApiTargetingRetrieveRequest, options?: RawAxiosRequestConfig) {
+        return MessagesApiFp(this.configuration).targetingRetrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

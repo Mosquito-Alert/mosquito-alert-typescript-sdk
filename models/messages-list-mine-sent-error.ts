@@ -15,7 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCode } from './identificationtasks-annotations-list-classification-taxon-ids-error-component-code';
+import type { BitesCreateEventEnvironmentErrorComponentCode } from './bites-create-event-environment-error-component-code';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessagesCreateTargetErrorComponentAttr } from './messages-create-target-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MessagesListMineSentOrderByErrorComponent } from './messages-list-mine-sent-order-by-error-component';
@@ -24,11 +27,11 @@ import type { MessagesListMineSentOrderByErrorComponent } from './messages-list-
 import type { MessagesListMineSentRecipientUuidsErrorComponent } from './messages-list-mine-sent-recipient-uuids-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesListMineSentRecipientUuidsErrorComponentAttr } from './messages-list-mine-sent-recipient-uuids-error-component-attr';
+import type { MessagesListMineSentTargetErrorComponent } from './messages-list-mine-sent-target-error-component';
 
 /**
  * @type MessagesListMineSentError
  */
-export type MessagesListMineSentError = { attr: 'order_by' } & MessagesListMineSentOrderByErrorComponent | { attr: 'recipient_uuids' } & MessagesListMineSentRecipientUuidsErrorComponent;
+export type MessagesListMineSentError = { attr: 'order_by' } & MessagesListMineSentOrderByErrorComponent | { attr: 'recipient_uuids' } & MessagesListMineSentRecipientUuidsErrorComponent | { attr: 'target' } & MessagesListMineSentTargetErrorComponent;
 
 

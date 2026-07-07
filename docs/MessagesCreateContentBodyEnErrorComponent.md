@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attr** | [**MessagesCreateContentBodyEnErrorComponentAttr**](MessagesCreateContentBodyEnErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**MessagesCreateContentBodyBgErrorComponentCode**](MessagesCreateContentBodyBgErrorComponentCode.md) |  | [default to undefined]
+**code** | [**AuthObtainTokenPasswordErrorComponentCode**](AuthObtainTokenPasswordErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

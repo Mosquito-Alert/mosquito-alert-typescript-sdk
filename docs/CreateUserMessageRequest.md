@@ -5,8 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_uuids** | **Array&lt;string&gt;** |  | [default to undefined]
 **content** | [**MessageContentRequest**](MessageContentRequest.md) | The content of the message | [default to undefined]
+**target** | [**CreateUserMessageRequestTarget**](CreateUserMessageRequestTarget.md) |  | [default to undefined]
+**user_uuids** | **Array&lt;string&gt;** |  | [default to undefined]
 
 ## Example
 
@@ -14,8 +15,9 @@ Name | Type | Description | Notes
 import { CreateUserMessageRequest } from 'mosquito-alert';
 
 const instance: CreateUserMessageRequest = {
-    user_uuids,
     content,
+    target,
+    user_uuids,
 };
 ```
 

@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
+import type { MessagesCreateAudienceLocaleErrorComponentCode } from './messages-create-audience-locale-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersPartialUpdateLocaleErrorComponentCode } from './users-partial-update-locale-error-component-code';
+import type { UsersPartialUpdateLocaleErrorComponentAttr } from './users-partial-update-locale-error-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersUpdateLocaleErrorComponent } from './users-update-locale-error-component';
