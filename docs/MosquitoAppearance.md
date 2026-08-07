@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **specie** | [**MosquitoAppearanceSpecie**](MosquitoAppearanceSpecie.md) |  | [optional] [default to undefined]
-**thorax** | [**MosquitoAppearanceSpecie**](MosquitoAppearanceSpecie.md) |  | [optional] [default to undefined]
-**abdomen** | [**MosquitoAppearanceSpecie**](MosquitoAppearanceSpecie.md) |  | [optional] [default to undefined]
-**legs** | [**MosquitoAppearanceSpecie**](MosquitoAppearanceSpecie.md) |  | [optional] [default to undefined]
+**thorax** | [**MosquitoAppearanceThorax**](MosquitoAppearanceThorax.md) |  | [optional] [default to undefined]
+**abdomen** | [**MosquitoAppearanceAbdomen**](MosquitoAppearanceAbdomen.md) |  | [optional] [default to undefined]
+**legs** | [**MosquitoAppearanceLegs**](MosquitoAppearanceLegs.md) |  | [optional] [default to undefined]
 
 ## Example
 

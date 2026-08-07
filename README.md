@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.4
+## mosquito-alert@0.4.5
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.4 --save
+npm install mosquito-alert@0.4.5 --save
 ```
 
 _unPublished (not recommended):_
@@ -914,8 +914,11 @@ Class | Method | HTTP request | Description
  - [MobileApp](docs/MobileApp.md)
  - [MobileAppRequest](docs/MobileAppRequest.md)
  - [MosquitoAppearance](docs/MosquitoAppearance.md)
+ - [MosquitoAppearanceAbdomen](docs/MosquitoAppearanceAbdomen.md)
+ - [MosquitoAppearanceLegs](docs/MosquitoAppearanceLegs.md)
  - [MosquitoAppearanceRequest](docs/MosquitoAppearanceRequest.md)
  - [MosquitoAppearanceSpecie](docs/MosquitoAppearanceSpecie.md)
+ - [MosquitoAppearanceThorax](docs/MosquitoAppearanceThorax.md)
  - [Notification](docs/Notification.md)
  - [NotificationMessage](docs/NotificationMessage.md)
  - [NotificationRequest](docs/NotificationRequest.md)
