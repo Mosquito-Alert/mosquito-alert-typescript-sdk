@@ -1,9 +1,9 @@
-# UsersPartialUpdateLocaleErrorComponentAttr
+# UsersAudienceFilterLastLoginAfterErrorComponentAttr
 
 
 ## Enum
 
-* `Locale` (value: `'locale'`)
+* `LastLoginAfter` (value: `'last_login_after'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

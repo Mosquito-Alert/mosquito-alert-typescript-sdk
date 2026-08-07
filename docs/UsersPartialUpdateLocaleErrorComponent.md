@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**UsersPartialUpdateLocaleErrorComponentAttr**](UsersPartialUpdateLocaleErrorComponentAttr.md) |  | [default to undefined]
+**attr** | [**UsersAudienceFilterLocaleErrorComponentAttr**](UsersAudienceFilterLocaleErrorComponentAttr.md) |  | [default to undefined]
 **code** | [**MessagesCreateAudienceLocaleErrorComponentCode**](MessagesCreateAudienceLocaleErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 

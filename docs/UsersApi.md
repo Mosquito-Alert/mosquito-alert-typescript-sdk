@@ -4,11 +4,74 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
+|[**audienceFilter**](#audiencefilter) | **POST** /users/audience/ | |
 |[**list**](#list) | **GET** /users/ | |
 |[**partialUpdate**](#partialupdate) | **PATCH** /users/{uuid}/ | |
 |[**retrieve**](#retrieve) | **GET** /users/{uuid}/ | |
 |[**retrieveMine**](#retrievemine) | **GET** /me/ | |
 |[**update**](#update) | **PUT** /users/{uuid}/ | |
+
+# **audienceFilter**
+> PaginatedUserList audienceFilter()
+
+Returns the users matching the provided audience criteria.
+
+### Example
+
+```typescript
+import {
+    UsersApi,
+    Configuration,
+    AudienceFilterRequest
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new UsersApi(configuration);
+
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
+let audienceFilterRequest: AudienceFilterRequest; // (optional)
+
+const { status, data } = await apiInstance.audienceFilter(
+    page,
+    pageSize,
+    audienceFilterRequest
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **audienceFilterRequest** | **AudienceFilterRequest**|  | |
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
+
+
+### Return type
+
+**PaginatedUserList**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**400** |  |  -  |
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
 > PaginatedUserList list()

@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.3
+## mosquito-alert@0.4.4
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.3 --save
+npm install mosquito-alert@0.4.4 --save
 ```
 
 _unPublished (not recommended):_
@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *TaxaApi* | [**retrieve**](docs/TaxaApi.md#retrieve) | **GET** /taxa/{id}/ | 
 *TaxaApi* | [**rootTreeRetrieve**](docs/TaxaApi.md#roottreeretrieve) | **GET** /taxa/tree/ | 
 *TaxaApi* | [**treeRetrieve**](docs/TaxaApi.md#treeretrieve) | **GET** /taxa/{id}/tree/ | 
+*UsersApi* | [**audienceFilter**](docs/UsersApi.md#audiencefilter) | **POST** /users/audience/ | 
 *UsersApi* | [**list**](docs/UsersApi.md#list) | **GET** /users/ | 
 *UsersApi* | [**partialUpdate**](docs/UsersApi.md#partialupdate) | **PATCH** /users/{uuid}/ | 
 *UsersApi* | [**retrieve**](docs/UsersApi.md#retrieve) | **GET** /users/{uuid}/ | 
@@ -1014,6 +1015,7 @@ Class | Method | HTTP request | Description
  - [PaginatedCountryList](docs/PaginatedCountryList.md)
  - [PaginatedIdentificationTaskList](docs/PaginatedIdentificationTaskList.md)
  - [PaginatedMessageList](docs/PaginatedMessageList.md)
+ - [PaginatedMessageRecipientList](docs/PaginatedMessageRecipientList.md)
  - [PaginatedNotificationList](docs/PaginatedNotificationList.md)
  - [PaginatedObservationList](docs/PaginatedObservationList.md)
  - [PaginatedPartnerList](docs/PaginatedPartnerList.md)
@@ -1115,9 +1117,19 @@ Class | Method | HTTP request | Description
  - [UserAssignment](docs/UserAssignment.md)
  - [UserRequest](docs/UserRequest.md)
  - [UserScore](docs/UserScore.md)
+ - [UsersAudienceFilterError](docs/UsersAudienceFilterError.md)
+ - [UsersAudienceFilterInAreaErrorComponent](docs/UsersAudienceFilterInAreaErrorComponent.md)
+ - [UsersAudienceFilterInAreaErrorComponentAttr](docs/UsersAudienceFilterInAreaErrorComponentAttr.md)
+ - [UsersAudienceFilterLastLoginAfterErrorComponent](docs/UsersAudienceFilterLastLoginAfterErrorComponent.md)
+ - [UsersAudienceFilterLastLoginAfterErrorComponentAttr](docs/UsersAudienceFilterLastLoginAfterErrorComponentAttr.md)
+ - [UsersAudienceFilterLastLoginBeforeErrorComponent](docs/UsersAudienceFilterLastLoginBeforeErrorComponent.md)
+ - [UsersAudienceFilterLastLoginBeforeErrorComponentAttr](docs/UsersAudienceFilterLastLoginBeforeErrorComponentAttr.md)
+ - [UsersAudienceFilterLocaleErrorComponent](docs/UsersAudienceFilterLocaleErrorComponent.md)
+ - [UsersAudienceFilterLocaleErrorComponentAttr](docs/UsersAudienceFilterLocaleErrorComponentAttr.md)
+ - [UsersAudienceFilterNonFieldErrorsErrorComponent](docs/UsersAudienceFilterNonFieldErrorsErrorComponent.md)
+ - [UsersAudienceFilterValidationError](docs/UsersAudienceFilterValidationError.md)
  - [UsersPartialUpdateError](docs/UsersPartialUpdateError.md)
  - [UsersPartialUpdateLocaleErrorComponent](docs/UsersPartialUpdateLocaleErrorComponent.md)
- - [UsersPartialUpdateLocaleErrorComponentAttr](docs/UsersPartialUpdateLocaleErrorComponentAttr.md)
  - [UsersPartialUpdateNonFieldErrorsErrorComponent](docs/UsersPartialUpdateNonFieldErrorsErrorComponent.md)
  - [UsersPartialUpdateValidationError](docs/UsersPartialUpdateValidationError.md)
  - [UsersUpdateError](docs/UsersUpdateError.md)

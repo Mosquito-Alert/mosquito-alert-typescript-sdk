@@ -30,8 +30,6 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { Message } from '../models';
 // @ts-ignore
-import type { MessageRecipient } from '../models';
-// @ts-ignore
 import type { MessageTargeting } from '../models';
 // @ts-ignore
 import type { MessagesCreateValidationError } from '../models';
@@ -47,6 +45,8 @@ import type { MessagesListValidationError } from '../models';
 import type { MetaCreateMessageRequest } from '../models';
 // @ts-ignore
 import type { PaginatedMessageList } from '../models';
+// @ts-ignore
+import type { PaginatedMessageRecipientList } from '../models';
 /**
  * MessagesApi - axios parameter creator
  */
@@ -222,10 +222,12 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {number} id A unique integer value identifying this notification.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        recipientsList: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        recipientsList: async (id: number, page?: number, pageSize?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('recipientsList', 'id', id)
             const localVarPath = `/messages/{id}/recipients/`
@@ -249,6 +251,14 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             // authentication jwtAuth required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
 
             localVarHeaderParameter['Accept'] = 'application/json';
 
@@ -401,11 +411,13 @@ export const MessagesApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {number} id A unique integer value identifying this notification.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async recipientsList(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageRecipient>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.recipientsList(id, options);
+        async recipientsList(id: number, page?: number, pageSize?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageRecipientList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recipientsList(id, page, pageSize, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.recipientsList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -476,8 +488,8 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        recipientsList(requestParameters: MessagesApiRecipientsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<MessageRecipient>> {
-            return localVarFp.recipientsList(requestParameters.id, options).then((request) => request(axios, basePath));
+        recipientsList(requestParameters: MessagesApiRecipientsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageRecipientList> {
+            return localVarFp.recipientsList(requestParameters.id, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -575,6 +587,16 @@ export interface MessagesApiRecipientsListRequest {
      * A unique integer value identifying this notification.
      */
     readonly id: number
+
+    /**
+     * A page number within the paginated result set.
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     */
+    readonly pageSize?: number
 }
 
 /**
@@ -638,7 +660,7 @@ export class MessagesApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public recipientsList(requestParameters: MessagesApiRecipientsListRequest, options?: RawAxiosRequestConfig) {
-        return MessagesApiFp(this.configuration).recipientsList(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+        return MessagesApiFp(this.configuration).recipientsList(requestParameters.id, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

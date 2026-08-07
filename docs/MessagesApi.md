@@ -200,7 +200,7 @@ const { status, data } = await apiInstance.listMineSent(
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **recipientsList**
-> Array<MessageRecipient> recipientsList()
+> PaginatedMessageRecipientList recipientsList()
 
 
 ### Example
@@ -215,9 +215,13 @@ const configuration = new Configuration();
 const apiInstance = new MessagesApi(configuration);
 
 let id: number; //A unique integer value identifying this notification. (default to undefined)
+let page: number; //A page number within the paginated result set. (optional) (default to undefined)
+let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.recipientsList(
-    id
+    id,
+    page,
+    pageSize
 );
 ```
 
@@ -226,11 +230,13 @@ const { status, data } = await apiInstance.recipientsList(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
+| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 
 
 ### Return type
 
-**Array<MessageRecipient>**
+**PaginatedMessageRecipientList**
 
 ### Authorization
 

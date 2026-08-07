@@ -22,6 +22,8 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
+import type { AudienceFilterRequest } from '../models';
+// @ts-ignore
 import type { ErrorResponse401 } from '../models';
 // @ts-ignore
 import type { ErrorResponse403 } from '../models';
@@ -36,6 +38,8 @@ import type { User } from '../models';
 // @ts-ignore
 import type { UserRequest } from '../models';
 // @ts-ignore
+import type { UsersAudienceFilterValidationError } from '../models';
+// @ts-ignore
 import type { UsersPartialUpdateValidationError } from '../models';
 // @ts-ignore
 import type { UsersUpdateValidationError } from '../models';
@@ -44,6 +48,57 @@ import type { UsersUpdateValidationError } from '../models';
  */
 export const UsersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Returns the users matching the provided audience criteria.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {AudienceFilterRequest} [audienceFilterRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        audienceFilter: async (page?: number, pageSize?: number, audienceFilterRequest?: AudienceFilterRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/users/audience/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page_size'] = pageSize;
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(audienceFilterRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * 
          * @param {number} [page] A page number within the paginated result set.
@@ -277,6 +332,20 @@ export const UsersApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = UsersApiAxiosParamCreator(configuration)
     return {
         /**
+         * Returns the users matching the provided audience criteria.
+         * @param {number} [page] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {AudienceFilterRequest} [audienceFilterRequest] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async audienceFilter(page?: number, pageSize?: number, audienceFilterRequest?: AudienceFilterRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedUserList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.audienceFilter(page, pageSize, audienceFilterRequest, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UsersApi.audienceFilter']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
          * 
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -349,6 +418,15 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
     const localVarFp = UsersApiFp(configuration)
     return {
         /**
+         * Returns the users matching the provided audience criteria.
+         * @param {UsersApiAudienceFilterRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        audienceFilter(requestParameters: UsersApiAudienceFilterRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedUserList> {
+            return localVarFp.audienceFilter(requestParameters.page, requestParameters.pageSize, requestParameters.audienceFilterRequest, options).then((request) => request(axios, basePath));
+        },
+        /**
          * 
          * @param {UsersApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
@@ -394,6 +472,23 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
         },
     };
 };
+
+/**
+ * Request parameters for audienceFilter operation in UsersApi.
+ */
+export interface UsersApiAudienceFilterRequest {
+    /**
+     * A page number within the paginated result set.
+     */
+    readonly page?: number
+
+    /**
+     * Number of results to return per page.
+     */
+    readonly pageSize?: number
+
+    readonly audienceFilterRequest?: AudienceFilterRequest
+}
 
 /**
  * Request parameters for list operation in UsersApi.
@@ -444,6 +539,16 @@ export interface UsersApiUpdateRequest {
  * UsersApi - object-oriented interface
  */
 export class UsersApi extends BaseAPI {
+    /**
+     * Returns the users matching the provided audience criteria.
+     * @param {UsersApiAudienceFilterRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public audienceFilter(requestParameters: UsersApiAudienceFilterRequest = {}, options?: RawAxiosRequestConfig) {
+        return UsersApiFp(this.configuration).audienceFilter(requestParameters.page, requestParameters.pageSize, requestParameters.audienceFilterRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * 
      * @param {UsersApiListRequest} requestParameters Request parameters.

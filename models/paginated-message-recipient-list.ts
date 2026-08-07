@@ -13,14 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessageRecipient } from './message-recipient';
 
-
-export const UsersPartialUpdateLocaleErrorComponentAttr = {
-    Locale: 'locale',
-    UnknownDefaultOpenApi: '11184809',
-} as const;
-
-export type UsersPartialUpdateLocaleErrorComponentAttr = typeof UsersPartialUpdateLocaleErrorComponentAttr[keyof typeof UsersPartialUpdateLocaleErrorComponentAttr];
-
-
+export interface PaginatedMessageRecipientList {
+    'count': number;
+    'next'?: string | null;
+    'previous'?: string | null;
+    'results': Array<MessageRecipient>;
+}
 
