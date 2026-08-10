@@ -659,6 +659,7 @@ docs/MessageContent.md
 docs/MessageContentRequest.md
 docs/MessagePermission.md
 docs/MessageRecipient.md
+docs/MessageRecipientStats.md
 docs/MessageTarget.md
 docs/MessageTargeting.md
 docs/MessagesApi.md
@@ -1674,6 +1675,7 @@ models/location.ts
 models/message-content-request.ts
 models/message-content.ts
 models/message-permission.ts
+models/message-recipient-stats.ts
 models/message-recipient.ts
 models/message-target.ts
 models/message-targeting.ts

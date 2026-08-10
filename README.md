@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.5
+## mosquito-alert@0.4.6
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.5 --save
+npm install mosquito-alert@0.4.6 --save
 ```
 
 _unPublished (not recommended):_
@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *MessagesApi* | [**list**](docs/MessagesApi.md#list) | **GET** /messages/ | 
 *MessagesApi* | [**listMineSent**](docs/MessagesApi.md#listminesent) | **GET** /me/messages/sent/ | 
 *MessagesApi* | [**recipientsList**](docs/MessagesApi.md#recipientslist) | **GET** /messages/{id}/recipients/ | 
+*MessagesApi* | [**recipientsStatsRetrieve**](docs/MessagesApi.md#recipientsstatsretrieve) | **GET** /messages/{id}/recipients/stats/ | 
 *MessagesApi* | [**retrieve**](docs/MessagesApi.md#retrieve) | **GET** /messages/{id}/ | 
 *MessagesApi* | [**targetingRetrieve**](docs/MessagesApi.md#targetingretrieve) | **GET** /messages/{id}/targeting/ | 
 *NotificationsApi* | [**listMine**](docs/NotificationsApi.md#listmine) | **GET** /me/notifications/ | 
@@ -765,6 +766,7 @@ Class | Method | HTTP request | Description
  - [MessageContentRequest](docs/MessageContentRequest.md)
  - [MessagePermission](docs/MessagePermission.md)
  - [MessageRecipient](docs/MessageRecipient.md)
+ - [MessageRecipientStats](docs/MessageRecipientStats.md)
  - [MessageTarget](docs/MessageTarget.md)
  - [MessageTargeting](docs/MessageTargeting.md)
  - [MessagesCreateAudienceInAreaErrorComponent](docs/MessagesCreateAudienceInAreaErrorComponent.md)

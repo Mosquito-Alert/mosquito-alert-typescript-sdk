@@ -624,6 +624,7 @@ export * from './message-content';
 export * from './message-content-request';
 export * from './message-permission';
 export * from './message-recipient';
+export * from './message-recipient-stats';
 export * from './message-target';
 export * from './message-targeting';
 export * from './messages-create-audience-in-area-error-component';

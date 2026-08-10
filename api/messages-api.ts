@@ -30,6 +30,8 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { Message } from '../models';
 // @ts-ignore
+import type { MessageRecipientStats } from '../models';
+// @ts-ignore
 import type { MessageTargeting } from '../models';
 // @ts-ignore
 import type { MessagesCreateValidationError } from '../models';
@@ -277,6 +279,48 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        recipientsStatsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('recipientsStatsRetrieve', 'id', id)
+            const localVarPath = `/messages/{id}/recipients/stats/`
+                .replace('{id}', encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            localVarHeaderParameter['Accept'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} id A unique integer value identifying this notification.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         retrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieve', 'id', id)
@@ -428,6 +472,18 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        async recipientsStatsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageRecipientStats>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recipientsStatsRetrieve(id, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MessagesApi.recipientsStatsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {number} id A unique integer value identifying this notification.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         async retrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Message>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
@@ -490,6 +546,15 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          */
         recipientsList(requestParameters: MessagesApiRecipientsListRequest, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageRecipientList> {
             return localVarFp.recipientsList(requestParameters.id, requestParameters.page, requestParameters.pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessagesApiRecipientsStatsRetrieveRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recipientsStatsRetrieve(requestParameters: MessagesApiRecipientsStatsRetrieveRequest, options?: RawAxiosRequestConfig): AxiosPromise<MessageRecipientStats> {
+            return localVarFp.recipientsStatsRetrieve(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -600,6 +665,16 @@ export interface MessagesApiRecipientsListRequest {
 }
 
 /**
+ * Request parameters for recipientsStatsRetrieve operation in MessagesApi.
+ */
+export interface MessagesApiRecipientsStatsRetrieveRequest {
+    /**
+     * A unique integer value identifying this notification.
+     */
+    readonly id: number
+}
+
+/**
  * Request parameters for retrieve operation in MessagesApi.
  */
 export interface MessagesApiRetrieveRequest {
@@ -661,6 +736,16 @@ export class MessagesApi extends BaseAPI {
      */
     public recipientsList(requestParameters: MessagesApiRecipientsListRequest, options?: RawAxiosRequestConfig) {
         return MessagesApiFp(this.configuration).recipientsList(requestParameters.id, requestParameters.page, requestParameters.pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessagesApiRecipientsStatsRetrieveRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public recipientsStatsRetrieve(requestParameters: MessagesApiRecipientsStatsRetrieveRequest, options?: RawAxiosRequestConfig) {
+        return MessagesApiFp(this.configuration).recipientsStatsRetrieve(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

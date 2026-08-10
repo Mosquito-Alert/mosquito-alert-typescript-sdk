@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 |[**list**](#list) | **GET** /messages/ | |
 |[**listMineSent**](#listminesent) | **GET** /me/messages/sent/ | |
 |[**recipientsList**](#recipientslist) | **GET** /messages/{id}/recipients/ | |
+|[**recipientsStatsRetrieve**](#recipientsstatsretrieve) | **GET** /messages/{id}/recipients/stats/ | |
 |[**retrieve**](#retrieve) | **GET** /messages/{id}/ | |
 |[**targetingRetrieve**](#targetingretrieve) | **GET** /messages/{id}/targeting/ | |
 
@@ -237,6 +238,59 @@ const { status, data } = await apiInstance.recipientsList(
 ### Return type
 
 **PaginatedMessageRecipientList**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **recipientsStatsRetrieve**
+> MessageRecipientStats recipientsStatsRetrieve()
+
+
+### Example
+
+```typescript
+import {
+    MessagesApi,
+    Configuration
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new MessagesApi(configuration);
+
+let id: number; //A unique integer value identifying this notification. (default to undefined)
+
+const { status, data } = await apiInstance.recipientsStatsRetrieve(
+    id
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**number**] | A unique integer value identifying this notification. | defaults to undefined|
+
+
+### Return type
+
+**MessageRecipientStats**
 
 ### Authorization
 
