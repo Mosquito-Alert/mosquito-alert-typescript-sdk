@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.6
+## mosquito-alert@0.4.7
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.6 --save
+npm install mosquito-alert@0.4.7 --save
 ```
 
 _unPublished (not recommended):_
@@ -754,6 +754,7 @@ Class | Method | HTTP request | Description
  - [LocalizedAudienceMessageBodyRequest](docs/LocalizedAudienceMessageBodyRequest.md)
  - [LocalizedAudienceMessageTitleRequest](docs/LocalizedAudienceMessageTitleRequest.md)
  - [LocalizedMessageBody](docs/LocalizedMessageBody.md)
+ - [LocalizedMessageBodyPreview](docs/LocalizedMessageBodyPreview.md)
  - [LocalizedMessageBodyRequest](docs/LocalizedMessageBodyRequest.md)
  - [LocalizedMessageTitle](docs/LocalizedMessageTitle.md)
  - [LocalizedMessageTitleRequest](docs/LocalizedMessageTitleRequest.md)
@@ -764,6 +765,8 @@ Class | Method | HTTP request | Description
  - [Message](docs/Message.md)
  - [MessageContent](docs/MessageContent.md)
  - [MessageContentRequest](docs/MessageContentRequest.md)
+ - [MessageList](docs/MessageList.md)
+ - [MessageListContent](docs/MessageListContent.md)
  - [MessagePermission](docs/MessagePermission.md)
  - [MessageRecipient](docs/MessageRecipient.md)
  - [MessageRecipientStats](docs/MessageRecipientStats.md)
@@ -1019,7 +1022,7 @@ Class | Method | HTTP request | Description
  - [PaginatedCampaignList](docs/PaginatedCampaignList.md)
  - [PaginatedCountryList](docs/PaginatedCountryList.md)
  - [PaginatedIdentificationTaskList](docs/PaginatedIdentificationTaskList.md)
- - [PaginatedMessageList](docs/PaginatedMessageList.md)
+ - [PaginatedMessageListList](docs/PaginatedMessageListList.md)
  - [PaginatedMessageRecipientList](docs/PaginatedMessageRecipientList.md)
  - [PaginatedNotificationList](docs/PaginatedNotificationList.md)
  - [PaginatedObservationList](docs/PaginatedObservationList.md)

@@ -15,12 +15,21 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { Message } from './message';
+import type { MessageListContent } from './message-list-content';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MessageTarget } from './message-target';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { SimpleUser } from './simple-user';
 
-export interface PaginatedMessageList {
-    'count': number;
-    'next'?: string | null;
-    'previous'?: string | null;
-    'results': Array<Message>;
+export interface MessageList {
+    'id': number;
+    'sender_user': SimpleUser;
+    'content': MessageListContent;
+    'target': MessageTarget;
+    'created_at': string;
 }
+
+
 

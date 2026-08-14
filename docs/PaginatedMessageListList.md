@@ -1,4 +1,4 @@
-# PaginatedMessageList
+# PaginatedMessageListList
 
 
 ## Properties
@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 **count** | **number** |  | [default to undefined]
 **next** | **string** |  | [optional] [default to undefined]
 **previous** | **string** |  | [optional] [default to undefined]
-**results** | [**Array&lt;Message&gt;**](Message.md) |  | [default to undefined]
+**results** | [**Array&lt;MessageList&gt;**](MessageList.md) |  | [default to undefined]
 
 ## Example
 
 ```typescript
-import { PaginatedMessageList } from 'mosquito-alert';
+import { PaginatedMessageListList } from 'mosquito-alert';
 
-const instance: PaginatedMessageList = {
+const instance: PaginatedMessageListList = {
     count,
     next,
     previous,

@@ -46,7 +46,7 @@ import type { MessagesListValidationError } from '../models';
 // @ts-ignore
 import type { MetaCreateMessageRequest } from '../models';
 // @ts-ignore
-import type { PaginatedMessageList } from '../models';
+import type { PaginatedMessageListList } from '../models';
 // @ts-ignore
 import type { PaginatedMessageRecipientList } from '../models';
 /**
@@ -96,7 +96,7 @@ export const MessagesApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
          * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -421,7 +421,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
          * @param {Array<MessagesListMineSentOrderByParameter>} [orderBy] Ordering  
          * @param {number} [page] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
@@ -430,7 +430,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
+        async list(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageListList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.list(orderBy, page, pageSize, recipientUuids, target, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.list']?.[localVarOperationServerIndex]?.url;
@@ -446,7 +446,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listMineSent(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageList>> {
+        async listMineSent(orderBy?: Array<MessagesListMineSentOrderByParameter>, page?: number, pageSize?: number, recipientUuids?: Array<string>, target?: MessagesListMineSentTargetParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedMessageListList>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listMineSent(orderBy, page, pageSize, recipientUuids, target, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MessagesApi.listMineSent']?.[localVarOperationServerIndex]?.url;
@@ -521,12 +521,12 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
             return localVarFp.create(requestParameters.metaCreateMessageRequest, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
          * @param {MessagesApiListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(requestParameters: MessagesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageList> {
+        list(requestParameters: MessagesApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageListList> {
             return localVarFp.list(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(axios, basePath));
         },
         /**
@@ -535,7 +535,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listMineSent(requestParameters: MessagesApiListMineSentRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageList> {
+        listMineSent(requestParameters: MessagesApiListMineSentRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedMessageListList> {
             return localVarFp.listMineSent(requestParameters.orderBy, requestParameters.page, requestParameters.pageSize, requestParameters.recipientUuids, requestParameters.target, options).then((request) => request(axios, basePath));
         },
         /**
@@ -709,7 +709,7 @@ export class MessagesApi extends BaseAPI {
     }
 
     /**
-     * 
+     * Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
      * @param {MessagesApiListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

@@ -68,8 +68,9 @@ const { status, data } = await apiInstance.create(
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedMessageList list()
+> PaginatedMessageListList list()
 
+Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
 
 ### Example
 
@@ -110,7 +111,7 @@ const { status, data } = await apiInstance.list(
 
 ### Return type
 
-**PaginatedMessageList**
+**PaginatedMessageListList**
 
 ### Authorization
 
@@ -134,7 +135,7 @@ const { status, data } = await apiInstance.list(
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMineSent**
-> PaginatedMessageList listMineSent()
+> PaginatedMessageListList listMineSent()
 
 Get current user\'s sent messages
 
@@ -177,7 +178,7 @@ const { status, data } = await apiInstance.listMineSent(
 
 ### Return type
 
-**PaginatedMessageList**
+**PaginatedMessageListList**
 
 ### Authorization
 
