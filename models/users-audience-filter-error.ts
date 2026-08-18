@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateAudienceLocaleErrorComponentCode } from './messages-create-audience-locale-error-component-code';
+import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-token-password-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersAudienceFilterInAreaErrorComponent } from './users-audience-filter-in-area-error-component';
@@ -30,14 +30,20 @@ import type { UsersAudienceFilterLastLoginBeforeErrorComponent } from './users-a
 import type { UsersAudienceFilterLocaleErrorComponent } from './users-audience-filter-locale-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersAudienceFilterLocaleErrorComponentAttr } from './users-audience-filter-locale-error-component-attr';
+import type { UsersAudienceFilterNonFieldErrorsErrorComponent } from './users-audience-filter-non-field-errors-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersAudienceFilterNonFieldErrorsErrorComponent } from './users-audience-filter-non-field-errors-error-component';
+import type { UsersAudienceFilterNotificationTopicsErrorComponent } from './users-audience-filter-notification-topics-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { UsersAudienceFilterNotificationTopicsINDEXErrorComponent } from './users-audience-filter-notification-topics-indexerror-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttr } from './users-audience-filter-notification-topics-indexerror-component-attr';
 
 /**
  * @type UsersAudienceFilterError
  */
-export type UsersAudienceFilterError = { attr: 'in_area' } & UsersAudienceFilterInAreaErrorComponent | { attr: 'last_login_after' } & UsersAudienceFilterLastLoginAfterErrorComponent | { attr: 'last_login_before' } & UsersAudienceFilterLastLoginBeforeErrorComponent | { attr: 'locale' } & UsersAudienceFilterLocaleErrorComponent | { attr: 'non_field_errors' } & UsersAudienceFilterNonFieldErrorsErrorComponent;
+export type UsersAudienceFilterError = { attr: 'in_area' } & UsersAudienceFilterInAreaErrorComponent | { attr: 'last_login_after' } & UsersAudienceFilterLastLoginAfterErrorComponent | { attr: 'last_login_before' } & UsersAudienceFilterLastLoginBeforeErrorComponent | { attr: 'locale' } & UsersAudienceFilterLocaleErrorComponent | { attr: 'non_field_errors' } & UsersAudienceFilterNonFieldErrorsErrorComponent | { attr: 'notification_topics' } & UsersAudienceFilterNotificationTopicsErrorComponent | { attr: 'notification_topics.INDEX' } & UsersAudienceFilterNotificationTopicsINDEXErrorComponent;
 
 

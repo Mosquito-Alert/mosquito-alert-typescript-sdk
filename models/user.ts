@@ -37,6 +37,7 @@ export interface User {
     'language_iso': string;
     'is_guest': boolean;
     'score': UserScore;
+    'notification_topics'?: Array<string>;
 }
 
 

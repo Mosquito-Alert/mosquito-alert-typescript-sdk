@@ -15,20 +15,26 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MessagesCreateAudienceLocaleErrorComponentCode } from './messages-create-audience-locale-error-component-code';
+import type { AuthObtainTokenPasswordErrorComponentCode } from './auth-obtain-token-password-error-component-code';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { UsersAudienceFilterLocaleErrorComponentAttr } from './users-audience-filter-locale-error-component-attr';
+import type { UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttr } from './users-audience-filter-notification-topics-indexerror-component-attr';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersPartialUpdateLocaleErrorComponent } from './users-partial-update-locale-error-component';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UsersPartialUpdateNonFieldErrorsErrorComponent } from './users-partial-update-non-field-errors-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { UsersPartialUpdateNotificationTopicsErrorComponent } from './users-partial-update-notification-topics-error-component';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { UsersPartialUpdateNotificationTopicsINDEXErrorComponent } from './users-partial-update-notification-topics-indexerror-component';
 
 /**
  * @type UsersPartialUpdateError
  */
-export type UsersPartialUpdateError = { attr: 'locale' } & UsersPartialUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersPartialUpdateNonFieldErrorsErrorComponent;
+export type UsersPartialUpdateError = { attr: 'locale' } & UsersPartialUpdateLocaleErrorComponent | { attr: 'non_field_errors' } & UsersPartialUpdateNonFieldErrorsErrorComponent | { attr: 'notification_topics' } & UsersPartialUpdateNotificationTopicsErrorComponent | { attr: 'notification_topics.INDEX' } & UsersPartialUpdateNotificationTopicsINDEXErrorComponent;
 
 

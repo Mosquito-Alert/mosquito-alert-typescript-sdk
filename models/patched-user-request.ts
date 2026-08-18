@@ -19,6 +19,7 @@ import type { MinimalUserLocale } from './minimal-user-locale';
 
 export interface PatchedUserRequest {
     'locale'?: MinimalUserLocale;
+    'notification_topics'?: Array<string>;
 }
 
 

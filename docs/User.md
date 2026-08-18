@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **language_iso** | **string** | ISO 639-1 code | [readonly] [default to 'en']
 **is_guest** | **boolean** |  | [readonly] [default to undefined]
 **score** | [**UserScore**](UserScore.md) |  | [readonly] [default to undefined]
+**notification_topics** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -32,6 +33,7 @@ const instance: User = {
     language_iso,
     is_guest,
     score,
+    notification_topics,
 };
 ```
 

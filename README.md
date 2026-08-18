@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.7
+## mosquito-alert@0.4.8
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.7 --save
+npm install mosquito-alert@0.4.8 --save
 ```
 
 _unPublished (not recommended):_
@@ -784,6 +784,10 @@ Class | Method | HTTP request | Description
  - [MessagesCreateAudienceLocaleErrorComponentCode](docs/MessagesCreateAudienceLocaleErrorComponentCode.md)
  - [MessagesCreateAudienceNonFieldErrorsErrorComponent](docs/MessagesCreateAudienceNonFieldErrorsErrorComponent.md)
  - [MessagesCreateAudienceNonFieldErrorsErrorComponentAttr](docs/MessagesCreateAudienceNonFieldErrorsErrorComponentAttr.md)
+ - [MessagesCreateAudienceNotificationTopicsErrorComponent](docs/MessagesCreateAudienceNotificationTopicsErrorComponent.md)
+ - [MessagesCreateAudienceNotificationTopicsErrorComponentAttr](docs/MessagesCreateAudienceNotificationTopicsErrorComponentAttr.md)
+ - [MessagesCreateAudienceNotificationTopicsINDEXErrorComponent](docs/MessagesCreateAudienceNotificationTopicsINDEXErrorComponent.md)
+ - [MessagesCreateAudienceNotificationTopicsINDEXErrorComponentAttr](docs/MessagesCreateAudienceNotificationTopicsINDEXErrorComponentAttr.md)
  - [MessagesCreateContentBodyBgErrorComponent](docs/MessagesCreateContentBodyBgErrorComponent.md)
  - [MessagesCreateContentBodyBgErrorComponentAttr](docs/MessagesCreateContentBodyBgErrorComponentAttr.md)
  - [MessagesCreateContentBodyBgErrorComponentCode](docs/MessagesCreateContentBodyBgErrorComponentCode.md)
@@ -1135,14 +1139,22 @@ Class | Method | HTTP request | Description
  - [UsersAudienceFilterLocaleErrorComponent](docs/UsersAudienceFilterLocaleErrorComponent.md)
  - [UsersAudienceFilterLocaleErrorComponentAttr](docs/UsersAudienceFilterLocaleErrorComponentAttr.md)
  - [UsersAudienceFilterNonFieldErrorsErrorComponent](docs/UsersAudienceFilterNonFieldErrorsErrorComponent.md)
+ - [UsersAudienceFilterNotificationTopicsErrorComponent](docs/UsersAudienceFilterNotificationTopicsErrorComponent.md)
+ - [UsersAudienceFilterNotificationTopicsErrorComponentAttr](docs/UsersAudienceFilterNotificationTopicsErrorComponentAttr.md)
+ - [UsersAudienceFilterNotificationTopicsINDEXErrorComponent](docs/UsersAudienceFilterNotificationTopicsINDEXErrorComponent.md)
+ - [UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttr](docs/UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttr.md)
  - [UsersAudienceFilterValidationError](docs/UsersAudienceFilterValidationError.md)
  - [UsersPartialUpdateError](docs/UsersPartialUpdateError.md)
  - [UsersPartialUpdateLocaleErrorComponent](docs/UsersPartialUpdateLocaleErrorComponent.md)
  - [UsersPartialUpdateNonFieldErrorsErrorComponent](docs/UsersPartialUpdateNonFieldErrorsErrorComponent.md)
+ - [UsersPartialUpdateNotificationTopicsErrorComponent](docs/UsersPartialUpdateNotificationTopicsErrorComponent.md)
+ - [UsersPartialUpdateNotificationTopicsINDEXErrorComponent](docs/UsersPartialUpdateNotificationTopicsINDEXErrorComponent.md)
  - [UsersPartialUpdateValidationError](docs/UsersPartialUpdateValidationError.md)
  - [UsersUpdateError](docs/UsersUpdateError.md)
  - [UsersUpdateLocaleErrorComponent](docs/UsersUpdateLocaleErrorComponent.md)
  - [UsersUpdateNonFieldErrorsErrorComponent](docs/UsersUpdateNonFieldErrorsErrorComponent.md)
+ - [UsersUpdateNotificationTopicsErrorComponent](docs/UsersUpdateNotificationTopicsErrorComponent.md)
+ - [UsersUpdateNotificationTopicsINDEXErrorComponent](docs/UsersUpdateNotificationTopicsINDEXErrorComponent.md)
  - [UsersUpdateValidationError](docs/UsersUpdateValidationError.md)
  - [Workspace](docs/Workspace.md)
  - [WorkspaceCollaborationGroup](docs/WorkspaceCollaborationGroup.md)

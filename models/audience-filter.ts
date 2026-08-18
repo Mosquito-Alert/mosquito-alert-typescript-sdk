@@ -25,6 +25,10 @@ export interface AudienceFilter {
      */
     'in_area'?: any;
     'locale'?: AudienceFilterLocale;
+    /**
+     * Filter users subscribed to any of the provided notification topics.
+     */
+    'notification_topics'?: Array<string>;
 }
 
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attr** | [**MessagesCreateAudienceLocaleErrorComponentAttr**](MessagesCreateAudienceLocaleErrorComponentAttr.md) |  | [default to undefined]
-**code** | [**MessagesCreateAudienceLocaleErrorComponentCode**](MessagesCreateAudienceLocaleErrorComponentCode.md) |  | [default to undefined]
+**attr** | [**MessagesCreateAudienceNotificationTopicsINDEXErrorComponentAttr**](MessagesCreateAudienceNotificationTopicsINDEXErrorComponentAttr.md) |  | [default to undefined]
+**code** | [**AuthObtainTokenPasswordErrorComponentCode**](AuthObtainTokenPasswordErrorComponentCode.md) |  | [default to undefined]
 **detail** | **string** |  | [default to undefined]
 
 ## Example

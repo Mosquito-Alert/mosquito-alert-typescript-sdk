@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **locale** | [**MinimalUserLocale**](MinimalUserLocale.md) |  | [optional] [default to undefined]
+**notification_topics** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -14,6 +15,7 @@ import { PatchedUserRequest } from 'mosquito-alert';
 
 const instance: PatchedUserRequest = {
     locale,
+    notification_topics,
 };
 ```
 
