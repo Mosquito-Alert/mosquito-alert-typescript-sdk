@@ -15,6 +15,8 @@
 
 * `V20254` (value: `'v2025.4'`)
 
+* `V20261` (value: `'v2026.1'`)
+
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

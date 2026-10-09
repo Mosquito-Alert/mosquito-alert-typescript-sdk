@@ -22,6 +22,7 @@ export const CreatePhotoPredictionClassifierVersion = {
     V20252: 'v2025.2',
     V20253: 'v2025.3',
     V20254: 'v2025.4',
+    V20261: 'v2026.1',
     UnknownDefaultOpenApi: '11184809',
 } as const;
 
