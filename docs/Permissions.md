@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **identification_task** | [**IdentificationTaskPermission**](IdentificationTaskPermission.md) |  | [default to undefined]
 **review** | [**ReviewPermission**](ReviewPermission.md) |  | [default to undefined]
 **message** | [**MessagePermission**](MessagePermission.md) |  | [default to undefined]
+**statistics** | [**StatisticsPermission**](StatisticsPermission.md) |  | [default to undefined]
 
 ## Example
 
@@ -20,6 +21,7 @@ const instance: Permissions = {
     identification_task,
     review,
     message,
+    statistics,
 };
 ```
 

@@ -18,6 +18,7 @@ api/partners-api.ts
 api/permissions-api.ts
 api/photos-api.ts
 api/ping-api.ts
+api/stats-api.ts
 api/taxa-api.ts
 api/users-api.ts
 api/workspaces-api.ts
@@ -35,6 +36,8 @@ docs/AnnotationRequest.md
 docs/AnnotationType.md
 docs/AppUserTokenObtainPair.md
 docs/AppUserTokenObtainPairRequest.md
+docs/AreaMeta.md
+docs/AreaMetaLevel.md
 docs/Assignment.md
 docs/AudienceFilter.md
 docs/AudienceFilterLocale.md
@@ -928,6 +931,7 @@ docs/PaginatedNotificationList.md
 docs/PaginatedObservationList.md
 docs/PaginatedPartnerList.md
 docs/PaginatedPhotoPredictionList.md
+docs/PaginatedReportStatsResponseList.md
 docs/PaginatedTaxonList.md
 docs/PaginatedUserList.md
 docs/PaginatedWorkspaceCollaborationGroupList.md
@@ -997,6 +1001,13 @@ docs/Point.md
 docs/PointRequest.md
 docs/PredictionScore.md
 docs/PredictionScoreRequest.md
+docs/ReportStatsMeta.md
+docs/ReportStatsMetaGroupBy.md
+docs/ReportStatsMetaInterval.md
+docs/ReportStatsMetaLevel.md
+docs/ReportStatsResponse.md
+docs/ReportStatsRow.md
+docs/ReportStatsRowType.md
 docs/ReviewPermission.md
 docs/SimpleAnnotatorUser.md
 docs/SimplePhoto.md
@@ -1014,6 +1025,12 @@ docs/SpeciesClassification.md
 docs/SpeciesClassificationConfidenceLabel.md
 docs/SpeciesClassificationRequest.md
 docs/SpeciesClassificationRequestConfidenceLabel.md
+docs/StatisticsPermission.md
+docs/StatsApi.md
+docs/StatsListGroupByParameter.md
+docs/StatsListIntervalParameter.md
+docs/StatsListLevelParameter.md
+docs/StatsListTypeParameter.md
 docs/TaxaApi.md
 docs/TaxaListRankErrorComponent.md
 docs/TaxaListRankErrorComponentAttr.md
@@ -1076,6 +1093,8 @@ models/annotation-type.ts
 models/annotation.ts
 models/app-user-token-obtain-pair-request.ts
 models/app-user-token-obtain-pair.ts
+models/area-meta-level.ts
+models/area-meta.ts
 models/assignment.ts
 models/audience-filter-locale.ts
 models/audience-filter-request.ts
@@ -1958,6 +1977,7 @@ models/paginated-notification-list.ts
 models/paginated-observation-list.ts
 models/paginated-partner-list.ts
 models/paginated-photo-prediction-list.ts
+models/paginated-report-stats-response-list.ts
 models/paginated-taxon-list.ts
 models/paginated-user-list.ts
 models/paginated-workspace-collaboration-group-list.ts
@@ -2023,6 +2043,13 @@ models/point-request.ts
 models/point.ts
 models/prediction-score-request.ts
 models/prediction-score.ts
+models/report-stats-meta-group-by.ts
+models/report-stats-meta-interval.ts
+models/report-stats-meta-level.ts
+models/report-stats-meta.ts
+models/report-stats-response.ts
+models/report-stats-row-type.ts
+models/report-stats-row.ts
 models/review-permission.ts
 models/simple-annotator-user.ts
 models/simple-photo.ts
@@ -2040,6 +2067,11 @@ models/species-classification-confidence-label.ts
 models/species-classification-request-confidence-label.ts
 models/species-classification-request.ts
 models/species-classification.ts
+models/statistics-permission.ts
+models/stats-list-group-by-parameter.ts
+models/stats-list-interval-parameter.ts
+models/stats-list-level-parameter.ts
+models/stats-list-type-parameter.ts
 models/taxa-list-rank-error-component-attr.ts
 models/taxa-list-rank-error-component.ts
 models/taxa-list-rank-parameter.ts

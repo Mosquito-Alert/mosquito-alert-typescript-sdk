@@ -30,6 +30,7 @@ export * from './api/partners-api';
 export * from './api/permissions-api';
 export * from './api/photos-api';
 export * from './api/ping-api';
+export * from './api/stats-api';
 export * from './api/taxa-api';
 export * from './api/users-api';
 export * from './api/workspaces-api';

@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *PhotosApi* | [**predictionUpdate**](docs/PhotosApi.md#predictionupdate) | **PUT** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**retrieve**](docs/PhotosApi.md#retrieve) | **GET** /photos/{uuid}/ | 
 *PingApi* | [**retrieve**](docs/PingApi.md#retrieve) | **GET** /ping/ | 
+*StatsApi* | [**list**](docs/StatsApi.md#list) | **GET** /stats/ | 
 *TaxaApi* | [**list**](docs/TaxaApi.md#list) | **GET** /taxa/ | 
 *TaxaApi* | [**retrieve**](docs/TaxaApi.md#retrieve) | **GET** /taxa/{id}/ | 
 *TaxaApi* | [**rootTreeRetrieve**](docs/TaxaApi.md#roottreeretrieve) | **GET** /taxa/tree/ | 
@@ -151,6 +152,8 @@ Class | Method | HTTP request | Description
  - [AnnotationType](docs/AnnotationType.md)
  - [AppUserTokenObtainPair](docs/AppUserTokenObtainPair.md)
  - [AppUserTokenObtainPairRequest](docs/AppUserTokenObtainPairRequest.md)
+ - [AreaMeta](docs/AreaMeta.md)
+ - [AreaMetaLevel](docs/AreaMetaLevel.md)
  - [Assignment](docs/Assignment.md)
  - [AudienceFilter](docs/AudienceFilter.md)
  - [AudienceFilterLocale](docs/AudienceFilterLocale.md)
@@ -1032,6 +1035,7 @@ Class | Method | HTTP request | Description
  - [PaginatedObservationList](docs/PaginatedObservationList.md)
  - [PaginatedPartnerList](docs/PaginatedPartnerList.md)
  - [PaginatedPhotoPredictionList](docs/PaginatedPhotoPredictionList.md)
+ - [PaginatedReportStatsResponseList](docs/PaginatedReportStatsResponseList.md)
  - [PaginatedTaxonList](docs/PaginatedTaxonList.md)
  - [PaginatedUserList](docs/PaginatedUserList.md)
  - [PaginatedWorkspaceCollaborationGroupList](docs/PaginatedWorkspaceCollaborationGroupList.md)
@@ -1097,6 +1101,13 @@ Class | Method | HTTP request | Description
  - [PointRequest](docs/PointRequest.md)
  - [PredictionScore](docs/PredictionScore.md)
  - [PredictionScoreRequest](docs/PredictionScoreRequest.md)
+ - [ReportStatsMeta](docs/ReportStatsMeta.md)
+ - [ReportStatsMetaGroupBy](docs/ReportStatsMetaGroupBy.md)
+ - [ReportStatsMetaInterval](docs/ReportStatsMetaInterval.md)
+ - [ReportStatsMetaLevel](docs/ReportStatsMetaLevel.md)
+ - [ReportStatsResponse](docs/ReportStatsResponse.md)
+ - [ReportStatsRow](docs/ReportStatsRow.md)
+ - [ReportStatsRowType](docs/ReportStatsRowType.md)
  - [ReviewPermission](docs/ReviewPermission.md)
  - [SimpleAnnotatorUser](docs/SimpleAnnotatorUser.md)
  - [SimplePhoto](docs/SimplePhoto.md)
@@ -1114,6 +1125,11 @@ Class | Method | HTTP request | Description
  - [SpeciesClassificationConfidenceLabel](docs/SpeciesClassificationConfidenceLabel.md)
  - [SpeciesClassificationRequest](docs/SpeciesClassificationRequest.md)
  - [SpeciesClassificationRequestConfidenceLabel](docs/SpeciesClassificationRequestConfidenceLabel.md)
+ - [StatisticsPermission](docs/StatisticsPermission.md)
+ - [StatsListGroupByParameter](docs/StatsListGroupByParameter.md)
+ - [StatsListIntervalParameter](docs/StatsListIntervalParameter.md)
+ - [StatsListLevelParameter](docs/StatsListLevelParameter.md)
+ - [StatsListTypeParameter](docs/StatsListTypeParameter.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)
  - [TaxaListRankErrorComponentAttr](docs/TaxaListRankErrorComponentAttr.md)
  - [TaxaListRankParameter](docs/TaxaListRankParameter.md)

@@ -25,11 +25,15 @@ import type { MessagePermission } from './message-permission';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ReviewPermission } from './review-permission';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { StatisticsPermission } from './statistics-permission';
 
 export interface Permissions {
     'annotation': AnnotationPermission;
     'identification_task': IdentificationTaskPermission;
     'review': ReviewPermission;
     'message': MessagePermission;
+    'statistics': StatisticsPermission;
 }
 
