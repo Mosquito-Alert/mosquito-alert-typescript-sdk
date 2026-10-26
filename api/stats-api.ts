@@ -30,6 +30,8 @@ import type { ErrorResponse404 } from '../models';
 // @ts-ignore
 import type { PaginatedReportStatsResponseList } from '../models';
 // @ts-ignore
+import type { StatsArea } from '../models';
+// @ts-ignore
 import type { StatsListGroupByParameter } from '../models';
 // @ts-ignore
 import type { StatsListIntervalParameter } from '../models';
@@ -42,6 +44,44 @@ import type { StatsListTypeParameter } from '../models';
  */
 export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        areasList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/stats/areas/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication tokenAuth required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+            // authentication cookieAuth required
+
+            // authentication jwtAuth required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            localVarHeaderParameter['Accept'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
          * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
@@ -140,6 +180,17 @@ export const StatsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = StatsApiAxiosParamCreator(configuration)
     return {
         /**
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async areasList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StatsArea>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.areasList(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StatsApi.areasList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
          * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
@@ -169,6 +220,14 @@ export const StatsApiFp = function(configuration?: Configuration) {
 export const StatsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = StatsApiFp(configuration)
     return {
+        /**
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        areasList(options?: RawAxiosRequestConfig): AxiosPromise<Array<StatsArea>> {
+            return localVarFp.areasList(options).then((request) => request(axios, basePath));
+        },
         /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
          * @param {StatsApiListRequest} requestParameters Request parameters.
@@ -234,6 +293,15 @@ export interface StatsApiListRequest {
  * StatsApi - object-oriented interface
  */
 export class StatsApi extends BaseAPI {
+    /**
+     * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public areasList(options?: RawAxiosRequestConfig) {
+        return StatsApiFp(this.configuration).areasList(options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
      * @param {StatsApiListRequest} requestParameters Request parameters.

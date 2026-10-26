@@ -19,6 +19,6 @@ export interface SimplePhoto {
     /**
      * URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
      */
-    'url': string;
+    'url': string | null;
 }
 

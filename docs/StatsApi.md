@@ -4,7 +4,55 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
+|[**areasList**](#areaslist) | **GET** /stats/areas/ | |
 |[**list**](#list) | **GET** /stats/ | |
+
+# **areasList**
+> Array<StatsArea> areasList()
+
+Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+
+### Example
+
+```typescript
+import {
+    StatsApi,
+    Configuration
+} from 'mosquito-alert';
+
+const configuration = new Configuration();
+const apiInstance = new StatsApi(configuration);
+
+const { status, data } = await apiInstance.areasList();
+```
+
+### Parameters
+This endpoint does not have any parameters.
+
+
+### Return type
+
+**Array<StatsArea>**
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**401** |  |  -  |
+|**403** |  |  -  |
+|**404** |  |  -  |
+|**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
 > PaginatedReportStatsResponseList list()

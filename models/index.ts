@@ -983,6 +983,7 @@ export * from './species-classification-confidence-label';
 export * from './species-classification-request';
 export * from './species-classification-request-confidence-label';
 export * from './statistics-permission';
+export * from './stats-area';
 export * from './stats-list-group-by-parameter';
 export * from './stats-list-interval-parameter';
 export * from './stats-list-level-parameter';

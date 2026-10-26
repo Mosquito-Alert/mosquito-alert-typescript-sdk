@@ -1027,6 +1027,7 @@ docs/SpeciesClassificationRequest.md
 docs/SpeciesClassificationRequestConfidenceLabel.md
 docs/StatisticsPermission.md
 docs/StatsApi.md
+docs/StatsArea.md
 docs/StatsListGroupByParameter.md
 docs/StatsListIntervalParameter.md
 docs/StatsListLevelParameter.md
@@ -2068,6 +2069,7 @@ models/species-classification-request-confidence-label.ts
 models/species-classification-request.ts
 models/species-classification.ts
 models/statistics-permission.ts
+models/stats-area.ts
 models/stats-list-group-by-parameter.ts
 models/stats-list-interval-parameter.ts
 models/stats-list-level-parameter.ts

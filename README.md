@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.9
+## mosquito-alert@0.4.10
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.9 --save
+npm install mosquito-alert@0.4.10 --save
 ```
 
 _unPublished (not recommended):_
@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *PhotosApi* | [**predictionUpdate**](docs/PhotosApi.md#predictionupdate) | **PUT** /photos/{uuid}/prediction/ | 
 *PhotosApi* | [**retrieve**](docs/PhotosApi.md#retrieve) | **GET** /photos/{uuid}/ | 
 *PingApi* | [**retrieve**](docs/PingApi.md#retrieve) | **GET** /ping/ | 
+*StatsApi* | [**areasList**](docs/StatsApi.md#areaslist) | **GET** /stats/areas/ | 
 *StatsApi* | [**list**](docs/StatsApi.md#list) | **GET** /stats/ | 
 *TaxaApi* | [**list**](docs/TaxaApi.md#list) | **GET** /taxa/ | 
 *TaxaApi* | [**retrieve**](docs/TaxaApi.md#retrieve) | **GET** /taxa/{id}/ | 
@@ -1126,6 +1127,7 @@ Class | Method | HTTP request | Description
  - [SpeciesClassificationRequest](docs/SpeciesClassificationRequest.md)
  - [SpeciesClassificationRequestConfidenceLabel](docs/SpeciesClassificationRequestConfidenceLabel.md)
  - [StatisticsPermission](docs/StatisticsPermission.md)
+ - [StatsArea](docs/StatsArea.md)
  - [StatsListGroupByParameter](docs/StatsListGroupByParameter.md)
  - [StatsListIntervalParameter](docs/StatsListIntervalParameter.md)
  - [StatsListLevelParameter](docs/StatsListLevelParameter.md)
