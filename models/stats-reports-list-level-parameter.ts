@@ -15,13 +15,13 @@
 
 
 
-export const StatsListLevelParameter = {
+export const StatsReportsListLevelParameter = {
     NUMBER_2: 2,
     NUMBER_3: 3,
     NUMBER_unknown_default_open_api: 11184809,
 } as const;
 
-export type StatsListLevelParameter = typeof StatsListLevelParameter[keyof typeof StatsListLevelParameter];
+export type StatsReportsListLevelParameter = typeof StatsReportsListLevelParameter[keyof typeof StatsReportsListLevelParameter];
 
 
 

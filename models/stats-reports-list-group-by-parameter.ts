@@ -15,14 +15,14 @@
 
 
 
-export const StatsListTypeParameter = {
-    Bite: 'bite',
-    Adult: 'adult',
-    Site: 'site',
+export const StatsReportsListGroupByParameter = {
+    Date: 'date',
+    Type: 'type',
+    Region: 'region',
     UnknownDefaultOpenApi: '11184809',
 } as const;
 
-export type StatsListTypeParameter = typeof StatsListTypeParameter[keyof typeof StatsListTypeParameter];
+export type StatsReportsListGroupByParameter = typeof StatsReportsListGroupByParameter[keyof typeof StatsReportsListGroupByParameter];
 
 
 

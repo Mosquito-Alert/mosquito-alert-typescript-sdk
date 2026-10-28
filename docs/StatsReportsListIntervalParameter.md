@@ -1,4 +1,4 @@
-# StatsListIntervalParameter
+# StatsReportsListIntervalParameter
 
 
 ## Enum

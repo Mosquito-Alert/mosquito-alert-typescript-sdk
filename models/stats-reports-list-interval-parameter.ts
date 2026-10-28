@@ -15,14 +15,14 @@
 
 
 
-export const StatsListGroupByParameter = {
-    Date: 'date',
-    Type: 'type',
-    Region: 'region',
+export const StatsReportsListIntervalParameter = {
+    Day: 'day',
+    Month: 'month',
+    Week: 'week',
     UnknownDefaultOpenApi: '11184809',
 } as const;
 
-export type StatsListGroupByParameter = typeof StatsListGroupByParameter[keyof typeof StatsListGroupByParameter];
+export type StatsReportsListIntervalParameter = typeof StatsReportsListIntervalParameter[keyof typeof StatsReportsListIntervalParameter];
 
 
 

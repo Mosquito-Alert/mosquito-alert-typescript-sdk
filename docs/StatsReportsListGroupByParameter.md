@@ -1,13 +1,13 @@
-# StatsListTypeParameter
+# StatsReportsListGroupByParameter
 
 
 ## Enum
 
-* `Bite` (value: `'bite'`)
+* `Date` (value: `'date'`)
 
-* `Adult` (value: `'adult'`)
+* `Type` (value: `'type'`)
 
-* `Site` (value: `'site'`)
+* `Region` (value: `'region'`)
 
 * `UnknownDefaultOpenApi` (value: `'11184809'`)
 

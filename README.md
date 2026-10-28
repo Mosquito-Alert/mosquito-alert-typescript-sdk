@@ -1,4 +1,4 @@
-## mosquito-alert@0.4.11
+## mosquito-alert@0.4.12
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install mosquito-alert@0.4.11 --save
+npm install mosquito-alert@0.4.12 --save
 ```
 
 _unPublished (not recommended):_
@@ -121,7 +121,7 @@ Class | Method | HTTP request | Description
 *PhotosApi* | [**retrieve**](docs/PhotosApi.md#retrieve) | **GET** /photos/{uuid}/ | 
 *PingApi* | [**retrieve**](docs/PingApi.md#retrieve) | **GET** /ping/ | 
 *StatsApi* | [**areasList**](docs/StatsApi.md#areaslist) | **GET** /stats/areas/ | 
-*StatsApi* | [**list**](docs/StatsApi.md#list) | **GET** /stats/ | 
+*StatsApi* | [**reportsList**](docs/StatsApi.md#reportslist) | **GET** /stats/reports/ | 
 *TaxaApi* | [**list**](docs/TaxaApi.md#list) | **GET** /taxa/ | 
 *TaxaApi* | [**retrieve**](docs/TaxaApi.md#retrieve) | **GET** /taxa/{id}/ | 
 *TaxaApi* | [**rootTreeRetrieve**](docs/TaxaApi.md#roottreeretrieve) | **GET** /taxa/tree/ | 
@@ -1127,10 +1127,10 @@ Class | Method | HTTP request | Description
  - [SpeciesClassificationRequestConfidenceLabel](docs/SpeciesClassificationRequestConfidenceLabel.md)
  - [StatisticsPermission](docs/StatisticsPermission.md)
  - [StatsArea](docs/StatsArea.md)
- - [StatsListGroupByParameter](docs/StatsListGroupByParameter.md)
- - [StatsListIntervalParameter](docs/StatsListIntervalParameter.md)
- - [StatsListLevelParameter](docs/StatsListLevelParameter.md)
- - [StatsListTypeParameter](docs/StatsListTypeParameter.md)
+ - [StatsReportsListGroupByParameter](docs/StatsReportsListGroupByParameter.md)
+ - [StatsReportsListIntervalParameter](docs/StatsReportsListIntervalParameter.md)
+ - [StatsReportsListLevelParameter](docs/StatsReportsListLevelParameter.md)
+ - [StatsReportsListTypeParameter](docs/StatsReportsListTypeParameter.md)
  - [TaxaListRankErrorComponent](docs/TaxaListRankErrorComponent.md)
  - [TaxaListRankErrorComponentAttr](docs/TaxaListRankErrorComponentAttr.md)
  - [TaxaListRankParameter](docs/TaxaListRankParameter.md)

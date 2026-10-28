@@ -32,20 +32,20 @@ import type { ReportStatsResponse } from '../models';
 // @ts-ignore
 import type { StatsArea } from '../models';
 // @ts-ignore
-import type { StatsListGroupByParameter } from '../models';
+import type { StatsReportsListGroupByParameter } from '../models';
 // @ts-ignore
-import type { StatsListIntervalParameter } from '../models';
+import type { StatsReportsListIntervalParameter } from '../models';
 // @ts-ignore
-import type { StatsListLevelParameter } from '../models';
+import type { StatsReportsListLevelParameter } from '../models';
 // @ts-ignore
-import type { StatsListTypeParameter } from '../models';
+import type { StatsReportsListTypeParameter } from '../models';
 /**
  * StatsApi - axios parameter creator
  */
 export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=` .
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -88,15 +88,15 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
-         * @param {StatsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
-         * @param {StatsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-         * @param {Array<StatsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
+         * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
+         * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
+         * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, type?: Array<StatsListTypeParameter>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/stats/`;
+        reportsList: async (area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsReportsListGroupByParameter>, interval?: StatsReportsListIntervalParameter, level?: StatsReportsListLevelParameter, type?: Array<StatsReportsListTypeParameter>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/stats/reports/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -170,7 +170,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = StatsApiAxiosParamCreator(configuration)
     return {
         /**
-         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=` .
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -186,17 +186,17 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
-         * @param {StatsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
-         * @param {StatsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-         * @param {Array<StatsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
+         * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
+         * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
+         * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, type?: Array<StatsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportStatsResponse>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type, options);
+        async reportsList(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsReportsListGroupByParameter>, interval?: StatsReportsListIntervalParameter, level?: StatsReportsListLevelParameter, type?: Array<StatsReportsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportStatsResponse>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reportsList(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['StatsApi.list']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['StatsApi.reportsList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
@@ -209,7 +209,7 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
     const localVarFp = StatsApiFp(configuration)
     return {
         /**
-         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+         * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=` .
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -218,20 +218,20 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
-         * @param {StatsApiListRequest} requestParameters Request parameters.
+         * @param {StatsApiReportsListRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(requestParameters: StatsApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ReportStatsResponse>> {
-            return localVarFp.list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(axios, basePath));
+        reportsList(requestParameters: StatsApiReportsListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ReportStatsResponse>> {
+            return localVarFp.reportsList(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * Request parameters for list operation in StatsApi.
+ * Request parameters for reportsList operation in StatsApi.
  */
-export interface StatsApiListRequest {
+export interface StatsApiReportsListRequest {
     /**
      * \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
      */
@@ -249,22 +249,22 @@ export interface StatsApiListRequest {
     /**
      * Comma-separated subset of: date, type, region.
      */
-    readonly groupBy?: Array<StatsListGroupByParameter>
+    readonly groupBy?: Array<StatsReportsListGroupByParameter>
 
     /**
      * The interval at which to aggregate data when grouping by date. Defaults to week.
      */
-    readonly interval?: StatsListIntervalParameter
+    readonly interval?: StatsReportsListIntervalParameter
 
     /**
      * The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
      */
-    readonly level?: StatsListLevelParameter
+    readonly level?: StatsReportsListLevelParameter
 
     /**
      * Comma-separated subset of: bite, adult, site.
      */
-    readonly type?: Array<StatsListTypeParameter>
+    readonly type?: Array<StatsReportsListTypeParameter>
 }
 
 /**
@@ -272,7 +272,7 @@ export interface StatsApiListRequest {
  */
 export class StatsApi extends BaseAPI {
     /**
-     * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=`.
+     * Tree of areas (and their subdivisions) the current user can request statistics for. Each node\'s `key` is the value to send as `?area=` .
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -282,12 +282,12 @@ export class StatsApi extends BaseAPI {
 
     /**
      * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
-     * @param {StatsApiListRequest} requestParameters Request parameters.
+     * @param {StatsApiReportsListRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public list(requestParameters: StatsApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return StatsApiFp(this.configuration).list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(this.axios, this.basePath));
+    public reportsList(requestParameters: StatsApiReportsListRequest = {}, options?: RawAxiosRequestConfig) {
+        return StatsApiFp(this.configuration).reportsList(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

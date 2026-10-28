@@ -15,14 +15,14 @@
 
 
 
-export const StatsListIntervalParameter = {
-    Day: 'day',
-    Month: 'month',
-    Week: 'week',
+export const StatsReportsListTypeParameter = {
+    Bite: 'bite',
+    Adult: 'adult',
+    Site: 'site',
     UnknownDefaultOpenApi: '11184809',
 } as const;
 
-export type StatsListIntervalParameter = typeof StatsListIntervalParameter[keyof typeof StatsListIntervalParameter];
+export type StatsReportsListTypeParameter = typeof StatsReportsListTypeParameter[keyof typeof StatsReportsListTypeParameter];
 
 
 
