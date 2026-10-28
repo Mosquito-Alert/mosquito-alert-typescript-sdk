@@ -28,7 +28,7 @@ import type { ErrorResponse403 } from '../models';
 // @ts-ignore
 import type { ErrorResponse404 } from '../models';
 // @ts-ignore
-import type { PaginatedReportStatsResponseList } from '../models';
+import type { ReportStatsResponse } from '../models';
 // @ts-ignore
 import type { StatsArea } from '../models';
 // @ts-ignore
@@ -91,13 +91,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<StatsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
          * @param {StatsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<StatsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list: async (area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, page?: number, pageSize?: number, type?: Array<StatsListTypeParameter>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        list: async (area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, type?: Array<StatsListTypeParameter>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/stats/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -147,14 +145,6 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['level'] = level;
             }
 
-            if (page !== undefined) {
-                localVarQueryParameter['page'] = page;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page_size'] = pageSize;
-            }
-
             if (type) {
                 localVarQueryParameter['type'] = type.join(COLLECTION_FORMATS.csv);
             }
@@ -199,14 +189,12 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {Array<StatsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
          * @param {StatsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-         * @param {number} [page] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
          * @param {Array<StatsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async list(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, page?: number, pageSize?: number, type?: Array<StatsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedReportStatsResponseList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, page, pageSize, type, options);
+        async list(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsListGroupByParameter>, interval?: StatsListIntervalParameter, level?: StatsListLevelParameter, type?: Array<StatsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportStatsResponse>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['StatsApi.list']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -234,8 +222,8 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(requestParameters: StatsApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<PaginatedReportStatsResponseList> {
-            return localVarFp.list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.page, requestParameters.pageSize, requestParameters.type, options).then((request) => request(axios, basePath));
+        list(requestParameters: StatsApiListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ReportStatsResponse>> {
+            return localVarFp.list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -274,16 +262,6 @@ export interface StatsApiListRequest {
     readonly level?: StatsListLevelParameter
 
     /**
-     * A page number within the paginated result set.
-     */
-    readonly page?: number
-
-    /**
-     * Number of results to return per page.
-     */
-    readonly pageSize?: number
-
-    /**
      * Comma-separated subset of: bite, adult, site.
      */
     readonly type?: Array<StatsListTypeParameter>
@@ -309,7 +287,7 @@ export class StatsApi extends BaseAPI {
      * @throws {RequiredError}
      */
     public list(requestParameters: StatsApiListRequest = {}, options?: RawAxiosRequestConfig) {
-        return StatsApiFp(this.configuration).list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.page, requestParameters.pageSize, requestParameters.type, options).then((request) => request(this.axios, this.basePath));
+        return StatsApiFp(this.configuration).list(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

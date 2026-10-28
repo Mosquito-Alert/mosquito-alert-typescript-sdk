@@ -931,7 +931,6 @@ docs/PaginatedNotificationList.md
 docs/PaginatedObservationList.md
 docs/PaginatedPartnerList.md
 docs/PaginatedPhotoPredictionList.md
-docs/PaginatedReportStatsResponseList.md
 docs/PaginatedTaxonList.md
 docs/PaginatedUserList.md
 docs/PaginatedWorkspaceCollaborationGroupList.md
@@ -1978,7 +1977,6 @@ models/paginated-notification-list.ts
 models/paginated-observation-list.ts
 models/paginated-partner-list.ts
 models/paginated-photo-prediction-list.ts
-models/paginated-report-stats-response-list.ts
 models/paginated-taxon-list.ts
 models/paginated-user-list.ts
 models/paginated-workspace-collaboration-group-list.ts

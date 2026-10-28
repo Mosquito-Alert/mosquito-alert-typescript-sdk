@@ -892,7 +892,6 @@ export * from './paginated-notification-list';
 export * from './paginated-observation-list';
 export * from './paginated-partner-list';
 export * from './paginated-photo-prediction-list';
-export * from './paginated-report-stats-response-list';
 export * from './paginated-taxon-list';
 export * from './paginated-user-list';
 export * from './paginated-workspace-collaboration-group-list';

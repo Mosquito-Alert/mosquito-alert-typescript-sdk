@@ -55,7 +55,7 @@ This endpoint does not have any parameters.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedReportStatsResponseList list()
+> Array<ReportStatsResponse> list()
 
 Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
 
@@ -77,8 +77,6 @@ let dateTo: string; // (optional) (default to undefined)
 let groupBy: Array<StatsListGroupByParameter>; //Comma-separated subset of: date, type, region. (optional) (default to undefined)
 let interval: StatsListIntervalParameter; //The interval at which to aggregate data when grouping by date. Defaults to week. (optional) (default to undefined)
 let level: StatsListLevelParameter; //The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. (optional) (default to undefined)
-let page: number; //A page number within the paginated result set. (optional) (default to undefined)
-let pageSize: number; //Number of results to return per page. (optional) (default to undefined)
 let type: Array<StatsListTypeParameter>; //Comma-separated subset of: bite, adult, site. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.list(
@@ -89,8 +87,6 @@ const { status, data } = await apiInstance.list(
     groupBy,
     interval,
     level,
-    page,
-    pageSize,
     type
 );
 ```
@@ -106,14 +102,12 @@ const { status, data } = await apiInstance.list(
 | **groupBy** | **Array&lt;StatsListGroupByParameter&gt;** | Comma-separated subset of: date, type, region. | (optional) defaults to undefined|
 | **interval** | **StatsListIntervalParameter** | The interval at which to aggregate data when grouping by date. Defaults to week. | (optional) defaults to undefined|
 | **level** | **StatsListLevelParameter** | The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. | (optional) defaults to undefined|
-| **page** | [**number**] | A page number within the paginated result set. | (optional) defaults to undefined|
-| **pageSize** | [**number**] | Number of results to return per page. | (optional) defaults to undefined|
 | **type** | **Array&lt;StatsListTypeParameter&gt;** | Comma-separated subset of: bite, adult, site. | (optional) defaults to undefined|
 
 
 ### Return type
 
-**PaginatedReportStatsResponseList**
+**Array<ReportStatsResponse>**
 
 ### Authorization
 
