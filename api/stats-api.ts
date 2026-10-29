@@ -193,7 +193,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reportsList(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsReportsListGroupByParameter>, interval?: StatsReportsListIntervalParameter, level?: StatsReportsListLevelParameter, type?: Array<StatsReportsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportStatsResponse>>> {
+        async reportsList(area?: string, cumulative?: boolean, dateFrom?: string, dateTo?: string, groupBy?: Array<StatsReportsListGroupByParameter>, interval?: StatsReportsListIntervalParameter, level?: StatsReportsListLevelParameter, type?: Array<StatsReportsListTypeParameter>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportStatsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportsList(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['StatsApi.reportsList']?.[localVarOperationServerIndex]?.url;
@@ -222,7 +222,7 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportsList(requestParameters: StatsApiReportsListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<Array<ReportStatsResponse>> {
+        reportsList(requestParameters: StatsApiReportsListRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<ReportStatsResponse> {
             return localVarFp.reportsList(requestParameters.area, requestParameters.cumulative, requestParameters.dateFrom, requestParameters.dateTo, requestParameters.groupBy, requestParameters.interval, requestParameters.level, requestParameters.type, options).then((request) => request(axios, basePath));
         },
     };

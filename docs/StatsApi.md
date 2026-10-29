@@ -55,7 +55,7 @@ This endpoint does not have any parameters.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reportsList**
-> Array<ReportStatsResponse> reportsList()
+> ReportStatsResponse reportsList()
 
 Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
 
@@ -107,7 +107,7 @@ const { status, data } = await apiInstance.reportsList(
 
 ### Return type
 
-**Array<ReportStatsResponse>**
+**ReportStatsResponse**
 
 ### Authorization
 
