@@ -74,7 +74,7 @@ let area: string; //\"\\<level\\>:\\<id\\>\", e.g. \"country:ES\" or \"nuts2:34\
 let cumulative: boolean; //Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False. (optional) (default to undefined)
 let dateFrom: string; // (optional) (default to undefined)
 let dateTo: string; // (optional) (default to undefined)
-let groupBy: Array<StatsReportsListGroupByParameter>; //Comma-separated subset of: date, type, region. (optional) (default to undefined)
+let groupBy: Array<StatsReportsListGroupByParameter>; //Comma-separated subset of: date, type, region, country. (optional) (default to undefined)
 let interval: StatsReportsListIntervalParameter; //The interval at which to aggregate data when grouping by date. Defaults to week. (optional) (default to undefined)
 let level: StatsReportsListLevelParameter; //The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. (optional) (default to undefined)
 let type: Array<StatsReportsListTypeParameter>; //Comma-separated subset of: bite, adult, site. (optional) (default to undefined)
@@ -99,7 +99,7 @@ const { status, data } = await apiInstance.reportsList(
 | **cumulative** | [**boolean**] | Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False. | (optional) defaults to undefined|
 | **dateFrom** | [**string**] |  | (optional) defaults to undefined|
 | **dateTo** | [**string**] |  | (optional) defaults to undefined|
-| **groupBy** | **Array&lt;StatsReportsListGroupByParameter&gt;** | Comma-separated subset of: date, type, region. | (optional) defaults to undefined|
+| **groupBy** | **Array&lt;StatsReportsListGroupByParameter&gt;** | Comma-separated subset of: date, type, region, country. | (optional) defaults to undefined|
 | **interval** | **StatsReportsListIntervalParameter** | The interval at which to aggregate data when grouping by date. Defaults to week. | (optional) defaults to undefined|
 | **level** | **StatsReportsListLevelParameter** | The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. | (optional) defaults to undefined|
 | **type** | **Array&lt;StatsReportsListTypeParameter&gt;** | Comma-separated subset of: bite, adult, site. | (optional) defaults to undefined|

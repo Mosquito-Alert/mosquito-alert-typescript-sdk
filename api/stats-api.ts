@@ -88,7 +88,7 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region, country.
          * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
          * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
@@ -186,7 +186,7 @@ export const StatsApiFp = function(configuration?: Configuration) {
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region, country.
          * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
          * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
@@ -247,7 +247,7 @@ export interface StatsApiReportsListRequest {
     readonly dateTo?: string
 
     /**
-     * Comma-separated subset of: date, type, region.
+     * Comma-separated subset of: date, type, region, country.
      */
     readonly groupBy?: Array<StatsReportsListGroupByParameter>
 
