@@ -19,6 +19,5 @@ export interface StatisticsPermission {
     'change': boolean;
     'view': boolean;
     'delete': boolean;
-    'view_world': boolean;
 }
 

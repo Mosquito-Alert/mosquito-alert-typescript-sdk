@@ -19,7 +19,6 @@ export const ReportStatsMetaGroupBy = {
     Date: 'date',
     Type: 'type',
     Region: 'region',
-    Country: 'country',
     UnknownDefaultOpenApi: '11184809',
 } as const;
 

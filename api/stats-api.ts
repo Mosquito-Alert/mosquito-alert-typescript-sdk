@@ -84,11 +84,11 @@ export const StatsApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
-         * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
+         * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;. If omitted, the request applies to the whole world.
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region, country.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
          * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
          * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
@@ -182,11 +182,11 @@ export const StatsApiFp = function(configuration?: Configuration) {
         },
         /**
          * Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
-         * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
+         * @param {string} [area] \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;. If omitted, the request applies to the whole world.
          * @param {boolean} [cumulative] Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
          * @param {string} [dateFrom] 
          * @param {string} [dateTo] 
-         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region, country.
+         * @param {Array<StatsReportsListGroupByParameter>} [groupBy] Comma-separated subset of: date, type, region.
          * @param {StatsReportsListIntervalParameter} [interval] The interval at which to aggregate data when grouping by date. Defaults to week.
          * @param {StatsReportsListLevelParameter} [level] The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
          * @param {Array<StatsReportsListTypeParameter>} [type] Comma-separated subset of: bite, adult, site.
@@ -233,7 +233,7 @@ export const StatsApiFactory = function (configuration?: Configuration, basePath
  */
 export interface StatsApiReportsListRequest {
     /**
-     * \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;.
+     * \&quot;\\&lt;level\\&gt;:\\&lt;id\\&gt;\&quot;, e.g. \&quot;country:ES\&quot; or \&quot;nuts2:34\&quot;. If omitted, the request applies to the whole world.
      */
     readonly area?: string
 
@@ -247,7 +247,7 @@ export interface StatsApiReportsListRequest {
     readonly dateTo?: string
 
     /**
-     * Comma-separated subset of: date, type, region, country.
+     * Comma-separated subset of: date, type, region.
      */
     readonly groupBy?: Array<StatsReportsListGroupByParameter>
 

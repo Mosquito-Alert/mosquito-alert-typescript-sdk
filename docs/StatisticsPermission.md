@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **change** | **boolean** |  | [default to undefined]
 **view** | **boolean** |  | [default to undefined]
 **_delete** | **boolean** |  | [default to undefined]
-**view_world** | **boolean** |  | [readonly] [default to undefined]
 
 ## Example
 
@@ -21,7 +20,6 @@ const instance: StatisticsPermission = {
     change,
     view,
     _delete,
-    view_world,
 };
 ```
 
